@@ -1,0 +1,2133 @@
+{
+	"id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+	"name": "Metadata-Bank-API-UAT2",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"name": "Compilation",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"order": [
+				"4f097f25-7a2b-c8b8-b0e2-2c14962565d8",
+				"2b935fb5-de34-c3df-b7f2-1573fd616715",
+				"865dc41e-d6b7-3f4c-e9a3-167fd2f4a20e",
+				"39ecb5c2-1786-5e4f-bcf1-05150b24dae3",
+				"2e19505e-2660-8136-f488-d011f89f39b9",
+				"dd247479-8dad-4d8f-a028-a9b339e0b723"
+			],
+			"owner": 0,
+			"folders_order": [
+				"b0f2ca73-8e25-39b0-1bf9-b157b3a24585",
+				"90ac38d3-6727-cfae-4813-6408f2ebe9d6",
+				"2b46ffee-cdfe-ba85-4b85-b68fb76e1580",
+				"95d6c4f4-c15a-f86a-50f4-70525f2ea57b",
+				"afedad9c-fc01-1740-8e53-4a14678ff198"
+			],
+			"id": "9c6451dc-c075-b894-5a83-4ee438149b4e"
+		},
+		{
+			"name": "Entry",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"order": [
+				"273b30e2-1d13-1dfd-e94f-d6c1f350e67f",
+				"1fad9650-e27a-19e1-a63a-9be8ddb30a5d"
+			],
+			"owner": 0,
+			"folder": "93e170d6-ae1c-379e-bc59-e02a7cd8dc90",
+			"folders_order": [],
+			"id": "ede2ebf6-6b45-8b87-6b1e-a28ea574528e"
+		},
+		{
+			"name": "Entry",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"order": [
+				"f3408584-a850-7670-15a1-b3e2ae69ea91",
+				"c2e96a2f-0390-76e2-9c60-7285a67984ef"
+			],
+			"owner": 0,
+			"folder": "9c6451dc-c075-b894-5a83-4ee438149b4e",
+			"folders_order": [],
+			"id": "afedad9c-fc01-1740-8e53-4a14678ff198"
+		},
+		{
+			"id": "59207c3c-d8b6-7f98-084d-30417a0cc863",
+			"name": "Episode",
+			"description": "",
+			"order": [
+				"9f0bb58e-e95d-3dc8-a53a-bdad496d8321",
+				"86230273-8602-82d4-b095-ef4df3e99851",
+				"998c0a6c-167d-4a16-1ea7-7db910cc159b",
+				"0354a5ea-fa67-c846-bc53-5fe8798b5be9",
+				"0d9bb6bc-b0c0-5bd7-44e9-f904963a1c71",
+				"dd7beec9-2d60-c18f-9bc2-c3b3cbe1d2f9"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "8a7e2846-3ff2-a599-d9fa-797a88c7836d",
+			"name": "Episode",
+			"description": "",
+			"order": [
+				"d2e4d7d5-59ec-5a92-2f52-9e27a947beeb",
+				"ac9615aa-caaa-fc90-db7d-5c105df6f739"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "001ca982-ad7e-a858-9e8b-b664c4e00625",
+			"name": "Episode",
+			"description": "",
+			"order": [
+				"7b477de3-2bf6-f29f-29b8-c645b39623df",
+				"d8276ecf-6521-e55d-3a6d-0860186c0063"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "2b46ffee-cdfe-ba85-4b85-b68fb76e1580",
+			"name": "Episode",
+			"description": "",
+			"order": [
+				"396fbe75-4aaf-d85e-761b-5b15720e21b7"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"folder": "9c6451dc-c075-b894-5a83-4ee438149b4e"
+		},
+		{
+			"name": "Manifestation",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"order": [
+				"57d8cec2-12eb-a0e0-afd9-94d361dbc9f5",
+				"a2d414d4-d33c-d4d2-bef7-d6465a11f960",
+				"1e4a9078-f04a-852d-aff1-bf65c2cd7f6b",
+				"a0d344e0-7f44-d7c7-cda4-502b4b71b1bd",
+				"4eef4c5c-1f9e-1c95-22e1-22c9edb71e91",
+				"50940254-76c1-6ec5-da08-052a11b13e55"
+			],
+			"owner": 0,
+			"folders_order": [],
+			"id": "43dc08b2-283e-3315-5434-2cc80de268ef"
+		},
+		{
+			"id": "95d6c4f4-c15a-f86a-50f4-70525f2ea57b",
+			"name": "Manifestation",
+			"description": "",
+			"order": [
+				"936ec09a-433c-bcc4-56c8-9649799c3eb8"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"folder": "9c6451dc-c075-b894-5a83-4ee438149b4e"
+		},
+		{
+			"name": "Policy",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"order": [
+				"fe21cc51-0acd-043e-bf4d-52c854296eda",
+				"7c5ca321-92e0-be8a-daf0-e3cd6db1c560",
+				"58880415-64b2-9a29-91b9-b242a55a3837",
+				"ffd38a10-08b3-eada-6ecd-42da4f799073",
+				"ce43306d-85b7-19c9-66a3-fe06955ba3fe"
+			],
+			"owner": 0,
+			"folders_order": [
+				"93e170d6-ae1c-379e-bc59-e02a7cd8dc90"
+			],
+			"id": "32b5a3ec-3b58-2f84-0665-b393b49051ee"
+		},
+		{
+			"name": "Rule",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"order": [
+				"c2fe4c5b-d71c-342b-d170-65ca1cde6555",
+				"0431d4a4-0688-9b11-d8ed-3081d4508e86",
+				"0f2b09f5-cea2-c4d7-4a21-e3aee113b032"
+			],
+			"owner": 0,
+			"folder": "32b5a3ec-3b58-2f84-0665-b393b49051ee",
+			"folders_order": [
+				"ede2ebf6-6b45-8b87-6b1e-a28ea574528e"
+			],
+			"id": "93e170d6-ae1c-379e-bc59-e02a7cd8dc90"
+		},
+		{
+			"id": "416bec25-9a2b-bc75-ff60-c40ca2066c3f",
+			"name": "Season",
+			"description": "",
+			"order": [
+				"23b41487-0749-c73d-9145-34b145686049",
+				"a2650feb-b964-80b7-4255-0b297fcc7065"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "e43c7b06-46da-0484-8eb9-971a3c822c6e",
+			"name": "Season",
+			"description": "",
+			"order": [
+				"0d972048-5e6a-b002-2a52-bd29bd0d9eb0",
+				"d474a301-d2b9-7ef9-f9fa-c416378cdecc",
+				"019709a2-133e-c9cc-fb12-30c9265a14cf",
+				"a101d617-2f40-b534-0c86-bb07ee6d3127",
+				"0e4c221e-e5fd-55cc-1d05-aae94b52b52e"
+			],
+			"folders_order": [
+				"001ca982-ad7e-a858-9e8b-b664c4e00625"
+			],
+			"owner": 0,
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "90ac38d3-6727-cfae-4813-6408f2ebe9d6",
+			"name": "Season",
+			"description": "",
+			"order": [
+				"051376c5-9c88-abeb-91a5-db7bf3216ecb"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"folder": "9c6451dc-c075-b894-5a83-4ee438149b4e"
+		},
+		{
+			"id": "206d3b64-d6f6-43c2-f19f-97a9de33c16a",
+			"name": "Series",
+			"description": "",
+			"order": [
+				"a08e8370-f71a-11d5-febb-5d5e759ccef1",
+				"8e732cc7-f9cc-9702-76a9-b2888d263963",
+				"f578eb1e-5fbe-7168-bd44-42b166fba6df",
+				"583a8d90-4a09-512d-2923-9a123e33fadb",
+				"7cc6082d-41f4-91dd-ce78-02b63f671e99"
+			],
+			"folders_order": [
+				"416bec25-9a2b-bc75-ff60-c40ca2066c3f",
+				"8a7e2846-3ff2-a599-d9fa-797a88c7836d"
+			],
+			"owner": 0,
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "b0f2ca73-8e25-39b0-1bf9-b157b3a24585",
+			"name": "Series",
+			"description": "",
+			"order": [
+				"bda18dac-9d6f-a554-616b-7259c0e14baf"
+			],
+			"folders_order": [],
+			"owner": 0,
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"folder": "9c6451dc-c075-b894-5a83-4ee438149b4e"
+		}
+	],
+	"folders_order": [
+		"206d3b64-d6f6-43c2-f19f-97a9de33c16a",
+		"e43c7b06-46da-0484-8eb9-971a3c822c6e",
+		"59207c3c-d8b6-7f98-084d-30417a0cc863",
+		"43dc08b2-283e-3315-5434-2cc80de268ef",
+		"9c6451dc-c075-b894-5a83-4ee438149b4e",
+		"32b5a3ec-3b58-2f84-0665-b393b49051ee"
+	],
+	"timestamp": 0,
+	"owner": 0,
+	"public": false,
+	"hasRequests": true,
+	"requests": [
+		{
+			"id": "019709a2-133e-c9cc-fb12-30c9265a14cf",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/season/cid:org:pbs.org:Season410",
+			"folder": "e43c7b06-46da-0484-8eb9-971a3c822c6e",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539197921134,
+			"name": "Season PUT",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n    \"ParentID\": \"cid:org:pbs.org:Series306\",\n    \"Title\": \"Money, Power and Wall Street, Season 1\",\n    \"SeasonClass\": \"Main\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Season\",\n    \"SequenceNumber\": 1,\n    \"PublishedStatus\": \"In Progress\",\n    \"ReleaseDate\": \"3000-01-31T00:00:00\"\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "0354a5ea-fa67-c846-bc53-5fe8798b5be9",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/episode/cid:org:pbs.org:Episode23438",
+			"folder": "59207c3c-d8b6-7f98-084d-30417a0cc863",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1538247446582,
+			"name": "Episode DELETE",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "0431d4a4-0688-9b11-d8ed-3081d4508e86",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/rule/303232320",
+			"folder": "93e170d6-ae1c-379e-bc59-e02a7cd8dc90",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539196655714,
+			"name": "Rule PUT",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n  \"Action\": {\n    \"MediaRight\": \"Telecast\",\n    \"MaximumExploitation\": \"Unlimited\",\n    \"UseWindow\": {\n      \"TermStartDate\": \"2006-09-18T00:00:00\",\n      \"TermEndDate\": \"2031-09-17T00:00:00\",\n      \"Calculated\": false\n    }\n  },\n  \"RuleAlternateUID\": \"usageid:org:pbs.org:UsageTV303232320\",\n  \"RuleType\": \"Permission\"\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "051376c5-9c88-abeb-91a5-db7bf3216ecb",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation22/season",
+			"folder": "90ac38d3-6727-cfae-4813-6408f2ebe9d6",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542167947819,
+			"name": "getSeasonByCompilationUID",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": []
+		},
+		{
+			"id": "0d972048-5e6a-b002-2a52-bd29bd0d9eb0",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/season/cid:org:pbs.org:Season410",
+			"folder": "e43c7b06-46da-0484-8eb9-971a3c822c6e",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1537904360497,
+			"name": "Season GET",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n    \"UID\": \"cid:org:pbs.org:Episode100\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"TV\",\n    \"EpisodeNumber\": \"101\",\n    \"EpisodeClass\": \"Main\",\n    \"SynopsisShort\": \"\",\n    \"SynopsisLong\": \"In the first hour, Gates travels to Memphis, Birmingham and Atlanta - once the battlegrounds on which civil rights were won for black southerners in the 1950s and 60s. The very cities from which African Americans fled during the era of legal segregation are today drawing them back by the tens of thousands. But how much have these cities really changed since the civil rights era? Interviewees include Morgan Freeman and Maya Angelou.\",\n    \"CountryOfOrigin\": \"US\",\n    \"PrimaryGenre\": \"Public Affairs\",\n    \"SecondaryGenre\": \"Public Affairs\",\n    \"DistributionNumber\": \"1\",\n    \"ApproximateLength\": \"PT1H0M0S\",\n    \"EidrID\": \"\",\n    \"EntityType\": \"Episode\",\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:NOLACode:ABCL  000101\"\n        }\n    ],\n    \"CreditsList\": [],\n    \"LanguageList\": [\n        {\n            \"PrimaryMode\": \"AUDIO\",\n            \"Primary\": \"English\",\n            \"Secondary\": \"\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": \"3136739\",\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\"\n        },\n        {\n            \"OrganizationID\": \"3136739\",\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\"\n        }\n    ],\n    \"ReleaseDateList\": [\n        {\n            \"ReleaseDate\": \"3000-01-31T00:00:00\"\n        }\n    ],\n    \"TitleList\": [\n        {\n            \"TitleText\": \"South: The Black Belt\",\n            \"Title120\": \"South: The Black Belt\",\n            \"TitleClass\": \"Release\",\n            \"TitleLanguage\": \"English\"\n        }\n    ]\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "0d9bb6bc-b0c0-5bd7-44e9-f904963a1c71",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/episode/search?title=History Detectives",
+			"queryParams": [
+				{
+					"key": "title",
+					"value": "History Detectives",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": "",
+			"method": "GET",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Episode Search",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1539267893488,
+			"version": 2,
+			"responses": [],
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "59207c3c-d8b6-7f98-084d-30417a0cc863",
+			"rawModeData": "{\n    \"UID\": \"cid:org:pbs.org:Episode100\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"TV\",\n    \"EpisodeNumber\": \"101\",\n    \"EpisodeClass\": \"Main\",\n    \"SynopsisShort\": \"\",\n    \"SynopsisLong\": \"In the first hour, Gates travels to Memphis, Birmingham and Atlanta - once the battlegrounds on which civil rights were won for black southerners in the 1950s and 60s. The very cities from which African Americans fled during the era of legal segregation are today drawing them back by the tens of thousands. But how much have these cities really changed since the civil rights era? Interviewees include Morgan Freeman and Maya Angelou.\",\n    \"CountryOfOrigin\": \"US\",\n    \"PrimaryGenre\": \"Public Affairs\",\n    \"SecondaryGenre\": \"Public Affairs\",\n    \"DistributionNumber\": \"1\",\n    \"ApproximateLength\": \"PT1H0M0S\",\n    \"EidrID\": \"\",\n    \"EntityType\": \"Episode\",\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:NOLACode:ABCL  000101\"\n        }\n    ],\n    \"CreditsList\": [],\n    \"LanguageList\": [\n        {\n            \"PrimaryMode\": \"AUDIO\",\n            \"Primary\": \"English\",\n            \"Secondary\": \"\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": \"3136739\",\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\"\n        },\n        {\n            \"OrganizationID\": \"3136739\",\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\"\n        }\n    ],\n    \"ReleaseDateList\": [\n        {\n            \"ReleaseDate\": \"3000-01-31T00:00:00\"\n        }\n    ],\n    \"TitleList\": [\n        {\n            \"TitleText\": \"South: The Black Belt\",\n            \"Title120\": \"South: The Black Belt\",\n            \"TitleClass\": \"Release\",\n            \"TitleLanguage\": \"English\"\n        }\n    ]\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "0e4c221e-e5fd-55cc-1d05-aae94b52b52e",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/season/cid:org:pbs.org:Season410/contentidregistration",
+			"folder": "e43c7b06-46da-0484-8eb9-971a3c822c6e",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539267624242,
+			"name": "Season ContentIDRegistration",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n  \"ContentID\": \"cid:org:pbs.org:NOLACode:ABCL  000120\"\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "0f2b09f5-cea2-c4d7-4a21-e3aee113b032",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/rule/303232323",
+			"folder": "93e170d6-ae1c-379e-bc59-e02a7cd8dc90",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539200247936,
+			"name": "Rule DELETE",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "1e4a9078-f04a-852d-aff1-bf65c2cd7f6b",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation242185",
+			"folder": "43dc08b2-283e-3315-5434-2cc80de268ef",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539195471273,
+			"name": "Manifestation PUT",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n    \"ActualLength\": \"PT0H53M17S\",\n    \"EditClass\": \"Original\",\n    \"EditUse\": \"Broadcast\",\n    \"ManifestationClass\": \"HD\",\n    \"ParentID\": \"cid:org:pbs.org:Manifestation73\",\n    \"ReferentType\": \"TV\",\n    \"ReleaseDate\": \"3000-01-31T00:00:00\",\n    \"StructuralType\": \"Performance\",\n    \"Title\": \"Forsyte Saga; The test\",\n    \"UseWindowTermList\": [\n        {\n            \"TermUID\": 46865,\n            \"Term\": \"2017-07-07T00:00:00/2018-08-08T00:00:00\"\n        },\n        {\n            \"TermUID\": 46866,\n            \"Term\": \"2019-09-09T00:00:00/2020-10-20T00:00:00\"\n        }\n    ],\n    \"Audio\": {\n        \"ClosedCaption\": \"FR\",\n        \"AudioType\": \"Stereo\"\n    },\n    \"Video\": {\n        \"Vchip\": \"TV-PG-V\",\n        \"ei\": true\n    }\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "1fad9650-e27a-19e1-a63a-9be8ddb30a5d",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/rule/954/entrycontentid/cid:org:pbs.org:Series34",
+			"folder": "ede2ebf6-6b45-8b87-6b1e-a28ea574528e",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539270592673,
+			"name": "Entry DELETE",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "23b41487-0749-c73d-9145-34b145686049",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/series/cid:org:pbs.org:Series306/season",
+			"folder": "416bec25-9a2b-bc75-ff60-c40ca2066c3f",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542167732303,
+			"name": "GetSeasonsBySeriesUID",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": []
+		},
+		{
+			"id": "273b30e2-1d13-1dfd-e94f-d6c1f350e67f",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/rule/954/entrycontentid",
+			"folder": "ede2ebf6-6b45-8b87-6b1e-a28ea574528e",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539202542110,
+			"name": "Entry POST",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n  \"EntryClass\": \"Season\",\n  \"EntryUID\": \"cid:org:pbs.org:Season36\"\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "2b935fb5-de34-c3df-b7f2-1573fd616715",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/compilation",
+			"folder": "9c6451dc-c075-b894-5a83-4ee438149b4e",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539195722821,
+			"name": "Compilation POST",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n    \"Title\": \"Frontline - Test\",\n    \"CompilationClass\": \"Franchise\",\n    \"ReferentType\": \"Compilation\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReleaseDate\": \"3000-01-31T00:00:00\",\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:System:BroadView:609240335\"\n        }\n    ],\n    \"EntryList\": [\n        {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"13\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Episode54140\"\n        },\n         {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"13\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Episode54137\"\n        },\n         {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"1\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Series306\"\n        },\n         {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"13\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Series313\"\n        },\n         {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"18\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Season410\"\n        },\n        {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"19\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Season312\"\n        },\n        {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"13\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Manifestation120\"\n        }\n    ]\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "2e19505e-2660-8136-f488-d011f89f39b9",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/compilation/search?title=Master",
+			"folder": "9c6451dc-c075-b894-5a83-4ee438149b4e",
+			"queryParams": [
+				{
+					"key": "title",
+					"value": "Master",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539268239436,
+			"name": "Compilation Search",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "\t{\n\t    \"PolicyType\": \"Offer\",\n\t    \"Title\": \"Caillou34update\",\n\t    \"EntityType\": \"Policy\",\n\t    \"ReferentType\": \"Offer\",\n\t    \"StructuralType\": \"Performance\"\n\t}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "396fbe75-4aaf-d85e-761b-5b15720e21b7",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation22/episode",
+			"folder": "2b46ffee-cdfe-ba85-4b85-b68fb76e1580",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542167938937,
+			"name": "getEpisodesByCompilationUID",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": []
+		},
+		{
+			"id": "39ecb5c2-1786-5e4f-bcf1-05150b24dae3",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation24",
+			"folder": "9c6451dc-c075-b894-5a83-4ee438149b4e",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539195750936,
+			"name": "Compilation DELETE",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "\t{\n\t    \"PolicyType\": \"Offer\",\n\t    \"Title\": \"Caillou34update\",\n\t    \"EntityType\": \"Policy\",\n\t    \"ReferentType\": \"Offer\",\n\t    \"StructuralType\": \"Performance\"\n\t}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "4eef4c5c-1f9e-1c95-22e1-22c9edb71e91",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/manifestation/search?title=Frontline",
+			"folder": "43dc08b2-283e-3315-5434-2cc80de268ef",
+			"queryParams": [
+				{
+					"key": "title",
+					"value": "Frontline",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539267732086,
+			"name": "Manifestation Search",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "\t{\n\t    \"PolicyType\": \"Offer\",\n\t    \"Title\": \"Caillou34update\",\n\t    \"EntityType\": \"Policy\",\n\t    \"ReferentType\": \"Offer\",\n\t    \"StructuralType\": \"Performance\"\n\t}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "4f097f25-7a2b-c8b8-b0e2-2c14962565d8",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation22",
+			"folder": "9c6451dc-c075-b894-5a83-4ee438149b4e",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539193130443,
+			"name": "Compilation GET",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "\t{\n\t    \"PolicyType\": \"Offer\",\n\t    \"Title\": \"Caillou34update\",\n\t    \"EntityType\": \"Policy\",\n\t    \"ReferentType\": \"Offer\",\n\t    \"StructuralType\": \"Performance\"\n\t}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "50940254-76c1-6ec5-da08-052a11b13e55",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation242185/contentidregistration",
+			"folder": "43dc08b2-283e-3315-5434-2cc80de268ef",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542167900862,
+			"name": "Manifestation ContentIDRegistration",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n  \"ContentID\": \"cid:org:pbs.org:PackageNumber:P100012-007\"\n}"
+		},
+		{
+			"id": "57d8cec2-12eb-a0e0-afd9-94d361dbc9f5",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation242185",
+			"folder": "43dc08b2-283e-3315-5434-2cc80de268ef",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542167867724,
+			"name": "Manifestation GET",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": []
+		},
+		{
+			"id": "583a8d90-4a09-512d-2923-9a123e33fadb",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/series/cid:org:pbs.org:Series402",
+			"folder": "206d3b64-d6f6-43c2-f19f-97a9de33c16a",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1538248238372,
+			"name": "Series DELETE",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "58880415-64b2-9a29-91b9-b242a55a3837",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy204",
+			"folder": "32b5a3ec-3b58-2f84-0665-b393b49051ee",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539195971655,
+			"name": "Policy PUT",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n  \"Title\": \"Fillmore: The Last Days-Demo\",\n  \"PolicyType\": \"Offer\",\n  \"ReferentType\": \"Offer\",\n  \"StructuralType\": \"Abstraction\"\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "7b477de3-2bf6-f29f-29b8-c645b39623df",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/season/cid:org:pbs.org:Season410/episode",
+			"folder": "001ca982-ad7e-a858-9e8b-b664c4e00625",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542167789048,
+			"name": "GetEpisodesBySeasonUID",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": []
+		},
+		{
+			"id": "7c5ca321-92e0-be8a-daf0-e3cd6db1c560",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/policy",
+			"folder": "32b5a3ec-3b58-2f84-0665-b393b49051ee",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539198308017,
+			"name": "Policy POST",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n  \"Title\": \"Fillmore: The Last Days-POST-Demo\",\n  \"PolicyType\": \"Offer\",\n  \"ReferentType\": \"Offer\",\n  \"StructuralType\": \"Abstraction\",\n  \"Rules\": [\n    {\n      \"Action\": {\n        \"MediaRight\": \"Release\",\n        \"MaximumExploitation\": \"8\",\n        \"UseWindow\": {\n          \"TermStartDate\": \"2009-05-28T00:00:00\",\n          \"TermEndDate\": \"2012-06-30T00:00:00\",\n          \"Calculated\": false\n        }\n      },\n      \"RuleAlternateUID\": \"usageid:org:pbs.org:UsageTVMulti-cast125059945\",\n      \"RuleType\": \"Permission\",\n      \"EntryList\": [\n        {\n          \"EntryClass\": \"Episode\",\n          \"EntryUID\": \"cid:org:pbs.org:Episode1234\"\n        }\n      ]\n    }\n  ]\n}\n\n",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "7cc6082d-41f4-91dd-ce78-02b63f671e99",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/series/cid:org:pbs.org:Series306/contentidregistration",
+			"folder": "206d3b64-d6f6-43c2-f19f-97a9de33c16a",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539267647003,
+			"name": "Series ContentIDRegistration",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n  \"ContentID\": \"cid:org:pbs.org:Series618586123\"\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "86230273-8602-82d4-b095-ef4df3e99851",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/episode",
+			"folder": "59207c3c-d8b6-7f98-084d-30417a0cc863",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 201\"] = responseCode.code === 201;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539196692939,
+			"name": "Episode POST",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n    \"ParentID\": \"cid:org:pbs.org:Season410\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"TV\",\n    \"EpisodeNumber\": 3011,\n    \"EpisodeClass\": \"Main\",\n    \"Title\": \"Frontline | Money, Power and Wall Street\",\n    \"Title120\": \"Frontline | Money, Power and Wall Street\",\n    \"TitleClass\": \"release\",\n    \"TitleLanguage\": \"en\",\n    \"SynopsisShort\": \"Part 1 - Learn how two U.S. administrations have confronted the economic crisis. \",\n    \"SynopsisLong\": \"Part 1 - FRONTLINE producer Michael Kirk (“Inside the Meltdown,” “The Warning”) investigates how two U.S. administrations have confronted the crisis — while dealing with sharp internal divisions and a relationship with Wall Street marked by mistrust and dependence, mutual interests and competing goals. The investigation charts the largest government bailout in U.S. history, a series of decisions that rewrote the rules of government and fueled a debate that would alter the country’s political landscape. Focusing on the Obama administration, FRONTLINE tells the story of a newly elected president with a mandate for change grappling with the multi-headed menace of economic instability, and with fundamental choices about winners and losers and the direction of his presidency.\",\n    \"CountryOfOrigin\": \"US\",\n    \"PrimaryGenre\": \"Public Affairs\",\n    \"SecondaryGenre\": \"Public Affairs\",\n    \"DistributionNumber\": 11,\n    \"ApproximateLength\": \"PT2H0M0S\",\n    \"Language\": {\n        \"PrimaryMode\": \"Audio\",\n        \"PrimaryLanguage\": \"el\",\n        \"SecondaryLanguage\": \"en\"\n    },\n    \"ReleaseDate\": \"3000-01-31T00:00:00\",\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:Episode210228643\"\n        },\n        {\n            \"ContentID\": \"cid:org:pbs.org:NOLACode:FRON  003011\"\n        }\n    ],\n    \"CreditsList\": [\n        {\n            \"Role\": \"Executive Producer\",\n            \"TalentID\": 210735376,\n            \"DisplayName\": \"colette neirouz\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136739,\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136739,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n                    \"ContactName\": \"PBS Content Services\"\n                },\n                {\n                    \"ContactID\": 3136739,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ]\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "865dc41e-d6b7-3f4c-e9a3-167fd2f4a20e",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation1",
+			"folder": "9c6451dc-c075-b894-5a83-4ee438149b4e",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539192899171,
+			"name": "Compilation PUT",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n    \"Title\": \"Frontline\",\n    \"CompilationClass\": \"Franchise\",\n    \"ReferentType\": \"Compilation\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReleaseDate\": \"3000-01-31T00:00:00\"\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "8e732cc7-f9cc-9702-76a9-b2888d263963",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/series",
+			"folder": "206d3b64-d6f6-43c2-f19f-97a9de33c16a",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 201\"] = responseCode.code === 201;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539197729981,
+			"name": "Series POST",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Series\",\n  \"Mode\": \"AudioVisual\",\n  \"SeriesClass\": \"Episodic\",\n  \"Title\": \"Money, Power and Wall Street\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"el\",\n  \"CountryOfOrigin\": \"US\",\n  \"SynopsisShort\": \"Money, Power and Wall Street\",\n  \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n  \"ApproximateLength\": \"PT200H0M0S\",\n  \"ReleaseDate\": \"3000-01-31T00:00:00\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:Series618586114\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136759,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"emm-uat@pbs.com\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ]\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "936ec09a-433c-bcc4-56c8-9649799c3eb8",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation23/manifestation",
+			"folder": "95d6c4f4-c15a-f86a-50f4-70525f2ea57b",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542167930060,
+			"name": "getManifestationByCompilationUID",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": []
+		},
+		{
+			"id": "998c0a6c-167d-4a16-1ea7-7db910cc159b",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/episode/cid:org:pbs.org:Episode11321",
+			"folder": "59207c3c-d8b6-7f98-084d-30417a0cc863",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539191859497,
+			"name": "Episode PUT",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"TV\",\n  \"EpisodeNumber\": 3011,\n  \"EpisodeClass\": \"Main\",\n  \"Title\": \"Frontline | Money, Power and Wall Street\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"en\",\n  \"SynopsisShort\": \"Part 1 - Learn how two U.S. administrations have confronted the economic crisis. \",\n  \"SynopsisLong\": \"Part 1 - FRONTLINE producer Michael Kirk (“Inside the Meltdown,” “The Warning”) investigates how two U.S. administrations have confronted the crisis — while dealing with sharp internal divisions and a relationship with Wall Street marked by mistrust and dependence, mutual interests and competing goals. The investigation charts the largest government bailout in U.S. history, a series of decisions that rewrote the rules of government and fueled a debate that would alter the country’s political landscape. Focusing on the Obama administration, FRONTLINE tells the story of a newly elected president with a mandate for change grappling with the multi-headed menace of economic instability, and with fundamental choices about winners and losers and the direction of his presidency.\",\n  \"CountryOfOrigin\": \"US\",\n  \"PrimaryGenre\": \"Public Affairs\",\n  \"SecondaryGenre\": \"Public Affairs\",\n  \"DistributionNumber\": 11,\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"EidrID\": \"\",\n  \"ParentID\": \"cid:org:pbs.org:Season410\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136739,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"test-emm@pbs.com\",\n          \"ContactName\": \"PBS Content Services\"\n        },\n        {\n          \"ContactID\": 3136759,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"test-emm@pbs.com\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ]\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "9f0bb58e-e95d-3dc8-a53a-bdad496d8321",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/episode/cid:org:pbs.org:Episode11321",
+			"folder": "59207c3c-d8b6-7f98-084d-30417a0cc863",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1537890029558,
+			"name": "Episode GET",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n    \"UID\": \"cid:org:pbs.org:Episode100\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"TV\",\n    \"EpisodeNumber\": \"101\",\n    \"EpisodeClass\": \"Main\",\n    \"SynopsisShort\": \"\",\n    \"SynopsisLong\": \"In the first hour, Gates travels to Memphis, Birmingham and Atlanta - once the battlegrounds on which civil rights were won for black southerners in the 1950s and 60s. The very cities from which African Americans fled during the era of legal segregation are today drawing them back by the tens of thousands. But how much have these cities really changed since the civil rights era? Interviewees include Morgan Freeman and Maya Angelou.\",\n    \"CountryOfOrigin\": \"US\",\n    \"PrimaryGenre\": \"Public Affairs\",\n    \"SecondaryGenre\": \"Public Affairs\",\n    \"DistributionNumber\": \"1\",\n    \"ApproximateLength\": \"PT1H0M0S\",\n    \"EidrID\": \"\",\n    \"EntityType\": \"Episode\",\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:NOLACode:ABCL  000101\"\n        }\n    ],\n    \"CreditsList\": [],\n    \"LanguageList\": [\n        {\n            \"PrimaryMode\": \"AUDIO\",\n            \"Primary\": \"English\",\n            \"Secondary\": \"\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": \"3136739\",\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\"\n        },\n        {\n            \"OrganizationID\": \"3136739\",\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\"\n        }\n    ],\n    \"ReleaseDateList\": [\n        {\n            \"ReleaseDate\": \"3000-01-31T00:00:00\"\n        }\n    ],\n    \"TitleList\": [\n        {\n            \"TitleText\": \"South: The Black Belt\",\n            \"Title120\": \"South: The Black Belt\",\n            \"TitleClass\": \"Release\",\n            \"TitleLanguage\": \"English\"\n        }\n    ]\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "a08e8370-f71a-11d5-febb-5d5e759ccef1",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/series/cid:org:pbs.org:Series306",
+			"folder": "206d3b64-d6f6-43c2-f19f-97a9de33c16a",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542167653680,
+			"name": "Series GET",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n    \"UID\": \"cid:org:pbs.org:Episode100\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"TV\",\n    \"EpisodeNumber\": \"101\",\n    \"EpisodeClass\": \"Main\",\n    \"SynopsisShort\": \"\",\n    \"SynopsisLong\": \"In the first hour, Gates travels to Memphis, Birmingham and Atlanta - once the battlegrounds on which civil rights were won for black southerners in the 1950s and 60s. The very cities from which African Americans fled during the era of legal segregation are today drawing them back by the tens of thousands. But how much have these cities really changed since the civil rights era? Interviewees include Morgan Freeman and Maya Angelou.\",\n    \"CountryOfOrigin\": \"US\",\n    \"PrimaryGenre\": \"Public Affairs\",\n    \"SecondaryGenre\": \"Public Affairs\",\n    \"DistributionNumber\": \"1\",\n    \"ApproximateLength\": \"PT1H0M0S\",\n    \"EidrID\": \"\",\n    \"EntityType\": \"Episode\",\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:NOLACode:ABCL  000101\"\n        }\n    ],\n    \"CreditsList\": [],\n    \"LanguageList\": [\n        {\n            \"PrimaryMode\": \"AUDIO\",\n            \"Primary\": \"English\",\n            \"Secondary\": \"\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": \"3136739\",\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\"\n        },\n        {\n            \"OrganizationID\": \"3136739\",\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\"\n        }\n    ],\n    \"ReleaseDateList\": [\n        {\n            \"ReleaseDate\": \"3000-01-31T00:00:00\"\n        }\n    ],\n    \"TitleList\": [\n        {\n            \"TitleText\": \"South: The Black Belt\",\n            \"Title120\": \"South: The Black Belt\",\n            \"TitleClass\": \"Release\",\n            \"TitleLanguage\": \"English\"\n        }\n    ]\n}"
+		},
+		{
+			"id": "a0d344e0-7f44-d7c7-cda4-502b4b71b1bd",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation242184",
+			"folder": "43dc08b2-283e-3315-5434-2cc80de268ef",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542167889866,
+			"name": "Manifestation DELETE",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": []
+		},
+		{
+			"id": "a101d617-2f40-b534-0c86-bb07ee6d3127",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/season/cid:org:pbs.org:Season981",
+			"folder": "e43c7b06-46da-0484-8eb9-971a3c822c6e",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1538247931268,
+			"name": "Season DELETE",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "a2650feb-b964-80b7-4255-0b297fcc7065",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/series/cid:org:pbs.org:Series306/season/cid:org:pbs.org:Season410",
+			"folder": "416bec25-9a2b-bc75-ff60-c40ca2066c3f",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542167756230,
+			"name": "GetSeasonBySUIDSeriesUD",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": []
+		},
+		{
+			"id": "a2d414d4-d33c-d4d2-bef7-d6465a11f960",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/manifestation",
+			"folder": "43dc08b2-283e-3315-5434-2cc80de268ef",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542167878079,
+			"name": "Manifestation POST",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\t\n    \"ActualLength\": \"PT0H53M17S\",\n    \"EditClass\": \"Original\",\n    \"EditUse\": \"Broadcast\",\n    \"EntityType\": \"Manifestation\",\n    \"ManifestationClass\": \"HD\",\n    \"ParentID\": \"cid:org:pbs.org:Manifestation73\",\n    \"ReferentType\": \"TV\",\n    \"ReleaseDate\": \"3000-01-31T00:00:00\",\n    \"StructuralType\": \"Performance\",\n    \"Title\": \"Forsyte Saga; The test\",\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.orgPackageType:HD-Base\"\n        }\n    ],\n    \"UseWindowTermList\": [\n        {\"Term\": \"2017-07-07T00:00:00/2018-08-08T00:00:00\"},\n        {\"Term\":\"2019-09-09T00:00:00/2020-10-20T00:00:00\"}\n    ],\n    \"Audio\": {\n        \"ClosedCaption\": \"FR\",\n        \"AudioType\": \"Stereo\"\n    },\n    \"Video\": {\n        \"Vchip\": \"TV-PG-V\",\n        \"ei\": true\n    }\n}"
+		},
+		{
+			"id": "ac9615aa-caaa-fc90-db7d-5c105df6f739",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/series/cid:org:pbs.org:Series275/episode/cid:org:pbs.org:Episode159",
+			"folder": "8a7e2846-3ff2-a599-d9fa-797a88c7836d",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542167776093,
+			"name": "GetEpisodeByEUIDSeriesUID",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": []
+		},
+		{
+			"id": "bda18dac-9d6f-a554-616b-7259c0e14baf",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation22/series",
+			"folder": "b0f2ca73-8e25-39b0-1bf9-b157b3a24585",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542167957140,
+			"name": "getSeriesByCompilationUID",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": []
+		},
+		{
+			"id": "c2e96a2f-0390-76e2-9c60-7285a67984ef",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation22/entrycontentuid/cid:org:pbs.org:Episode54141",
+			"folder": "afedad9c-fc01-1740-8e53-4a14678ff198",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539202535840,
+			"name": "Compilation Entry DELETE",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n  \"EntryClass\": \"Installment\",\n  \"EntryNumber\": \"20\",\n  \"EntryContentUID\": \"cid:org:pbs.org:Episode54137\"\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "c2fe4c5b-d71c-342b-d170-65ca1cde6555",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/rule",
+			"folder": "93e170d6-ae1c-379e-bc59-e02a7cd8dc90",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539199137530,
+			"name": "Rule POST",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n            \"Action\": {\n                \"MediaRight\": \"Telecast\",\n                \"MaximumExploitation\": \"Unlimited\",\n                \"UseWindow\": {\n                    \"TermStartDate\": \"2006-09-18T00:00:00\",\n                    \"TermEndDate\": \"2031-09-17T00:00:00\",\n                    \"Calculated\": false\n                }\n            },\n            \"RuleAlternateUID\": \"usageid:org:pbs.org:UsageTV303232320\",\n            \"RuleType\": \"Permission\",\n            \"EntryList\": [\n                {\n                    \"EntryClass\": \"Episode\",\n                    \"EntryUID\": \"cid:org:pbs.org:Episode6\"\n                },\n                {\n                    \"EntryClass\": \"Series\",\n                    \"EntryUID\": \"cid:org:pbs.org:Series1\"\n                }\n            ]\n        }",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "ce43306d-85b7-19c9-66a3-fe06955ba3fe",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/policy/search?title=Great Conversations",
+			"queryParams": [
+				{
+					"key": "title",
+					"value": "Great Conversations",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"data": [],
+			"dataMode": "params",
+			"name": "Policy Search",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1539268141028,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "32b5a3ec-3b58-2f84-0665-b393b49051ee",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "d2e4d7d5-59ec-5a92-2f52-9e27a947beeb",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/series/cid:org:pbs.org:Series275/episode",
+			"folder": "8a7e2846-3ff2-a599-d9fa-797a88c7836d",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542167765214,
+			"name": "GetEpisodesBySeriesUID",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": []
+		},
+		{
+			"id": "d474a301-d2b9-7ef9-f9fa-c416378cdecc",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/season",
+			"folder": "e43c7b06-46da-0484-8eb9-971a3c822c6e",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 201\"] = responseCode.code === 201;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539197700668,
+			"name": "Season POST",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n  \"ParentID\": \"cid:org:pbs.org:Series306\",\n  \"Title\": \"Arthur, Season 111\",\n  \"SeasonClass\": \"Main\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Season\",\n  \"SequenceNumber\": 10,\n  \"EidrID\": \"\",\n  \"ReleaseDate\": \"3000-01-31T00:00:00\",\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:Season10Series600817647\"\n    }\n  ]\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "d8276ecf-6521-e55d-3a6d-0860186c0063",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/season/cid:org:pbs.org:Season410/episode/cid:org:pbs.org:Episode11321",
+			"folder": "001ca982-ad7e-a858-9e8b-b664c4e00625",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1542167798391,
+			"name": "GetEpisodeByEUIDSeasonUID",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": []
+		},
+		{
+			"id": "dd247479-8dad-4d8f-a028-a9b339e0b723",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation22/contentidregistration",
+			"folder": "9c6451dc-c075-b894-5a83-4ee438149b4e",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539267666613,
+			"name": "Compilation ContentIDRegistration",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n  \"ContentID\": \"cid:org:pbs.org:System:BroadView:60924033523\"\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "dd7beec9-2d60-c18f-9bc2-c3b3cbe1d2f9",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/episode/cid:org:pbs.org:Episode11321/contentidregistration",
+			"folder": "59207c3c-d8b6-7f98-084d-30417a0cc863",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539267629146,
+			"name": "Episode ContentIDRegistration",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n  \"ContentID\": \"cid:org:pbs.org:Episode2102283232\"\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "f3408584-a850-7670-15a1-b3e2ae69ea91",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation22/entrycontentuid",
+			"folder": "afedad9c-fc01-1740-8e53-4a14678ff198",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539202537967,
+			"name": "Compilation Entry POST",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n  \"EntryClass\": \"Installment\",\n  \"EntryNumber\": \"27\",\n  \"EntryContentUID\": \"cid:org:pbs.org:Episode54141\"\n}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "f578eb1e-5fbe-7168-bd44-42b166fba6df",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/series/cid:org:pbs.org:Series306",
+			"folder": "206d3b64-d6f6-43c2-f19f-97a9de33c16a",
+			"queryParams": [],
+			"preRequestScript": "",
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "tests[\"Status code is 200\"] = responseCode.code === 200;",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539198168570,
+			"name": "Series PUT",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"rawModeData": "{\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Series\",\n  \"Mode\": \"AudioVisual\",\n  \"SeriesClass\": \"Episodic\",\n  \"EntityType\": \"Series\",\n  \"Title\": \"Money, Power and Wall Street\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"el\",\n  \"CountryOfOrigin\": \"US\",\n  \"SynopsisShort\": \"Money, Power and Wall Street\",\n  \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n  \"ApproximateLength\": \"PT200H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"ReleaseDate\": \"3000-01-31T00:00:00\",\n  \"CreditsList\": [\n    {\n      \"TalentID\": 210735376,\n      \"Role\": \"Producer\",\n      \"DisplayName\": \"colette neirouz\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136739,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"test-emm@pbs.com\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ]}",
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "fe21cc51-0acd-043e-bf4d-52c854296eda",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy215",
+			"folder": "32b5a3ec-3b58-2f84-0665-b393b49051ee",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539268213098,
+			"name": "Policy GET",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		},
+		{
+			"id": "ffd38a10-08b3-eada-6ecd-42da4f799073",
+			"headers": "Content-Type: application/json\napikey: {{apikey}}\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "apikey",
+					"value": "{{apikey}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy214",
+			"folder": "32b5a3ec-3b58-2f84-0665-b393b49051ee",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1539196229894,
+			"name": "Policy DELETE",
+			"description": "",
+			"collectionId": "12d83692-a577-c6a5-262b-9a0da9bbbcf5",
+			"responses": [],
+			"collection_id": "12d83692-a577-c6a5-262b-9a0da9bbbcf5"
+		}
+	]
+}
