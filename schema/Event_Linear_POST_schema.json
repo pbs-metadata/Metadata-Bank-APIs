@@ -65,16 +65,7 @@
         },
         "ProviderSourceName": {
           "type": "string",
-          "pattern": "^(.*)$",
-          "enum": [
-            "APT Exchange",
-            "APT Premium Service",
-            "NETA Access",
-            "NPS",
-            "PBS KIDS Channel",
-            "PBS PLUS",
-            "PBS Fundraising Programming"
-          ]
+          "pattern": "^(.*)$"
         },
         "ProviderTimeZone": {
           "type": "string",
