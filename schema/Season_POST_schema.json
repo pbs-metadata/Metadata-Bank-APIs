@@ -8,6 +8,10 @@
     "Title"
   ],
   "properties": {
+    "SeasonUID": {
+      "type": "string",
+      "pattern": "^(.*)$"
+    },
     "EpisodeUID": {
       "type": "string",
       "pattern": "^(.*)$"
@@ -45,13 +49,13 @@
     },
     "Title": {
       "type": "string",
-      "pattern": "^(.*)$",
-      "minLength": 1
+      "minLength": 1,
+      "pattern": "^(.*)$"
     },
     "TitleClass": {
       "type": "string",
-      "pattern": "^(.*)$",
-      "minLength": 1
+      "minLength": 1,
+      "pattern": "^(.*)$"
     },
     "SeasonClass": {
       "type": "string",

@@ -6,6 +6,10 @@
     "Title"
   ],
   "properties": {
+    "ManifestationUID": {
+      "type": "string",
+      "pattern": "^(.*)$"
+    },
     "ManifestationClass": {
       "type": "string",
       "minLength": 1,

@@ -8,6 +8,10 @@
     "Title"
   ],
   "properties": {
+    "PolicyUID": {
+      "type": "string",
+      "pattern": "^(.*)$"
+    },
     "PolicyType": {
       "type": "string",
       "minLength": 1,

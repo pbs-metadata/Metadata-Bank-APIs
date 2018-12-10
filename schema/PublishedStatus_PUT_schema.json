@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": [
+    "PublishedStatus"
+  ],
+  "properties": {
+    "PublishedStatus": {
+      "type": "string",
+      "pattern": "^(.*)$",
+      "enum": [
+        "In Progress",
+        "Externally Published",
+        "Internally Published"
+      ]
+    }
+  }
+}

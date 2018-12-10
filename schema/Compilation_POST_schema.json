@@ -2,13 +2,17 @@
   "type": "object",
   "required": [
     "CompilationClass",
+    "ContentIDList",
     "EntryList",
     "ReferentType",
     "StructuralType",
-    "Title",
-    "ContentIDList"
+    "Title"
   ],
   "properties": {
+    "CompilationUID": {
+      "type": "string",
+      "pattern": "^(.*)$"
+    },
     "Title": {
       "type": "string",
       "minLength": 1,
@@ -68,9 +72,8 @@
       "type": "string",
       "pattern": "^(.*)$"
     },
-    "CompilationUID": {
-      "type": "string",
-      "pattern": "^(.*)$"
+    "DistributionNumber": {
+      "type": "integer"
     },
     "ContentIDList": {
       "type": "array",

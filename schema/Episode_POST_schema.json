@@ -1,6 +1,19 @@
 {
   "type": "object",
+  "required": [
+    "ApproximateLength",
+    "EpisodeClass",
+    "EpisodeNumber",
+    "PrimaryGenre",
+    "ReferentType",
+    "Title",
+    "TitleClass"
+  ],
   "properties": {
+    "EpisodeUID": {
+      "type": "string",
+      "pattern": "^(.*)$"
+    },
     "ParentID": {
       "type": "string",
       "minLength": 1,
@@ -13,20 +26,6 @@
         "Abstraction",
         "Performance",
         "Digital"
-      ]
-    },
-    "EpisodeClass": {
-      "type": "string",
-      "pattern": "^(.*)$",
-      "enum": [
-        "Main",
-        "Omnibus",
-        "Pilot",
-        "Recut",
-        "Segment",
-        "Special",
-        "Standalone",
-        "one-time-only"
       ]
     },
     "ReferentType": {
@@ -43,25 +42,6 @@
         "Supplemental"
       ]
     },
-    "SeriesMode": {
-      "type": "string",
-      "pattern": "^(.*)$",
-      "enum": [
-        "AudioVisual",
-        "Visual",
-        "Audio",
-        "Other"
-      ]
-    },
-    "SeriesClass": {
-      "type": "string",
-      "pattern": "^(.*)$",
-      "enum": [
-        "Episodic",
-        "Anthology",
-        "Mini-series"
-      ]
-    },
     "EntityType": {
       "type": "string",
       "pattern": "^(.*)$"
@@ -69,6 +49,9 @@
     "EidrId": {
       "type": "string",
       "pattern": "^(.*)$"
+    },
+    "DistributionNumber": {
+      "type": "integer"
     },
     "CreateDateTime": {
       "type": "string",
@@ -89,13 +72,232 @@
     },
     "TitleClass": {
       "type": "string",
+      "minLength": 1,
+      "pattern": "^(.*)$"
+    },
+    "Title120": {
+      "type": "string",
       "pattern": "^(.*)$"
     },
     "TitleLanguage": {
       "type": "string",
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "enum": [
+        "aa",
+        "ab",
+        "ae",
+        "af",
+        "ak",
+        "am",
+        "an",
+        "ar",
+        "as",
+        "av",
+        "ay",
+        "az",
+        "ba",
+        "be",
+        "bg",
+        "bh",
+        "bi",
+        "bm",
+        "bn",
+        "bo",
+        "br",
+        "bs",
+        "ca",
+        "ce",
+        "ch",
+        "co",
+        "cr",
+        "cs",
+        "cu",
+        "cv",
+        "cy",
+        "da",
+        "de",
+        "dv",
+        "dz",
+        "ee",
+        "el",
+        "en",
+        "eo",
+        "es",
+        "et",
+        "eu",
+        "fa",
+        "ff",
+        "fi",
+        "fj",
+        "fl",
+        "fo",
+        "fr",
+        "fy",
+        "ga",
+        "gd",
+        "gl",
+        "gn",
+        "gu",
+        "gv",
+        "ha",
+        "haw",
+        "he",
+        "hi",
+        "ho",
+        "hr",
+        "ht",
+        "hu",
+        "hy",
+        "hz",
+        "ia",
+        "id",
+        "ie",
+        "ig",
+        "ii",
+        "ik",
+        "io",
+        "is",
+        "it",
+        "iu",
+        "ja",
+        "jv",
+        "ka",
+        "kg",
+        "ki",
+        "kj",
+        "kk",
+        "kl",
+        "km",
+        "kn",
+        "ko",
+        "kr",
+        "ks",
+        "ku",
+        "kv",
+        "kw",
+        "ky",
+        "la",
+        "lb",
+        "lg",
+        "li",
+        "ln",
+        "lo",
+        "lt",
+        "lu",
+        "lv",
+        "mg",
+        "mh",
+        "mi",
+        "mk",
+        "ml",
+        "mn",
+        "mr",
+        "ms",
+        "mt",
+        "my",
+        "na",
+        "nb",
+        "nd",
+        "ne",
+        "ng",
+        "nl",
+        "nn",
+        "no",
+        "nr",
+        "nv",
+        "ny",
+        "oc",
+        "oj",
+        "om",
+        "or",
+        "os",
+        "pa",
+        "pi",
+        "pl",
+        "ps",
+        "pt",
+        "qu",
+        "rm",
+        "rn",
+        "ro",
+        "ru",
+        "rw",
+        "sa",
+        "sc",
+        "sd",
+        "se",
+        "sg",
+        "si",
+        "sk",
+        "sl",
+        "sm",
+        "sn",
+        "so",
+        "sq",
+        "sr",
+        "ss",
+        "st",
+        "su",
+        "sv",
+        "sw",
+        "ta",
+        "te",
+        "tg",
+        "th",
+        "ti",
+        "tk",
+        "tl",
+        "tn",
+        "to",
+        "tr",
+        "ts",
+        "tt",
+        "tw",
+        "ty",
+        "ug",
+        "uk",
+        "ur",
+        "uz",
+        "ve",
+        "vi",
+        "vo",
+        "wa",
+        "wo",
+        "xh",
+        "yi",
+        "yo",
+        "za",
+        "zh",
+        "zu"
+      ]
     },
     "ReleaseDate": {
+      "type": "string",
+      "pattern": "^(.*)$"
+    },
+    "EpisodeNumber": {
+      "type": "integer"
+    },
+    "EpisodeClass": {
+      "type": "string",
+      "pattern": "^(.*)$",
+      "enum": [
+        "Main",
+        "Omnibus",
+        "Pilot",
+        "Recut",
+        "Segment",
+        "Special",
+        "Standalone",
+        "one-time-only"
+      ]
+    },
+    "PrimaryGenre": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(.*)$"
+    },
+    "SecondaryGenre": {
       "type": "string",
       "pattern": "^(.*)$"
     },
@@ -758,6 +960,25 @@
             "zu"
           ]
         }
+      },
+      "required": [
+        "PrimaryLanguage",
+        "PrimaryMode"
+      ]
+    },
+    "ContentIDList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ContentID": {
+            "type": "string",
+            "pattern": "^(.*)$"
+          }
+        },
+        "required": [
+          "ContentID"
+        ]
       }
     },
     "CreditsList": {
@@ -769,19 +990,56 @@
             "type": "string",
             "pattern": "^(.*)$",
             "enum": [
-              "producer",
-              "distributor",
-              "broadcaster",
-              "editor",
-              "encoder",
-              "other",
-              "Executive Producer",
-              "Producer",
-              "Distributor",
-              "Broadcaster",
+              "Actor",
+              "Analyst",
+              "Anchor",
+              "Animal Actor",
+              "Animation",
+              "Appearing",
+              "Art Director",
+              "Announcer",
+              "Assoc. Producer",
+              "Author",
+              "Casting",
+              "Choreographer",
+              "Cinematographer",
+              "Commentator",
+              "Conductor",
+              "Co-Producer",
+              "Costumes",
+              "Director",
               "Editor",
-              "Encoder",
-              "Other"
+              "Executive Producer",
+              "Guest",
+              "Host",
+              "Key Grip",
+              "Make Up",
+              "Producer",
+              "actor",
+              "analyst",
+              "anchor",
+              "animal actor",
+              "animation",
+              "announcer",
+              "appearing",
+              "art airector",
+              "assoc. aroducer",
+              "author",
+              "casting",
+              "choreographer",
+              "cinematographer",
+              "commentator",
+              "conductor",
+              "co-producer",
+              "costumes",
+              "director",
+              "editor",
+              "executive producer",
+              "guest",
+              "host",
+              "key grip",
+              "make up",
+              "producer"
             ]
           },
           "TalentID": {
@@ -815,7 +1073,7 @@
           },
           "Role": {
             "type": "string",
-            "pattern": "^(.*)$"
+            "pattern": "^Distributor"
           },
           "ContactInfoList": {
             "type": "array",
@@ -847,7 +1105,8 @@
                 }
               },
               "required": [
-                "ContactID"
+                "ContactID",
+                "ContactName"
               ]
             }
           }
