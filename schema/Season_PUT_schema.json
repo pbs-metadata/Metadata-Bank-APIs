@@ -1,12 +1,5 @@
 {
   "type": "object",
-  "required": [
-    "ParentUID",
-    "ReferentType",
-    "SeasonClass",
-    "SequenceNumber",
-    "Title"
-  ],
   "properties": {
     "SeasonUID": {
       "type": "string",
@@ -44,6 +37,17 @@
         "Supplemental"
       ]
     },
+    "SeasonClass": {
+      "type": "string",
+      "pattern": "^(.*)$",
+      "enum": [
+        "Adjunct",
+        "Main",
+        "Miniseries",
+        "Pro Forma",
+        "Recut"
+      ]
+    },
     "SequenceNumber": {
       "type": "integer"
     },
@@ -56,17 +60,6 @@
       "type": "string",
       "minLength": 1,
       "pattern": "^(.*)$"
-    },
-    "SeasonClass": {
-      "type": "string",
-      "pattern": "^(.*)$",
-      "enum": [
-        "Adjunct",
-        "Main",
-        "Miniseries",
-        "Pro Forma",
-        "Recut"
-      ]
     },
     "EntityType": {
       "type": "string",
@@ -91,21 +84,6 @@
     "ReleaseDate": {
       "type": "string",
       "pattern": "^(.*)$"
-    },
-    "ContentIDList": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "ContentID": {
-            "type": "string",
-            "pattern": "^(.*)$"
-          }
-        },
-        "required": [
-          "ContentID"
-        ]
-      }
     }
   }
 }

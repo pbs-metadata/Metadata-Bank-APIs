@@ -1,11 +1,5 @@
 {
   "type": "object",
-  "required": [
-    "ParentUID",
-    "ReferentType",
-    "StructuralType",
-    "VOD"
-  ],
   "properties": {
     "StructuralType": {
       "type": "string",
@@ -362,7 +356,7 @@
         "pa",
         "pi",
         "pl",
-        "ps",
+        " ps",
         "pt",
         "qu",
         "rm",
@@ -460,50 +454,67 @@
         ]
       }
     },
-    "VOD": {
+    "Linear": {
       "type": "object",
       "properties": {
-        "AlternateEventIDList": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "AlternateEventID": {
-                "type": "string",
-                "pattern": "^(.*)$"
-              }
-            }
-          }
-        },
-        "PlayRun": {
-          "type": "integer"
-        },
-        "PublishedStatus": {
+        "PlayType": {
           "type": "string",
-          "pattern": "^(.*)$"
+          "pattern": "^(.*)$",
+          "enum": [
+            "Hard Feed (without rights)",
+            "Hard Feed (with rights)",
+            "Soft Feed (with rights)",
+            "Soft Feed (without rights)",
+            "Preview For Air",
+            "Preview Not For Air",
+            "Not For Air",
+            "Re-Feed",
+            "Internal Only",
+            "Repeat",
+            "Prefeed",
+            "Feed For Record",
+            "Other Hard Feed (with Rights)",
+            "Other Hard Feed (without Rights)"
+          ]
         },
-        "ProviderSource": {
-          "type": "string",
-          "pattern": "^(.*)$"
-        },
-        "AssetUID": {
-          "type": "string",
-          "pattern": "^(.*)$"
-        },
-        "StartDateTime": {
-          "type": "string",
-          "pattern": "^(.*)$"
-        },
-        "EndDateTime": {
+        "Duration": {
           "type": "string",
           "minLength": 1,
           "pattern": "^(.*)$"
+        },
+        "ProgramService": {
+          "type": "object",
+          "properties": {
+            "ProviderSource": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "^(.*)$"
+            },
+            "ProviderSourceName": {
+              "type": "string",
+              "pattern": "^(.*)$"
+            },
+            "ProviderTimeZone": {
+              "type": "string",
+              "pattern": "^(.*)$",
+              "enum": [
+                "CST",
+                "CDT",
+                "EST",
+                "EDT",
+                "PST",
+                "PDT",
+                "MST",
+                "MDT",
+                "HST",
+                "HDT",
+                "AKST",
+                "AKDT"
+              ]
+            }
+          }
         }
-      },
-      "required": [
-        "AlternateEventIDList",
-        "EndDateTime"
-      ]
+      }
     }
   }
 }
