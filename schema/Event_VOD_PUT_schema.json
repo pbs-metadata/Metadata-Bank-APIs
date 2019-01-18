@@ -1,11 +1,5 @@
 {
   "type": "object",
-  "required": [
-    "ParentUID",
-    "ReferentType",
-    "StructuralType",
-    "VOD"
-  ],
   "properties": {
     "StructuralType": {
       "type": "string",
@@ -362,7 +356,7 @@
         "pa",
         "pi",
         "pl",
-        "ps",
+        " ps",
         "pt",
         "qu",
         "rm",
@@ -463,21 +457,6 @@
     "VOD": {
       "type": "object",
       "properties": {
-        "AlternateEventIDList": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "AlternateEventID": {
-                "type": "string",
-                "pattern": "^(.*)$"
-              }
-            }
-          }
-        },
-        "PlayRun": {
-          "type": "integer"
-        },
         "PublishedStatus": {
           "type": "string",
           "pattern": "^(.*)$"
@@ -499,11 +478,7 @@
           "minLength": 1,
           "pattern": "^(.*)$"
         }
-      },
-      "required": [
-        "AlternateEventIDList",
-        "EndDateTime"
-      ]
+      }
     }
   }
 }

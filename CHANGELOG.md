@@ -1,6 +1,10 @@
+## v1.0.4
+ * Beta-v2 metadata-bank json schema changes for ParentUID changes on Season, Episode, Manifestation, File and new schema are added for PUT endpoints.
+ * Beta-v2 Postman collection - Updated for endpoints for Changelog's DeletedEntityList, Pagiantion links, ParentID changed to ParentUID.
+
 ## v1.0.3
- * UAT4 metadata-bank json schema changes for Series, Season, Episode, Manifestation, Compilation, Policy, File, EventLinear, EventVOD and Funder.
- * UAT4 Postman collection - Series, Season, Episode, Manifestation, Compilation, Policy, File, Event, Funder and Catalog.
+ * UAT4 - Beta-v1 metadata-bank json schema changes for Series, Season, Episode, Manifestation, Compilation, Policy, File, EventLinear, EventVOD and Funder.
+ * UAT4 -  Beta-v1 Postman collection - Series, Season, Episode, Manifestation, Compilation, Policy, File, Event, Funder and Catalog.
 
 ## v1.0.1.1
  * UAT3-Micro-release-v11.9.c - Schema changes on Event & Event Linear - The Enumeration value is removed for ProviderSourceName and it supports any string value.

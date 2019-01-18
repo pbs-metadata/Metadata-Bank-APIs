@@ -1,14 +1,5 @@
 {
   "type": "object",
-  "required": [
-    "ApproximateLength",
-    "EpisodeClass",
-    "EpisodeNumber",
-    "PrimaryGenre",
-    "ReferentType",
-    "Title",
-    "TitleClass"
-  ],
   "properties": {
     "EpisodeUID": {
       "type": "string",
@@ -28,6 +19,20 @@
         "Digital"
       ]
     },
+    "EpisodeClass": {
+      "type": "string",
+      "pattern": "^(.*)$",
+      "enum": [
+        "Main",
+        "Omnibus",
+        "Pilot",
+        "Recut",
+        "Segment",
+        "Special",
+        "Standalone",
+        "one-time-only"
+      ]
+    },
     "ReferentType": {
       "type": "string",
       "pattern": "^(.*)$",
@@ -42,6 +47,25 @@
         "Supplemental"
       ]
     },
+    "SeriesMode": {
+      "type": "string",
+      "pattern": "^(.*)$",
+      "enum": [
+        "AudioVisual",
+        "Visual",
+        "Audio",
+        "Other"
+      ]
+    },
+    "SeriesClass": {
+      "type": "string",
+      "pattern": "^(.*)$",
+      "enum": [
+        "Episodic",
+        "Anthology",
+        "Mini-series"
+      ]
+    },
     "EntityType": {
       "type": "string",
       "pattern": "^(.*)$"
@@ -49,9 +73,6 @@
     "EidrId": {
       "type": "string",
       "pattern": "^(.*)$"
-    },
-    "DistributionNumber": {
-      "type": "integer"
     },
     "CreateDateTime": {
       "type": "string",
@@ -72,7 +93,6 @@
     },
     "TitleClass": {
       "type": "string",
-      "minLength": 1,
       "pattern": "^(.*)$"
     },
     "Title120": {
@@ -214,7 +234,7 @@
         "pa",
         "pi",
         "pl",
-        "ps",
+        " ps",
         "pt",
         "qu",
         "rm",
@@ -275,22 +295,11 @@
       "type": "string",
       "pattern": "^(.*)$"
     },
-    "EpisodeNumber": {
+    "DistributionNumber": {
       "type": "integer"
     },
-    "EpisodeClass": {
-      "type": "string",
-      "pattern": "^(.*)$",
-      "enum": [
-        "Main",
-        "Omnibus",
-        "Pilot",
-        "Recut",
-        "Segment",
-        "Special",
-        "Standalone",
-        "one-time-only"
-      ]
+    "EpisodeNumber": {
+      "type": "integer"
     },
     "PrimaryGenre": {
       "type": "string",
@@ -960,25 +969,6 @@
             "zu"
           ]
         }
-      },
-      "required": [
-        "PrimaryLanguage",
-        "PrimaryMode"
-      ]
-    },
-    "ContentIDList": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "ContentID": {
-            "type": "string",
-            "pattern": "^(.*)$"
-          }
-        },
-        "required": [
-          "ContentID"
-        ]
       }
     },
     "CreditsList": {
@@ -1073,7 +1063,7 @@
           },
           "Role": {
             "type": "string",
-            "pattern": "^Distributor"
+            "pattern": "^(.*)$"
           },
           "ContactInfoList": {
             "type": "array",
@@ -1105,8 +1095,7 @@
                 }
               },
               "required": [
-                "ContactID",
-                "ContactName"
+                "ContactID"
               ]
             }
           }

@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "properties": {
+    "PolicyUID": {
+      "type": "string",
+      "pattern": "^(.*)$"
+    },
+    "PolicyType": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(.*)$"
+    },
+    "ReferentType": {
+      "type": "string",
+      "pattern": "^(.*)$",
+      "enum": [
+        "Series",
+        "Season",
+        "TV",
+        "Movie",
+        "Short",
+        "Web",
+        "Compilation",
+        "Supplemental",
+        "Offer"
+      ]
+    },
+    "StructuralType": {
+      "type": "string",
+      "pattern": "^(.*)$",
+      "enum": [
+        "Abstraction",
+        "Performance",
+        "Digital"
+      ]
+    },
+    "Title": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(.*)$"
+    },
+    "EntityType": {
+      "type": "string",
+      "pattern": "^(.*)$"
+    }
+  }
+}

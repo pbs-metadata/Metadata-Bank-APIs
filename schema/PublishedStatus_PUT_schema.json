@@ -9,8 +9,8 @@
       "pattern": "^(.*)$",
       "enum": [
         "In Progress",
-        "Externally Published",
-        "Internally Published"
+        "Internally Published",
+        "Externally Published"
       ]
     }
   }

@@ -17,9 +17,8 @@ Swagger	https://app.swaggerhub.com/apis-docs/metadata-pbs/metadata-bank-alpha
 2.	CRs in UAT5 Endpoints:
 •	Modified existing endpoints.
 i)	The catalog search endpoint returns Series entity along with only matched seasons.
-ii)	The [ReleaseDate] - Removed from all entities.
-iii)	The ParentID renamed to ParentUID for Season, Episode, Manifestation, File. (disruptive)
-iv)	The pagination is implemented for all search and get endpoints.
-v)	The Soft delete is implemented for all delete entities endpoints.
-vi)	The DeletedEntityList is added for all changelog endpoints.
-vii)	New SNS notification topic defined for manifestation change on events.
+ii)	The ParentID renamed to ParentUID for Season, Episode, Manifestation, File. (disruptive)
+iii)	The pagination is implemented for all search and get endpoints.
+iv)	The Soft delete is implemented for all delete entities endpoints.
+v)	The DeletedEntityList is added for all changelog endpoints.
+vi)	New SNS notification topic defined for manifestation change on events.
