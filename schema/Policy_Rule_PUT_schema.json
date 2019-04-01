@@ -1,57 +1,65 @@
 {
+  "definitions": {},
   "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "Constraint"
+  ],
   "properties": {
-    "RuleAlternateUID": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "^(.*)$"
-    },
-    "RuleType": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "^(.*)$"
-    },
-    "Action": {
+    "Constraint": {
       "type": "object",
+      "title": "The Constraint Schema",
+      "required": [
+        "PlayType",
+        "Action"
+      ],
       "properties": {
-        "MediaRight": {
+        "PlayType": {
           "type": "string",
+          "title": "The Playtype Schema",
+          "default": "",
           "pattern": "^(.*)$"
+        },
+        "Action": {
+          "type": "string",
+          "title": "The Action Schema",
+          "default": "",
+          "pattern": "^(.*)$",
+          "enum": [
+            "Television",
+            "Linear Streaming",
+            "Non-Commercial",
+            "Commercial",
+            "Broadcast",
+            "Pay",
+            "Pay Premium",
+            "Linear"
+          ]
         },
         "MaximumExploitation": {
           "type": "string",
+          "title": "The Maximumexploitation Schema",
+          "default": "",
           "pattern": "^(.*)$"
         },
-        "UseWindow": {
-          "type": "object",
-          "title": "The Usewindow Schema",
-          "properties": {
-            "TermStartDate": {
-              "type": "string",
-              "minLength": 1,
-              "pattern": "^(.*)$"
-            },
-            "TermEndDate": {
-              "type": "string",
-              "minLength": 1,
-              "pattern": "^(.*)$"
-            },
-            "Calculated": {
-              "type": "boolean"
-            }
-          },
-          "required": [
-            "Calculated",
-            "TermEndDate",
-            "TermStartDate"
-          ]
+        "Calculated": {
+          "type": "boolean",
+          "title": "The Calculated Schema",
+          "default": false
+        },
+        "TermStartDate": {
+          "type": "string",
+          "title": "The Termstartdate Schema",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "TermEndDate": {
+          "type": "string",
+          "title": "The Termenddate Schema",
+          "default": "",
+          "pattern": "^(.*)$"
         }
-      },
-      "required": [
-        "MaximumExploitation",
-        "MediaRight",
-        "UseWindow"
-      ]
+      }
     }
   }
 }

@@ -1,60 +1,111 @@
 {
+  "definitions": {},
   "type": "object",
+  "title": "The Root Schema",
   "required": [
-    "Action",
-    "RuleAlternateUID",
-    "RuleType"
+    "Constraint"
   ],
   "properties": {
-    "RuleAlternateUID": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "^(.*)$"
-    },
-    "RuleType": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "^(.*)$"
-    },
-    "Action": {
+    "Constraint": {
       "type": "object",
+      "title": "The Constraint Schema",
+      "required": [
+        "PlayType",
+        "Action"
+      ],
       "properties": {
-        "MediaRight": {
+        "PlayType": {
           "type": "string",
+          "title": "The Playtype Schema",
+          "default": "",
           "pattern": "^(.*)$"
+        },
+        "Action": {
+          "type": "string",
+          "pattern": "^(.*)$",
+          "default": "",
+          "enum": [
+            "Television",
+            "Linear Streaming",
+            "Non-Commercial",
+            "Commercial",
+            "Broadcast",
+            "Pay",
+            "Pay Premium",
+            "Linear"
+          ]
         },
         "MaximumExploitation": {
           "type": "string",
+          "title": "The Maximumexploitation Schema",
+          "default": "",
           "pattern": "^(.*)$"
         },
-        "UseWindow": {
-          "type": "object",
-          "title": "The Usewindow Schema",
-          "properties": {
-            "TermStartDate": {
-              "type": "string",
-              "pattern": "^(.*)$"
-            },
-            "TermEndDate": {
-              "type": "string",
-              "pattern": "^(.*)$"
-            },
-            "Calculated": {
-              "type": "boolean"
+        "Calculated": {
+          "type": "boolean",
+          "title": "The Calculated Schema",
+          "default": false
+        },
+        "TermStartDate": {
+          "type": "string",
+          "title": "The Termstartdate Schema",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "TermEndDate": {
+          "type": "string",
+          "title": "The Termenddate Schema",
+          "default": "",
+          "pattern": "^(.*)$"
+        },
+        "LogicalAssetIDList": {
+          "type": "array",
+          "title": "The Logicalassetidlist Schema",
+          "default": null,
+          "items": {
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "LogicalAssetID"
+            ],
+            "properties": {
+              "LogicalAssetID": {
+                "type": "string",
+                "title": "The Logicalassetid Schema",
+                "default": "",
+                "pattern": "^(.*)$"
+              }
             }
-          },
-          "required": [
-            "Calculated",
-            "TermEndDate",
-            "TermStartDate"
-          ]
+          }
+        },
+        "EntryList": {
+          "type": "array",
+          "title": "The Entrylist Schema",
+          "default": null,
+          "items": {
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "EntryClass",
+              "EntryUID"
+            ],
+            "properties": {
+              "EntryClass": {
+                "type": "string",
+                "title": "The Entryclass Schema",
+                "default": "",
+                "pattern": "^(.*)$"
+              },
+              "EntryUID": {
+                "type": "string",
+                "title": "The Entryuid Schema",
+                "default": "",
+                "pattern": "^(.*)$"
+              }
+            }
+          }
         }
-      },
-      "required": [
-        "MaximumExploitation",
-        "MediaRight",
-        "UseWindow"
-      ]
+      }
     }
   }
 }

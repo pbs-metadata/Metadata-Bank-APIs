@@ -1023,7 +1023,8 @@
             ]
           },
           "TalentID": {
-            "type": "integer"
+            "type": "string",
+            "pattern": "^(.*)$"
           },
           "DisplayName": {
             "type": "string",

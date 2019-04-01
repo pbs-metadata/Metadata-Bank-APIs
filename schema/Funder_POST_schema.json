@@ -29,6 +29,21 @@
     "Funder": {
       "type": "string",
       "pattern": "^(.*)$"
+    },
+    "LogicalAssetIDList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "LogicalAssetID": {
+            "type": "string",
+            "pattern": "^(.*)$"
+          }
+        },
+        "required": [
+          "LogicalAssetID"
+        ]
+      }
     }
   }
 }
