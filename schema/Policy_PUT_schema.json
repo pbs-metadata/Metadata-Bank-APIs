@@ -22,7 +22,8 @@
         "Web",
         "Compilation",
         "Supplemental",
-        "Offer"
+        "Offer",
+        "Policy"
       ]
     },
     "StructuralType": {
@@ -37,10 +38,6 @@
     "Title": {
       "type": "string",
       "minLength": 1,
-      "pattern": "^(.*)$"
-    },
-    "EntityType": {
-      "type": "string",
       "pattern": "^(.*)$"
     }
   }
