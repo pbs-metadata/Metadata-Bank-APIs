@@ -1,3 +1,7 @@
+## v1.0.5
+ * Beta-v6 metadata-bank json schema changes for Credit Role name for Series & Episode for voth POST & PUT endpoints.
+ * Beta-v6 Postman collection - Updated endpoints for UID changes
+ 
 ## v1.0.4
  * Beta-v2 metadata-bank json schema changes for ParentUID changes on Season, Episode, Manifestation, File and new schema are added for PUT endpoints.
  * Beta-v2 Postman collection - Updated for endpoints for Changelog's DeletedEntityList, Pagiantion links, ParentID changed to ParentUID.

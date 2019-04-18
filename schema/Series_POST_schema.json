@@ -1,19 +1,19 @@
 {
-  "type": "object",
   "required": [
     "ApproximateLength",
     "ReferentType",
     "SeriesClass",
     "Title"
   ],
+  "type": "object",
   "properties": {
     "SeriesUID": {
-      "type": "string",
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     },
     "StructuralType": {
-      "type": "string",
       "pattern": "^(.*)$",
+      "type": "string",
       "enum": [
         "Abstraction",
         "Performance",
@@ -21,11 +21,12 @@
       ]
     },
     "DistributionNumber": {
-      "type": "integer"
+      "type": "integer",
+      "format": "int32"
     },
     "ReferentType": {
-      "type": "string",
       "pattern": "^(.*)$",
+      "type": "string",
       "enum": [
         "Series",
         "Season",
@@ -38,8 +39,8 @@
       ]
     },
     "Mode": {
-      "type": "string",
       "pattern": "^(.*)$",
+      "type": "string",
       "enum": [
         "AudioVisual",
         "Visual",
@@ -48,8 +49,8 @@
       ]
     },
     "SeriesClass": {
-      "type": "string",
       "pattern": "^(.*)$",
+      "type": "string",
       "enum": [
         "Episodic",
         "Anthology",
@@ -57,37 +58,37 @@
       ]
     },
     "EntityType": {
-      "type": "string",
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     },
     "EidrId": {
-      "type": "string",
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     },
     "CreateDateTime": {
-      "type": "string",
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     },
     "UpdateDateTime": {
-      "type": "string",
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     },
     "PublishedStatus": {
-      "type": "string",
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     },
     "Title": {
-      "type": "string",
       "minLength": 1,
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     },
     "TitleClass": {
-      "type": "string",
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     },
     "TitleLanguage": {
-      "type": "string",
       "pattern": "^(.*)$",
+      "type": "string",
       "enum": [
         "aa",
         "ab",
@@ -278,12 +279,12 @@
       ]
     },
     "ReleaseDate": {
-      "type": "string",
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     },
     "CountryOfOrigin": {
-      "type": "string",
       "pattern": "^(.*)$",
+      "type": "string",
       "enum": [
         "AF",
         "AX",
@@ -537,28 +538,32 @@
       ]
     },
     "SynopsisShort": {
-      "type": "string",
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     },
     "SynopsisLong": {
-      "type": "string",
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     },
     "ApproximateLength": {
-      "type": "string",
       "minLength": 1,
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     },
     "Language": {
+      "required": [
+        "PrimaryLanguage",
+        "PrimaryMode"
+      ],
       "type": "object",
       "properties": {
         "PrimaryMode": {
-          "type": "string",
-          "pattern": "^(.*)$"
+          "pattern": "^(.*)$",
+          "type": "string"
         },
         "PrimaryLanguage": {
-          "type": "string",
           "pattern": "^(.*)$",
+          "type": "string",
           "enum": [
             "aa",
             "ab",
@@ -749,8 +754,8 @@
           ]
         },
         "SecondaryLanguage": {
-          "type": "string",
           "pattern": "^(.*)$",
+          "type": "string",
           "enum": [
             "aa",
             "ab",
@@ -940,35 +945,35 @@
             "zu"
           ]
         }
-      },
-      "required": [
-        "PrimaryLanguage",
-        "PrimaryMode"
-      ]
+      }
     },
     "ContentIDList": {
       "type": "array",
       "items": {
+        "required": [
+          "ContentID"
+        ],
         "type": "object",
         "properties": {
           "ContentID": {
-            "type": "string",
-            "pattern": "^(.*)$"
+            "pattern": "^(.*)$",
+            "type": "string"
           }
-        },
-        "required": [
-          "ContentID"
-        ]
+        }
       }
     },
     "CreditsList": {
       "type": "array",
       "items": {
+        "required": [
+          "DisplayName",
+          "TalentID"
+        ],
         "type": "object",
         "properties": {
           "Role": {
-            "type": "string",
             "pattern": "^(.*)$",
+            "type": "string",
             "enum": [
               "Actor",
               "Analyst",
@@ -984,6 +989,7 @@
               "Choreographer",
               "Cinematographer",
               "Commentator",
+              "Composer",
               "Conductor",
               "Co-Producer",
               "Costumes",
@@ -992,9 +998,37 @@
               "Executive Producer",
               "Guest",
               "Host",
-              "Key Grip",
               "Make Up",
               "Producer",
+              "Judge",
+              "Key Grip",
+              "Music Director",
+              "Musician",
+              "Narrator",
+              "Panelist",
+              "Performer",
+              "Photographer",
+              "Play-By-Play",
+              "Production Designer",
+              "Reality Cast Member",
+              "Remarks by",
+              "Reporter",
+              "Screenwriter",
+              "Set Design",
+              "Sidekick",
+              "Sound Effects",
+              "Speaker",
+              "Special Effects",
+              "Studio",
+              "Stunts",
+              "Subject (person only)",
+              "Technical Advisor",
+              "Voice",
+              "Writer",
+              "Interviewer",
+              "Other",
+              "Essayist",
+              "Moderator",
               "actor",
               "analyst",
               "anchor",
@@ -1023,79 +1057,77 @@
             ]
           },
           "TalentID": {
-            "type": "string",
-            "pattern": "^(.*)$"
+            "pattern": "^(.*)$",
+            "type": "string"
           },
           "DisplayName": {
-            "type": "string",
-            "pattern": "^(.*)$"
+            "pattern": "^(.*)$",
+            "type": "string"
           }
-        },
-        "required": [
-          "DisplayName",
-          "TalentID"
-        ]
+        }
       }
     },
     "OrganizationList": {
       "type": "array",
       "items": {
+        "required": [
+          "OrganizationID"
+        ],
         "type": "object",
         "properties": {
           "OrganizationID": {
-            "type": "integer"
+            "type": "integer",
+            "format": "int32"
           },
           "DisplayName": {
-            "type": "string",
-            "pattern": "^(.*)$"
+            "pattern": "^(.*)$",
+            "type": "string"
           },
           "Domain": {
-            "type": "string",
-            "pattern": "^(.*)$"
+            "pattern": "^(.*)$",
+            "type": "string"
           },
           "Role": {
-            "type": "string",
-            "pattern": "^(.*)$"
+            "pattern": "^(.*)$",
+            "type": "string"
           },
           "ContactInfoList": {
             "type": "array",
             "items": {
-              "type": "object",
-              "properties": {
-                "ContactID": {
-                  "type": "integer"
-                },
-                "Phone": {
-                  "type": "string",
-                  "pattern": "^(.*)$"
-                },
-                "PhoneType": {
-                  "type": "string",
-                  "pattern": "^(.*)$"
-                },
-                "Address": {
-                  "type": "string",
-                  "pattern": "^(.*)$"
-                },
-                "PrimaryEmail": {
-                  "type": "string",
-                  "pattern": "^(.*)$"
-                },
-                "ContactName": {
-                  "type": "string",
-                  "pattern": "^(.*)$"
-                }
-              },
               "required": [
                 "ContactID",
                 "ContactName"
-              ]
+              ],
+              "type": "object",
+              "properties": {
+                "ContactID": {
+                  "type": "integer",
+                  "format": "int32"
+                },
+                "Phone": {
+                  "pattern": "^(.*)$",
+                  "type": "string"
+                },
+                "PhoneType": {
+                  "pattern": "^(.*)$",
+                  "type": "string"
+                },
+                "Address": {
+                  "pattern": "^(.*)$",
+                  "type": "string"
+                },
+                "PrimaryEmail": {
+                  "pattern": "^(.*)$",
+                  "type": "string"
+                },
+                "ContactName": {
+                  "pattern": "^(.*)$",
+                  "type": "string"
+                }
+              }
             }
           }
-        },
-        "required": [
-          "OrganizationID"
-        ]
+        }
       }
     }
   }
