@@ -1,7 +1,12 @@
-## v1.0.5
- * Beta-v6 metadata-bank json schema changes for Credit Role name for Series & Episode for voth POST & PUT endpoints.
- * Beta-v6 Postman collection - Updated endpoints for UID changes
+## v1.0.6
+ * Beta-v0.7 - JSON schema for Funder removed in Bank and moved to Core API.
+ * Beta-v0.7 - Postman collection - Removed GetSeasonsBySeriesUID, GetSeasonBySUIDSeriesUD, GetEpisodesBySeriesUID, GetEpisodeByEUIDSeriesUID, GetEpisodesBySeasonUID, GetEpisodeByEUIDSeasonUID Updated endpoints from Metadata Bank-v0.7
+ * Beta-v0.7 - Postman collection - Moved funder and Media-Inevntory endpoints to Metadata Core API project.
  
+## v1.0.5
+ * Beta-v2 metadata-bank json schema changes for ParentUID changes on Season, Episode, Manifestation, File and new schema are added for PUT endpoints.
+ * Beta-v2 Postman collection - Updated for endpoints for Changelog's DeletedEntityList, Pagiantion links, ParentID changed to ParentUID. 
+
 ## v1.0.4
  * Beta-v2 metadata-bank json schema changes for ParentUID changes on Season, Episode, Manifestation, File and new schema are added for PUT endpoints.
  * Beta-v2 Postman collection - Updated for endpoints for Changelog's DeletedEntityList, Pagiantion links, ParentID changed to ParentUID.
@@ -20,4 +25,4 @@
 
 ## v1.0.0
  * UAT2 metadata-bank json schema for Series, Season, Episode, Manifestation, Compilation, Policy.
- * UAT2 Postman collection - Series, Season, Episode, Manifestation, Compilation, Policy.
+ * UAT2 Postman collection - Series, Season, Episode, Manifestation, Compilation, Policy. 
