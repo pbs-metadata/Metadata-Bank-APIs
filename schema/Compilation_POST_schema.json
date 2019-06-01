@@ -1,5 +1,4 @@
 {
-  "type": "object",
   "required": [
     "CompilationClass",
     "ContentIDList",
@@ -8,23 +7,24 @@
     "StructuralType",
     "Title"
   ],
+  "type": "object",
   "properties": {
     "CompilationUID": {
-      "type": "string",
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     },
     "Title": {
-      "type": "string",
       "minLength": 1,
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     },
     "EidrId": {
-      "type": "string",
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     },
     "ReferentType": {
-      "type": "string",
       "pattern": "^(.*)$",
+      "type": "string",
       "enum": [
         "Series",
         "Season",
@@ -40,8 +40,8 @@
       ]
     },
     "StructuralType": {
-      "type": "string",
       "pattern": "^(.*)$",
+      "type": "string",
       "enum": [
         "Abstraction",
         "Performance",
@@ -49,8 +49,8 @@
       ]
     },
     "CompilationClass": {
-      "type": "string",
       "pattern": "^(.*)$",
+      "type": "string",
       "enum": [
         "Blu-ray",
         "Digital Cinema",
@@ -69,30 +69,37 @@
       ]
     },
     "ReleaseDate": {
-      "type": "string",
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     },
     "DistributionNumber": {
-      "type": "integer"
+      "type": "integer",
+      "format": "int32"
     },
     "ContentIDList": {
       "type": "array",
       "items": {
+        "required": [
+          "ContentID"
+        ],
         "type": "object",
         "properties": {
           "ContentID": {
-            "type": "string",
-            "pattern": "^(.*)$"
+            "pattern": "^(.*)$",
+            "type": "string"
           }
-        },
-        "required": [
-          "ContentID"
-        ]
+        }
       }
     },
     "EntryList": {
+      "minItems": 1,
       "type": "array",
       "items": {
+        "required": [
+          "EntryClass",
+          "EntryContentUID",
+          "EntryNumber"
+        ],
         "type": "object",
         "properties": {
           "EntryClass": {
@@ -105,32 +112,27 @@
             ]
           },
           "EntryNumber": {
-            "type": "string",
-            "pattern": "^(.*)$"
+            "pattern": "^(.*)$",
+            "type": "string"
           },
           "EntryContentUID": {
-            "type": "string",
-            "pattern": "^(.*)$"
+            "pattern": "^(.*)$",
+            "type": "string"
           }
-        },
-        "required": [
-          "EntryClass",
-          "EntryContentUID",
-          "EntryNumber"
-        ]
+        }
       }
     },
     "CreateDateTime": {
-      "type": "string",
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     },
     "UpdateDateTime": {
-      "type": "string",
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     },
     "PublishedStatus": {
-      "type": "string",
-      "pattern": "^(.*)$"
+      "pattern": "^(.*)$",
+      "type": "string"
     }
   }
 }

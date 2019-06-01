@@ -1,3 +1,7 @@
+## v1.0.7
+ * Beta-v0.8 - JSON schema Updated for Compilation POST in Bank API.
+ * Beta-v0.8 - Postman collection - Modified Event's UID in all Event endpoints.
+
 ## v1.0.6
  * Beta-v0.7 - JSON schema for Funder removed in Bank and moved to Core API.
  * Beta-v0.7 - Postman collection - Removed GetSeasonsBySeriesUID, GetSeasonBySUIDSeriesUD, GetEpisodesBySeriesUID, GetEpisodeByEUIDSeriesUID, GetEpisodesBySeasonUID, GetEpisodeByEUIDSeasonUID Updated endpoints from Metadata Bank-v0.7
