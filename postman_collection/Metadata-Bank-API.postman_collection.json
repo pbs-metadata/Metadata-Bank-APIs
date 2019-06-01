@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "9ab31089-0217-4270-b597-3385da044cc7",
-		"name": "Metadata-Bank-API-v0.7",
+		"_postman_id": "588b1896-23bc-4c68-bf66-30a09d4328bd",
+		"name": "Metadata-Bank-API-v0.8",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -57,12 +57,8 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
-									"raw": "{{baseurl}}/series/changelog?startdate=2019-4-1&enddate=2019-5-25",
+									"raw": "{{baseurl}}/series/changelog?startdate=2019-4-1&enddate=2019-6-25",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -77,7 +73,7 @@
 										},
 										{
 											"key": "enddate",
-											"value": "2019-5-25"
+											"value": "2019-6-25"
 										}
 									]
 								}
@@ -117,10 +113,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": "{{baseurl}}/series/cid:org:pbs.org:Series306"
 					},
 					"response": []
@@ -331,12 +323,8 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
-									"raw": "{{baseurl}}/season/changelog?startdate=2019-4-1&enddate=2019-5-25",
+									"raw": "{{baseurl}}/season/changelog?startdate=2019-4-1&enddate=2019-6-25",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -351,7 +339,7 @@
 										},
 										{
 											"key": "enddate",
-											"value": "2019-5-25"
+											"value": "2019-6-25"
 										}
 									]
 								}
@@ -391,10 +379,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": "{{baseurl}}/season/cid:org:pbs.org:Season156"
 					},
 					"response": []
@@ -581,10 +565,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{baseurl}}/season/search?title=Tavis Smiley Report&contentid=cid:org:pbs.org:Broadview-Season.10-Series.615957619",
 							"host": [
@@ -665,12 +645,8 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
-									"raw": "{{baseurl}}/episode/changelog?startdate=2019-4-1&enddate=2019-5-25",
+									"raw": "{{baseurl}}/episode/changelog?startdate=2019-4-1&enddate=2019-6-25",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -685,7 +661,7 @@
 										},
 										{
 											"key": "enddate",
-											"value": "2019-5-25"
+											"value": "2019-6-25"
 										}
 									]
 								}
@@ -725,10 +701,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": "{{baseurl}}/episode/cid:org:pbs.org:Episode31448"
 					},
 					"response": []
@@ -915,10 +887,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{baseurl}}/episode/search?title=INDIANAPOLIS&contentid=cid:org:pbs.org:Broadview-647286369",
 							"host": [
@@ -1043,12 +1011,8 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
-									"raw": "{{baseurl}}/manifestation/changelog?startdate=2019-4-1&enddate=2019-5-25",
+									"raw": "{{baseurl}}/manifestation/changelog?startdate=2019-4-1&enddate=2019-6-25",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -1063,7 +1027,7 @@
 										},
 										{
 											"key": "enddate",
-											"value": "2019-5-25"
+											"value": "2019-6-25"
 										}
 									]
 								}
@@ -1103,10 +1067,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation121044"
 					},
 					"response": []
@@ -1217,7 +1177,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {},
 						"url": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation222250"
 					},
 					"response": []
@@ -1252,10 +1211,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{baseurl}}/manifestation/search?contentid=cid:org:pbs.org:Broadview-4140447&title=World&usewindowtermstartdate=2010-11-07T00:00:00&usewindowtermenddate=2018-08-08T00:00:00",
 							"host": [
@@ -1358,10 +1313,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": "{{baseurl}}/file/apid:org:pbs.org:File1212"
 					},
 					"response": []
@@ -1554,10 +1505,6 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation13/series"
 							},
 							"response": []
@@ -1597,10 +1544,6 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation13/season"
 							},
 							"response": []
@@ -1640,10 +1583,6 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation13/episode"
 							},
 							"response": []
@@ -1683,10 +1622,6 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation13/manifestation"
 							},
 							"response": []
@@ -1792,10 +1727,6 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{baseurl}}/compilation/changelog?startdate=2019-1-15&enddate=2019-5-25",
 									"host": [
@@ -1887,10 +1818,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation2"
 					},
 					"response": []
@@ -2038,10 +1965,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{baseurl}}/compilation/search?title=Masterpiece Mystery!&contentid=cid:org:pbs.org:Broadview-609240155&entrycontentuid=cid:org:pbs.org:Episode28068",
 							"host": [
@@ -2185,7 +2108,6 @@
 												"value": "{{x-api-key}}"
 											}
 										],
-										"body": {},
 										"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/2266/entrycontentid/cid:org:pbs.org:Season36"
 									},
 									"response": []
@@ -2299,7 +2221,6 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"body": {},
 								"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/57250"
 							},
 							"response": []
@@ -2362,10 +2283,6 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{baseurl}}/policy/changelog?startdate=2019-4-1&enddate=2019-5-25",
 									"host": [
@@ -2421,10 +2338,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy215"
 					},
 					"response": []
@@ -2535,7 +2448,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {},
 						"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy13870"
 					},
 					"response": []
@@ -2608,10 +2520,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{baseurl}}/policy/search?title=Fillmore&logicalassetid=alid:org:pbs.org:Broadview-185569723&entryuid=cid:org:pbs.org:Season13&termstartdate=2007-04-27&termenddate=2007-05-29",
 							"host": [
@@ -2725,9 +2633,9 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode23818\",\n    \"Linear\": {\n        \"PlayType\": \"Hard Feed (with rights)\",\n        \"ReleaseQualifier\": \"premiere\",\n        \"Duration\": \"1800\",\n        \"ProgramService\": {\n            \"ProviderSource\": \"500 - X\",\n            \"ProviderSourceName\": \"PBS\",\n            \"ProviderTimeZone\": \"EDT\"\n        }\n    },\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation2612\",\n    \"ReferentType\": \"Linear\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"fr\",\n    \"SubtitledLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\"\n}"
+									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode23817\",\n    \"Linear\": {\n        \"PlayType\": \"Hard Feed (with rights)\",\n        \"ReleaseQualifier\": \"premiere\",\n        \"Duration\": \"1800\",\n        \"ProgramService\": {\n            \"ProviderSource\": \"500 - X\",\n            \"ProviderSourceName\": \"PBS\",\n            \"ProviderTimeZone\": \"EDT\"\n        }\n    },\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation2612\",\n    \"ReferentType\": \"Linear\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"fr\",\n    \"SubtitledLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\"\n}"
 								},
-								"url": "{{baseurl}}/event/linear/eventid:org:Domain:10017"
+								"url": "{{baseurl}}/event/linear/cid:org:pbs.org:Event10017"
 							},
 							"response": []
 						},
@@ -2763,9 +2671,9 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"PlayRun\": 523\r\n}"
+									"raw": "{\r\n\t\"PlayRun\": 234\r\n}"
 								},
-								"url": "{{baseurl}}/event/linear/eventid:org:Domain:10017/playrun"
+								"url": "{{baseurl}}/event/linear/cid:org:pbs.org:Event10017/playrun"
 							},
 							"response": []
 						},
@@ -2801,9 +2709,9 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"AlternateEventID\": \"cid:org:pbs.org:BroadView-1234599\"\r\n}"
+									"raw": "{\r\n\t\"AlternateEventID\": \"cid:org:pbs.org:Broadview-1234600\"\r\n}"
 								},
-								"url": "{{baseurl}}/event/linear/eventid:org:Domain:10017/alternateeventidregistration"
+								"url": "{{baseurl}}/event/linear/cid:org:pbs.org:Event10017/alternateeventidregistration"
 							},
 							"response": []
 						},
@@ -2841,7 +2749,7 @@
 									"mode": "raw",
 									"raw": ""
 								},
-								"url": "{{baseurl}}/event/linear/eventid:org:Domain:1714676"
+								"url": "{{baseurl}}/event/linear/cid:org:pbs.org:Event1714676"
 							},
 							"response": []
 						}
@@ -2923,7 +2831,7 @@
 									"mode": "raw",
 									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode23818\",\n    \"VOD\": {\n        \"ReleaseQualifier\": \"Repeat\",\n        \"PlayRun\": 12,\n        \"Duration\": \"1800\",\n        \"ProviderSource\": \"pbs.org\"\n    },\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation211172\",\n    \"ReferentType\": \"VOD\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"en\",\n    \"SubtitledLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\",\n        \"3D\",\n        \"Dubbed\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\"\n}"
 								},
-								"url": "{{baseurl}}/event/vod/eventid:org:Domain:918320"
+								"url": "{{baseurl}}/event/vod/cid:org:pbs.org:Event918320"
 							},
 							"response": []
 						},
@@ -2959,9 +2867,9 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"AlternateEventID\": \"cid:org:pbs.org:BroadView-101010101\"\r\n}"
+									"raw": "{\r\n\t\"AlternateEventID\": \"cid:org:pbs.org:Broadview-101010112\"\r\n}"
 								},
-								"url": "{{baseurl}}/event/vod/eventid:org:Domain:1714677/alternateeventidregistration"
+								"url": "{{baseurl}}/event/vod/cid:org:pbs.org:Event1714677/alternateeventidregistration"
 							},
 							"response": []
 						},
@@ -2999,7 +2907,7 @@
 									"mode": "raw",
 									"raw": ""
 								},
-								"url": "{{baseurl}}/event/vod/eventid:org:Domain:1714704"
+								"url": "{{baseurl}}/event/vod/cid:org:pbs.org:Event1714687"
 							},
 							"response": []
 						}
@@ -3039,10 +2947,6 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{baseurl}}/showschedule?eventdate=2006-07-31&manifestationId=cid:org:pbs.org:Manifestation10904&episodeId=cid:org:pbs.org:Episode11396",
 									"host": [
@@ -3099,12 +3003,8 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
-									"raw": "{{baseurl}}/showschedule/linear?providersource=501 - NPS Kids/Prime/Late Night&startdatetime=2006-10-21&alternateeventId=cid:org:pbs.org:BroadView-1234598",
+									"raw": "{{baseurl}}/showschedule/linear?providersource=501 - NPS Kids/Prime/Late Night&startdatetime=2006-10-21&alternateeventId=cid:org:pbs.org:Broadview-1234598",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -3123,7 +3023,7 @@
 										},
 										{
 											"key": "alternateeventId",
-											"value": "cid:org:pbs.org:BroadView-1234598"
+											"value": "cid:org:pbs.org:Broadview-1234598"
 										}
 									]
 								}
@@ -3160,10 +3060,6 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
 									"raw": "{{baseurl}}/showschedule/vod?startdatetime=2007-04-14&enddatetime=2007-10-14&providersource=uat.pbs.org&alternateeventId=cid:org:pbs.org:Broadview-652020977",
 									"host": [
@@ -3223,7 +3119,7 @@
 									"mode": "raw",
 									"raw": "{\n\t\"PublishedStatus\": \"Externally Published\"\n}"
 								},
-								"url": "{{baseurl}}/event/eventid:org:pbs.org:Domain:91827/publish-status"
+								"url": "{{baseurl}}/event/cid:org:pbs.org:Event91827/publish-status"
 							},
 							"response": []
 						}
@@ -3251,12 +3147,8 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": ""
-								},
 								"url": {
-									"raw": "{{baseurl}}/event/changelog?startdate=2019-4-1&enddate=2019-5-25",
+									"raw": "{{baseurl}}/event/changelog?startdate=2019-4-1&enddate=2019-6-25",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -3271,7 +3163,7 @@
 										},
 										{
 											"key": "enddate",
-											"value": "2019-5-25"
+											"value": "2019-6-25"
 										}
 									]
 								}
@@ -3311,11 +3203,7 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": "{{baseurl}}/event/eventid:org:Domain:10017"
+						"url": "{{baseurl}}/event/cid:org:pbs.org:Event1714690"
 					},
 					"response": []
 				}
@@ -3353,10 +3241,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{baseurl}}/catalog/search?episode-title=Chicago: Streets of Heaven&season-title=Tavis Smiley Report&series-title=Animals with Cameras",
 							"host": [
@@ -3414,10 +3298,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": {
 							"raw": "{{baseurl}}/catalog/search?contentid=cid:org:pbs.org:Broadview-45706791",
 							"host": [
@@ -3466,10 +3346,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": "{{baseurl}}/catalog/series/cid:org:pbs.org:Series306"
 					},
 					"response": []
@@ -3503,10 +3379,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": "{{baseurl}}/catalog/season/cid:org:pbs.org:Season411"
 					},
 					"response": []
@@ -3541,10 +3413,6 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
 						"url": "{{baseurl}}/catalog/episode/cid:org:pbs.org:Episode18171"
 					},
 					"response": []
