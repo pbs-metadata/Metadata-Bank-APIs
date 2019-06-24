@@ -1,51 +1,52 @@
 {
-  "type": "object",
-  "properties": {
-    "ParentUID": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "^(.*)$"
-    },
-    "FileClass": {
-      "type": "string",
-      "pattern": "^(.*)$",
-      "enum": [
-        "Manifest",
-        "Metadata",
-        "Media",
-        "Avail",
-        "Ancillary"
-      ]
-    },
-    "FileName": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "^(.*)$"
-    },
-    "FileDeliveryStatus": {
-      "type": "string",
-      "pattern": "^(.*)$",
-      "enum": [
-        "Removed",
-        "Delivered",
-        "Future",
-        "Other"
-      ]
-    },
-    "AlternateAssetIDList": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "AssetUID": {
-            "type": "string",
-            "pattern": "^(.*)$"
-          }
+    "type": "object",
+    "properties": {
+        "ParentUID": {
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "type": "string"
         },
-        "required": [
-          "AssetUID"
-        ]
-      }
+        "FileClass": {
+            "transform": ["trim", "toEnumCase"],
+            "type": "string",
+            "enum": [
+                "Manifest",
+                "Metadata",
+                "Media",
+                "Avail",
+                "Ancillary"
+            ]
+        },
+        "FileName": {
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "FileDeliveryStatus": {
+            "transform": ["trim", "toEnumCase"],
+            "type": "string",
+            "enum": [
+                "Removed",
+                "Delivered",
+                "Future",
+                "Other"
+            ]
+        },
+        "AlternateAssetIDList": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                "required": [
+                    "AssetUID"
+                ],
+                "type": "object",
+                "properties": {
+                    "AssetUID": {
+                        "pattern": "^(.*)$",
+                        "type": "string"
+                    }
+                }
+            }
+        }
     }
-  }
 }
