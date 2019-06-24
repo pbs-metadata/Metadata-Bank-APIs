@@ -1,209 +1,209 @@
 {
-  "type": "object",
-  "required": [
-    "ManifestationClass",
-    "ParentUID",
-    "Title"
-  ],
-  "properties": {
-    "ManifestationUID": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "ManifestationClass": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "^(.*)$"
-    },
-    "ParentUID": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "^(.*)$"
-    },
-    "Title": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "^(.*)$"
-    },
-    "EidrId": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "ReferentType": {
-      "type": "string",
-      "pattern": "^(.*)$",
-      "enum": [
-        "Series",
-        "Season",
-        "TV",
-        "Movie",
-        "Short",
-        "Web",
-        "Compilation",
-        "Supplemental"
-      ]
-    },
-    "StructuralType": {
-      "type": "string",
-      "pattern": "^(.*)$",
-      "enum": [
-        "Abstraction",
-        "Performance",
-        "Digital"
-      ]
-    },
-    "ActualLength": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "ReleaseDate": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "EditUse": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "EditClass": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "PublishedStatus": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "Audio": {
-      "type": "object",
-      "properties": {
-        "Language": {
-          "type": "string",
-          "pattern": "^(.*)$"
+    "title": "The Root Schema",
+    "required": [
+        "ManifestationClass",
+        "ParentUID",
+        "Title"
+    ],
+    "type": "object",
+    "properties": {
+        "ManifestationUID": {
+            "pattern": "^(.*)$",
+            "type": "string"
         },
-        "ClosedCaption": {
-          "type": "string",
-          "pattern": "^(.*)$"
-        },
-        "AudioType": {
-          "type": "string",
-          "pattern": "^(.*)$"
-        }
-      },
-      "required": [
-        "AudioType",
-        "ClosedCaption"
-      ]
-    },
-    "Video": {
-      "type": "object",
-      "properties": {
-        "Vchip": {
-          "type": "string",
-          "pattern": "^(.*)$"
-        },
-        "ei": {
-          "type": "boolean"
-        }
-      },
-      "required": [
-        "Vchip",
-        "ei"
-      ]
-    },
-    "UseWindowTermList": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "Term": {
-            "type": "string",
+        "ManifestationClass": {
             "minLength": 1,
-            "pattern": "^(.*)$"
-          }
-        },
-        "required": [
-          "Term"
-        ]
-      }
-    },
-    "ContentIDList": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "ContentID": {
-            "type": "string",
-            "pattern": "^(.*)$"
-          }
-        },
-        "required": [
-          "ContentID"
-        ]
-      }
-    },
-    "FileList": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "FileClass": {
-            "type": "string",
-            "pattern": "^(.*)$"
-          },
-          "AssetUID": {
-            "type": "string",
-            "pattern": "^(.*)$"
-          },
-          "ParentUID": {
-            "type": "string",
-            "pattern": "^(.*)$"
-          },
-          "ReferentType": {
-            "type": "string",
             "pattern": "^(.*)$",
-            "enum": [
-              "Series",
-              "Season",
-              "TV",
-              "Movie",
-              "Short",
-              "Web",
-              "Compilation",
-              "Supplemental"
-            ]
-          },
-          "StructuralType": {
-            "type": "string",
-            "pattern": "^(.*)$",
-            "enum": [
-              "Abstraction",
-              "Performance",
-              "Digital"
-            ]
-          },
-          "FileName": {
-            "type": "string",
-            "pattern": "^(.*)$"
-          },
-          "FileDeliveryStatus": {
-            "type": "string",
-            "pattern": "^(.*)$"
-          },
-          "EidrId": {
-            "type": "string",
-            "pattern": "^(.*)$"
-          }
+            "type": "string"
         },
-        "required": [
-          "EidrId",
-          "FileClass",
-          "ParentUID",
-          "StructuralType"
-        ]
-      }
-    },
-    "ManifestationList": {
-      "type": "array"
+        "ParentUID": {
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "Title": {
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "EidrId": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "ReferentType": {
+            "transform": ["trim", "toEnumCase"],
+            "type": "string",
+            "enum": [
+                "Series",
+                "Season",
+                "TV",
+                "Movie",
+                "Short",
+                "Web",
+                "Compilation",
+                "Supplemental"
+            ]
+        },
+        "StructuralType": {
+            "transform": ["trim", "toEnumCase"],
+            "type": "string",
+            "enum": [
+                "Abstraction",
+                "Performance",
+                "Digital"
+            ]
+        },
+        "ActualLength": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "ReleaseDate": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "EditUse": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "EditClass": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "PublishedStatus": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "Audio": {
+            "required": [
+                "AudioType",
+                "ClosedCaption"
+            ],
+            "type": "object",
+            "properties": {
+                "Language": {
+                    "pattern": "^(.*)$",
+                    "type": "string"
+                },
+                "ClosedCaption": {
+                    "pattern": "^(.*)$",
+                    "type": "string"
+                },
+                "AudioType": {
+                    "pattern": "^(.*)$",
+                    "type": "string"
+                }
+            }
+        },
+        "Video": {
+            "required": [
+                "Vchip",
+                "ei"
+            ],
+            "type": "object",
+            "properties": {
+                "Vchip": {
+                    "pattern": "^(.*)$",
+                    "type": "string"
+                },
+                "ei": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "UseWindowTermList": {
+            "type": "array",
+            "items": {
+                "required": [
+                    "Term"
+                ],
+                "type": "object",
+                "properties": {
+                    "Term": {
+                        "minLength": 1,
+                        "pattern": "^(.*)$",
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "ContentIDList": {
+            "type": "array",
+            "items": {
+                "required": [
+                    "ContentID"
+                ],
+                "type": "object",
+                "properties": {
+                    "ContentID": {
+                        "pattern": "^(.*)$",
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "FileList": {
+            "type": "array",
+            "items": {
+                "required": [
+                    "EidrId",
+                    "FileClass",
+                    "ParentUID",
+                    "StructuralType"
+                ],
+                "type": "object",
+                "properties": {
+                    "FileClass": {
+                        "pattern": "^(.*)$",
+                        "type": "string"
+                    },
+                    "AssetUID": {
+                        "pattern": "^(.*)$",
+                        "type": "string"
+                    },
+                    "ParentUID": {
+                        "pattern": "^(.*)$",
+                        "type": "string"
+                    },
+                    "ReferentType": {
+                        "transform": ["trim", "toEnumCase"],
+                        "type": "string",
+                        "enum": [
+                            "Series",
+                            "Season",
+                            "TV",
+                            "Movie",
+                            "Short",
+                            "Web",
+                            "Compilation",
+                            "Supplemental"
+                        ]
+                    },
+                    "StructuralType": {
+                        "transform": ["trim", "toEnumCase"],
+                        "type": "string",
+                        "enum": [
+                            "Abstraction",
+                            "Performance",
+                            "Digital"
+                        ]
+                    },
+                    "FileName": {
+                        "pattern": "^(.*)$",
+                        "type": "string"
+                    },
+                    "FileDeliveryStatus": {
+                        "pattern": "^(.*)$",
+                        "type": "string"
+                    },
+                    "EidrId": {
+                        "pattern": "^(.*)$",
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "ManifestationList": {
+            "type": "array"
+        }
     }
-  },
-  "title": "The Root Schema"
 }

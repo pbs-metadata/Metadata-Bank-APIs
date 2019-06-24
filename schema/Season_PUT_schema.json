@@ -1,89 +1,90 @@
 {
-  "type": "object",
-  "properties": {
-    "SeasonUID": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "EpisodeUID": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "ParentUID": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "^(.*)$"
-    },
-    "StructuralType": {
-      "type": "string",
-      "pattern": "^(.*)$",
-      "enum": [
-        "Abstraction",
-        "Performance",
-        "Digital"
-      ]
-    },
-    "ReferentType": {
-      "type": "string",
-      "pattern": "^(.*)$",
-      "enum": [
-        "Series",
-        "Season",
-        "TV",
-        "Movie",
-        "Short",
-        "Web",
-        "Compilation",
-        "Supplemental"
-      ]
-    },
-    "SeasonClass": {
-      "type": "string",
-      "pattern": "^(.*)$",
-      "enum": [
-        "Adjunct",
-        "Main",
-        "Miniseries",
-        "Pro Forma",
-        "Recut"
-      ]
-    },
-    "SequenceNumber": {
-      "type": "integer"
-    },
-    "Title": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "^(.*)$"
-    },
-    "TitleClass": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "^(.*)$"
-    },
-    "EntityType": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "EidrId": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "CreateDateTime": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "UpdateDateTime": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "PublishedStatus": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "ReleaseDate": {
-      "type": "string",
-      "pattern": "^(.*)$"
+    "type": "object",
+    "properties": {
+        "SeasonUID": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "EpisodeUID": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "ParentUID": {
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "StructuralType": {
+            "transform": ["trim", "toEnumCase"],
+            "type": "string",
+            "enum": [
+                "Abstraction",
+                "Performance",
+                "Digital"
+            ]
+        },
+        "ReferentType": {
+            "transform": ["trim", "toEnumCase"],
+            "type": "string",
+            "enum": [
+                "Series",
+                "Season",
+                "TV",
+                "Movie",
+                "Short",
+                "Web",
+                "Compilation",
+                "Supplemental"
+            ]
+        },
+        "SeasonClass": {
+            "transform": ["trim", "toEnumCase"],
+            "type": "string",
+            "enum": [
+                "Adjunct",
+                "Main",
+                "Miniseries",
+                "Pro Forma",
+                "Recut"
+            ]
+        },
+        "SequenceNumber": {
+            "type": "integer",
+            "format": "int32"
+        },
+        "Title": {
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "TitleClass": {
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "EntityType": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "EidrId": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "CreateDateTime": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "UpdateDateTime": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "PublishedStatus": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "ReleaseDate": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        }
     }
-  }
 }

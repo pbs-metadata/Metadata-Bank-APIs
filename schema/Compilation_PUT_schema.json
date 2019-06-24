@@ -1,67 +1,68 @@
 {
-  "type": "object",
-  "properties": {
-    "CompilationUID": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "CreateDateTime": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "UpdateDateTime": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "PublishedStatus": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "Title": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "^(.*)$"
-    },
-    "CompilationClass": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "EidrID": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "ReferentType": {
-      "type": "string",
-      "pattern": "^(.*)$",
-      "enum": [
-        "Series",
-        "Season",
-        "TV",
-        "Movie",
-        "Short",
-        "Web",
-        "Compilation",
-        "Supplemental",
-        "Offer",
-        "Set",
-        "Agreement"
-      ]
-    },
-    "StructuralType": {
-      "type": "string",
-      "pattern": "^(.*)$",
-      "enum": [
-        "Abstraction",
-        "Performance",
-        "Digital"
-      ]
-    },
-    "ReleaseDate": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "DistributionNumber": {
-      "type": "integer"
+    "type": "object",
+    "properties": {
+        "CompilationUID": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "CreateDateTime": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "UpdateDateTime": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "PublishedStatus": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "Title": {
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "CompilationClass": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "EidrID": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "ReferentType": {
+            "transform": ["trim", "toEnumCase"],
+            "type": "string",
+            "enum": [
+                "Series",
+                "Season",
+                "TV",
+                "Movie",
+                "Short",
+                "Web",
+                "Compilation",
+                "Supplemental",
+                "Offer",
+                "Set",
+                "Agreement"
+            ]
+        },
+        "StructuralType": {
+            "transform": ["trim", "toEnumCase"],
+            "type": "string",
+            "enum": [
+                "Abstraction",
+                "Performance",
+                "Digital"
+            ]
+        },
+        "ReleaseDate": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "DistributionNumber": {
+            "type": "integer",
+            "format": "int32"
+        }
     }
-  }
 }

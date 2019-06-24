@@ -1,198 +1,201 @@
 {
-  "type": "object",
-  "required": [
-    "Permission",
-    "PolicyType",
-    "ReferentType",
-    "StructuralType",
-    "Title"
-  ],
-  "properties": {
-    "EntityType": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "PolicyType": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "ReferentType": {
-      "type": "string",
-      "pattern": "^(.*)$",
-      "enum": [
-        "Series",
-        "Season",
-        "TV",
-        "Movie",
-        "Short",
-        "Web",
-        "Compilation",
-        "Supplemental",
-        "Offer",
-        "Policy"
-      ]
-    },
-    "StructuralType": {
-      "type": "string",
-      "pattern": "^(.*)$",
-      "enum": [
-        "Abstraction",
-        "Performance",
-        "Digital"
-      ]
-    },
-    "Title": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "LogicalAssetIDList": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "LogicalAssetID": {
+    "required": [
+        "Permission",
+        "PolicyType",
+        "ReferentType",
+        "StructuralType",
+        "Title"
+    ],
+    "type": "object",
+    "properties": {
+        "EntityType": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "PolicyType": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "ReferentType": {
+            "transform": ["trim", "toEnumCase"],
             "type": "string",
-            "pattern": "^(.*)$"
-          }
-        },
-        "required": [
-          "LogicalAssetID"
-        ]
-      }
-    },
-    "Permission": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "Constraint": {
-            "type": "object",
-            "properties": {
-              "PlayType": {
-                "type": "string",
-                "pattern": "^(.*)$"
-              },
-              "Action": {
-                "type": "string",
-                "pattern": "^(.*)$",
-                "enum": [
-                  "Television",
-                  "Linear Streaming",
-                  "Linear Streaming -- Non-Commercial",
-                  "Linear Streaming -- Commercial",
-                  "Broadcast",
-                  "Broadcast -- Non-Commercial",
-                  "Broadcast -- Commercial",
-                  "Linear TV -- Pay",
-                  "Linear TV -- Pay Premium",
-                  "Digital Multicast Distribution",
-                  "Audio Visual/Education/Non-Theatrical",
-                  "FVOD",
-                  "FVOD - All Sites/Services",
-                  "FVOD - Streaming (Internet)",
-                  "FVOD - MSO and Auth. Providers/TVE - Apps",
-                  "FVOD - MSO only",
-                  "FVOD - PBS Branded Services",
-                  "PBS Branded - FVOD - Streaming (Internet)",
-                  "PBS Branded FVOD - MSO and Auth. Providers/TVE - Apps",
-                  "PBS Branded FVOD - MSO Only",
-                  "MVOD",
-                  "AVOD",
-                  "Home Entertainment",
-                  "HV - Physical",
-                  "HV - Digital",
-                  "Audio Visual/Education/Non-Theatrical",
-                  "AV - Physical Media",
-                  "AV - Digital Video",
-                  "AV - Common Carrier",
-                  "AV - Site License",
-                  "AV - Site License No Admission",
-                  "AV - Site License Admission",
-                  "AV - AFRTS",
-                  "Theatrical/Festival",
-                  "Theatrical",
-                  "Film Festivals & Awards",
-                  "Other",
-                  "Collection/Retransmission",
-                  "Radio Simulcast",
-                  "Radio Origination",
-                  "School Off Air Recording",
-                  "Demonstration and Exhibition",
-                  "Clip Rights",
-                  "Learning Media",
-                  "Website",
-                  "Mobile Apps/Interactive",
-                  "Advertising and Promotion",
-                  "Merchandising",
-                  "Publishing: eBook and Print",
-                  "Music Rights",
-                  "Audio Streaming",
-                  "All Rights"
-                ]
-              },
-              "MaximumExploitation": {
-                "type": "string",
-                "pattern": "^(.*)$"
-              },
-              "Calculated": {
-                "type": "boolean"
-              },
-              "TermStartDate": {
-                "type": "string",
-                "pattern": "^(.*)$"
-              },
-              "TermEndDate": {
-                "type": "string",
-                "pattern": "^(.*)$"
-              },
-              "LogicalAssetIDList": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "LogicalAssetID": {
-                      "type": "string",
-                      "pattern": "^(.*)$"
-                    }
-                  },
-                  "required": [
-                    "LogicalAssetID"
-                  ]
-                }
-              },
-              "EntryList": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "EntryClass": {
-                      "type": "string",
-                      "pattern": "^(.*)$"
-                    },
-                    "EntryUID": {
-                      "type": "string",
-                      "pattern": "^(.*)$"
-                    }
-                  },
-                  "required": [
-                    "EntryClass",
-                    "EntryUID"
-                  ]
-                }
-              }
-            },
-            "required": [
-              "Action",
-              "Calculated",
-              "MaximumExploitation",
-              "TermStartDate"
+            "enum": [
+                "Series",
+                "Season",
+                "TV",
+                "Movie",
+                "Short",
+                "Web",
+                "Compilation",
+                "Supplemental",
+                "Offer",
+                "Policy"
             ]
-          }
         },
-        "required": [
-          "Constraint"
-        ]
-      }
+        "StructuralType": {
+            "transform": ["trim", "toEnumCase"],
+            "type": "string",
+            "enum": [
+                "Abstraction",
+                "Performance",
+                "Digital"
+            ]
+        },
+        "Title": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "LogicalAssetIDList": {
+            "type": "array",
+            "items": {
+                "required": [
+                    "LogicalAssetID"
+                ],
+                "type": "object",
+                "properties": {
+                    "LogicalAssetID": {
+                        "pattern": "^(.*)$",
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "Permission": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                "required": [
+                    "Constraint"
+                ],
+                "type": "object",
+                "properties": {
+                    "Constraint": {
+                        "required": [
+                            "Action",
+                            "Calculated",
+                            "MaximumExploitation",
+                            "TermStartDate"
+                        ],
+                        "type": "object",
+                        "properties": {
+                            "PlayType": {
+                                "pattern": "^(.*)$",
+                                "type": "string"
+                            },
+                            "Action": {
+                                "transform": ["trim", "toEnumCase"],
+                                "type": "string",
+                                "enum": [
+                                    "Television",
+                                    "Linear",
+                                    "Linear Streaming",
+                                    "Linear Streaming -- Non-Commercial",
+                                    "Linear Streaming -- Commercial",
+                                    "Broadcast",
+                                    "Broadcast -- Non-Commercial",
+                                    "Broadcast -- Commercial",
+                                    "Linear TV -- Pay",
+                                    "Linear TV -- Pay Premium",
+                                    "Digital Multicast Distribution",
+                                    "Audio Visual/Education/Non-Theatrical",
+                                    "FVOD",
+                                    "FVOD - All Sites/Services",
+                                    "FVOD - Streaming (Internet)",
+                                    "FVOD - MSO and Auth. Providers/TVE - Apps",
+                                    "FVOD - MSO only",
+                                    "FVOD - PBS Branded Services",
+                                    "PBS Branded - FVOD - Streaming (Internet)",
+                                    "PBS Branded FVOD - MSO and Auth. Providers/TVE - Apps",
+                                    "PBS Branded FVOD - MSO Only",
+                                    "MVOD",
+                                    "AVOD",
+                                    "Home Entertainment",
+                                    "HV - Physical",
+                                    "HV - Digital",
+                                    "AV - Physical Media",
+                                    "AV - Digital Video",
+                                    "AV - Common Carrier",
+                                    "AV - Site License",
+                                    "AV - Site License No Admission",
+                                    "AV - Site License Admission",
+                                    "AV - AFRTS",
+                                    "Theatrical/Festival",
+                                    "Theatrical",
+                                    "Film Festivals & Awards",
+                                    "Other",
+                                    "Collection/Retransmission",
+                                    "Radio Simulcast",
+                                    "Radio Origination",
+                                    "School Off Air Recording",
+                                    "Demonstration and Exhibition",
+                                    "Clip Rights",
+                                    "Learning Media",
+                                    "Website",
+                                    "Mobile Apps/Interactive",
+                                    "Advertising and Promotion",
+                                    "Merchandising",
+                                    "Publishing: eBook and Print",
+                                    "Music Rights",
+                                    "Audio Streaming",
+                                    "All Rights"
+                                ]
+                            },
+                            "MaximumExploitation": {
+                                "pattern": "^(.*)$",
+                                "type": "string"
+                            },
+                            "Calculated": {
+                                "type": "boolean"
+                            },
+                            "TermStartDate": {
+                                "pattern": "^(.*)$",
+                                "type": "string"
+                            },
+                            "TermEndDate": {
+                                "pattern": "^(.*)$",
+                                "type": "string"
+                            },
+                            "LogicalAssetIDList": {
+                                "type": "array",
+                                "uniqueItems": true,
+                                "items": {
+                                    "required": [
+                                        "LogicalAssetID"
+                                    ],
+                                    "type": "object",
+                                    "properties": {
+                                        "LogicalAssetID": {
+                                            "pattern": "^(.*)$",
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "EntryList": {
+                                "type": "array",
+                                "uniqueItems": true,
+                                "items": {
+                                    "required": [
+                                        "EntryClass",
+                                        "EntryUID"
+                                    ],
+                                    "type": "object",
+                                    "properties": {
+                                        "EntryClass": {
+                                            "pattern": "^(.*)$",
+                                            "type": "string"
+                                        },
+                                        "EntryUID": {
+                                            "pattern": "^(.*)$",
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
 }

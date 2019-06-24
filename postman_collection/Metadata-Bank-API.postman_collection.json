@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "588b1896-23bc-4c68-bf66-30a09d4328bd",
-		"name": "Metadata-Bank-API-v0.8",
+		"_postman_id": "98ee6647-5513-4474-b261-a3fb371b68da",
+		"name": "Metadata-Bank-API-v0.9",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -2595,7 +2595,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode23818\",\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation211172\",\n    \"ReferentType\": \"Linear\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"en\",\n    \"SubtitledLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\",\n    \"Linear\": {\n        \"PlayRun\": 1,\n        \"PlayType\": \"Hard Feed (with rights)\",\n        \"ReleaseQualifier\": \"premiere\",\n        \"Duration\": \"1800\",\n        \"ProgramService\": {\n            \"ProviderSource\": \"500 - X\",\n            \"ProviderSourceName\": \"PBS\",\n            \"ProviderTimeZone\": \"EDT\"\n        },\n        \"AlternateEventIDList\": [\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-23046921\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-434324324\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-323242342\"\n      }\n    ]\n    }\n}"
+									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode3818\",\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation1172\",\n    \"ReferentType\": \"Linear\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"en\",\n    \"SubtitledLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\",\n    \"Linear\": {\n        \"PlayRun\": 1,\n        \"PlayDate\":  3, \n        \"PlayType\": \"Hard Feed (with rights)\",\n        \"ReleaseQualifier\": \"premiere\",\n        \"Duration\": \"1800\",\n        \"ProgramService\": {\n            \"ProviderSource\": \"500 - X\",\n            \"ProviderSourceName\": \"PBS\",\n            \"ProviderTimeZone\": \"EDT\"\n        },\n        \"AlternateEventIDList\": [\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-23046921\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-434324324\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-323242342\"\n      }\n    ]\n    }\n}"
 								},
 								"url": "{{baseurl}}/event/linear"
 							},
@@ -2671,9 +2671,9 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"PlayRun\": 234\r\n}"
+									"raw": "{\r\n\t\"PlayRun\": 234,\r\n\t\"PlayDate\": 10\r\n}"
 								},
-								"url": "{{baseurl}}/event/linear/cid:org:pbs.org:Event10017/playrun"
+								"url": "{{baseurl}}/event/linear/cid:org:pbs.org:Event1727600/playrun/"
 							},
 							"response": []
 						},

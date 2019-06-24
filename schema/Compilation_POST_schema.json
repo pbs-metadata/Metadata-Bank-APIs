@@ -1,138 +1,141 @@
 {
-  "required": [
-    "CompilationClass",
-    "ContentIDList",
-    "EntryList",
-    "ReferentType",
-    "StructuralType",
-    "Title"
-  ],
-  "type": "object",
-  "properties": {
-    "CompilationUID": {
-      "pattern": "^(.*)$",
-      "type": "string"
-    },
-    "Title": {
-      "minLength": 1,
-      "pattern": "^(.*)$",
-      "type": "string"
-    },
-    "EidrId": {
-      "pattern": "^(.*)$",
-      "type": "string"
-    },
-    "ReferentType": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "enum": [
-        "Series",
-        "Season",
-        "TV",
-        "Movie",
-        "Short",
-        "Web",
-        "Compilation",
-        "Supplemental",
-        "Offer",
-        "Set",
-        "Agreement"
-      ]
-    },
-    "StructuralType": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "enum": [
-        "Abstraction",
-        "Performance",
-        "Digital"
-      ]
-    },
-    "CompilationClass": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "enum": [
-        "Blu-ray",
-        "Digital Cinema",
-        "Distribution Bundle",
-        "Distribution Season",
-        "DVD",
-        "EST",
-        "Franchise",
-        "Home Entertainment",
-        "Syndication",
-        "Series",
-        "Season:Recut",
-        "Season:Pro-Forma",
-        "Season:Mini-Series",
-        "Other"
-      ]
-    },
-    "ReleaseDate": {
-      "pattern": "^(.*)$",
-      "type": "string"
-    },
-    "DistributionNumber": {
-      "type": "integer",
-      "format": "int32"
-    },
-    "ContentIDList": {
-      "type": "array",
-      "items": {
-        "required": [
-          "ContentID"
-        ],
-        "type": "object",
-        "properties": {
-          "ContentID": {
+    "required": [
+        "CompilationClass",
+        "ContentIDList",
+        "EntryList",
+        "ReferentType",
+        "StructuralType",
+        "Title"
+    ],
+    "type": "object",
+    "properties": {
+        "CompilationUID": {
             "pattern": "^(.*)$",
             "type": "string"
-          }
-        }
-      }
-    },
-    "EntryList": {
-      "minItems": 1,
-      "type": "array",
-      "items": {
-        "required": [
-          "EntryClass",
-          "EntryContentUID",
-          "EntryNumber"
-        ],
-        "type": "object",
-        "properties": {
-          "EntryClass": {
+        },
+        "Title": {
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "EidrId": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "ReferentType": {
+            "transform": ["trim", "toEnumCase"],
             "type": "string",
             "enum": [
-              "Episode",
-              "Installment",
-              "Part",
-              "Season"
+                "Series",
+                "Season",
+                "TV",
+                "Movie",
+                "Short",
+                "Web",
+                "Compilation",
+                "Supplemental",
+                "Offer",
+                "Set",
+                "Agreement"
             ]
-          },
-          "EntryNumber": {
+        },
+        "StructuralType": {
+            "transform": ["trim", "toEnumCase"],
+            "type": "string",
+            "enum": [
+                "Abstraction",
+                "Performance",
+                "Digital"
+            ]
+        },
+        "CompilationClass": {
+            "transform": ["trim", "toEnumCase"],
+            "type": "string",
+            "enum": [
+                "Blu-ray",
+                "Digital Cinema",
+                "Distribution Bundle",
+                "Distribution Season",
+                "DVD",
+                "EST",
+                "Franchise",
+                "Home Entertainment",
+                "Syndication",
+                "Series",
+                "Season:Recut",
+                "Season:Pro-Forma",
+                "Season:Mini-Series",
+                "Other"
+            ]
+        },
+        "ReleaseDate": {
             "pattern": "^(.*)$",
             "type": "string"
-          },
-          "EntryContentUID": {
+        },
+        "DistributionNumber": {
+            "type": "integer",
+            "format": "int32"
+        },
+        "ContentIDList": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                "required": [
+                    "ContentID"
+                ],
+                "type": "object",
+                "properties": {
+                    "ContentID": {
+                        "pattern": "^(.*)$",
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "EntryList": {
+            "minItems": 1,
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                "required": [
+                    "EntryClass",
+                    "EntryContentUID",
+                    "EntryNumber"
+                ],
+                "type": "object",
+                "properties": {
+                    "EntryClass": {
+                        "type": "string",
+                        "transform": ["trim", "toEnumCase"],
+                        "enum": [
+                            "Episode",
+                            "Installment",
+                            "Part",
+                            "Season"
+                        ]
+                    },
+                    "EntryNumber": {
+                        "pattern": "^(.*)$",
+                        "type": "string"
+                    },
+                    "EntryContentUID": {
+                        "pattern": "^(.*)$",
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "CreateDateTime": {
             "pattern": "^(.*)$",
             "type": "string"
-          }
+        },
+        "UpdateDateTime": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "PublishedStatus": {
+            "pattern": "^(.*)$",
+            "type": "string"
         }
-      }
-    },
-    "CreateDateTime": {
-      "pattern": "^(.*)$",
-      "type": "string"
-    },
-    "UpdateDateTime": {
-      "pattern": "^(.*)$",
-      "type": "string"
-    },
-    "PublishedStatus": {
-      "pattern": "^(.*)$",
-      "type": "string"
     }
-  }
 }

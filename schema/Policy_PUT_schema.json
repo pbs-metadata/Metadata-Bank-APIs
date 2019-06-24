@@ -1,44 +1,44 @@
 {
-  "type": "object",
-  "properties": {
-    "PolicyUID": {
-      "type": "string",
-      "pattern": "^(.*)$"
-    },
-    "PolicyType": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "^(.*)$"
-    },
-    "ReferentType": {
-      "type": "string",
-      "pattern": "^(.*)$",
-      "enum": [
-        "Series",
-        "Season",
-        "TV",
-        "Movie",
-        "Short",
-        "Web",
-        "Compilation",
-        "Supplemental",
-        "Offer",
-        "Policy"
-      ]
-    },
-    "StructuralType": {
-      "type": "string",
-      "pattern": "^(.*)$",
-      "enum": [
-        "Abstraction",
-        "Performance",
-        "Digital"
-      ]
-    },
-    "Title": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "^(.*)$"
+    "type": "object",
+    "properties": {
+        "PolicyUID": {
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "PolicyType": {
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "type": "string"
+        },
+        "ReferentType": {
+            "transform": ["trim", "toEnumCase"],
+            "type": "string",
+            "enum": [
+                "Series",
+                "Season",
+                "TV",
+                "Movie",
+                "Short",
+                "Web",
+                "Compilation",
+                "Supplemental",
+                "Offer",
+                "Policy"
+            ]
+        },
+        "StructuralType": {
+            "transform": ["trim", "toEnumCase"],
+            "type": "string",
+            "enum": [
+                "Abstraction",
+                "Performance",
+                "Digital"
+            ]
+        },
+        "Title": {
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "type": "string"
+        }
     }
-  }
 }
