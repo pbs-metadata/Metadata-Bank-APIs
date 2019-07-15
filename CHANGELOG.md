@@ -1,4 +1,8 @@
-## v1.0.7
+## v1.0.9
+ * Beta-v0.10 - JSON schema Updated for MBank Event Linear Post and Playtype PUT for playday validation.
+ * Beta-v0.10 - Postman collection - Changed PlayDate to Playday in Event payload as well as in playtype PUT endpoints.
+
+## v1.0.8
  * Beta-v0.9 - JSON schema Updated for all MBank entities POST & PUT for user readable validation message for Bank API.
  * Beta-v0.9 - Postman collection - Added PlayDate in Event payload as well as in playtype PUT endpoints.
 

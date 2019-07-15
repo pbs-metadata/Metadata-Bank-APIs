@@ -485,7 +485,7 @@
                     "type": "integer",
                     "format": "int32"
                 },
-                "PlayDate": {
+                "PlayDay": {
                     "type": "integer",
                     "format": "int32"
                 },
