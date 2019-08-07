@@ -1,8 +1,8 @@
 {
 	"info": {
-		"_postman_id": "98ee6647-5513-4474-b261-a3fb371b68da",
-		"name": "Metadata-Bank-API-v0.10",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"_postman_id": "fa779cb4-29eb-43a0-8fba-110662f9dc01",
+		"name": "Metadata-Bank-API-v0.11",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -33,7 +33,17 @@
 									"mode": "raw",
 									"raw": "{\n\t\"PublishedStatus\": \"Internally Published\"\n}"
 								},
-								"url": "{{baseurl}}/series/cid:org:pbs.org:Series388/publish-status"
+								"url": {
+									"raw": "{{baseurl}}/series/cid:org:pbs.org:Series388/publish-status",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"series",
+										"cid:org:pbs.org:Series388",
+										"publish-status"
+									]
+								}
 							},
 							"response": []
 						}
@@ -113,7 +123,16 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"url": "{{baseurl}}/series/cid:org:pbs.org:Series306"
+						"url": {
+							"raw": "{{baseurl}}/series/cid:org:pbs.org:Series306",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"series",
+								"cid:org:pbs.org:Series306"
+							]
+						}
 					},
 					"response": []
 				},
@@ -151,7 +170,15 @@
 							"mode": "raw",
 							"raw": "{\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Series\",\n    \"Mode\": \"AudioVisual\",\n    \"SeriesClass\": \"Episodic\",\n    \"CountryOfOrigin\": \"US\",\n    \"SynopsisShort\": \"Dev-Smoke-Test\",\n    \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n    \"ApproximateLength\": \"PT2H0M0S\",\n    \"Language\": {\n        \"PrimaryMode\": \"Audio\",\n        \"PrimaryLanguage\": \"el\",\n        \"SecondaryLanguage\": \"en\"\n    },\n    \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n    \"TitleClass\": \"release\",\n    \"TitleLanguage\": \"el\",\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:BroadView-618586114\"\n        },\n        {\n            \"ContentID\": \"cid:org:pbs.org:NolaRoot:FRON\"\n        }\n    ],\n    \"CreditsList\": [\n        {\n            \"TalentID\": \"cid:org:pbs.org:Broadview-131330105\",\n            \"Role\": \"Producer\",\n            \"DisplayName\": \"colette neirouz\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136739,\n            \"DisplayName\": \"PBS NPS General Audience (GA)\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136758,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"test-emm@pbs.com\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ]\n}"
 						},
-						"url": "{{baseurl}}/series"
+						"url": {
+							"raw": "{{baseurl}}/series",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"series"
+							]
+						}
 					},
 					"response": []
 				},
@@ -189,7 +216,16 @@
 							"mode": "raw",
 							"raw": "{\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Series\",\n    \"Mode\": \"AudioVisual\",\n    \"SeriesClass\": \"Episodic\",\n    \"CountryOfOrigin\": \"US\",\n    \"SynopsisShort\": \"Dev-Smoke-Test-Update\",\n    \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n    \"ApproximateLength\": \"PT2H0M0S\",\n    \"Language\": {\n        \"PrimaryMode\": \"Audio\",\n        \"PrimaryLanguage\": \"el\",\n        \"SecondaryLanguage\": \"en\"\n    },\n    \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test-Update\",\n    \"TitleClass\": \"release\",\n    \"TitleLanguage\": \"el\",\n    \"CreditsList\": [\n        {\n            \"TalentID\": \"cid:org:pbs.org:Broadview-127202300\",\n            \"Role\": \"Producer\",\n            \"DisplayName\": \"Story, Louise - PBS\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136739,\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136758,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"test-emm@pbs.com\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ]\n}"
 						},
-						"url": "{{baseurl}}/series/cid:org:pbs.org:Series306"
+						"url": {
+							"raw": "{{baseurl}}/series/cid:org:pbs.org:Series306",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"series",
+								"cid:org:pbs.org:Series306"
+							]
+						}
 					},
 					"response": []
 				},
@@ -227,7 +263,16 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"url": "{{baseurl}}/series/cid:org:pbs.org:Series393"
+						"url": {
+							"raw": "{{baseurl}}/series/cid:org:pbs.org:Series393",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"series",
+								"cid:org:pbs.org:Series393"
+							]
+						}
 					},
 					"response": []
 				},
@@ -265,7 +310,17 @@
 							"mode": "raw",
 							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:PBS-Test-618586115\"\n}"
 						},
-						"url": "{{baseurl}}/series/cid:org:pbs.org:Series306/contentidregistration"
+						"url": {
+							"raw": "{{baseurl}}/series/cid:org:pbs.org:Series306/contentidregistration",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"series",
+								"cid:org:pbs.org:Series306",
+								"contentidregistration"
+							]
+						}
 					},
 					"response": []
 				}
@@ -299,7 +354,17 @@
 									"mode": "raw",
 									"raw": "{\n\t\"PublishedStatus\": \"Internally Published\"\n}"
 								},
-								"url": "{{baseurl}}/season/cid:org:pbs.org:Season861/publish-status"
+								"url": {
+									"raw": "{{baseurl}}/season/cid:org:pbs.org:Season861/publish-status",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"season",
+										"cid:org:pbs.org:Season861",
+										"publish-status"
+									]
+								}
 							},
 							"response": []
 						}
@@ -379,7 +444,16 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"url": "{{baseurl}}/season/cid:org:pbs.org:Season156"
+						"url": {
+							"raw": "{{baseurl}}/season/cid:org:pbs.org:Season156",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"season",
+								"cid:org:pbs.org:Season156"
+							]
+						}
 					},
 					"response": []
 				},
@@ -417,7 +491,15 @@
 							"mode": "raw",
 							"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Series305\",\n    \"Title\": \"LBJ, Season 1-Dev-Smoke-Test\",\n    \"SeasonClass\": \"Main\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Season\",\n    \"SequenceNumber\": 1,\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:Broadview-Season.1-Series.618585937\"\n        }\n    ]\n}"
 						},
-						"url": "{{baseurl}}/season"
+						"url": {
+							"raw": "{{baseurl}}/season",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"season"
+							]
+						}
 					},
 					"response": []
 				},
@@ -455,7 +537,16 @@
 							"mode": "raw",
 							"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Series305\",\n    \"Title\": \"LBJ, Season 1-Demo\",\n    \"SeasonClass\": \"Main\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Season\",\n    \"SequenceNumber\": 1\n}"
 						},
-						"url": "{{baseurl}}/season/cid:org:pbs.org:Season861"
+						"url": {
+							"raw": "{{baseurl}}/season/cid:org:pbs.org:Season861",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"season",
+								"cid:org:pbs.org:Season861"
+							]
+						}
 					},
 					"response": []
 				},
@@ -493,7 +584,16 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"url": "{{baseurl}}/season/cid:org:pbs.org:Season958"
+						"url": {
+							"raw": "{{baseurl}}/season/cid:org:pbs.org:Season958",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"season",
+								"cid:org:pbs.org:Season958"
+							]
+						}
 					},
 					"response": []
 				},
@@ -531,7 +631,17 @@
 							"mode": "raw",
 							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Rightsline-42354\"\n}\n"
 						},
-						"url": "{{baseurl}}/season/cid:org:pbs.org:Season156/contentidregistration"
+						"url": {
+							"raw": "{{baseurl}}/season/cid:org:pbs.org:Season156/contentidregistration",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"season",
+								"cid:org:pbs.org:Season156",
+								"contentidregistration"
+							]
+						}
 					},
 					"response": []
 				},
@@ -621,7 +731,17 @@
 									"mode": "raw",
 									"raw": "{\n\t\"PublishedStatus\": \"Internally Published\"\n}"
 								},
-								"url": "{{baseurl}}/episode/cid:org:pbs.org:Episode30168/publish-status"
+								"url": {
+									"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode30168/publish-status",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"episode",
+										"cid:org:pbs.org:Episode30168",
+										"publish-status"
+									]
+								}
 							},
 							"response": []
 						}
@@ -701,7 +821,16 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"url": "{{baseurl}}/episode/cid:org:pbs.org:Episode31448"
+						"url": {
+							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode31448",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"episode",
+								"cid:org:pbs.org:Episode31448"
+							]
+						}
 					},
 					"response": []
 				},
@@ -739,7 +868,15 @@
 							"mode": "raw",
 							"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Season410\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"TV\",\n    \"EpisodeNumber\": 3011,\n    \"EpisodeClass\": \"Main\",\n    \"Title\": \"Frontline | Money, Power and Wall Street-Dev-Smoke-Test\",\n    \"Title120\": \"Frontline | Money, Power and Wall Street\",\n    \"TitleClass\": \"release\",\n    \"TitleLanguage\": \"en\",\n    \"SynopsisShort\": \"Part 1 - Learn how two U.S. administrations have confronted the economic crisis. \",\n    \"SynopsisLong\": \"Part 1 - FRONTLINE producer Michael Kirk (“Inside the Meltdown,” “The Warning”) investigates how two U.S. administrations have confronted the crisis — while dealing with sharp internal divisions and a relationship with Wall Street marked by mistrust and dependence, mutual interests and competing goals. The investigation charts the largest government bailout in U.S. history, a series of decisions that rewrote the rules of government and fueled a debate that would alter the country’s political landscape. Focusing on the Obama administration, FRONTLINE tells the story of a newly elected president with a mandate for change grappling with the multi-headed menace of economic instability, and with fundamental choices about winners and losers and the direction of his presidency.\",\n    \"CountryOfOrigin\": \"US\",\n    \"PrimaryGenre\": \"Public Affairs\",\n    \"SecondaryGenre\": \"Public Affairs\",\n    \"DistributionNumber\": 11,\n    \"ApproximateLength\": \"PT2H0M0S\",\n    \"Language\": {\n        \"PrimaryMode\": \"Audio\",\n        \"PrimaryLanguage\": \"el\",\n        \"SecondaryLanguage\": \"en\"\n    },\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:Rightsline-8643\"\n        },\n        {\n            \"ContentID\": \"cid:org:pbs.org:NOLACode:FRON  003011\"\n        }\n    ],\n    \"CreditsList\": [\n        {\n        \t\"TalentID\": \"cid:org:pbs.org:Broadview-3383374\",\n            \"Role\": \"Executive Producer\",\n            \"DisplayName\": \"colette neirouz\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136758,\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136739,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ]\n}"
 						},
-						"url": "{{baseurl}}/episode"
+						"url": {
+							"raw": "{{baseurl}}/episode",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"episode"
+							]
+						}
 					},
 					"response": []
 				},
@@ -777,7 +914,16 @@
 							"mode": "raw",
 							"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Season410\",\n    \"EidrId\": \"\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"TV\",\n    \"EpisodeNumber\": 613,\n    \"EpisodeClass\": \"Main\",\n    \"SynopsisShort\": \"Dev-Smoke-Test\",\n    \"SynopsisLong\": \"ANTIQUES ROADSHOW kicks off its Indianapolis visit with a tour of the Indianapolis Motor Speedway, home of the Indianapolis 500. The Indianapolis Convention Center is the site of a different kind of excitement when appraisers show off an exotic 19th-century French bronze sculpture; a German bible printed near Philadelphia in 1776; and a rare N.C. Wyeth painting valued at $250,000.\",\n    \"CountryOfOrigin\": \"US\",\n    \"PrimaryGenre\": \"Cultural\",\n    \"SecondaryGenre\": \"Cultural\",\n    \"DistributionNumber\": 13,\n    \"ApproximateLength\": \"PT1H0M0S\",\n    \"Language\": {\n        \"PrimaryMode\": \"Audio\",\n        \"PrimaryLanguage\": \"en\",\n        \"SecondaryLanguage\": \"en\"\n    },\n    \"Title\": \"Dev-Smoke-Test\",\n    \"TitleClass\": \"release\",\n    \"TitleLanguage\": \"en\",\n    \"CreditsList\": [\n        {\n        \t\"TalentID\": \"cid:org:pbs.org:Broadview-3383374\",\n            \"Role\": \"Executive Producer\",\n            \"DisplayName\": \"colette neirouz\"\n        },\n        {\n            \"Role\": \"Producer\",\n            \"TalentID\": \"cid:org:pbs.org:Broadview-3324900\",\n            \"DisplayName\": \"Lane, Christopher W\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136739,\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136739,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"test-emm@pbs.com\",\n                    \"ContactName\": \"PBS Content Services\"\n                },\n                {\n                    \"ContactID\": 3136739,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"test-emm@pbs.com\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ]\n}"
 						},
-						"url": "{{baseurl}}/episode/cid:org:pbs.org:Episode30168"
+						"url": {
+							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode30168",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"episode",
+								"cid:org:pbs.org:Episode30168"
+							]
+						}
 					},
 					"response": []
 				},
@@ -815,7 +961,16 @@
 							"mode": "raw",
 							"raw": ""
 						},
-						"url": "{{baseurl}}/episode/cid:org:pbs.org:Episode31701"
+						"url": {
+							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode31701",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"episode",
+								"cid:org:pbs.org:Episode31701"
+							]
+						}
 					},
 					"response": []
 				},
@@ -853,7 +1008,17 @@
 							"mode": "raw",
 							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Righhtsline-134332\"\n}"
 						},
-						"url": "{{baseurl}}/episode/cid:org:pbs.org:Episode30168/contentidregistration"
+						"url": {
+							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode30168/contentidregistration",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"episode",
+								"cid:org:pbs.org:Episode30168",
+								"contentidregistration"
+							]
+						}
 					},
 					"response": []
 				},
@@ -952,7 +1117,17 @@
 									"mode": "raw",
 									"raw": "{\t\n\t\"Term\": \"2017-07-07T00:00:00/2017-08-08T00:00:00\"\n}"
 								},
-								"url": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation1122/usewindowterm"
+								"url": {
+									"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation1122/usewindowterm",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"manifestation",
+										"cid:org:pbs.org:Manifestation1122",
+										"usewindowterm"
+									]
+								}
 							},
 							"response": []
 						}
@@ -987,7 +1162,17 @@
 									"mode": "raw",
 									"raw": "{\n\t\"PublishedStatus\": \"Internally Published\"\n}"
 								},
-								"url": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation1122/publish-status"
+								"url": {
+									"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation1122/publish-status",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"manifestation",
+										"cid:org:pbs.org:Manifestation1122",
+										"publish-status"
+									]
+								}
 							},
 							"response": []
 						}
@@ -1067,7 +1252,16 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"url": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation121044"
+						"url": {
+							"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation121044",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"manifestation",
+								"cid:org:pbs.org:Manifestation121044"
+							]
+						}
 					},
 					"response": []
 				},
@@ -1105,7 +1299,15 @@
 							"mode": "raw",
 							"raw": "{\t\n    \"ActualLength\": \"PT0H53M17S\",\n    \"EditClass\": \"Original\",\n    \"EditUse\": \"Broadcast\",\n    \"ManifestationClass\": \"HD\",\n    \"ParentUID\": \"cid:org:pbs.org:Episode73\",\n    \"ReferentType\": \"TV\",\n    \"StructuralType\": \"Performance\",\n    \"Title\": \"Forsyte Saga; -Dev Smoke Test\",\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.orgPackageType:HD-Base\"\n        }\n    ],\n    \"UseWindowTermList\": [\n        {\"Term\": \"2017-07-07T00:00:00/2018-08-08T00:00:00\"},\n        {\"Term\":\"2019-09-09T00:00:00/2020-10-20T00:00:00\"}\n    ],\n    \"Audio\": {\n        \"ClosedCaption\": \"FR\",\n        \"AudioType\": \"Stereo\"\n    },\n    \"Video\": {\n        \"Vchip\": \"TV-PG-V\",\n        \"ei\": true\n    }\n}"
 						},
-						"url": "{{baseurl}}/manifestation"
+						"url": {
+							"raw": "{{baseurl}}/manifestation",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"manifestation"
+							]
+						}
 					},
 					"response": []
 				},
@@ -1143,7 +1345,16 @@
 							"mode": "raw",
 							"raw": "{\n    \"ActualLength\": \"PT0H0M35S\",\n    \"EditClass\": \"Spot\",\n    \"EditUse\": \"Broadcast\",\n    \"ManifestationClass\": \"HD\",\n    \"ParentUID\": \"cid:org:pbs.org:Episode73\",\n    \"ReferentType\": \"TV\",\n    \"StructuralType\": \"Performance\",\n    \"Title\": \"Healthful Indian Flavors with Alamelu-Dev-Smoke Test\",\n    \"Audio\": {\n        \"ClosedCaption\": \"EN\",\n        \"AudioType\": \"Stereo\"\n    },\n    \"Video\": {\n        \"Vchip\": \"TV-G\",\n        \"ei\": false\n    }\n}"
 						},
-						"url": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation1122"
+						"url": {
+							"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation1122",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"manifestation",
+								"cid:org:pbs.org:Manifestation1122"
+							]
+						}
 					},
 					"response": []
 				},
@@ -1177,7 +1388,16 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"url": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation222250"
+						"url": {
+							"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation222250",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"manifestation",
+								"cid:org:pbs.org:Manifestation222250"
+							]
+						}
 					},
 					"response": []
 				},
@@ -1275,7 +1495,17 @@
 							"mode": "raw",
 							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:System:BroadView:142312520\"\n}"
 						},
-						"url": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation1122/contentidregistration"
+						"url": {
+							"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation1122/contentidregistration",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"manifestation",
+								"cid:org:pbs.org:Manifestation1122",
+								"contentidregistration"
+							]
+						}
 					},
 					"response": []
 				}
@@ -1313,7 +1543,16 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"url": "{{baseurl}}/file/apid:org:pbs.org:File1212"
+						"url": {
+							"raw": "{{baseurl}}/file/apid:org:pbs.org:File1212",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"file",
+								"apid:org:pbs.org:File1212"
+							]
+						}
 					},
 					"response": []
 				},
@@ -1351,7 +1590,15 @@
 							"mode": "raw",
 							"raw": "{\n    \"FileClass\": \"Media\",\n    \"FileName\": \"P394492-001PROXY.mxf\",\n    \"FileDeliveryStatus\": \"Delivered\",\n    \"ParentUID\": \"cid:org:pbs.org:Manifestation43239\",\n    \"AlternateAssetIDList\": [\n        {\n            \"AssetUID\": \"cid:org:pbs.org:Broadview-189560425\"\n        }\n    ]\n}"
 						},
-						"url": "{{baseurl}}/file"
+						"url": {
+							"raw": "{{baseurl}}/file",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"file"
+							]
+						}
 					},
 					"response": []
 				},
@@ -1389,7 +1636,16 @@
 							"mode": "raw",
 							"raw": "{\n    \"FileClass\": \"Media\",\n    \"FileName\": \"P394492-001PROXY.mxf\",\n    \"FileDeliveryStatus\": \"Delivered\"\n}"
 						},
-						"url": "{{baseurl}}/file/apid:org:pbs.org:File167"
+						"url": {
+							"raw": "{{baseurl}}/file/apid:org:pbs.org:File167",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"file",
+								"apid:org:pbs.org:File167"
+							]
+						}
 					},
 					"response": []
 				},
@@ -1427,7 +1683,16 @@
 							"mode": "raw",
 							"raw": "{\n  \"AssetUID\": \"apid:org:pbs.org:File0000000\",\n  \"ParentID\": \"cid:org:pbs.org:Manifestation2\",\n  \"FileClass\": \"Manifest\",\n  \"FileName\": \"P450617-005-1NRHD.mxf\",\n  \"FileDeliveryStatus\": \"Delivered\"\n}"
 						},
-						"url": "{{baseurl}}/file/apid:org:pbs.org:File12644"
+						"url": {
+							"raw": "{{baseurl}}/file/apid:org:pbs.org:File12644",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"file",
+								"apid:org:pbs.org:File12644"
+							]
+						}
 					},
 					"response": []
 				},
@@ -1464,7 +1729,17 @@
 							"mode": "raw",
 							"raw": "{\r\n\t\"AssetUID\": \"cid:org:pbs.org:Broadview-149635276\"\r\n}"
 						},
-						"url": "{{baseurl}}/file/apid:org:pbs.org:File1212/alternateassetidregistration"
+						"url": {
+							"raw": "{{baseurl}}/file/apid:org:pbs.org:File1212/alternateassetidregistration",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"file",
+								"apid:org:pbs.org:File1212",
+								"alternateassetidregistration"
+							]
+						}
 					},
 					"response": []
 				}
@@ -1505,7 +1780,17 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation13/series"
+								"url": {
+									"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation13/series",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"compilation",
+										"cid:org:pbs.org:Compilation13",
+										"series"
+									]
+								}
 							},
 							"response": []
 						}
@@ -1544,7 +1829,17 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation13/season"
+								"url": {
+									"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation13/season",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"compilation",
+										"cid:org:pbs.org:Compilation13",
+										"season"
+									]
+								}
 							},
 							"response": []
 						}
@@ -1583,7 +1878,17 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation13/episode"
+								"url": {
+									"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation13/episode",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"compilation",
+										"cid:org:pbs.org:Compilation13",
+										"episode"
+									]
+								}
 							},
 							"response": []
 						}
@@ -1622,7 +1927,17 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation13/manifestation"
+								"url": {
+									"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation13/manifestation",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"compilation",
+										"cid:org:pbs.org:Compilation13",
+										"manifestation"
+									]
+								}
 							},
 							"response": []
 						}
@@ -1666,7 +1981,17 @@
 									"mode": "raw",
 									"raw": "{\n  \"EntryClass\": \"Installment\",\n  \"EntryNumber\": \"27\",\n  \"EntryContentUID\": \"cid:org:pbs.org:Season1\"\n}"
 								},
-								"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation2/entrycontentuid"
+								"url": {
+									"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation2/entrycontentuid",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"compilation",
+										"cid:org:pbs.org:Compilation2",
+										"entrycontentuid"
+									]
+								}
 							},
 							"response": []
 						},
@@ -1703,7 +2028,18 @@
 									"mode": "raw",
 									"raw": "{\n  \"EntryClass\": \"Installment\",\n  \"EntryNumber\": \"20\",\n  \"EntryContentUID\": \"cid:org:pbs.org:Episode54137\"\n}"
 								},
-								"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation2/entrycontentuid/cid:org:pbs.org:Season1"
+								"url": {
+									"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation2/entrycontentuid/cid:org:pbs.org:Season1",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"compilation",
+										"cid:org:pbs.org:Compilation2",
+										"entrycontentuid",
+										"cid:org:pbs.org:Season1"
+									]
+								}
 							},
 							"response": []
 						}
@@ -1781,7 +2117,17 @@
 									"mode": "raw",
 									"raw": "{\n\t\"PublishedStatus\": \"Internally Published\"\n}"
 								},
-								"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation17/publish-status"
+								"url": {
+									"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation17/publish-status",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"compilation",
+										"cid:org:pbs.org:Compilation17",
+										"publish-status"
+									]
+								}
 							},
 							"response": []
 						}
@@ -1818,7 +2164,16 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation2"
+						"url": {
+							"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation2",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"compilation",
+								"cid:org:pbs.org:Compilation2"
+							]
+						}
 					},
 					"response": []
 				},
@@ -1855,7 +2210,15 @@
 							"mode": "raw",
 							"raw": "{\n    \"Title\": \"Frontline - Test\",\n    \"CompilationClass\": \"Franchise\",\n    \"ReferentType\": \"Compilation\",\n    \"StructuralType\": \"Abstraction\",\n    \"DistributionNumber\": 4,\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:System:BroadView-609240155\"\n        }\n    ],\n    \"EntryList\": [\n        {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"13\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Series40\"\n        },\n         {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"13\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Series2\"\n        },\n         {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"13\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Episode5454\"\n        },\n         {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"13\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Season367\"\n        },\n         {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"13\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Manifestation3456\"\n        }\n    ]\n}"
 						},
-						"url": "{{baseurl}}/compilation"
+						"url": {
+							"raw": "{{baseurl}}/compilation",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"compilation"
+							]
+						}
 					},
 					"response": []
 				},
@@ -1893,7 +2256,16 @@
 							"mode": "raw",
 							"raw": "{\n    \"Title\": \"Frontline-Dev-Smoke-Test-Update\",\n    \"CompilationClass\": \"Franchise\",\n    \"ReferentType\": \"Compilation\",\n    \"StructuralType\": \"Abstraction\",\n    \"DistributionNumber\": 5\n}"
 						},
-						"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation2"
+						"url": {
+							"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation2",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"compilation",
+								"cid:org:pbs.org:Compilation2"
+							]
+						}
 					},
 					"response": []
 				},
@@ -1931,7 +2303,16 @@
 							"mode": "raw",
 							"raw": "\t{\n\t    \"PolicyType\": \"Offer\",\n\t    \"Title\": \"Caillou34update\",\n\t    \"EntityType\": \"Policy\",\n\t    \"ReferentType\": \"Offer\",\n\t    \"StructuralType\": \"Performance\"\n\t}"
 						},
-						"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation20"
+						"url": {
+							"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation20",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"compilation",
+								"cid:org:pbs.org:Compilation20"
+							]
+						}
 					},
 					"response": []
 				},
@@ -2025,7 +2406,17 @@
 							"mode": "raw",
 							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:System:BroadView:60924033523\"\n}"
 						},
-						"url": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation2/contentidregistration"
+						"url": {
+							"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation2/contentidregistration",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"compilation",
+								"cid:org:pbs.org:Compilation2",
+								"contentidregistration"
+							]
+						}
 					},
 					"response": []
 				}
@@ -2074,7 +2465,19 @@
 											"mode": "raw",
 											"raw": "{\n  \"EntryClass\": \"Season\",\n  \"EntryUID\": \"cid:org:pbs.org:Season36\"\n}"
 										},
-										"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/2266/entrycontentid"
+										"url": {
+											"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/2266/entrycontentid",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"policy",
+												"cid:org:pbs.org:Policy215",
+												"permission",
+												"2266",
+												"entrycontentid"
+											]
+										}
 									},
 									"response": []
 								},
@@ -2108,7 +2511,20 @@
 												"value": "{{x-api-key}}"
 											}
 										],
-										"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/2266/entrycontentid/cid:org:pbs.org:Season36"
+										"url": {
+											"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/2266/entrycontentid/cid:org:pbs.org:Season36",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"policy",
+												"cid:org:pbs.org:Policy215",
+												"permission",
+												"2266",
+												"entrycontentid",
+												"cid:org:pbs.org:Season36"
+											]
+										}
 									},
 									"response": []
 								}
@@ -2149,7 +2565,17 @@
 									"mode": "raw",
 									"raw": " {\r\n \t\"Constraint\": {\r\n                \"PlayType\": \"Release\",\r\n                \"Action\": \"Television\",\r\n                \"MaximumExploitation\": \"8\",\r\n                \"Calculated\": false,\r\n                \"TermStartDate\": \"2009-05-28T00:00:00Z\",\r\n                \"TermEndDate\": \"2012-06-30T00:00:00Z\",\r\n                \"LogicalAssetIDList\": [\r\n                    {\r\n                        \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-6185865455\"\r\n                    }\r\n                ],\r\n                \"EntryList\": [\r\n                    {\r\n                        \"EntryClass\": \"Episode\",\r\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1\"\r\n                    }\r\n                ]\r\n            }\r\n        }"
 								},
-								"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission"
+								"url": {
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"policy",
+										"cid:org:pbs.org:Policy215",
+										"permission"
+									]
+								}
 							},
 							"response": []
 						},
@@ -2187,7 +2613,18 @@
 									"mode": "raw",
 									"raw": "{\n  \"Constraint\": {\n    \"PlayType\": \"Telecast\",\n    \"Action\": \"Television\",\n    \"MaximumExploitation\": \"10\",\n    \"Calculated\": true,\n    \"TermStartDate\": \"2009-11-23T00:00:00Z\",\n    \"TermEndDate\": \"2012-11-22T00:00:00Z\"\n  }\n}"
 								},
-								"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/2268"
+								"url": {
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/2268",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"policy",
+										"cid:org:pbs.org:Policy215",
+										"permission",
+										"2268"
+									]
+								}
 							},
 							"response": []
 						},
@@ -2221,7 +2658,18 @@
 										"value": "{{x-api-key}}"
 									}
 								],
-								"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/57250"
+								"url": {
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/57250",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"policy",
+										"cid:org:pbs.org:Policy215",
+										"permission",
+										"57250"
+									]
+								}
 							},
 							"response": []
 						},
@@ -2259,7 +2707,19 @@
 									"mode": "raw",
 									"raw": "{\n  \"LogicalAssetID\": \"alid:org:pbs.org:RightsLine-6135\"\n}"
 								},
-								"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/2267/logicalassetidregistration"
+								"url": {
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/2267/logicalassetidregistration",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"policy",
+										"cid:org:pbs.org:Policy215",
+										"permission",
+										"2267",
+										"logicalassetidregistration"
+									]
+								}
 							},
 							"response": []
 						}
@@ -2338,7 +2798,16 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy215"
+						"url": {
+							"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"policy",
+								"cid:org:pbs.org:Policy215"
+							]
+						}
 					},
 					"response": []
 				},
@@ -2376,7 +2845,15 @@
 							"mode": "raw",
 							"raw": "{\n    \"PolicyType\": \"Offer\",\n    \"ReferentType\": \"Offer\",\n    \"StructuralType\": \"Abstraction\",\n    \"Title\": \"Seabiscuit: American Experience-Dev-SMoke-Test\",\n    \"LogicalAssetIDList\": [\n        {\n            \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-128443\"\n        }\n    ],\n    \"Permission\": [\n        {\n            \"Constraint\": {\n                \"PlayType\": \"Release\",\n                \"Action\": \"Television\",\n                \"MaximumExploitation\": \"4\",\n                \"Calculated\": true,\n                \"TermStartDate\": \"2009-11-23T00:00:00Z\",\n                \"TermEndDate\": \"2012-11-22T00:00:00Z\",\n                \"LogicalAssetIDList\": [\n                    {\n                        \"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.128400446\"\n                    }\n                ],\n                \"EntryList\": [\n                    {\n                        \"EntryClass\": \"Episode\",\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n                    }\n                ]\n            }\n        },\n        {\n            \"Constraint\": {\n                \"PlayType\": \"Telecast\",\n                \"Action\": \"Digital Multicast Distribution\",\n                \"MaximumExploitation\": \"23\",\n                \"Calculated\": true,\n                \"TermStartDate\": \"2009-11-23T00:00:00Z\",\n                \"TermEndDate\": \"2012-11-22T00:00:00Z\",\n                \"LogicalAssetIDList\": [\n                    {\n                        \"LogicalAssetID\": \"ruleid:org:pbs.org:UsageTVMulti-cast.128400443\"\n                    }\n                ],\n                \"EntryList\": [\n                    {\n                        \"EntryClass\": \"Episode\",\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1588\"\n                    }\n                ]\n            }\n        }\n    ]\n}"
 						},
-						"url": "{{baseurl}}/policy"
+						"url": {
+							"raw": "{{baseurl}}/policy",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"policy"
+							]
+						}
 					},
 					"response": []
 				},
@@ -2414,7 +2891,16 @@
 							"mode": "raw",
 							"raw": "{\n    \"PolicyType\": \"Offer\",\n    \"ReferentType\": \"Offer\",\n    \"StructuralType\": \"Abstraction\",\n    \"Title\": \"Seabiscuit: American Experience-Dev-Smoke-Test\"\n}\n\n"
 						},
-						"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy215"
+						"url": {
+							"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"policy",
+								"cid:org:pbs.org:Policy215"
+							]
+						}
 					},
 					"response": []
 				},
@@ -2448,7 +2934,16 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy13870"
+						"url": {
+							"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy13870",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"policy",
+								"cid:org:pbs.org:Policy13870"
+							]
+						}
 					},
 					"response": []
 				},
@@ -2486,7 +2981,17 @@
 							"mode": "raw",
 							"raw": "{\n  \"LogicalAssetID\": \"cid:org:pbs.org:BroadView-618586114123\"\n}"
 						},
-						"url": "{{baseurl}}/policy/cid:org:pbs.org:Policy92/logicalassetidregistration"
+						"url": {
+							"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy92/logicalassetidregistration",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"policy",
+								"cid:org:pbs.org:Policy92",
+								"logicalassetidregistration"
+							]
+						}
 					},
 					"response": []
 				},
@@ -2597,7 +3102,16 @@
 									"mode": "raw",
 									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode3818\",\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation1172\",\n    \"ReferentType\": \"Linear\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"en\",\n    \"SubtitledLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\",\n    \"Linear\": {\n        \"PlayRun\": 1,\n        \"PlayDate\":  3, \n        \"PlayType\": \"Hard Feed (with rights)\",\n        \"ReleaseQualifier\": \"premiere\",\n        \"Duration\": \"1800\",\n        \"ProgramService\": {\n            \"ProviderSource\": \"500 - X\",\n            \"ProviderSourceName\": \"PBS\",\n            \"ProviderTimeZone\": \"EDT\"\n        },\n        \"AlternateEventIDList\": [\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-23046921\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-434324324\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-323242342\"\n      }\n    ]\n    }\n}"
 								},
-								"url": "{{baseurl}}/event/linear"
+								"url": {
+									"raw": "{{baseurl}}/event/linear",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"event",
+										"linear"
+									]
+								}
 							},
 							"response": []
 						},
@@ -2635,7 +3149,17 @@
 									"mode": "raw",
 									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode23817\",\n    \"Linear\": {\n        \"PlayType\": \"Hard Feed (with rights)\",\n        \"ReleaseQualifier\": \"premiere\",\n        \"Duration\": \"1800\",\n        \"ProgramService\": {\n            \"ProviderSource\": \"500 - X\",\n            \"ProviderSourceName\": \"PBS\",\n            \"ProviderTimeZone\": \"EDT\"\n        }\n    },\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation2612\",\n    \"ReferentType\": \"Linear\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"fr\",\n    \"SubtitledLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\"\n}"
 								},
-								"url": "{{baseurl}}/event/linear/cid:org:pbs.org:Event10017"
+								"url": {
+									"raw": "{{baseurl}}/event/linear/cid:org:pbs.org:Event10017",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"event",
+										"linear",
+										"cid:org:pbs.org:Event10017"
+									]
+								}
 							},
 							"response": []
 						},
@@ -2673,7 +3197,19 @@
 									"mode": "raw",
 									"raw": "{\r\n\t\"PlayRun\": 234,\r\n\t\"PlayDate\": 10\r\n}"
 								},
-								"url": "{{baseurl}}/event/linear/cid:org:pbs.org:Event1727600/playrun/"
+								"url": {
+									"raw": "{{baseurl}}/event/linear/cid:org:pbs.org:Event1727600/playrun/",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"event",
+										"linear",
+										"cid:org:pbs.org:Event1727600",
+										"playrun",
+										""
+									]
+								}
 							},
 							"response": []
 						},
@@ -2711,7 +3247,18 @@
 									"mode": "raw",
 									"raw": "{\r\n\t\"AlternateEventID\": \"cid:org:pbs.org:Broadview-1234600\"\r\n}"
 								},
-								"url": "{{baseurl}}/event/linear/cid:org:pbs.org:Event10017/alternateeventidregistration"
+								"url": {
+									"raw": "{{baseurl}}/event/linear/cid:org:pbs.org:Event10017/alternateeventidregistration",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"event",
+										"linear",
+										"cid:org:pbs.org:Event10017",
+										"alternateeventidregistration"
+									]
+								}
 							},
 							"response": []
 						},
@@ -2749,7 +3296,17 @@
 									"mode": "raw",
 									"raw": ""
 								},
-								"url": "{{baseurl}}/event/linear/cid:org:pbs.org:Event1714676"
+								"url": {
+									"raw": "{{baseurl}}/event/linear/cid:org:pbs.org:Event1714676",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"event",
+										"linear",
+										"cid:org:pbs.org:Event1714676"
+									]
+								}
 							},
 							"response": []
 						}
@@ -2793,7 +3350,16 @@
 									"mode": "raw",
 									"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Episode23818\",\n  \"ManifestationUID\": \"cid:org:pbs.org:Manifestation211172\",\n  \"ReferentType\": \"VOD\",\n  \"StructuralType\": \"Performance\",\n  \"SAP\": false,\n  \"DubbedLanguage\": \"en\",\n  \"SubtitledLanguage\": \"en\",\n  \"Qualifier\": [\n    \"CC\",\n    \"3D\",\n    \"Dubbed\"\n  ],\n  \"EventDate\": \"2018-12-03T11:24:01.486592\",\n  \"VOD\": {\n    \"ReleaseQualifier\": \"Repeat\",\n    \"Duration\": \"1800\",\n    \"PlayRun\": 12,\n    \"ProviderSource\": \"pbs.org\",\n    \"StartDateTime\": \"2007-04-14T14:00:00\",\n    \"EndDateTime\": \"2007-04-14T15:00:00\",\n    \"AlternateEventIDList\": [\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-323242342\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-64545324\"\n      }\n    ]\n  }\n}"
 								},
-								"url": "{{baseurl}}/event/vod"
+								"url": {
+									"raw": "{{baseurl}}/event/vod",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"event",
+										"vod"
+									]
+								}
 							},
 							"response": []
 						},
@@ -2831,7 +3397,17 @@
 									"mode": "raw",
 									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode23818\",\n    \"VOD\": {\n        \"ReleaseQualifier\": \"Repeat\",\n        \"PlayRun\": 12,\n        \"Duration\": \"1800\",\n        \"ProviderSource\": \"pbs.org\"\n    },\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation211172\",\n    \"ReferentType\": \"VOD\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"en\",\n    \"SubtitledLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\",\n        \"3D\",\n        \"Dubbed\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\"\n}"
 								},
-								"url": "{{baseurl}}/event/vod/cid:org:pbs.org:Event918320"
+								"url": {
+									"raw": "{{baseurl}}/event/vod/cid:org:pbs.org:Event918320",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"event",
+										"vod",
+										"cid:org:pbs.org:Event918320"
+									]
+								}
 							},
 							"response": []
 						},
@@ -2869,7 +3445,18 @@
 									"mode": "raw",
 									"raw": "{\r\n\t\"AlternateEventID\": \"cid:org:pbs.org:Broadview-101010112\"\r\n}"
 								},
-								"url": "{{baseurl}}/event/vod/cid:org:pbs.org:Event1714677/alternateeventidregistration"
+								"url": {
+									"raw": "{{baseurl}}/event/vod/cid:org:pbs.org:Event1714677/alternateeventidregistration",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"event",
+										"vod",
+										"cid:org:pbs.org:Event1714677",
+										"alternateeventidregistration"
+									]
+								}
 							},
 							"response": []
 						},
@@ -2907,7 +3494,17 @@
 									"mode": "raw",
 									"raw": ""
 								},
-								"url": "{{baseurl}}/event/vod/cid:org:pbs.org:Event1714687"
+								"url": {
+									"raw": "{{baseurl}}/event/vod/cid:org:pbs.org:Event1714687",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"event",
+										"vod",
+										"cid:org:pbs.org:Event1714687"
+									]
+								}
 							},
 							"response": []
 						}
@@ -2948,7 +3545,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/showschedule?eventdate=2006-07-31&manifestationId=cid:org:pbs.org:Manifestation10904&episodeId=cid:org:pbs.org:Episode11396",
+									"raw": "{{baseurl}}/showschedule?eventdate=2018-12-03&manifestationId=cid:org:pbs.org:Manifestation1172&episodeId=cid:org:pbs.org:Episode3818&providersource=SIXPBS&query-condition=AND",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -2958,15 +3555,23 @@
 									"query": [
 										{
 											"key": "eventdate",
-											"value": "2006-07-31"
+											"value": "2018-12-03"
 										},
 										{
 											"key": "manifestationId",
-											"value": "cid:org:pbs.org:Manifestation10904"
+											"value": "cid:org:pbs.org:Manifestation1172"
 										},
 										{
 											"key": "episodeId",
-											"value": "cid:org:pbs.org:Episode11396"
+											"value": "cid:org:pbs.org:Episode3818"
+										},
+										{
+											"key": "providersource",
+											"value": "SIXPBS"
+										},
+										{
+											"key": "query-condition",
+											"value": "AND"
 										}
 									]
 								}
@@ -3119,7 +3724,17 @@
 									"mode": "raw",
 									"raw": "{\n\t\"PublishedStatus\": \"Externally Published\"\n}"
 								},
-								"url": "{{baseurl}}/event/cid:org:pbs.org:Event91827/publish-status"
+								"url": {
+									"raw": "{{baseurl}}/event/cid:org:pbs.org:Event91827/publish-status",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"event",
+										"cid:org:pbs.org:Event91827",
+										"publish-status"
+									]
+								}
 							},
 							"response": []
 						}
@@ -3203,7 +3818,16 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"url": "{{baseurl}}/event/cid:org:pbs.org:Event1714690"
+						"url": {
+							"raw": "{{baseurl}}/event/cid:org:pbs.org:Event1714690",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"event",
+								"cid:org:pbs.org:Event1714690"
+							]
+						}
 					},
 					"response": []
 				}
@@ -3346,7 +3970,17 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"url": "{{baseurl}}/catalog/series/cid:org:pbs.org:Series306"
+						"url": {
+							"raw": "{{baseurl}}/catalog/series/cid:org:pbs.org:Series306",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"catalog",
+								"series",
+								"cid:org:pbs.org:Series306"
+							]
+						}
 					},
 					"response": []
 				},
@@ -3379,7 +4013,17 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"url": "{{baseurl}}/catalog/season/cid:org:pbs.org:Season411"
+						"url": {
+							"raw": "{{baseurl}}/catalog/season/cid:org:pbs.org:Season411",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"catalog",
+								"season",
+								"cid:org:pbs.org:Season411"
+							]
+						}
 					},
 					"response": []
 				},
@@ -3413,7 +4057,17 @@
 								"value": "{{x-api-key}}"
 							}
 						],
-						"url": "{{baseurl}}/catalog/episode/cid:org:pbs.org:Episode18171"
+						"url": {
+							"raw": "{{baseurl}}/catalog/episode/cid:org:pbs.org:Episode18171",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"catalog",
+								"episode",
+								"cid:org:pbs.org:Episode18171"
+							]
+						}
 					},
 					"response": []
 				}

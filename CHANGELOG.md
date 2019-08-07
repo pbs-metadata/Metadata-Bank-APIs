@@ -1,5 +1,6 @@
 ## v1.0.10
- * Beta-v0.11 - JSON schema updated for MBank Event Linear Post and PUT for Qualifier Enum validation.
+ * Beta-v0.11 - JSON schema updated for MBank Event Linear & VOD Post and PUT for Qualifier Enum validation.
+ * Beta-v0.11 - Postman collection - Added providersource in showschedule search endpoint.
 
 ## v1.0.9
  * Beta-v0.10 - JSON schema Updated for MBank Event Linear Post and Playtype PUT for playday validation.
