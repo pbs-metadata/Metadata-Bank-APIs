@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "fa779cb4-29eb-43a0-8fba-110662f9dc01",
-		"name": "Metadata-Bank-API-v0.11",
+		"_postman_id": "3b1a329b-9d7c-4818-87b0-0e7d73cb62cf",
+		"name": "Metadata-Bank-API-v0.12",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -3826,6 +3826,51 @@
 							"path": [
 								"event",
 								"cid:org:pbs.org:Event1714690"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Event AlternateUID DELETE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1d0c8bad-e10d-460a-80fb-b5f21685b9c7",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/event/cid:org:pbs.org:Event10017/alternateeventid/cid:org:pbs.org:Broadview-1234600",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"event",
+								"cid:org:pbs.org:Event10017",
+								"alternateeventid",
+								"cid:org:pbs.org:Broadview-1234600"
 							]
 						}
 					},
