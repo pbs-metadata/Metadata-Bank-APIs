@@ -6,6 +6,15 @@
     "VOD"
   ],
   "type": "object",
+  "errorMessage": {
+    "type": "The request should be an object",
+    "required": {
+      "VOD": "VOD is Required",
+      "ParentUID": "ParentUID is Required",
+      "ReferentType": "ReferentType is Required",
+      "StructuralType": "StructuralType is Required"
+    }
+  },
   "properties": {
     "StructuralType": {
       "transform": [
@@ -15,7 +24,11 @@
       "type": "string",
       "enum": [
         "Performance"
-      ]
+      ],
+      "errorMessage": {
+        "type": "StructuralType must be a String",
+        "enum": "StructuralType should have atleast one item"
+      }
     },
     "ReferentType": {
       "transform": [
@@ -26,20 +39,34 @@
       "enum": [
         "Linear",
         "VOD"
-      ]
+      ],
+      "errorMessage": {
+        "type": "ReferentType must be a String",
+        "enum": "ReferentType must be an Linear or VOD irrespective to Case."
+      }
     },
     "ParentUID": {
       "minLength": 1,
       "pattern": "^(.*)$",
-      "type": "string"
+      "type": "string",
+      "errorMessage": {
+        "type": "ParentUID must be a String",
+        "minLength": "ParentUID should have a minimum one character"
+      }
     },
     "EventDate": {
       "pattern": "^(.*)$",
-      "type": "string"
+      "type": "string",
+      "errorMessage": {
+        "type": "EventDate must be a String"
+      }
     },
     "ManifestationUID": {
       "pattern": "^(.*)$",
-      "type": "string"
+      "type": "string",
+      "errorMessage": {
+        "type": "ManifestationUID must be a String"
+      }
     },
     "DubbedLanguage": {
       "transform": [
@@ -47,6 +74,10 @@
         "toEnumCase"
       ],
       "type": "string",
+      "errorMessage": {
+        "type": "DubbedLanguage must be a String",
+        "enum": "DubbedLanguage must be a  aa, ab, ae, af, ak, am, an, ar, as, av, ay, az, ba, be, bg, bh, bi, bm, bn, bo, br, bs, ca, ce, ch, co, cr, cs, cu, cv, cy, da, de, dv, dz, ee, el, en, eo, es, et, eu, fa, ff, fi, fj, fl, fo, fr, fy, ga, gd, gl, gn, gu, gv, ha, haw, he, hi, ho, hr, ht, hu, hy, hz, ia, id, ie, ig, ii, ik, io, is, it, iu, ja, jv, ka, kg, ki, kj, kk, kl, km, kn, ko, kr, ks, ku, kv, kw, ky, la, lb, lg, li, ln, lo, lt, lu, lv, mg, mh, mi, mk, ml, mn, mr, ms, mt, my, na, nb, nd, ne, ng, nl, nn, no, nr, nv, ny, oc, oj, om, or, os, pa, pi, pl, ps, pt, qu, rm, rn, ro, ru, rw, sa, sc, sd, se, sg, si, sk, sl, sm, sn, so, sq, sr, ss, st, su, sv, sw, ta, te, tg, th, ti, tk, tl, tn, to, tr, ts, tt, tw, ty, ug, uk, ur, uz, ve, vi, vo, wa, wo, xh, yi, yo, za, zh or zu irrespective to Case."
+      },
       "enum": [
         "aa",
         "ab",
@@ -242,6 +273,10 @@
         "toEnumCase"
       ],
       "type": "string",
+      "errorMessage": {
+        "type": "SubtitledLanguage must be a String",
+        "enum": "SubtitledLanguage must be a  aa, ab, ae, af, ak, am, an, ar, as, av, ay, az, ba, be, bg, bh, bi, bm, bn, bo, br, bs, ca, ce, ch, co, cr, cs, cu, cv, cy, da, de, dv, dz, ee, el, en, eo, es, et, eu, fa, ff, fi, fj, fl, fo, fr, fy, ga, gd, gl, gn, gu, gv, ha, haw, he, hi, ho, hr, ht, hu, hy, hz, ia, id, ie, ig, ii, ik, io, is, it, iu, ja, jv, ka, kg, ki, kj, kk, kl, km, kn, ko, kr, ks, ku, kv, kw, ky, la, lb, lg, li, ln, lo, lt, lu, lv, mg, mh, mi, mk, ml, mn, mr, ms, mt, my, na, nb, nd, ne, ng, nl, nn, no, nr, nv, ny, oc, oj, om, or, os, pa, pi, pl, ps, pt, qu, rm, rn, ro, ru, rw, sa, sc, sd, se, sg, si, sk, sl, sm, sn, so, sq, sr, ss, st, su, sv, sw, ta, te, tg, th, ti, tk, tl, tn, to, tr, ts, tt, tw, ty, ug, uk, ur, uz, ve, vi, vo, wa, wo, xh, yi, yo, za, zh or zu irrespective to Case."
+      },
       "enum": [
         "aa",
         "ab",
@@ -432,7 +467,10 @@
       ]
     },
     "SAP": {
-      "type": "boolean"
+      "type": "boolean",
+      "errorMessage": {
+        "type": "SAP must be a Boolean"
+      }
     },
     "Qualifier": {
       "type": "array",
@@ -447,7 +485,7 @@
         "type": "string",
         "errorMessage": {
           "type": "items must be a String",
-          "enum": "items must be an 3D, Cable in the classroom, CC, Continued, DD 5.1, Delay, Dolby, Dubbed, DVS, EI, Enhanced, HDTV, IS, Joined in progress, Left in progress, Letterbox, Live, New, Premiere, SDTV, Season Finale, Season Premiere, Series Finale, Series Premiere, Stereo, Sub-Titled, Subject to blackout, Surround or Tape irrespective to Case."
+          "enum": "items must be an 3D, Cable in the classroom, CC, Continued, DD 5.1, Delay, Dolby, Dubbed, DVS, EI, Enhanced, HDTV, IS, Joined in progress, Left in progress, Letterbox, Live, New, Premiere, SDTV, Season Finale, Season Premiere, Series Finale, Series Premiere, Stereo, Sub-Titled, Subject to blackout, Mono, Stereo Surround, Surround 5.1, Surround or Tape, 0, -3 irrespective to Case."
         },
         "enum": [
           "3D",
@@ -478,7 +516,12 @@
           "Sub-Titled",
           "Subject to blackout",
           "Surround",
-          "Tape"
+          "Tape",
+          "0",
+          "-3",
+          "Mono",
+          "Stereo Surround",
+          "Surround 5.1"
         ]
       }
     },
@@ -488,44 +531,80 @@
         "EndDateTime"
       ],
       "type": "object",
+      "errorMessage": {
+        "type": "VOD should be an object",
+        "required": {
+          "AlternateEventIDList": "AlternateEventIDList is Required",
+          "EndDateTime": "EndDateTime is Required"
+        }
+      },
       "properties": {
         "AlternateEventIDList": {
           "type": "array",
           "uniqueItems": true,
+          "errorMessage": {
+            "uniqueItems": "AlternateEventIDList Contains a Duplicate Value",
+            "type": "AlternateEventIDList must be an Array"
+          },
           "items": {
             "type": "object",
+            "errorMessage": {
+              "type": "items must be an object"
+            },
             "properties": {
               "AlternateEventID": {
                 "pattern": "^(.*)$",
-                "type": "string"
+                "type": "string",
+                "errorMessage": {
+                  "type": "AlternateEventID must be a String"
+                }
               }
             }
           }
         },
         "PlayRun": {
           "type": "integer",
-          "format": "int32"
+          "format": "int32",
+          "errorMessage": {
+            "type": "PlayRun must be an Integer"
+          }
         },
         "PublishedStatus": {
           "pattern": "^(.*)$",
-          "type": "string"
+          "type": "string",
+          "errorMessage": {
+            "type": "PublishedStatus must be a String"
+          }
         },
         "ProviderSource": {
           "pattern": "^(.*)$",
-          "type": "string"
+          "type": "string",
+          "errorMessage": {
+            "type": "ProviderSource must be a String"
+          }
         },
         "AssetUID": {
           "pattern": "^(.*)$",
-          "type": "string"
+          "type": "string",
+          "errorMessage": {
+            "type": "AssetUID must be a String"
+          }
         },
         "StartDateTime": {
           "pattern": "^(.*)$",
-          "type": "string"
+          "type": "string",
+          "errorMessage": {
+            "type": "StartDateTime must be a String"
+          }
         },
         "EndDateTime": {
           "minLength": 1,
           "pattern": "^(.*)$",
-          "type": "string"
+          "type": "string",
+          "errorMessage": {
+            "type": "EndDateTime must be a String",
+            "minLength": "EndDateTime should have a minimum one character"
+          }
         }
       }
     }

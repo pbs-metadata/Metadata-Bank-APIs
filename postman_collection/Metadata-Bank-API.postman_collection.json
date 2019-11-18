@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "3b1a329b-9d7c-4818-87b0-0e7d73cb62cf",
-		"name": "Metadata-Bank-API-v0.12",
+		"_postman_id": "fe650098-57c9-49de-97ad-6a82cd360b51",
+		"name": "Metadata-Bank-API-v0.14",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -48,6 +48,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -91,6 +92,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -324,7 +326,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Season",
@@ -369,6 +372,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -412,6 +416,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -698,7 +703,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Episode",
@@ -746,6 +752,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -789,6 +796,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -1023,6 +1031,55 @@
 					"response": []
 				},
 				{
+					"name": "Episode ContentIDRegistration",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "692cc046-094e-40a6-a9b9-be491e49912a",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Righhtsline-134332\"\n}"
+						},
+						"url": {
+							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode30168/contentid/cid:org:pbs.org:Righhtsline-134332",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"episode",
+								"cid:org:pbs.org:Episode30168",
+								"contentid",
+								"cid:org:pbs.org:Righhtsline-134332"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Episode Search",
 					"event": [
 						{
@@ -1075,7 +1132,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Manifestation",
@@ -1132,6 +1190,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -1177,6 +1236,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -1220,6 +1280,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -1509,7 +1570,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Manifestation File",
@@ -1743,7 +1805,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Compilation",
@@ -1795,6 +1858,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -1844,6 +1908,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -1893,6 +1958,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -1942,6 +2008,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -2044,6 +2111,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -2087,6 +2155,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -2132,6 +2201,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -2420,7 +2490,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Policy",
@@ -2466,7 +2537,7 @@
 											"raw": "{\n  \"EntryClass\": \"Season\",\n  \"EntryUID\": \"cid:org:pbs.org:Season36\"\n}"
 										},
 										"url": {
-											"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/2266/entrycontentid",
+											"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/272/entrycontentid",
 											"host": [
 												"{{baseurl}}"
 											],
@@ -2474,7 +2545,7 @@
 												"policy",
 												"cid:org:pbs.org:Policy215",
 												"permission",
-												"2266",
+												"272",
 												"entrycontentid"
 											]
 										}
@@ -2512,7 +2583,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/2266/entrycontentid/cid:org:pbs.org:Season36",
+											"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/272/entrycontentid/cid:org:pbs.org:Season36",
 											"host": [
 												"{{baseurl}}"
 											],
@@ -2520,7 +2591,7 @@
 												"policy",
 												"cid:org:pbs.org:Policy215",
 												"permission",
-												"2266",
+												"272",
 												"entrycontentid",
 												"cid:org:pbs.org:Season36"
 											]
@@ -2529,6 +2600,7 @@
 									"response": []
 								}
 							],
+							"protocolProfileBehavior": {},
 							"_postman_isSubFolder": true
 						},
 						{
@@ -2563,7 +2635,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": " {\r\n \t\"Constraint\": {\r\n                \"PlayType\": \"Release\",\r\n                \"Action\": \"Television\",\r\n                \"MaximumExploitation\": \"8\",\r\n                \"Calculated\": false,\r\n                \"TermStartDate\": \"2009-05-28T00:00:00Z\",\r\n                \"TermEndDate\": \"2012-06-30T00:00:00Z\",\r\n                \"LogicalAssetIDList\": [\r\n                    {\r\n                        \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-6185865455\"\r\n                    }\r\n                ],\r\n                \"EntryList\": [\r\n                    {\r\n                        \"EntryClass\": \"Episode\",\r\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1\"\r\n                    }\r\n                ]\r\n            }\r\n        }"
+									"raw": " {\r\n \t\"Rule\": {\r\n                \"PlayType\": \"Release\",\r\n                \"MediaContext\": \"Linear\",\r\n                \"MaximumExploitation\": \"8\",\r\n                \"Calculated\": true,\r\n                \"TermStartDate\": \"2009-05-28T00:00:00Z\",\r\n                \"TermEndDate\": \"2012-06-30T00:00:00Z\",\r\n                \"LogicalAssetIDList\": [\r\n                    {\r\n                        \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-6185865455\"\r\n                    }\r\n                ],\r\n                \"EntryList\": [\r\n                    {\r\n                        \"EntryClass\": \"Episode\",\r\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1\"\r\n                    }\r\n                ]\r\n            }\r\n        }"
 								},
 								"url": {
 									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission",
@@ -2611,10 +2683,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"Constraint\": {\n    \"PlayType\": \"Telecast\",\n    \"Action\": \"Television\",\n    \"MaximumExploitation\": \"10\",\n    \"Calculated\": true,\n    \"TermStartDate\": \"2009-11-23T00:00:00Z\",\n    \"TermEndDate\": \"2012-11-22T00:00:00Z\"\n  }\n}"
+									"raw": "{\n  \"Rule\": {\n    \"PlayType\": \"Telecast\",\n    \"MediaContext\": \"Television\",\n    \"MaximumExploitation\": \"777\",\n    \"Calculated\": false,\n    \"TermStartDate\": \"2019-11-23T00:00:00Z\",\n    \"TermEndDate\": \"2022-11-22T00:00:00Z\"\n  }\n}"
 								},
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/2268",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/53",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -2622,7 +2694,7 @@
 										"policy",
 										"cid:org:pbs.org:Policy215",
 										"permission",
-										"2268"
+										"53"
 									]
 								}
 							},
@@ -2659,7 +2731,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/57250",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/271",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -2667,7 +2739,7 @@
 										"policy",
 										"cid:org:pbs.org:Policy215",
 										"permission",
-										"57250"
+										"271"
 									]
 								}
 							},
@@ -2708,7 +2780,7 @@
 									"raw": "{\n  \"LogicalAssetID\": \"alid:org:pbs.org:RightsLine-6135\"\n}"
 								},
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/2267/logicalassetidregistration",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/272/logicalassetidregistration",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -2716,7 +2788,7 @@
 										"policy",
 										"cid:org:pbs.org:Policy215",
 										"permission",
-										"2267",
+										"272",
 										"logicalassetidregistration"
 									]
 								}
@@ -2724,6 +2796,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -2767,6 +2840,323 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Prohibition",
+					"item": [
+						{
+							"name": "Entry",
+							"item": [
+								{
+									"name": "Entry POST",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "9170378d-8776-4866-833a-598382ecdf29",
+												"exec": [
+													"tests[\"Status code is 201\"] = responseCode.code === 201;"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "apikey",
+												"value": "{{apikey}}"
+											},
+											{
+												"key": "x-api-key",
+												"value": "{{x-api-key}}"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"EntryClass\": \"Season\",\n  \"EntryUID\": \"cid:org:pbs.org:Season36\"\n}"
+										},
+										"url": {
+											"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/prohibition/23/entrycontentid",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"policy",
+												"cid:org:pbs.org:Policy215",
+												"prohibition",
+												"23",
+												"entrycontentid"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Entry DELETE",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "8ea4e4f8-5772-4f32-90c6-4191e98b8de2",
+												"exec": [
+													"tests[\"Status code is 200\"] = responseCode.code === 200;"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "apikey",
+												"value": "{{apikey}}"
+											},
+											{
+												"key": "x-api-key",
+												"value": "{{x-api-key}}"
+											}
+										],
+										"url": {
+											"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/prohibition/23/entrycontentid/cid:org:pbs.org:Season36",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"policy",
+												"cid:org:pbs.org:Policy215",
+												"prohibition",
+												"23",
+												"entrycontentid",
+												"cid:org:pbs.org:Season36"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "365ea82b-9d45-49fc-804d-98e99baf8ec9",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "77fe4f24-0e48-40c4-903c-9f5685ab2f9f",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Prohibition POST",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "apikey",
+										"value": "{{apikey}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Action\": \"Blackout\",\n    \"MediaContext\": \"Television\",\n    \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n    \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n\t\"LogicalAssetIDList\": [\n         {\n    \t\t\"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.12840088\"\n    \t }\n\t],\n    \"EntryList\": [\n      {\n\t       \"EntryClass\": \"Episode\",\n\t       \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n      }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/prohibition",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"policy",
+										"cid:org:pbs.org:Policy215",
+										"prohibition"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Prohibition PUT",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "7ecc9c3b-be28-49e3-8a53-c5189c388534",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "apikey",
+										"value": "{{apikey}}"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Action\": \"Blackout\",\n    \"MediaContext\": \"Television\",\n    \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n    \"TermEndDate\": \"2018-11-22T00:00:00Z\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/prohibition/23",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"policy",
+										"cid:org:pbs.org:Policy215",
+										"prohibition",
+										"23"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Prohibition DELETE",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "157a4c79-ea01-4825-8b6a-261ee49ad175",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "apikey",
+										"value": "{{apikey}}"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/prohibition/26",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"policy",
+										"cid:org:pbs.org:Policy215",
+										"prohibition",
+										"26"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Prohibition LogicalAssetIDRegistration",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "0f89ad7d-27b9-4ac5-99d5-78a93ed153f1",
+										"exec": [
+											"tests[\"Status code is 201\"] = responseCode.code === 201;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "apikey",
+										"value": "{{apikey}}"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"LogicalAssetID\": \"alid:org:pbs.org:RightsLine-6135\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/prohibition/23/logicalassetidregistration",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"policy",
+										"cid:org:pbs.org:Policy215",
+										"prohibition",
+										"23",
+										"logicalassetidregistration"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -2843,7 +3233,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"PolicyType\": \"Offer\",\n    \"ReferentType\": \"Offer\",\n    \"StructuralType\": \"Abstraction\",\n    \"Title\": \"Seabiscuit: American Experience-Dev-SMoke-Test\",\n    \"LogicalAssetIDList\": [\n        {\n            \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-128443\"\n        }\n    ],\n    \"Permission\": [\n        {\n            \"Constraint\": {\n                \"PlayType\": \"Release\",\n                \"Action\": \"Television\",\n                \"MaximumExploitation\": \"4\",\n                \"Calculated\": true,\n                \"TermStartDate\": \"2009-11-23T00:00:00Z\",\n                \"TermEndDate\": \"2012-11-22T00:00:00Z\",\n                \"LogicalAssetIDList\": [\n                    {\n                        \"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.128400446\"\n                    }\n                ],\n                \"EntryList\": [\n                    {\n                        \"EntryClass\": \"Episode\",\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n                    }\n                ]\n            }\n        },\n        {\n            \"Constraint\": {\n                \"PlayType\": \"Telecast\",\n                \"Action\": \"Digital Multicast Distribution\",\n                \"MaximumExploitation\": \"23\",\n                \"Calculated\": true,\n                \"TermStartDate\": \"2009-11-23T00:00:00Z\",\n                \"TermEndDate\": \"2012-11-22T00:00:00Z\",\n                \"LogicalAssetIDList\": [\n                    {\n                        \"LogicalAssetID\": \"ruleid:org:pbs.org:UsageTVMulti-cast.128400443\"\n                    }\n                ],\n                \"EntryList\": [\n                    {\n                        \"EntryClass\": \"Episode\",\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1588\"\n                    }\n                ]\n            }\n        }\n    ]\n}"
+							"raw": "{\n    \"PolicyType\": \"Offer\",\n    \"ReferentType\": \"Offer\",\n    \"StructuralType\": \"Abstraction\",\n    \"Title\": \"Seabiscuit: American Experience-Dev-SMoke-Test\",\n    \"LogicalAssetIDList\": [\n        {\n            \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-128443\"\n        }\n    ],\n    \"Permission\": [\n        {\n            \"Rule\": {\n                \"PlayType\": \"Release\",\n                \"MediaContext\": \"Television\",\n                \"MaximumExploitation\": \"88\",\n                \"Calculated\": true,\n                \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n                \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n                \"LogicalAssetIDList\": [\n                    {\n                        \"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.12840088\"\n                    }\n                ],\n                \"EntryList\": [\n                    {\n                        \"EntryClass\": \"Episode\",\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n                    }\n                ]\n            }\n        },\n        {\n            \"Rule\": {\n                \"PlayType\": \"Telecast\",\n                \"MediaContext\": \"Digital Multicast Distribution\",\n                \"MaximumExploitation\": \"99\",\n                \"Calculated\": true,\n                \"TermStartDate\": \"2012-11-23T00:00:00Z\",\n                \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n                \"LogicalAssetIDList\": [\n                    {\n                        \"LogicalAssetID\": \"ruleid:org:pbs.org:UsageTVMulti-cast.12840099\"\n                    }\n                ],\n                \"EntryList\": [\n                    {\n                        \"EntryClass\": \"Episode\",\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1588\"\n                    }\n                ]\n            }\n        }\n    ]\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/policy",
@@ -3060,7 +3450,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Event",
@@ -3311,6 +3702,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -3509,6 +3901,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -3697,6 +4090,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -3739,6 +4133,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -3786,6 +4181,7 @@
 							"response": []
 						}
 					],
+					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
 				},
 				{
@@ -3876,7 +4272,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		},
 		{
 			"name": "Catalog",
@@ -4116,7 +4513,9 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"protocolProfileBehavior": {}
 		}
-	]
+	],
+	"protocolProfileBehavior": {}
 }

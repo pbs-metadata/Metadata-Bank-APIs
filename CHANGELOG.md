@@ -1,3 +1,9 @@
+## v1.0.14
+ * MBANK v0.14 - JSON schema updated for MBank Series, Episode for dar, haw, hmo, psm, swz, wam language code support. 
+ *		Event Linear & VOD Post and PUT for Qualifier new Enum value updates - Mono, Stereo Surround, Surround 5.1
+ *		New scheam addred for Policy Prohibition POST & PUT.
+ * MBANK v0.14 - Postman collection - Added new policy prohibition endpoints.
+ 
 ## v1.0.11
  * MBANK v0.12 - Postman collection - Added new endpoint to delete existing alternate eventId.
  
@@ -45,3 +51,4 @@
 ## v1.0.0
  * UAT2 metadata-bank json schema for Series, Season, Episode, Manifestation, Compilation, Policy.
  * UAT2 Postman collection - Series, Season, Episode, Manifestation, Compilation, Policy. 
+ 

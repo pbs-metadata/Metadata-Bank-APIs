@@ -1,653 +1,679 @@
 {
-        "required": [
-            "Linear",
-            "ParentUID",
-            "ReferentType",
-            "StructuralType"
-        ],
-        "type": "object",
-        "errorMessage": {
-            "type": "The request should be an object",
-            "required": {
-                "Linear": "Linear is Required",
-                "ParentUID": "ParentUID is Required",
-                "ReferentType" : "ReferentType is Required",
-                "StructuralType" : "StructuralType is Required"
-            }
-        },
-        "properties": {
-            "StructuralType": {
-                "transform": ["trim", "toEnumCase"],
-                "type": "string",
-                "enum": [
-                    "Performance"
-                ],
-                "errorMessage":{
-                    "type": "StructuralType must be a String",
-                    "enum": "StructuralType should have atleast one item"
-                }
-            },
-            "ReferentType": {
-                "transform": ["trim", "toEnumCase"],
-                "type": "string",
-                "enum": [
-                    "Linear",
-                    "VOD"
-                ],
-                "errorMessage":{
-                    "type": "ReferentType must be a String",
-                    "enum": "ReferentType must be an Linear or VOD irrespective to Case."
-                }
-            },
-            "ParentUID": {
-                "minLength": 1,
-                "pattern": "^(.*)$",
-                "type": "string", 
-                "errorMessage":{
-                    "type": "ParentUID must be a String",
-                    "minLength": "ParentUID should have a minimum one character"
-                }
-            },
-            "EventDate": {
-                "pattern": "^(.*)$",
-                "type": "string",
-                "errorMessage":{
-                    "type": "EventDate must be a String"
-                }
-            },
-            "ManifestationUID": {
-                "pattern": "^(.*)$",
-                "type": "string",
-                "errorMessage":{
-                    "type": "ManifestationUID must be a String"
-                }
-            },
-            "DubbedLanguage": {
-                "transform": ["trim", "toEnumCase"],
-                "type": "string",
-                "errorMessage":{
-                    "type": "DubbedLanguage must be a String",
-                    "enum": "DubbedLanguage must be a  aa, ab, ae, af, ak, am, an, ar, as, av, ay, az, ba, be, bg, bh, bi, bm, bn, bo, br, bs, ca, ce, ch, co, cr, cs, cu, cv, cy, da, de, dv, dz, ee, el, en, eo, es, et, eu, fa, ff, fi, fj, fl, fo, fr, fy, ga, gd, gl, gn, gu, gv, ha, haw, he, hi, ho, hr, ht, hu, hy, hz, ia, id, ie, ig, ii, ik, io, is, it, iu, ja, jv, ka, kg, ki, kj, kk, kl, km, kn, ko, kr, ks, ku, kv, kw, ky, la, lb, lg, li, ln, lo, lt, lu, lv, mg, mh, mi, mk, ml, mn, mr, ms, mt, my, na, nb, nd, ne, ng, nl, nn, no, nr, nv, ny, oc, oj, om, or, os, pa, pi, pl, ps, pt, qu, rm, rn, ro, ru, rw, sa, sc, sd, se, sg, si, sk, sl, sm, sn, so, sq, sr, ss, st, su, sv, sw, ta, te, tg, th, ti, tk, tl, tn, to, tr, ts, tt, tw, ty, ug, uk, ur, uz, ve, vi, vo, wa, wo, xh, yi, yo, za, zh or zu irrespective to Case."
-                },
-                "enum": [
-                    "aa",
-                    "ab",
-                    "ae",
-                    "af",
-                    "ak",
-                    "am",
-                    "an",
-                    "ar",
-                    "as",
-                    "av",
-                    "ay",
-                    "az",
-                    "ba",
-                    "be",
-                    "bg",
-                    "bh",
-                    "bi",
-                    "bm",
-                    "bn",
-                    "bo",
-                    "br",
-                    "bs",
-                    "ca",
-                    "ce",
-                    "ch",
-                    "co",
-                    "cr",
-                    "cs",
-                    "cu",
-                    "cv",
-                    "cy",
-                    "da",
-                    "de",
-                    "dv",
-                    "dz",
-                    "ee",
-                    "el",
-                    "en",
-                    "eo",
-                    "es",
-                    "et",
-                    "eu",
-                    "fa",
-                    "ff",
-                    "fi",
-                    "fj",
-                    "fl",
-                    "fo",
-                    "fr",
-                    "fy",
-                    "ga",
-                    "gd",
-                    "gl",
-                    "gn",
-                    "gu",
-                    "gv",
-                    "ha",
-                    "haw",
-                    "he",
-                    "hi",
-                    "ho",
-                    "hr",
-                    "ht",
-                    "hu",
-                    "hy",
-                    "hz",
-                    "ia",
-                    "id",
-                    "ie",
-                    "ig",
-                    "ii",
-                    "ik",
-                    "io",
-                    "is",
-                    "it",
-                    "iu",
-                    "ja",
-                    "jv",
-                    "ka",
-                    "kg",
-                    "ki",
-                    "kj",
-                    "kk",
-                    "kl",
-                    "km",
-                    "kn",
-                    "ko",
-                    "kr",
-                    "ks",
-                    "ku",
-                    "kv",
-                    "kw",
-                    "ky",
-                    "la",
-                    "lb",
-                    "lg",
-                    "li",
-                    "ln",
-                    "lo",
-                    "lt",
-                    "lu",
-                    "lv",
-                    "mg",
-                    "mh",
-                    "mi",
-                    "mk",
-                    "ml",
-                    "mn",
-                    "mr",
-                    "ms",
-                    "mt",
-                    "my",
-                    "na",
-                    "nb",
-                    "nd",
-                    "ne",
-                    "ng",
-                    "nl",
-                    "nn",
-                    "no",
-                    "nr",
-                    "nv",
-                    "ny",
-                    "oc",
-                    "oj",
-                    "om",
-                    "or",
-                    "os",
-                    "pa",
-                    "pi",
-                    "pl",
-                    "ps",
-                    "pt",
-                    "qu",
-                    "rm",
-                    "rn",
-                    "ro",
-                    "ru",
-                    "rw",
-                    "sa",
-                    "sc",
-                    "sd",
-                    "se",
-                    "sg",
-                    "si",
-                    "sk",
-                    "sl",
-                    "sm",
-                    "sn",
-                    "so",
-                    "sq",
-                    "sr",
-                    "ss",
-                    "st",
-                    "su",
-                    "sv",
-                    "sw",
-                    "ta",
-                    "te",
-                    "tg",
-                    "th",
-                    "ti",
-                    "tk",
-                    "tl",
-                    "tn",
-                    "to",
-                    "tr",
-                    "ts",
-                    "tt",
-                    "tw",
-                    "ty",
-                    "ug",
-                    "uk",
-                    "ur",
-                    "uz",
-                    "ve",
-                    "vi",
-                    "vo",
-                    "wa",
-                    "wo",
-                    "xh",
-                    "yi",
-                    "yo",
-                    "za",
-                    "zh",
-                    "zu"
-                ]
-            },
-            "SubtitledLanguage": {
-                "transform": ["trim", "toEnumCase"],
-                "type": "string",
-                "errorMessage":{
-                    "type": "SubtitledLanguage must be a String",
-                    "enum": "SubtitledLanguage must be a  aa, ab, ae, af, ak, am, an, ar, as, av, ay, az, ba, be, bg, bh, bi, bm, bn, bo, br, bs, ca, ce, ch, co, cr, cs, cu, cv, cy, da, de, dv, dz, ee, el, en, eo, es, et, eu, fa, ff, fi, fj, fl, fo, fr, fy, ga, gd, gl, gn, gu, gv, ha, haw, he, hi, ho, hr, ht, hu, hy, hz, ia, id, ie, ig, ii, ik, io, is, it, iu, ja, jv, ka, kg, ki, kj, kk, kl, km, kn, ko, kr, ks, ku, kv, kw, ky, la, lb, lg, li, ln, lo, lt, lu, lv, mg, mh, mi, mk, ml, mn, mr, ms, mt, my, na, nb, nd, ne, ng, nl, nn, no, nr, nv, ny, oc, oj, om, or, os, pa, pi, pl, ps, pt, qu, rm, rn, ro, ru, rw, sa, sc, sd, se, sg, si, sk, sl, sm, sn, so, sq, sr, ss, st, su, sv, sw, ta, te, tg, th, ti, tk, tl, tn, to, tr, ts, tt, tw, ty, ug, uk, ur, uz, ve, vi, vo, wa, wo, xh, yi, yo, za, zh or zu irrespective to Case."
-                },
-                "enum": [
-                    "aa",
-                    "ab",
-                    "ae",
-                    "af",
-                    "ak",
-                    "am",
-                    "an",
-                    "ar",
-                    "as",
-                    "av",
-                    "ay",
-                    "az",
-                    "ba",
-                    "be",
-                    "bg",
-                    "bh",
-                    "bi",
-                    "bm",
-                    "bn",
-                    "bo",
-                    "br",
-                    "bs",
-                    "ca",
-                    "ce",
-                    "ch",
-                    "co",
-                    "cr",
-                    "cs",
-                    "cu",
-                    "cv",
-                    "cy",
-                    "da",
-                    "de",
-                    "dv",
-                    "dz",
-                    "ee",
-                    "el",
-                    "en",
-                    "eo",
-                    "es",
-                    "et",
-                    "eu",
-                    "fa",
-                    "ff",
-                    "fi",
-                    "fj",
-                    "fl",
-                    "fo",
-                    "fr",
-                    "fy",
-                    "ga",
-                    "gd",
-                    "gl",
-                    "gn",
-                    "gu",
-                    "gv",
-                    "ha",
-                    "haw",
-                    "he",
-                    "hi",
-                    "ho",
-                    "hr",
-                    "ht",
-                    "hu",
-                    "hy",
-                    "hz",
-                    "ia",
-                    "id",
-                    "ie",
-                    "ig",
-                    "ii",
-                    "ik",
-                    "io",
-                    "is",
-                    "it",
-                    "iu",
-                    "ja",
-                    "jv",
-                    "ka",
-                    "kg",
-                    "ki",
-                    "kj",
-                    "kk",
-                    "kl",
-                    "km",
-                    "kn",
-                    "ko",
-                    "kr",
-                    "ks",
-                    "ku",
-                    "kv",
-                    "kw",
-                    "ky",
-                    "la",
-                    "lb",
-                    "lg",
-                    "li",
-                    "ln",
-                    "lo",
-                    "lt",
-                    "lu",
-                    "lv",
-                    "mg",
-                    "mh",
-                    "mi",
-                    "mk",
-                    "ml",
-                    "mn",
-                    "mr",
-                    "ms",
-                    "mt",
-                    "my",
-                    "na",
-                    "nb",
-                    "nd",
-                    "ne",
-                    "ng",
-                    "nl",
-                    "nn",
-                    "no",
-                    "nr",
-                    "nv",
-                    "ny",
-                    "oc",
-                    "oj",
-                    "om",
-                    "or",
-                    "os",
-                    "pa",
-                    "pi",
-                    "pl",
-                    "ps",
-                    "pt",
-                    "qu",
-                    "rm",
-                    "rn",
-                    "ro",
-                    "ru",
-                    "rw",
-                    "sa",
-                    "sc",
-                    "sd",
-                    "se",
-                    "sg",
-                    "si",
-                    "sk",
-                    "sl",
-                    "sm",
-                    "sn",
-                    "so",
-                    "sq",
-                    "sr",
-                    "ss",
-                    "st",
-                    "su",
-                    "sv",
-                    "sw",
-                    "ta",
-                    "te",
-                    "tg",
-                    "th",
-                    "ti",
-                    "tk",
-                    "tl",
-                    "tn",
-                    "to",
-                    "tr",
-                    "ts",
-                    "tt",
-                    "tw",
-                    "ty",
-                    "ug",
-                    "uk",
-                    "ur",
-                    "uz",
-                    "ve",
-                    "vi",
-                    "vo",
-                    "wa",
-                    "wo",
-                    "xh",
-                    "yi",
-                    "yo",
-                    "za",
-                    "zh",
-                    "zu"
-                ]
-            },
-            "SAP": {
-                "type": "boolean",
-                "errorMessage":{
-                    "type": "SAP must be a Boolean"
-                }
-            },
-            "Qualifier": {
-                "type": "array",
-                "errorMessage":{
-                    "type": "Qualifier must be an Array"
-                },
-                "items": {
-                    "transform": ["trim", "toEnumCase"],
-                    "type": "string",
-                    "errorMessage":{
-                        "type": "items must be a String",
-                        "enum": "items must be an 3D, Cable in the classroom, CC, Continued, DD 5.1, Delay, Dolby, Dubbed, DVS, EI, Enhanced, HDTV, IS, Joined in progress, Left in progress, Letterbox, Live, New, Premiere, SDTV, Season Finale, Season Premiere, Series Finale, Series Premiere, Stereo, Sub-Titled, Subject to blackout, Surround or Tape irrespective to Case."
-                    },
-                    "enum": [
-                        "3D",
-                        "Cable in the classroom",
-                        "CC",
-                        "Continued",
-                        "DD 5.1",
-                        "Delay",
-                        "Dolby",
-                        "Dubbed",
-                        "DVS",
-                        "EI",
-                        "Enhanced",
-                        "HDTV",
-                        "IS",
-                        "Join in progress",
-                        "Left in progress",
-                        "Letterbox",
-                        "Live",
-                        "New",
-                        "Premiere",
-                        "SDTV",
-                        "Season Finale",
-                        "Season Premiere",
-                        "Series Finale",
-                        "Series Premiere",
-                        "Stereo",
-                        "Sub-Titled",
-                        "Subject to blackout",
-                        "Surround",
-                        "Tape"
-                    ]
-                }
-            },
-            "Linear": {
-                "required": [
-                    "AlternateEventIDList",
-                    "Duration",
-                    "ProgramService"
-                ],
-                "type": "object",
-                "errorMessage": {
-                    "type": "Linear should be an object",
-                    "required": {
-                        "AlternateEventIDList": "AlternateEventIDList is Required",
-                        "Duration": "Duration is Required",
-                        "ProgramService" : "ProgramService is Required"
-                    }
-                },
-                "properties": {
-                    "AlternateEventIDList": {
-                        "type": "array",
-                        "uniqueItems": true,
-                        "errorMessage":{
-                            "uniqueItems": "AlternateEventIDList Contains a Duplicate Value",
-                            "type": "AlternateEventIDList must be an Array"
-                        },
-                        "items": {
-                            "type": "object",
-                            "errorMessage":{
-                                "type": "items must be an object"
-                            },
-                            "properties": {
-                                "AlternateEventID": {
-                                    "pattern": "^(.*)$",
-                                    "type": "string",
-                                    "errorMessage":{
-                                        "type": "AlternateEventID must be a String"
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    "PlayRun": {
-                        "type": "integer",
-                        "format": "int32",
-                        "errorMessage":{
-                            "type": "PlayRun must be an Integer",
-                            "format" :"PlayRun must be in format int32"
-                        }
-                    },
-                    "PlayDay": {
-                        "type": "integer",
-                        "format": "int32",
-                        "errorMessage":{
-                            "type": "PlayDay must be an Integer",
-                            "format" :"PlayDay must be in format int32"
-                        }
-                    },
-                    "PlayType": {
-                        "transform": ["trim", "toEnumCase"],
-                        "type": "string",
-                        "errorMessage":{
-                            "type": "PlayType must be a String",
-                            "enum": "PlayType must be an Hard Feed (without rights), Hard Feed (with rights), Soft Feed (with rights), Soft Feed (without rights), Preview For Air, Preview Not For Air, Not For Air, Re-Feed, Internal Only, Repeat, Prefeed, Feed For Record, Other Hard Feed (with Rights) or Other Hard Feed (without Rights) irrespective to Case."
-                        },
-                        "enum": [
-                            "Hard Feed (without rights)",
-                            "Hard Feed (with rights)",
-                            "Soft Feed (with rights)",
-                            "Soft Feed (without rights)",
-                            "Preview For Air",
-                            "Preview Not For Air",
-                            "Not For Air",
-                            "Re-Feed",
-                            "Internal Only",
-                            "Repeat",
-                            "Prefeed",
-                            "Feed For Record",
-                            "Other Hard Feed (with Rights)",
-                            "Other Hard Feed (without Rights)"
-                        ]
-                    },
-                    "Duration": {
-                        "minLength": 1,
-                        "pattern": "^(.*)$",
-                        "type": "string",
-                        "errorMessage":{
-                            "type": "Duration must be a String",
-                            "minLength": "Duration should have a minimum one character"
-                        }
-                    },
-                    "ProgramService": {
-                        "required": [
-                            "ProviderSource",
-                            "ProviderSourceName"
-                        ],
-                        "type": "object",
-                        "errorMessage": {
-                            "type": "ProgramService should be an object",
-                            "required": {
-                                "ProviderSource": "ProviderSource is Required",
-                                "ProviderSourceName": "ProviderSourceName is Required"
-                            }
-                        },
-                        "properties": {
-                            "ProviderSource": {
-                                "minLength": 1,
-                                "pattern": "^(.*)$",
-                                "type": "string",
-                                "errorMessage":{
-                                    "type": "ProviderSource must be a String",
-                                    "minLength": "ProviderSource should have a minimum one character"
-                                }
-                            },
-                            "ProviderSourceName": {
-                                "pattern": "^(.*)$",
-                                "type": "string",
-                                "errorMessage":{
-                                    "type": "ProviderSourceName must be a String"
-                                }
-                            },
-                            "ProviderTimeZone": {
-                                "transform": ["trim", "toEnumCase"],
-                                "type": "string",
-                                "enum": [
-                                    "CST",
-                                    "CDT",
-                                    "EST",
-                                    "EDT",
-                                    "PST",
-                                    "PDT",
-                                    "MST",
-                                    "MDT",
-                                    "HST",
-                                    "HDT",
-                                    "AKST",
-                                    "AKDT"
-                                ],
-                                "errorMessage":{
-                                    "type": "ProviderTimeZone must be a String",
-                                    "enum": "ProviderTimeZone must be a CST, CDT, EST, EDT, PST, PDT, MST, MDT, HST, HDT, AKST or AKDT irrespective to Case."
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+  "required": [
+    "Linear",
+    "ParentUID",
+    "ReferentType",
+    "StructuralType"
+  ],
+  "type": "object",
+  "errorMessage": {
+    "type": "The request should be an object",
+    "required": {
+      "Linear": "Linear is Required",
+      "ParentUID": "ParentUID is Required",
+      "ReferentType": "ReferentType is Required",
+      "StructuralType": "StructuralType is Required"
     }
+  },
+  "properties": {
+    "StructuralType": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Performance"
+      ],
+      "errorMessage": {
+        "type": "StructuralType must be a String",
+        "enum": "StructuralType should have atleast one item"
+      }
+    },
+    "ReferentType": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Linear",
+        "VOD"
+      ],
+      "errorMessage": {
+        "type": "ReferentType must be a String",
+        "enum": "ReferentType must be an Linear or VOD irrespective to Case."
+      }
+    },
+    "ParentUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "ParentUID must be a String",
+        "minLength": "ParentUID should have a minimum one character"
+      }
+    },
+    "EventDate": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "EventDate must be a String"
+      }
+    },
+    "ManifestationUID": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "ManifestationUID must be a String"
+      }
+    },
+    "DubbedLanguage": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "errorMessage": {
+        "type": "DubbedLanguage must be a String",
+        "enum": "DubbedLanguage must be a  aa, ab, ae, af, ak, am, an, ar, as, av, ay, az, ba, be, bg, bh, bi, bm, bn, bo, br, bs, ca, ce, ch, co, cr, cs, cu, cv, cy, da, de, dv, dz, ee, el, en, eo, es, et, eu, fa, ff, fi, fj, fl, fo, fr, fy, ga, gd, gl, gn, gu, gv, ha, haw, he, hi, ho, hr, ht, hu, hy, hz, ia, id, ie, ig, ii, ik, io, is, it, iu, ja, jv, ka, kg, ki, kj, kk, kl, km, kn, ko, kr, ks, ku, kv, kw, ky, la, lb, lg, li, ln, lo, lt, lu, lv, mg, mh, mi, mk, ml, mn, mr, ms, mt, my, na, nb, nd, ne, ng, nl, nn, no, nr, nv, ny, oc, oj, om, or, os, pa, pi, pl, ps, pt, qu, rm, rn, ro, ru, rw, sa, sc, sd, se, sg, si, sk, sl, sm, sn, so, sq, sr, ss, st, su, sv, sw, ta, te, tg, th, ti, tk, tl, tn, to, tr, ts, tt, tw, ty, ug, uk, ur, uz, ve, vi, vo, wa, wo, xh, yi, yo, za, zh or zu irrespective to Case."
+      },
+      "enum": [
+        "aa",
+        "ab",
+        "ae",
+        "af",
+        "ak",
+        "am",
+        "an",
+        "ar",
+        "as",
+        "av",
+        "ay",
+        "az",
+        "ba",
+        "be",
+        "bg",
+        "bh",
+        "bi",
+        "bm",
+        "bn",
+        "bo",
+        "br",
+        "bs",
+        "ca",
+        "ce",
+        "ch",
+        "co",
+        "cr",
+        "cs",
+        "cu",
+        "cv",
+        "cy",
+        "da",
+        "de",
+        "dv",
+        "dz",
+        "ee",
+        "el",
+        "en",
+        "eo",
+        "es",
+        "et",
+        "eu",
+        "fa",
+        "ff",
+        "fi",
+        "fj",
+        "fl",
+        "fo",
+        "fr",
+        "fy",
+        "ga",
+        "gd",
+        "gl",
+        "gn",
+        "gu",
+        "gv",
+        "ha",
+        "haw",
+        "he",
+        "hi",
+        "ho",
+        "hr",
+        "ht",
+        "hu",
+        "hy",
+        "hz",
+        "ia",
+        "id",
+        "ie",
+        "ig",
+        "ii",
+        "ik",
+        "io",
+        "is",
+        "it",
+        "iu",
+        "ja",
+        "jv",
+        "ka",
+        "kg",
+        "ki",
+        "kj",
+        "kk",
+        "kl",
+        "km",
+        "kn",
+        "ko",
+        "kr",
+        "ks",
+        "ku",
+        "kv",
+        "kw",
+        "ky",
+        "la",
+        "lb",
+        "lg",
+        "li",
+        "ln",
+        "lo",
+        "lt",
+        "lu",
+        "lv",
+        "mg",
+        "mh",
+        "mi",
+        "mk",
+        "ml",
+        "mn",
+        "mr",
+        "ms",
+        "mt",
+        "my",
+        "na",
+        "nb",
+        "nd",
+        "ne",
+        "ng",
+        "nl",
+        "nn",
+        "no",
+        "nr",
+        "nv",
+        "ny",
+        "oc",
+        "oj",
+        "om",
+        "or",
+        "os",
+        "pa",
+        "pi",
+        "pl",
+        "ps",
+        "pt",
+        "qu",
+        "rm",
+        "rn",
+        "ro",
+        "ru",
+        "rw",
+        "sa",
+        "sc",
+        "sd",
+        "se",
+        "sg",
+        "si",
+        "sk",
+        "sl",
+        "sm",
+        "sn",
+        "so",
+        "sq",
+        "sr",
+        "ss",
+        "st",
+        "su",
+        "sv",
+        "sw",
+        "ta",
+        "te",
+        "tg",
+        "th",
+        "ti",
+        "tk",
+        "tl",
+        "tn",
+        "to",
+        "tr",
+        "ts",
+        "tt",
+        "tw",
+        "ty",
+        "ug",
+        "uk",
+        "ur",
+        "uz",
+        "ve",
+        "vi",
+        "vo",
+        "wa",
+        "wo",
+        "xh",
+        "yi",
+        "yo",
+        "za",
+        "zh",
+        "zu"
+      ]
+    },
+    "SubtitledLanguage": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "errorMessage": {
+        "type": "SubtitledLanguage must be a String",
+        "enum": "SubtitledLanguage must be a  aa, ab, ae, af, ak, am, an, ar, as, av, ay, az, ba, be, bg, bh, bi, bm, bn, bo, br, bs, ca, ce, ch, co, cr, cs, cu, cv, cy, da, de, dv, dz, ee, el, en, eo, es, et, eu, fa, ff, fi, fj, fl, fo, fr, fy, ga, gd, gl, gn, gu, gv, ha, haw, he, hi, ho, hr, ht, hu, hy, hz, ia, id, ie, ig, ii, ik, io, is, it, iu, ja, jv, ka, kg, ki, kj, kk, kl, km, kn, ko, kr, ks, ku, kv, kw, ky, la, lb, lg, li, ln, lo, lt, lu, lv, mg, mh, mi, mk, ml, mn, mr, ms, mt, my, na, nb, nd, ne, ng, nl, nn, no, nr, nv, ny, oc, oj, om, or, os, pa, pi, pl, ps, pt, qu, rm, rn, ro, ru, rw, sa, sc, sd, se, sg, si, sk, sl, sm, sn, so, sq, sr, ss, st, su, sv, sw, ta, te, tg, th, ti, tk, tl, tn, to, tr, ts, tt, tw, ty, ug, uk, ur, uz, ve, vi, vo, wa, wo, xh, yi, yo, za, zh or zu irrespective to Case."
+      },
+      "enum": [
+        "aa",
+        "ab",
+        "ae",
+        "af",
+        "ak",
+        "am",
+        "an",
+        "ar",
+        "as",
+        "av",
+        "ay",
+        "az",
+        "ba",
+        "be",
+        "bg",
+        "bh",
+        "bi",
+        "bm",
+        "bn",
+        "bo",
+        "br",
+        "bs",
+        "ca",
+        "ce",
+        "ch",
+        "co",
+        "cr",
+        "cs",
+        "cu",
+        "cv",
+        "cy",
+        "da",
+        "de",
+        "dv",
+        "dz",
+        "ee",
+        "el",
+        "en",
+        "eo",
+        "es",
+        "et",
+        "eu",
+        "fa",
+        "ff",
+        "fi",
+        "fj",
+        "fl",
+        "fo",
+        "fr",
+        "fy",
+        "ga",
+        "gd",
+        "gl",
+        "gn",
+        "gu",
+        "gv",
+        "ha",
+        "haw",
+        "he",
+        "hi",
+        "ho",
+        "hr",
+        "ht",
+        "hu",
+        "hy",
+        "hz",
+        "ia",
+        "id",
+        "ie",
+        "ig",
+        "ii",
+        "ik",
+        "io",
+        "is",
+        "it",
+        "iu",
+        "ja",
+        "jv",
+        "ka",
+        "kg",
+        "ki",
+        "kj",
+        "kk",
+        "kl",
+        "km",
+        "kn",
+        "ko",
+        "kr",
+        "ks",
+        "ku",
+        "kv",
+        "kw",
+        "ky",
+        "la",
+        "lb",
+        "lg",
+        "li",
+        "ln",
+        "lo",
+        "lt",
+        "lu",
+        "lv",
+        "mg",
+        "mh",
+        "mi",
+        "mk",
+        "ml",
+        "mn",
+        "mr",
+        "ms",
+        "mt",
+        "my",
+        "na",
+        "nb",
+        "nd",
+        "ne",
+        "ng",
+        "nl",
+        "nn",
+        "no",
+        "nr",
+        "nv",
+        "ny",
+        "oc",
+        "oj",
+        "om",
+        "or",
+        "os",
+        "pa",
+        "pi",
+        "pl",
+        "ps",
+        "pt",
+        "qu",
+        "rm",
+        "rn",
+        "ro",
+        "ru",
+        "rw",
+        "sa",
+        "sc",
+        "sd",
+        "se",
+        "sg",
+        "si",
+        "sk",
+        "sl",
+        "sm",
+        "sn",
+        "so",
+        "sq",
+        "sr",
+        "ss",
+        "st",
+        "su",
+        "sv",
+        "sw",
+        "ta",
+        "te",
+        "tg",
+        "th",
+        "ti",
+        "tk",
+        "tl",
+        "tn",
+        "to",
+        "tr",
+        "ts",
+        "tt",
+        "tw",
+        "ty",
+        "ug",
+        "uk",
+        "ur",
+        "uz",
+        "ve",
+        "vi",
+        "vo",
+        "wa",
+        "wo",
+        "xh",
+        "yi",
+        "yo",
+        "za",
+        "zh",
+        "zu"
+      ]
+    },
+    "SAP": {
+      "type": "boolean",
+      "errorMessage": {
+        "type": "SAP must be a Boolean"
+      }
+    },
+    "Qualifier": {
+      "type": "array",
+      "errorMessage": {
+        "type": "Qualifier must be an Array"
+      },
+      "items": {
+        "transform": [
+          "trim",
+          "toEnumCase"
+        ],
+        "type": "string",
+        "errorMessage": {
+          "type": "items must be a String",
+          "enum": "items must be an 3D, Cable in the classroom, CC, Continued, DD 5.1, Delay, Dolby, Dubbed, DVS, EI, Enhanced, HDTV, IS, Joined in progress, Left in progress, Letterbox, Live, New, Premiere, SDTV, Season Finale, Season Premiere, Series Finale, Series Premiere, Stereo, Sub-Titled, Subject to blackout, Mono, Stereo Surround, Surround 5.1, Surround or Tape irrespective to Case."
+        },
+        "enum": [
+          "3D",
+          "Cable in the classroom",
+          "CC",
+          "Continued",
+          "DD 5.1",
+          "Delay",
+          "Dolby",
+          "Dubbed",
+          "DVS",
+          "EI",
+          "Enhanced",
+          "HDTV",
+          "IS",
+          "Join in progress",
+          "Left in progress",
+          "Letterbox",
+          "Live",
+          "New",
+          "Premiere",
+          "SDTV",
+          "Season Finale",
+          "Season Premiere",
+          "Series Finale",
+          "Series Premiere",
+          "Stereo",
+          "Sub-Titled",
+          "Subject to blackout",
+          "Surround",
+          "Tape",
+          "0",
+          "-3",
+          "Mono",
+          "Stereo Surround",
+          "Surround 5.1"
+        ]
+      }
+    },
+    "Linear": {
+      "required": [
+        "AlternateEventIDList",
+        "Duration",
+        "ProgramService"
+      ],
+      "type": "object",
+      "errorMessage": {
+        "type": "Linear should be an object",
+        "required": {
+          "AlternateEventIDList": "AlternateEventIDList is Required",
+          "Duration": "Duration is Required",
+          "ProgramService": "ProgramService is Required"
+        }
+      },
+      "properties": {
+        "AlternateEventIDList": {
+          "type": "array",
+          "uniqueItems": true,
+          "errorMessage": {
+            "uniqueItems": "AlternateEventIDList Contains a Duplicate Value",
+            "type": "AlternateEventIDList must be an Array"
+          },
+          "items": {
+            "type": "object",
+            "errorMessage": {
+              "type": "items must be an object"
+            },
+            "properties": {
+              "AlternateEventID": {
+                "pattern": "^(.*)$",
+                "type": "string",
+                "errorMessage": {
+                  "type": "AlternateEventID must be a String"
+                }
+              }
+            }
+          }
+        },
+        "PlayRun": {
+          "type": "integer",
+          "format": "int32",
+          "errorMessage": {
+            "type": "PlayRun must be an Integer",
+            "format": "PlayRun must be in format int32"
+          }
+        },
+        "PlayDay": {
+          "type": "integer",
+          "format": "int32",
+          "errorMessage": {
+            "type": "PlayDay must be an Integer",
+            "format": "PlayDay must be in format int32"
+          }
+        },
+        "PlayType": {
+          "transform": [
+            "trim",
+            "toEnumCase"
+          ],
+          "type": "string",
+          "errorMessage": {
+            "type": "PlayType must be a String",
+            "enum": "PlayType must be an Hard Feed (without rights), Hard Feed (with rights), Soft Feed (with rights), Soft Feed (without rights), Preview For Air, Preview Not For Air, Not For Air, Re-Feed, Internal Only, Repeat, Prefeed, Feed For Record, Other Hard Feed (with Rights) or Other Hard Feed (without Rights) irrespective to Case."
+          },
+          "enum": [
+            "Hard Feed (without rights)",
+            "Hard Feed (with rights)",
+            "Soft Feed (with rights)",
+            "Soft Feed (without rights)",
+            "Preview For Air",
+            "Preview Not For Air",
+            "Not For Air",
+            "Re-Feed",
+            "Internal Only",
+            "Repeat",
+            "Prefeed",
+            "Feed For Record",
+            "Other Hard Feed (with Rights)",
+            "Other Hard Feed (without Rights)"
+          ]
+        },
+        "Duration": {
+          "minLength": 1,
+          "pattern": "^(.*)$",
+          "type": "string",
+          "errorMessage": {
+            "type": "Duration must be a String",
+            "minLength": "Duration should have a minimum one character"
+          }
+        },
+        "ProgramService": {
+          "required": [
+            "ProviderSource",
+            "ProviderSourceName"
+          ],
+          "type": "object",
+          "errorMessage": {
+            "type": "ProgramService should be an object",
+            "required": {
+              "ProviderSource": "ProviderSource is Required",
+              "ProviderSourceName": "ProviderSourceName is Required"
+            }
+          },
+          "properties": {
+            "ProviderSource": {
+              "minLength": 1,
+              "pattern": "^(.*)$",
+              "type": "string",
+              "errorMessage": {
+                "type": "ProviderSource must be a String",
+                "minLength": "ProviderSource should have a minimum one character"
+              }
+            },
+            "ProviderSourceName": {
+              "pattern": "^(.*)$",
+              "type": "string",
+              "errorMessage": {
+                "type": "ProviderSourceName must be a String"
+              }
+            },
+            "ProviderTimeZone": {
+              "transform": [
+                "trim",
+                "toEnumCase"
+              ],
+              "type": "string",
+              "enum": [
+                "CST",
+                "CDT",
+                "EST",
+                "EDT",
+                "PST",
+                "PDT",
+                "MST",
+                "MDT",
+                "HST",
+                "HDT",
+                "AKST",
+                "AKDT"
+              ],
+              "errorMessage": {
+                "type": "ProviderTimeZone must be a String",
+                "enum": "ProviderTimeZone must be a CST, CDT, EST, EDT, PST, PDT, MST, MDT, HST, HDT, AKST or AKDT irrespective to Case."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

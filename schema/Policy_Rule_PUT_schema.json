@@ -1,104 +1,135 @@
 {
-    "title": "The Root Schema",
-    "required": [
-        "Constraint"
-    ],
-    "type": "object",
-    "properties": {
-        "Constraint": {
-            "title": "The Constraint Schema",
-            "type": "object",
-            "properties": {
-                "PlayType": {
-                    "title": "The Playtype Schema",
-                    "pattern": "^(.*)$",
-                    "type": "string",
-                    "default": ""
-                },
-                "Action": {
-                    "title": "The Action Schema",
-                    "transform": ["trim", "toEnumCase"],
-                    "type": "string",
-                    "enum": [
-                        "Television",
-                        "Linear",
-                        "Linear Streaming",
-                        "Linear Streaming -- Non-Commercial",
-                        "Linear Streaming -- Commercial",
-                        "Broadcast",
-                        "Broadcast -- Non-Commercial",
-                        "Broadcast -- Commercial",
-                        "Linear TV -- Pay",
-                        "Linear TV -- Pay Premium",
-                        "Digital Multicast Distribution",
-                        "Audio Visual/Education/Non-Theatrical",
-                        "FVOD",
-                        "FVOD - All Sites/Services",
-                        "FVOD - Streaming (Internet)",
-                        "FVOD - MSO and Auth. Providers/TVE - Apps",
-                        "FVOD - MSO only",
-                        "FVOD - PBS Branded Services",
-                        "PBS Branded - FVOD - Streaming (Internet)",
-                        "PBS Branded FVOD - MSO and Auth. Providers/TVE - Apps",
-                        "PBS Branded FVOD - MSO Only",
-                        "MVOD",
-                        "AVOD",
-                        "Home Entertainment",
-                        "HV - Physical",
-                        "HV - Digital",
-                        "AV - Physical Media",
-                        "AV - Digital Video",
-                        "AV - Common Carrier",
-                        "AV - Site License",
-                        "AV - Site License No Admission",
-                        "AV - Site License Admission",
-                        "AV - AFRTS",
-                        "Theatrical/Festival",
-                        "Theatrical",
-                        "Film Festivals & Awards",
-                        "Other",
-                        "Collection/Retransmission",
-                        "Radio Simulcast",
-                        "Radio Origination",
-                        "School Off Air Recording",
-                        "Demonstration and Exhibition",
-                        "Clip Rights",
-                        "Learning Media",
-                        "Website",
-                        "Mobile Apps/Interactive",
-                        "Advertising and Promotion",
-                        "Merchandising",
-                        "Publishing: eBook and Print",
-                        "Music Rights",
-                        "Audio Streaming",
-                        "All Rights"
-                    ],
-                    "default": ""
-                },
-                "MaximumExploitation": {
-                    "title": "The Maximumexploitation Schema",
-                    "pattern": "^(.*)$",
-                    "type": "string",
-                    "default": ""
-                },
-                "Calculated": {
-                    "title": "The Calculated Schema",
-                    "type": "boolean",
-                    "default": false
-                },
-                "TermStartDate": {
-                    "title": "The Termstartdate Schema",
-                    "pattern": "^(.*)$",
-                    "type": "string",
-                    "default": ""
-                },
-                "TermEndDate": {
-                    "title": "The Termenddate Schema",
-                    "pattern": "^(.*)$",
-                    "type": "string",
-                    "default": ""
-                }
-            }
-        }
+  "title": "The Root Schema",
+  "required": [
+    "Rule"
+  ],
+  "errorMessage": {
+    "type": "The request should be an object",
+    "required": {
+      "Rule": "Rule is Required"
     }
+  },
+  "type": "object",
+  "properties": {
+    "Rule": {
+      "title": "The Rule Schema",
+      "type": "object",
+      "errorMessage": {
+        "type": "Rule must be an object"
+      },
+      "properties": {
+        "PlayType": {
+          "title": "The Playtype Schema",
+          "pattern": "^(.*)$",
+          "type": "string",
+          "default": "",
+          "errorMessage": {
+            "type": "PlayType must be a String"
+          }
+        },
+        "MediaContext": {
+          "title": "The MediaContext Schema",
+          "transform": [
+            "trim",
+            "toEnumCase"
+          ],
+          "type": "string",
+          "enum": [
+            "Television",
+            "Linear",
+            "Linear Streaming",
+            "Linear Streaming -- Non-Commercial",
+            "Linear Streaming -- Commercial",
+            "Broadcast",
+            "Broadcast -- Non-Commercial",
+            "Broadcast -- Commercial",
+            "Linear TV -- Pay",
+            "Linear TV -- Pay Premium",
+            "Digital Multicast Distribution",
+            "Audio Visual/Education/Non-Theatrical",
+            "FVOD",
+            "FVOD - All Sites/Services",
+            "FVOD - Streaming (Internet)",
+            "FVOD - MSO and Auth. Providers/TVE - Apps",
+            "FVOD - MSO only",
+            "FVOD - PBS Branded Services",
+            "PBS Branded - FVOD - Streaming (Internet)",
+            "PBS Branded FVOD - MSO and Auth. Providers/TVE - Apps",
+            "PBS Branded FVOD - MSO Only",
+            "MVOD",
+            "AVOD",
+            "Home Entertainment",
+            "HV - Physical",
+            "HV - Digital",
+            "AV - Physical Media",
+            "AV - Digital Video",
+            "AV - Common Carrier",
+            "AV - Site License",
+            "AV - Site License No Admission",
+            "AV - Site License Admission",
+            "AV - AFRTS",
+            "Theatrical/Festival",
+            "Theatrical",
+            "Film Festivals & Awards",
+            "Other",
+            "Collection/Retransmission",
+            "Radio Simulcast",
+            "Radio Origination",
+            "School Off Air Recording",
+            "Demonstration and Exhibition",
+            "Clip Rights",
+            "Learning Media",
+            "Website",
+            "Mobile Apps/Interactive",
+            "Advertising and Promotion",
+            "Merchandising",
+            "Publishing: eBook and Print",
+            "Music Rights",
+            "Audio Streaming",
+            "All Rights"
+          ],
+          "default": "",
+          "errorMessage": {
+            "type": "Action must be a String",
+            "enum": "Action must be one of the given values - Television, Linear,Linear Streaming,Linear Streaming -- Non-Commercial,Linear Streaming -- Commercial,Broadcast,Broadcast -- Non-Commercial,Broadcast -- Commercial,Linear TV -- Pay,Linear TV -- Pay Premium,Digital Multicast Distribution,Audio Visual/Education/Non-Theatrical,FVOD,FVOD - All Sites/Services,FVOD - Streaming (Internet),FVOD - MSO and Auth. Providers/TVE - Apps,FVOD - MSO only,FVOD - PBS Branded Services,PBS Branded - FVOD - Streaming (Internet),PBS Branded FVOD - MSO and Auth. Providers/TVE - Apps,PBS Branded FVOD - MSO Only,MVOD,AVOD,Home Entertainment,HV - Physical,HV - Digital,AV - Physical Media,AV - Digital Video,AV - Common Carrier,AV - Site License,AV - Site License No Admission,AV - Site License Admission,AV - AFRTS,Theatrical/Festival,Theatrical,Film Festivals & Awards,Other,Collection/Retransmission,Radio Simulcast,Radio Origination,School Off Air Recording,Demonstration and Exhibition,Clip Rights,Learning Media,Website,Mobile Apps/Interactive,Advertising and Promotion,Merchandising,Publishing: eBook and Print,Music Rights,Audio Streaming or All Rights"
+          }
+        },
+        "MaximumExploitation": {
+          "title": "The Maximumexploitation Schema",
+          "pattern": "^(.*)$",
+          "type": "string",
+          "default": "",
+          "errorMessage": {
+            "type": "MaximumExploitation must be a String"
+          }
+        },
+        "Calculated": {
+          "title": "The Calculated Schema",
+          "type": "boolean",
+          "default": false,
+          "errorMessage": {
+            "type": "Calculated must be a Boolean"
+          }
+        },
+        "TermStartDate": {
+          "title": "The Termstartdate Schema",
+          "pattern": "^(.*)$",
+          "type": "string",
+          "default": "",
+          "errorMessage": {
+            "type": "TermStartDate must be a String"
+          }
+        },
+        "TermEndDate": {
+          "title": "The Termenddate Schema",
+          "pattern": "^(.*)$",
+          "type": "string",
+          "default": "",
+          "errorMessage": {
+            "type": "TermEndDate must be a String"
+          }
+        }
+      }
+    }
+  }
 }
