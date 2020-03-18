@@ -1,3 +1,8 @@
+## v1.0.16
+ * MBANK v0.16 - JSON schema updated for MBank Policy, Policy-Permission & Policy-Prohibitions for MediaContext field changed from String to Array
+ * MBANK v0.16 - Postman collection - Added new endpoints to de-associate Organization and Series & Episodes
+ * MBANK v0.16 - Postman collection - The OrganizationList is removed from Episodes for all search endpoints.
+ 
 ## v1.0.14
  * MBANK v0.14 - JSON schema updated for MBank Series, Episode for dar, haw, hmo, psm, swz, wam language code support. 
  *		Event Linear & VOD Post and PUT for Qualifier new Enum value updates - Mono, Stereo Surround, Surround 5.1
