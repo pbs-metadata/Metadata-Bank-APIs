@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "fe650098-57c9-49de-97ad-6a82cd360b51",
-		"name": "Metadata-Bank-API-v0.14",
+		"_postman_id": "0de6067b-6f61-464e-bcee-5641452a5e73",
+		"name": "Metadata-Bank-API-v0.16",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -321,6 +321,104 @@
 								"series",
 								"cid:org:pbs.org:Series306",
 								"contentidregistration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Episode De-Associate Organization Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "692cc046-094e-40a6-a9b9-be491e49912a",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Righhtsline-134332\"\n}"
+						},
+						"url": {
+							"raw": "{{baseurl}}/series/cid:org:pbs.org:Series393/organization/32578813",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"series",
+								"cid:org:pbs.org:Series393",
+								"organization",
+								"32578813"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Episode De-Associate Credit Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "692cc046-094e-40a6-a9b9-be491e49912a",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Righhtsline-134332\"\n}"
+						},
+						"url": {
+							"raw": "{{baseurl}}/series/cid:org:pbs.org:Series393/credits/cid:org:pbs.org:Broadview-206782309",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"series",
+								"cid:org:pbs.org:Series393",
+								"credits",
+								"cid:org:pbs.org:Broadview-206782309"
 							]
 						}
 					},
@@ -1080,6 +1178,104 @@
 					"response": []
 				},
 				{
+					"name": "Episode De-Associate Organization",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "692cc046-094e-40a6-a9b9-be491e49912a",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Righhtsline-134332\"\n}"
+						},
+						"url": {
+							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode43873/organization/3136758",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"episode",
+								"cid:org:pbs.org:Episode43873",
+								"organization",
+								"3136758"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Episode De-Associate Credit",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "692cc046-094e-40a6-a9b9-be491e49912a",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Righhtsline-134332\"\n}"
+						},
+						"url": {
+							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode43873/credits/cid:org:pbs.org:Broadview-3383374",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"episode",
+								"cid:org:pbs.org:Episode43873",
+								"credits",
+								"cid:org:pbs.org:Broadview-3383374"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Episode Search",
 					"event": [
 						{
@@ -1183,6 +1379,54 @@
 									"path": [
 										"manifestation",
 										"cid:org:pbs.org:Manifestation1122",
+										"usewindowterm"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UseWindowTerm DELETE",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "e162cd1b-4376-407b-983e-cbf02d386ea4",
+										"exec": [
+											"tests[\"Status code is 201\"] = responseCode.code === 201;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "apikey",
+										"value": "{{apikey}}"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation4712/usewindowterm",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"manifestation",
+										"cid:org:pbs.org:Manifestation4712",
 										"usewindowterm"
 									]
 								}
@@ -2635,7 +2879,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": " {\r\n \t\"Rule\": {\r\n                \"PlayType\": \"Release\",\r\n                \"MediaContext\": \"Linear\",\r\n                \"MaximumExploitation\": \"8\",\r\n                \"Calculated\": true,\r\n                \"TermStartDate\": \"2009-05-28T00:00:00Z\",\r\n                \"TermEndDate\": \"2012-06-30T00:00:00Z\",\r\n                \"LogicalAssetIDList\": [\r\n                    {\r\n                        \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-6185865455\"\r\n                    }\r\n                ],\r\n                \"EntryList\": [\r\n                    {\r\n                        \"EntryClass\": \"Episode\",\r\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1\"\r\n                    }\r\n                ]\r\n            }\r\n        }"
+									"raw": " {\r\n \t\"Rule\": {\r\n                \"PlayType\": \"Release\",\r\n                \"MediaContext\": [\"Linear\"],\r\n                \"MaximumExploitation\": \"8\",\r\n                \"Calculated\": true,\r\n                \"TermStartDate\": \"2009-05-28T00:00:00Z\",\r\n                \"TermEndDate\": \"2012-06-30T00:00:00Z\",\r\n                \"LogicalAssetIDList\": [\r\n                    {\r\n                        \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-6185865455\"\r\n                    }\r\n                ],\r\n                \"EntryList\": [\r\n                    {\r\n                        \"EntryClass\": \"Episode\",\r\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1\"\r\n                    }\r\n                ]\r\n            }\r\n        }"
 								},
 								"url": {
 									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission",
@@ -2683,7 +2927,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"Rule\": {\n    \"PlayType\": \"Telecast\",\n    \"MediaContext\": \"Television\",\n    \"MaximumExploitation\": \"777\",\n    \"Calculated\": false,\n    \"TermStartDate\": \"2019-11-23T00:00:00Z\",\n    \"TermEndDate\": \"2022-11-22T00:00:00Z\"\n  }\n}"
+									"raw": "{\n  \"Rule\": {\n    \"PlayType\": \"Telecast\",\n    \"MediaContext\": [\"Television\"],\n    \"MaximumExploitation\": \"777\",\n    \"Calculated\": false,\n    \"TermStartDate\": \"2019-11-23T00:00:00Z\",\n    \"TermEndDate\": \"2022-11-22T00:00:00Z\"\n  }\n}"
 								},
 								"url": {
 									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/53",
@@ -2995,7 +3239,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Action\": \"Blackout\",\n    \"MediaContext\": \"Television\",\n    \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n    \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n\t\"LogicalAssetIDList\": [\n         {\n    \t\t\"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.12840088\"\n    \t }\n\t],\n    \"EntryList\": [\n      {\n\t       \"EntryClass\": \"Episode\",\n\t       \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n      }\n    ]\n}"
+									"raw": "{\n    \"Action\": \"Blackout\",\n    \"MediaContext\": [\"Television\"],\n    \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n    \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n\t\"LogicalAssetIDList\": [\n         {\n    \t\t\"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.12840088\"\n    \t }\n\t],\n    \"EntryList\": [\n      {\n\t       \"EntryClass\": \"Episode\",\n\t       \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n      }\n    ]\n}"
 								},
 								"url": {
 									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/prohibition",
@@ -3043,7 +3287,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Action\": \"Blackout\",\n    \"MediaContext\": \"Television\",\n    \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n    \"TermEndDate\": \"2018-11-22T00:00:00Z\"\n}"
+									"raw": "{\n    \"Action\": \"Blackout\",\n    \"MediaContext\": [\"Television\"],\n    \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n    \"TermEndDate\": \"2018-11-22T00:00:00Z\"\n}"
 								},
 								"url": {
 									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/prohibition/23",
@@ -3233,7 +3477,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"PolicyType\": \"Offer\",\n    \"ReferentType\": \"Offer\",\n    \"StructuralType\": \"Abstraction\",\n    \"Title\": \"Seabiscuit: American Experience-Dev-SMoke-Test\",\n    \"LogicalAssetIDList\": [\n        {\n            \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-128443\"\n        }\n    ],\n    \"Permission\": [\n        {\n            \"Rule\": {\n                \"PlayType\": \"Release\",\n                \"MediaContext\": \"Television\",\n                \"MaximumExploitation\": \"88\",\n                \"Calculated\": true,\n                \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n                \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n                \"LogicalAssetIDList\": [\n                    {\n                        \"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.12840088\"\n                    }\n                ],\n                \"EntryList\": [\n                    {\n                        \"EntryClass\": \"Episode\",\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n                    }\n                ]\n            }\n        },\n        {\n            \"Rule\": {\n                \"PlayType\": \"Telecast\",\n                \"MediaContext\": \"Digital Multicast Distribution\",\n                \"MaximumExploitation\": \"99\",\n                \"Calculated\": true,\n                \"TermStartDate\": \"2012-11-23T00:00:00Z\",\n                \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n                \"LogicalAssetIDList\": [\n                    {\n                        \"LogicalAssetID\": \"ruleid:org:pbs.org:UsageTVMulti-cast.12840099\"\n                    }\n                ],\n                \"EntryList\": [\n                    {\n                        \"EntryClass\": \"Episode\",\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1588\"\n                    }\n                ]\n            }\n        }\n    ]\n}"
+							"raw": "{\n    \"PolicyType\": \"Offer\",\n    \"ReferentType\": \"Offer\",\n    \"StructuralType\": \"Abstraction\",\n    \"Title\": \"Seabiscuit: American Experience-Dev-SMoke-Test\",\n    \"LogicalAssetIDList\": [\n        {\n            \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-128443\"\n        }\n    ],\n    \"Permission\": [\n        {\n            \"Rule\": {\n                \"PlayType\": \"Release\",\n                \"MediaContext\": [\"Television\"],\n                \"MaximumExploitation\": \"88\",\n                \"Calculated\": true,\n                \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n                \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n                \"LogicalAssetIDList\": [\n                    {\n                        \"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.12840088\"\n                    }\n                ],\n                \"EntryList\": [\n                    {\n                        \"EntryClass\": \"Episode\",\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n                    }\n                ]\n            }\n        },\n        {\n            \"Rule\": {\n                \"PlayType\": \"Telecast\",\n                \"MediaContext\": [\"Digital Multicast Distribution\"],\n                \"MaximumExploitation\": \"99\",\n                \"Calculated\": true,\n                \"TermStartDate\": \"2012-11-23T00:00:00Z\",\n                \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n                \"LogicalAssetIDList\": [\n                    {\n                        \"LogicalAssetID\": \"ruleid:org:pbs.org:UsageTVMulti-cast.12840099\"\n                    }\n                ],\n                \"EntryList\": [\n                    {\n                        \"EntryClass\": \"Episode\",\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1588\"\n                    }\n                ]\n            }\n        }\n    ]\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/policy",
