@@ -1,0 +1,258 @@
+{
+  "title": "The Root Schema",
+  "required": [
+    "Title",
+    "EditClass",
+    "EditUse",
+    "ApproximateLength",
+    "ParentUID"
+  ],
+  "errorMessage": {
+    "type": "The request should be an object",
+    "required": {
+      "Title": "Title is Required",
+      "EditClass": "EditClass is Required",
+      "EditUse": "EditUse is Required",
+      "ApproximateLength": "ApproximateLength is Required",
+      "ParentUID": "ParentUID is Required"
+    }
+  },
+  "type": "object",
+  "properties": {
+    "Title": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "Title must be a String",
+        "minLength": "Title should have a minimum one character"
+      }
+    },
+    "TitleClass": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Release",
+        "Abreviated",
+        "Working",
+        "Acronym",
+        "fan-based",
+        "Internal",
+        "Series numeric",
+        "Series date",
+        "Regional",
+        "broadcast",
+        "AKA",
+        "FKA",
+        "Tralsliterated",
+        "Other"
+      ],
+      "errorMessage": {
+        "type": "TitleClass must be a String",
+        "enum": "TitleClass must be a Release, Abreviated, Working, Acronym, fan-based, Internal, Series numeric, Series date, Regional, broadcast, AKA, FKA, Tralsliterated, Other irrepective to case."
+      }
+    },
+    "EditClass": {
+      "minItems": 1,
+      "type": "array",
+      "errorMessage": {
+        "type": "EditClass must be an Array"
+      },
+      "items": {
+        "transform": [
+          "trim",
+          "toEnumCase"
+        ],
+        "type": "string",
+        "enum": [
+          "Original",
+          "Unrated",
+          "Alternat Ending",
+          "Anniversary",
+          "Censored",
+          "Colorized",
+          "Content Break",
+          "Creative",
+          "Credits",
+          "Dialog",
+          "Director's Cut",
+          "Dubbing Credits",
+          "Exit",
+          "Extended",
+          "Intermission",
+          "Logos",
+          "Music",
+          "Overture",
+          "Product Placement",
+          "Promotional",
+          "Recap",
+          "Regionalized",
+          "Rereleased",
+          "Resrored",
+          "Restored Audio",
+          "Restored Picture",
+          "Sanitized",
+          "Sanitized Audio",
+          "Sanitized Picture",
+          "Sound Effects",
+          "Split",
+          "Syndication",
+          "Threed-D",
+          "Video Substitution",
+          "Dated",
+          "Shortened",
+          "Supplemental",
+          "Promotion Placement",
+          "Supplemental Content",
+          "Stacked",
+          "Spot",
+          "Non-Air",
+          "Premium Change",
+          "Other"
+        ],
+        "errorMessage": {
+          "type": "EditClass must be a String",
+          "enum": "EditClass must be one of the given values - Original, Unrated, Alternat Ending, Anniversary, Censored, Colorized, Content Break, Creative, Credits, Dialog, Director's Cut, Dubbing Credits, Exit, Extended, Intermission, Logos, Music, Overture, Product Placement, Promotional, Recap, Regionalized, Rereleased, Resrored, Restored Audio, Restored Picture, Sanitized, Sanitized Audio, Sanitized Picture, Sound Effects, Split, Syndication, Threed-D, Video Substitution, Dated, Shortened, Supplemental, Promotion Placement, Supplemental Content, Stacked, Spot, Non-Air, Premium Change, Other",
+          "minLength": "EditClass should have a minimum one character"
+        }
+      }
+    },
+    "EditUse": {
+      "minLength": 1,
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Broadcast",
+        "Theatrical",
+        "Home Video",
+        "Hospitality",
+        "Web",
+        "General",
+        "Unknow"
+      ],
+      "errorMessage": {
+        "type": "EditUse must be a String",
+        "enum": "EditUse must be a Theatrical, Broadcast, Home Video, Hospitality, Web, General, Unknow irrepective to case.",
+        "minLength": "EditUse should have a minimum one character"
+      }
+    },
+    "ParentUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "ParentUID must be a String",
+        "minLength": "ParentUID should have a minimum one character"
+      }
+    },
+    "ManifestationUID": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "ManifestationUID must be a String"
+      }
+    },
+    "SynopsisLong": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "SynopsisLong must be a String"
+      }
+    },
+    "MediaInventoryHouseNumber": {
+      "type": "integer",
+      "format": "int32",
+      "errorMessage": {
+        "type": "MediaInventoryHouseNumber must be an Integer",
+        "format": "MediaInventoryHouseNumber must be in int32 format"
+      }
+    },
+    "ReferentType": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Series",
+        "Season",
+        "TV",
+        "Movie",
+        "Short",
+        "Web",
+        "Compilation",
+        "Supplemental",
+        "Edit"
+      ],
+      "errorMessage": {
+        "type": "ReferentType must be a String",
+        "enum": "ReferentType must be a Series, Season, TV, Movie, Short, Web, Compilation or Supplemental, Edit irrepective to case."
+      }
+    },
+    "StructuralType": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Abstraction",
+        "Performance",
+        "Digital"
+      ],
+      "errorMessage": {
+        "type": "StructuralType must be a String",
+        "enum": "StructuralType must be an Abstraction, Performace or Digital irrespective to Case."
+      }
+    },
+    "ApproximateLength": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "ApproximateLength must be a String",
+        "minLength": "ApproximateLength should have a minimum one character"
+      }
+    },
+    "ReleaseDate": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "ReleaseDate must be a String"
+      }
+    },
+    "AlternateEditIDList": {
+      "type": "array",
+      "items": {
+        "required": [
+          "AlternateEditID"
+        ],
+        "type": "object",
+        "errorMessage": {
+          "type": "items should be an object",
+          "required": {
+            "AlternateEditID": "AlternateEditID is Required"
+          }
+        },
+        "properties": {
+          "AlternateEditID": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "AlternateEditID must be a String"
+            }
+          }
+        }
+      },
+      "errorMessage": {
+        "type": "AlternateEditIDList must be an Array"
+      }
+    }
+  }
+}
