@@ -1,0 +1,42 @@
+{
+	"required": [
+		"EntryClass",
+		"EntryContentUID"
+	],
+	"type": "object",
+	"errorMessage": {
+		"type": "items should be an object",
+		"required": {
+			"EntryClass": "EntryClass is Required",
+			"EntryContentUID": "EntryContentUID is Required"
+		}
+	},
+	"properties": {
+		"EntryClass": {
+			"type": "string",
+			"transform": [
+				"trim",
+				"toEnumCase"
+			],
+			"enum": [
+				"Episode",
+				"Installment",
+				"Part",
+				"Season",
+				"Series",
+				"Manifestation"
+			],
+			"errorMessage":{
+				"type": "EntryClass must be a String",
+				"enum": "EntryClass must be an Series, Season, Episode, Installment, Part or Manifestation irrespective to Case."
+			}
+		},
+		"EntryContentUID": {
+			"pattern": "^(.*)$",
+			"type": "string",
+			"errorMessage":{
+				"type": "EntryContentUID must be a String"
+			}
+		}
+	}
+}

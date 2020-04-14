@@ -1,3 +1,8 @@
+## v1.0.17
+ * MBANK v0.17 - JSON schema - Added new schema for Supplemental & Edit and updated for MBank Policy, Policy-Permission & Policy-Prohibitions POST & PUT
+ * MBANK v0.17 - Postman collection - Added new endpoints for Policy's permission and prohibition
+ * MBANK v0.17 - Postman collection - Added new entities Supplemental and Edit[GET, POST, PUT, DELETE, Register Alternative Id, Publish-Status]
+ 
 ## v1.0.16
  * MBANK v0.16 - JSON schema updated for MBank Policy, Policy-Permission & Policy-Prohibitions for MediaContext field changed from String to Array
  * MBANK v0.16 - Postman collection - Added new endpoints to de-associate Organization and Series & Episodes
