@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "0de6067b-6f61-464e-bcee-5641452a5e73",
-		"name": "Metadata-Bank-API-v0.17",
+		"name": "Metadata-Bank-API-v0.18",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -2895,15 +2895,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/272/entrycontentid",
+											"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/3054/entrycontentid",
 											"host": [
 												"{{baseurl}}"
 											],
 											"path": [
 												"policy",
-												"cid:org:pbs.org:Policy215",
+												"cid:org:pbs.org:Policy268",
 												"permission",
-												"272",
+												"3054",
 												"entrycontentid"
 											]
 										}
@@ -2941,15 +2941,15 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/272/entrycontentid/cid:org:pbs.org:Season36",
+											"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/3054/entrycontentid/cid:org:pbs.org:Season36",
 											"host": [
 												"{{baseurl}}"
 											],
 											"path": [
 												"policy",
-												"cid:org:pbs.org:Policy215",
+												"cid:org:pbs.org:Policy268",
 												"permission",
-												"272",
+												"3054",
 												"entrycontentid",
 												"cid:org:pbs.org:Season36"
 											]
@@ -2993,16 +2993,60 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy660/permission/1227/publish-status",
+											"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/3054/publish-status",
 											"host": [
 												"{{baseurl}}"
 											],
 											"path": [
 												"policy",
-												"cid:org:pbs.org:Policy660",
+												"cid:org:pbs.org:Policy268",
 												"permission",
-												"1227",
+												"3054",
 												"publish-status"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Change Log",
+							"item": [
+								{
+									"name": "Policy Change Log GET",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "apikey",
+												"value": "{{apikey}}"
+											},
+											{
+												"key": "x-api-key",
+												"value": "{{x-api-key}}"
+											}
+										],
+										"url": {
+											"raw": "{{baseurl}}/permission/changelog?startdate=2020-5-13&enddate=2020-5-18",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"permission",
+												"changelog"
+											],
+											"query": [
+												{
+													"key": "startdate",
+													"value": "2020-5-13"
+												},
+												{
+													"key": "enddate",
+													"value": "2020-5-18"
+												}
 											]
 										}
 									},
@@ -3043,15 +3087,15 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy567/permission/983",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/3054",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"policy",
-										"cid:org:pbs.org:Policy567",
+										"cid:org:pbs.org:Policy268",
 										"permission",
-										"983"
+										"3054"
 									]
 								}
 							},
@@ -3089,19 +3133,19 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": " {\r\n \t\"Rule\": {\r\n                \"PlayType\": \"Release\",\r\n                \"MediaContext\": [\"Linear\"],\r\n                \"MaximumExploitation\": \"8\",\r\n                \"Calculated\": true,\r\n                \"TermStartDate\": \"2009-05-28T00:00:00Z\",\r\n                \"TermEndDate\": \"2012-06-30T00:00:00Z\",\r\n                \"LogicalAssetIDList\": [\r\n                    {\r\n                        \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-6185865455\"\r\n                    }\r\n                ],\r\n                \"EntryList\": [\r\n                    {\r\n                        \"EntryClass\": \"Episode\",\r\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1\"\r\n                    }\r\n                ]\r\n            }\r\n        }",
+									"raw": "{\n  \"Rule\": {\n    \"PlayType\": \"Release\",\n    \"MediaContext\": [\n      \"Linear\"\n    ],\n    \"MaximumExploitation\": \"8\",\n    \"Calculated\": true,\n    \"TermStartDate\": \"2009-05-28T00:00:00Z\",\n    \"TermEndDate\": \"2012-06-30T00:00:00Z\",\n    \"EnsureExclusivity\": false,\n    \"GeospatialNamedArea\": \"United States of America and its Territories & Possessions\",\n    \"Type\": \"Catch-up Rights\",\n    \"UnitType\": \"Days\",\n    \"Count\": 3,\n    \"Trigger\": {\n      \"StartCount\": 30,\n      \"StartUnitType\": \"Days\",\n      \"StartOperator\": \"On\",\n      \"StartEvent\": \"Each Repeat *Subsequent Airings Latest Episode\",\n      \"TimeInterval\": [],\n      \"EndCount\": 30,\n      \"EndUnitType\": \"Days\",\n      \"EndOperator\": \"After\",\n      \"EndEvent\": \"Each Episode Rights End\"\n    },\n    \"LogicalAssetIDList\": [\n      {\n        \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-6185865455\"\n      }\n    ],\n    \"EntryList\": [\n      {\n        \"EntryClass\": \"Episode\",\n        \"EntryUID\": \"cid:org:pbs.org:Episode1\"\n      }\n    ]\n  }\n}",
 									"options": {
 										"raw": {}
 									}
 								},
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"policy",
-										"cid:org:pbs.org:Policy215",
+										"cid:org:pbs.org:Policy268",
 										"permission"
 									]
 								}
@@ -3140,21 +3184,21 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"Rule\": {\n    \"PlayType\": \"Telecast\",\n    \"MediaContext\": [\"Television\"],\n    \"MaximumExploitation\": \"777\",\n    \"Calculated\": false,\n    \"TermStartDate\": \"2019-11-23T00:00:00Z\",\n    \"TermEndDate\": \"2022-11-22T00:00:00Z\"\n  }\n}",
+									"raw": "{\n  \"Rule\": {\n    \"PlayType\": \"Telecast\",\n    \"MediaContext\": [\"Television\"],\n    \"MaximumExploitation\": \"777\",\n    \"Calculated\": false,\n    \"TermStartDate\": \"2019-11-23T00:00:00Z\",\n    \"TermEndDate\": \"2022-11-22T00:00:00Z\",\n    \"EnsureExclusivity\": false,\n    \"GeospatialNamedArea\": \"United States of America and its Territories & Possessions\",\n    \"Type\": \"Catch-up Rights\",\n    \"UnitType\": \"Days\",\n    \"Count\": 3,\n    \"Trigger\": {\n      \"StartCount\": 30,\n      \"StartUnitType\": \"Days\",\n      \"StartOperator\": \"On\",\n      \"StartEvent\": \"Each Repeat *Subsequent Airings Rule End\",\n      \"TimeInterval\": [],\n      \"EndCount\": 30,\n      \"EndUnitType\": \"Days\",\n      \"EndOperator\": \"After\",\n      \"EndEvent\": \"Latest Episode Rights End\"\n    }\n  }\n}",
 									"options": {
 										"raw": {}
 									}
 								},
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/53",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/3032",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"policy",
-										"cid:org:pbs.org:Policy215",
+										"cid:org:pbs.org:Policy268",
 										"permission",
-										"53"
+										"3032"
 									]
 								}
 							},
@@ -3191,15 +3235,15 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/271",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/3060",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"policy",
-										"cid:org:pbs.org:Policy215",
+										"cid:org:pbs.org:Policy268",
 										"permission",
-										"271"
+										"3060"
 									]
 								}
 							},
@@ -3436,6 +3480,50 @@
 												"prohibition",
 												"255",
 												"publish-status"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Change Log",
+							"item": [
+								{
+									"name": "Prohibition Change Log GET",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "apikey",
+												"value": "{{apikey}}"
+											},
+											{
+												"key": "x-api-key",
+												"value": "{{x-api-key}}"
+											}
+										],
+										"url": {
+											"raw": "{{baseurl}}/prohibition/changelog?startdate=2020-5-13&enddate=2020-5-18",
+											"host": [
+												"{{baseurl}}"
+											],
+											"path": [
+												"prohibition",
+												"changelog"
+											],
+											"query": [
+												{
+													"key": "startdate",
+													"value": "2020-5-13"
+												},
+												{
+													"key": "enddate",
+													"value": "2020-5-18"
+												}
 											]
 										}
 									},
@@ -3785,10 +3873,11 @@
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
+								"id": "db8ae2ca-81a7-4519-ba8c-1edc7854dee1",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								]
+								],
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -3809,13 +3898,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215",
+							"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"policy",
-								"cid:org:pbs.org:Policy215"
+								"cid:org:pbs.org:Policy268"
 							]
 						}
 					},
@@ -3853,7 +3942,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"PolicyType\": \"Offer\",\n    \"ReferentType\": \"Offer\",\n    \"StructuralType\": \"Abstraction\",\n    \"Title\": \"Seabiscuit: American Experience-Dev-SMoke-Test\",\n    \"LogicalAssetIDList\": [\n        {\n            \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-128443\"\n        }\n    ],\n    \"Permission\": [\n        {\n            \"Rule\": {\n                \"PlayType\": \"Release\",\n                \"MediaContext\": [\"Television\"],\n                \"MaximumExploitation\": \"88\",\n                \"Calculated\": true,\n                \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n                \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n                \"LogicalAssetIDList\": [\n                    {\n                        \"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.12840088\"\n                    }\n                ],\n                \"EntryList\": [\n                    {\n                        \"EntryClass\": \"Episode\",\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n                    }\n                ]\n            }\n        },\n        {\n            \"Rule\": {\n                \"PlayType\": \"Telecast\",\n                \"MediaContext\": [\"Digital Multicast Distribution\"],\n                \"MaximumExploitation\": \"99\",\n                \"Calculated\": true,\n                \"TermStartDate\": \"2012-11-23T00:00:00Z\",\n                \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n                \"LogicalAssetIDList\": [\n                    {\n                        \"LogicalAssetID\": \"ruleid:org:pbs.org:UsageTVMulti-cast.12840099\"\n                    }\n                ],\n                \"EntryList\": [\n                    {\n                        \"EntryClass\": \"Episode\",\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1588\"\n                    }\n                ]\n            }\n        }\n    ]\n}",
+							"raw": "{\n    \"PolicyType\": \"Offer\",\n    \"ReferentType\": \"Offer\",\n    \"StructuralType\": \"Abstraction\",\n    \"Title\": \"Seabiscuit: American Experience-Dev-SMoke-Test\",\n    \"LogicalAssetIDList\": [\n        {\n            \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-128443\"\n        }\n    ],\n    \"Permission\": [\n        {\n            \"Rule\": {\n                \"PlayType\": \"Release\",\n                \"MediaContext\": [\"Television\"],\n                \"MaximumExploitation\": \"88\",\n                \"Calculated\": true,\n                \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n                \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n                \"EnsureExclusivity\": false,\n\t\t\t\t\"GeospatialNamedArea\": \"United States of America and its Territories & Possessions\",\n\t\t\t\t\"Type\": \"Catch-up Rights\",\n\t\t\t\t\"UnitType\": \"Days\",\n\t\t\t\t\"Count\": 3,\n\t\t\t\t\"Trigger\": {\n                    \"StartCount\": 30,\n                    \"StartUnitType\": \"Days\",\n                    \"StartOperator\": \"On\",\n                    \"StartEvent\": \"Each Repeat *Subsequent Airings Each Episode\",\n                    \"TimeInterval\": [],\n                    \"EndCount\": 30,\n                    \"EndUnitType\": \"Days\",\n                    \"EndOperator\": \"After\",\n                    \"EndEvent\": \"Latest Episode Rights End\"\n                },\n                \"LogicalAssetIDList\": [\n                    {\n                        \"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.12840088\"\n                    }\n                ],\n                \"EntryList\": [\n                    {\n                        \"EntryClass\": \"Episode\",\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n                    }\n                ]\n            }\n        }\n    ]\n}",
 							"options": {
 								"raw": {}
 							}
@@ -3908,13 +3997,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215",
+							"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"policy",
-								"cid:org:pbs.org:Policy215"
+								"cid:org:pbs.org:Policy268"
 							]
 						}
 					},
@@ -5502,7 +5591,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"PublishedStatus\": \"Internally Published\"\n}"
+									"raw": "{\n\t\"PublishedStatus\": \"Internally Published\"\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "{{baseurl}}/supplemental/cid:org:pbs.org:Supplemental1/publish-status",
@@ -5557,7 +5649,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"EntryClass\": \"Manifestation\",\n    \"EntryContentUID\": \"cid:org:pbs.org:Manifestation345\"\n}"
+									"raw": "{\n    \"EntryClass\": \"Manifestation\",\n    \"EntryContentUID\": \"cid:org:pbs.org:Manifestation345\"\n}",
+									"options": {
+										"raw": {}
+									}
 								},
 								"url": {
 									"raw": "{{baseurl}}/supplemental/cid:org:pbs.org:Supplemental57/entrycontentuid",
@@ -5679,7 +5774,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Supplemental\",\n    \"Title\": \"Wild Kratts\",\n    \"ActualLength\": \"PT0H28M55S\",\n    \"SupplementalContentClass\": \"Disaster Spots\",\n    \"AlternateContentClass\": \"Parental Control\",\n    \"AlternateSupplementalIDList\": [\n        {\n            \"AlternateSupplementalID\": \"alid:org:pbs.org:BeBanjo-548876880\"\n        }\n    ],\n    \"EntryList\": [\n        {\n            \"EntryClass\": \"Series\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Series11\"\n        },\n        {\n            \"EntryClass\": \"Season\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Season434\"\n        },\n        {\n            \"EntryClass\": \"Episode\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Episode31448\"\n        },\n        {\n            \"EntryClass\": \"Manifestation\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Manifestation323\"\n        }\n    ]\n}"
+							"raw": "{\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Supplemental\",\n    \"Title\": \"Wild Kratts\",\n    \"ApproximateLength\": \"PT0H28M55S\",\n    \"SupplementalContentClass\": \"Disaster Spots\",\n    \"AlternateContentClass\": \"Parental Control\",\n     \"PromotionalClass\": \"Series Sell\",\n    \"SupportedWorkRelationship\": \"Parental Control\",\n    \"AlternateSupplementalIDList\": [\n        {\n            \"AlternateSupplementalID\": \"alid:org:pbs.org:BeBanjo-548876880\"\n        }\n    ],\n    \"EntryList\": [\n        {\n            \"EntryClass\": \"Series\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Series11\"\n        },\n        {\n            \"EntryClass\": \"Season\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Season434\"\n        },\n        {\n            \"EntryClass\": \"Episode\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Episode31448\"\n        },\n        {\n            \"EntryClass\": \"Manifestation\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Manifestation323\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
 							"raw": "{{baseurl}}/supplemental",
@@ -5716,16 +5814,19 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"StructuralType\": \"Digital\",\n    \"ReferentType\": \"Supplemental\",\n    \"Title\": \"Updated - Wild Kratts\",\n    \"ActualLength\": \"PT0H28M55S\",\n    \"SupplementalContentClass\": \"Kids Elements\",\n    \"AlternateContentClass\": \"Censored\"\n}"
+							"raw": "{\n    \"StructuralType\": \"Digital\",\n    \"ReferentType\": \"Supplemental\",\n    \"Title\": \"Updated - Wild Kratts\",\n    \"ApproximateLength\": \"PT0H28M55S\",\n    \"SupplementalContentClass\": \"Kids Elements\",\n    \"AlternateContentClass\": \"Censored\"\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/supplemental/cid:org:pbs.org:Supplemental1",
+							"raw": "{{baseurl}}/supplemental/cid:org:pbs.org:Supplemental71725",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"supplemental",
-								"cid:org:pbs.org:Supplemental1"
+								"cid:org:pbs.org:Supplemental71725"
 							]
 						}
 					},
@@ -5753,13 +5854,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/supplemental/cid:org:pbs.org:Supplemental1",
+							"raw": "{{baseurl}}/supplemental/cid:org:pbs.org:Supplemental71726",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"supplemental",
-								"cid:org:pbs.org:Supplemental1"
+								"cid:org:pbs.org:Supplemental71726"
 							]
 						}
 					},
@@ -5788,17 +5889,77 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"AlternateSupplementalID\": \"cid:EIDR:10.5230/2054-38C8-5C95-8E54-A823-2\"\n}"
+							"raw": "{\n    \"AlternateSupplementalID\": \"cid:EIDR:10.5230/2054-38C8-5C95-8E54-A823-2\"\n}",
+							"options": {
+								"raw": {}
+							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/supplemental/cid:org:pbs.org:Supplemental57/alternatesupplementalidregistration",
+							"raw": "{{baseurl}}/supplemental/cid:org:pbs.org:Supplemental71725/alternatesupplementalidregistration",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"supplemental",
-								"cid:org:pbs.org:Supplemental57",
+								"cid:org:pbs.org:Supplemental71725",
 								"alternatesupplementalidregistration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Supplemental Search",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8ef021cc-ccfa-42c4-bcdb-2683f485d46f",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/supplemental/search?title=Fillmore&alternatesupplementalid=cid:org:pbs.org:Broadview-23824755&entryuid=cid:org:pbs.org:Episode41112",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"supplemental",
+								"search"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Fillmore"
+								},
+								{
+									"key": "alternatesupplementalid",
+									"value": "cid:org:pbs.org:Broadview-23824755"
+								},
+								{
+									"key": "entryuid",
+									"value": "cid:org:pbs.org:Episode41112"
+								}
 							]
 						}
 					},
