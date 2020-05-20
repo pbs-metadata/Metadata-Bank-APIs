@@ -1,3 +1,8 @@
+## v1.0.18
+ * MBANK v0.18 - JSON schema - Added new fields in schema for Supplemental & Permission in MBank Policy, Policy-Permission & Policy-Prohibitions POST & PUT, Supplemental Endpoints
+ * MBANK v0.18 - Postman collection - Added new fields for Policy's Permission and Supplemental.
+ * MBANK v0.18 - Postman collection - Added new change log endpoints for Policy's Permission and Supplemental.
+ 
 ## v1.0.17
  * MBANK v0.17 - JSON schema - Added new schema for Supplemental & Edit and updated for MBank Policy, Policy-Permission & Policy-Prohibitions POST & PUT
  * MBANK v0.17 - Postman collection - Added new endpoints for Policy's permission and prohibition

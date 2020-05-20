@@ -149,6 +149,182 @@
                   "type": "PlayType must be a String"
                 }
               },
+              "Trigger": {
+                "type": "object",
+                "dependencies": {
+                  "StartOperator": [
+                    "StartEvent"
+                  ],
+                  "EndOperator": [
+                    "EndEvent"
+                  ]
+                },
+                "errorMessage": {
+                  "type": "Trigger must be an object",
+                  "dependencies": {
+                    "StartOperator": "StartEvent is required, if StartOperator is present",
+                    "EndOperator": "EndEvent is required, if EndOperator is present"
+                  }
+                },
+                "properties": {
+                  "StartCount": {
+                    "type": "integer",
+                    "format": "int32",
+                    "errorMessage": {
+                      "type": "StartCount must be an Integer",
+                      "format": "StartCount must be in format int32"
+                    }
+                  },
+                  "StartUnitType": {
+                    "transform": [
+                      "trim",
+                      "toEnumCase"
+                    ],
+                    "type": "string",
+                    "enum": [
+                      "weeks",
+                      "days",
+                      "months",
+                      "hours"
+                    ],
+                    "errorMessage": {
+                      "type": "StartUnitType must be a String",
+                      "enum": "StartUnitType must be one of the given values - weeks, days, months or hours"
+                    }
+                  },
+                  "StartOperator": {
+                    "transform": [
+                      "trim",
+                      "toEnumCase"
+                    ],
+                    "type": "string",
+                    "enum": [
+                      "On",
+                      "Before",
+                      "After",
+                      "During"
+                    ],
+                    "errorMessage": {
+                      "type": "StartOperator must be a String",
+                      "enum": "StartOperator must be one of the given values - On, Before, After or During"
+                    }
+                  },
+                  "StartEvent": {
+                    "transform": [
+                      "trim",
+                      "toEnumCase"
+                    ],
+                    "type": "string",
+                    "enum": [
+                      "After Each Broadcast",
+                      "After Earliest Release",
+                      "Earliest Release of Any Episode",
+                      "Earliest Release of Each Episode",
+                      "On Earliest Release of Any Episode",
+                      "On Earliest Release of Each Episode",
+                      "Each Episode",
+                      "Earliest Episode",
+                      "Latest Episode",
+                      "Rule End",
+                      "Each Airing *Includes First Airing",
+                      "Each Repeat *Subsequent Airings",
+                      "First Airing",
+                      "Second Airing",
+                      "Third Airing",
+                      "Fourth Airing",
+                      "Each Airing *Includes First Airing Each Episode",
+                      "Each Airing *Includes First Airing Earliest Episode",
+                      "Each Airing *Includes First Airing Latest Episode",
+                      "Each Airing *Includes First Airing Rule End",
+                      "Each Repeat *Subsequent Airings Each Episode",
+                      "Each Repeat *Subsequent Airings Earliest Episode",
+                      "Each Repeat *Subsequent Airings Latest Episode",
+                      "Each Repeat *Subsequent Airings Rule End"
+                    ],
+                    "errorMessage": {
+                      "type": "StartEvent must be a String",
+                      "enum": "StartEvent must be one of the given values - After Each Broadcast, After Earliest Release, Earliest Release of Any Episode, Earliest Release of Each Episode, On Earliest Release of Any Episode, On Earliest Release of Each Episode, Each Episode, Earliest episode, Latest Episode, Rule End, Each Airing *Includes First Airing, Each Repeat *Subsequent Airings, First Airing, Second Airing, Third Airing or Fourth Airing, Each Airing *Includes First Airing Each Episode, Each Airing *Includes First Airing Earliest Episode, Each Airing *Includes First Airing Latest Episode, Each Airing *Includes First Airing Rule End, Each Repeat *Subsequent Airings Each Episode, Each Repeat *Subsequent Airings Earliest Episode, Each Repeat *Subsequent Airings Latest Episode, Each Repeat *Subsequent Airings Rule End"
+                    }
+                  },
+                  "TimeInterval": {
+                    "type": "array",
+                    "errorMessage": {
+                      "type": "TimeInterval must be an Array"
+                    },
+                    "items": {
+                      "type": "integer",
+                      "format": "int32",
+                      "errorMessage": {
+                        "type": "item must be an Integer",
+                        "format": "item must be in format int32"
+                      }
+                    }
+                  },
+                  "EndCount": {
+                    "type": "integer",
+                    "format": "int32",
+                    "errorMessage": {
+                      "type": "EndCount must be an Integer",
+                      "format": "EndCount must be in format int32"
+                    }
+                  },
+                  "EndUnitType": {
+                    "transform": [
+                      "trim",
+                      "toEnumCase"
+                    ],
+                    "type": "string",
+                    "enum": [
+                      "weeks",
+                      "days",
+                      "months",
+                      "hours"
+                    ],
+                    "errorMessage": {
+                      "type": "EndUnitType must be a String",
+                      "enum": "EndUnitType must be one of the given values - weeks, days, months or hours"
+                    }
+                  },
+                  "EndOperator": {
+                    "transform": [
+                      "trim",
+                      "toEnumCase"
+                    ],
+                    "type": "string",
+                    "enum": [
+                      "On",
+                      "Before",
+                      "After",
+                      "During"
+                    ],
+                    "errorMessage": {
+                      "type": "EndOperator must be a String",
+                      "enum": "EndOperator must be one of the given values - On, Before, After or During"
+                    }
+                  },
+                  "EndEvent": {
+                    "transform": [
+                      "trim",
+                      "toEnumCase"
+                    ],
+                    "type": "string",
+                    "enum": [
+                      "Rights End",
+                      "Each Episode",
+                      "Earliest episode",
+                      "Latest Episode",
+                      "Rule End",
+                      "Each Episode Rights End",
+                      "Earliest Episode Rights End",
+                      "Latest Episode Rights End"
+                    ],
+                    "errorMessage": {
+                      "type": "EndEvent must be a String",
+                      "enum": "EndEvent must be one of the given values - Rights End, Each Episode, Earliest episode, Latest Episode or Rule End, Each Episode Rights End, Earliest Episode Rights End, Latest Episode Rights End"
+                    }
+                  }
+                }
+              },
               "MediaContext": {
                 "type": "array",
                 "errorMessage": {
@@ -230,7 +406,147 @@
               "Calculated": {
                 "type": "boolean",
                 "errorMessage": {
-                  "type": "Calculated must be a String"
+                  "type": "Calculated must be a Boolean"
+                }
+              },
+              "UnitType": {
+                "transform": [
+                  "trim",
+                  "toEnumCase"
+                ],
+                "type": "string",
+                "enum": [
+                  "Years",
+                  "Months",
+                  "Weeks",
+                  "Days",
+                  "Hours",
+                  "Minutes"
+                ],
+                "errorMessage": {
+                  "type": "UnitType must be a String",
+                  "enum": "UnitType must be one of the given values - Years, Months, Weeks, Days, Hours or Minutes"
+                }
+              },
+              "Type": {
+                "transform": [
+                  "trim",
+                  "toEnumCase"
+                ],
+                "type": "string",
+                "enum": [
+                  "Holdback",
+                  "Catch-up Rights",
+                  "Archive",
+                  "Aggregate Days"
+                ],
+                "errorMessage": {
+                  "type": "Type must be a String",
+                  "enum": "Type must be one of the given values - Holdback, Catch-up Rights, Archive or Aggregate Days"
+                }
+              },
+              "GeospatialNamedArea": {
+                "transform": [
+                  "trim",
+                  "toEnumCase"
+                ],
+                "type": "string",
+                "enum": [
+                  "Canada",
+                  "Caribbean",
+                  "North America",
+                  "Puerto Rico",
+                  "U.S. Virgin Islands",
+                  "Baker Island",
+                  "Caroline Islands",
+                  "Guam",
+                  "Marshall Islands",
+                  "Samoa (American)",
+                  "Wake Island",
+                  "Northern Marianas",
+                  "US Consulates",
+                  "US Consulates, US Military Bases, Embassies",
+                  "US Ships at Sea",
+                  "United States of America and its Territories & Possessions",
+                  "United States of America",
+                  "Worldwide",
+                  "Africa",
+                  "Asia",
+                  "Latin America",
+                  "Middle East",
+                  "Oceania",
+                  "Europe",
+                  "Abkhazia, Republic of ",
+                  "Albania",
+                  "Alto Adige (Bolzano or South Tyrol)",
+                  "Andorra,Principality of",
+                  "Austria",
+                  "Armenia",
+                  "Azerbaijan",
+                  "Belarus",
+                  "Benelux, The",
+                  "Bosnia / Herzegovina",
+                  "Bulgaria",
+                  "Capo d 'Istria",
+                  "Croatia",
+                  "Cyprus",
+                  "Czech Republic",
+                  "Estonia",
+                  "France",
+                  "Georgia",
+                  "Germany",
+                  "Gibraltar",
+                  "Greece",
+                  "Hungary",
+                  "Isarel",
+                  "Italy",
+                  "Kazakhstan",
+                  "Kosovo",
+                  "Kyrgyzstan",
+                  "Latvia",
+                  "Liechtenstein",
+                  "Macedonia",
+                  "Malta",
+                  "Moldova",
+                  "Monaco, Principality of",
+                  "Montenegro",
+                  "Poland",
+                  "Portugal",
+                  "Romania",
+                  "Russia",
+                  "San Marino",
+                  "Scandinavia",
+                  "Serbia",
+                  "Slovakia",
+                  "Slovenia",
+                  "South Ossetia",
+                  "Spain",
+                  "Switzerland",
+                  "Tajikistan",
+                  "Turkey",
+                  "Turkmenistan",
+                  "Ukraine",
+                  "Uzbekistan",
+                  "Vatican City",
+                  "Vojvodina"
+                ],
+                "errorMessage": {
+                  "type": "GeospatialNamedArea must be a String",
+                  "enum": "GeospatialNamedArea must be one of the given values - Canada, Caribbean, North America, Puerto Rico, U.S. Virgin Islands, Baker Island, Caroline Islands, Guam, Marshall Islands, Samoa (American), Wake Island, Northern Marianas, US Consulates, US Consulates, US Military Bases, Embassies, US Ships at Sea, United States of America and its Territories & Possessions, United States of America, Worldwide, Africa, Asia, Europe, Latin America, Middle East, Oceania, Europe, Abkhazia, Republic of , Albania, Alto Adige (Bolzano or South Tyrol), Andorra,Principality of, Austria, Armenia, Azerbaijan, Belarus, Benelux, The, Bosnia / Herzegovina, Bulgaria, Capo d 'Istria, Croatia, Cyprus, Czech Republic, Estonia, France, Georgia, Germany, Gibraltar, Greece, Hungary, Isarel, Italy, Kazakhstan, Kosovo, Kyrgyzstan, Latvia, Liechtenstein, Macedonia, Malta, Moldova, Monaco, Principality of, Montenegro, Poland, Portugal, Romania, Russia, San Marino, Scandinavia, Serbia, Slovakia, Slovenia, South Ossetia, Spain, Switzerland, Tajikistan, Turkey, Turkmenistan, Ukraine, Uzbekistan, Vatican City or Vojvodina"
+                }
+              },
+              "EnsureExclusivity": {
+                "type": "boolean",
+                "errorMessage": {
+                  "type": "EnsureExclusivity must be a Boolean"
+                }
+              },
+              "Count": {
+                "type": "integer",
+                "format": "int32",
+                "errorMessage": {
+                  "type": "Count must be an Integer",
+                  "format": "Count must be in format int32"
                 }
               },
               "TermStartDate": {
@@ -250,11 +566,21 @@
               "LogicalAssetIDList": {
                 "type": "array",
                 "uniqueItems": true,
+                "errorMessage": {
+                  "type": "LogicalAssetIDList must be an Array",
+                  "uniqueItems": "LogicalAssetIDList Contains a Duplicate Value"
+                },
                 "items": {
                   "required": [
                     "LogicalAssetID"
                   ],
                   "type": "object",
+                  "errorMessage": {
+                    "type": "items should be an object",
+                    "required": {
+                      "LogicalAssetID": "LogicalAssetID is Required"
+                    }
+                  },
                   "properties": {
                     "LogicalAssetID": {
                       "pattern": "^(.*)$",
@@ -263,55 +589,46 @@
                         "type": "LogicalAssetID must be a String"
                       }
                     }
-                  },
-                  "errorMessage": {
-                    "type": "items should be an object",
-                    "required": {
-                      "LogicalAssetID": "LogicalAssetID is Required"
-                    }
                   }
-                },
-                "errorMessage": {
-                  "uniqueItems": "LogicalAssetIDList Contains a Duplicate Value",
-                  "type": "LogicalAssetIDList must be an Array"
                 }
               },
               "EntryList": {
                 "type": "array",
                 "uniqueItems": true,
+                "errorMessage": {
+                  "type": "EntryList must be an Array",
+                  "uniqueItems": "EntryList Contains a Duplicate Value"
+                },
                 "items": {
+                  "title": "The Items Schema",
                   "required": [
                     "EntryClass",
                     "EntryUID"
                   ],
                   "type": "object",
+                  "errorMessage": {
+                    "type": "items must be an Object",
+                    "required": {
+                      "EntryClass": "EntryClass is Required",
+                      "EntryUID": "EntryUID is Required"
+                    }
+                  },
                   "properties": {
                     "EntryClass": {
                       "pattern": "^(.*)$",
                       "type": "string",
                       "errorMessage": {
-                        "type": "EntryClass must be a String"
+                        "type": "EntryClass must be an String"
                       }
                     },
                     "EntryUID": {
                       "pattern": "^(.*)$",
                       "type": "string",
                       "errorMessage": {
-                        "type": "EntryUID must be a String"
+                        "type": "EntryUID must be an String"
                       }
                     }
-                  },
-                  "errorMessage": {
-                    "type": "items should be an object",
-                    "required": {
-                      "EntryClass": "EntryClass is Required",
-                      "EntryUID": "EntryUID is Required"
-                    }
                   }
-                },
-                "errorMessage": {
-                  "uniqueItems": "EntryList Contains a Duplicate Value",
-                  "type": "EntryList must be an Array"
                 }
               }
             }
