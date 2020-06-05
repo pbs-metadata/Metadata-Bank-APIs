@@ -1,3 +1,10 @@
+## v1.0.19
+ * MBANK v0.19 - JSON schema - Added new field Title19 in Series & Episode and the DviLanguage firl for Event Linear's POST & PUT endpoints.
+ * MBANK v0.19 - JSON schema - The Enum values are changed for Episode[Primary Genre & Secondary Genre, CreditList - Role], Series[CreditList - Role], Manifestation[AudioType, VChip] and File[FileClass] fields in POST and PUT.
+ * MBANK v0.19 - JSON schema - The GeospatialName field type is changed from String to Array of String for Policy Permission's POST & PUT.
+ * MBANK v0.18 - Postman collection - Added new fields Title19 & DviLanguage for Series, Episode and Events Respectively and The GeospatialName type is changed from String to Array for Policy Permission.
+ * MBANK v0.18 - Postman collection - The Enum values are changed for Episode[Primary Genre & Secondary Genre, CreditList - Role], Series[CreditList - Role], Manifestation[AudioType, VChip] and File[FileClass]
+ 
 ## v1.0.18
  * MBANK v0.18 - JSON schema - Added new fields in schema for Supplemental & Permission in MBank Policy, Policy-Permission & Policy-Prohibitions POST & PUT, Supplemental Endpoints
  * MBANK v0.18 - Postman collection - Added new fields for Policy's Permission and Supplemental.

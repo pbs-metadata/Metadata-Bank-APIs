@@ -1,209 +1,440 @@
 {
-    "title": "The Root Schema",
-    "required": [
-        "ManifestationClass",
-        "ParentUID",
-        "Title"
-    ],
-    "type": "object",
-    "properties": {
-        "ManifestationUID": {
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "ManifestationClass": {
-            "minLength": 1,
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "ParentUID": {
-            "minLength": 1,
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "Title": {
-            "minLength": 1,
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "EidrId": {
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "ReferentType": {
-            "transform": ["trim", "toEnumCase"],
-            "type": "string",
-            "enum": [
-                "Series",
-                "Season",
-                "TV",
-                "Movie",
-                "Short",
-                "Web",
-                "Compilation",
-                "Supplemental"
-            ]
-        },
-        "StructuralType": {
-            "transform": ["trim", "toEnumCase"],
-            "type": "string",
-            "enum": [
-                "Abstraction",
-                "Performance",
-                "Digital"
-            ]
-        },
-        "ActualLength": {
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "ReleaseDate": {
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "EditUse": {
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "EditClass": {
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "PublishedStatus": {
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "Audio": {
-            "required": [
-                "AudioType",
-                "ClosedCaption"
-            ],
-            "type": "object",
-            "properties": {
-                "Language": {
-                    "pattern": "^(.*)$",
-                    "type": "string"
-                },
-                "ClosedCaption": {
-                    "pattern": "^(.*)$",
-                    "type": "string"
-                },
-                "AudioType": {
-                    "pattern": "^(.*)$",
-                    "type": "string"
-                }
-            }
-        },
-        "Video": {
-            "required": [
-                "Vchip",
-                "ei"
-            ],
-            "type": "object",
-            "properties": {
-                "Vchip": {
-                    "pattern": "^(.*)$",
-                    "type": "string"
-                },
-                "ei": {
-                    "type": "boolean"
-                }
-            }
-        },
-        "UseWindowTermList": {
-            "type": "array",
-            "items": {
-                "required": [
-                    "Term"
-                ],
-                "type": "object",
-                "properties": {
-                    "Term": {
-                        "minLength": 1,
-                        "pattern": "^(.*)$",
-                        "type": "string"
-                    }
-                }
-            }
-        },
-        "ContentIDList": {
-            "type": "array",
-            "items": {
-                "required": [
-                    "ContentID"
-                ],
-                "type": "object",
-                "properties": {
-                    "ContentID": {
-                        "pattern": "^(.*)$",
-                        "type": "string"
-                    }
-                }
-            }
-        },
-        "FileList": {
-            "type": "array",
-            "items": {
-                "required": [
-                    "EidrId",
-                    "FileClass",
-                    "ParentUID",
-                    "StructuralType"
-                ],
-                "type": "object",
-                "properties": {
-                    "FileClass": {
-                        "pattern": "^(.*)$",
-                        "type": "string"
-                    },
-                    "AssetUID": {
-                        "pattern": "^(.*)$",
-                        "type": "string"
-                    },
-                    "ParentUID": {
-                        "pattern": "^(.*)$",
-                        "type": "string"
-                    },
-                    "ReferentType": {
-                        "transform": ["trim", "toEnumCase"],
-                        "type": "string",
-                        "enum": [
-                            "Series",
-                            "Season",
-                            "TV",
-                            "Movie",
-                            "Short",
-                            "Web",
-                            "Compilation",
-                            "Supplemental"
-                        ]
-                    },
-                    "StructuralType": {
-                        "transform": ["trim", "toEnumCase"],
-                        "type": "string",
-                        "enum": [
-                            "Abstraction",
-                            "Performance",
-                            "Digital"
-                        ]
-                    },
-                    "FileName": {
-                        "pattern": "^(.*)$",
-                        "type": "string"
-                    },
-                    "FileDeliveryStatus": {
-                        "pattern": "^(.*)$",
-                        "type": "string"
-                    },
-                    "EidrId": {
-                        "pattern": "^(.*)$",
-                        "type": "string"
-                    }
-                }
-            }
-        },
-        "ManifestationList": {
-            "type": "array"
-        }
+  "title": "The Root Schema",
+  "required": [
+    "ManifestationClass",
+    "ParentUID",
+    "Title"
+  ],
+  "errorMessage": {
+    "type": "The request should be an object",
+    "required": {
+      "ManifestationClass": "ManifestationClass is Required",
+      "ParentUID": "ParentUID is Required",
+      "Title": "Title is Required"
     }
+  },
+  "type": "object",
+  "properties": {
+    "ManifestationUID": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "ManifestationUID must be a String"
+      }
+    },
+    "ManifestationClass": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "ManifestationClass must be a String",
+        "minLength": "ManifestationClass should have a minimum one character"
+      }
+    },
+    "ParentUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "ParentUID must be a String",
+        "minLength": "ParentUID should have a minimum one character"
+      }
+    },
+    "Title": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "Title must be a String",
+        "minLength": "Title should have a minimum one character"
+      }
+    },
+    "EidrId": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "EidrId must be a String"
+      }
+    },
+    "ReferentType": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Series",
+        "Season",
+        "TV",
+        "Movie",
+        "Short",
+        "Web",
+        "Compilation",
+        "Supplemental"
+      ],
+      "errorMessage": {
+        "type": "ReferentType must be a String",
+        "enum": "ReferentType must be a Series, Season, TV, Movie, Short, Web, Compilation or Supplemental irrepective to case."
+      }
+    },
+    "StructuralType": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Abstraction",
+        "Performance",
+        "Digital"
+      ],
+      "errorMessage": {
+        "type": "StructuralType must be a String",
+        "enum": "StructuralType must be an Abstraction, Performace or Digital irrespective to Case."
+      }
+    },
+    "ActualLength": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "ActualLength must be a String"
+      }
+    },
+    "ReleaseDate": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "ReleaseDate must be a String"
+      }
+    },
+    "EditUse": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "EditUse must be a String"
+      }
+    },
+    "EditClass": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "EditClass must be a String"
+      }
+    },
+    "PublishedStatus": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "PublishedStatus must be a String"
+      }
+    },
+    "Audio": {
+      "required": [
+        "AudioType",
+        "ClosedCaption"
+      ],
+      "type": "object",
+      "errorMessage": {
+        "type": "Audio should be an object",
+        "required": {
+          "ClosedCaption": "ClosedCaption is Required",
+          "AudioType": "AudioType is Required"
+        }
+      },
+      "properties": {
+        "Language": {
+          "pattern": "^(.*)$",
+          "type": "string",
+          "errorMessage": {
+            "type": "Language must be a String"
+          }
+        },
+        "ClosedCaption": {
+          "pattern": "^(.*)$",
+          "type": "string",
+          "errorMessage": {
+            "type": "ClosedCaption must be a String"
+          }
+        },
+        "AudioType": {
+          "transform": [
+            "trim",
+            "toEnumCase"
+          ],
+          "type": "string",
+          "enum": [
+            "None",
+            "Mono",
+            "Stereo",
+            "Stereo Surround",
+            "Surround 5.1"
+          ],
+          "errorMessage": {
+            "type": "AudioType must be a String",
+            "enum": "AudioType must be one of the given values - None, Mono, Stereo, Stereo Surround or Surround 5.1 irrespective to case. "
+          }
+        }
+      }
+    },
+    "Video": {
+      "required": [
+        "Vchip",
+        "ei"
+      ],
+      "type": "object",
+      "errorMessage": {
+        "type": "Video should be an object",
+        "required": {
+          "Vchip": "Vchip is Required",
+          "ei": "ei is Required"
+        }
+      },
+      "properties": {
+        "Vchip": {
+          "transform": [
+            "trim",
+            "toEnumCase"
+          ],
+          "type": "string",
+          "enum": [
+            "TV-Y7-FV",
+            "TV-Y7",
+            "TV-Y",
+            "E",
+            "TV-PG+VSLD",
+            "TV-PG+VSL",
+            "TV-PG+VSD",
+            "TV-PG+VS",
+            "TV-PG+VLD",
+            "TV-PG+VL",
+            "TV-PG+VD",
+            "TV-PG+V",
+            "TV-PG+SLD",
+            "TV-PG+SL",
+            "TV-PG+SD",
+            "TV-PG+S",
+            "TV-PG+LD",
+            "TV-PG+L",
+            "TV-PG+D",
+            "TV-PG",
+            "TV-MA+VSL",
+            "TV-MA+VS",
+            "TV-MA+VL",
+            "TV-MA+V",
+            "TV-MA+SL",
+            "TV-MA+S",
+            "TV-MA+L",
+            "TV-MA",
+            "TV-G",
+            "TV-14+VSLD",
+            "TV-14+VSL",
+            "TV-14+VSD",
+            "TV-14+VS",
+            "TV-14+VLD",
+            "TV-14+VL",
+            "TV-14+VD",
+            "TV-14+V",
+            "TV-14+SLD",
+            "TV-14+SL",
+            "TV-14+SD",
+            "TV-14+S",
+            "TV-14+LD",
+            "TV-14+L",
+            "TV-14+D",
+            "TV-14",
+            "TV-PG-V"
+          ],
+          "errorMessage": {
+            "type": "Vchip must be a String",
+            "enum": "Vchip must be an TV-Y7-FV, TV-Y7, TV-Y, E, TV-PG+VSLD, TV-PG+VSL, TV-PG+VSD, TV-PG+VS, TV-PG+VLD, TV-PG+VL, TV-PG+VD, TV-PG+V, TV-PG+SLD, TV-PG+SL, TV-PG+SD, TV-PG+S, TV-PG+LD, TV-PG+L, TV-PG+D, TV-PG, TV-MA+VSL, TV-MA+VS, TV-MA+VL, TV-MA+V, TV-MA+SL, TV-MA+S, TV-MA+L, TV-MA, TV-G, TV-14+VSLD, TV-14+VSL, TV-14+VSD, TV-14+VS, TV-14+VLD, TV-14+VL, TV-14+VD, TV-14+V, TV-14+SLD, TV-14+SL, TV-14+SD, TV-14+S, TV-14+LD, TV-14+L, TV-14+D, TV-14, TV-PG-V irrespective to Case."
+          }
+        },
+        "ei": {
+          "type": "boolean",
+          "errorMessage": {
+            "type": "ei must be a Boolean"
+          }
+        }
+      }
+    },
+    "UseWindowTermList": {
+      "type": "array",
+      "items": {
+        "required": [
+          "Term"
+        ],
+        "type": "object",
+        "errorMessage": {
+          "type": "items should be an object",
+          "required": {
+            "Term": "Term is Required"
+          }
+        },
+        "properties": {
+          "Term": {
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "Term must be a String",
+              "minLength": "Term should have a minimum one character"
+            }
+          }
+        }
+      },
+      "errorMessage": {
+        "type": "UseWindowTermList must be an Array"
+      }
+    },
+    "ContentIDList": {
+      "type": "array",
+      "items": {
+        "required": [
+          "ContentID"
+        ],
+        "type": "object",
+        "errorMessage": {
+          "type": "items should be an object",
+          "required": {
+            "ContentID": "ContentID is Required"
+          }
+        },
+        "properties": {
+          "ContentID": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "ContentID must be a String"
+            }
+          }
+        }
+      },
+      "errorMessage": {
+        "type": "ContentIDList must be an Array"
+      }
+    },
+    "FileList": {
+      "type": "array",
+      "errorMessage": {
+        "type": "FileList must be an Array"
+      },
+      "items": {
+        "required": [
+          "EidrId",
+          "FileClass",
+          "ParentUID",
+          "StructuralType"
+        ],
+        "type": "object",
+        "errorMessage": {
+          "type": "items should be an object",
+          "required": {
+            "EidrId": "EidrId is Required",
+            "FileClass": "FileClass is Required",
+            "ParentUID": "ParentUID is Required",
+            "StructuralType": "StructuralType is Required"
+          }
+        },
+        "properties": {
+          "FileClass": {
+            "transform": [
+              "trim",
+              "toEnumCase"
+            ],
+            "type": "string",
+            "enum": [
+              "Other",
+              "Manifest",
+              "Metadata",
+              "Media",
+              "Avail",
+              "Ancillary"
+            ],
+            "errorMessage": {
+              "type": "FileClass must be a String",
+              "enum": "FileClass must be a Other, Manifest, Metadata, Media, Avail or Ancillary"
+            }
+          },
+          "AssetUID": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "AssetUID must be a String"
+            }
+          },
+          "ParentUID": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "ParentUID must be a String"
+            }
+          },
+          "ReferentType": {
+            "transform": [
+              "trim",
+              "toEnumCase"
+            ],
+            "type": "string",
+            "enum": [
+              "Series",
+              "Season",
+              "TV",
+              "Movie",
+              "Short",
+              "Web",
+              "Compilation",
+              "Supplemental"
+            ],
+            "errorMessage": {
+              "type": "ReferentType must be a String",
+              "enum": "ReferentType must be a Series, Season, TV, Movie, Short, Web, Compilation or Supplemental irrepective to case."
+            }
+          },
+          "StructuralType": {
+            "transform": [
+              "trim",
+              "toEnumCase"
+            ],
+            "type": "string",
+            "enum": [
+              "Abstraction",
+              "Performance",
+              "Digital"
+            ],
+            "errorMessage": {
+              "type": "StructuralType must be a String",
+              "enum": "StructuralType must be an Abstraction, Performace or Digital irrespective to Case."
+            }
+          },
+          "FileName": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "FileName must be a String"
+            }
+          },
+          "FileDeliveryStatus": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "FileDeliveryStatus must be a String"
+            }
+          },
+          "EidrId": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "EidrId must be a String"
+            }
+          }
+        }
+      }
+    },
+    "ManifestationList": {
+      "type": "array",
+      "errorMessage": {
+        "type": "ManifestationList must be an array"
+      }
+    }
+  }
 }

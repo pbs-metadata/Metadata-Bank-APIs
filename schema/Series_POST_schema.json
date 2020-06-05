@@ -124,6 +124,15 @@
         "minLength": "Title should have minimum one character"
       }
     },
+    "Title19": {
+      "maxLength": 19,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "Title19 must be a String and maximum 19 characters",
+        "maxLength": "Title19 should be maximum 19 characters"
+      }
+    },
     "TitleClass": {
       "pattern": "^(.*)$",
       "type": "string",
@@ -1110,10 +1119,9 @@
               "Analyst",
               "Anchor",
               "Animal Actor",
-              "Animation",
+              "Animation Announcer",
               "Appearing",
               "Art Director",
-              "Announcer",
               "Assoc. Producer",
               "Author",
               "Casting",
@@ -1127,19 +1135,20 @@
               "Director",
               "Editor",
               "Executive Producer",
-              "Guest",
-              "Host",
-              "Make Up",
-              "Producer",
+              "Guest Host",
               "Judge",
               "Key Grip",
+              "Make Up",
+              "Moderator",
               "Music Director",
               "Musician",
               "Narrator",
+              "Other",
               "Panelist",
               "Performer",
               "Photographer",
               "Play-By-Play",
+              "Producer",
               "Production Designer",
               "Reality Cast Member",
               "Remarks by",
@@ -1152,18 +1161,18 @@
               "Special Effects",
               "Studio",
               "Stunts",
-              "Subject (person only)",
               "Technical Advisor",
               "Voice",
               "Writer",
               "Interviewer",
-              "Other",
               "Essayist",
-              "Moderator"
+              "Subject (person only)",
+              "Host",
+              "Guest"
             ],
             "errorMessage": {
               "type": "CreditsList Role must be a String",
-              "enum": "CreditsList Role must contain one of the following values - 'Actor', 'Analyst', 'Anchor', 'Animal Actor', 'Animation', 'Appearing', 'Art Director', 'Announcer', 'Assoc. Producer', 'Author', 'Casting', 'Choreographer', 'Cinematographer', 'Commentator', 'Composer', 'Conductor', 'Co-Producer', 'Costumes', 'Director', 'Editor', 'Executive Producer', 'Guest', 'Host', 'Make Up', 'Producer', 'Judge', 'Key Grip', 'Music Director', 'Musician', 'Narrator', 'Panelist', 'Performer', 'Photographer', 'Play-By-Play', 'Production Designer', 'Reality Cast Member', 'Remarks by', 'Reporter', 'Screenwriter', 'Set Design', 'Sidekick', 'Sound Effects', 'Speaker', 'Special Effects', 'Studio', 'Stunts', 'Subject (person only)', 'Technical Advisor', 'Voice', 'Writer', 'Interviewer', 'Other', 'Essayist', 'Moderator' irrespective to Case"
+              "enum": "CreditsList Role must contain one of the following values - Actor, Analyst, Anchor, Animal Actor, Animation Announcer, Appearing, Art Director, Assoc. Producer, Author, Casting, Choreographer, Cinematographer, Commentator, Composer, Conductor, Co-Producer, Costumes, Director, Editor, Executive Producer, Guest Host, Judge, Key Grip, Make Up, Moderator, Music Director, Musician, Narrator, Other, Panelist, Performer, Photographer, Play-By-Play, Producer, Production Designer, Reality Cast Member, Remarks by, Reporter, Screenwriter, Set Design, Sidekick, Sound Effects, Speaker, Special Effects, Studio, Stunts, Technical Advisor, Voice, Writer, Interviewer, Essayist, Subject (person only), Host, Guest irrespective to Case"
             }
           },
           "TalentID": {

@@ -169,6 +169,15 @@
         "type": "Title120 must be a String"
       }
     },
+    "Title19": {
+      "maxLength": 19,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "Title19 must be a String and maximum 19 characters",
+        "maxLength": "Title19 should be maximum 19 characters"
+      }
+    },
     "TitleLanguage": {
       "transform": [
         "trim",
@@ -397,19 +406,128 @@
       }
     },
     "PrimaryGenre": {
-      "minLength": 1,
-      "pattern": "^(.*)$",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
       "type": "string",
+      "enum": [
+        "Children's",
+        "How-To",
+        "Self-Help",
+        "Cultural",
+        "Drama",
+        "Arts",
+        "Public Affairs",
+        "History",
+        "Science/Nature",
+        "Educational",
+        "Outreach",
+        "Sports"
+      ],
       "errorMessage": {
         "type": "PrimaryGenre must be a String",
-        "minLength": "PrimaryGenre should have a minimum one character"
+        "enum": "PrimaryGenre must be a Children's, How-To, Self-Help, Cultural, Drama, Arts, Public Affairs, History, Science/Nature, Educational, Outreach, Sports irrepective to case."
       }
     },
     "SecondaryGenre": {
-      "pattern": "^(.*)$",
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
       "type": "string",
+      "enum": [
+        "action/adventure",
+        "adult",
+        "advice",
+        "animated",
+        "animated comedy",
+        "arts & literature",
+        "audio only",
+        "auto info",
+        "awards",
+        "baseball",
+        "basketball",
+        "biography",
+        "boxing",
+        "business & finance",
+        "comedy",
+        "comedy-drama",
+        "crime drama",
+        "documentary",
+        "drama",
+        "educational",
+        "entertainment",
+        "extreme sports",
+        "fantasy",
+        "fashion",
+        "food",
+        "football",
+        "game show",
+        "golf",
+        "health & fitness",
+        "history",
+        "hobbies & craft",
+        "hockey",
+        "home & garden",
+        "horror",
+        "horse racing",
+        "ice skating",
+        "ice skating (competition)",
+        "magazine",
+        "martial arts",
+        "motor sports",
+        "music",
+        "music videos",
+        "musical",
+        "mystery & suspense",
+        "nature",
+        "newscast",
+        "newsmagazine",
+        "olympics",
+        "outdoors",
+        "paranormal",
+        "performance",
+        "pets",
+        "politics",
+        "pro wrestling",
+        "public affairs",
+        "reality",
+        "religion",
+        "roller sports",
+        "science & technology",
+        "sci-fi",
+        "shopping",
+        "soap opera",
+        "soccer",
+        "sports",
+        "talk",
+        "teens",
+        "tennis",
+        "track & field",
+        "travel",
+        "variety",
+        "volleyball",
+        "water sports",
+        "western",
+        "winter sports",
+        "self-help",
+        "cultural",
+        "concert",
+        "pledge",
+        "women",
+        "animals",
+        "science/nature",
+        "bus./financial",
+        "children's",
+        "holidays",
+        "outreach",
+        "how-to",
+        "british"
+      ],
       "errorMessage": {
-        "type": "SecondaryGenre must be a String"
+        "type": "SecondaryGenre must be a String",
+        "enum": "SecondaryGenre must be a action/adventure, adult, advice, animated, animated comedy, arts & literature, audio only, auto info, awards, baseball, basketball, biography, boxing, business & finance, comedy, comedy-drama, crime drama, documentary, drama, educational, entertainment, extreme sports, fantasy, fashion, food, football, game show, golf, health & fitness, history, hobbies & craft, hockey, home & garden, horror, horse racing, ice skating, ice skating (competition), magazine, martial arts, motor sports, music, music videos, musical, mystery & suspense, nature, newscast, newsmagazine, olympics, outdoors, paranormal, performance, pets, politics, pro wrestling, public affairs, reality, religion, roller sports, science & technology, sci-fi, shopping, soap opera, soccer, sports, talk, teens, tennis, track & field, travel, variety, volleyball, water sports, western, winter sports, self-help, cultural, concert, pledge, women, animals, science/nature, bus./financial, children's, holidays, outreach, how-to, british irrepective to case."
       }
     },
     "CountryOfOrigin": {
@@ -1142,19 +1260,14 @@
               "toEnumCase"
             ],
             "type": "string",
-            "errorMessage": {
-              "type": "Role must be a String",
-              "enum": "Role must be a Actor, Analyst, Anchor, Animal Actor, Animation, Appearing, Art Director, Announcer, Assoc. Producer, Author, Casting, Choreographer, Cinematographer, Commentator, Composer, Conductor, Co-Producer, Costumes, Director, Editor, Executive Producer, Guest, Host, Make Up, Producer, Judge, Key Grip, Music Director, Musician, Narrator, Panelist, Performer, Photographer, Play-By-Play, Production Designer, Reality Cast Member, Remarks by, Reporter, Screenwriter, Set Design, Sidekick, Sound Effects, Speaker, Special Effects, Studio, Stunts, Subject (person only), Technical Advisor, Voice, Writer, Interviewer, Other, Essayist or Moderator irrepective to case."
-            },
             "enum": [
               "Actor",
               "Analyst",
               "Anchor",
               "Animal Actor",
-              "Animation",
+              "Animation Announcer",
               "Appearing",
               "Art Director",
-              "Announcer",
               "Assoc. Producer",
               "Author",
               "Casting",
@@ -1168,19 +1281,20 @@
               "Director",
               "Editor",
               "Executive Producer",
-              "Guest",
-              "Host",
-              "Make Up",
-              "Producer",
+              "Guest Host",
               "Judge",
               "Key Grip",
+              "Make Up",
+              "Moderator",
               "Music Director",
               "Musician",
               "Narrator",
+              "Other",
               "Panelist",
               "Performer",
               "Photographer",
               "Play-By-Play",
+              "Producer",
               "Production Designer",
               "Reality Cast Member",
               "Remarks by",
@@ -1193,15 +1307,19 @@
               "Special Effects",
               "Studio",
               "Stunts",
-              "Subject (person only)",
               "Technical Advisor",
               "Voice",
               "Writer",
               "Interviewer",
-              "Other",
               "Essayist",
-              "Moderator"
-            ]
+              "Subject (person only)",
+              "Host",
+              "Guest"
+            ],
+            "errorMessage": {
+              "type": "CreditsList Role must be a String",
+              "enum": "CreditsList Role must contain one of the following values - Actor, Analyst, Anchor, Animal Actor, Animation Announcer, Appearing, Art Director, Assoc. Producer, Author, Casting, Choreographer, Cinematographer, Commentator, Composer, Conductor, Co-Producer, Costumes, Director, Editor, Executive Producer, Guest Host, Judge, Key Grip, Make Up, Moderator, Music Director, Musician, Narrator, Other, Panelist, Performer, Photographer, Play-By-Play, Producer, Production Designer, Reality Cast Member, Remarks by, Reporter, Screenwriter, Set Design, Sidekick, Sound Effects, Speaker, Special Effects, Studio, Stunts, Technical Advisor, Voice, Writer, Interviewer, Essayist, Subject (person only), Host, Guest irrespective to Case"
+            }
           },
           "TalentID": {
             "pattern": "^(.*)$",

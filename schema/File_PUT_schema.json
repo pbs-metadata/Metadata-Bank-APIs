@@ -1,52 +1,119 @@
 {
-    "type": "object",
-    "properties": {
-        "ParentUID": {
-            "minLength": 1,
+  "type": "object",
+  "errorMessage": {
+    "type": "The request must be an object"
+  },
+  "properties": {
+    "ParentUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "ParentUID must be a String",
+        "minLength": "ParentUID should have a minimum one character"
+      }
+    },
+    "FileClass": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Other",
+        "Manifest",
+        "Metadata",
+        "Media",
+        "Avail",
+        "Ancillary"
+      ],
+      "errorMessage": {
+        "type": "FileClass must be a String",
+        "enum": "FileClass must be a Other, Manifest, Metadata, Media, Avail or Ancillary"
+      }
+    },
+    "FileName": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "FileName must be a String",
+        "minLength": "FileName should have a minimum one character"
+      }
+    },
+    "FileDeliveryStatus": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Removed",
+        "Delivered",
+        "Future",
+        "Other"
+      ],
+      "errorMessage": {
+        "type": "FileDeliveryStatus must be a String",
+        "enum": "FileDeliveryStatus must be a Removed, Delivered, Future or Other"
+      }
+    },
+    "ChecksumType": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "enum": [
+        "MD2",
+        "MD4",
+        "MD5",
+        "SHA-0",
+        "SHA-1",
+        "SHA-2",
+        "SHA-3",
+        null
+      ],
+      "errorMessage": {
+        "type": "ChecksumType must be a String",
+        "enum": "ChecksumType must be a MD2, MD4, MD5, SHA-0, SHA-1, SHA-2, SHA-3"
+      }
+    },
+    "ChecksumValue": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "ChecksumValue must be a String",
+        "minLength": "ChecksumValue should have a minimum one character"
+      }
+    },
+    "AlternateAssetIDList": {
+      "type": "array",
+      "uniqueItems": true,
+      "errorMessage": {
+        "type": "AlternateAssetIDList must be an Array",
+        "uniqueItems": "AlternateAssetIDList Contains a Duplicate Value"
+      },
+      "items": {
+        "required": [
+          "AssetUID"
+        ],
+        "type": "object",
+        "errorMessage": {
+          "type": "items should be an object",
+          "required": {
+            "AssetUID": "AssetUID is Required"
+          }
+        },
+        "properties": {
+          "AssetUID": {
             "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "FileClass": {
-            "transform": ["trim", "toEnumCase"],
             "type": "string",
-            "enum": [
-                "Manifest",
-                "Metadata",
-                "Media",
-                "Avail",
-                "Ancillary"
-            ]
-        },
-        "FileName": {
-            "minLength": 1,
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "FileDeliveryStatus": {
-            "transform": ["trim", "toEnumCase"],
-            "type": "string",
-            "enum": [
-                "Removed",
-                "Delivered",
-                "Future",
-                "Other"
-            ]
-        },
-        "AlternateAssetIDList": {
-            "type": "array",
-            "uniqueItems": true,
-            "items": {
-                "required": [
-                    "AssetUID"
-                ],
-                "type": "object",
-                "properties": {
-                    "AssetUID": {
-                        "pattern": "^(.*)$",
-                        "type": "string"
-                    }
-                }
+            "errorMessage": {
+              "type": "AssetUID must be a String"
             }
+          }
         }
+      }
     }
+  }
 }
