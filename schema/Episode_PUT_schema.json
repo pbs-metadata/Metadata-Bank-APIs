@@ -14,7 +14,6 @@
     "ParentUID": {
       "minLength": 1,
       "pattern": "^(.*)$",
-      "type": "string",
       "errorMessage": {
         "type": "ParentUID must be a String",
         "minLength": "ParentUID should have a minimum one character"
