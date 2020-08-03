@@ -310,6 +310,7 @@
             "toEnumCase"
           ],
           "enum": [
+			"Rights In",
             "Holdback",
             "Catch-up Rights",
             "Archive",
@@ -317,7 +318,7 @@
             null
           ],
           "errorMessage": {
-            "enum": "Type must be one of the given values - Holdback, Catch-up Rights, Archive or Aggregate Days"
+            "enum": "Type must be one of the given values - Rights In, Holdback, Catch-up Rights, Archive or Aggregate Days"
           }
         },
         "GeospatialNamedArea": {

@@ -104,6 +104,13 @@
         "minLength": "Title should have minimum one character"
       }
     },
+	"TitleLong": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "TitleLong must be a String"
+      }
+    },
     "Title19": {
       "maxLength": 19,
       "pattern": "^(.*)$",
