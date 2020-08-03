@@ -1,3 +1,7 @@
+## v1.0.21
+ * MBANK v0.21 - JSON schema - The new field TitleLong is added to Episode & series entities & The standalone episode will be created without parent.
+ * MBANK v0.21 - Postman collection - The new field TitleLong is added to Episode & series entities & The standalone episode will be created without parent.
+ 
 ## v1.0.20
  * MBANK v0.20 - JSON schema - The GeospatialNamedArea Enum values are changed for Policy's Permission POST and PUT.
  * MBANK v0.20 - Postman collection - Added new endpoints to search Policy's Permission.
