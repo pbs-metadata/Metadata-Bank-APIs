@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "2b63309b-24fa-424f-a25e-58f815507027",
-		"name": "Metadata-Bank-API-v0.21",
+		"_postman_id": "3198582f-ed55-4e65-83ed-4e88a1b867e2",
+		"name": "Metadata-Bank-API-v0.22",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -72,7 +72,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/series/changelog?startdate=2019-4-1&enddate=2019-6-25",
+									"raw": "{{baseurl}}/series/changelog?startdate=2020-10-1&enddate=2020-10-30",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -83,11 +83,11 @@
 									"query": [
 										{
 											"key": "startdate",
-											"value": "2019-4-1"
+											"value": "2020-10-1"
 										},
 										{
 											"key": "enddate",
-											"value": "2019-6-25"
+											"value": "2020-10-30"
 										}
 									]
 								}
@@ -104,7 +104,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "c28d656b-66df-4c1b-9397-21c5ae040585",
+								"id": "4faf9d0d-2425-4479-bc24-d48a869038c5",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -147,7 +147,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "3b8c8dd4-b1e0-4a51-91f2-e35ff598ed47",
+								"id": "680f063a-83b9-45f8-a095-134c2e4535e3",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -173,7 +173,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Series\",\n    \"Mode\": \"AudioVisual\",\n    \"SeriesClass\": \"Episodic\",\n    \"CountryOfOrigin\": \"US\",\n    \"SynopsisShort\": \"Dev-Smoke-Test\",\n    \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n    \"ApproximateLength\": \"PT2H0M0S\",\n    \"Language\": {\n        \"PrimaryMode\": \"Audio\",\n        \"PrimaryLanguage\": \"el\",\n        \"SecondaryLanguage\": \"en\"\n    },\n    \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n    \"Title19\": \"Money\",\n    \"TitleLong\": \"Money Test\",\n    \"TitleClass\": \"release\",\n    \"TitleLanguage\": \"el\",\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:BroadView-618586114\"\n        },\n        {\n            \"ContentID\": \"cid:org:pbs.org:NolaRoot:FRON\"\n        }\n    ],\n    \"CreditsList\": [\n        {\n            \"TalentID\": \"cid:org:pbs.org:Broadview-131330105\",\n            \"Role\": \"Producer\",\n            \"DisplayName\": \"colette neirouz\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136739,\n            \"DisplayName\": \"PBS NPS General Audience (GA)\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136758,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"test-emm@pbs.com\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ]\n}",
+							"raw": "{\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Series\",\n    \"Mode\": \"AudioVisual\",\n    \"SeriesClass\": \"Episodic\",\n    \"CountryOfOrigin\": \"US\",\n    \"SynopsisShort\": \"Dev-Smoke-Test\",\n    \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n    \"ApproximateLength\": \"PT2H0M0S\",\n    \"Language\": {\n        \"PrimaryMode\": \"Audio\",\n        \"PrimaryLanguage\": \"el\",\n        \"SecondaryLanguage\": \"en\"\n    },\n    \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n    \"Title19\": \"Money\",\n    \"TitleClass\": \"release\",\n    \"TitleLanguage\": \"el\",\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:BroadView-618586114\"\n        },\n        {\n            \"ContentID\": \"cid:org:pbs.org:NolaRoot:FRON\"\n        }\n    ],\n    \"CreditsList\": [\n        {\n            \"TalentID\": \"cid:org:pbs.org:Broadview-131330105\",\n            \"Role\": \"Producer\",\n            \"DisplayName\": \"colette neirouz\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136739,\n            \"DisplayName\": \"PBS NPS General Audience (GA)\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136758,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"test-emm@pbs.com\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ]\n}",
 							"options": {
 								"raw": {}
 							}
@@ -196,7 +196,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "f58c068b-6350-4c4e-8d96-e2eb0fc7efec",
+								"id": "a0c536ba-5145-4daa-9bda-b9ce03a141a9",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -222,7 +222,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Series\",\n    \"Mode\": \"AudioVisual\",\n    \"SeriesClass\": \"Episodic\",\n    \"CountryOfOrigin\": \"US\",\n    \"SynopsisShort\": \"Dev-Smoke-Test-Update\",\n    \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n    \"ApproximateLength\": \"PT2H0M0S\",\n    \"Language\": {\n        \"PrimaryMode\": \"Audio\",\n        \"PrimaryLanguage\": \"el\",\n        \"SecondaryLanguage\": \"en\"\n    },\n    \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test-Update\",\n    \"Title19\": \"Money\",\n    \"TitleLong\": \"Money Test\",\n    \"TitleClass\": \"release\",\n    \"TitleLanguage\": \"el\",\n    \"CreditsList\": [\n        {\n            \"TalentID\": \"cid:org:pbs.org:Broadview-127202300\",\n            \"Role\": \"Producer\",\n            \"DisplayName\": \"Story, Louise - PBS\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136739,\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136758,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"test-emm@pbs.com\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ]\n}",
+							"raw": "{\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Series\",\n    \"Mode\": \"AudioVisual\",\n    \"SeriesClass\": \"Episodic\",\n    \"CountryOfOrigin\": \"US\",\n    \"SynopsisShort\": \"Dev-Smoke-Test-Update\",\n    \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n    \"ApproximateLength\": \"PT2H0M0S\",\n    \"Language\": {\n        \"PrimaryMode\": \"Audio\",\n        \"PrimaryLanguage\": \"el\",\n        \"SecondaryLanguage\": \"en\"\n    },\n    \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test-Update\",\n    \"Title19\": \"Money\",\n    \"TitleClass\": \"release\",\n    \"TitleLanguage\": \"el\",\n    \"CreditsList\": [\n        {\n            \"TalentID\": \"cid:org:pbs.org:Broadview-127202300\",\n            \"Role\": \"Producer\",\n            \"DisplayName\": \"Story, Louise - PBS\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136739,\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136758,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"test-emm@pbs.com\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ]\n}",
 							"options": {
 								"raw": {}
 							}
@@ -246,7 +246,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ea5800dd-a16c-49f3-8c6c-45ece9ef9d7e",
+								"id": "6d32d2c2-4510-4da3-8af1-eb7359499ce7",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -296,7 +296,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "f1d6c536-7417-4cfb-9f94-8535c0b6cca7",
+								"id": "87de51c5-ce00-47e6-9898-a16ba774b6cb",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -342,12 +342,12 @@
 					"response": []
 				},
 				{
-					"name": "Episode De-Associate Organization Copy",
+					"name": "Episode De-Associate Organization",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
-								"id": "09e0c4b8-a948-4294-b619-ca4958b86384",
+								"id": "2f63a434-1b7e-47d9-83f9-e6a9c990bd57",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -394,12 +394,12 @@
 					"response": []
 				},
 				{
-					"name": "Episode De-Associate Credit Copy",
+					"name": "Episode De-Associate Credit",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
-								"id": "2a4dad6e-8fbb-436e-b9b3-2501bb38fe8a",
+								"id": "4074c9c8-919e-443c-95ce-ae4e9c0571d6",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -515,7 +515,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/season/changelog?startdate=2019-4-1&enddate=2019-6-25",
+									"raw": "{{baseurl}}/season/changelog?startdate=2020-10-1&enddate=2020-10-30",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -526,11 +526,11 @@
 									"query": [
 										{
 											"key": "startdate",
-											"value": "2019-4-1"
+											"value": "2020-10-1"
 										},
 										{
 											"key": "enddate",
-											"value": "2019-6-25"
+											"value": "2020-10-30"
 										}
 									]
 								}
@@ -547,7 +547,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "97fa9e19-27f2-4b56-989b-544fb240f3ef",
+								"id": "6bc08a86-5657-4bea-8c77-edc09e5a1b16",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -590,7 +590,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "665c8b04-0df1-4d40-8264-86e82b255c22",
+								"id": "dba446a1-8458-449d-a479-533620b4b6e7",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -639,7 +639,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "28080641-235d-4ddf-8f04-e09d278cca19",
+								"id": "39696ae0-b52f-4b27-86a0-3a4edcabcf84",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -689,7 +689,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "e24dbe23-3083-4db0-8212-8d5708a3e550",
+								"id": "ee347801-5b9c-4328-876b-f9c7479036bb",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -739,7 +739,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "80d5fabd-dec4-48c1-bb3e-d33967ee71d8",
+								"id": "3ae62aad-2526-402d-8fc1-911bdf5d5b50",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -790,7 +790,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "37ac7e0a-172c-427e-99a8-3c039a4a8812",
+								"id": "a8251024-5e85-4f2c-8752-c72a68e89de0",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -910,7 +910,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/episode/changelog?startdate=2019-4-1&enddate=2019-6-25",
+									"raw": "{{baseurl}}/episode/changelog?startdate=2020-10-1&enddate=2020-10-30",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -921,11 +921,11 @@
 									"query": [
 										{
 											"key": "startdate",
-											"value": "2019-4-1"
+											"value": "2020-10-1"
 										},
 										{
 											"key": "enddate",
-											"value": "2019-6-25"
+											"value": "2020-10-30"
 										}
 									]
 								}
@@ -942,7 +942,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "1e7a0783-d50d-4d5b-a50c-d5d0980037b3",
+								"id": "942743c1-9698-4512-acbc-144640a9eeff",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -985,7 +985,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "f3398f34-d9eb-408a-b0cc-41134337abb5",
+								"id": "ca43ed79-b891-4713-8545-c7aff392a44b",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -1011,7 +1011,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Season410\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"TV\",\n    \"EpisodeNumber\": 3011,\n    \"EpisodeClass\": \"Main\",\n    \"Title\": \"Frontline | Money, Power and Wall Street-Dev-Smoke-Test\",\n    \"Title120\": \"Frontline | Money, Power and Wall Street\",\n    \"Title19\": \"Frontline\",\n    \"TitleLong\": \"Frontline Test\",\n    \"TitleClass\": \"release\",\n    \"TitleLanguage\": \"en\",\n    \"SynopsisShort\": \"Part 1 - Learn how two U.S. administrations have confronted the economic crisis. \",\n    \"SynopsisLong\": \"Part 1 - FRONTLINE producer Michael Kirk (“Inside the Meltdown,” “The Warning”) investigates how two U.S. administrations have confronted the crisis — while dealing with sharp internal divisions and a relationship with Wall Street marked by mistrust and dependence, mutual interests and competing goals. The investigation charts the largest government bailout in U.S. history, a series of decisions that rewrote the rules of government and fueled a debate that would alter the country’s political landscape. Focusing on the Obama administration, FRONTLINE tells the story of a newly elected president with a mandate for change grappling with the multi-headed menace of economic instability, and with fundamental choices about winners and losers and the direction of his presidency.\",\n    \"CountryOfOrigin\": \"US\",\n    \"PrimaryGenre\": \"Public Affairs\",\n    \"SecondaryGenre\": \"Public Affairs\",\n    \"DistributionNumber\": 11,\n    \"ApproximateLength\": \"PT2H0M0S\",\n    \"Language\": {\n        \"PrimaryMode\": \"Audio\",\n        \"PrimaryLanguage\": \"el\",\n        \"SecondaryLanguage\": \"en\"\n    },\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:Rightsline-8643\"\n        },\n        {\n            \"ContentID\": \"cid:org:pbs.org:NOLACode:FRON  003011\"\n        }\n    ],\n    \"CreditsList\": [\n        {\n        \t\"TalentID\": \"cid:org:pbs.org:Broadview-3383374\",\n            \"Role\": \"Executive Producer\",\n            \"DisplayName\": \"colette neirouz\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136758,\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136739,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ]\n}",
+							"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Season489\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"TV\",\n    \"EpisodeNumber\": 3011,\n    \"EpisodeClass\": \"Main\",\n    \"Title\": \"Frontline | Money, Power and Wall Street-Dev-Smoke-Test\",\n    \"Title120\": \"Frontline | Money, Power and Wall Street\",\n    \"Title19\": \"Frontline\",\n    \"TitleClass\": \"release\",\n    \"TitleLanguage\": \"en\",\n    \"SynopsisShort\": \"Part 1 - Learn how two U.S. administrations have confronted the economic crisis. \",\n    \"SynopsisLong\": \"Part 1 - FRONTLINE producer Michael Kirk (“Inside the Meltdown,” “The Warning”) investigates how two U.S. administrations have confronted the crisis — while dealing with sharp internal divisions and a relationship with Wall Street marked by mistrust and dependence, mutual interests and competing goals. The investigation charts the largest government bailout in U.S. history, a series of decisions that rewrote the rules of government and fueled a debate that would alter the country’s political landscape. Focusing on the Obama administration, FRONTLINE tells the story of a newly elected president with a mandate for change grappling with the multi-headed menace of economic instability, and with fundamental choices about winners and losers and the direction of his presidency.\",\n    \"CountryOfOrigin\": \"US\",\n    \"PrimaryGenre\": \"Public Affairs\",\n    \"SecondaryGenre\": \"Public Affairs\",\n    \"DistributionNumber\": 11,\n    \"ApproximateLength\": \"PT2H0M0S\",\n    \"Language\": {\n        \"PrimaryMode\": \"Audio\",\n        \"PrimaryLanguage\": \"el\",\n        \"SecondaryLanguage\": \"en\"\n    },\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:Rightsline-8643\"\n        },\n        {\n            \"ContentID\": \"cid:org:pbs.org:NOLACode:FRON  003011\"\n        }\n    ],\n    \"CreditsList\": [\n        {\n        \t\"TalentID\": \"cid:org:pbs.org:Broadview-3383374\",\n            \"Role\": \"Executive Producer\",\n            \"DisplayName\": \"colette neirouz\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136758,\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136739,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ]\n}",
 							"options": {
 								"raw": {}
 							}
@@ -1034,7 +1034,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "2c8477b7-20a7-400c-beb7-974b30477b68",
+								"id": "260b58ea-2513-451c-8d23-db5484f97227",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1060,19 +1060,19 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Season410\",\n    \"EidrID\": \"\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"TV\",\n    \"EpisodeNumber\": 613,\n    \"EpisodeClass\": \"Main\",\n    \"SynopsisShort\": \"Dev-Smoke-Test\",\n    \"SynopsisLong\": \"ANTIQUES ROADSHOW kicks off its Indianapolis visit with a tour of the Indianapolis Motor Speedway, home of the Indianapolis 500. The Indianapolis Convention Center is the site of a different kind of excitement when appraisers show off an exotic 19th-century French bronze sculpture; a German bible printed near Philadelphia in 1776; and a rare N.C. Wyeth painting valued at $250,000.\",\n    \"CountryOfOrigin\": \"US\",\n    \"PrimaryGenre\": \"Cultural\",\n    \"SecondaryGenre\": \"Cultural\",\n    \"DistributionNumber\": 13,\n    \"ApproximateLength\": \"PT1H0M0S\",\n    \"Language\": {\n        \"PrimaryMode\": \"Audio\",\n        \"PrimaryLanguage\": \"en\",\n        \"SecondaryLanguage\": \"en\"\n    },\n    \"Title\": \"Dev-Smoke-Test\",\n    \"Title19\": \"Frontline\",\n    \"TitleLong\": \"Frontline Test\",\n    \"TitleClass\": \"release\",\n    \"TitleLanguage\": \"en\",\n    \"CreditsList\": [\n        {\n        \t\"TalentID\": \"cid:org:pbs.org:Broadview-3383374\",\n            \"Role\": \"Executive Producer\",\n            \"DisplayName\": \"colette neirouz\"\n        },\n        {\n            \"Role\": \"Producer\",\n            \"TalentID\": \"cid:org:pbs.org:Broadview-3324900\",\n            \"DisplayName\": \"Lane, Christopher W\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136739,\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136739,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"test-emm@pbs.com\",\n                    \"ContactName\": \"PBS Content Services\"\n                },\n                {\n                    \"ContactID\": 3136739,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"test-emm@pbs.com\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ]\n}",
+							"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Season489\",\n    \"EidrID\": \"\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"TV\",\n    \"EpisodeNumber\": 613,\n    \"EpisodeClass\": \"Main\",\n    \"SynopsisShort\": \"Dev-Smoke-Test\",\n    \"SynopsisLong\": \"ANTIQUES ROADSHOW kicks off its Indianapolis visit with a tour of the Indianapolis Motor Speedway, home of the Indianapolis 500. The Indianapolis Convention Center is the site of a different kind of excitement when appraisers show off an exotic 19th-century French bronze sculpture; a German bible printed near Philadelphia in 1776; and a rare N.C. Wyeth painting valued at $250,000.\",\n    \"CountryOfOrigin\": \"US\",\n    \"PrimaryGenre\": \"Cultural\",\n    \"SecondaryGenre\": \"Cultural\",\n    \"DistributionNumber\": 13,\n    \"ApproximateLength\": \"PT1H0M0S\",\n    \"Language\": {\n        \"PrimaryMode\": \"Audio\",\n        \"PrimaryLanguage\": \"en\",\n        \"SecondaryLanguage\": \"en\"\n    },\n    \"Title\": \"Dev-Smoke-Test\",\n    \"Title19\": \"Frontline\",\n    \"TitleClass\": \"release\",\n    \"TitleLanguage\": \"en\",\n    \"CreditsList\": [\n        {\n        \t\"TalentID\": \"cid:org:pbs.org:Broadview-3383374\",\n            \"Role\": \"Executive Producer\",\n            \"DisplayName\": \"colette neirouz\"\n        },\n        {\n            \"Role\": \"Producer\",\n            \"TalentID\": \"cid:org:pbs.org:Broadview-3324900\",\n            \"DisplayName\": \"Lane, Christopher W\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136739,\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136739,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"test-emm@pbs.com\",\n                    \"ContactName\": \"PBS Content Services\"\n                },\n                {\n                    \"ContactID\": 3136739,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"test-emm@pbs.com\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ]\n}",
 							"options": {
 								"raw": {}
 							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode30168",
+							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode37546",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"episode",
-								"cid:org:pbs.org:Episode30168"
+								"cid:org:pbs.org:Episode37546"
 							]
 						}
 					},
@@ -1084,7 +1084,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "2c137af4-98b8-4b14-bf06-9c46f44ebe5b",
+								"id": "e2492084-780f-4e47-84ab-be8a430dfaa7",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1134,7 +1134,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "85e67db3-a9cb-4f73-bb27-583a391c6609",
+								"id": "41a1ab7f-3068-4cb0-84a5-36ca5ccde147",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1185,7 +1185,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "4a72fe20-0fe0-42ff-9ff9-172a54f0518f",
+								"id": "dae4fda9-572b-4339-862f-436af27cce99",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1237,7 +1237,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "968d0364-3098-43bf-805d-182915fed2d6",
+								"id": "5ebf10aa-3dd7-4d42-b96f-85e5c10d1252",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1289,7 +1289,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "efd916c1-ef6f-4aa3-9890-5bb7087482f2",
+								"id": "bcdc5bfc-e151-42e2-8cfd-6a369078656c",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1341,7 +1341,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "deeea004-23df-479c-bf44-7267e9924d9e",
+								"id": "658a3abd-fc2f-438d-9ccc-d07f3e8b9495",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1403,7 +1403,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "5fd9cf6c-7655-4e23-848a-86661b1ebf81",
+										"id": "78e573e0-9fe2-4376-a7d0-12e63e35047c",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -1454,7 +1454,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "29434d74-0aef-46f7-b8e9-80cc26c7b4a2",
+										"id": "29119a66-894f-4017-b22a-b29f60cc4a9f",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -1570,7 +1570,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/manifestation/changelog?startdate=2019-4-1&enddate=2019-6-25",
+									"raw": "{{baseurl}}/manifestation/changelog?startdate=2020-10-1&enddate=2020-10-30",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -1581,11 +1581,11 @@
 									"query": [
 										{
 											"key": "startdate",
-											"value": "2019-4-1"
+											"value": "2020-10-1"
 										},
 										{
 											"key": "enddate",
-											"value": "2019-6-25"
+											"value": "2020-10-30"
 										}
 									]
 								}
@@ -1602,7 +1602,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "b0039d1e-9d02-4cfa-90e7-e1cd687fa853",
+								"id": "cc543141-1db1-401f-92d3-1be1d54aaba3",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1645,7 +1645,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "38b607b8-5949-4c0c-a778-a693152d48cf",
+								"id": "c332e6b1-079b-4314-a5ed-543b36ef0b74",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -1694,7 +1694,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "29ac2de9-f857-47d2-a843-63be340165e3",
+								"id": "a7ba41f3-fc27-4b65-a599-13e8c48e3db2",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1744,7 +1744,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "f22bb853-c8eb-4fa0-81c2-c743c2cc1170",
+								"id": "14ed4b7b-9b82-47bd-86af-ccdf0345b05e",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1787,7 +1787,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "b7a509d1-887a-4f85-aee6-f5f3c365ecc8",
+								"id": "83f87854-26a3-45e2-aefe-06f5940ac193",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1852,7 +1852,7 @@
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
-								"id": "711c6ae7-aa4b-4916-ab7d-c2abf2a39cdb"
+								"id": "f2469f54-735a-4646-8d95-b33b9b10a7b7"
 							}
 						}
 					],
@@ -1909,7 +1909,7 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"id": "deadb8d2-b33d-41ce-839c-6ce146af5bfe"
+								"id": "25cdfe7a-783d-458e-92fd-3fc9a8f6eae9"
 							}
 						}
 					],
@@ -1948,7 +1948,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "383e58ad-7d44-441f-a898-dc7bc0db8238",
+								"id": "8655c43e-a8f4-495e-8d25-fab34400252a",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -1997,7 +1997,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "7da17da5-e6fc-44cf-ae8b-74666e47dc2e",
+								"id": "a242ccc0-b806-4b46-a73a-4193325edcb0",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2047,7 +2047,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "248cdeba-1da9-4ce1-a2cc-e5239801bb1f",
+								"id": "594a7795-6d76-42f9-b1e7-fa613407e4f3",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2101,7 +2101,7 @@
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
-								"id": "d754b715-95e0-4ba8-9901-9538cbe23b66"
+								"id": "88dc9ea3-6d28-4065-a5e2-cd3d42ede648"
 							}
 						}
 					],
@@ -2161,7 +2161,7 @@
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
-										"id": "35588357-9592-43f5-8eb9-31cf0179bef1"
+										"id": "48da8636-bdcb-45ea-82ac-e517d6c90788"
 									}
 								}
 							],
@@ -2212,7 +2212,7 @@
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
-										"id": "7e7b039f-1bd2-494f-ab7c-12b3edcc7e65"
+										"id": "2cbcf5d5-b9b8-4797-8503-be392ef7b0c2"
 									}
 								}
 							],
@@ -2263,7 +2263,7 @@
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
-										"id": "175a349a-9abb-4dfa-835b-125ca2e4024a"
+										"id": "e38d2de7-8737-4d5b-8195-039eb3352437"
 									}
 								}
 							],
@@ -2314,7 +2314,7 @@
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
-										"id": "cf1148ee-63db-4ee4-842e-e5e56e5dad4a"
+										"id": "bceaaf96-67e2-4f45-bd4a-d74e29ba4aff"
 									}
 								}
 							],
@@ -2361,7 +2361,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "1dfeb7db-8810-491f-befa-486d57dfc3f7",
+										"id": "4e54a61c-1e94-43ec-9453-4b6f70d0ae87",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -2416,7 +2416,7 @@
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
-										"id": "f6986a0c-c1bb-4aa0-8bab-06060b166bb8"
+										"id": "0856d6cd-b8d9-40ac-b76f-61caedb76ac6"
 									}
 								}
 							],
@@ -2480,7 +2480,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/compilation/changelog?startdate=2019-1-15&enddate=2019-5-25",
+									"raw": "{{baseurl}}/compilation/changelog?startdate=2020-10-1&enddate=2020-10-30",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -2491,11 +2491,11 @@
 									"query": [
 										{
 											"key": "startdate",
-											"value": "2019-1-15"
+											"value": "2020-10-1"
 										},
 										{
 											"key": "enddate",
-											"value": "2019-5-25"
+											"value": "2020-10-30"
 										}
 									]
 								}
@@ -2561,7 +2561,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "376d733b-b5e6-421d-a94f-54cefade1fda",
+								"id": "840fe81e-6b84-4cc3-95c8-2dbe55df124b",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2608,7 +2608,7 @@
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
-								"id": "684a61e0-2732-44ee-b167-9aef282e216c"
+								"id": "21d768ca-871d-4880-b7c5-0d330f1c1c4d"
 							}
 						}
 					],
@@ -2653,7 +2653,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ce5185d5-e267-44d2-a1a5-e5f9b1744c06",
+								"id": "a4197dc9-6780-4c37-b9d9-8a902af71d49",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2703,7 +2703,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "b3190ce6-c364-413a-a2fb-a887b46cf2f3",
+								"id": "12db66b0-ed8d-4c2c-b3ba-34aa2a539abc",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2753,7 +2753,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "1d41d59c-81ef-4d59-84a8-a81dfc5dfbfc",
+								"id": "22ef8c8b-0009-4846-a25b-ca134a97bf45",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2814,7 +2814,7 @@
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
-								"id": "aa0d3272-1b39-4cfc-9884-843fea204a27"
+								"id": "989fdb20-23dd-48e4-9a9a-1b1559ecea3f"
 							}
 						}
 					],
@@ -2873,7 +2873,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "2b829234-65dd-40f2-ac5e-33f36db3bd50",
+												"id": "a05cc46b-8fa1-40c5-8990-b63fd05e4190",
 												"exec": [
 													"tests[\"Status code is 201\"] = responseCode.code === 201;"
 												],
@@ -2905,7 +2905,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/3054/entrycontentid",
+											"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/4642/entrycontentid",
 											"host": [
 												"{{baseurl}}"
 											],
@@ -2913,7 +2913,7 @@
 												"policy",
 												"cid:org:pbs.org:Policy268",
 												"permission",
-												"3054",
+												"4642",
 												"entrycontentid"
 											]
 										}
@@ -2926,7 +2926,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "a65be493-48f9-468e-87c2-8feaa66f59b1",
+												"id": "5701f519-d4db-413e-a996-7c2868f9e361",
 												"exec": [
 													"tests[\"Status code is 200\"] = responseCode.code === 200;"
 												],
@@ -2951,7 +2951,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/3054/entrycontentid/cid:org:pbs.org:Season36",
+											"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/4642/entrycontentid/cid:org:pbs.org:Season36",
 											"host": [
 												"{{baseurl}}"
 											],
@@ -2959,7 +2959,7 @@
 												"policy",
 												"cid:org:pbs.org:Policy268",
 												"permission",
-												"3054",
+												"4642",
 												"entrycontentid",
 												"cid:org:pbs.org:Season36"
 											]
@@ -3040,7 +3040,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseurl}}/permission/changelog?startdate=2020-5-13&enddate=2020-5-18",
+											"raw": "{{baseurl}}/permission/changelog?startdate=2020-10-1&enddate=2020-10-30",
 											"host": [
 												"{{baseurl}}"
 											],
@@ -3051,11 +3051,11 @@
 											"query": [
 												{
 													"key": "startdate",
-													"value": "2020-5-13"
+													"value": "2020-10-1"
 												},
 												{
 													"key": "enddate",
-													"value": "2020-5-18"
+													"value": "2020-10-30"
 												}
 											]
 										}
@@ -3072,7 +3072,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "91fe4f3f-bd91-4065-8d87-323e2901a94b",
+										"id": "76f7eff6-3045-470f-8940-a798eac94bee",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -3097,7 +3097,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/3276",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/4642",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -3105,7 +3105,7 @@
 										"policy",
 										"cid:org:pbs.org:Policy268",
 										"permission",
-										"3276"
+										"4642"
 									]
 								}
 							},
@@ -3117,7 +3117,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "a62c8059-e0fb-488b-90ae-3c33d48821f2",
+										"id": "72b7f514-9f53-4844-b372-e8a17382c7aa",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -3168,7 +3168,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "6e8a885a-02ac-4e02-8e6e-49eb67912245",
+										"id": "4281fe57-f420-42f8-ac20-7f0e3be1882b",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -3200,7 +3200,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/3032",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/30445",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -3208,7 +3208,7 @@
 										"policy",
 										"cid:org:pbs.org:Policy268",
 										"permission",
-										"3032"
+										"30445"
 									]
 								}
 							},
@@ -3220,7 +3220,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d86aa136-ce71-46c5-8611-75400caa08c6",
+										"id": "a236e2a7-4cf7-4864-ac30-d9225ed33dc9",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -3245,7 +3245,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/3060",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/30450",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -3253,7 +3253,7 @@
 										"policy",
 										"cid:org:pbs.org:Policy268",
 										"permission",
-										"3060"
+										"30450"
 									]
 								}
 							},
@@ -3265,7 +3265,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "61678d58-ef73-4d04-81f1-98303dcbd60d",
+										"id": "0386397f-ba1f-4b0d-aacb-0b6b4cc5a473",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -3297,15 +3297,15 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/permission/272/logicalassetidregistration",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/4642/logicalassetidregistration",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"policy",
-										"cid:org:pbs.org:Policy215",
+										"cid:org:pbs.org:Policy268",
 										"permission",
-										"272",
+										"4642",
 										"logicalassetidregistration"
 									]
 								}
@@ -3327,7 +3327,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/permission/search?logicalassetid=alid:org:pbs.org:Rightsline-196458",
+									"raw": "{{baseurl}}/permission/search?logicalassetid=alid:org:pbs.org:Rightsline-131928",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -3338,7 +3338,7 @@
 									"query": [
 										{
 											"key": "logicalassetid",
-											"value": "alid:org:pbs.org:Rightsline-196458"
+											"value": "alid:org:pbs.org:Rightsline-131928"
 										}
 									]
 								}
@@ -3360,13 +3360,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/permission/3064/entrylist",
+									"raw": "{{baseurl}}/permission/4642/entrylist",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"permission",
-										"3064",
+										"4642",
 										"entrylist"
 									]
 								}
@@ -3389,7 +3389,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "b37217e4-4c1b-4d1d-baec-916909b05f35",
+												"id": "3def22e1-2771-4146-b8f8-28104d3c5c4c",
 												"exec": [
 													"tests[\"Status code is 201\"] = responseCode.code === 201;"
 												],
@@ -3442,7 +3442,7 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "d209adfc-55c2-4768-9868-6d577db3829e",
+												"id": "ce9ee622-99c4-4535-8dd0-7ebcb015b8f8",
 												"exec": [
 													"tests[\"Status code is 200\"] = responseCode.code === 200;"
 												],
@@ -3488,7 +3488,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "48f0004f-0273-4349-a612-c5d25f6acf82",
+										"id": "4d3f4771-4247-4399-a575-1bf0495c9e7d",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -3498,7 +3498,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "541a544d-a390-4872-8531-39a5fe1e4e30",
+										"id": "d33d3b8b-0d51-42e9-993b-39e1bb17ac8c",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -3578,7 +3578,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseurl}}/prohibition/changelog?startdate=2020-5-13&enddate=2020-5-18",
+											"raw": "{{baseurl}}/prohibition/changelog?startdate=2020-10-1&enddate=2020-10-30",
 											"host": [
 												"{{baseurl}}"
 											],
@@ -3589,11 +3589,11 @@
 											"query": [
 												{
 													"key": "startdate",
-													"value": "2020-5-13"
+													"value": "2020-10-1"
 												},
 												{
 													"key": "enddate",
-													"value": "2020-5-18"
+													"value": "2020-10-30"
 												}
 											]
 										}
@@ -3610,7 +3610,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "c9a648c2-756b-4ed7-9123-f20f3d7709bd",
+										"id": "d42beb57-a4ac-487a-8aac-457cbbe3416a",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -3697,7 +3697,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "1622a1bd-f750-462c-abbd-65ad647d62b5",
+										"id": "94b5eb74-a4a7-4371-a652-cdf6e1990320",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -3749,7 +3749,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "af882215-17c5-4c7a-bf67-8ab98891011a",
+										"id": "99115421-a243-4fd6-9d0b-b74140ac8dbd",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -3794,7 +3794,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "9074d344-99a1-42d2-af18-1d7180d964de",
+										"id": "952534b1-17b0-4ed2-953a-fe4ac72a3acb",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -3863,7 +3863,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/policy/changelog?startdate=2019-4-1&enddate=2019-5-25",
+									"raw": "{{baseurl}}/policy/changelog?startdate=2020-10-1&enddate=2020-10-30",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -3874,11 +3874,11 @@
 									"query": [
 										{
 											"key": "startdate",
-											"value": "2019-4-1"
+											"value": "2020-10-1"
 										},
 										{
 											"key": "enddate",
-											"value": "2019-5-25"
+											"value": "2020-10-30"
 										}
 									]
 								}
@@ -3944,7 +3944,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "0b08d62d-3504-4100-99d4-0e3fbdc50bdf",
+								"id": "69a5ee73-14e3-43b1-bf34-67e51e534114",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -3987,7 +3987,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "1366d199-ddf3-46f8-bbfd-9c1aa085bf87",
+								"id": "dc03e6a2-bfd5-4100-828b-80fded27712d",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -4036,7 +4036,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "7362d1b1-2be7-4ee2-bdd3-173a4cde49a9",
+								"id": "49cbe98e-ef0a-49dd-8e98-77b0f39c6941",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -4086,7 +4086,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "bd3e4a90-ee0e-46b6-8cb0-3494ded7f5af",
+								"id": "53227b39-5aa1-44fc-9d88-7aaa9c32d613",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -4129,7 +4129,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "70bc7ed2-f534-4b4c-8abd-86f45c9ff09b",
+								"id": "55a7cb43-a742-4932-a5b5-7885aed1ab85",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -4161,13 +4161,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy92/logicalassetidregistration",
+							"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1205/logicalassetidregistration",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"policy",
-								"cid:org:pbs.org:Policy92",
+								"cid:org:pbs.org:Policy1205",
 								"logicalassetidregistration"
 							]
 						}
@@ -4180,7 +4180,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ebf56a20-8da1-453e-97cd-7fc464a9cd3e",
+								"id": "6d3df87b-22bc-4bac-b8ac-6b8bc9d66fc1",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -4254,7 +4254,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "530774cd-3674-4b12-a146-ffe3107752aa",
+										"id": "b6e41f75-7194-4637-af60-c07ce2a0f74a",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -4280,7 +4280,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode3818\",\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation1172\",\n    \"ReferentType\": \"Linear\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"en\",\n    \"SubtitledLanguage\": \"en\",\n    \"DviLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\",\n    \"Linear\": {\n        \"PlayRun\": 1,\n        \"PlayDate\":  3, \n        \"PlayType\": \"Hard Feed (with rights)\",\n        \"ReleaseQualifier\": \"premiere\",\n        \"Duration\": \"1800\",\n        \"ProgramService\": {\n            \"ProviderSource\": \"500 - X\",\n            \"ProviderSourceName\": \"PBS\",\n            \"ProviderTimeZone\": \"EDT\"\n        },\n        \"AlternateEventIDList\": [\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-23046921\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-434324324\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-323242342\"\n      }\n    ]\n    }\n}",
+									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode3818\",\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation1172\",\n    \"ReferentType\": \"Linear\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"en\",\n    \"SubtitledLanguage\": \"en\",\n    \"DviLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\",\n    \"Linear\": {\n        \"PlayRun\": 1,\n        \"PlayDay\":  3, \n        \"PlayType\": \"Hard Feed (with rights)\",\n        \"ReleaseQualifier\": \"premiere\",\n        \"Duration\": \"1800\",\n        \"ProgramService\": {\n            \"ProviderSource\": \"500 - X\",\n            \"ProviderSourceName\": \"PBS\",\n            \"ProviderTimeZone\": \"EDT\"\n        },\n        \"AlternateEventIDList\": [\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-23046921\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-434324324\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-323242342\"\n      }\n    ]\n    }\n}",
 									"options": {
 										"raw": {}
 									}
@@ -4304,7 +4304,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "e9021834-baed-48e6-a564-51bb17b6eaa6",
+										"id": "42fd861f-c402-48a5-889a-6f7270d60c18",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -4355,7 +4355,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "86a6d8a3-99c3-4c3e-9491-22de6ecc0f50",
+										"id": "f4f991b1-53ce-4470-9494-9156494257f8",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -4381,20 +4381,20 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"PlayRun\": 234,\r\n\t\"PlayDate\": 10\r\n}",
+									"raw": "{\r\n\t\"PlayRun\": 234,\r\n\t\"PlayDay\": 10\r\n}",
 									"options": {
 										"raw": {}
 									}
 								},
 								"url": {
-									"raw": "{{baseurl}}/event/linear/cid:org:pbs.org:Event1727600/playrun/",
+									"raw": "{{baseurl}}/event/linear/cid:org:pbs.org:Event1820259/playrun/",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"event",
 										"linear",
-										"cid:org:pbs.org:Event1727600",
+										"cid:org:pbs.org:Event1820259",
 										"playrun",
 										""
 									]
@@ -4408,7 +4408,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "9d6ebc77-fe7a-4e87-9b49-ef101dc93473",
+										"id": "c72eae40-c9c1-4513-8e8d-586d7dc33f7d",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -4460,7 +4460,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b57bc243-713c-4c96-81ca-2276f8dafb95",
+										"id": "9448f8bc-83c5-41e1-bf7c-b96fe05fe00a",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -4518,7 +4518,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "8e06c879-5791-4631-ae38-a3f884b8673b",
+										"id": "2b4d48db-b112-4f75-9041-8d5253a4df3d",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -4568,7 +4568,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "224854c5-6004-40b8-8a82-939bee0012f4",
+										"id": "912939e2-f948-44b3-8f9a-66e54690fd42",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -4619,7 +4619,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "955cdf03-5ac0-4bb0-9f13-faa73a7dfe39",
+										"id": "01198be6-3df6-4bc2-b5b2-0f6ecebdd880",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -4671,7 +4671,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ab308252-c686-44e1-80d0-af3156031b99",
+										"id": "2a3930c4-dc51-4183-935a-b4cff687fa9b",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -4729,7 +4729,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "54393220-d319-476e-b673-283e6d3ab0d3",
+										"id": "8122a490-83c3-46b2-a237-e03fd8e98c4d",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -4754,7 +4754,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/showschedule?eventdate=2018-12-03&manifestationId=cid:org:pbs.org:Manifestation1172&episodeId=cid:org:pbs.org:Episode3818&providersource=SIXPBS&query-condition=AND",
+									"raw": "{{baseurl}}/showschedule?eventdate=2019-05-27&manifestationId=cid:org:pbs.org:Manifestation171030&episodeId=cid:org:pbs.org:Episode26799&providersource=SIXPBS&query-condition=AND",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -4764,15 +4764,15 @@
 									"query": [
 										{
 											"key": "eventdate",
-											"value": "2018-12-03"
+											"value": "2019-05-27"
 										},
 										{
 											"key": "manifestationId",
-											"value": "cid:org:pbs.org:Manifestation1172"
+											"value": "cid:org:pbs.org:Manifestation171030"
 										},
 										{
 											"key": "episodeId",
-											"value": "cid:org:pbs.org:Episode3818"
+											"value": "cid:org:pbs.org:Episode26799"
 										},
 										{
 											"key": "providersource",
@@ -4793,7 +4793,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "00614e87-518d-4648-8478-78b420a2e547",
+										"id": "2b5ecaf9-9157-4e45-afc7-e965f516e22b",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -4850,7 +4850,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "64ba9d61-31d3-421d-8254-2c43d18913e5",
+										"id": "871ade47-6c9b-4b05-a5c2-d4cd88deba91",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -4977,7 +4977,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/event/changelog?startdate=2019-4-1&enddate=2019-6-25",
+									"raw": "{{baseurl}}/event/changelog?startdate=2020-10-1&enddate=2020-10-30",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -4988,11 +4988,11 @@
 									"query": [
 										{
 											"key": "startdate",
-											"value": "2019-4-1"
+											"value": "2020-10-1"
 										},
 										{
 											"key": "enddate",
-											"value": "2019-6-25"
+											"value": "2020-10-30"
 										}
 									]
 								}
@@ -5009,7 +5009,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "29fef737-b71d-426b-9e3c-b52a432de91e",
+								"id": "da915d34-fea9-4675-bc3c-f249b786127b",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -5052,7 +5052,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "c061dbe1-3924-482e-a8df-8d8c4ee70ac5",
+								"id": "b8849b98-fc34-4177-81b1-e3aa35611ba9",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -5107,7 +5107,7 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"id": "814c5f47-d630-4c5e-8acf-457e370302cf"
+								"id": "2137b3ef-51f9-4de0-afaf-65384878d390"
 							}
 						}
 					],
@@ -5160,7 +5160,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "8e353994-9bd4-4e93-8590-9ee8bc667bf9",
+								"id": "fbd614a2-f7b9-4bc4-9f60-cb0cf3b0114e",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -5185,7 +5185,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/catalog/search?contentid=cid:org:pbs.org:Broadview-45706791",
+							"raw": "{{baseurl}}/catalog/search?contentid=cid:org:pbs.org:Broadview-618586114",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -5196,7 +5196,7 @@
 							"query": [
 								{
 									"key": "contentid",
-									"value": "cid:org:pbs.org:Broadview-45706791"
+									"value": "cid:org:pbs.org:Broadview-618586114"
 								}
 							]
 						}
@@ -5213,7 +5213,7 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"id": "4e88b79a-26df-4a6e-aeb7-3013bcbbc299"
+								"id": "1f1ffe21-98d9-4af7-8a88-d95220271c77"
 							}
 						}
 					],
@@ -5257,7 +5257,7 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"id": "0203b649-58bb-4b3e-a7ab-adae7544f46b"
+								"id": "aa540ce2-de9e-4e85-9dbe-6295737fe720"
 							}
 						}
 					],
@@ -5297,7 +5297,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "9063492e-c870-4806-8be8-752b54c05a9c",
+								"id": "02a937c3-0ac8-420d-a4e5-a6561143344c",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -5396,7 +5396,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "7e7f5499-6c5e-4e3b-b7a4-d41c99897e32",
+								"id": "ecc2cd59-d1c7-4681-b14e-a1c19d4163fa",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -5439,7 +5439,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "fc284784-1768-49cd-935a-6ceb34ce2384",
+								"id": "76773e13-8228-49f2-b2b0-e2a10ccb1227",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -5465,7 +5465,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"MediaInventoryHouseNumber\": 777,\r\n    \"StructuralType\": \"Abstraction\",\r\n    \"ReferentType\": \"Edit\",\r\n    \"Title\": \"Wild Kratts\",\r\n    \"TitleClass\": \"Regional\",\r\n    \"SynopsisLong\": \"Edit description - Testing\",\r\n    \"EditClass\": [\r\n        \"Orginal\",\r\n        \"Supplemental\"\r\n    ],\r\n    \"EditUse\": \"Broadcast\",\r\n    \"ApproximateLength\": \"PT0H28M55S\",\r\n    \"ParentUID\": \"cid:org:pbs.org:Episode777\",\r\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation777\",\r\n    \"AlternateEditIDList\": [\r\n        {\r\n            \"AlternateEditID\": \"alid:org:pbs.org:DevTest-4233\"\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"StructuralType\": \"Abstraction\",\r\n    \"ReferentType\": \"Edit\",\r\n    \"Description\": \"Wild Kratts\",\r\n    \"EditClass\": [\r\n        \"Original\",\r\n        \"Supplemental\"\r\n    ],\r\n    \"EditUse\": \"Broadcast\",\r\n    \"ActualLength\": \"PT0H28M55S\",\r\n    \"ParentUID\": \"cid:org:pbs.org:Episode777\",\r\n    \"AlternateEditIDList\": [\r\n        {\r\n            \"AlternateEditID\": \"alid:org:pbs.org:DevTest-4233\"\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {}
 							}
@@ -5488,7 +5488,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "04764ac7-8077-4ed0-ba09-529db290bb81",
+								"id": "8c86b9e5-6a3d-4e78-8f9e-9a28aa13881d",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -5514,7 +5514,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"MediaInventoryHouseNumber\": 123,\r\n    \"StructuralType\": \"Abstraction\",\r\n    \"ReferentType\": \"Edit\",\r\n    \"Title\": \"Wild Kratts\",\r\n    \"TitleClass\": \"Regional\",\r\n    \"SynopsisLong\": \"Edit update - Testing4534\",\r\n    \"EditClass\": [\r\n        \"Original\",\r\n        \"Supplemental\"\r\n    ],\r\n    \"EditUse\": \"Broadcast\",\r\n    \"ApproximateLength\": \"PT0H28M55S\",\r\n    \"ParentUID\": \"cid:org:pbs.org:Episode1234\",\r\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation546\"\r\n}",
+							"raw": "{\r\n    \"FileDeliveryStatus\": \"Delivered\",\r\n    \"Description\": \"(ARUR  000104Z, REEL 1) ARTHUR\",\r\n    \"EditClass\": [\r\n        \"Original\"\r\n    ],\r\n    \"EditUse\": \"Broadcast\",\r\n    \"ActualLength\": \"PT0H30M0S\",\r\n    \"ParentUID\": \"cid:org:pbs.org:Episode842\"\r\n}",
 							"options": {
 								"raw": {}
 							}
@@ -5538,7 +5538,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "b718fcac-ea91-45f0-93e5-23a35d7e13fc",
+								"id": "5ebf1ee9-6553-4094-83de-dfcffc7b9419",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -5570,13 +5570,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/edit/cid:org:pbs.org:Edit6",
+							"raw": "{{baseurl}}/edit/cid:org:pbs.org:Edit8994",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"edit",
-								"cid:org:pbs.org:Edit6"
+								"cid:org:pbs.org:Edit8994"
 							]
 						}
 					},
@@ -5588,7 +5588,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "0f09b54c-7e3b-498c-9d08-37d781eb9517",
+								"id": "838c0447-9b7c-46c1-a3af-5238f8abca1e",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -5628,6 +5628,59 @@
 								"edit",
 								"cid:org:pbs.org:Edit11",
 								"alternateeditidregistration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Search",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bda441cb-6156-42bb-bf12-509bcd91f73b",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/edit/search?description=Wild Kratts - Update&alternateeditid=alid:org:pbs.org:Broadview-141805668",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"edit",
+								"search"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": "Wild Kratts - Update"
+								},
+								{
+									"key": "alternateeditid",
+									"value": "alid:org:pbs.org:Broadview-141805668"
+								}
 							]
 						}
 					},
@@ -5697,7 +5750,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "4ae15359-1088-43bb-93d5-f6daa5e39794",
+										"id": "b0ee5cfa-d89c-45fd-be00-80ce94c64dcc",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -5748,7 +5801,7 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "e063f1d8-ab56-463c-932a-7df1a93bc1dd",
+										"id": "fa80f749-2230-4c38-98f4-d367890c88f4",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -5988,7 +6041,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "c44babf9-4abe-43eb-ac7b-38d085450203",
+								"id": "ac38573c-198f-497d-8fc4-58f148ea2277",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],

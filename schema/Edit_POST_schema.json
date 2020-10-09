@@ -1,58 +1,47 @@
 {
   "title": "The Root Schema",
   "required": [
-    "Title",
+    "Description",
     "EditClass",
     "EditUse",
-    "ApproximateLength",
+    "ActualLength",
     "ParentUID"
   ],
   "errorMessage": {
     "type": "The request should be an object",
     "required": {
-      "Title": "Title is Required",
+      "Description": "Description is Required",
       "EditClass": "EditClass is Required",
       "EditUse": "EditUse is Required",
-      "ApproximateLength": "ApproximateLength is Required",
+      "ActualLength": "ActualLength is Required",
       "ParentUID": "ParentUID is Required"
     }
   },
   "type": "object",
   "properties": {
-    "Title": {
+    "Description": {
       "minLength": 1,
       "pattern": "^(.*)$",
       "type": "string",
       "errorMessage": {
-        "type": "Title must be a String",
-        "minLength": "Title should have a minimum one character"
+        "type": "Description must be a String",
+        "minLength": "Description should have a minimum one character"
       }
     },
-    "TitleClass": {
+    "FileDeliveryStatus": {
       "transform": [
         "trim",
         "toEnumCase"
       ],
       "type": "string",
       "enum": [
-        "Release",
-        "Abreviated",
-        "Working",
-        "Acronym",
-        "fan-based",
-        "Internal",
-        "Series numeric",
-        "Series date",
-        "Regional",
-        "broadcast",
-        "AKA",
-        "FKA",
-        "Tralsliterated",
-        "Other"
+        "Delivered",
+        "Future",
+        "Removed"
       ],
       "errorMessage": {
-        "type": "TitleClass must be a String",
-        "enum": "TitleClass must be a Release, Abreviated, Working, Acronym, fan-based, Internal, Series numeric, Series date, Regional, broadcast, AKA, FKA, Tralsliterated, Other irrepective to case."
+        "type": "FileDeliveryStatus must be a String",
+        "enum": "FileDeliveryStatus must be a Delivered, Future, Removed irrepective to case."
       }
     },
     "EditClass": {
@@ -151,28 +140,6 @@
         "minLength": "ParentUID should have a minimum one character"
       }
     },
-    "ManifestationUID": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "ManifestationUID must be a String"
-      }
-    },
-    "SynopsisLong": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "SynopsisLong must be a String"
-      }
-    },
-    "MediaInventoryHouseNumber": {
-      "type": "integer",
-      "format": "int32",
-      "errorMessage": {
-        "type": "MediaInventoryHouseNumber must be an Integer",
-        "format": "MediaInventoryHouseNumber must be in int32 format"
-      }
-    },
     "ReferentType": {
       "transform": [
         "trim",
@@ -211,20 +178,13 @@
         "enum": "StructuralType must be an Abstraction, Performace or Digital irrespective to Case."
       }
     },
-    "ApproximateLength": {
+    "ActualLength": {
       "minLength": 1,
       "pattern": "^(.*)$",
       "type": "string",
       "errorMessage": {
-        "type": "ApproximateLength must be a String",
-        "minLength": "ApproximateLength should have a minimum one character"
-      }
-    },
-    "ReleaseDate": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "ReleaseDate must be a String"
+        "type": "ActualLength must be a String",
+        "minLength": "ActualLength should have a minimum one character"
       }
     },
     "AlternateEditIDList": {
