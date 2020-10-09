@@ -143,13 +143,6 @@
         "type": "Title120 must be a String"
       }
     },
-	"TitleLong": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "TitleLong must be a String"
-      }
-    },
     "Title19": {
       "maxLength": 19,
       "pattern": "^(.*)$",
