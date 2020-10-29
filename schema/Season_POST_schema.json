@@ -1,113 +1,214 @@
 {
-    "required": [
-        "ParentUID",
-        "ReferentType",
-        "SeasonClass",
-        "SequenceNumber",
-        "Title"
-    ],
-    "type": "object",
-    "properties": {
-        "SeasonUID": {
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "EpisodeUID": {
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "ParentUID": {
+  "required": [
+    "ParentUID",
+    "ReferentType",
+    "SeasonClass",
+    "SequenceNumber",
+    "Title"
+  ],
+  "type": "object",
+  "properties": {
+    "SeasonUID": {
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "EpisodeUID": {
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "ParentUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "StructuralType": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Abstraction",
+        "Performance",
+        "Digital"
+      ]
+    },
+    "ReferentType": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Series",
+        "Season",
+        "TV",
+        "Movie",
+        "Short",
+        "Web",
+        "Compilation",
+        "Supplemental"
+      ]
+    },
+    "SequenceNumber": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "Title": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "TitleClass": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "SeasonClass": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Adjunct",
+        "Main",
+        "Miniseries",
+        "Pro Forma",
+        "Recut"
+      ]
+    },
+    "Keywords": {
+      "type": "object",
+      "errorMessage": {
+        "type": "Keywords should be an object"
+      },
+      "properties": {
+        "Mood": {
+          "type": "array",
+          "items": {
+            "type": "string",
             "minLength": 1,
             "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "StructuralType": {
-            "transform": ["trim", "toEnumCase"],
-            "type": "string",
-            "enum": [
-                "Abstraction",
-                "Performance",
-                "Digital"
-            ]
-        },
-        "ReferentType": {
-            "transform": ["trim", "toEnumCase"],
-            "type": "string",
-            "enum": [
-                "Series",
-                "Season",
-                "TV",
-                "Movie",
-                "Short",
-                "Web",
-                "Compilation",
-                "Supplemental"
-            ]
-        },
-        "SequenceNumber": {
-            "type": "integer",
-            "format": "int32"
-        },
-        "Title": {
-            "minLength": 1,
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "TitleClass": {
-            "minLength": 1,
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "SeasonClass": {
-            "transform": ["trim", "toEnumCase"],
-            "type": "string",
-            "enum": [
-                "Adjunct",
-                "Main",
-                "Miniseries",
-                "Pro Forma",
-                "Recut"
-            ]
-        },
-        "EntityType": {
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "EidrId": {
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "CreateDateTime": {
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "UpdateDateTime": {
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "PublishedStatus": {
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "ReleaseDate": {
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "ContentIDList": {
-            "type": "array",
-            "uniqueItems": true,
-            "items": {
-                "required": [
-                    "ContentID"
-                ],
-                "type": "object",
-                "properties": {
-                    "ContentID": {
-                        "pattern": "^(.*)$",
-                        "type": "string"
-                    }
-                }
+            "errorMessage": {
+              "type": "Mood items must be a String",
+              "minLength": "Mood items should have a minimum one character"
             }
+          }
+        },
+        "Theme": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "Theme items must be a String",
+              "minLength": "Theme items should have a minimum one character"
+            }
+          }
+        },
+        "Character": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "Character items must be a String",
+              "minLength": "Character items should have a minimum one character"
+            }
+          }
+        },
+        "Setting": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "Setting items must be a String",
+              "minLength": "Setting items should have a minimum one character"
+            }
+          }
+        },
+        "Subject": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "Subject items must be a String",
+              "minLength": "Subject items should have a minimum one character"
+            }
+          }
+        },
+        "General": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "General items must be a String",
+              "minLength": "General items should have a minimum one character"
+            }
+          }
+        },
+        "TimePeriod": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "TimePeriod items must be a String",
+              "minLength": "TimePeriod items should have a minimum one character"
+            }
+          }
         }
+      }
+    },
+    "EntityType": {
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "EidrId": {
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "CreateDateTime": {
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "UpdateDateTime": {
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "PublishedStatus": {
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "ReleaseDate": {
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "ContentIDList": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "required": [
+          "ContentID"
+        ],
+        "type": "object",
+        "properties": {
+          "ContentID": {
+            "pattern": "^(.*)$",
+            "type": "string"
+          }
+        }
+      }
     }
+  }
 }

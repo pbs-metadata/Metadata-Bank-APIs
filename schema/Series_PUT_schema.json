@@ -324,6 +324,107 @@
         "enum": "TitleLanguage must be a valid Language Code of standard (ISO 639-1)"
       }
     },
+    "Title120": {
+      "maxLength": 120,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "Title120 must be a String and maximum 120 characters",
+        "maxLength": "Title120 should be maximum 120 characters"
+      }
+    },
+    "Keywords": {
+      "type": "object",
+      "errorMessage": {
+        "type": "Keywords should be an object"
+      },
+      "properties": {
+        "Mood": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "Mood items must be a String",
+              "minLength": "Mood items should have a minimum one character"
+            }
+          }
+        },
+        "Theme": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "Theme items must be a String",
+              "minLength": "Theme items should have a minimum one character"
+            }
+          }
+        },
+        "Character": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "Character items must be a String",
+              "minLength": "Character items should have a minimum one character"
+            }
+          }
+        },
+        "Setting": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "Setting items must be a String",
+              "minLength": "Setting items should have a minimum one character"
+            }
+          }
+        },
+        "Subject": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "Subject items must be a String",
+              "minLength": "Subject items should have a minimum one character"
+            }
+          }
+        },
+        "General": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "General items must be a String",
+              "minLength": "General items should have a minimum one character"
+            }
+          }
+        },
+        "TimePeriod": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "TimePeriod items must be a String",
+              "minLength": "TimePeriod items should have a minimum one character"
+            }
+          }
+        }
+      }
+    },
     "ReleaseDate": {
       "pattern": "^(.*)$",
       "type": "string",
@@ -594,14 +695,14 @@
       ]
     },
     "SynopsisShort": {
-      "pattern": "^(.*)$",
+      "pattern": "^([\\s\\S]*)$",
       "type": "string",
       "errorMessage": {
         "type": "SynopsisShort must be a String"
       }
     },
     "SynopsisLong": {
-      "pattern": "^(.*)$",
+      "pattern": "^([\\s\\S]*)$",
       "type": "string",
       "errorMessage": {
         "type": "SynopsisLong must be a String"

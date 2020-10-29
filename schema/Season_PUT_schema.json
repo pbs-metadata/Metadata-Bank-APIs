@@ -1,90 +1,191 @@
 {
-    "type": "object",
-    "properties": {
-        "SeasonUID": {
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "EpisodeUID": {
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "ParentUID": {
+  "type": "object",
+  "properties": {
+    "SeasonUID": {
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "EpisodeUID": {
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "ParentUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "StructuralType": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Abstraction",
+        "Performance",
+        "Digital"
+      ]
+    },
+    "ReferentType": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Series",
+        "Season",
+        "TV",
+        "Movie",
+        "Short",
+        "Web",
+        "Compilation",
+        "Supplemental"
+      ]
+    },
+    "SeasonClass": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Adjunct",
+        "Main",
+        "Miniseries",
+        "Pro Forma",
+        "Recut"
+      ]
+    },
+    "SequenceNumber": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "Title": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "TitleClass": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "Keywords": {
+      "type": "object",
+      "errorMessage": {
+        "type": "Keywords should be an object"
+      },
+      "properties": {
+        "Mood": {
+          "type": "array",
+          "items": {
+            "type": "string",
             "minLength": 1,
             "pattern": "^(.*)$",
-            "type": "string"
+            "errorMessage": {
+              "type": "Mood items must be a String",
+              "minLength": "Mood items should have a minimum one character"
+            }
+          }
         },
-        "StructuralType": {
-            "transform": ["trim", "toEnumCase"],
+        "Theme": {
+          "type": "array",
+          "items": {
             "type": "string",
-            "enum": [
-                "Abstraction",
-                "Performance",
-                "Digital"
-            ]
-        },
-        "ReferentType": {
-            "transform": ["trim", "toEnumCase"],
-            "type": "string",
-            "enum": [
-                "Series",
-                "Season",
-                "TV",
-                "Movie",
-                "Short",
-                "Web",
-                "Compilation",
-                "Supplemental"
-            ]
-        },
-        "SeasonClass": {
-            "transform": ["trim", "toEnumCase"],
-            "type": "string",
-            "enum": [
-                "Adjunct",
-                "Main",
-                "Miniseries",
-                "Pro Forma",
-                "Recut"
-            ]
-        },
-        "SequenceNumber": {
-            "type": "integer",
-            "format": "int32"
-        },
-        "Title": {
             "minLength": 1,
             "pattern": "^(.*)$",
-            "type": "string"
+            "errorMessage": {
+              "type": "Theme items must be a String",
+              "minLength": "Theme items should have a minimum one character"
+            }
+          }
         },
-        "TitleClass": {
+        "Character": {
+          "type": "array",
+          "items": {
+            "type": "string",
             "minLength": 1,
             "pattern": "^(.*)$",
-            "type": "string"
+            "errorMessage": {
+              "type": "Character items must be a String",
+              "minLength": "Character items should have a minimum one character"
+            }
+          }
         },
-        "EntityType": {
+        "Setting": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
             "pattern": "^(.*)$",
-            "type": "string"
+            "errorMessage": {
+              "type": "Setting items must be a String",
+              "minLength": "Setting items should have a minimum one character"
+            }
+          }
         },
-        "EidrId": {
+        "Subject": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
             "pattern": "^(.*)$",
-            "type": "string"
+            "errorMessage": {
+              "type": "Subject items must be a String",
+              "minLength": "Subject items should have a minimum one character"
+            }
+          }
         },
-        "CreateDateTime": {
+        "General": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
             "pattern": "^(.*)$",
-            "type": "string"
+            "errorMessage": {
+              "type": "General items must be a String",
+              "minLength": "General items should have a minimum one character"
+            }
+          }
         },
-        "UpdateDateTime": {
+        "TimePeriod": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
             "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "PublishedStatus": {
-            "pattern": "^(.*)$",
-            "type": "string"
-        },
-        "ReleaseDate": {
-            "pattern": "^(.*)$",
-            "type": "string"
+            "errorMessage": {
+              "type": "TimePeriod items must be a String",
+              "minLength": "TimePeriod items should have a minimum one character"
+            }
+          }
         }
+      }
+    },
+    "EntityType": {
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "EidrId": {
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "CreateDateTime": {
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "UpdateDateTime": {
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "PublishedStatus": {
+      "pattern": "^(.*)$",
+      "type": "string"
+    },
+    "ReleaseDate": {
+      "pattern": "^(.*)$",
+      "type": "string"
     }
+  }
 }
