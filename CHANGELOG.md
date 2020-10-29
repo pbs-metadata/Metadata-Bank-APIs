@@ -1,7 +1,12 @@
+## v1.0.22.1
+ * MBANK v0.22.1 - JSON schema - The new field Title120 & keywords are added to Series. The keywords field is added to Season and Episode Entity.
+ * MBANK v0.22.1 - Postman collection - The new field Title120 & keywords are added to Series. The keywords["Mood", "TimePeriod", "Theme", "Character", "Setting", "Subject", "General" - String of Ayray] field is added to Season and Episode Entity
+ * MBANK v0.22.1 - Postman collection - The new endpoints are added to delete the existing ContentId, LogicalAssetID and AlternateSupplementalID for Manifestation, Rights and Supplemental entities respectively.
+ 
 ## v1.0.22
  * MBANK v0.22 - JSON schema - The new field FileDeliveryStatus is added to Edit and renamed Title to Description and ApproximateLength to ActualLength and removed MediaInventoryHouseNumber, SynopsisLong and PublishedStatus fields.
  * MBANK v0.22 - Postman collection - The new field FileDeliveryStatus is added to Edit and renamed Title to Description and ApproximateLength to ActualLength and removed MediaInventoryHouseNumber, SynopsisLong and PublishedStatus fields.
- * MBANK v0.22 - Postman collection - The Edit search endpoint is added for Edit
+ * MBANK v0.22 - Postman collection - The Edit search endpoint is added for Edit 
  
 ## v1.0.21
  * MBANK v0.21 - JSON schema - The new field TitleLong is added to Episode & series entities & The standalone episode will be created without parent.
