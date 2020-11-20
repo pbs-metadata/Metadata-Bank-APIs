@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "3198582f-ed55-4e65-83ed-4e88a1b867e2",
-		"name": "Metadata-Bank-API-v0.22.1",
+		"name": "Metadata-Bank-API-v0.23",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -864,7 +864,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/season/search?title=Tavis Smiley Report&contentid=cid:org:pbs.org:Broadview-Season.10-Series.615957619",
+							"raw": "{{baseurl}}/season/search?title=Tavis Smiley Report&contentid=cid:org:pbs.org:Rightsline-70825",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -879,7 +879,7 @@
 								},
 								{
 									"key": "contentid",
-									"value": "cid:org:pbs.org:Broadview-Season.10-Series.615957619"
+									"value": "cid:org:pbs.org:Rightsline-70825"
 								}
 							]
 						}
@@ -1016,13 +1016,57 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode31448",
+							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode37461",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"episode",
-								"cid:org:pbs.org:Episode31448"
+								"cid:org:pbs.org:Episode37461"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Episode Simple GET",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a3976075-1cca-4e46-a73c-80dae4088e4f",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/episode/simple-episode/cid:org:pbs.org:Episode37468",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"episode",
+								"simple-episode",
+								"cid:org:pbs.org:Episode37468"
 							]
 						}
 					},
@@ -1060,7 +1104,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Season489\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"TV\",\n  \"EpisodeNumber\": 3011,\n  \"EpisodeClass\": \"Main\",\n  \"Title\": \"Frontline | Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"Title120\": \"Frontline | Money, Power and Wall Street\",\n  \"Title19\": \"Frontline\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"en\",\n  \"SynopsisShort\": \"Part 1 - Learn how two U.S. administrations have confronted the economic crisis. \",\n  \"SynopsisLong\": \"Part 1 - FRONTLINE producer Michael Kirk (“Inside the Meltdown,” “The Warning”) investigates how two U.S. administrations have confronted the crisis — while dealing with sharp internal divisions and a relationship with Wall Street marked by mistrust and dependence, mutual interests and competing goals. The investigation charts the largest government bailout in U.S. history, a series of decisions that rewrote the rules of government and fueled a debate that would alter the country’s political landscape. Focusing on the Obama administration, FRONTLINE tells the story of a newly elected president with a mandate for change grappling with the multi-headed menace of economic instability, and with fundamental choices about winners and losers and the direction of his presidency.\",\n  \"CountryOfOrigin\": \"US\",\n  \"PrimaryGenre\": \"Public Affairs\",\n  \"SecondaryGenre\": \"Public Affairs\",\n  \"DistributionNumber\": 11,\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:Rightsline-8643\"\n    },\n    {\n      \"ContentID\": \"cid:org:pbs.org:NOLACode:FRON  003011\"\n    }\n  ],\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-3383374\",\n      \"Role\": \"Executive Producer\",\n      \"DisplayName\": \"colette neirouz\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136758,\n      \"DisplayName\": \"PBS\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136739,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ]\n}",
+							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Season489\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"TV\",\n  \"EpisodeNumber\": 3011,\n  \"EpisodeClass\": \"Main\",\n  \"Title\": \"Frontline | Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"Title120\": \"Frontline | Money, Power and Wall Street\",\n  \"Title19\": \"Frontline\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"en\",\n  \"SynopsisShort\": \"Part 1 - Learn how two U.S. administrations have confronted the economic crisis. \",\n  \"SynopsisLong\": \"Part 1 - FRONTLINE producer Michael Kirk (“Inside the Meltdown,” “The Warning”) investigates how two U.S. administrations have confronted the crisis — while dealing with sharp internal divisions and a relationship with Wall Street marked by mistrust and dependence, mutual interests and competing goals. The investigation charts the largest government bailout in U.S. history, a series of decisions that rewrote the rules of government and fueled a debate that would alter the country’s political landscape. Focusing on the Obama administration, FRONTLINE tells the story of a newly elected president with a mandate for change grappling with the multi-headed menace of economic instability, and with fundamental choices about winners and losers and the direction of his presidency.\",\n  \"CountryOfOrigin\": \"US\",\n  \"PrimaryGenre\": \"Public Affairs\",\n  \"SecondaryGenre\": [\"Public Affairs\", \"Advice\"],\n  \"DistributionNumber\": 11,\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:Rightsline-8643\"\n    },\n    {\n      \"ContentID\": \"cid:org:pbs.org:NOLACode:FRON  003011\"\n    }\n  ],\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-3383374\",\n      \"Role\": \"Executive Producer\",\n      \"DisplayName\": \"colette neirouz\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136758,\n      \"DisplayName\": \"PBS\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136739,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ]\n}",
 							"options": {
 								"raw": {}
 							}
@@ -1109,19 +1153,19 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Season824\",\n  \"EpisodeNumber\": 4409,\n  \"EpisodeClass\": \"Main\",\n  \"SynopsisShort\": \"Revel in an hour with New Orleans funk masters Trombone Shorty & Orleans Avenue.\",\n  \"SynopsisLong\": \"Revel in an hour with New Orleans funk masters Trombone Shorty & Orleans Avenue, with special guest Cyril Neville. Shorty lays down the grooves with highlights from his recent Voodoo Threauxdown tour.\",\n  \"CountryOfOrigin\": \"US\",\n  \"PrimaryGenre\": \"Arts\",\n  \"SecondaryGenre\": \"sports\",\n  \"DistributionNumber\": 9,\n  \"ApproximateLength\": \"PT1H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"en\"\n  },\n  \"Title\": \"Episode 9\",\n  \"Title19\": \"\",\n  \"Title120\": \"Trombone Shorty & Orleans Avenue\",\n  \"TitleClass\": \"Release\",\n  \"TitleLanguage\": \"en\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"CreditsList\": [\n    {\n      \"Role\": \"Performer\",\n      \"TalentID\": \"cid:org:pbs.org:Broadview-141805668\",\n      \"DisplayName\": \"Oestreicher, Dan\"\n    },\n    {\n      \"Role\": \"Performer\",\n      \"TalentID\": \"cid:org:pbs.org:Broadview-141805671\",\n      \"DisplayName\": \"Peebles, Joey\"\n    }\n  ]\n}",
+							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Season824\",\n  \"EpisodeNumber\": 4409,\n  \"EpisodeClass\": \"Main\",\n  \"SynopsisShort\": \"Revel in an hour with New Orleans funk masters Trombone Shorty & Orleans Avenue.\",\n  \"SynopsisLong\": \"Revel in an hour with New Orleans funk masters Trombone Shorty & Orleans Avenue, with special guest Cyril Neville. Shorty lays down the grooves with highlights from his recent Voodoo Threauxdown tour.\",\n  \"CountryOfOrigin\": \"US\",\n  \"PrimaryGenre\": \"Arts\",\n  \"SecondaryGenre\":[\"Sports\", \"Western\"],\n  \"DistributionNumber\": 9,\n  \"ApproximateLength\": \"PT1H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"en\"\n  },\n  \"Title\": \"Episode 9\",\n  \"Title19\": \"\",\n  \"Title120\": \"Trombone Shorty & Orleans Avenue\",\n  \"TitleClass\": \"Release\",\n  \"TitleLanguage\": \"en\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"CreditsList\": [\n    {\n      \"Role\": \"Performer\",\n      \"TalentID\": \"cid:org:pbs.org:Broadview-141805668\",\n      \"DisplayName\": \"Oestreicher, Dan\"\n    },\n    {\n      \"Role\": \"Performer\",\n      \"TalentID\": \"cid:org:pbs.org:Broadview-141805671\",\n      \"DisplayName\": \"Peebles, Joey\"\n    }\n  ]\n}",
 							"options": {
 								"raw": {}
 							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode31448",
+							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode37468",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"episode",
-								"cid:org:pbs.org:Episode31448"
+								"cid:org:pbs.org:Episode37468"
 							]
 						}
 					},
@@ -3168,6 +3212,49 @@
 							"_postman_isSubFolder": true
 						},
 						{
+							"name": "Permission GET BY UID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "91e9b60b-ffd7-447d-bc91-fa1649c89cc5",
+										"exec": [
+											"tests[\"Status code is 200\"] = responseCode.code === 200;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "apikey",
+										"value": "{{apikey}}"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/permission/4642",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"permission",
+										"4642"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Permission GET",
 							"event": [
 								{
@@ -4698,7 +4785,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Episode23818\",\n  \"ManifestationUID\": \"cid:org:pbs.org:Manifestation21172\",\n  \"ReferentType\": \"VOD\",\n  \"StructuralType\": \"Performance\",\n  \"SAP\": false,\n  \"DubbedLanguage\": \"en\",\n  \"SubtitledLanguage\": \"en\",\n  \"Qualifier\": [\n    \"CC\",\n    \"3D\",\n    \"Dubbed\"\n  ],\n  \"EventDate\": \"2018-12-03T11:24:01.486592\",\n  \"VOD\": {\n    \"ReleaseQualifier\": \"Repeat\",\n    \"Duration\": \"1800\",\n    \"PlayRun\": 12,\n    \"ProviderSource\": \"pbs.org\",\n    \"StartDateTime\": \"2007-04-14T14:00:00\",\n    \"EndDateTime\": \"2007-04-14T15:00:00\",\n    \"AlternateEventIDList\": [\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-323242342\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-64545324\"\n      }\n    ]\n  }\n}",
+									"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Episode23818\",\n  \"ManifestationUID\": \"cid:org:pbs.org:Manifestation21172\",\n  \"ReferentType\": \"VOD\",\n  \"StructuralType\": \"Performance\",\n  \"SAP\": false,\n  \"DubbedLanguage\": \"en\",\n  \"SubtitledLanguage\": \"en\",\n  \"Qualifier\": [\n    \"CC\",\n    \"3D\",\n    \"Dubbed\"\n  ],\n  \"EventDate\": \"2021-03-10T12:00:00Z\",\n  \"VOD\": {\n    \"ReleaseQualifier\": \"Repeat\",\n    \"Duration\": \"1800\",\n    \"PlayRun\": 12,\n    \"ProviderSource\": \"pbs.org\",\n    \"StartDateTime\": \"2007-04-14T14:00:00\",\n    \"EndDateTime\": \"2007-04-14T15:00:00\",\n    \"AlternateEventIDList\": [\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-323242342\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-64545324\"\n      }\n    ]\n  }\n}",
 									"options": {
 										"raw": {}
 									}
