@@ -1,3 +1,6 @@
+## v1.0.23.0
+   * MBANK v0.23.0 - Postman collection - The new endpoints are added to get permission by PermissionID
+
 ## v1.0.22.1
  * MBANK v0.22.1 - JSON schema - The new field Title120 & keywords are added to Series. The keywords field is added to Season and Episode Entity.
  * MBANK v0.22.1 - Postman collection - The new field Title120 & keywords are added to Series. The keywords["Mood", "TimePeriod", "Theme", "Character", "Setting", "Subject", "General" - String of Ayray] field is added to Season and Episode Entity
