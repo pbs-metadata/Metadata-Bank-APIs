@@ -1,3 +1,9 @@
+## v1.0.24.0
+   * MBANK v0.24.0 - Postman collection - The new endpoints are added to get basic information for series, Season, Episode and its Manifestation.
+   * MBANK v0.24.0 - Postman collection - The new event search endpoint is added to get Event information based on startdate and enddate.
+   * MBANK v0.24.0 - Postman collection - The field CommonCarriage is added to event entity.
+   * MBANK v0.24.0 - Postman collection - The parameter enddatetime is added to linear show schedule search.
+   
 ## v1.0.23.0
    * MBANK v0.23.0 - Postman collection - The new endpoints are added to get permission by PermissionID
 
