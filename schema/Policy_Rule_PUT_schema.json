@@ -253,6 +253,7 @@
               "Learning Media",
               "Website",
               "Mobile Apps/Interactive",
+			  "Podcasting",
               "Advertising and Promotion",
               "Merchandising",
               "Publishing: eBook and Print",
@@ -262,7 +263,7 @@
             ],
             "errorMessage": {
               "type": "items must be a String",
-              "enum": "items must be one of the given values - Television, Linear,Linear Streaming,Linear Streaming -- Non-Commercial,Linear Streaming -- Commercial,Broadcast,Broadcast -- Non-Commercial,Broadcast -- Commercial,Linear TV -- Pay,Linear TV -- Pay Premium,Digital Multicast Distribution,Audio Visual/Education/Non-Theatrical,FVOD,FVOD - All Sites/Services,FVOD - Streaming (Internet),FVOD - MSO and Auth. Providers/TVE - Apps,FVOD - MSO only,FVOD - PBS Branded Services,PBS Branded - FVOD - Streaming (Internet),PBS Branded FVOD - MSO and Auth. Providers/TVE - Apps,PBS Branded FVOD - MSO Only,MVOD,AVOD,Home Entertainment,HV - Physical,HV - Digital,AV - Physical Media,AV - Digital Video,AV - Common Carrier,AV - Site License,AV - Site License No Admission,AV - Site License Admission,AV - AFRTS,Theatrical/Festival,Theatrical,Film Festivals & Awards,Other,Collection/Retransmission,Radio Simulcast,Radio Origination,School Off Air Recording,Demonstration and Exhibition,Clip Rights,Learning Media,Website,Mobile Apps/Interactive,Advertising and Promotion,Merchandising,Publishing: eBook and Print,Music Rights,Audio Streaming or All Rights"
+              "enum": "items must be one of the given values - Television, Linear,Linear Streaming,Linear Streaming -- Non-Commercial,Linear Streaming -- Commercial,Broadcast,Broadcast -- Non-Commercial,Broadcast -- Commercial,Linear TV -- Pay,Linear TV -- Pay Premium,Digital Multicast Distribution,Audio Visual/Education/Non-Theatrical,FVOD,FVOD - All Sites/Services,FVOD - Streaming (Internet),FVOD - MSO and Auth. Providers/TVE - Apps,FVOD - MSO only,FVOD - PBS Branded Services,PBS Branded - FVOD - Streaming (Internet),PBS Branded FVOD - MSO and Auth. Providers/TVE - Apps,PBS Branded FVOD - MSO Only,MVOD,AVOD,Home Entertainment,HV - Physical,HV - Digital,AV - Physical Media,AV - Digital Video,AV - Common Carrier,AV - Site License,AV - Site License No Admission,AV - Site License Admission,AV - AFRTS,Theatrical/Festival,Theatrical,Film Festivals & Awards,Other,Collection/Retransmission,Radio Simulcast,Radio Origination,School Off Air Recording,Demonstration and Exhibition,Clip Rights,Learning Media,Website,Mobile Apps/Interactive,Podcasting,Advertising and Promotion,Merchandising,Publishing: eBook and Print,Music Rights,Audio Streaming or All Rights"
             }
           }
         },

@@ -1,3 +1,7 @@
+## v1.0.25.0
+   * MBANK v0.25.0 - Postman collection - The new endpoint is added to delete content id for series.
+   * MBANK v0.25.0 - JSON schema - The 'Podcasting' enum value is added to RightsIn's Mediacontext field.
+   
 ## v1.0.24.0
    * MBANK v0.24.0 - Postman collection - The new endpoints are added to get basic information for series, Season, Episode and its Manifestation.
    * MBANK v0.24.0 - Postman collection - The new event search endpoint is added to get Event information based on startdate and enddate.
