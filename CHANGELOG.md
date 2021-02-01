@@ -1,3 +1,6 @@
+## v1.0.26.0
+   * MBANK v0.26.0 - Postman collection - The new endpoint is added to delete alternateeditid id for Edit.
+   
 ## v1.0.25.0
    * MBANK v0.25.0 - Postman collection - The new endpoint is added to delete content id for series.
    * MBANK v0.25.0 - JSON schema - The 'Podcasting' enum value is added to RightsIn's Mediacontext field.
