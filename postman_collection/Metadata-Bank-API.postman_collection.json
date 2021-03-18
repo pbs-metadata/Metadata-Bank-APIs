@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "aa960dd7-ca09-4c77-a6d3-6c2ce4d83e8c",
-		"name": "Metadata-Bank-API-v0.25",
+		"_postman_id": "fe062abf-5792-4401-b996-83ac20f30d9f",
+		"name": "Metadata-Bank-API-v0.28",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -457,7 +457,7 @@
 					"response": []
 				},
 				{
-					"name": "Episode De-Associate Organization",
+					"name": "Series De-Associate Organization",
 					"event": [
 						{
 							"listen": "test",
@@ -505,7 +505,7 @@
 					"response": []
 				},
 				{
-					"name": "Episode De-Associate Credit",
+					"name": "Series De-Associate Credit",
 					"event": [
 						{
 							"listen": "test",
@@ -939,7 +939,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/season/search?title=Tavis Smiley Report&contentid=cid:org:pbs.org:Rightsline-70825",
+							"raw": "{{baseurl}}/season/search?contentid=cid:org:pbs.org:Rightsline-2918",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -950,11 +950,12 @@
 							"query": [
 								{
 									"key": "title",
-									"value": "Tavis Smiley Report"
+									"value": "Tavis Smiley Report",
+									"disabled": true
 								},
 								{
 									"key": "contentid",
-									"value": "cid:org:pbs.org:Rightsline-70825"
+									"value": "cid:org:pbs.org:Rightsline-2918"
 								}
 							]
 						}
@@ -1124,58 +1125,14 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/episode/abbreviated/cid:org:pbs.org:Episode37468",
+							"raw": "{{baseurl}}/episode/abbreviated/cid:org:pbs.org:Episode12258",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"episode",
 								"abbreviated",
-								"cid:org:pbs.org:Episode37468"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Episode Simple GET Manifestations",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
-							}
-						],
-						"url": {
-							"raw": "{{baseurl}}/episode/abbreviated/cid:org:pbs.org:Episode12258/manifestations",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"episode",
-								"abbreviated",
-								"cid:org:pbs.org:Episode12258",
-								"manifestations"
+								"cid:org:pbs.org:Episode12258"
 							]
 						}
 					},
@@ -1212,7 +1169,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Season489\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"TV\",\n  \"EpisodeNumber\": 3011,\n  \"EpisodeClass\": \"Main\",\n  \"Title\": \"Frontline | Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"Title120\": \"Frontline | Money, Power and Wall Street\",\n  \"Title19\": \"Frontline\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"en\",\n  \"SynopsisShort\": \"Part 1 - Learn how two U.S. administrations have confronted the economic crisis. \",\n  \"SynopsisLong\": \"Part 1 - FRONTLINE producer Michael Kirk (“Inside the Meltdown,” “The Warning”) investigates how two U.S. administrations have confronted the crisis — while dealing with sharp internal divisions and a relationship with Wall Street marked by mistrust and dependence, mutual interests and competing goals. The investigation charts the largest government bailout in U.S. history, a series of decisions that rewrote the rules of government and fueled a debate that would alter the country’s political landscape. Focusing on the Obama administration, FRONTLINE tells the story of a newly elected president with a mandate for change grappling with the multi-headed menace of economic instability, and with fundamental choices about winners and losers and the direction of his presidency.\",\n  \"CountryOfOrigin\": \"US\",\n  \"PrimaryGenre\": \"Public Affairs\",\n  \"SecondaryGenre\": [\"Public Affairs\", \"Advice\"],\n  \"DistributionNumber\": 11,\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:Rightsline-8643\"\n    },\n    {\n      \"ContentID\": \"cid:org:pbs.org:NOLACode:FRON  003011\"\n    }\n  ],\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-3383374\",\n      \"Role\": \"Executive Producer\",\n      \"DisplayName\": \"colette neirouz\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136758,\n      \"DisplayName\": \"PBS\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136739,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ]\n}"
+							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Season489\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"TV\",\n  \"EpisodeNumber\": \"345\",\n  \"EpisodeClass\": \"Main\",\n  \"Title\": \"Frontline | Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"Title120\": \"Frontline | Money, Power and Wall Street\",\n  \"Title19\": \"Frontline\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"en\",\n  \"SynopsisShort\": \"Part 1 - Learn how two U.S. administrations have confronted the economic crisis. \",\n  \"SynopsisLong\": \"Part 1 - FRONTLINE producer Michael Kirk (“Inside the Meltdown,” “The Warning”) investigates how two U.S. administrations have confronted the crisis — while dealing with sharp internal divisions and a relationship with Wall Street marked by mistrust and dependence, mutual interests and competing goals. The investigation charts the largest government bailout in U.S. history, a series of decisions that rewrote the rules of government and fueled a debate that would alter the country’s political landscape. Focusing on the Obama administration, FRONTLINE tells the story of a newly elected president with a mandate for change grappling with the multi-headed menace of economic instability, and with fundamental choices about winners and losers and the direction of his presidency.\",\n  \"CountryOfOrigin\": \"US\",\n  \"PrimaryGenre\": \"Public Affairs\",\n  \"SecondaryGenre\": [\"Public Affairs\", \"Advice\"],\n  \"DistributionNumber\": 11,\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:Rightsline-8643\"\n    },\n    {\n      \"ContentID\": \"cid:org:pbs.org:NOLACode:FRON  003011\"\n    }\n  ],\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-3383374\",\n      \"Role\": \"Executive Producer\",\n      \"DisplayName\": \"colette neirouz\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136758,\n      \"DisplayName\": \"PBS\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136739,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ]\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/episode",
@@ -1257,7 +1214,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Season824\",\n  \"EpisodeNumber\": 4409,\n  \"EpisodeClass\": \"Main\",\n  \"SynopsisShort\": \"Revel in an hour with New Orleans funk masters Trombone Shorty & Orleans Avenue.\",\n  \"SynopsisLong\": \"Revel in an hour with New Orleans funk masters Trombone Shorty & Orleans Avenue, with special guest Cyril Neville. Shorty lays down the grooves with highlights from his recent Voodoo Threauxdown tour.\",\n  \"CountryOfOrigin\": \"US\",\n  \"PrimaryGenre\": \"Arts\",\n  \"SecondaryGenre\":[\"Sports\", \"Western\"],\n  \"DistributionNumber\": 9,\n  \"ApproximateLength\": \"PT1H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"en\"\n  },\n  \"Title\": \"Episode 9\",\n  \"Title19\": \"\",\n  \"Title120\": \"Trombone Shorty & Orleans Avenue\",\n  \"TitleClass\": \"Release\",\n  \"TitleLanguage\": \"en\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"CreditsList\": [\n    {\n      \"Role\": \"Performer\",\n      \"TalentID\": \"cid:org:pbs.org:Broadview-141805668\",\n      \"DisplayName\": \"Oestreicher, Dan\"\n    },\n    {\n      \"Role\": \"Performer\",\n      \"TalentID\": \"cid:org:pbs.org:Broadview-141805671\",\n      \"DisplayName\": \"Peebles, Joey\"\n    }\n  ]\n}"
+							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Season824\",\n  \"EpisodeNumber\": \"4409\",\n  \"EpisodeClass\": \"Main\",\n  \"SynopsisShort\": \"Revel in an hour with New Orleans funk masters Trombone Shorty & Orleans Avenue.\",\n  \"SynopsisLong\": \"Revel in an hour with New Orleans funk masters Trombone Shorty & Orleans Avenue, with special guest Cyril Neville. Shorty lays down the grooves with highlights from his recent Voodoo Threauxdown tour.\",\n  \"CountryOfOrigin\": \"US\",\n  \"PrimaryGenre\": \"Arts\",\n  \"SecondaryGenre\":[\"Sports\", \"Western\"],\n  \"DistributionNumber\": 9,\n  \"ApproximateLength\": \"PT1H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"en\"\n  },\n  \"Title\": \"Episode 9\",\n  \"Title19\": \"\",\n  \"Title120\": \"Trombone Shorty & Orleans Avenue\",\n  \"TitleClass\": \"Release\",\n  \"TitleLanguage\": \"en\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"CreditsList\": [\n    {\n      \"Role\": \"Performer\",\n      \"TalentID\": \"cid:org:pbs.org:Broadview-141805668\",\n      \"DisplayName\": \"Oestreicher, Dan\"\n    },\n    {\n      \"Role\": \"Performer\",\n      \"TalentID\": \"cid:org:pbs.org:Broadview-141805671\",\n      \"DisplayName\": \"Peebles, Joey\"\n    }\n  ]\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode37468",
@@ -1349,7 +1306,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Righhtsline-134332\"\n}"
+							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Rightsline-134332\"\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode30168/contentidregistration",
@@ -1778,16 +1735,21 @@
 							{
 								"key": "x-api-key",
 								"value": "{{x-api-key}}"
+							},
+							{
+								"key": "invalidateCache",
+								"value": "true",
+								"type": "text"
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation121044",
+							"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation374172",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"manifestation",
-								"cid:org:pbs.org:Manifestation121044"
+								"cid:org:pbs.org:Manifestation374172"
 							]
 						}
 					},
@@ -2543,16 +2505,16 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"EntryClass\": \"Installment\",\n  \"EntryNumber\": \"27\",\n  \"EntryContentUID\": \"cid:org:pbs.org:Season1\"\n}"
+									"raw": " [\n {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"13\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Series5\"\n        },\n        {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"13\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Episode5555\"\n        }\n]"
 								},
 								"url": {
-									"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation2/entrycontentuid",
+									"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation324/entrycontentuid",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"compilation",
-										"cid:org:pbs.org:Compilation2",
+										"cid:org:pbs.org:Compilation324",
 										"entrycontentuid"
 									]
 								}
@@ -3801,7 +3763,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/prohibition/204",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/prohibition/87",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -3809,7 +3771,7 @@
 										"policy",
 										"cid:org:pbs.org:Policy215",
 										"prohibition",
-										"204"
+										"87"
 									]
 								}
 							},
@@ -4454,17 +4416,17 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode11599\",\n    \"Linear\": {\n        \"PlayType\": \"Hard Feed (with rights)\",\n        \"ReleaseQualifier\": \"Repeat\",\n        \"Duration\": \"PT0H28M46S\",\n        \"ProgramService\": {\n            \"ProviderSource\": \"HD01\",\n            \"ProviderSourceName\": \"PBS\",\n            \"ProviderTimeZone\": \"EDT\"\n        }\n    },\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation374920\",\n    \"ReferentType\": \"Linear\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"fr\",\n    \"SubtitledLanguage\": \"en\",\n    \"DviLanguage\": \"en\",\n    \"CommonCarriage\": 0,\n    \"Qualifier\": [\n        \"Stereo\",\n        \"DVS\",\n        \"CC\"\n    ],\n    \"EventDate\": \"2020-12-17T14:00:00Z\"\n}"
+									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode23817\",\n    \"Linear\": {\n        \"PlayType\": \"Hard Feed (with rights)\",\n        \"ReleaseQualifier\": \"premiere\",\n        \"Duration\": \"1800\",\n        \"ProgramService\": {\n            \"ProviderSource\": \"500 - X\",\n            \"ProviderSourceName\": \"PBS\",\n            \"ProviderTimeZone\": \"EDT\"\n        }\n    },\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation2612\",\n    \"ReferentType\": \"Linear\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"fr\",\n    \"SubtitledLanguage\": \"en\",\n    \"DviLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\"\n}"
 								},
 								"url": {
-									"raw": "{{baseurl}}/event/linear/cid:org:pbs.org:Event1818212",
+									"raw": "{{baseurl}}/event/linear/cid:org:pbs.org:Event10017",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"event",
 										"linear",
-										"cid:org:pbs.org:Event1818212"
+										"cid:org:pbs.org:Event10017"
 									]
 								}
 							},
@@ -4904,7 +4866,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/showschedule/linear?providersource=HD01&startdatetime=2020-10-21&enddatetime=2020-12-21&alternateeventId=cid:org:pbs.org:Broadview-15092085",
+									"raw": "{{baseurl}}/showschedule/linear?alternateeventId=cid:org:pbs.org:Broadview-15092085",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -4915,15 +4877,18 @@
 									"query": [
 										{
 											"key": "providersource",
-											"value": "HD01"
+											"value": "HD01",
+											"disabled": true
 										},
 										{
 											"key": "startdatetime",
-											"value": "2020-10-21"
+											"value": "2020-10-21",
+											"disabled": true
 										},
 										{
 											"key": "enddatetime",
-											"value": "2020-12-21"
+											"value": "2020-12-21",
+											"disabled": true
 										},
 										{
 											"key": "alternateeventId",
@@ -5175,6 +5140,157 @@
 								{
 									"key": "providersource",
 									"value": "HD01"
+								},
+								{
+									"key": "pagesize",
+									"value": "50",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "50",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Event - LB-Dev",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}",
+								"disabled": true
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "CALiveAPICreator LNFJ1pyhblxfVETh8xGf:1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://CALIVE-DEV-LOAD-TESTING-c45cd8c3fa2f07fd.elb.us-east-1.amazonaws.com/rest/dev/mbank-mainline/v1/getproxy?uid=cid:org:pbs.org:Event1714690&resource=events&nometa=false",
+							"protocol": "http",
+							"host": [
+								"CALIVE-DEV-LOAD-TESTING-c45cd8c3fa2f07fd",
+								"elb",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"rest",
+								"dev",
+								"mbank-mainline",
+								"v1",
+								"getproxy"
+							],
+							"query": [
+								{
+									"key": "uid",
+									"value": "cid:org:pbs.org:Event1714690"
+								},
+								{
+									"key": "resource",
+									"value": "events"
+								},
+								{
+									"key": "nometa",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Event - LB-BB",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}",
+								"disabled": true
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "CALiveAPICreator {{apikey}}:1",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "lac-api-public-qa-bb-perf-nlb-8f561a01b1dd6e82.elb.us-east-1.amazonaws.com/rest/default/mbank-bb-v0.21.0/v1/getproxy?uid=cid:org:pbs.org:Event1714690&resource=events&nometa=false",
+							"host": [
+								"lac-api-public-qa-bb-perf-nlb-8f561a01b1dd6e82",
+								"elb",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"rest",
+								"default",
+								"mbank-bb-v0.21.0",
+								"v1",
+								"getproxy"
+							],
+							"query": [
+								{
+									"key": "uid",
+									"value": "cid:org:pbs.org:Event1714690"
+								},
+								{
+									"key": "resource",
+									"value": "events"
+								},
+								{
+									"key": "nometa",
+									"value": "false"
 								}
 							]
 						}
@@ -5542,13 +5658,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/edit/cid:org:pbs.org:Edit1",
+							"raw": "{{baseurl}}/edit/cid:org:pbs.org:Edit10",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"edit",
-								"cid:org:pbs.org:Edit1"
+								"cid:org:pbs.org:Edit10"
 							]
 						}
 					},
