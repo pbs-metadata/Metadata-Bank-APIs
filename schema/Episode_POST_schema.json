@@ -456,11 +456,11 @@
       }
     },
     "EpisodeNumber": {
-      "type": "integer",
-      "format": "int32",
+      "minLength": 1,
+      "type": "string",
       "errorMessage": {
-        "type": "EpisodeNumber must be an Integer",
-        "format": "EpisodeNumber must be in int32 format"
+        "type": "EpisodeNumber must be an string",
+        "minLength": "EpisodeNumber should have a minimum one character"
       }
     },
     "EpisodeClass": {

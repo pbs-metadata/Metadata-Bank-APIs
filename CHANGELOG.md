@@ -1,3 +1,7 @@
+## v1.0.27.1
+   * MBANK v0.27.1 - Postman collection - The EpisodeNumber data type is changed from Integer to String for Episode POST & PUT
+   * MBANK v0.27.1 - JSON schema - The EpisodeNumber data type is changed from Integer to String for Episode POST & PUT.
+
 ## v1.0.26.0
    * MBANK v0.26.0 - Postman collection - The new endpoint is added to delete alternateeditid id for Edit.
    
