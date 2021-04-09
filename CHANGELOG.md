@@ -1,3 +1,8 @@
+## v1.0.28.0
+   * MBANK v0.28.0 - Postman collection - New endpoints are added for Season & Compilation to remove the existing contentID and implemented SNS for it.
+   * MBANK v0.28.0 - Postman collection - New endpoints are added for Policy & Prohibition to remove the existing LogicalAsssetID and implemented SNS for it.
+   * MBANK v0.28.0 - Postman collection - The SNS is implemetned for Manifestation UseWindowTermList addition and deletion endpoints.
+
 ## v1.0.27.1
    * MBANK v0.27.1 - Postman collection - The EpisodeNumber data type is changed from Integer to String for Episode POST & PUT
    * MBANK v0.27.1 - JSON schema - The EpisodeNumber data type is changed from Integer to String for Episode POST & PUT.
