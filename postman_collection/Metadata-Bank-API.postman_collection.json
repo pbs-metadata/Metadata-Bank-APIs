@@ -910,6 +910,54 @@
 					"response": []
 				},
 				{
+					"name": "Season ContentIDRegistration DELETE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Rightsline-42354\"\n}\n"
+						},
+						"url": {
+							"raw": "{{baseurl}}/season/cid:org:pbs.org:Season156/contentid/cid:org:pbs.org:Rightsline-42354",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"season",
+								"cid:org:pbs.org:Season156",
+								"contentid",
+								"cid:org:pbs.org:Rightsline-42354"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Season Search",
 					"event": [
 						{
@@ -2938,6 +2986,54 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Compilation ContentIDRegistration DELETE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 201\"] = responseCode.code === 201;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:System:BroadView:60924033523\"\n}"
+						},
+						"url": {
+							"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation314/contentid/cid:org:pbs.org:System:BroadView:60924033523",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"compilation",
+								"cid:org:pbs.org:Compilation314",
+								"contentid",
+								"cid:org:pbs.org:System:BroadView:60924033523"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -3452,7 +3548,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"LogicalAssetID\": \"alid:org:pbs.org:RightsLine-6135\"\n}"
+									"raw": "{\n  \"LogicalAssetID\": \"alid:org:pbs.org:Rightsline-6135\"\n}"
 								},
 								"url": {
 									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/4642/logicalassetidregistration",
@@ -3504,7 +3600,7 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/4642/logicalassetid/alid:org:pbs.org:RightsLine-6135",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/4642/logicalassetid/alid:org:pbs.org:Rightsline-6135",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -3514,7 +3610,7 @@
 										"permission",
 										"4642",
 										"logicalassetid",
-										"alid:org:pbs.org:RightsLine-6135"
+										"alid:org:pbs.org:Rightsline-6135"
 									]
 								}
 							},
@@ -3939,19 +4035,69 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"LogicalAssetID\": \"alid:org:pbs.org:RightsLine-6135\"\n}"
+									"raw": "{\n  \"LogicalAssetID\": \"alid:org:pbs.org:Rightsline-6135\"\n}"
 								},
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/prohibition/23/logicalassetidregistration",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1525/prohibition/185/logicalassetidregistration",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"policy",
-										"cid:org:pbs.org:Policy215",
+										"cid:org:pbs.org:Policy1525",
 										"prohibition",
-										"23",
+										"185",
 										"logicalassetidregistration"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Prohibition LogicalAssetID DELETE",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"tests[\"Status code is 201\"] = responseCode.code === 201;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "apikey",
+										"value": "{{apikey}}"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1525/prohibition/185/logicalassetid/alid:org:pbs.org:Rightsline-6135",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"policy",
+										"cid:org:pbs.org:Policy1525",
+										"prohibition",
+										"185",
+										"logicalassetid",
+										"alid:org:pbs.org:Rightsline-6135"
 									]
 								}
 							},
@@ -4262,6 +4408,54 @@
 								"policy",
 								"cid:org:pbs.org:Policy1205",
 								"logicalassetidregistration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Policy LogicalAssetID Deletion",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 201\"] = responseCode.code === 201;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1205/logicalassetid/cid:org:pbs.org:BroadView-618586114123",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"policy",
+								"cid:org:pbs.org:Policy1205",
+								"logicalassetid",
+								"cid:org:pbs.org:BroadView-618586114123"
 							]
 						}
 					},
@@ -5584,50 +5778,6 @@
 		{
 			"name": "Edit",
 			"item": [
-				{
-					"name": "PublishStatus",
-					"item": [
-						{
-							"name": "Edit Publish Status PUT",
-							"request": {
-								"method": "PUT",
-								"header": [
-									{
-										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"type": "text",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"type": "text",
-										"value": "{{x-api-key}}"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\t\"PublishedStatus\": \"Internally Published\"\n}"
-								},
-								"url": {
-									"raw": "{{baseurl}}/edit/cid:org:pbs.org:Edit9/publish-status",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"edit",
-										"cid:org:pbs.org:Edit9",
-										"publish-status"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
 				{
 					"name": "Edit GET",
 					"event": [
