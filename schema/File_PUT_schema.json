@@ -41,6 +41,13 @@
         "minLength": "FileName should have a minimum one character"
       }
     },
+	"FileFormat": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "FileFormat must be a String"
+      }
+    },
     "FileDeliveryStatus": {
       "transform": [
         "trim",

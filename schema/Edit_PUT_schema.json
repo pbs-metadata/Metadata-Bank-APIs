@@ -4,6 +4,7 @@
   "errorMessage": {
     "type": "The request should be an object"
   },
+  "additionalProperties": false,
   "properties": {
     "Description": {
       "minLength": 1,
@@ -86,11 +87,12 @@
           "Spot",
           "Non-Air",
           "Premium Change",
+		  "Pledge",
           "Other"
         ],
         "errorMessage": {
           "type": "EditClass must be a String",
-          "enum": "EditClass must be one of the given values - Original, Unrated, Alternat Ending, Anniversary, Censored, Colorized, Content Break, Creative, Credits, Dialog, Director's Cut, Dubbing Credits, Exit, Extended, Intermission, Logos, Music, Overture, Product Placement, Promotional, Recap, Regionalized, Rereleased, Resrored, Restored Audio, Restored Picture, Sanitized, Sanitized Audio, Sanitized Picture, Sound Effects, Split, Syndication, Threed-D, Video Substitution, Dated, Shortened, Supplemental, Promotion Placement, Supplemental Content, Stacked, Spot, Non-Air, Premium Change, Other",
+          "enum": "EditClass must be one of the given values - Original, Unrated, Alternat Ending, Anniversary, Censored, Colorized, Content Break, Creative, Credits, Dialog, Director's Cut, Dubbing Credits, Exit, Extended, Intermission, Logos, Music, Overture, Product Placement, Promotional, Recap, Regionalized, Rereleased, Resrored, Restored Audio, Restored Picture, Sanitized, Sanitized Audio, Sanitized Picture, Sound Effects, Split, Syndication, Threed-D, Video Substitution, Dated, Shortened, Supplemental, Promotion Placement, Supplemental Content, Stacked, Spot, Non-Air, Premium Change, Pledge, Other",
           "minLength": "EditClass should have a minimum one character"
         }
       }
@@ -124,28 +126,6 @@
       "errorMessage": {
         "type": "ParentUID must be a String",
         "minLength": "ParentUID should have a minimum one character"
-      }
-    },
-    "ReferentType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
-      "type": "string",
-      "enum": [
-        "Series",
-        "Season",
-        "TV",
-        "Movie",
-        "Short",
-        "Web",
-        "Compilation",
-        "Supplemental",
-        "Edit"
-      ],
-      "errorMessage": {
-        "type": "ReferentType must be a String",
-        "enum": "ReferentType must be a Series, Season, TV, Movie, Short, Web, Compilation or Supplemental, Edit irrepective to case."
       }
     },
     "StructuralType": {
