@@ -1,3 +1,7 @@
+## v1.0.29.0
+   * MBANK v0.28.0 - Postman collection - New endpoints are added for keywords deletes for Series, Season & Episode
+   * MBANK v0.28.0 - JSON schema - The ReferentType is removed from Edit POST and PUT & New column FileFormat is added to File entity.
+   
 ## v1.0.28.0
    * MBANK v0.28.0 - Postman collection - New endpoints are added for Season & Compilation to remove the existing contentID and implemented SNS for it.
    * MBANK v0.28.0 - Postman collection - New endpoints are added for Policy & Prohibition to remove the existing LogicalAsssetID and implemented SNS for it.

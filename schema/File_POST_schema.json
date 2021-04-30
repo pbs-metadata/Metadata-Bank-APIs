@@ -51,6 +51,13 @@
         "minLength": "FileName should have a minimum one character"
       }
     },
+	"FileFormat": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "FileFormat must be a String"
+      }
+    },
     "FileDeliveryStatus": {
       "transform": [
         "trim",
@@ -81,7 +88,7 @@
         "SHA-1",
         "SHA-2",
         "SHA-3",
-        null
+		null
       ],
       "errorMessage": {
         "type": "ChecksumType must be a String",

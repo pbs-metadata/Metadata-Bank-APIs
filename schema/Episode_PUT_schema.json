@@ -386,6 +386,7 @@
       "errorMessage": {
         "type": "Keywords should be an object"
       },
+	  "additionalProperties": false,
       "properties": {
         "Mood": {
           "type": "array",

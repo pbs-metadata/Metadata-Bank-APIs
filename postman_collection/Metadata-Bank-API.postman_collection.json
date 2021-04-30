@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "fe062abf-5792-4401-b996-83ac20f30d9f",
-		"name": "Metadata-Bank-API-v0.28",
+		"name": "Metadata-Bank-API-v0.29",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -551,6 +551,52 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Series Delete Keywords",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Mood\": [\n    \"Suspenseful\"\n  ],\n  \"TimePeriod\": [\n    \"2000s\"\n  ],\n  \"Theme\": [\n    \"Mystery\"\n  ],\n  \"Character\": [\n    \"Doctor\",\n    \"Friend\",\n    \"Neurologist\"\n  ],\n  \"Setting\": [\n    \"Hospital\",\n    \"New Jersey\"\n  ],\n  \"Subject\": [\n    \"Medical profession\",\n    \"Medical mystery\"\n  ],\n  \"General\": [\n    \"Fascinating\"\n  ]\n}"
+						},
+						"url": {
+							"raw": "{{baseurl}}/series/cid:org:pbs.org:Series1122",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"series",
+								"cid:org:pbs.org:Series1122"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -952,6 +998,52 @@
 								"cid:org:pbs.org:Season156",
 								"contentid",
 								"cid:org:pbs.org:Rightsline-42354"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Season Delete Keywords",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Mood\": [\n    \"Fascinating\"\n  ],\n  \"TimePeriod\": [\n    \"2000s\"\n  ],\n  \"Theme\": [\n    \"Mystery\"\n  ],\n  \"Character\": [\n    \"Friend\",\n    \"Hospital administrator\",\n    \"Neurologist\"\n  ],\n  \"Setting\": [\n    \"New Jersey\"\n  ],\n  \"Subject\": [\n    \"Drug addiction\",\n    \"Unlikely hero\",\n    \"Misanthropy\",\n    \"Medical mystery\"\n  ],\n  \"General\": [\n    \"Fascinating\"\n  ]\n}"
+						},
+						"url": {
+							"raw": "{{baseurl}}/season/cid:org:pbs.org:Season2260",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"season",
+								"cid:org:pbs.org:Season2260"
 							]
 						}
 					},
@@ -1509,6 +1601,53 @@
 								"cid:org:pbs.org:Episode43873",
 								"credits",
 								"cid:org:pbs.org:Broadview-3383374"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Episode Delete Keywords",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"Mood\": [\n    \"Fascinating\",\n    \"Quirky\",\n    \"Suspenseful\"\n  ],\n  \"TimePeriod\": [\n    \"2000s\"\n  ],\n  \"Theme\": [\n    \"Mystery\"\n  ],\n  \"Character\": [\n    \"Doctor\",\n    \"Friend\",\n    \"Hospital administrator\",\n    \"Neurologist\"\n  ],\n  \"Setting\": [\n    \"Hospital\",\n    \"New Jersey\"\n  ],\n  \"Subject\": [\n    \"Medical profession\",\n    \"Investigation\",\n    \"Drug addiction\",\n    \"Unlikely hero\",\n    \"Misanthropy\",\n    \"Medical mystery\"\n  ],\n  \"General\": [\n    \"Fascinating\"\n  ]\n}"
+						},
+						"url": {
+							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode38044/keywords",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"episode",
+								"cid:org:pbs.org:Episode38044",
+								"keywords"
 							]
 						}
 					},
@@ -2169,7 +2308,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"FileClass\": \"Media\",\n    \"FileName\": \"P394492-001PROXY.mxf\",\n    \"FileDeliveryStatus\": \"Delivered\",\n    \"ParentUID\": \"cid:org:pbs.org:Manifestation43239\",\n    \"ChecksumType\": \"MD5\",\n    \"ChecksumValue\": \"a22b57fb4e828027be5631abb3ae92b2\",\n    \"AlternateAssetIDList\": [\n        {\n            \"AssetUID\": \"cid:org:pbs.org:Broadview-189560425\"\n        }\n    ]\n}"
+							"raw": "{\n    \"FileClass\": \"Media\",\n    \"FileName\": \"P394492-001PROXY.mxf\",\n    \"FileFormat\": \"AS03\",\n    \"FileDeliveryStatus\": \"Delivered\",\n    \"ParentUID\": \"cid:org:pbs.org:Manifestation43239\",\n    \"ChecksumType\": \"MD5\",\n    \"ChecksumValue\": \"a22b57fb4e828027be5631abb3ae92b2\",\n    \"AlternateAssetIDList\": [\n        {\n            \"AssetUID\": \"cid:org:pbs.org:Broadview-189560425\"\n        }\n    ]\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/file",
@@ -2214,7 +2353,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"FileClass\": \"Media\",\n    \"FileName\": \"P394492-001PROXY.mxf\",\n    \"FileDeliveryStatus\": \"Delivered\",\n    \"ChecksumType\": \"MD5\",\n    \"ChecksumValue\": \"a22b57fb4e828027be5631abb3ae92b2\"\n}"
+							"raw": "{\n    \"FileClass\": \"Media\",\n    \"FileName\": \"P394492-001PROXY.mxf\",\n    \"FileFormat\": \"AS03\",\n    \"FileDeliveryStatus\": \"Delivered\",\n    \"ChecksumType\": \"MD5\",\n    \"ChecksumValue\": \"a22b57fb4e828027be5631abb3ae92b2\"\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/file/apid:org:pbs.org:File167",
@@ -4705,7 +4844,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n\t\"AlternateEventID\": \"cid:org:pbs.org:Broadview-1234600\"\r\n}"
+									"raw": "{\r\n\t\"AlternateEventID\": \"cid:org:pbs.org:Rightsline-60988\"\r\n}"
 								},
 								"url": {
 									"raw": "{{baseurl}}/event/linear/cid:org:pbs.org:Event10017/alternateeventidregistration",
@@ -5851,7 +5990,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"StructuralType\": \"Abstraction\",\r\n     \"FileDeliveryStatus\": \"Delivered\",\r\n    \"ReferentType\": \"Edit\",\r\n    \"Description\": \"Wild Kratts\",\r\n    \"EditClass\": [\r\n        \"Original\",\r\n        \"Supplemental\"\r\n    ],\r\n    \"EditUse\": \"Broadcast\",\r\n    \"ActualLength\": \"PT0H28M55S\",\r\n    \"ParentUID\": \"cid:org:pbs.org:Episode777\",\r\n    \"AlternateEditIDList\": [\r\n        {\r\n            \"AlternateEditID\": \"alid:org:pbs.org:DevTest-4233\"\r\n        }\r\n    ]\r\n}"
+							"raw": "{\r\n    \"StructuralType\": \"Abstraction\",\r\n    \"FileDeliveryStatus\": \"Delivered\",\r\n    \"Description\": \"Wild Kratts\",\r\n    \"EditClass\": [\r\n        \"Original\",\r\n        \"Supplemental\"\r\n    ],\r\n    \"EditUse\": \"Broadcast\",\r\n    \"ActualLength\": \"PT0H28M55S\",\r\n    \"ParentUID\": \"cid:org:pbs.org:Episode777\",\r\n    \"AlternateEditIDList\": [\r\n        {\r\n            \"AlternateEditID\": \"alid:org:pbs.org:DevTest-4233\"\r\n        }\r\n    ]\r\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/edit",
