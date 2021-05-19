@@ -1,72 +1,42 @@
 {
-  "type": "object",
-  "errorMessage": {
-    "type": "The request must be an object"
-  },
-  "properties": {
-    "PolicyUID": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "PolicyUID must be a String"
-      }
-    },
-    "PolicyType": {
-      "minLength": 1,
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "PolicyType must be a String",
-        "minLength": "PolicyType should have a minimum one character"
-      }
-    },
-    "ReferentType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
-      "type": "string",
-      "enum": [
-        "Series",
-        "Season",
-        "TV",
-        "Movie",
-        "Short",
-        "Web",
-        "Compilation",
-        "Supplemental",
-        "Offer",
-        "Policy"
-      ],
-      "errorMessage": {
-        "type": "ReferentType must be a String",
-        "enum": "ReferentType must be a Series, Season, TV, Movie, Short, Web, Compilation, Supplemental, Offer or Policy irrepective to case."
-      }
-    },
-    "StructuralType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
-      "type": "string",
-      "enum": [
-        "Abstraction",
-        "Performance",
-        "Digital"
-      ],
-      "errorMessage": {
-        "type": "StructuralType must be a String",
-        "enum": "StructuralType must be an Abstraction, Performace or Digital irrespective to Case."
-      }
-    },
-    "Title": {
-      "minLength": 1,
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "Title must be a String",
-        "minLength": "Title should have a minimum one character"
-      }
-    }
-  }
+	"type": "object",
+	"errorMessage": {
+		"type": "The request must be an object"
+	},
+	"properties": {
+		"PolicyUID": {
+			"pattern": "^(.*)$",
+			"type": "string",
+			"errorMessage": {
+				"type": "PolicyUID must be a String"
+			}
+		},
+		"PolicyClass": {
+			"minLength": 1,
+			"pattern": "^(.*)$",
+			"type": "string",
+			"errorMessage": {
+				"type": "PolicyClass must be a String",
+				"minLength": "PolicyClass should have a minimum one character"
+			}
+		},
+		"StructuralType": {
+			"transform": ["trim", "toEnumCase"],
+			"type": "string",
+			"enum": ["Policy", "Abstraction", "Performance", "Digital"],
+			"errorMessage": {
+				"type": "StructuralType must be a String",
+				"enum": "StructuralType must be a Policy, Abstraction, Performace or Digital irrespective to Case."
+			}
+		},
+		"Title": {
+			"minLength": 1,
+			"pattern": "^(.*)$",
+			"type": "string",
+			"errorMessage": {
+				"type": "Title must be a String",
+				"minLength": "Title should have a minimum one character"
+			}
+		}
+	}
 }
