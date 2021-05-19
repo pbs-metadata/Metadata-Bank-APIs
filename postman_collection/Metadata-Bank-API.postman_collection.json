@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "fe062abf-5792-4401-b996-83ac20f30d9f",
-		"name": "Metadata-Bank-API-v0.29",
+		"name": "Metadata-Bank-API-v0.30",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -490,7 +490,7 @@
 							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Righhtsline-134332\"\n}"
 						},
 						"url": {
-							"raw": "{{baseurl}}/series/cid:org:pbs.org:Series393/organization/32578813",
+							"raw": "{{baseurl}}/series/cid:org:pbs.org:Series393/organization/32578813?rolename=Producer",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -499,6 +499,12 @@
 								"cid:org:pbs.org:Series393",
 								"organization",
 								"32578813"
+							],
+							"query": [
+								{
+									"key": "rolename",
+									"value": "Producer"
+								}
 							]
 						}
 					},
@@ -1236,6 +1242,48 @@
 					"response": []
 				},
 				{
+					"name": "Episode - SIXPBS - Missing Releasedates",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/episode/missing-releasedates",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"episode",
+								"missing-releasedates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Episode Simple GET",
 					"event": [
 						{
@@ -1544,7 +1592,7 @@
 							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Righhtsline-134332\"\n}"
 						},
 						"url": {
-							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode43873/organization/3136758",
+							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode43873/organization/3136758?rolename=Distributor",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -1553,6 +1601,12 @@
 								"cid:org:pbs.org:Episode43873",
 								"organization",
 								"3136758"
+							],
+							"query": [
+								{
+									"key": "rolename",
+									"value": "Distributor"
+								}
 							]
 						}
 					},
@@ -2714,10 +2768,10 @@
 								{
 									"listen": "test",
 									"script": {
-										"type": "text/javascript",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
-										]
+										],
+										"type": "text/javascript"
 									}
 								}
 							],
@@ -2739,7 +2793,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"EntryClass\": \"Installment\",\n  \"EntryNumber\": \"20\",\n  \"EntryContentUID\": \"cid:org:pbs.org:Episode54137\"\n}"
+									"raw": ""
 								},
 								"url": {
 									"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation2/entrycontentuid/cid:org:pbs.org:Season1",
@@ -4331,6 +4385,160 @@
 					]
 				},
 				{
+					"name": "OrganizationList",
+					"item": [
+						{
+							"name": "Policy Organization",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"tests[\"Status code is 201\"] = responseCode.code === 201;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "apikey",
+										"value": "{{apikey}}"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"OrganizationID\": 3136748,\n  \"DisplayName\": \"PBS NPS Kids\",\n  \"Domain\": \"pbs.org\",\n  \"ContactInfoList\": [\n    {\n      \"ContactID\": 3136748,\n      \"Phone\": \"703-739-5010\",\n      \"PhoneType\": \"Office\",\n      \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n      \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n      \"ContactName\": \"PBS Content Services\"\n    }\n  ],\n  \"Role\": \"Distributor\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1475/organization",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"policy",
+										"cid:org:pbs.org:Policy1475",
+										"organization"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Policy Organization",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"tests[\"Status code is 201\"] = responseCode.code === 201;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "apikey",
+										"value": "{{apikey}}"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"DisplayName\": \"PBS NPS Kids Test\",\n  \"Domain\": \"pbs.org\",\n  \"ContactInfoList\": [\n    {\n      \"ContactID\": 3136748,\n      \"Phone\": \"703-739-5012\",\n      \"PhoneType\": \"Office\",\n      \"Address\": \"2122 Crystal Drive, Arlington, VA\",\n      \"PrimaryEmail\": \"emm_uat123@pbs.org\",\n      \"ContactName\": \"PBS Content Services\"\n    }\n  ],\n  \"Role\": \"Distributor\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1475/organization/3136748",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"policy",
+										"cid:org:pbs.org:Policy1475",
+										"organization",
+										"3136748"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Policy Organization",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"tests[\"Status code is 201\"] = responseCode.code === 201;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "apikey",
+										"value": "{{apikey}}"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1475/organization/3136748?rolename=Producer",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"policy",
+										"cid:org:pbs.org:Policy1475",
+										"organization",
+										"3136748"
+									],
+									"query": [
+										{
+											"key": "rolename",
+											"value": "Producer"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "Policy GET",
 					"event": [
 						{
@@ -4360,13 +4568,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268",
+							"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1433",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"policy",
-								"cid:org:pbs.org:Policy268"
+								"cid:org:pbs.org:Policy1433"
 							]
 						}
 					},
@@ -4403,7 +4611,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"PolicyType\": \"Offer\",\n    \"ReferentType\": \"Offer\",\n    \"StructuralType\": \"Abstraction\",\n    \"Title\": \"Seabiscuit: American Experience-Dev-SMoke-Test\",\n    \"LogicalAssetIDList\": [\n        {\n            \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-128443\"\n        }\n    ],\n    \"Permission\": [\n        {\n            \"Rule\": {\n                \"PlayType\": \"Release\",\n                \"MediaContext\": [\"Television\"],\n                \"MaximumExploitation\": \"88\",\n                \"Calculated\": true,\n                \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n                \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n                \"EnsureExclusivity\": false,\n\t\t\t\t\"GeospatialNamedArea\": [\"United States of America and its Territories & Possessions\"],\n\t\t\t\t\"Type\": \"Catch-up Rights\",\n\t\t\t\t\"UnitType\": \"Days\",\n\t\t\t\t\"Count\": 3,\n\t\t\t\t\"Trigger\": {\n                    \"StartCount\": 30,\n                    \"StartUnitType\": \"Days\",\n                    \"StartOperator\": \"On\",\n                    \"StartEvent\": \"Each Repeat *Subsequent Airings Each Episode\",\n                    \"TimeInterval\": [],\n                    \"EndCount\": 30,\n                    \"EndUnitType\": \"Days\",\n                    \"EndOperator\": \"After\",\n                    \"EndEvent\": \"Latest Episode Rights End\"\n                },\n                \"LogicalAssetIDList\": [\n                    {\n                        \"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.12840088\"\n                    }\n                ],\n                \"EntryList\": [\n                    {\n                        \"EntryClass\": \"Episode\",\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n                    }\n                ]\n            }\n        }\n    ]\n}"
+							"raw": "{\n    \"PolicyClass\": \"Agreement\",\n    \"StructuralType\": \"Policy\",\n    \"Title\": \"Seabiscuit: American Experience-Dev-SMoke-Test\",\n    \"LogicalAssetIDList\": [\n        {\n            \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-128443\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136739,\n            \"DisplayName\": \"PBS NPS Kids\",\n            \"Domain\": \"pbs.org\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136739,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ],\n            \"Role\": \"Distributor\"\n        }\n    ],\n    \"Permission\": [\n        {\n            \"Rule\": {\n                \"PlayType\": \"Release\",\n                \"MediaContext\": [\"Television\"],\n                \"MaximumExploitation\": \"88\",\n                \"Calculated\": true,\n                \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n                \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n                \"EnsureExclusivity\": false,\n\t\t\t\t\"GeospatialNamedArea\": [\"United States of America and its Territories & Possessions\"],\n\t\t\t\t\"Type\": \"Catch-up Rights\",\n\t\t\t\t\"UnitType\": \"Days\",\n\t\t\t\t\"Count\": 3,\n\t\t\t\t\"Trigger\": {\n                    \"StartCount\": 30,\n                    \"StartUnitType\": \"Days\",\n                    \"StartOperator\": \"On\",\n                    \"StartEvent\": \"Each Repeat *Subsequent Airings Each Episode\",\n                    \"TimeInterval\": [],\n                    \"EndCount\": 30,\n                    \"EndUnitType\": \"Days\",\n                    \"EndOperator\": \"After\",\n                    \"EndEvent\": \"Latest Episode Rights End\"\n                },\n                \"LogicalAssetIDList\": [\n                    {\n                        \"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.12840088\"\n                    }\n                ],\n                \"EntryList\": [\n                    {\n                        \"EntryClass\": \"Episode\",\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n                    }\n                ]\n            }\n        }\n    ]\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/policy",
@@ -4448,16 +4656,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"PolicyType\": \"Offer\",\n    \"ReferentType\": \"Offer\",\n    \"StructuralType\": \"Abstraction\",\n    \"Title\": \"Seabiscuit: American Experience-Dev-Smoke-Test\"\n}\n\n"
+							"raw": "{\n    \"PolicyClass\": \"Agreement\",\n    \"StructuralType\": \"Policy\",\n    \"Title\": \"Seabiscuit: American Experience-Dev-Smoke-Test\"\n}\n\n"
 						},
 						"url": {
-							"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268",
+							"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1433",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"policy",
-								"cid:org:pbs.org:Policy268"
+								"cid:org:pbs.org:Policy1433"
 							]
 						}
 					},
@@ -4752,14 +4960,14 @@
 									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode23817\",\n    \"Linear\": {\n        \"PlayType\": \"Hard Feed (with rights)\",\n        \"ReleaseQualifier\": \"premiere\",\n        \"Duration\": \"1800\",\n        \"ProgramService\": {\n            \"ProviderSource\": \"500 - X\",\n            \"ProviderSourceName\": \"PBS\",\n            \"ProviderTimeZone\": \"EDT\"\n        }\n    },\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation2612\",\n    \"ReferentType\": \"Linear\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"fr\",\n    \"SubtitledLanguage\": \"en\",\n    \"DviLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\"\n}"
 								},
 								"url": {
-									"raw": "{{baseurl}}/event/linear/cid:org:pbs.org:Event10017",
+									"raw": "{{baseurl}}/event/linear/cid:org:pbs.org:Event18486",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"event",
 										"linear",
-										"cid:org:pbs.org:Event10017"
+										"cid:org:pbs.org:Event18486"
 									]
 								}
 							},

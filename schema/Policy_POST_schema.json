@@ -1,8 +1,7 @@
 {
   "required": [
     "Permission",
-    "PolicyType",
-    "ReferentType",
+    "PolicyClass",
     "StructuralType",
     "Title"
   ],
@@ -25,34 +24,13 @@
         "type": "EntityType must be a String"
       }
     },
-    "PolicyType": {
+    "PolicyClass": {
+      "minLength": 1,
       "pattern": "^(.*)$",
       "type": "string",
       "errorMessage": {
-        "type": "PolicyType must be a String"
-      }
-    },
-    "ReferentType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
-      "type": "string",
-      "enum": [
-        "Series",
-        "Season",
-        "TV",
-        "Movie",
-        "Short",
-        "Web",
-        "Compilation",
-        "Supplemental",
-        "Offer",
-        "Policy"
-      ],
-      "errorMessage": {
-        "type": "ReferentType must be a String",
-        "enum": "ReferentType must be a Series, Season, TV, Movie, Short, Web, Compilation, Supplemental, Offer or Policy irrepective to case."
+          "type": "PolicyClass must be a String",
+          "minLength": "PolicyClass should have a minimum one character"
       }
     },
     "StructuralType": {
@@ -62,13 +40,14 @@
       ],
       "type": "string",
       "enum": [
+        "Policy",
         "Abstraction",
         "Performance",
         "Digital"
       ],
       "errorMessage": {
         "type": "StructuralType must be a String",
-        "enum": "StructuralType must be an Abstraction, Performace or Digital irrespective to Case."
+        "enum": "StructuralType must be an Policy, Abstraction, Performace or Digital irrespective to Case."
       }
     },
     "Title": {
@@ -126,15 +105,13 @@
         "properties": {
           "Rule": {
             "required": [
-              "MediaContext",
-              "PlayType"
+              "MediaContext"
             ],
             "type": "object",
             "errorMessage": {
               "type": "Rule must be an object",
               "required": {
-                "MediaContext": "MediaContext is Required",
-                "PlayType": "PlayType is Required"
+                "MediaContext": "MediaContext is Required"
               }
             },
             "properties": {
@@ -181,10 +158,11 @@
                       "days",
                       "months",
                       "hours",
+                      "years",
                       null
                     ],
                     "errorMessage": {
-                      "enum": "StartUnitType must be one of the given values - weeks, days, months or hours"
+                      "enum": "StartUnitType must be one of the given values - weeks, days, months, years or hours"
                     }
                   },
                   "StartOperator": {
@@ -245,11 +223,10 @@
                       "type": "TimeInterval must be an Array"
                     },
                     "items": {
-                      "type": "integer",
-                      "format": "int32",
+                      "type": "string",
                       "errorMessage": {
-                        "type": "item must be an Integer",
-                        "format": "item must be in format int32"
+                        "type": "item must be an string",
+                        "format": "item must be in string"
                       }
                     }
                   },
@@ -271,10 +248,11 @@
                       "days",
                       "months",
                       "hours",
+                      "years",
                       null
                     ],
                     "errorMessage": {
-                      "enum": "EndUnitType must be one of the given values - weeks, days, months or hours"
+                      "enum": "EndUnitType must be one of the given values - weeks, days, months, years or hours"
                     }
                   },
                   "EndOperator": {
@@ -352,9 +330,23 @@
                     "AVOD",
                     "Home Entertainment",
                     "HV - Physical",
+                    "HV - Retail",
+                    "HV - Premium",
+                    "HV - DTC",
+                    "HV - Cover Mount",
                     "HV - Digital",
+                    "HV - TVOD",
+                    "HV - EST",
+                    "HV - Download to Rent",
+                    "HV - Cable VOD",
+                    "HV - Hotel VOD",
+                    "HV - SVOD",
+                    "HV - SVOD License",
+                    "HV - DTC SVOD",
                     "AV - Physical Media",
                     "AV - Digital Video",
+                    "AV - TVOD",
+                    "AV - SVOD",
                     "AV - Common Carrier",
                     "AV - Site License",
                     "AV - Site License No Admission",
@@ -373,7 +365,7 @@
                     "Learning Media",
                     "Website",
                     "Mobile Apps/Interactive",
-					"Podcasting",
+					          "Podcasting",
                     "Advertising and Promotion",
                     "Merchandising",
                     "Publishing: eBook and Print",
@@ -383,7 +375,7 @@
                   ],
                   "errorMessage": {
                     "type": "items must be a String",
-                    "enum": "items must be one of the given values - Television, Linear,Linear Streaming,Linear Streaming -- Non-Commercial,Linear Streaming -- Commercial,Broadcast,Broadcast -- Non-Commercial,Broadcast -- Commercial,Linear TV -- Pay,Linear TV -- Pay Premium,Digital Multicast Distribution,Audio Visual/Education/Non-Theatrical,FVOD,FVOD - All Sites/Services,FVOD - Streaming (Internet),FVOD - MSO and Auth. Providers/TVE - Apps,FVOD - MSO only,FVOD - PBS Branded Services,PBS Branded - FVOD - Streaming (Internet),PBS Branded FVOD - MSO and Auth. Providers/TVE - Apps,PBS Branded FVOD - MSO Only,MVOD,AVOD,Home Entertainment,HV - Physical,HV - Digital,AV - Physical Media,AV - Digital Video,AV - Common Carrier,AV - Site License,AV - Site License No Admission,AV - Site License Admission,AV - AFRTS,Theatrical/Festival,Theatrical,Film Festivals & Awards,Other,Collection/Retransmission,Radio Simulcast,Radio Origination,School Off Air Recording,Demonstration and Exhibition,Clip Rights,Learning Media,Website,Mobile Apps/Interactive,Podcasting,Advertising and Promotion,Merchandising,Publishing: eBook and Print,Music Rights,Audio Streaming or All Rights"
+                    "enum": "items must be one of the given values - Television, Linear,Linear Streaming,Linear Streaming -- Non-Commercial,Linear Streaming -- Commercial,Broadcast,Broadcast -- Non-Commercial,Broadcast -- Commercial,Linear TV -- Pay,Linear TV -- Pay Premium,Digital Multicast Distribution,Audio Visual/Education/Non-Theatrical,FVOD,FVOD - All Sites/Services,FVOD - Streaming (Internet),FVOD - MSO and Auth. Providers/TVE - Apps,FVOD - MSO only,FVOD - PBS Branded Services,PBS Branded - FVOD - Streaming (Internet),PBS Branded FVOD - MSO and Auth. Providers/TVE - Apps,PBS Branded FVOD - MSO Only,MVOD,AVOD,Home Entertainment,HV - Physical,HV - Retail, HV - Premium, HV - DTC, HV - Cover Mount, HV - TVOD, HV - EST, HV - Download to Rent, HV - Cable VOD, HV - Hotel VOD, HV - SVOD, HV - SVOD License, HV - DTC SVOD, AV - TVOD, AV - SVOD, HV - Digital,AV - Physical Media,AV - Digital Video,AV - Common Carrier,AV - Site License,AV - Site License No Admission,AV - Site License Admission,AV - AFRTS,Theatrical/Festival,Theatrical,Film Festivals & Awards,Other,Collection/Retransmission,Radio Simulcast,Radio Origination,School Off Air Recording,Demonstration and Exhibition,Clip Rights,Learning Media,Website,Mobile Apps/Interactive, Podcasting, Advertising and Promotion,Merchandising,Publishing: eBook and Print,Music Rights,Audio Streaming or All Rights"
                   }
                 }
               },
@@ -424,6 +416,7 @@
                   "toEnumCase"
                 ],
                 "enum": [
+                  "Rights In",
                   "Holdback",
                   "Catch-up Rights",
                   "Archive",
@@ -431,7 +424,7 @@
                   null
                 ],
                 "errorMessage": {
-                  "enum": "Type must be one of the given values - Holdback, Catch Up Rights, Archive or Aggregate"
+                  "enum": "Type must be one of the given values - Rights In, Holdback, Catch Up Rights, Archive or Aggregate"
                 }
               },
               "GeospatialNamedArea": {
@@ -826,6 +819,40 @@
                   }
                 }
               }
+            },
+            "if": {
+              "properties": {
+                "MediaContext": {
+                  "contains": {
+                    "type": "string",
+                    "enum": 
+                    [
+                      "Television",
+                      "Linear",
+                      "Linear Streaming",
+                      "Linear Streaming -- Non-Commercial",
+                      "Linear Streaming -- Commercial",
+                      "Broadcast",
+                      "Broadcast -- Non-Commercial",
+                      "Broadcast -- Commercial",
+                      "Linear TV -- Pay",
+                      "Linear TV -- Pay Premium",
+                      "Digital Multicast Distribution",
+                      "All Rights"
+                    ]
+                  }
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "PlayType"
+              ],
+              "errorMessage": {
+                "required": {
+                  "PlayType": "PlayType is Required, if MediaContext is Television, Linear, Linear Streaming, Linear Streaming -- Non-Commercial, Linear Streaming -- Commercial, Broadcast, Broadcast -- Non-Commercial, Broadcast -- Commercial, Linear TV -- Pay, Linear TV -- Pay Premium, Digital Multicast Distribution, All Rights"
+                }
+              }
             }
           }
         }
@@ -1107,6 +1134,128 @@
                   "type": "string",
                   "errorMessage": {
                     "type": "EntryUID must be an String"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "OrganizationList": {
+      "type": "array",
+      "uniqueItems": true,
+      "errorMessage": {
+        "type": "OrganizationList must be an Array",
+        "uniqueItems": "OrganizationList contains duplicate values"
+      },
+      "items": {
+        "required": [
+          "ContactInfoList",
+          "OrganizationID",
+          "Role"
+        ],
+        "type": "object",
+        "errorMessage": {
+          "type": "items should be an object",
+          "required": {
+            "ContactInfoList": "ContactInfoList is Required",
+            "OrganizationID": "OrganizationID is Required",
+            "Role": "Role is Required"
+          }
+        },
+        "properties": {
+          "OrganizationID": {
+            "type": "integer",
+            "format": "int32",
+            "errorMessage": {
+              "type": "OrganizationID must be an Integer",
+              "format": "OrganizationID must be in int32 format"
+            }
+          },
+          "DisplayName": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "DisplayName must be a String"
+            }
+          },
+          "Domain": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "Domain must be a String"
+            }
+          },
+          "Role": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "Role must be a String"
+            }
+          },
+          "ContactInfoList": {
+            "type": "array",
+            "minItems": 1,
+            "errorMessage": {
+              "type": "ContactInfoList must be an Array",
+              "minItems": "Minimum one contact info is required"
+            },
+            "items": {
+              "required": [
+                "ContactID",
+                "ContactName"
+              ],
+              "type": "object",
+              "errorMessage": {
+                "type": "items should be an object",
+                "required": {
+                  "ContactID": "ContactID is Required",
+                  "ContactName": "ContactName is Required"
+                }
+              },
+              "properties": {
+                "ContactID": {
+                  "type": "integer",
+                  "format": "int32",
+                  "errorMessage": {
+                    "type": "ContactID must be an Integer",
+                    "format": "ContactID must be in int32 format"
+                  }
+                },
+                "Phone": {
+                  "pattern": "^(.*)$",
+                  "type": "string",
+                  "errorMessage": {
+                    "type": "Phone must be a String"
+                  }
+                },
+                "PhoneType": {
+                  "pattern": "^(.*)$",
+                  "type": "string",
+                  "errorMessage": {
+                    "type": "PhoneType must be a String"
+                  }
+                },
+                "Address": {
+                  "pattern": "^(.*)$",
+                  "type": "string",
+                  "errorMessage": {
+                    "type": "Address must be a String"
+                  }
+                },
+                "PrimaryEmail": {
+                  "pattern": "^(.*)$",
+                  "type": "string",
+                  "errorMessage": {
+                    "type": "PrimaryEmail must be a String"
+                  }
+                },
+                "ContactName": {
+                  "pattern": "^(.*)$",
+                  "type": "string",
+                  "errorMessage": {
+                    "type": "ContactName must be a String"
                   }
                 }
               }
