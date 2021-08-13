@@ -6,6 +6,7 @@
     "VOD"
   ],
   "type": "object",
+  "additionalProperties": false,
   "errorMessage": {
     "type": "The request should be an object",
     "required": {
@@ -531,6 +532,7 @@
         "EndDateTime"
       ],
       "type": "object",
+      "additionalProperties": false,
       "errorMessage": {
         "type": "VOD should be an object",
         "required": {
@@ -562,11 +564,18 @@
             }
           }
         },
-        "PlayRun": {
-          "type": "integer",
-          "format": "int32",
+        "ReleaseQualifier": {
+          "pattern": "^(.*)$",
+          "type": "string",
           "errorMessage": {
-            "type": "PlayRun must be an Integer"
+            "type": "ReleaseQualifier must be a String"
+          }
+        },
+        "Duration": {
+          "pattern": "^(.*)$",
+          "type": "string",
+          "errorMessage": {
+            "type": "Duration must be a String"
           }
         },
         "PublishedStatus": {

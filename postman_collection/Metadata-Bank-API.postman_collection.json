@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "fe062abf-5792-4401-b996-83ac20f30d9f",
-		"name": "Metadata-Bank-API-v0.30",
+		"name": "Metadata-Bank-API-v0.33.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -2027,7 +2027,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\t\n    \"ActualLength\": \"PT0H53M17S\",\n    \"EditClass\": \"Original\",\n    \"EditUse\": \"Broadcast\",\n    \"ManifestationClass\": \"HD\",\n    \"ParentUID\": \"cid:org:pbs.org:Episode73\",\n    \"ReferentType\": \"TV\",\n    \"StructuralType\": \"Performance\",\n    \"Title\": \"Forsyte Saga; -Dev Smoke Test\",\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.orgPackageType:HD-Base\"\n        }\n    ],\n    \"UseWindowTermList\": [\n        {\"Term\": \"2017-07-07T00:00:00/2018-08-08T00:00:00\"},\n        {\"Term\":\"2019-09-09T00:00:00/2020-10-20T00:00:00\"}\n    ],\n    \"Audio\": {\n        \"ClosedCaption\": \"FR\",\n        \"AudioType\": \"Stereo\"\n    },\n    \"Video\": {\n        \"Vchip\": \"TV-PG-V\",\n        \"ei\": true\n    }\n}"
+							"raw": "{\t\n    \"ActualLength\": \"PT0H53M17S\",\n    \"EditClass\": \"Original\",\n    \"EditUse\": \"Broadcast\",\n    \"ManifestationClass\": \"HD\",\n    \"ParentUID\": \"cid:org:pbs.org:Episode73\",\n    \"ReferentType\": \"TV\",\n    \"StructuralType\": \"Performance\",\n    \"Title\": \"Forsyte Saga; -Dev Smoke Test\",\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.orgPackageType:HD-Base\"\n        }\n    ],\n    \"UseWindowTermList\": [\n        {\"Term\": \"2017-07-07T00:00:00/2018-08-08T00:00:00\"},\n        {\"Term\":\"2019-09-09T00:00:00/2020-10-20T00:00:00\"}\n    ],\n    \"Audio\": {\n        \"ClosedCaption\": \"FR\",\n        \"AudioType\": \"Stereo\"\n    },\n    \"Video\": {\n        \"Vchip\": \"TV-PG-V\",\n        \"ei\": true,\n        \"HiDef\": \"1080i\"\n    }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/manifestation",
@@ -2072,16 +2072,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"ActualLength\": \"PT0H0M35S\",\n    \"EditClass\": \"Spot\",\n    \"EditUse\": \"Broadcast\",\n    \"ManifestationClass\": \"HD\",\n    \"ParentUID\": \"cid:org:pbs.org:Episode73\",\n    \"ReferentType\": \"TV\",\n    \"StructuralType\": \"Performance\",\n    \"Title\": \"Healthful Indian Flavors with Alamelu-Dev-Smoke Test\",\n    \"Audio\": {\n        \"ClosedCaption\": \"EN\",\n        \"AudioType\": \"Stereo\"\n    },\n    \"Video\": {\n        \"Vchip\": \"TV-G\",\n        \"ei\": false\n    }\n}"
+							"raw": "{\n    \"ActualLength\": \"PT0H0M35S\",\n    \"EditClass\": \"Spot\",\n    \"EditUse\": \"Broadcast\",\n    \"ManifestationClass\": \"HD\",\n    \"ParentUID\": \"cid:org:pbs.org:Episode73\",\n    \"ReferentType\": \"TV\",\n    \"StructuralType\": \"Performance\",\n    \"Title\": \"Healthful Indian Flavors with Alamelu-Dev-Smoke Test\",\n    \"Audio\": {\n        \"ClosedCaption\": \"EN\",\n        \"AudioType\": \"Stereo\"\n    },\n    \"Video\": {\n        \"Vchip\": \"TV-G\",\n        \"ei\": false,\n        \"HiDef\": \"1080i\"\n    }\n}"
 						},
 						"url": {
-							"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation1122",
+							"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation384878",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"manifestation",
-								"cid:org:pbs.org:Manifestation1122"
+								"cid:org:pbs.org:Manifestation384878"
 							]
 						}
 					},
@@ -2159,7 +2159,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/manifestation/search?contentid=cid:org:pbs.org:Broadview-4221953&title=World&usewindowtermstartdate=2010-11-07T00:00:00Z&usewindowtermenddate=2018-08-08T00:00:00Z",
+							"raw": "{{baseurl}}/manifestation/search?contentid=cid:org:pbs.org:Broadview-657152686&title=World&usewindowtermstartdate=2010-11-07T00:00:00Z&usewindowtermenddate=2018-08-08T00:00:00Z",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -2170,7 +2170,7 @@
 							"query": [
 								{
 									"key": "contentid",
-									"value": "cid:org:pbs.org:Broadview-4221953"
+									"value": "cid:org:pbs.org:Broadview-657152686"
 								},
 								{
 									"key": "title",
@@ -3512,6 +3512,53 @@
 						},
 						{
 							"name": "Permission POST",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"tests[\"Status code is 201\"] = responseCode.code === 201;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "apikey",
+										"value": "{{apikey}}"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"Rule\": {\n    \"PlayType\": \"Release\",\n    \"MediaContext\": [\n      \"Television\"\n    ],\n    \"Type\": \"Rights In\",\n    \"Calculated\": true,\n    \"TermStartDate\": \"1900-01-01T00:00:00Z\",\n    \"TermEndDate\": \"1900-01-01T00:00:00Z\",\n    \"UnitType\": null,\n    \"Count\": 1,\n    \"EnsureExclusivity\": true,\n    \"GeospatialNamedArea\": [\n        \"United States and its Territories & Possessions; U.S Military Bases, Embassies and Consulates; U.S. Ships at Sea\"\n    ],\n    \"Trigger\": {\n      \"StartCount\": 30,\n      \"StartUnitType\": \"Days\",\n      \"StartOperator\": \"On\",\n      \"StartEvent\": \"Each Repeat *Subsequent Airings Latest Episode\",\n      \"TimeInterval\": [],\n      \"EndCount\": 30,\n      \"EndUnitType\": \"Days\",\n      \"EndOperator\": \"After\",\n      \"EndEvent\": \"Each Episode Rights End\"\n    },\n    \"LogicalAssetIDList\": [\n      {\n        \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-6185865455\"\n      }\n    ],\n    \"EntryList\": [\n      {\n        \"EntryClass\": \"Episode\",\n        \"EntryUID\": \"cid:org:pbs.org:Episode1\"\n      }\n    ]\n  }\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"policy",
+										"cid:org:pbs.org:Policy268",
+										"permission"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Permission POST - Catchup",
 							"event": [
 								{
 									"listen": "test",
@@ -4911,7 +4958,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode3818\",\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation1172\",\n    \"ReferentType\": \"Linear\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"en\",\n    \"SubtitledLanguage\": \"en\",\n    \"DviLanguage\": \"en\",\n    \"CommonCarriage\": 1,\n    \"Qualifier\": [\n        \"CC\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\",\n    \"Linear\": {\n        \"PlayRun\": 1,\n        \"PlayDay\":  3, \n        \"PlayType\": \"Hard Feed (with rights)\",\n        \"ReleaseQualifier\": \"premiere\",\n        \"Duration\": \"1800\",\n        \"ProgramService\": {\n            \"ProviderSource\": \"500 - X\",\n            \"ProviderSourceName\": \"PBS\",\n            \"ProviderTimeZone\": \"EDT\"\n        },\n        \"AlternateEventIDList\": [\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-23046921\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-434324324\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-323242342\"\n      }\n    ]\n    }\n}"
+									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode3818\",\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation1172\",\n    \"ReferentType\": \"Linear\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"en\",\n    \"SubtitledLanguage\": \"en\",\n    \"DviLanguage\": \"en\",\n    \"CommonCarriage\": 1,\n    \"Qualifier\": [\n        \"CC\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\",\n    \"Linear\": {\n        \"PlayRun\": 1,\n        \"PlayDay\":  3, \n        \"PlayType\": \"Hard Feed (with rights)\",\n        \"ReleaseQualifier\": \"premiere\",\n        \"Duration\": \"1800\",\n        \"ProgramService\": {\n            \"ProviderSource\": \"500 - X\",\n            \"ProviderSourceName\": \"PBS\",\n            \"ProviderTimeZone\": \"EDT\"\n        },\n        \"AlternateEventIDList\": [\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-23046921\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:Rightsline-84743\"\n      }\n    ]\n    }\n}"
 								},
 								"url": {
 									"raw": "{{baseurl}}/event/linear",
@@ -6126,6 +6173,50 @@
 			"name": "Edit",
 			"item": [
 				{
+					"name": "PublishStatus",
+					"item": [
+						{
+							"name": "Edit Publish Status PUT",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "apikey",
+										"type": "text",
+										"value": "{{apikey}}"
+									},
+									{
+										"key": "x-api-key",
+										"type": "text",
+										"value": "{{x-api-key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"PublishedStatus\": \"Internally Published\"\n}"
+								},
+								"url": {
+									"raw": "{{baseurl}}/edit/cid:org:pbs.org:Edit10/publish-status",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"edit",
+										"cid:org:pbs.org:Edit10",
+										"publish-status"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "Edit GET",
 					"event": [
 						{
@@ -6198,7 +6289,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"StructuralType\": \"Abstraction\",\r\n    \"FileDeliveryStatus\": \"Delivered\",\r\n    \"Description\": \"Wild Kratts\",\r\n    \"EditClass\": [\r\n        \"Original\",\r\n        \"Supplemental\"\r\n    ],\r\n    \"EditUse\": \"Broadcast\",\r\n    \"ActualLength\": \"PT0H28M55S\",\r\n    \"ParentUID\": \"cid:org:pbs.org:Episode777\",\r\n    \"AlternateEditIDList\": [\r\n        {\r\n            \"AlternateEditID\": \"alid:org:pbs.org:DevTest-4233\"\r\n        }\r\n    ]\r\n}"
+							"raw": "{\r\n    \"StructuralType\": \"Performance\",\r\n    \"FileDeliveryStatus\": \"Delivered\",\r\n    \"Title\": \"Wild Kratts\",\r\n    \"EditClass\": [\r\n        \"Original\",\r\n        \"Supplemental\"\r\n    ],\r\n    \"EditUse\": \"Broadcast\",\r\n    \"ActualLength\": \"PT0H28M55S\",\r\n    \"ParentUID\": \"cid:org:pbs.org:Episode777\",\r\n    \"AlternateContentIDList\": [\r\n        {\r\n            \"AlternateContentID\": \"alid:org:pbs.org:DevTest-4233\"\r\n        }\r\n    ]\r\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/edit",
@@ -6243,7 +6334,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"FileDeliveryStatus\": \"Delivered\",\r\n    \"Description\": \"(ARUR  000104Z, REEL 1) ARTHUR\",\r\n    \"EditClass\": [\r\n        \"Original\"\r\n    ],\r\n    \"EditUse\": \"Broadcast\",\r\n    \"ActualLength\": \"PT0H30M0S\",\r\n    \"ParentUID\": \"cid:org:pbs.org:Episode842\"\r\n}"
+							"raw": "{\r\n    \"FileDeliveryStatus\": \"Delivered\",\r\n    \"Title\": \"(ARUR  000104Z, REEL 1) ARTHUR\",\r\n    \"EditClass\": [\r\n        \"Original\"\r\n    ],\r\n    \"EditUse\": \"Broadcast\",\r\n    \"ActualLength\": \"PT0H30M0S\",\r\n    \"ParentUID\": \"cid:org:pbs.org:Episode842\"\r\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/edit/cid:org:pbs.org:Edit6",
@@ -6335,17 +6426,17 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"AlternateEditID\": \"cid:org:pbs.org:Broadview-149635276\"\r\n}"
+							"raw": "{\r\n\t\"AlternateContentID\": \"cid:org:pbs.org:Broadview-149635276\"\r\n}"
 						},
 						"url": {
-							"raw": "{{baseurl}}/edit/cid:org:pbs.org:Edit11/alternateeditidregistration",
+							"raw": "{{baseurl}}/edit/cid:org:pbs.org:Edit11/alternatecontentidregistration",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"edit",
 								"cid:org:pbs.org:Edit11",
-								"alternateeditidregistration"
+								"alternatecontentidregistration"
 							]
 						}
 					},
@@ -6385,14 +6476,14 @@
 							"raw": "{\r\n\t\"AlternateEditID\": \"cid:org:pbs.org:Broadview-149635276\"\r\n}"
 						},
 						"url": {
-							"raw": "{{baseurl}}/edit/cid:org:pbs.org:Edit11/alternateeditid/cid:org:pbs.org:Broadview-149635276",
+							"raw": "{{baseurl}}/edit/cid:org:pbs.org:Edit11/alternatecontentid/cid:org:pbs.org:Broadview-149635276",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"edit",
 								"cid:org:pbs.org:Edit11",
-								"alternateeditid",
+								"alternatecontentid",
 								"cid:org:pbs.org:Broadview-149635276"
 							]
 						}
@@ -6429,7 +6520,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/edit/search?alternateeditid=apid:org:pbs.org:Broadview-1002145",
+							"raw": "{{baseurl}}/edit/search?title=Wild Kratts - Update&alternatecontentid=apid:org:pbs.org:Broadview-13118",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -6439,13 +6530,12 @@
 							],
 							"query": [
 								{
-									"key": "description",
-									"value": "Wild Kratts - Update",
-									"disabled": true
+									"key": "title",
+									"value": "Wild Kratts - Update"
 								},
 								{
-									"key": "alternateeditid",
-									"value": "apid:org:pbs.org:Broadview-1002145"
+									"key": "alternatecontentid",
+									"value": "apid:org:pbs.org:Broadview-13118"
 								}
 							]
 						}
@@ -6654,7 +6744,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Supplemental\",\n    \"Title\": \"Wild Kratts\",\n    \"ApproximateLength\": \"PT0H28M55S\",\n    \"SupplementalContentClass\": \"Disaster Spots\",\n    \"AlternateContentClass\": \"Parental Control\",\n     \"PromotionalClass\": \"Series Sell\",\n    \"SupportedWorkRelationship\": \"Parental Control\",\n    \"AlternateSupplementalIDList\": [\n        {\n            \"AlternateSupplementalID\": \"alid:org:pbs.org:BeBanjo-548876880\"\n        }\n    ],\n    \"EntryList\": [\n        {\n            \"EntryClass\": \"Series\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Series11\"\n        },\n        {\n            \"EntryClass\": \"Season\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Season124\"\n        },\n        {\n            \"EntryClass\": \"Episode\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Episode31448\"\n        },\n        {\n            \"EntryClass\": \"Manifestation\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Manifestation323\"\n        }\n    ]\n}"
+							"raw": "{\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Supplemental\",\n    \"Title\": \"Wild Kratts\",\n    \"ApproximateLength\": \"PT0H28M55S\",\n    \"SupplementalContentClass\": \"Disaster Spots\",\n    \"AlternateContentClass\": \"Parental Control\",\n     \"PromotionalClass\": \"Series Sell\",\n    \"SupportedWorkRelationship\": \"Parental Control\",\n    \"AlternateContentIDList\": [\n        {\n            \"AlternateContentID\": \"alid:org:pbs.org:BeBanjo-548876880\"\n        }\n    ],\n    \"EntryList\": [\n        {\n            \"EntryClass\": \"Series\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Series11\"\n        },\n        {\n            \"EntryClass\": \"Season\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Season124\"\n        },\n        {\n            \"EntryClass\": \"Episode\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Episode31448\"\n        },\n        {\n            \"EntryClass\": \"Manifestation\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Manifestation323\"\n        }\n    ]\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/supplemental",
@@ -6763,17 +6853,17 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"AlternateSupplementalID\": \"cid:org:pbs.org:Broadview-8989898983\"\n}"
+							"raw": "{\n    \"AlternateContentID\": \"cid:org:pbs.org:Broadview-8989898983\"\n}"
 						},
 						"url": {
-							"raw": "{{baseurl}}/supplemental/cid:org:pbs.org:Supplemental10/alternatesupplementalidregistration",
+							"raw": "{{baseurl}}/supplemental/cid:org:pbs.org:Supplemental72322/alternatecontentidregistration",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"supplemental",
-								"cid:org:pbs.org:Supplemental10",
-								"alternatesupplementalidregistration"
+								"cid:org:pbs.org:Supplemental72322",
+								"alternatecontentidregistration"
 							]
 						}
 					},
@@ -6805,14 +6895,14 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "{{baseurl}}/supplemental/cid:org:pbs.org:Supplemental10/alternatesupplementalid/cid:org:pbs.org:Broadview-8989898983",
+							"raw": "{{baseurl}}/supplemental/cid:org:pbs.org:Supplemental72322/alternatecontentid/cid:org:pbs.org:Broadview-8989898983",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"supplemental",
-								"cid:org:pbs.org:Supplemental10",
-								"alternatesupplementalid",
+								"cid:org:pbs.org:Supplemental72322",
+								"alternatecontentid",
 								"cid:org:pbs.org:Broadview-8989898983"
 							]
 						}
@@ -6849,7 +6939,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/supplemental/search?title=Fillmore&alternatesupplementalid=cid:org:pbs.org:Broadview-23824755&entryuid=cid:org:pbs.org:Episode10573",
+							"raw": "{{baseurl}}/supplemental/search?title=Fillmore&alternatecontentid=cid:org:pbs.org:Broadview-23824755&entryuid=cid:org:pbs.org:Episode10573",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -6863,7 +6953,7 @@
 									"value": "Fillmore"
 								},
 								{
-									"key": "alternatesupplementalid",
+									"key": "alternatecontentid",
 									"value": "cid:org:pbs.org:Broadview-23824755"
 								},
 								{

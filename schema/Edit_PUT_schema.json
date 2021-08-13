@@ -6,13 +6,13 @@
   },
   "additionalProperties": false,
   "properties": {
-    "Description": {
+    "Title": {
       "minLength": 1,
       "pattern": "^(.*)$",
       "type": "string",
       "errorMessage": {
-        "type": "Description must be a String",
-        "minLength": "Description should have a minimum one character"
+        "type": "Title must be a String",
+        "minLength": "Title should have a minimum one character"
       }
     },
     "FileDeliveryStatus": {
@@ -87,7 +87,7 @@
           "Spot",
           "Non-Air",
           "Premium Change",
-		  "Pledge",
+          "Pledge",
           "Other"
         ],
         "errorMessage": {

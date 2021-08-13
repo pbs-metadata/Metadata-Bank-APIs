@@ -238,31 +238,31 @@
         }
       }
     },
-    "AlternateSupplementalIDList": {
+    "AlternateContentIDList": {
       "type": "array",
       "uniqueItems": true,
       "errorMessage": {
-        "type": "AlternateSupplementalIDList must be an Array",
-        "uniqueItems": "AlternateSupplementalIDList Contains a Duplicate Value"
+        "type": "AlternateContentIDList must be an Array",
+        "uniqueItems": "AlternateContentIDList Contains a Duplicate Value"
       },
       "items": {
         "required": [
-          "AlternateSupplementalID"
+          "AlternateContentID"
         ],
         "type": "object",
         "properties": {
-          "AlternateSupplementalID": {
+          "AlternateContentID": {
             "pattern": "^(.*)$",
             "type": "string",
             "errorMessage": {
-              "type": "AlternateSupplementalID must be a string"
+              "type": "AlternateContentID must be a string"
             }
           }
         },
         "errorMessage": {
           "type": "items should be an object",
           "required": {
-            "AlternateSupplementalID": "AlternateSupplementalID is Required"
+            "AlternateContentID": "AlternateContentID is Required"
           }
         }
       }

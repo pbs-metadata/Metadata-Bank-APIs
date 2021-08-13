@@ -1,7 +1,7 @@
 {
   "title": "The Root Schema",
   "required": [
-    "Description",
+    "Title",
     "EditClass",
     "EditUse",
     "ActualLength",
@@ -10,7 +10,7 @@
   "errorMessage": {
     "type": "The request should be an object",
     "required": {
-      "Description": "Description is Required",
+      "Title": "Title is Required",
       "EditClass": "EditClass is Required",
       "EditUse": "EditUse is Required",
       "ActualLength": "ActualLength is Required",
@@ -20,13 +20,13 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "Description": {
+    "Title": {
       "minLength": 1,
       "pattern": "^(.*)$",
       "type": "string",
       "errorMessage": {
-        "type": "Description must be a String",
-        "minLength": "Description should have a minimum one character"
+        "type": "Title must be a String",
+        "minLength": "Title should have a minimum one character"
       }
     },
     "FileDeliveryStatus": {
@@ -101,7 +101,7 @@
           "Spot",
           "Non-Air",
           "Premium Change",
-		  "Pledge",
+          "Pledge",
           "Other"
         ],
         "errorMessage": {
@@ -167,31 +167,31 @@
         "minLength": "ActualLength should have a minimum one character"
       }
     },
-    "AlternateEditIDList": {
+    "AlternateContentIDList": {
       "type": "array",
       "items": {
         "required": [
-          "AlternateEditID"
+          "AlternateContentID"
         ],
         "type": "object",
         "errorMessage": {
           "type": "items should be an object",
           "required": {
-            "AlternateEditID": "AlternateEditID is Required"
+            "AlternateContentID": "AlternateContentID is Required"
           }
         },
         "properties": {
-          "AlternateEditID": {
+          "AlternateContentID": {
             "pattern": "^(.*)$",
             "type": "string",
             "errorMessage": {
-              "type": "AlternateEditID must be a String"
+              "type": "AlternateContentID must be a String"
             }
           }
         }
       },
       "errorMessage": {
-        "type": "AlternateEditIDList must be an Array"
+        "type": "AlternateContentIDList must be an Array"
       }
     }
   }
