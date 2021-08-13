@@ -1,4 +1,8 @@
-## v1.0.29.0
+## v1.0.33.0
+   * MBANK v0.33.0 - Postman collection - New Edit - Publish Status endpoints is added, The Edit[Title, AlternateContentID] & Supplemental[AlternateContentID] fieldname changed & Play Run Removed from VOD Events.
+   * MBANK v0.33.0 - JSON schema - The Edit[Title, AlternateContentID] & Supplemental[AlternateContentID] fieldname changed & Play Run Removed from VOD Events.
+
+## v1.0.30.0
    * MBANK v0.30.0 - Postman collection - New POST, PUT and DELETE endpoints are added to policy OrganizationList
    * MBANK v0.30.0 - JSON schema - The ReferentType is removed and the PolicyType field renamed to PolicyClass for from Policy POST and PUT shema.
 

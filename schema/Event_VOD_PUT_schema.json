@@ -3,6 +3,7 @@
   "errorMessage": {
     "type": "The request should be an object"
   },
+  "additionalProperties": false,
   "properties": {
     "StructuralType": {
       "transform": [
@@ -515,10 +516,25 @@
     },
     "VOD": {
       "type": "object",
+      "additionalProperties": false,
       "errorMessage": {
         "type": "VOD should be an object"
       },
       "properties": {
+        "ReleaseQualifier": {
+          "pattern": "^(.*)$",
+          "type": "string",
+          "errorMessage": {
+            "type": "ReleaseQualifier must be a String"
+          }
+        },
+        "Duration": {
+          "pattern": "^(.*)$",
+          "type": "string",
+          "errorMessage": {
+            "type": "Duration must be a String"
+          }
+        },
         "PublishedStatus": {
           "pattern": "^(.*)$",
           "type": "string",
