@@ -15,7 +15,6 @@
       "minLength": 1,
       "pattern": "^(.*)$",
       "errorMessage": {
-        "type": "ParentUID must be a String",
         "minLength": "ParentUID should have a minimum one character"
       }
     },
@@ -54,6 +53,99 @@
       "errorMessage": {
         "type": "EpisodeClass must be a String",
         "enum": "EpisodeClass must be a Main, Omnibus, Pilot, Recut, Segment, Special, Standalone or one-time-only irrepective to case."
+      }
+    },
+    "Keywords": {
+      "type": "object",
+      "errorMessage": {
+        "type": "Keywords should be an object"
+      },
+	  "additionalProperties": false,
+      "properties": {
+        "Mood": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "Mood items must be a String",
+              "minLength": "Mood items should have a minimum one character"
+            }
+          }
+        },
+        "Theme": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "Theme items must be a String",
+              "minLength": "Theme items should have a minimum one character"
+            }
+          }
+        },
+        "Character": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "Character items must be a String",
+              "minLength": "Character items should have a minimum one character"
+            }
+          }
+        },
+        "Setting": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "Setting items must be a String",
+              "minLength": "Setting items should have a minimum one character"
+            }
+          }
+        },
+        "Subject": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "Subject items must be a String",
+              "minLength": "Subject items should have a minimum one character"
+            }
+          }
+        },
+        "General": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "General items must be a String",
+              "minLength": "General items should have a minimum one character"
+            }
+          }
+        },
+        "TimePeriod": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^(.*)$",
+            "errorMessage": {
+              "type": "TimePeriod items must be a String",
+              "minLength": "TimePeriod items should have a minimum one character"
+            }
+          }
+        }
       }
     },
     "ReferentType": {
@@ -166,6 +258,13 @@
       "type": "string",
       "errorMessage": {
         "type": "Title120 must be a String"
+      }
+    },
+    "TitleLong": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "TitleLong must be a String"
       }
     },
     "Title19": {
@@ -381,99 +480,6 @@
         "enum": "TitleLanguage must be a aa, ab, ae, af, ak, am, an, ar, as, av, ay, az, ba, be, bg, bh, bi, bm, bn, bo, br, bs, ca, ce, ch, co, cr, cs, cu, cv, cy, da, de, dv, dz, ee, el, en, eo, es, et, eu, fa, ff, fi, fj, fl, fo, fr, fy, ga, gd, gl, gn, gu, gv, ha, haw, he, hi, ho, hr, ht, hu, hy, hz, ia, id, ie, ig, ii, ik, io, is, it, iu, ja, jv, ka, kg, ki, kj, kk, kl, km, kn, ko, kr, ks, ku, kv, kw, ky, la, lb, lg, li, ln, lo, lt, lu, lv, mg, mh, mi, mk, ml, mn, mr, ms, mt, my, na, nb, nd, ne, ng, nl, nn, no, nr, nv, ny, oc, oj, om, or, os, pa, pi, pl, ps, pt, qu, rm, rn, ro, ru, rw, sa, sc, sd, se, sg, si, sk, sl, sm, sn, so, sq, sr, ss, st, su, sv, sw, ta, te, tg, th, ti, tk, tl, tn, to, tr, ts, tt, tw, ty, ug, uk, ur, uz, ve, vi, vo, wa, wo, xh, yi, yo, za, zh or  zu,  dar, hmo, psm, swz, wam irrepective to case."
       }
     },
-    "Keywords": {
-      "type": "object",
-      "errorMessage": {
-        "type": "Keywords should be an object"
-      },
-	  "additionalProperties": false,
-      "properties": {
-        "Mood": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1,
-            "pattern": "^(.*)$",
-            "errorMessage": {
-              "type": "Mood items must be a String",
-              "minLength": "Mood items should have a minimum one character"
-            }
-          }
-        },
-        "Theme": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1,
-            "pattern": "^(.*)$",
-            "errorMessage": {
-              "type": "Theme items must be a String",
-              "minLength": "Theme items should have a minimum one character"
-            }
-          }
-        },
-        "Character": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1,
-            "pattern": "^(.*)$",
-            "errorMessage": {
-              "type": "Character items must be a String",
-              "minLength": "Character items should have a minimum one character"
-            }
-          }
-        },
-        "Setting": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1,
-            "pattern": "^(.*)$",
-            "errorMessage": {
-              "type": "Setting items must be a String",
-              "minLength": "Setting items should have a minimum one character"
-            }
-          }
-        },
-        "Subject": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1,
-            "pattern": "^(.*)$",
-            "errorMessage": {
-              "type": "Subject items must be a String",
-              "minLength": "Subject items should have a minimum one character"
-            }
-          }
-        },
-        "General": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1,
-            "pattern": "^(.*)$",
-            "errorMessage": {
-              "type": "General items must be a String",
-              "minLength": "General items should have a minimum one character"
-            }
-          }
-        },
-        "TimePeriod": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "minLength": 1,
-            "pattern": "^(.*)$",
-            "errorMessage": {
-              "type": "TimePeriod items must be a String",
-              "minLength": "TimePeriod items should have a minimum one character"
-            }
-          }
-        }
-      }
-    },
     "ReleaseDate": {
       "pattern": "^(.*)$",
       "type": "string",
@@ -523,103 +529,110 @@
       }
     },
     "SecondaryGenre": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
-      "type": "string",
-      "enum": [
-        "action/adventure",
-        "adult",
-        "advice",
-        "animated",
-        "animated comedy",
-        "arts & literature",
-        "audio only",
-        "auto info",
-        "awards",
-        "baseball",
-        "basketball",
-        "biography",
-        "boxing",
-        "business & finance",
-        "comedy",
-        "comedy-drama",
-        "crime drama",
-        "documentary",
-        "drama",
-        "educational",
-        "entertainment",
-        "extreme sports",
-        "fantasy",
-        "fashion",
-        "food",
-        "football",
-        "game show",
-        "golf",
-        "health & fitness",
-        "history",
-        "hobbies & craft",
-        "hockey",
-        "home & garden",
-        "horror",
-        "horse racing",
-        "ice skating",
-        "ice skating (competition)",
-        "magazine",
-        "martial arts",
-        "motor sports",
-        "music",
-        "music videos",
-        "musical",
-        "mystery & suspense",
-        "nature",
-        "newscast",
-        "newsmagazine",
-        "olympics",
-        "outdoors",
-        "paranormal",
-        "performance",
-        "pets",
-        "politics",
-        "pro wrestling",
-        "public affairs",
-        "reality",
-        "religion",
-        "roller sports",
-        "science & technology",
-        "sci-fi",
-        "shopping",
-        "soap opera",
-        "soccer",
-        "sports",
-        "talk",
-        "teens",
-        "tennis",
-        "track & field",
-        "travel",
-        "variety",
-        "volleyball",
-        "water sports",
-        "western",
-        "winter sports",
-        "self-help",
-        "cultural",
-        "concert",
-        "pledge",
-        "women",
-        "animals",
-        "science/nature",
-        "bus./financial",
-        "children's",
-        "holidays",
-        "outreach",
-        "how-to",
-        "british"
-      ],
+      "type": "array",
       "errorMessage": {
-        "type": "SecondaryGenre must be a String",
-        "enum": "SecondaryGenre must be a action/adventure, adult, advice, animated, animated comedy, arts & literature, audio only, auto info, awards, baseball, basketball, biography, boxing, business & finance, comedy, comedy-drama, crime drama, documentary, drama, educational, entertainment, extreme sports, fantasy, fashion, food, football, game show, golf, health & fitness, history, hobbies & craft, hockey, home & garden, horror, horse racing, ice skating, ice skating (competition), magazine, martial arts, motor sports, music, music videos, musical, mystery & suspense, nature, newscast, newsmagazine, olympics, outdoors, paranormal, performance, pets, politics, pro wrestling, public affairs, reality, religion, roller sports, science & technology, sci-fi, shopping, soap opera, soccer, sports, talk, teens, tennis, track & field, travel, variety, volleyball, water sports, western, winter sports, self-help, cultural, concert, pledge, women, animals, science/nature, bus./financial, children's, holidays, outreach, how-to, british irrepective to case."
+        "type": "SecondaryGenre must be an Array"
+      },
+      "items": {
+        "transform": [
+          "trim",
+          "toEnumCase"
+        ],
+        "type": "string",
+        "enum": [
+          "action/adventure",
+          "adult",
+          "advice",
+          "animated",
+          "animated comedy",
+          "arts & literature",
+          "audio only",
+          "auto info",
+          "awards",
+          "baseball",
+          "basketball",
+          "biography",
+          "boxing",
+          "business & finance",
+          "comedy",
+          "comedy-drama",
+          "crime drama",
+          "documentary",
+          "drama",
+          "educational",
+          "entertainment",
+          "extreme sports",
+          "fantasy",
+          "fashion",
+          "food",
+          "football",
+          "game show",
+          "golf",
+          "health & fitness",
+          "history",
+          "hobbies & craft",
+          "hockey",
+          "home & garden",
+          "horror",
+          "horse racing",
+          "ice skating",
+          "ice skating (competition)",
+          "magazine",
+          "martial arts",
+          "motor sports",
+          "music",
+          "music videos",
+          "musical",
+          "mystery & suspense",
+          "nature",
+          "newscast",
+          "newsmagazine",
+          "olympics",
+          "outdoors",
+          "paranormal",
+          "performance",
+          "pets",
+          "politics",
+          "pro wrestling",
+          "public affairs",
+          "reality",
+          "religion",
+          "roller sports",
+          "science & technology",
+          "sci-fi",
+          "shopping",
+          "soap opera",
+          "soccer",
+          "sports",
+          "talk",
+          "teens",
+          "tennis",
+          "track & field",
+          "travel",
+          "variety",
+          "volleyball",
+          "water sports",
+          "western",
+          "winter sports",
+          "self-help",
+          "cultural",
+          "concert",
+          "pledge",
+          "women",
+          "animals",
+          "science/nature",
+          "bus./financial",
+          "children's",
+          "holidays",
+          "outreach",
+          "how-to",
+          "british"
+        ],
+        "errorMessage": {
+          "type": "SecondaryGenre must be a String",
+          "enum": "SecondaryGenre must be a action/adventure, adult, advice, animated, animated comedy, arts & literature, audio only, auto info, awards, baseball, basketball, biography, boxing, business & finance, comedy, comedy-drama, crime drama, documentary, drama, educational, entertainment, extreme sports, fantasy, fashion, food, football, game show, golf, health & fitness, history, hobbies & craft, hockey, home & garden, horror, horse racing, ice skating, ice skating (competition), magazine, martial arts, motor sports, music, music videos, musical, mystery & suspense, nature, newscast, newsmagazine, olympics, outdoors, paranormal, performance, pets, politics, pro wrestling, public affairs, reality, religion, roller sports, science & technology, sci-fi, shopping, soap opera, soccer, sports, talk, teens, tennis, track & field, travel, variety, volleyball, water sports, western, winter sports, self-help, cultural, concert, pledge, women, animals, science/nature, bus./financial, children's, holidays, outreach, how-to, british irrepective to case.",
+          "uniqueItems": "Duplicate SecondaryGenre is not allowed"
+        }
       }
     },
     "CountryOfOrigin": {
@@ -1440,14 +1453,16 @@
       "items": {
         "required": [
           "ContactInfoList",
-          "OrganizationID"
+          "OrganizationID",
+          "Role"
         ],
         "type": "object",
         "errorMessage": {
           "type": "contains should be an object",
           "required": {
             "ContactInfoList": "ContactInfoList is Required",
-            "OrganizationID": "OrganizationID is Required"
+            "OrganizationID": "OrganizationID is Required",
+            "Role": "Role is Required"
           }
         },
         "properties": {
@@ -1482,8 +1497,10 @@
           },
           "ContactInfoList": {
             "type": "array",
+            "minItems": 1,
             "errorMessage": {
-              "type": "ContactInfoList must be an Array"
+              "type": "ContactInfoList must be an Array",
+              "minItems": "Minimum one contact info is required"
             },
             "items": {
               "required": [
@@ -1545,6 +1562,38 @@
           }
         }
       }
-    }
+    },
+    "additionalData": {
+			"type": "object",
+			"errorMessage": {
+			  	"type": "The additionalData should be an object"
+			},
+			"properties": {
+        "CreatedBy": {
+					"type": "string",
+					"errorMessage": {
+						"type": "CreatedBy must be a String"
+					}
+				},
+				"Source": {
+					"type": "string",
+					"errorMessage": {
+						"type": "Source must be a String"
+					}
+				},
+				"UpdatedBy": {
+					"type": "string",
+					"errorMessage": {
+						"type": "UpdatedBy must be a String"
+					}
+				},
+				"DeletedBy": {
+					"type": "string",
+					"errorMessage": {
+						"type": "DeletedBy must be a String"
+					}
+				}
+			}
+		}
   }
 }

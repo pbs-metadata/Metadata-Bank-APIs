@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "fe062abf-5792-4401-b996-83ac20f30d9f",
-		"name": "Metadata-Bank-API-v0.33.0",
+		"name": "Metadata-Bank-API-v0.36.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -31,23 +31,24 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"PublishedStatus\": \"Internally Published\"\n}"
+									"raw": "{\n\t\"PublishedStatus\": \"Externally Published\"\n}"
 								},
 								"url": {
-									"raw": "{{baseurl}}/series/cid:org:pbs.org:Series388/publish-status",
+									"raw": "{{baseurl}}/series/cid:org:pbs.org:Series306/publish-status",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"series",
-										"cid:org:pbs.org:Series388",
+										"cid:org:pbs.org:Series306",
 										"publish-status"
 									]
 								}
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Change Log",
@@ -89,7 +90,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Series GET",
@@ -97,6 +99,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "abee9b25-4c3a-4d48-bcf0-acea965f8987",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -139,6 +142,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "9fbfd660-3db5-4521-a5b1-057b6ed5a5b0",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -182,6 +186,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "aa886fe9-5f3f-41b1-a3b2-441a4015ed06",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -230,6 +235,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "ea69f123-19ab-4abb-af23-a26c02d07c2a",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -275,6 +281,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "20aa4b41-ea37-470f-9792-bdad3a424317",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -321,6 +328,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "c0b9bde0-5d42-45f6-820c-af59eb620fc0",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -367,6 +375,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "0c1dd974-3f89-4a17-85cf-66b12d135b8b",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -392,16 +401,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:BroadView-618586666\"\n}"
+							"raw": "{\n  \"ContentID\": \"cid:TMSId:SH033745340000\"\n}"
 						},
 						"url": {
-							"raw": "{{baseurl}}/series/cid:org:pbs.org:Series306/contentidregistration",
+							"raw": "{{baseurl}}/series/cid:org:pbs.org:Series388/contentidregistration",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"series",
-								"cid:org:pbs.org:Series306",
+								"cid:org:pbs.org:Series388",
 								"contentidregistration"
 							]
 						}
@@ -414,6 +423,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "de8bef5b-6ce3-4e42-ae13-31e6a0505a8c",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -462,6 +472,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "e9c90e93-bf86-4165-9af8-96f34a2c1f33",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -516,6 +527,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "1544024c-abb8-4b2d-bbeb-62c39bafee02",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -564,6 +576,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "19490a73-8085-4408-9c55-0a60b20d5cb4",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -632,23 +645,24 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"PublishedStatus\": \"Internally Published\"\n}"
+									"raw": "{\n\t\"PublishedStatus\": \"Externally Published\"\n}"
 								},
 								"url": {
-									"raw": "{{baseurl}}/season/cid:org:pbs.org:Season861/publish-status",
+									"raw": "{{baseurl}}/season/cid:org:pbs.org:Season157/publish-status",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"season",
-										"cid:org:pbs.org:Season861",
+										"cid:org:pbs.org:Season157",
 										"publish-status"
 									]
 								}
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Change Log",
@@ -690,7 +704,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Season GET",
@@ -698,6 +713,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "0898bb3c-7ab7-4d63-a93e-527daba701ec",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -722,13 +738,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/season/cid:org:pbs.org:Season156",
+							"raw": "{{baseurl}}/season/cid:org:pbs.org:Season157",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"season",
-								"cid:org:pbs.org:Season156"
+								"cid:org:pbs.org:Season157"
 							]
 						}
 					},
@@ -740,6 +756,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "505e282a-b301-46f2-8ae5-c4129c715982",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -783,6 +800,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "cde8b9cb-cf98-47ad-b07d-a1a1636e7b76",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -828,6 +846,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "5f3d8509-22a6-4070-99b8-c37737e20ea4",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -874,6 +893,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "2155417b-0a07-4a24-93be-fe4ed7764cd2",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -920,6 +940,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "a4f19318-8e81-4951-9d54-1c6fcdc88d5a",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -967,6 +988,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "7f7f2e78-e4f1-4674-a989-f7c8e2e200d6",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1010,11 +1032,67 @@
 					"response": []
 				},
 				{
+					"name": "Season De-Associate Organization",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e9c90e93-bf86-4165-9af8-96f34a2c1f33",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Righhtsline-134332\"\n}"
+						},
+						"url": {
+							"raw": "{{baseurl}}/season/cid:org:pbs.org:season393/organization/32578813?rolename=Producer",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"season",
+								"cid:org:pbs.org:season393",
+								"organization",
+								"32578813"
+							],
+							"query": [
+								{
+									"key": "rolename",
+									"value": "Producer"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Season Delete Keywords",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
+								"id": "5adfebfc-4b9f-4075-a22b-bbd88dcc2665",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1061,6 +1139,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "16b098e3-8348-4c12-a71d-7c5b87c09c15",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1085,7 +1164,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/season/search?contentid=cid:org:pbs.org:Rightsline-2918",
+							"raw": "{{baseurl}}/season/search?contentid=cid:org:pbs.org:Rightsline-85894",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -1101,7 +1180,7 @@
 								},
 								{
 									"key": "contentid",
-									"value": "cid:org:pbs.org:Rightsline-2918"
+									"value": "cid:org:pbs.org:Rightsline-85894"
 								}
 							]
 						}
@@ -1139,23 +1218,24 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"PublishedStatus\": \"Internally Published\"\n}"
+									"raw": "{\n\t\"PublishedStatus\": \"Externally Published\"\n}"
 								},
 								"url": {
-									"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode30168/publish-status",
+									"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode37461/publish-status",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"episode",
-										"cid:org:pbs.org:Episode30168",
+										"cid:org:pbs.org:Episode37461",
 										"publish-status"
 									]
 								}
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Change Log",
@@ -1197,7 +1277,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Episode GET",
@@ -1205,6 +1286,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "292a6c52-ea59-4236-ab7e-f8b7598460bf",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1242,53 +1324,12 @@
 					"response": []
 				},
 				{
-					"name": "Episode - SIXPBS - Missing Releasedates",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
-							}
-						],
-						"url": {
-							"raw": "{{baseurl}}/episode/missing-releasedates",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"episode",
-								"missing-releasedates"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Episode Simple GET",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
+								"id": "20b092c6-39ed-4dc3-9e15-12a7ced357f7",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1327,11 +1368,99 @@
 					"response": []
 				},
 				{
+					"name": "Episode Simple GET - Part2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "20b092c6-39ed-4dc3-9e15-12a7ced357f7",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/episode/simple-episode/cid:org:pbs.org:Episode12258",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"episode",
+								"simple-episode",
+								"cid:org:pbs.org:Episode12258"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Episode - SIXPBS - Missing Releasedates",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3f1d6fd0-a325-4bcf-96cc-d2b6924de297",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/episode/missing-releasedates",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"episode",
+								"missing-releasedates"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Episode POST",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
+								"id": "bbda22e5-dcd2-48d2-ad2b-32bc47d59f84",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -1377,6 +1506,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "8b053406-5b89-4568-9b6c-5d55fff5ea58",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1423,6 +1553,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "cedf7b9b-e8ac-43b9-9115-991a0b0ac4fc",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1469,6 +1600,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "d4b271bf-517d-44bd-931e-5fa73cc5ceb9",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1494,16 +1626,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Rightsline-134332\"\n}"
+							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Rightsline-8641\"\n}"
 						},
 						"url": {
-							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode30168/contentidregistration",
+							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode41104/contentidregistration",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"episode",
-								"cid:org:pbs.org:Episode30168",
+								"cid:org:pbs.org:Episode41104",
 								"contentidregistration"
 							]
 						}
@@ -1516,6 +1648,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "4460ebfe-d69c-4406-9457-8114eceaa05a",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1544,15 +1677,15 @@
 							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Righhtsline-134332\"\n}"
 						},
 						"url": {
-							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode30168/contentid/cid:org:pbs.org:Rightsline-134332",
+							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode41293/contentid/cid:org:pbs.org:Rightsline-8641",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"episode",
-								"cid:org:pbs.org:Episode30168",
+								"cid:org:pbs.org:Episode41293",
 								"contentid",
-								"cid:org:pbs.org:Rightsline-134332"
+								"cid:org:pbs.org:Rightsline-8641"
 							]
 						}
 					},
@@ -1564,6 +1697,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "77b23226-fa7d-405d-8618-28bdf89e45f6",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1618,6 +1752,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "b238a1bd-0274-44fd-853e-f2dab9f169d6",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1666,6 +1801,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "2808afb3-fb16-461d-887b-6589662fb080",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1713,6 +1849,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "4eee6563-0494-4d7d-aa13-c7936f958d96",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1737,7 +1874,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/episode/search?title=INDIANAPOLIS&contentid=cid:org:pbs.org:Broadview-647286369",
+							"raw": "{{baseurl}}/episode/search?contentid=cid:org:pbs.org:Rightsline-92811",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -1748,11 +1885,12 @@
 							"query": [
 								{
 									"key": "title",
-									"value": "INDIANAPOLIS"
+									"value": "INDIANAPOLIS",
+									"disabled": true
 								},
 								{
 									"key": "contentid",
-									"value": "cid:org:pbs.org:Broadview-647286369"
+									"value": "cid:org:pbs.org:Rightsline-92811"
 								}
 							]
 						}
@@ -1773,6 +1911,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "01938da5-5e1b-4bff-8393-733472c84b92",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -1820,6 +1959,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "dd455dc6-27fd-4cdd-91aa-376f53dd5189",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -1861,7 +2001,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "PublishStatus",
@@ -1905,7 +2046,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Change Log",
@@ -1947,7 +2089,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Manifestation GET",
@@ -1955,6 +2098,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "ee886f72-ba42-4741-a8b3-a7d8d8721fb1",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2002,6 +2146,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "c8d5a77d-b410-4735-ac2b-5f460c88f30e",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -2047,6 +2192,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "6dac187e-eeac-49f5-b878-206a1a32c0dd",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2072,16 +2218,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"ActualLength\": \"PT0H0M35S\",\n    \"EditClass\": \"Spot\",\n    \"EditUse\": \"Broadcast\",\n    \"ManifestationClass\": \"HD\",\n    \"ParentUID\": \"cid:org:pbs.org:Episode73\",\n    \"ReferentType\": \"TV\",\n    \"StructuralType\": \"Performance\",\n    \"Title\": \"Healthful Indian Flavors with Alamelu-Dev-Smoke Test\",\n    \"Audio\": {\n        \"ClosedCaption\": \"EN\",\n        \"AudioType\": \"Stereo\"\n    },\n    \"Video\": {\n        \"Vchip\": \"TV-G\",\n        \"ei\": false,\n        \"HiDef\": \"1080i\"\n    }\n}"
+							"raw": "{\n     \"EidrId\": \"\"\n}"
 						},
 						"url": {
-							"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation384878",
+							"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation406419",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"manifestation",
-								"cid:org:pbs.org:Manifestation384878"
+								"cid:org:pbs.org:Manifestation406419"
 							]
 						}
 					},
@@ -2093,6 +2239,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "79d9da73-93ea-4390-af93-226f5e36ef7b",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2130,11 +2277,109 @@
 					"response": []
 				},
 				{
+					"name": "Manifestation ContentIDRegistration",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6811b60f-4b75-4b0d-aaa0-1a53e53ad76e",
+								"exec": [
+									"tests[\"Status code is 201\"] = responseCode.code === 201;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Broadview-878787878\"\n}"
+						},
+						"url": {
+							"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation1122/contentidregistration",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"manifestation",
+								"cid:org:pbs.org:Manifestation1122",
+								"contentidregistration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Manifestation ContentID DELETE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "df1e8ce4-3ca8-477d-8515-05f661a0c06f",
+								"exec": [
+									"tests[\"Status code is 201\"] = responseCode.code === 201;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation1122/contentid/cid:org:pbs.org:Broadview-878787878",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"manifestation",
+								"cid:org:pbs.org:Manifestation1122",
+								"contentid",
+								"cid:org:pbs.org:Broadview-878787878"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Manifestation Search",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
+								"id": "42536ac2-2522-4b19-bca6-a69108f89e0b",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2188,101 +2433,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "Manifestation ContentIDRegistration",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"tests[\"Status code is 201\"] = responseCode.code === 201;"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Broadview-878787878\"\n}"
-						},
-						"url": {
-							"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation1122/contentidregistration",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"manifestation",
-								"cid:org:pbs.org:Manifestation1122",
-								"contentidregistration"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Manifestation ContentID DELETE",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"tests[\"Status code is 201\"] = responseCode.code === 201;"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation1122/contentid/cid:org:pbs.org:Broadview-878787878",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"manifestation",
-								"cid:org:pbs.org:Manifestation1122",
-								"contentid",
-								"cid:org:pbs.org:Broadview-878787878"
-							]
-						}
-					},
-					"response": []
 				}
 			]
 		},
@@ -2298,7 +2448,8 @@
 								"type": "text/javascript",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								]
+								],
+								"id": "e0f3e15a-47b7-4072-896c-bf3ecb53fd69"
 							}
 						}
 					],
@@ -2337,6 +2488,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "1364c10b-ecfd-4a61-9bff-3d1afc50c1da",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -2362,7 +2514,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"FileClass\": \"Media\",\n    \"FileName\": \"P394492-001PROXY.mxf\",\n    \"FileFormat\": \"AS03\",\n    \"FileDeliveryStatus\": \"Delivered\",\n    \"ParentUID\": \"cid:org:pbs.org:Manifestation43239\",\n    \"ChecksumType\": \"MD5\",\n    \"ChecksumValue\": \"a22b57fb4e828027be5631abb3ae92b2\",\n    \"AlternateAssetIDList\": [\n        {\n            \"AssetUID\": \"cid:org:pbs.org:Broadview-189560425\"\n        }\n    ]\n}"
+							"raw": "{\n\t\"ParentUID\": \"cid:org:pbs.org:Event1910907\",\n    \"FileClass\": \"Manifest\",\n    \"FileName\": \"P394492-001PROXY.mxf\",\n    \"FileFormat\": \"AS03\",\n    \"FileDeliveryStatus\": \"Delivered\",\n    \"FileLocationPath\": \"https://s3.amazonaws.com/development.pbs.sdo.e1.mbankbv/vod/event/manifestation-file/P394412-002PROXY.mxf\",\n    \"ChecksumType\": \"MD5\",\n    \"ChecksumValue\": \"a22b57fb4e828027be5631abb3ae92b2\",\n    \"AlternateAssetIDList\": [\n        {\n            \"AssetUID\": \"cid:org:pbs.org:Broadview-434343434\"\n        }\n    ]\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/file",
@@ -2382,6 +2534,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "58384b5b-59e8-4578-875e-02ad1af6ebf4",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2407,16 +2560,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"FileClass\": \"Media\",\n    \"FileName\": \"P394492-001PROXY.mxf\",\n    \"FileFormat\": \"AS03\",\n    \"FileDeliveryStatus\": \"Delivered\",\n    \"ChecksumType\": \"MD5\",\n    \"ChecksumValue\": \"a22b57fb4e828027be5631abb3ae92b2\"\n}"
+							"raw": "{\n    \"FileClass\": \"Manifest\",\n    \"ParentUID\": \"cid:org:pbs.org:Event18933841\",\n    \"FileName\": \"P394492-001PROXY.mxf\",\n    \"FileFormat\": \"AS03\",\n    \"FileLocationPath\": \"https://s3.amazonaws.com/development.pbs.sdo.e1.mbankbv/vod/event/manifestation-file/P394492-001PROXY.mxf\",\n    \"FileDeliveryStatus\": \"Delivered\",\n    \"ChecksumType\": \"MD5\",\n    \"ChecksumValue\": \"a22b57fb4e828027be5631abb3ae92b2\"\n}"
 						},
 						"url": {
-							"raw": "{{baseurl}}/file/apid:org:pbs.org:File167",
+							"raw": "{{baseurl}}/file/apid:org:pbs.org:File22354",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"file",
-								"apid:org:pbs.org:File167"
+								"apid:org:pbs.org:File22354"
 							]
 						}
 					},
@@ -2428,6 +2581,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "63488f83-6616-4ea0-99f0-a750e5d3416b",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2477,7 +2631,8 @@
 								"type": "text/javascript",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
-								]
+								],
+								"id": "2fcbbc78-c30e-487d-8f99-3e3c785bb589"
 							}
 						}
 					],
@@ -2514,6 +2669,50 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "File Search",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/file/search?parentid=cid:org:pbs.org:Event1893384&alternateassetid=cid:org:pbs.org:Broadview-214293596",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"file",
+								"search"
+							],
+							"query": [
+								{
+									"key": "parentid",
+									"value": "cid:org:pbs.org:Event1893384"
+								},
+								{
+									"key": "alternateassetid",
+									"value": "cid:org:pbs.org:Broadview-214293596"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -2532,7 +2731,8 @@
 										"type": "text/javascript",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
-										]
+										],
+										"id": "7f89d2c3-54f3-43a9-b60a-f34f32b308c7"
 									}
 								}
 							],
@@ -2566,7 +2766,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Season",
@@ -2580,7 +2781,8 @@
 										"type": "text/javascript",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
-										]
+										],
+										"id": "8cfcd129-da68-403c-8a51-c6f66beaf293"
 									}
 								}
 							],
@@ -2614,7 +2816,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Episode",
@@ -2628,7 +2831,8 @@
 										"type": "text/javascript",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
-										]
+										],
+										"id": "38b8b499-2d4a-467c-a71a-cf5602ac5e70"
 									}
 								}
 							],
@@ -2662,7 +2866,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Manifestation",
@@ -2676,7 +2881,8 @@
 										"type": "text/javascript",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
-										]
+										],
+										"id": "d459d7cc-2c12-495f-a168-8de000d111a6"
 									}
 								}
 							],
@@ -2710,7 +2916,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Entry",
@@ -2721,6 +2928,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "03e7ec81-c14f-4f9f-83dd-e2e268a92fd5",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -2768,6 +2976,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "ba89ec1f-ac35-4c5f-9c4c-f37029ceae54",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -2810,7 +3019,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Change Log",
@@ -2852,7 +3062,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "PublishStatus",
@@ -2896,7 +3107,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Compilation GET",
@@ -2904,6 +3116,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "073c673c-7c2b-41de-8f0a-87d9d2e815fb",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2946,6 +3159,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "7ac28278-3df9-481a-a13e-c49d3802b5ef",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -2991,6 +3205,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "ee1507f1-648a-4979-8dee-9394b4a9bcfa",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -3037,6 +3252,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "70c6f47b-a5f3-4b44-997b-aed851b99377",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -3083,6 +3299,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "b37b5925-e69d-421d-b0be-b5a306eeb07c",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -3142,7 +3359,8 @@
 								"type": "text/javascript",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
-								]
+								],
+								"id": "63c3a241-0d8c-4b75-852e-2f2241005616"
 							}
 						}
 					],
@@ -3186,6 +3404,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "401e0f67-a423-4dbd-aebc-86180b7e77f0",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -3245,6 +3464,7 @@
 										{
 											"listen": "test",
 											"script": {
+												"id": "dc61a57a-5898-4571-b8ed-d020234bd976",
 												"exec": [
 													"tests[\"Status code is 201\"] = responseCode.code === 201;"
 												],
@@ -3294,6 +3514,7 @@
 										{
 											"listen": "test",
 											"script": {
+												"id": "47380651-f68a-4373-98db-6452ce78fef9",
 												"exec": [
 													"tests[\"Status code is 200\"] = responseCode.code === 200;"
 												],
@@ -3334,7 +3555,8 @@
 									},
 									"response": []
 								}
-							]
+							],
+							"_postman_isSubFolder": true
 						},
 						{
 							"name": "PublishStatus",
@@ -3380,7 +3602,8 @@
 									},
 									"response": []
 								}
-							]
+							],
+							"_postman_isSubFolder": true
 						},
 						{
 							"name": "Change Log",
@@ -3422,7 +3645,8 @@
 									},
 									"response": []
 								}
-							]
+							],
+							"_postman_isSubFolder": true
 						},
 						{
 							"name": "Permission GET BY UID",
@@ -3430,6 +3654,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "5eaf3cc1-800f-4720-8c8d-8d35bb23179f",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -3454,13 +3679,13 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/permission/4642",
+									"raw": "{{baseurl}}/permission/33334",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"permission",
-										"4642"
+										"33334"
 									]
 								}
 							},
@@ -3472,6 +3697,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "b43f7a34-4563-42db-ae2f-ca04f05be6fe",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -3496,15 +3722,15 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/4642",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1433/permission/33334",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"policy",
-										"cid:org:pbs.org:Policy268",
+										"cid:org:pbs.org:Policy1433",
 										"permission",
-										"4642"
+										"33334"
 									]
 								}
 							},
@@ -3516,6 +3742,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "965dde11-018b-40db-b0a3-f5b327d43a97",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -3541,16 +3768,16 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"Rule\": {\n    \"PlayType\": \"Release\",\n    \"MediaContext\": [\n      \"Television\"\n    ],\n    \"Type\": \"Rights In\",\n    \"Calculated\": true,\n    \"TermStartDate\": \"1900-01-01T00:00:00Z\",\n    \"TermEndDate\": \"1900-01-01T00:00:00Z\",\n    \"UnitType\": null,\n    \"Count\": 1,\n    \"EnsureExclusivity\": true,\n    \"GeospatialNamedArea\": [\n        \"United States and its Territories & Possessions; U.S Military Bases, Embassies and Consulates; U.S. Ships at Sea\"\n    ],\n    \"Trigger\": {\n      \"StartCount\": 30,\n      \"StartUnitType\": \"Days\",\n      \"StartOperator\": \"On\",\n      \"StartEvent\": \"Each Repeat *Subsequent Airings Latest Episode\",\n      \"TimeInterval\": [],\n      \"EndCount\": 30,\n      \"EndUnitType\": \"Days\",\n      \"EndOperator\": \"After\",\n      \"EndEvent\": \"Each Episode Rights End\"\n    },\n    \"LogicalAssetIDList\": [\n      {\n        \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-6185865455\"\n      }\n    ],\n    \"EntryList\": [\n      {\n        \"EntryClass\": \"Episode\",\n        \"EntryUID\": \"cid:org:pbs.org:Episode1\"\n      }\n    ]\n  }\n}"
+									"raw": "{\n  \"Permission\": {\n    \"Rule\": {\n      \"MediaContext\": [\n        \"Television\"\n      ],\n      \"Refinement\": {\n        \"PlayType\": \"Telecast\",\n        \"Calculated\": true,\n        \"UnitType\": \"Weeks\",\n        \"Count\": 12,\n        \"EnsureExclusivity\": \"Exclusive\",\n        \"MaximumExploitation\": \"4567\",\n        \"MaximumSimultaneousLimit\": 32,\n        \"DeliveryChannel\": [\n          \"Source\",\n          \"Youtube\"\n        ]\n      },\n      \"Type\": \"Rights In\",\n      \"TermStartDate\": \"1900-01-01T00:00:00Z\",\n      \"TermEndDate\": \"1900-01-01T00:00:00Z\",\n      \"GeospatialNamedArea\": [\n        \"United States and its Territories & Possessions; U.S Military Bases, Embassies and Consulates; U.S. Ships at Sea\"\n      ],\n      \"Trigger\": {\n        \"StartCount\": 30,\n        \"StartUnitType\": \"Days\",\n        \"StartOperator\": \"On\",\n        \"StartEvent\": \"Each Repeat *Subsequent Airings Latest Episode\",\n        \"TimeInterval\": [],\n        \"EndCount\": 30,\n        \"EndUnitType\": \"Days\",\n        \"EndOperator\": \"After\",\n        \"EndEvent\": \"Each Episode Rights End\"\n      },\n      \"LogicalAssetIDList\": [\n        {\n          \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-6185865455\"\n        }\n      ],\n      \"EntryList\": [\n        {\n          \"EntryClass\": \"Episode\",\n          \"EntryUID\": \"cid:org:pbs.org:Episode1\"\n        }\n      ],\n      \"OrganizationList\": [\n        {\n          \"OrganizationID\": 3136748,\n          \"DisplayName\": \"PBS NPS Kids\",\n          \"Domain\": \"pbs.org\",\n          \"ContactInfoList\": [\n            {\n              \"ContactID\": 3136748,\n              \"Phone\": \"703-739-5010\",\n              \"PhoneType\": \"Office\",\n              \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n              \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n              \"ContactName\": \"PBS Content Services\"\n            }\n          ],\n          \"Role\": \"Distributor\"\n        }\n      ]\n    }\n  }\n}"
 								},
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1583/permission",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"policy",
-										"cid:org:pbs.org:Policy268",
+										"cid:org:pbs.org:Policy1583",
 										"permission"
 									]
 								}
@@ -3563,6 +3790,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "09fd6afc-07a7-4d0f-81de-3b7e29c40c4a",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -3610,6 +3838,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "8cfe2563-b965-4527-864d-3e6c0b5b00ab",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -3635,18 +3864,18 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"Rule\": {\n    \"PlayType\": \"Telecast\",\n    \"MediaContext\": [\"Television\"],\n    \"MaximumExploitation\": \"777\",\n    \"Calculated\": false,\n    \"TermStartDate\": \"2019-11-23T00:00:00Z\",\n    \"TermEndDate\": \"2022-11-22T00:00:00Z\",\n    \"EnsureExclusivity\": false,\n    \"GeospatialNamedArea\": [\"United States of America and its Territories & Possessions\"],\n    \"Type\": \"Catch-up Rights\",\n    \"UnitType\": \"Days\",\n    \"Count\": 3,\n    \"Trigger\": {\n      \"StartCount\": 30,\n      \"StartUnitType\": \"Days\",\n      \"StartOperator\": \"On\",\n      \"StartEvent\": \"Each Repeat *Subsequent Airings Rule End\",\n      \"TimeInterval\": [],\n      \"EndCount\": 30,\n      \"EndUnitType\": \"Days\",\n      \"EndOperator\": \"After\",\n      \"EndEvent\": \"Latest Episode Rights End\"\n    }\n  }\n}"
+									"raw": "{\n  \"Permission\": {\n    \"Rule\": {\n      \"MediaContext\": [\n        \"Television\"\n      ],\n      \"Refinement\": {\n        \"PlayType\": \"Releases\",\n        \"Calculated\": false,\n        \"UnitType\": \"Weeks\",\n        \"Count\": 53,\n        \"EnsureExclusivity\": false,\n        \"MaximumExploitation\": \"768\",\n        \"MaximumSimultaneousLimit\": 45,\n        \"DeliveryChannel\": [\n          \"Facebook\",\n          \"PBS Learning Media\"\n        ]\n      },\n      \"MaximumExploitation\": \"777\",\n      \"MaximumSimultaneousLimit\": 12,\n      \"Calculated\": false,\n      \"TermStartDate\": \"2019-11-23T00:00:00Z\",\n      \"TermEndDate\": \"2022-11-22T00:00:00Z\",\n      \"EnsureExclusivity\": false,\n      \"GeospatialNamedArea\": [\n        \"United States of America and its Territories & Possessions\"\n      ],\n      \"Type\": \"Catch-up Rights\",\n      \"UnitType\": \"Days\",\n      \"Count\": 3,\n      \"Trigger\": {\n        \"StartCount\": 30,\n        \"StartUnitType\": \"Days\",\n        \"StartOperator\": \"On\",\n        \"StartEvent\": \"Each Repeat *Subsequent Airings Rule End\",\n        \"TimeInterval\": [],\n        \"EndCount\": 30,\n        \"EndUnitType\": \"Days\",\n        \"EndOperator\": \"After\",\n        \"EndEvent\": \"Latest Episode Rights End\"\n      }\n    }\n  }\n}"
 								},
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/30445",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1583/permission/39400",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"policy",
-										"cid:org:pbs.org:Policy268",
+										"cid:org:pbs.org:Policy1583",
 										"permission",
-										"30445"
+										"39400"
 									]
 								}
 							},
@@ -3658,6 +3887,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "57cc7fe6-c919-43db-836d-1f299d49619d",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -3711,7 +3941,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/permission/search?logicalassetid=alid:org:pbs.org:Rightsline-131928",
+									"raw": "{{baseurl}}/permission/search?logicalassetid=alid:org:pbs.org:Rightsline-254709",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -3722,7 +3952,7 @@
 									"query": [
 										{
 											"key": "logicalassetid",
-											"value": "alid:org:pbs.org:Rightsline-131928"
+											"value": "alid:org:pbs.org:Rightsline-254709"
 										}
 									]
 								}
@@ -3763,6 +3993,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "683d0771-5fda-492c-9e46-86fb3824194e",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -3812,6 +4043,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "63fb7b9d-3435-4b5e-b0b3-643c0cb82c68",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -3855,8 +4087,120 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Permission Organization List",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "683d0771-5fda-492c-9e46-86fb3824194e",
+										"exec": [
+											"tests[\"Status code is 201\"] = responseCode.code === 201;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "apikey",
+										"value": "{{apikey}}"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseurl}}/permission/39428/organization?pagesize=5&offset=5",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"permission",
+										"39428",
+										"organization"
+									],
+									"query": [
+										{
+											"key": "pagesize",
+											"value": "5"
+										},
+										{
+											"key": "offset",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Permission De-Associate Organization",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "63fb7b9d-3435-4b5e-b0b3-643c0cb82c68",
+										"exec": [
+											"tests[\"Status code is 201\"] = responseCode.code === 201;"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "apikey",
+										"value": "{{apikey}}"
+									},
+									{
+										"key": "x-api-key",
+										"value": "{{x-api-key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy268/permission/43341/organization/3136748?rolename=Distributor",
+									"host": [
+										"{{baseurl}}"
+									],
+									"path": [
+										"policy",
+										"cid:org:pbs.org:Policy268",
+										"permission",
+										"43341",
+										"organization",
+										"3136748"
+									],
+									"query": [
+										{
+											"key": "rolename",
+											"value": "Distributor"
+										}
+									]
+								}
+							},
+							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Prohibition",
@@ -3870,6 +4214,7 @@
 										{
 											"listen": "test",
 											"script": {
+												"id": "334055f6-e76b-47cd-8fda-d54e8f2ae8ce",
 												"exec": [
 													"tests[\"Status code is 201\"] = responseCode.code === 201;"
 												],
@@ -3919,6 +4264,7 @@
 										{
 											"listen": "test",
 											"script": {
+												"id": "386aa1a7-36ef-4944-a555-38f00efb30f5",
 												"exec": [
 													"tests[\"Status code is 200\"] = responseCode.code === 200;"
 												],
@@ -3964,6 +4310,7 @@
 								{
 									"listen": "prerequest",
 									"script": {
+										"id": "225998b8-c76a-4f5b-8af5-100fd45db645",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -3973,13 +4320,15 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "e8d9e428-1f88-4c87-8754-4a5d77ab4b80",
 										"type": "text/javascript",
 										"exec": [
 											""
 										]
 									}
 								}
-							]
+							],
+							"_postman_isSubFolder": true
 						},
 						{
 							"name": "PublishStatus",
@@ -4025,7 +4374,8 @@
 									},
 									"response": []
 								}
-							]
+							],
+							"_postman_isSubFolder": true
 						},
 						{
 							"name": "Change Log",
@@ -4067,7 +4417,8 @@
 									},
 									"response": []
 								}
-							]
+							],
+							"_postman_isSubFolder": true
 						},
 						{
 							"name": "Prohibition GET",
@@ -4075,6 +4426,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "8621ba64-d6c1-46af-b84b-20bf42d67013",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -4099,15 +4451,15 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/prohibition/87",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1433/prohibition/68",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"policy",
-										"cid:org:pbs.org:Policy215",
+										"cid:org:pbs.org:Policy1433",
 										"prohibition",
-										"87"
+										"68"
 									]
 								}
 							},
@@ -4136,16 +4488,16 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Action\": \"Blackout\",\n    \"MediaContext\": [\"Television\"],\n    \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n    \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n\t\"LogicalAssetIDList\": [\n         {\n    \t\t\"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.12840088\"\n    \t }\n\t],\n    \"EntryList\": [\n      {\n\t       \"EntryClass\": \"Episode\",\n\t       \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n      }\n    ]\n}"
+									"raw": "{\n  \"Prohibition\": {\n    \"Action\": \"Blackout\",\n    \"MediaContext\": [\n      \"Television\"\n    ],\n    \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n    \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n    \"LogicalAssetIDList\": [\n      {\n        \"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.12840088\"\n      }\n    ],\n    \"EntryList\": [\n      {\n        \"EntryClass\": \"Episode\",\n        \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n      }\n    ]\n  }\n}"
 								},
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/prohibition",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1433/prohibition",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"policy",
-										"cid:org:pbs.org:Policy215",
+										"cid:org:pbs.org:Policy1433",
 										"prohibition"
 									]
 								}
@@ -4158,6 +4510,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "d55b1840-9ac4-4f09-b920-60c3756fc669",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -4183,18 +4536,18 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Action\": \"Blackout\",\n    \"MediaContext\": [\"Television\"],\n    \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n    \"TermEndDate\": \"2018-11-22T00:00:00Z\"\n}"
+									"raw": "{\n   \n    \"Prohibition\": {\n    \t\"Action\": \"Blackout\",\n\t    \"MediaContext\": [\"Television\"],\n\t    \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n\t    \"TermEndDate\": \"2018-11-22T00:00:00Z\"\n    }\n}"
 								},
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy215/prohibition/23",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1433/prohibition/68",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"policy",
-										"cid:org:pbs.org:Policy215",
+										"cid:org:pbs.org:Policy1433",
 										"prohibition",
-										"23"
+										"68"
 									]
 								}
 							},
@@ -4206,6 +4559,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "7841a281-8ade-4c66-93f7-228116117227",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -4250,6 +4604,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "129caa5a-70e8-440d-99df-9326055b23bf",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -4299,6 +4654,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "f2f11e4b-2baf-44b2-8305-c5221f5a3e17",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -4343,7 +4699,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Change Log",
@@ -4385,7 +4742,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "PublishStatus",
@@ -4429,7 +4787,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "OrganizationList",
@@ -4440,6 +4799,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "91ac70dc-519d-4fd3-bb91-becbc382553b",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -4487,6 +4847,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "dee85538-3011-4d35-be8b-2256adea5396",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -4535,6 +4896,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "760539ec-b2c9-4768-b043-cf0cc4b19aeb",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -4583,7 +4945,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Policy GET",
@@ -4591,6 +4954,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "ebe72e24-8495-4fe2-aa14-e5188fcee92c",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -4633,6 +4997,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "544b50e0-9900-407a-9ec3-5da95f17ca2b",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -4658,7 +5023,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"PolicyClass\": \"Agreement\",\n    \"StructuralType\": \"Policy\",\n    \"Title\": \"Seabiscuit: American Experience-Dev-SMoke-Test\",\n    \"LogicalAssetIDList\": [\n        {\n            \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-128443\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136739,\n            \"DisplayName\": \"PBS NPS Kids\",\n            \"Domain\": \"pbs.org\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136739,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ],\n            \"Role\": \"Distributor\"\n        }\n    ],\n    \"Permission\": [\n        {\n            \"Rule\": {\n                \"PlayType\": \"Release\",\n                \"MediaContext\": [\"Television\"],\n                \"MaximumExploitation\": \"88\",\n                \"Calculated\": true,\n                \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n                \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n                \"EnsureExclusivity\": false,\n\t\t\t\t\"GeospatialNamedArea\": [\"United States of America and its Territories & Possessions\"],\n\t\t\t\t\"Type\": \"Catch-up Rights\",\n\t\t\t\t\"UnitType\": \"Days\",\n\t\t\t\t\"Count\": 3,\n\t\t\t\t\"Trigger\": {\n                    \"StartCount\": 30,\n                    \"StartUnitType\": \"Days\",\n                    \"StartOperator\": \"On\",\n                    \"StartEvent\": \"Each Repeat *Subsequent Airings Each Episode\",\n                    \"TimeInterval\": [],\n                    \"EndCount\": 30,\n                    \"EndUnitType\": \"Days\",\n                    \"EndOperator\": \"After\",\n                    \"EndEvent\": \"Latest Episode Rights End\"\n                },\n                \"LogicalAssetIDList\": [\n                    {\n                        \"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.12840088\"\n                    }\n                ],\n                \"EntryList\": [\n                    {\n                        \"EntryClass\": \"Episode\",\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n                    }\n                ]\n            }\n        }\n    ]\n}"
+							"raw": "{\n  \"PolicyClass\": \"Agreement\",\n  \"StructuralType\": \"Policy\",\n  \"Title\": \"Seabiscuit: American Experience-Dev-SMoke-Test\",\n  \"LogicalAssetIDList\": [\n    {\n      \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-64545454545\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS NPS Kids\",\n      \"Domain\": \"pbs.org\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136739,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ],\n      \"Role\": \"Distributor\"\n    }\n  ],\n  \"Permission\": [\n    {\n      \"Rule\": {\n        \"MediaContext\": [\n          \"Television\"\n        ],\n        \"Refinement\": {\n          \"PlayType\": \"Telecast\",\n          \"Calculated\": true,\n          \"UnitType\": \"Weeks\",\n          \"Count\": 8,\n          \"EnsureExclusivity\": \"Exclusive\",\n          \"MaximumExploitation\": \"567\",\n          \"MaximumSimultaneousLimit\": 23,\n          \"DeliveryChannel\": [\n            \"Youtube\",\n            \"Source\",\n            \"XUMO/Samsung\"\n          ]\n        },\n        \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n        \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n        \"EnsureExclusivity\": \"Exclusive\",\n        \"GeospatialNamedArea\": [\n          \"United States of America and its Territories & Possessions\"\n        ],\n        \"Type\": \"Window Rights\",\n        \"Trigger\": {\n          \"StartCount\": 30,\n          \"StartUnitType\": \"Days\",\n          \"StartOperator\": \"On\",\n          \"StartEvent\": \"Each Repeat *Subsequent Airings Each Episode\",\n          \"TimeInterval\": [],\n          \"EndCount\": 30,\n          \"EndUnitType\": \"Days\",\n          \"EndOperator\": \"After\",\n          \"EndEvent\": \"Latest Episode Rights End\"\n        },\n        \"LogicalAssetIDList\": [\n          {\n            \"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.4343434343\"\n          }\n        ],\n        \"EntryList\": [\n          {\n            \"EntryClass\": \"Episode\",\n            \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n          }\n        ]\n      }\n    }\n  ]\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/policy",
@@ -4678,6 +5043,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "eeaa5c06-876d-489d-938a-f6fc6f820e70",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -4724,6 +5090,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "72bb5388-37ca-49fb-b147-f83d7e6922da",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -4766,6 +5133,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "d141626b-5c0b-41a9-8ca6-d1d66f6e6bf0",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -4813,6 +5181,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "bafbeb66-44ad-47cb-a8b6-8c81f7725f3f",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -4861,6 +5230,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "d7dcd370-79eb-4df2-8cbe-d773693b49ff",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -4885,7 +5255,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/policy/search?title=Fillmore&logicalassetid=alid:org:pbs.org:Broadview-185569723&entryuid=cid:org:pbs.org:Season13&termstartdate=2007-04-27&termenddate=2007-05-29",
+							"raw": "{{baseurl}}/policy/search?logicalassetid=alid:org:pbs.org:Rightsline-1623",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -4896,23 +5266,27 @@
 							"query": [
 								{
 									"key": "title",
-									"value": "Fillmore"
+									"value": "Fillmore",
+									"disabled": true
 								},
 								{
 									"key": "logicalassetid",
-									"value": "alid:org:pbs.org:Broadview-185569723"
+									"value": "alid:org:pbs.org:Rightsline-1623"
 								},
 								{
 									"key": "entryuid",
-									"value": "cid:org:pbs.org:Season13"
+									"value": "cid:org:pbs.org:Season13",
+									"disabled": true
 								},
 								{
 									"key": "termstartdate",
-									"value": "2007-04-27"
+									"value": "2007-04-27",
+									"disabled": true
 								},
 								{
 									"key": "termenddate",
-									"value": "2007-05-29"
+									"value": "2007-05-29",
+									"disabled": true
 								}
 							]
 						}
@@ -4933,6 +5307,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "60ab1b61-4c32-4ec3-bb0d-81e839b145f8",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -4979,6 +5354,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "3550d2cd-7430-4f5b-be27-c4e8bcd64346",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5004,17 +5380,17 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode23817\",\n    \"Linear\": {\n        \"PlayType\": \"Hard Feed (with rights)\",\n        \"ReleaseQualifier\": \"premiere\",\n        \"Duration\": \"1800\",\n        \"ProgramService\": {\n            \"ProviderSource\": \"500 - X\",\n            \"ProviderSourceName\": \"PBS\",\n            \"ProviderTimeZone\": \"EDT\"\n        }\n    },\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation2612\",\n    \"ReferentType\": \"Linear\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"fr\",\n    \"SubtitledLanguage\": \"en\",\n    \"DviLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\"\n}"
+									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode23817\",\n    \"Linear\": {\n        \"PlayType\": \"Hard Feed (with rights)\",\n        \"ReleaseQualifier\": \"premiere\",\n        \"Duration\": \"1800\",\n        \"ProgramService\": {\n            \"ProviderSource\": \"500 - X\",\n            \"ProviderSourceName\": \"PBS\",\n            \"ProviderTimeZone\": \"EDT\"\n        }\n    },\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation2612\",\n    \"ReferentType\": \"Linear\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"sil\",\n    \"SubtitledLanguage\": \"en\",\n    \"DviLanguage\": \"wam\",\n    \"Qualifier\": [\n        \"CC\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\"\n}"
 								},
 								"url": {
-									"raw": "{{baseurl}}/event/linear/cid:org:pbs.org:Event18486",
+									"raw": "{{baseurl}}/event/linear/cid:org:pbs.org:Event1863412",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"event",
 										"linear",
-										"cid:org:pbs.org:Event18486"
+										"cid:org:pbs.org:Event1863412"
 									]
 								}
 							},
@@ -5026,6 +5402,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "58b7c5d4-38b5-42fc-bf63-8b6a277e090a",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5074,6 +5451,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "b44f98ef-2095-48c4-8bc9-036a385d27ef",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5122,6 +5500,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "26a5242c-2202-4883-92ec-450931166f4d",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5163,7 +5542,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "VOD",
@@ -5174,6 +5554,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "40aa483f-35bd-4dec-b33a-ff4139b89702",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -5199,7 +5580,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Episode23818\",\n  \"ManifestationUID\": \"cid:org:pbs.org:Manifestation21172\",\n  \"ReferentType\": \"VOD\",\n  \"StructuralType\": \"Performance\",\n  \"SAP\": false,\n  \"DubbedLanguage\": \"en\",\n  \"SubtitledLanguage\": \"en\",\n  \"Qualifier\": [\n    \"CC\",\n    \"3D\",\n    \"Dubbed\"\n  ],\n  \"EventDate\": \"2021-03-10T12:00:00Z\",\n  \"VOD\": {\n    \"ReleaseQualifier\": \"Repeat\",\n    \"Duration\": \"1800\",\n    \"PlayRun\": 12,\n    \"ProviderSource\": \"pbs.org\",\n    \"StartDateTime\": \"2007-04-14T14:00:00\",\n    \"EndDateTime\": \"2007-04-14T15:00:00\",\n    \"AlternateEventIDList\": [\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-323242342\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-64545324\"\n      }\n    ]\n  }\n}"
+									"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Episode23818\",\n  \"ManifestationUID\": \"cid:org:pbs.org:Manifestation21172\",\n  \"ReferentType\": \"VOD\",\n  \"StructuralType\": \"Performance\",\n  \"SAP\": false,\n  \"DubbedLanguage\": \"en\",\n  \"SubtitledLanguage\": \"en\",\n  \"Qualifier\": [\n    \"CC\",\n    \"3D\",\n    \"Dubbed\"\n  ],\n  \"EventDate\": \"2021-03-10T12:00:00Z\",\n  \"VOD\": {\n    \"ReleaseQualifier\": \"Repeat\",\n    \"Duration\": \"1800\",\n    \"ProviderSource\": \"pbs.org\",\n    \"StartDateTime\": \"2007-04-14T14:00:00\",\n    \"EndDateTime\": \"2007-04-14T15:00:00\",\n    \"AlternateEventIDList\": [\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-323242342\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-64545324\"\n      }\n    ]\n  }\n}"
 								},
 								"url": {
 									"raw": "{{baseurl}}/event/vod",
@@ -5220,6 +5601,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "9a8b7ee3-33dd-4029-9c48-9533d10d22a7",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5267,6 +5649,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "23b9f55e-018e-410c-b53a-4e1b0c4d0498",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5315,6 +5698,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "bdbe8f93-b1f6-4c4e-9ffd-3c1482a2a9bd",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5356,7 +5740,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Show Schedule ",
@@ -5367,6 +5752,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "f461f403-b7ea-4466-af0b-20a76d890596",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5430,6 +5816,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "ae1320cd-50e8-4242-9b63-d6aa31e7b719",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5454,7 +5841,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/showschedule/linear?alternateeventId=cid:org:pbs.org:Broadview-15092085",
+									"raw": "{{baseurl}}/showschedule/linear?alternateeventId=cid:org:pbs.org:Broadview-654477181",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -5480,7 +5867,7 @@
 										},
 										{
 											"key": "alternateeventId",
-											"value": "cid:org:pbs.org:Broadview-15092085"
+											"value": "cid:org:pbs.org:Broadview-654477181"
 										}
 									]
 								}
@@ -5493,6 +5880,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "f701fdea-eb89-463c-9714-26f9452c7e95",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5547,7 +5935,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "PublishStatus",
@@ -5588,7 +5977,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Change Log",
@@ -5634,7 +6024,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Event GET",
@@ -5642,6 +6033,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "d544ab95-2b3d-424c-adca-77d4077c8301",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -5684,6 +6076,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "b9e81085-826e-4681-9f1b-8b4c3e55d74a",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -5750,6 +6143,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "b879a96e-030c-4069-814a-110b99340f5b",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -5821,6 +6215,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "2035639e-94a1-4f0f-8cf5-41c0b4fb4717",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -5891,6 +6286,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "20a4700a-e9ca-4fef-8012-8ca86ee2f0e3",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -5943,7 +6339,8 @@
 								"type": "text/javascript",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								]
+								],
+								"id": "28b1232a-4503-43b7-9200-b3622e621d3e"
 							}
 						}
 					],
@@ -5996,6 +6393,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "f2f14007-73fa-4645-b3bb-26e2859f137b",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6020,7 +6418,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/catalog/search?contentid=cid:org:pbs.org:Broadview-618586114",
+							"raw": "{{baseurl}}/catalog/search?contentid=cid:org:pbs.org:Broadview-600817627",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -6031,7 +6429,7 @@
 							"query": [
 								{
 									"key": "contentid",
-									"value": "cid:org:pbs.org:Broadview-618586114"
+									"value": "cid:org:pbs.org:Broadview-600817627"
 								}
 							]
 						}
@@ -6047,7 +6445,8 @@
 								"type": "text/javascript",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								]
+								],
+								"id": "ae242eb2-2fbf-4429-bb5d-337ce917a246"
 							}
 						}
 					],
@@ -6087,6 +6486,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "cf544951-e01a-4482-a61e-66f5ddf44297",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6130,6 +6530,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "71a7592f-e37b-4fa0-8a3a-32a51c1effad",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6214,7 +6615,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Edit GET",
@@ -6222,6 +6624,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "454439a8-f956-4db0-84b2-121a6c0065b7",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6264,6 +6667,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "b722bff1-7737-463e-90a7-59aef98c88d4",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -6289,7 +6693,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"StructuralType\": \"Performance\",\r\n    \"FileDeliveryStatus\": \"Delivered\",\r\n    \"Title\": \"Wild Kratts\",\r\n    \"EditClass\": [\r\n        \"Original\",\r\n        \"Supplemental\"\r\n    ],\r\n    \"EditUse\": \"Broadcast\",\r\n    \"ActualLength\": \"PT0H28M55S\",\r\n    \"ParentUID\": \"cid:org:pbs.org:Episode777\",\r\n    \"AlternateContentIDList\": [\r\n        {\r\n            \"AlternateContentID\": \"alid:org:pbs.org:DevTest-4233\"\r\n        }\r\n    ]\r\n}"
+							"raw": "{\r\n    \"StructuralType\": \"Performance\",\r\n    \"FileDeliveryStatus\": \"Delivered\",\r\n    \"Title\": \"Wild Kratts\",\r\n    \"ReferentType\": \"TV\",\r\n    \"EditClass\": [\r\n        \"Original\",\r\n        \"Supplemental\"\r\n    ],\r\n    \"EditUse\": \"Broadcast\",\r\n    \"ActualLength\": \"PT0H28M55S\",\r\n    \"ParentUID\": \"cid:org:pbs.org:Episode777\",\r\n    \"AlternateContentIDList\": [\r\n        {\r\n            \"AlternateContentID\": \"alid:org:pbs.org:DevTest-4233\"\r\n        }\r\n    ]\r\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/edit",
@@ -6309,6 +6713,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "fd5369d9-ba8b-427d-a51c-0bd5c10b0505",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6334,7 +6739,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"FileDeliveryStatus\": \"Delivered\",\r\n    \"Title\": \"(ARUR  000104Z, REEL 1) ARTHUR\",\r\n    \"EditClass\": [\r\n        \"Original\"\r\n    ],\r\n    \"EditUse\": \"Broadcast\",\r\n    \"ActualLength\": \"PT0H30M0S\",\r\n    \"ParentUID\": \"cid:org:pbs.org:Episode842\"\r\n}"
+							"raw": "{\r\n    \"FileDeliveryStatus\": \"Delivered\",\r\n    \"ReferentType\": \"TV\",\r\n    \"Title\": \"(ARUR  000104Z, REEL 1) ARTHUR\",\r\n    \"EditClass\": [\r\n        \"Original\"\r\n    ],\r\n    \"EditUse\": \"Broadcast\",\r\n    \"ActualLength\": \"PT0H30M0S\",\r\n    \"ParentUID\": \"cid:org:pbs.org:Episode842\"\r\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/edit/cid:org:pbs.org:Edit6",
@@ -6355,6 +6760,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "e4f8d2ec-d35f-407e-8897-5ce50a70df0a",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6401,6 +6807,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "82e00e82-1692-48d5-af7c-ef61ab3fb06d",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -6448,6 +6855,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "b9023f39-2dae-4cb0-ac91-8b99806a0fa3",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -6496,6 +6904,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "051224ee-e05c-4804-98eb-a1a20270b46b",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6589,7 +6998,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Entry",
@@ -6600,6 +7010,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "52e5555b-9957-486c-b194-1f3ae2e2a4ef",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -6647,6 +7058,7 @@
 								{
 									"listen": "test",
 									"script": {
+										"id": "f3a05a5a-5e2d-419c-94a0-efaa7fb51949",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -6685,7 +7097,8 @@
 							},
 							"response": []
 						}
-					]
+					],
+					"_postman_isSubFolder": true
 				},
 				{
 					"name": "Supplemental GET",
@@ -6915,6 +7328,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "501a1b06-6840-4ae9-aef2-628d66be63c7",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],

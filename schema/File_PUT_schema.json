@@ -1,5 +1,6 @@
 {
   "type": "object",
+  "additionalProperties": false,
   "errorMessage": {
     "type": "The request must be an object"
   },
@@ -65,6 +66,12 @@
         "enum": "FileDeliveryStatus must be a Removed, Delivered, Future or Other"
       }
     },
+	"FileLocationPath": {
+      "type": "string",
+      "errorMessage": {
+        "type": "FileLocationPath must be a String"
+      }
+    },
     "ChecksumType": {
       "transform": [
         "trim",
@@ -78,7 +85,7 @@
         "SHA-1",
         "SHA-2",
         "SHA-3",
-        null
+		null
       ],
       "errorMessage": {
         "type": "ChecksumType must be a String",

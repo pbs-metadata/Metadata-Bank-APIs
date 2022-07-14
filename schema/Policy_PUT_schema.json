@@ -37,6 +37,38 @@
 				"type": "Title must be a String",
 				"minLength": "Title should have a minimum one character"
 			}
+		},
+		"additionalData": {
+			"type": "object",
+			"errorMessage": {
+			  	"type": "The additionalData should be an object"
+			},
+			"properties": {
+			  	"CreatedBy": {
+					"type": "string",
+					"errorMessage": {
+						"type": "CreatedBy must be a String"
+					}
+				},
+				"Source": {
+					"type": "string",
+					"errorMessage": {
+						"type": "Source must be a String"
+					}
+				},
+				"UpdatedBy": {
+					"type": "string",
+					"errorMessage": {
+						"type": "UpdatedBy must be a String"
+					}
+				},
+				"DeletedBy": {
+					"type": "string",
+					"errorMessage": {
+						"type": "DeletedBy must be a String"
+					}
+				}
+			}
 		}
 	}
 }

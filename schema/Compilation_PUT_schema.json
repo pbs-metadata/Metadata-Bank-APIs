@@ -1,34 +1,59 @@
 {
     "type": "object",
+    "errorMessage": {
+        "type": "The request should be an object"
+    },
     "properties": {
         "CompilationUID": {
             "pattern": "^(.*)$",
-            "type": "string"
+            "type": "string",
+            "errorMessage":{
+                "type": "CompilationUID must be a String"
+            }
         },
         "CreateDateTime": {
             "pattern": "^(.*)$",
-            "type": "string"
+            "type": "string",
+            "errorMessage":{
+                "type": "CreateDateTime must be a String"
+            }
         },
         "UpdateDateTime": {
             "pattern": "^(.*)$",
-            "type": "string"
+            "type": "string",
+            "errorMessage":{
+                "type": "UpdateDateTime must be a String"
+            }
         },
         "PublishedStatus": {
             "pattern": "^(.*)$",
-            "type": "string"
+            "type": "string",
+            "errorMessage":{
+                "type": "PublishedStatus must be a String"
+            }
         },
         "Title": {
             "minLength": 1,
             "pattern": "^(.*)$",
-            "type": "string"
+            "type": "string",
+            "errorMessage":{
+                "type": "Title must be a String",
+                "minLength": "Title should have a minimum one character"
+            }
         },
         "CompilationClass": {
             "pattern": "^(.*)$",
-            "type": "string"
+            "type": "string",
+            "errorMessage":{
+                "type": "CompilationClass must be a String"
+            }
         },
         "EidrID": {
             "pattern": "^(.*)$",
-            "type": "string"
+            "type": "string",
+            "errorMessage":{
+                "type": "EidrID must be a String"
+            }
         },
         "ReferentType": {
             "transform": ["trim", "toEnumCase"],
@@ -45,7 +70,11 @@
                 "Offer",
                 "Set",
                 "Agreement"
-            ]
+            ],
+            "errorMessage":{
+                "type": "ReferentType must be a String",
+                "enum" : "ReferentType must be a Series, Season, TV, Movie, Short, Web, Compilation, Supplemental, Offer, Set or Agreement irrepective to case."
+            }
         },
         "StructuralType": {
             "transform": ["trim", "toEnumCase"],
@@ -54,15 +83,58 @@
                 "Abstraction",
                 "Performance",
                 "Digital"
-            ]
+            ],
+            "errorMessage":{
+                "type": "StructuralType must be a String",
+                "enum": "StructuralType must be an Abstraction, Performace or Digital irrespective to Case."
+            }
         },
         "ReleaseDate": {
             "pattern": "^(.*)$",
-            "type": "string"
+            "type": "string",
+            "errorMessage":{
+                "type": "ReleaseDate must be a String"
+            }
         },
         "DistributionNumber": {
             "type": "integer",
-            "format": "int32"
-        }
+            "format": "int32",
+            "errorMessage":{
+                "type": "DistributionNumber must be an Integer",
+                "format" : "DistributionNumber must be in int32 format"
+            }
+        },
+        "additionalData": {
+			"type": "object",
+			"errorMessage": {
+			  	"type": "The additionalData should be an object"
+			},
+			"properties": {
+			  	"CreatedBy": {
+					"type": "string",
+					"errorMessage": {
+						"type": "CreatedBy must be a String"
+					}
+				},
+				"Source": {
+					"type": "string",
+					"errorMessage": {
+						"type": "Source must be a String"
+					}
+				},
+				"UpdatedBy": {
+					"type": "string",
+					"errorMessage": {
+						"type": "UpdatedBy must be a String"
+					}
+				},
+				"DeletedBy": {
+					"type": "string",
+					"errorMessage": {
+						"type": "DeletedBy must be a String"
+					}
+				}
+			}
+		}
     }
 }

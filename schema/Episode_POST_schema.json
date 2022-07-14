@@ -143,6 +143,13 @@
         "type": "Title120 must be a String"
       }
     },
+    "TitleLong": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "TitleLong must be a String"
+      }
+    },
     "Title19": {
       "maxLength": 19,
       "pattern": "^(.*)$",
@@ -356,6 +363,13 @@
         "enum": "TitleLanguage must be a aa, ab, ae, af, ak, am, an, ar, as, av, ay, az, ba, be, bg, bh, bi, bm, bn, bo, br, bs, ca, ce, ch, co, cr, cs, cu, cv, cy, da, de, dv, dz, ee, el, en, eo, es, et, eu, fa, ff, fi, fj, fl, fo, fr, fy, ga, gd, gl, gn, gu, gv, ha, haw, he, hi, ho, hr, ht, hu, hy, hz, ia, id, ie, ig, ii, ik, io, is, it, iu, ja, jv, ka, kg, ki, kj, kk, kl, km, kn, ko, kr, ks, ku, kv, kw, ky, la, lb, lg, li, ln, lo, lt, lu, lv, mg, mh, mi, mk, ml, mn, mr, ms, mt, my, na, nb, nd, ne, ng, nl, nn, no, nr, nv, ny, oc, oj, om, or, os, pa, pi, pl, ps, pt, qu, rm, rn, ro, ru, rw, sa, sc, sd, se, sg, si, sk, sl, sm, sn, so, sq, sr, ss, st, su, sv, sw, ta, te, tg, th, ti, tk, tl, tn, to, tr, ts, tt, tw, ty, ug, uk, ur, uz, ve, vi, vo, wa, wo, xh, yi, yo, za, zh or  zu, dar, hmo, psm, swz, wam irrepective to case."
       }
     },
+    "ReleaseDate": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "ReleaseDate must be a String"
+      }
+    },
     "Keywords": {
       "type": "object",
       "errorMessage": {
@@ -446,13 +460,6 @@
             }
           }
         }
-      }
-    },
-    "ReleaseDate": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "ReleaseDate must be a String"
       }
     },
     "EpisodeNumber": {
@@ -1468,133 +1475,21 @@
       "uniqueItems": true,
       "errorMessage": {
         "type": "OrganizationList must be an Array",
-        "uniqueItems": "OrganizationList contains duplicate values",
-        "contains": "Required ContactInfoList and OrganizationID in Organisation List"
-      },
-      "contains": {
-        "required": [
-          "ContactInfoList",
-          "OrganizationID"
-        ],
-        "type": "object",
-        "errorMessage": {
-          "type": "contains should be an object",
-          "required": {
-            "ContactInfoList": "ContactInfoList is Required",
-            "OrganizationID": "OrganizationID is Required"
-          }
-        },
-        "properties": {
-          "OrganizationID": {
-            "type": "integer",
-            "format": "int32",
-            "errorMessage": {
-              "type": "OrganizationID must be an Integer",
-              "uniqueItems": "OrganizationID contains duplicate values"
-            }
-          },
-          "DisplayName": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage": {
-              "type": "DisplayName must be a String"
-            }
-          },
-          "Domain": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage": {
-              "type": "Domain must be a String"
-            }
-          },
-          "Role": {
-            "enum": [
-              "Distributor"
-            ],
-            "type": "string",
-            "errorMessage": {
-              "type": "Role must be a String",
-              "enum": "Required Minimum one Distributor role in Organisation List"
-            }
-          },
-          "ContactInfoList": {
-            "type": "array",
-            "errorMessage": {
-              "type": "ContactInfoList must be an Array"
-            },
-            "items": {
-              "required": [
-                "ContactID",
-                "ContactName"
-              ],
-              "type": "object",
-              "errorMessage": {
-                "type": "items should be an object",
-                "required": {
-                  "ContactID": "ContactID is Required",
-                  "ContactName": "ContactName is Required"
-                }
-              },
-              "properties": {
-                "ContactID": {
-                  "type": "integer",
-                  "format": "int32",
-                  "errorMessage": {
-                    "type": "ContactID must be an Integer",
-                    "format": "ContactID must be in int32 format"
-                  }
-                },
-                "Phone": {
-                  "pattern": "^(.*)$",
-                  "type": "string",
-                  "errorMessage": {
-                    "type": "Phone must be a String"
-                  }
-                },
-                "PhoneType": {
-                  "pattern": "^(.*)$",
-                  "type": "string",
-                  "errorMessage": {
-                    "type": "PhoneType must be a String"
-                  }
-                },
-                "Address": {
-                  "pattern": "^(.*)$",
-                  "type": "string",
-                  "errorMessage": {
-                    "type": "Address must be a String"
-                  }
-                },
-                "PrimaryEmail": {
-                  "pattern": "^(.*)$",
-                  "type": "string",
-                  "errorMessage": {
-                    "type": "PrimaryEmail must be a String"
-                  }
-                },
-                "ContactName": {
-                  "pattern": "^(.*)$",
-                  "type": "string",
-                  "errorMessage": {
-                    "type": "ContactName must be a String"
-                  }
-                }
-              }
-            }
-          }
-        }
+        "uniqueItems": "OrganizationList contains duplicate values"
       },
       "items": {
         "required": [
           "ContactInfoList",
-          "OrganizationID"
+          "OrganizationID",
+          "Role"
         ],
         "type": "object",
         "errorMessage": {
           "type": "items should be an object",
           "required": {
             "ContactInfoList": "ContactInfoList is Required",
-            "OrganizationID": "OrganizationID is Required"
+            "OrganizationID": "OrganizationID is Required",
+            "Role": "Role is Required"
           }
         },
         "properties": {
@@ -1629,8 +1524,10 @@
           },
           "ContactInfoList": {
             "type": "array",
+            "minItems": 1,
             "errorMessage": {
-              "type": "ContactInfoList must be an Array"
+              "type": "ContactInfoList must be an Array",
+              "minItems": "Minimum one contact info is required"
             },
             "items": {
               "required": [
@@ -1694,6 +1591,38 @@
           }
         }
       }
-    }
+    },
+    "additionalData": {
+			"type": "object",
+			"errorMessage": {
+			  	"type": "The additionalData should be an object"
+			},
+			"properties": {
+        "CreatedBy": {
+					"type": "string",
+					"errorMessage": {
+						"type": "CreatedBy must be a String"
+					}
+				},
+				"Source": {
+					"type": "string",
+					"errorMessage": {
+						"type": "Source must be a String"
+					}
+				},
+				"UpdatedBy": {
+					"type": "string",
+					"errorMessage": {
+						"type": "UpdatedBy must be a String"
+					}
+				},
+				"DeletedBy": {
+					"type": "string",
+					"errorMessage": {
+						"type": "DeletedBy must be a String"
+					}
+				}
+			}
+		}
   }
 }
