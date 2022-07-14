@@ -1,3 +1,7 @@
+## v1.0.36.0
+   * MBANK v0.36.0 - Postman collection - Payload structure changes on Permission payload[Moved existing permission fields “PlayType, Calculated, UnitType, Count, EnsureExclusivity, MaximumExploitation, MaximumSimultaneousLimit” to Refinement], Added OrganizationList in Permission and Season. Added new Season, Permission delete endpoints to de-associate with Organization and added File search endpoints
+   * MBANK v0.36.0 - JSON schema - The Payload changes on Permission, Added new endpoints for Season, Permission delete for Organization de-association. Added File search endpoints.
+
 ## v1.0.33.0
    * MBANK v0.33.0 - Postman collection - New Edit - Publish Status endpoints is added, The Edit[Title, AlternateContentID] & Supplemental[AlternateContentID] fieldname changed & Play Run Removed from VOD Events.
    * MBANK v0.33.0 - JSON schema - The Edit[Title, AlternateContentID] & Supplemental[AlternateContentID] fieldname changed & Play Run Removed from VOD Events.

@@ -5,6 +5,7 @@
     "ParentUID"
   ],
   "type": "object",
+  "additionalProperties": false,
   "errorMessage": {
     "type": "The request should be an object",
     "required": {
@@ -73,6 +74,12 @@
       "errorMessage": {
         "type": "FileDeliveryStatus must be a String",
         "enum": "FileDeliveryStatus must be a Removed, Delivered, Future or Other"
+      }
+    },
+	"FileLocationPath": {
+      "type": "string",
+      "errorMessage": {
+        "type": "FileLocationPath must be a String"
       }
     },
     "ChecksumType": {
