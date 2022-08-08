@@ -168,10 +168,12 @@
                       "Before",
                       "After",
                       "During",
+                      "Surrounding",
+                      "Within",
                       null
                     ],
                     "errorMessage": {
-                      "enum": "StartOperator must be one of the given values - On, Before, After or During"
+                      "enum": "StartOperator must be one of the given values - On, Before, After, During or Surrounding, Within"
                     }
                   },
                   "StartEvent": {
@@ -205,10 +207,21 @@
                       "Each Repeat *Subsequent Airings Earliest Episode",
                       "Each Repeat *Subsequent Airings Latest Episode",
                       "Each Repeat *Subsequent Airings Rule End",
+                      "Each Release *Includes First Release",
+                      "Each Repeat *Subsequent Release",
+                      "Each Release *Including First",
+                      "Any Release",
+                      "Repeat Releases",
+                      "Subsequent Releases",
+                      "Rule Start",
+                      "First Release",
+                      "Second Release",
+                      "Third Release",
+                      "Fourth Release",
                       null
                     ],
                     "errorMessage": {
-                      "enum": "StartEvent must be one of the given values - After Each Broadcast, After Earliest Broadcast, or After Earliest Release, Earliest Release of Any Episode, Earliest Release of Each Episode, On Earliest Release of Any Episode, On Earliest Release of Each Episode, Each Episode, Earliest episode, Latest Episode, Rule End, Each Airing *Includes First Airing, Each Repeat *Subsequent Airings, First Airing, Second Airing, Third Airing or Fourth Airing, Each Airing *Includes First Airing Each Episode, Each Airing *Includes First Airing Earliest Episode, Each Airing *Includes First Airing Latest Episode, Each Airing *Includes First Airing Rule End, Each Repeat *Subsequent Airings Each Episode, Each Repeat *Subsequent Airings Earliest Episode, Each Repeat *Subsequent Airings Latest Episode, Each Repeat *Subsequent Airings Rule End"
+                      "enum": "StartEvent must be one of the given values - After Each Broadcast, After Earliest Broadcast, After Earliest Release, Earliest Release of Any Episode, Earliest Release of Each Episode, On Earliest Release of Any Episode, On Earliest Release of Each Episode, Each Episode, Earliest episode, Latest Episode, Rule End, Each Airing *Includes First Airing, Each Repeat *Subsequent Airings, First Airing, Second Airing, Third Airing or Fourth Airing, Each Airing *Includes First Airing Each Episode, Each Airing *Includes First Airing Earliest Episode, Each Airing *Includes First Airing Latest Episode, Each Airing *Includes First Airing Rule End, Each Repeat *Subsequent Airings Each Episode, Each Repeat *Subsequent Airings Earliest Episode, Each Repeat *Subsequent Airings Latest Episode, Each Repeat *Subsequent Airings Rule End, Each Release *Includes First Release , Each Repeat *Subsequent Release, Rule Start, Each Release *Including First, Any Release, Repeat Releases, Subsequent Releases, First Release, Second Release, Third Release, Fourth Release"
                     }
                   },
                   "TimeInterval": {
@@ -913,6 +926,20 @@
                     "type": "GeospatialNamedArea must be a String",
                     "enum": "GeospatialNamedArea must be one of the given values - Worldwide, Africa, \"Africa, North\", Algeria, Egypt, Libya, Morocco, Western Sahara, Tunisia, \"Africa, Sub-Saharan\", Angola, Benin (Dahomey), Botswana, Burkina Faso (Upper Volta), Burundi, Cameroon, Cape Verde, Central African Republic, Chad, Comoros, \"Congo, Democratic Republic of the\", \"Congo, Repubic of\", Cote d'Ivoire (Ivory Coast), \"Djibouti, Republic of\", Equatorial Guinea, Eritrea, Ethiopia, Gabon, Gambia, Ghana, Guinea, Guinea-Bissau, Kenya, Lesotho, Liberia, Madagascar, Malawi, Mali, Mauritania, Mauritius, Mayotte, Mozambique, Namibia, Niger, Nigeria, Reunion, \"South Africa, Republic of\", Rwanda, Sao Tome & Principe, Senegal, Seychelles, Sierra Leone, Somalia, South Sudan, Sudan, Swaziland, Tanzania, Togo, Uganda, Zambia, Zimbabwe, \"Americas, The\", Caribbean, Aruba, British Virgin Islands, Cuba, Dominican Republic, French Antilles, Guadeloupe, Martinique, Haiti, \"Netherlands Antilles, Former Territories of\", West Indies, Bahamas, Barbados, Bermuda, Cayman Islands, Jamaica, Leeward Islands (of West Indies), Anguilla, Antigua, Barbuda, Montserrat, St. Kitts (St. Christopher), Nevis, Trinidad & Tobago, Turks & Caicos, Windward Islands (of West Indies), Dominica, Grenada, Grenadines, St. Lucia, St. Vincent, Latin America, Central America, Belize, Costa Rica, El Salvador, Guatemala, Honduras, Nicaragua, Panama, Mexico, South America, Argentina, Bolivia, Brazil, Chile, Colombia, Ecuador, French Guiana, Guyana, Paraguay, Peru, Suriname, Uruguay, Venezuela, North America, Canada, Alberta, British Columbia, Labrador, Manitoba, New Brunswick, Newfoundland, Nova Scotia, Ontario, Prince Edward Island, Quebec, Saskatchewan, Nunavut, Northwest Territories, Yukon Territories, \"United States and its Territories & Possessions; U.S Military Bases, Embassies and Consulates; U.S. Ships at Sea\", \"US Consulates, US Military Bases, Embassies\", US Ships at Sea, United States of America and its Territories & Possessions, United States of America, Baker Island, Caroline Islands, Guam, Marshall Islands, Northern Marianas, Puerto Rico, Samoa (American), U.S. Virgin Islands, Wake Island, Asia, Brunei, Cambodia (Kampuchea), China (PRC), Hong Kong, Indonesia, Japan, Laos, Macao, Malaysia, Mongolia, Myanmar (Burma), North Korea, Philippines, Afghanistan, Bangladesh, Bhutan, India, Maldives, Nepal, Pakistan, Sri Lanka (Ceylon), Singapore, South Korea, Taiwan (ROC), Thailand, Timor-Leste (East Timor), Vietnam, Europe, \"Abkhazia, Republic of\", Albania, Alto Adige (Bolzano or South Tyrol), \"Andorra, Principality of\", Armenia, Austria, Azerbaijan, Belarus, \"Benelux, The\", Belgium, Luxembourg, Netherlands (Holland), Bosnia / Herzegovina, Bulgaria, Capo d 'Istria, Croatia, Cyprus, Czech Republic, Estonia, France, Georgia, Germany, Gibraltar (Spanish-speaking only), Greece, Hungary, \"Ireland, Republic of\", Israel, Italy, Kazakhstan, Kosovo, Kyrgyzstan, Latvia, Liechtenstein, Lithuania, Macedonia, Malta, Moldova, \"Monaco, Principality of\", Montenegro, Poland, Portugal, Romania, Russia, San Marino, Scandinavia, Denmark, Finland, Iceland, Norway, Sweden, Serbia, Slovakia, Slovenia, South Ossetia, Spain, Switzerland, Tajikistan, Turkey, Turkmenistan, Ukraine, United Kingdom, Channel Islands, Diego Garcia, England, Great Britain, Isle of Man, Scotland, Wales, Northern Ireland, Uzbekistan, Vatican City, Vojvodina, Middle East, Bahrain, Iran, Iraq, Jordan, Kuwait, Lebanon, Oman, Palestinian Authority (Palestinian National Authority), Qatar, Saudi Arabia, Syria, United Arab Emirates, \"Yemen, Republic of\", Oceania, Australia, Nauru, Papua New Guinea, Solomon Islands, Vanuatu (New Hebrides), French Oceania, French C.O.M. (T.O.M.) Territories, French Polynesia, New Zealand, Fiji, Kiribati, Niue, Tuvalu, Tonga"
                   }
+                }
+              },
+              "WindowStartDurationType": {
+                "transform": [
+                  "trim",
+                  "toEnumCase"
+                ],
+                "enum": [
+                  "Consecutive",
+                  "Aggregate",
+                  null
+                ],
+                "errorMessage": {
+                  "enum": "WindowStartDurationType must be one of the given values - Consecutive or Aggregate"
                 }
               },
               "TermStartDate": {

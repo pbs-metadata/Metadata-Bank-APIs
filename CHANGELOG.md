@@ -1,3 +1,7 @@
+## v0.37.0
+   * MBANK v0.37.0 - Postman collection - The new Enum values are added to StartEvent & StartOperator fields and new field WindowsStartDurationType added to Permission & Policy endpoints. The EIDRID parameter is added in episode, season, series and catalog Search endpoints.
+   * MBANK v0.37.0 - JSON schema - The Enum value is added to StartEvent & StartOperator fields and new field WindowsStartDurationType added to Permission & Policy endpoints.
+
 ## v1.0.36.0
    * MBANK v0.36.0 - Postman collection - Payload structure changes on Permission payload[Moved existing permission fields “PlayType, Calculated, UnitType, Count, EnsureExclusivity, MaximumExploitation, MaximumSimultaneousLimit” to Refinement], Added OrganizationList in Permission and Season. Added new Season, Permission delete endpoints to de-associate with Organization and added File search endpoints
    * MBANK v0.36.0 - JSON schema - The Payload changes on Permission, Added new endpoints for Season, Permission delete for Organization de-association. Added File search endpoints.
