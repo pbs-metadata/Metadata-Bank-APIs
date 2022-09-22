@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "fe062abf-5792-4401-b996-83ac20f30d9f",
-		"name": "Metadata-Bank-API-v0.37.0",
+		"name": "Metadata-Bank-API-v0.38.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -265,7 +265,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Series\",\n  \"Mode\": \"AudioVisual\",\n  \"SeriesClass\": \"Episodic\",\n  \"CountryOfOrigin\": \"US\",\n  \"SynopsisShort\": \"Dev-Smoke-Test\",\n  \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"Title19\": \"Money\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"el\",\n  \"Title120\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:BroadView-618586114\"\n    },\n    {\n      \"ContentID\": \"cid:org:pbs.org:NolaRoot:FRON\"\n    }\n  ],\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-131330105\",\n      \"Role\": \"Producer\",\n      \"DisplayName\": \"colette neirouz\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS NPS General Audience (GA)\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136758,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"test-emm@pbs.com\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ]\n}"
+							"raw": "{\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Series\",\n  \"Mode\": \"AudioVisual\",\n  \"SeriesClass\": \"Episodic\",\n  \"CountryOfOrigin\": \"US\",\n  \"SynopsisShort\": \"Dev-Smoke-Test\",\n  \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"Title19\": \"Money\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"el\",\n  \"Title120\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:BroadView-618586114\"\n    },\n    {\n      \"ContentID\": \"cid:org:pbs.org:NolaRoot:FRON\"\n    }\n  ],\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-131330105\",\n      \"Role\": \"Producer\",\n      \"DisplayName\": \"colette neirouz\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS NPS General Audience (GA)\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136758,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"test-emm@pbs.com\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ],\n  \"additionalData\": {\n  \t\"CreatedBy\": \"6463553\",\n  \t\"UpdatedBy\": \"7454335\",\n  \t\"DeletedBy\": \"8867567\",\n  \t\"Source\": \"Rightsline\"\n  }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/series",
@@ -311,16 +311,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Series\",\n  \"Mode\": \"AudioVisual\",\n  \"SeriesClass\": \"Episodic\",\n  \"CountryOfOrigin\": \"US\",\n  \"SynopsisShort\": \"Dev-Smoke-Test-Update\",\n  \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test-Update\",\n  \"Title19\": \"Money\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"el\",\n  \"Title120\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-127202300\",\n      \"Role\": \"Producer\",\n      \"DisplayName\": \"Story, Louise - PBS\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136758,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"test-emm@pbs.com\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ]\n}"
+							"raw": "{\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Series\",\n  \"Mode\": \"AudioVisual\",\n  \"EidrId\": \"EIDRID Testing\",\n  \"SeriesClass\": \"Episodic\",\n  \"CountryOfOrigin\": \"US\",\n  \"SynopsisShort\": \"Dev-Smoke-Test-Update\",\n  \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test-Update\",\n  \"Title19\": \"Money\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"el\",\n  \"Title120\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-127202300\",\n      \"Role\": \"Producer\",\n      \"DisplayName\": \"Story, Louise - PBS\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136758,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"test-emm@pbs.com\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ],\n   \"additionalData\": {\n  \t\"UpdatedBy\": \"535233\",\n  \t\"Source\": \"Rightsline\"\n  }\n}"
 						},
 						"url": {
-							"raw": "{{baseurl}}/series/cid:org:pbs.org:Series306",
+							"raw": "{{baseurl}}/series/cid:org:pbs.org:Series1004",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"series",
-								"cid:org:pbs.org:Series306"
+								"cid:org:pbs.org:Series1004"
 							]
 						}
 					},
@@ -830,7 +830,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Series305\",\n  \"Title\": \"LBJ, Season 1-Dev-Smoke-Test\",\n  \"SeasonClass\": \"Main\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Season\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"SequenceNumber\": 1,\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:Broadview-Season.1-Series.618585937\"\n    }\n  ]\n}"
+							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Series305\",\n  \"Title\": \"LBJ, Season 1-Dev-Smoke-Test\",\n  \"SeasonClass\": \"Main\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Season\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"SequenceNumber\": 1,\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:Broadview-Season.1-Series.618585937\"\n    }\n  ],\n   \"additionalData\": {\n  \t\"CreatedBy\": \"6463553\",\n  \t\"UpdatedBy\": \"7454335\",\n  \t\"DeletedBy\": \"8867567\",\n  \t\"Source\": \"Rightsline\"\n  }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/season",
@@ -876,7 +876,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Series305\",\n  \"Title\": \"LBJ, Season 1-Demo\",\n  \"SeasonClass\": \"Main\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Season\",\n  \"SequenceNumber\": 1,\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  }\n}"
+							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Series305\",\n  \"Title\": \"LBJ, Season 1-Demo\",\n  \"SeasonClass\": \"Main\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Season\",\n  \"SequenceNumber\": 1,\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"additionalData\": {\n    \"CreatedBy\": \"5233\",\n    \"UpdatedBy\": \"7567\",\n    \"DeletedBy\": \"445\",\n    \"Source\": \"Rightsline\"\n  }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/season/cid:org:pbs.org:Season861",
@@ -2228,16 +2228,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n     \"EidrId\": \"\"\n}"
+							"raw": "{\n    \"Title\": \"P415368-035 HD-Base Curious George\",\n    \"additionalData\": {\n        \"UpdatedBy\": \"9767676\",\n        \"Source\": \"Rightsline\"\n    }\n}"
 						},
 						"url": {
-							"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation406419",
+							"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation398078",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"manifestation",
-								"cid:org:pbs.org:Manifestation406419"
+								"cid:org:pbs.org:Manifestation398078"
 							]
 						}
 					},
@@ -3195,7 +3195,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"Title\": \"Frontline - Test\",\n    \"CompilationClass\": \"Franchise\",\n    \"ReferentType\": \"Compilation\",\n    \"StructuralType\": \"Abstraction\",\n    \"DistributionNumber\": 4,\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:System:BroadView-609240155\"\n        }\n    ],\n    \"EntryList\": [\n        {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"13\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Series40\"\n        },\n         {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"13\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Series2\"\n        },\n         {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"13\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Episode5454\"\n        },\n         {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"13\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Season124\"\n        },\n         {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"13\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Manifestation3456\"\n        }\n    ]\n}"
+							"raw": "{\n    \"Title\": \"Frontline - Test\",\n    \"CompilationClass\": \"Franchise\",\n    \"ReferentType\": \"Compilation\",\n    \"StructuralType\": \"Abstraction\",\n    \"DistributionNumber\": 4,\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:System:BroadView-609240155\"\n        }\n    ],\n    \"EntryList\": [\n        {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"13\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Episode5454\"\n        },\n        {\n            \"EntryClass\": \"Installment\",\n            \"EntryNumber\": \"12\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Supplemental72987\"\n        }\n    ]\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/compilation",
@@ -3241,16 +3241,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"Title\": \"Frontline-Dev-Smoke-Test-Update\",\n    \"CompilationClass\": \"Franchise\",\n    \"ReferentType\": \"Compilation\",\n    \"StructuralType\": \"Abstraction\",\n    \"DistributionNumber\": 5\n}"
+							"raw": "{\n  \"Title\": \"Frontline-Dev-Smoke-Test-Update\",\n  \"CompilationClass\": \"Franchise\",\n  \"ReferentType\": \"Compilation\",\n  \"StructuralType\": \"Abstraction\",\n  \"DistributionNumber\": 5,\n  \"additionalData\": {\n    \"UpdatedBy\": \"8787878\",\n    \"Source\": \"Rightsline\"\n  }\n}"
 						},
 						"url": {
-							"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation2",
+							"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation416",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"compilation",
-								"cid:org:pbs.org:Compilation2"
+								"cid:org:pbs.org:Compilation416"
 							]
 						}
 					},
@@ -4579,10 +4579,10 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n   \n    \"Prohibition\": {\n    \t\"Action\": \"Blackout\",\n\t    \"MediaContext\": [\"Television\"],\n\t    \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n\t    \"TermEndDate\": \"2018-11-22T00:00:00Z\"\n    }\n}"
+									"raw": "{\n   \n    \"Prohibition\": {\n    \t\"Action\": \"Blackout\",\n\t    \"MediaContext\": [\"Television\"],\n\t    \"TermStartDate\": \"2010-11-24T00:00:00Z\",\n\t    \"TermEndDate\": \"2018-11-24T00:00:00Z\"\n    }\n}"
 								},
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1433/prohibition/68",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1433/prohibition/133",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -4590,7 +4590,7 @@
 										"policy",
 										"cid:org:pbs.org:Policy1433",
 										"prohibition",
-										"68"
+										"133"
 									]
 								}
 							},
@@ -5066,7 +5066,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"PolicyClass\": \"Agreement\",\n  \"StructuralType\": \"Policy\",\n  \"Title\": \"Seabiscuit: American Experience-Dev-SMoke-Test\",\n  \"LogicalAssetIDList\": [\n    {\n      \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-545454545\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS NPS Kids\",\n      \"Domain\": \"pbs.org\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136739,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ],\n      \"Role\": \"Distributor\"\n    }\n  ],\n  \"Permission\": [\n    {\n      \"Rule\": {\n        \"MediaContext\": [\n          \"Television\"\n        ],\n        \"Refinement\": {\n          \"PlayType\": \"Telecast\",\n          \"Calculated\": true,\n          \"UnitType\": \"Weeks\",\n          \"Count\": 8,\n          \"EnsureExclusivity\": \"Exclusive\",\n          \"MaximumExploitation\": \"567\",\n          \"MaximumSimultaneousLimit\": 23,\n          \"DeliveryChannel\": [\n            \"Youtube\",\n            \"Source\",\n            \"XUMO/Samsung\"\n          ]\n        },\n        \"WindowStartDurationType\": \"Aggregate\",\n        \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n        \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n        \"EnsureExclusivity\": \"Exclusive\",\n        \"GeospatialNamedArea\": [\n          \"United States of America and its Territories & Possessions\"\n        ],\n        \"Type\": \"Window Rights\",\n        \"Trigger\": {\n          \"StartCount\": 30,\n          \"StartUnitType\": \"Days\",\n          \"StartOperator\": \"Surrounding\",\n          \"StartEvent\": \"Second Release\",\n          \"TimeInterval\": [],\n          \"EndCount\": 30,\n          \"EndUnitType\": \"Days\",\n          \"EndOperator\": \"After\",\n          \"EndEvent\": \"Latest Episode Rights End\"\n        },\n        \"LogicalAssetIDList\": [\n          {\n            \"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.4343434343\"\n          }\n        ],\n        \"EntryList\": [\n          {\n            \"EntryClass\": \"Episode\",\n            \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n          }\n        ]\n      }\n    }\n  ]\n}"
+							"raw": "{\n  \"PolicyClass\": \"Agreement\",\n  \"StructuralType\": \"Policy\",\n  \"Title\": \"Seabiscuit: American Experience-Dev-SMoke-Test\",\n  \"LogicalAssetIDList\": [\n    {\n      \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-545454545\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS NPS Kids\",\n      \"Domain\": \"pbs.org\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136739,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ],\n      \"Role\": \"Distributor\"\n    }\n  ],\n  \"Permission\": [\n    {\n      \"Rule\": {\n        \"MediaContext\": [\n          \"Television\"\n        ],\n        \"Refinement\": {\n          \"PlayType\": \"Telecast\",\n          \"Calculated\": true,\n          \"UnitType\": \"Weeks\",\n          \"Count\": 8,\n          \"EnsureExclusivity\": \"Exclusive\",\n          \"MaximumExploitation\": \"567\",\n          \"MaximumSimultaneousLimit\": 23,\n          \"DeliveryChannel\": [\n            \"Youtube\",\n            \"Source\",\n            \"XUMO/Samsung\"\n          ]\n        },\n        \"WindowStartDurationType\": \"Aggregate\",\n        \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n        \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n        \"EnsureExclusivity\": \"Exclusive\",\n        \"GeospatialNamedArea\": [\n          \"United States of America and its Territories & Possessions\"\n        ],\n        \"Type\": \"Window Rights\",\n        \"Trigger\": {\n          \"StartCount\": 30,\n          \"StartUnitType\": \"Days\",\n          \"StartOperator\": \"Within\",\n          \"StartEvent\": \"Second Release\",\n          \"TimeInterval\": [],\n          \"EndCount\": 30,\n          \"EndUnitType\": \"Days\",\n          \"EndOperator\": \"Surrounding\",\n          \"EndEvent\": \"Latest Episode Rights End\"\n        },\n        \"LogicalAssetIDList\": [\n          {\n            \"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.4343434343\"\n          }\n        ],\n        \"EntryList\": [\n          {\n            \"EntryClass\": \"Episode\",\n            \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n          }\n        ]\n      }\n    }\n  ]\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/policy",
@@ -5112,16 +5112,16 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"PolicyClass\": \"Agreement\",\n    \"StructuralType\": \"Policy\",\n    \"Title\": \"Seabiscuit: American Experience-Dev-Smoke-Test\"\n}\n\n"
+							"raw": "{\n  \"PolicyClass\": \"Agreement\",\n  \"StructuralType\": \"Policy\",\n  \"Title\": \"Seabiscuit: American Experience-Dev-Smoke-Test\"\n}"
 						},
 						"url": {
-							"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1433",
+							"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1820",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"policy",
-								"cid:org:pbs.org:Policy1433"
+								"cid:org:pbs.org:Policy1820"
 							]
 						}
 					},
@@ -5376,7 +5376,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode3818\",\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation1172\",\n    \"ReferentType\": \"Linear\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"en\",\n    \"SubtitledLanguage\": \"en\",\n    \"DviLanguage\": \"en\",\n    \"CommonCarriage\": 1,\n    \"Qualifier\": [\n        \"CC\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\",\n    \"Linear\": {\n        \"PlayRun\": 1,\n        \"PlayDay\":  3, \n        \"PlayType\": \"Hard Feed (with rights)\",\n        \"ReleaseQualifier\": \"premiere\",\n        \"Duration\": \"1800\",\n        \"ProgramService\": {\n            \"ProviderSource\": \"500 - X\",\n            \"ProviderSourceName\": \"PBS\",\n            \"ProviderTimeZone\": \"EDT\"\n        },\n        \"AlternateEventIDList\": [\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-23046921\"\n      },\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:Rightsline-84743\"\n      }\n    ]\n    }\n}"
+									"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Episode35696\",\n  \"ReferentType\": \"Linear\",\n  \"StructuralType\": \"Performance\",\n  \"SAP\": false,\n  \"DubbedLanguage\": \"en\",\n  \"SubtitledLanguage\": \"en\",\n  \"DviLanguage\": \"en\",\n  \"CommonCarriage\": 1,\n  \"Qualifier\": [\n    \"CC\"\n  ],\n  \"EventDate\": \"2027-12-03T11:24:01.486592\",\n  \"Linear\": {\n    \"PlayRun\": 1,\n    \"PlayDay\": 3,\n    \"PlayType\": \"Hard Feed (with rights)\",\n    \"ReleaseQualifier\": \"premiere\",\n    \"Duration\": \"1800\",\n    \"ProgramService\": {\n      \"ProviderSource\": \"SIXPBS\",\n      \"ProviderSourceName\": \"PBS\",\n      \"ProviderTimeZone\": \"EDT\"\n    },\n    \"AlternateEventIDList\": [\n      {\n        \"AlternateEventID\": \"cid:org:pbs.org:BroadView-007007007\"\n      }\n    ]\n  }\n}"
 								},
 								"url": {
 									"raw": "{{baseurl}}/event/linear",
@@ -5670,17 +5670,17 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode23818\",\n    \"VOD\": {\n        \"ReleaseQualifier\": \"Repeat\",\n        \"PlayRun\": 12,\n        \"Duration\": \"1800\",\n        \"ProviderSource\": \"pbs.org\"\n    },\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation211172\",\n    \"ReferentType\": \"VOD\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"en\",\n    \"SubtitledLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\",\n        \"3D\",\n        \"Dubbed\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\"\n}"
+									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode23818\",\n    \"VOD\": {\n        \"ReleaseQualifier\": \"Repeat\",\n        \"Duration\": \"1800\",\n        \"ProviderSource\": \"pbs.org\"\n    },\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation211172\",\n    \"ReferentType\": \"VOD\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"en\",\n    \"SubtitledLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\",\n        \"3D\",\n        \"Dubbed\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\",\n     \"additionalData\": {\n        \"UpdatedBy\": \"999999999\",\n        \"Source\": \"Rightsline\"\n    }\n}"
 								},
 								"url": {
-									"raw": "{{baseurl}}/event/vod/cid:org:pbs.org:Event918320",
+									"raw": "{{baseurl}}/event/vod/cid:org:pbs.org:Event1893606",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"event",
 										"vod",
-										"cid:org:pbs.org:Event918320"
+										"cid:org:pbs.org:Event1893606"
 									]
 								}
 							},

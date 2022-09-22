@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "errorMessage":{
+    "type": "The request must be an object",
+    "required": {
+      "ContentID": "ContentID is Required"
+    }
+  },
+  "properties": {
+    "ContentID": {
+      "type": "string",
+      "errorMessage":{
+        "type": "ContentID must be a String"
+      }
+    }
+  },
+  "required": [
+    "ContentID"
+  ]
+}

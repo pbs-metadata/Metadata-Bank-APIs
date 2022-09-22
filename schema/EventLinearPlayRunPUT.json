@@ -1,0 +1,28 @@
+{
+    "required": [
+        "PlayRun"
+    ],
+    "type": "object",
+    "errorMessage": {
+        "type": "The request should be an object",
+        "required": {
+            "PlayRun": "PlayRun is Required"
+        }
+    },
+    "properties": {
+        "PlayRun": {
+            "type": "integer",
+            "format": "int32",
+            "errorMessage":{
+                "type": "PlayRun must be an Integer"
+            }            
+        },
+        "PlayDate": {
+            "type": "integer",
+            "format": "int32",
+            "errorMessage":{
+                "type": "PlayDate must be an Integer"
+            }     
+        }
+    }
+}

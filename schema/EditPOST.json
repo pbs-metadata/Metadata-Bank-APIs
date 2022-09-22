@@ -1,9 +1,24 @@
 {
   "title": "The Root Schema",
-  "type": "object",
+  "required": [
+    "Title",
+    "EditClass",
+    "EditUse",
+    "ActualLength",
+    "ParentUID"
+  ],
   "errorMessage": {
-    "type": "The request should be an object"
+    "type": "The request should be an object",
+    "required": {
+      "Title": "Title is Required",
+      "ReferentType": "ReferentType is Required",
+      "EditClass": "EditClass is Required",
+      "EditUse": "EditUse is Required",
+      "ActualLength": "ActualLength is Required",
+      "ParentUID": "ParentUID is Required"
+    }
   },
+  "type": "object",
   "additionalProperties": false,
   "properties": {
     "Title": {
@@ -13,6 +28,27 @@
       "errorMessage": {
         "type": "Title must be a String",
         "minLength": "Title should have a minimum one character"
+      }
+    },
+    "ReferentType": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Series",
+        "Season",
+        "TV",
+        "Movie",
+        "Short",
+        "Web",
+        "Compilation",
+        "Supplemental"
+      ],
+      "errorMessage": {
+        "type": "ReferentType must be a String",
+        "enum": "ReferentType must be a Series, Season, TV, Movie, Short, Web, Compilation or Supplemental irrepective to case."
       }
     },
     "FileDeliveryStatus": {
@@ -151,6 +187,60 @@
       "errorMessage": {
         "type": "ActualLength must be a String",
         "minLength": "ActualLength should have a minimum one character"
+      }
+    },
+    "AlternateContentIDList": {
+      "type": "array",
+      "items": {
+        "required": [
+          "AlternateContentID"
+        ],
+        "type": "object",
+        "errorMessage": {
+          "type": "items should be an object",
+          "required": {
+            "AlternateContentID": "AlternateContentID is Required"
+          }
+        },
+        "properties": {
+          "AlternateContentID": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "AlternateContentID must be a String"
+            }
+          }
+        }
+      },
+      "errorMessage": {
+        "type": "AlternateContentIDList must be an Array"
+      }
+    },
+    "additionalData": {
+      "type": "object",
+      "errorMessage": {
+        "type": "The additionalData should be an object"
+      },
+      "additionalProperties": false,
+      "properties": {
+        "CreatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "CreatedBy must be a String"
+          }
+        },
+        "UpdatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "UpdatedBy must be a String"
+          }
+        },
+        "Source": {
+          "type": "string",
+          "errorMessage": {
+            "type": "Source must be a String"
+          }
+        }
       }
     }
   }

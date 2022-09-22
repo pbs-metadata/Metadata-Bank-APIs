@@ -272,10 +272,12 @@
                       "Before",
                       "After",
                       "During",
+					  "Surrounding",
+					  "Within",
                       null
                     ],
                     "errorMessage": {
-                      "enum": "EndOperator must be one of the given values - On, Before, After or During"
+                      "enum": "EndOperator must be one of the given values - On, Before, After, During or Surrounding, Within"
                     }
                   },
                   "EndEvent": {

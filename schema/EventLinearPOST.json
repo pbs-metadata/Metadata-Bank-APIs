@@ -63,7 +63,10 @@
     },
     "ManifestationUID": {
       "pattern": "^(.*)$",
-      "type":  ["string","null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "errorMessage": {
         "type": "ManifestationUID must be a String"
       }
@@ -265,31 +268,31 @@
         "za",
         "zh",
         "zu",
-		"dar",
-		"din",
-		"dnk",
-		"e/c",
-		"e/f",
-		"e/i",
-		"e/s",
-		"gab",
-		"hmo",
-		"ins",
-		"ira",
-		"j/e",
-		"lat",
-		"man",
-		"mok",
-		"oji",
-		"psm",
-		"sen",
-		"sep",
-		"sil",
-		"sud",
-		"swi",
-		"swz",
-		"wam",
-		"zxs"
+        "dar",
+        "din",
+        "dnk",
+        "e/c",
+        "e/f",
+        "e/i",
+        "e/s",
+        "gab",
+        "hmo",
+        "ins",
+        "ira",
+        "j/e",
+        "lat",
+        "man",
+        "mok",
+        "oji",
+        "psm",
+        "sen",
+        "sep",
+        "sil",
+        "sud",
+        "swi",
+        "swz",
+        "wam",
+        "zxs"
       ]
     },
     "SubtitledLanguage": {
@@ -489,31 +492,31 @@
         "za",
         "zh",
         "zu",
-		"dar",
-		"din",
-		"dnk",
-		"e/c",
-		"e/f",
-		"e/i",
-		"e/s",
-		"gab",
-		"hmo",
-		"ins",
-		"ira",
-		"j/e",
-		"lat",
-		"man",
-		"mok",
-		"oji",
-		"psm",
-		"sen",
-		"sep",
-		"sil",
-		"sud",
-		"swi",
-		"swz",
-		"wam",
-		"zxs"
+        "dar",
+        "din",
+        "dnk",
+        "e/c",
+        "e/f",
+        "e/i",
+        "e/s",
+        "gab",
+        "hmo",
+        "ins",
+        "ira",
+        "j/e",
+        "lat",
+        "man",
+        "mok",
+        "oji",
+        "psm",
+        "sen",
+        "sep",
+        "sil",
+        "sud",
+        "swi",
+        "swz",
+        "wam",
+        "zxs"
       ]
     },
     "DviLanguage": {
@@ -712,31 +715,31 @@
         "za",
         "zh",
         "zu",
-		"dar",
-		"din",
-		"dnk",
-		"e/c",
-		"e/f",
-		"e/i",
-		"e/s",
-		"gab",
-		"hmo",
-		"ins",
-		"ira",
-		"j/e",
-		"lat",
-		"man",
-		"mok",
-		"oji",
-		"psm",
-		"sen",
-		"sep",
-		"sil",
-		"sud",
-		"swi",
-		"swz",
-		"wam",
-		"zxs",
+        "dar",
+        "din",
+        "dnk",
+        "e/c",
+        "e/f",
+        "e/i",
+        "e/s",
+        "gab",
+        "hmo",
+        "ins",
+        "ira",
+        "j/e",
+        "lat",
+        "man",
+        "mok",
+        "oji",
+        "psm",
+        "sen",
+        "sep",
+        "sil",
+        "sud",
+        "swi",
+        "swz",
+        "wam",
+        "zxs",
         null
       ]
     },
@@ -885,7 +888,7 @@
             "Feed For Record",
             "Other Hard Feed (with Rights)",
             "Other Hard Feed (without Rights)",
-			null
+            null
           ]
         },
         "Duration": {
@@ -952,6 +955,33 @@
                 "enum": "ProviderTimeZone must be a CST, CDT, EST, EDT, PST, PDT, MST, MDT, HST, HDT, AKST or AKDT irrespective to Case."
               }
             }
+          }
+        }
+      }
+    },
+    "additionalData": {
+      "type": "object",
+      "errorMessage": {
+        "type": "The additionalData should be an object"
+      },
+      "additionalProperties": false,
+      "properties": {
+        "CreatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "CreatedBy must be a String"
+          }
+        },
+        "UpdatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "UpdatedBy must be a String"
+          }
+        },
+        "Source": {
+          "type": "string",
+          "errorMessage": {
+            "type": "Source must be a String"
           }
         }
       }
