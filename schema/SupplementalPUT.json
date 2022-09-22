@@ -1,20 +1,8 @@
 {
   "title": "The Root Schema",
   "type": "object",
-  "required": [
-    "StructuralType",
-    "Title",
-    "ApproximateLength"
-  ],
   "errorMessage": {
-    "type": "The request should be an object",
-    "required": {
-      "StructuralType": "StructuralType is Required",
-      "Title": "Title is Required",
-      "ApproximateLength": "ApproximateLength is Required",
-      "SupplementalContentClass": "SupplementalContentClass is Required",
-      "AlternateContentClass": "AlternateContentClass is Required"
-    }
+    "type": "The request should be an object"
   },
   "properties": {
     "StructuralType": {
@@ -38,7 +26,6 @@
         "trim",
         "toEnumCase"
       ],
-      "type": "string",
       "enum": [
         "Image Spots",
         "Support Spots",
@@ -79,7 +66,8 @@
         "One Time Only",
         "Turnkey Break",
         "Embedded Promo",
-        "KIDSC-Embedded Promo"
+        "KIDSC-Embedded Promo",
+        null
       ],
       "errorMessage": {
         "type": "SupplementalContentClass must be a String",
@@ -111,7 +99,6 @@
         "trim",
         "toEnumCase"
       ],
-      "type": "string",
       "enum": [
         "Image Spots",
         "Support Spots",
@@ -135,7 +122,8 @@
         "Radio Spot",
         "One Time Only",
         "Embedded Promo",
-        "KIDSC-Embedded Promo"
+        "KIDSC-Embedded Promo",
+        null
       ],
       "errorMessage": {
         "type": "PromotionalClass must be a String",
@@ -186,83 +174,23 @@
         "type": "SupportedWorkRelationship must be a String"
       }
     },
-    "EntryList": {
-      "minItems": 1,
-      "type": "array",
-      "uniqueItems": true,
+    "additionalData": {
+      "type": "object",
       "errorMessage": {
-        "uniqueItems": "EntryList Contains a Duplicate Value",
-        "type": "EntryList must be an Array",
-        "minItems": "EntryList should have a minimum one item"
+        "type": "The additionalData should be an object"
       },
-      "items": {
-        "required": [
-          "EntryClass",
-          "EntryContentUID"
-        ],
-        "type": "object",
-        "errorMessage": {
-          "type": "items should be an object",
-          "required": {
-            "EntryClass": "EntryClass is Required",
-            "EntryContentUID": "EntryContentUID is Required"
+      "additionalProperties": false,
+      "properties": {
+        "UpdatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "UpdatedBy must be a String"
           }
         },
-        "properties": {
-          "EntryClass": {
-            "type": "string",
-            "transform": [
-              "trim",
-              "toEnumCase"
-            ],
-            "enum": [
-              "Episode",
-              "Installment",
-              "Part",
-              "Season",
-              "Series",
-              "Manifestation"
-            ],
-            "errorMessage": {
-              "type": "EntryClass must be a String",
-              "enum": "EntryClass must be an Series, Season, Episode, Installment, Part or Manifestation irrespective to Case."
-            }
-          },
-          "EntryContentUID": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage": {
-              "type": "EntryContentUID must be a String"
-            }
-          }
-        }
-      }
-    },
-    "AlternateContentIDList": {
-      "type": "array",
-      "uniqueItems": true,
-      "errorMessage": {
-        "type": "AlternateContentIDList must be an Array",
-        "uniqueItems": "AlternateContentIDList Contains a Duplicate Value"
-      },
-      "items": {
-        "required": [
-          "AlternateContentID"
-        ],
-        "type": "object",
-        "properties": {
-          "AlternateContentID": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage": {
-              "type": "AlternateContentID must be a string"
-            }
-          }
-        },
-        "errorMessage": {
-          "type": "items should be an object",
-          "required": {
-            "AlternateContentID": "AlternateContentID is Required"
+        "Source": {
+          "type": "string",
+          "errorMessage": {
+            "type": "Source must be a String"
           }
         }
       }

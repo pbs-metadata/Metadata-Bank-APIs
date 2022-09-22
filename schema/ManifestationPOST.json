@@ -1,9 +1,19 @@
 {
   "title": "The Root Schema",
-  "type": "object",
+  "required": [
+    "ManifestationClass",
+    "ParentUID",
+    "Title"
+  ],
   "errorMessage": {
-    "type": "The request must be an object"
+    "type": "The request should be an object",
+    "required": {
+      "ManifestationClass": "ManifestationClass is Required",
+      "ParentUID": "ParentUID is Required",
+      "Title": "Title is Required"
+    }
   },
+  "type": "object",
   "properties": {
     "ManifestationUID": {
       "pattern": "^(.*)$",
@@ -236,13 +246,29 @@
           ],
           "errorMessage": {
             "type": "Vchip must be a String",
-            "enum": "Vchip must be an TV-Y7-FV, TV-Y7, TV-Y, E, TV-PG+VSLD, TV-PG+VSL, TV-PG+VSD, TV-PG+VS, TV-PG+VLD, TV-PG+VL, TV-PG+VD, TV-PG+V, TV-PG+SLD, TV-PG+SL, TV-PG+SD, TV-PG+S, TV-PG+LD, TV-PG+L, TV-PG+D, TV-PG, TV-MA+VSL, TV-MA+VS, TV-MA+VL, TV-MA+V, TV-MA+SL, TV-MA+S, TV-MA+L, TV-MA, TV-G, TV-14+VSLD, TV-14+VSL, TV-14+VSD, TV-14+VS, TV-14+VLD, TV-14+VL, TV-14+VD, TV-14+V, TV-14+SLD, TV-14+SL, TV-14+SD, TV-14+S, TV-14+LD, TV-14+L, TV-14+D,TV-14, TV-PG-V irrespective to Case."
+            "enum": "Vchip must be an TV-Y7-FV, TV-Y7, TV-Y, E, TV-PG+VSLD, TV-PG+VSL, TV-PG+VSD, TV-PG+VS, TV-PG+VLD, TV-PG+VL, TV-PG+VD, TV-PG+V, TV-PG+SLD, TV-PG+SL, TV-PG+SD, TV-PG+S, TV-PG+LD, TV-PG+L, TV-PG+D, TV-PG, TV-MA+VSL, TV-MA+VS, TV-MA+VL, TV-MA+V, TV-MA+SL, TV-MA+S, TV-MA+L, TV-MA, TV-G, TV-14+VSLD, TV-14+VSL, TV-14+VSD, TV-14+VS, TV-14+VLD, TV-14+VL, TV-14+VD, TV-14+V, TV-14+SLD, TV-14+SL, TV-14+SD, TV-14+S, TV-14+LD, TV-14+L, TV-14+D, TV-14, TV-PG-V irrespective to Case."
           }
         },
         "ei": {
           "type": "boolean",
           "errorMessage": {
             "type": "ei must be a Boolean"
+          }
+        },
+        "HiDef": {
+          "transform": [
+            "trim",
+            "toEnumCase"
+          ],
+          "enum": [
+            "720p",
+            "1080i",
+            "720i",
+            "1080p",
+            null
+          ],
+          "errorMessage": {
+            "enum": "HiDef must be 720p, 1080i, 720i, 1080p irrespective to Case."
           }
         }
       }
@@ -261,13 +287,6 @@
           }
         },
         "properties": {
-          "TermUID": {
-            "type": "integer",
-            "format": "int32",
-            "errorMessage": {
-              "type": "TermUID must be an integer"
-            }
-          },
           "Term": {
             "minLength": 1,
             "pattern": "^(.*)$",
@@ -283,11 +302,36 @@
         "type": "UseWindowTermList must be an Array"
       }
     },
+    "ContentIDList": {
+      "type": "array",
+      "items": {
+        "required": [
+          "ContentID"
+        ],
+        "type": "object",
+        "errorMessage": {
+          "type": "items should be an object",
+          "required": {
+            "ContentID": "ContentID is Required"
+          }
+        },
+        "properties": {
+          "ContentID": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "ContentID must be a String"
+            }
+          }
+        }
+      },
+      "errorMessage": {
+        "type": "ContentIDList must be an Array"
+      }
+    },
     "FileList": {
       "type": "array",
-      "uniqueItems": true,
       "errorMessage": {
-        "uniqueItems": "FileList Contains a Duplicate Value",
         "type": "FileList must be an Array"
       },
       "items": {
@@ -404,10 +448,35 @@
     },
     "ManifestationList": {
       "type": "array",
-      "uniqueItems": true,
       "errorMessage": {
-        "uniqueItems": "ManifestationList Contains a Duplicate Value",
         "type": "ManifestationList must be an array"
+      }
+    },
+    "additionalData": {
+      "type": "object",
+      "errorMessage": {
+        "type": "The additionalData should be an object"
+      },
+	  "additionalProperties":false,
+      "properties": {
+        "CreatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "CreatedBy must be a String"
+          }
+        },
+        "UpdatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "UpdatedBy must be a String"
+          }
+        },
+        "Source": {
+          "type": "string",
+          "errorMessage": {
+            "type": "Source must be a String"
+          }
+        }
       }
     }
   }

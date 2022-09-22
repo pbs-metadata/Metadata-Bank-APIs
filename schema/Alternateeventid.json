@@ -1,0 +1,22 @@
+{
+        "title": "The Root Schema",
+        "required": [
+            "AlternateEventID"
+        ],
+        "type": "object",
+        "errorMessage": {
+            "type": "The request should be an object",
+            "required": {
+                "AlternateEventID": "AlternateEventID is Required"
+            }
+        },
+        "properties": {
+            "AlternateEventID": {
+                "pattern": "^(.*)$",
+                "type": "string",
+                "errorMessage":{
+                    "type": "AlternateEventID must be a String"
+                }
+            }
+        }
+    }

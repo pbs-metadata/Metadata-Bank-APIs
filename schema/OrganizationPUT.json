@@ -1,0 +1,100 @@
+{
+	"required": ["ContactInfoList", "Role"],
+	"type": "object",
+    "additionalProperties": false,
+	"errorMessage": {
+		"type": "items should be an object",
+		"required": {
+			"ContactInfoList": "ContactInfoList is Required",
+			"Role": "Role is Required"
+		}
+	},
+	"properties": {
+		"DisplayName": {
+			"pattern": "^(.*)$",
+			"type": "string",
+			"errorMessage": {
+				"type": "DisplayName must be a String"
+			}
+		},
+		"Domain": {
+			"pattern": "^(.*)$",
+			"type": "string",
+			"errorMessage": {
+				"type": "Domain must be a String"
+			}
+		},
+		"Role": {
+			"pattern": "^(.*)$",
+			"type": "string",
+			"errorMessage": {
+				"type": "Role must be a String"
+			}
+		},
+		"ContactInfoList": {
+			"type": "array",
+			"minItems": 1,
+			"errorMessage": {
+				"type": "ContactInfoList must be an Array",
+				"minItems": "Minimum one contact info is required"
+			},
+			"items": {
+				"required": ["ContactID", "ContactName"],
+				"type": "object",
+                "additionalProperties": false,
+				"errorMessage": {
+					"type": "items should be an object",
+					"required": {
+						"ContactID": "ContactID is Required",
+						"ContactName": "ContactName is Required"
+					}
+				},
+				"properties": {
+					"ContactID": {
+						"type": "integer",
+						"format": "int32",
+						"errorMessage": {
+							"type": "ContactID must be an Integer",
+							"format": "ContactID must be in int32 format"
+						}
+					},
+					"Phone": {
+						"pattern": "^(.*)$",
+						"type": "string",
+						"errorMessage": {
+							"type": "Phone must be a String"
+						}
+					},
+					"PhoneType": {
+						"pattern": "^(.*)$",
+						"type": "string",
+						"errorMessage": {
+							"type": "PhoneType must be a String"
+						}
+					},
+					"Address": {
+						"pattern": "^(.*)$",
+						"type": "string",
+						"errorMessage": {
+							"type": "Address must be a String"
+						}
+					},
+					"PrimaryEmail": {
+						"pattern": "^(.*)$",
+						"type": "string",
+						"errorMessage": {
+							"type": "PrimaryEmail must be a String"
+						}
+					},
+					"ContactName": {
+						"pattern": "^(.*)$",
+						"type": "string",
+						"errorMessage": {
+							"type": "ContactName must be a String"
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -52,7 +52,7 @@
         "minLength": "FileName should have a minimum one character"
       }
     },
-	"FileFormat": {
+    "FileFormat": {
       "pattern": "^(.*)$",
       "type": "string",
       "errorMessage": {
@@ -76,7 +76,7 @@
         "enum": "FileDeliveryStatus must be a Removed, Delivered, Future or Other"
       }
     },
-	"FileLocationPath": {
+    "FileLocationPath": {
       "type": "string",
       "errorMessage": {
         "type": "FileLocationPath must be a String"
@@ -95,7 +95,7 @@
         "SHA-1",
         "SHA-2",
         "SHA-3",
-		null
+        null
       ],
       "errorMessage": {
         "type": "ChecksumType must be a String",
@@ -135,6 +135,33 @@
           "type": "items should be an object",
           "required": {
             "AssetUID": "AssetUID is Required"
+          }
+        }
+      }
+    },
+    "additionalData": {
+      "type": "object",
+      "errorMessage": {
+        "type": "The additionalData should be an object"
+      },
+      "additionalProperties": false,
+      "properties": {
+        "CreatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "CreatedBy must be a String"
+          }
+        },
+        "UpdatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "UpdatedBy must be a String"
+          }
+        },
+        "Source": {
+          "type": "string",
+          "errorMessage": {
+            "type": "Source must be a String"
           }
         }
       }

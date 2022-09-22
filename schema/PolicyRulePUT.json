@@ -24,33 +24,15 @@
       "type": "object",
       "properties": {
         "Rule": {
-          "required": [
-            "MediaContext"
-          ],
-          "errorMessage": {
-            "type": "Rule must be an object",
-            "required": {
-              "MediaContext": "MediaContext is Required"
-            }
-          },
           "type": "object",
+          "errorMessage": {
+            "type": "Rule must be an object"
+          },
           "properties": {
             "Trigger": {
               "type": "object",
-              "dependencies": {
-                "StartOperator": [
-                  "StartEvent"
-                ],
-                "EndOperator": [
-                  "EndEvent"
-                ]
-              },
               "errorMessage": {
-                "type": "Trigger must be an object",
-                "dependencies": {
-                  "StartOperator": "StartEvent is required, if StartOperator is present",
-                  "EndOperator": "EndEvent is required, if EndOperator is present"
-                }
+                "type": "Trigger must be an object"
               },
               "properties": {
                 "StartCount": {
@@ -152,8 +134,7 @@
                   "items": {
                     "type": "string",
                     "errorMessage": {
-                      "type": "item must be an string",
-                      "format": "item must be in string"
+                      "type": "item must be an string"
                     }
                   }
                 },
@@ -192,10 +173,12 @@
                     "Before",
                     "After",
                     "During",
+                    "Surrounding",
+                    "Within",
                     null
                   ],
                   "errorMessage": {
-                    "enum": "EndOperator must be one of the given values - On, Before, After or During"
+                    "enum": "EndOperator must be one of the given values - On, Before, After, During or Surrounding, Within"
                   }
                 },
                 "EndEvent": {
@@ -876,74 +859,6 @@
                 "type": "TermEndDate must be a String"
               }
             },
-            "LogicalAssetIDList": {
-              "type": "array",
-              "uniqueItems": true,
-              "errorMessage": {
-                "type": "LogicalAssetIDList must be an Array",
-                "uniqueItems": "LogicalAssetIDList Contains a Duplicate Value"
-              },
-              "items": {
-                "required": [
-                  "LogicalAssetID"
-                ],
-                "type": "object",
-                "errorMessage": {
-                  "type": "items should be an object",
-                  "required": {
-                    "LogicalAssetID": "LogicalAssetID is Required"
-                  }
-                },
-                "properties": {
-                  "LogicalAssetID": {
-                    "pattern": "^(.*)$",
-                    "type": "string",
-                    "errorMessage": {
-                      "type": "LogicalAssetID must be a String"
-                    }
-                  }
-                }
-              }
-            },
-            "EntryList": {
-              "type": "array",
-              "uniqueItems": true,
-              "errorMessage": {
-                "type": "EntryList must be an Array",
-                "uniqueItems": "EntryList Contains a Duplicate Value"
-              },
-              "items": {
-                "title": "The Items Schema",
-                "required": [
-                  "EntryClass",
-                  "EntryUID"
-                ],
-                "type": "object",
-                "errorMessage": {
-                  "type": "items must be an Object",
-                  "required": {
-                    "EntryClass": "EntryClass is Required",
-                    "EntryUID": "EntryUID is Required"
-                  }
-                },
-                "properties": {
-                  "EntryClass": {
-                    "pattern": "^(.*)$",
-                    "type": "string",
-                    "errorMessage": {
-                      "type": "EntryClass must be an String"
-                    }
-                  },
-                  "EntryUID": {
-                    "pattern": "^(.*)$",
-                    "type": "string",
-                    "errorMessage": {
-                      "type": "EntryUID must be an String"
-                    }
-                  }
-                }
-              }
-            },
             "additionalData": {
               "type": "object",
               "errorMessage": {
@@ -972,43 +887,6 @@
                   "type": "string",
                   "errorMessage": {
                     "type": "DeletedBy must be a String"
-                  }
-                }
-              }
-            }
-          },
-          "if": {
-            "properties": {
-              "MediaContext": {
-                "contains": {
-                  "type": "string",
-                  "enum": [
-                    "Television",
-                    "Linear",
-                    "Linear Streaming",
-                    "Linear Streaming -- Non-Commercial",
-                    "Linear Streaming -- Commercial",
-                    "Broadcast",
-                    "Broadcast -- Non-Commercial",
-                    "Broadcast -- Commercial",
-                    "Linear TV -- Pay",
-                    "Linear TV -- Pay Premium",
-                    "Digital Multicast Distribution",
-                    "All Rights"
-                  ]
-                }
-              }
-            }
-          },
-          "then": {
-            "properties": {
-              "Refinement": {
-                "required": [
-                  "PlayType"
-                ],
-                "errorMessage": {
-                  "required": {
-                    "PlayType": "PlayType is Required, if MediaContext is Television, Linear, Linear Streaming, Linear Streaming -- Non-Commercial, Linear Streaming -- Commercial, Broadcast, Broadcast -- Non-Commercial, Broadcast -- Commercial, Linear TV -- Pay, Linear TV -- Pay Premium, Digital Multicast Distribution, All Rights"
                   }
                 }
               }
