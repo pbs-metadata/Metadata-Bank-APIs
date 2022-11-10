@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "fe062abf-5792-4401-b996-83ac20f30d9f",
-		"name": "Metadata-Bank-API-v0.38.0",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"_postman_id": "d3d29bb0-79b5-443d-8ef7-bacf458e0c5f",
+		"name": "Metadata-Bank-API-v0.39.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14537332"
 	},
 	"item": [
 		{
@@ -47,8 +48,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Change Log",
@@ -90,8 +90,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Series GET",
@@ -99,7 +98,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "abee9b25-4c3a-4d48-bcf0-acea965f8987",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -142,7 +140,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "9fbfd660-3db5-4521-a5b1-057b6ed5a5b0",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -186,7 +183,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "aa886fe9-5f3f-41b1-a3b2-441a4015ed06",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -239,7 +235,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ea69f123-19ab-4abb-af23-a26c02d07c2a",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -285,7 +280,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "20aa4b41-ea37-470f-9792-bdad3a424317",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -332,7 +326,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "c0b9bde0-5d42-45f6-820c-af59eb620fc0",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -379,7 +372,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "0c1dd974-3f89-4a17-85cf-66b12d135b8b",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -427,7 +419,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "de8bef5b-6ce3-4e42-ae13-31e6a0505a8c",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -476,7 +467,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "e9c90e93-bf86-4165-9af8-96f34a2c1f33",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -531,7 +521,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "1544024c-abb8-4b2d-bbeb-62c39bafee02",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -580,7 +569,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "19490a73-8085-4408-9c55-0a60b20d5cb4",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -665,8 +653,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Change Log",
@@ -708,8 +695,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Season GET",
@@ -717,7 +703,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "0898bb3c-7ab7-4d63-a93e-527daba701ec",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -760,7 +745,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "505e282a-b301-46f2-8ae5-c4129c715982",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -804,7 +788,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "cde8b9cb-cf98-47ad-b07d-a1a1636e7b76",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -850,7 +833,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "5f3d8509-22a6-4070-99b8-c37737e20ea4",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -897,7 +879,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "2155417b-0a07-4a24-93be-fe4ed7764cd2",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -944,7 +925,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "a4f19318-8e81-4951-9d54-1c6fcdc88d5a",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -992,7 +972,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "7f7f2e78-e4f1-4674-a989-f7c8e2e200d6",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1041,7 +1020,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "e9c90e93-bf86-4165-9af8-96f34a2c1f33",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1096,7 +1074,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "5adfebfc-4b9f-4075-a22b-bbd88dcc2665",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1143,7 +1120,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "16b098e3-8348-4c12-a71d-7c5b87c09c15",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1241,8 +1217,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Change Log",
@@ -1284,8 +1259,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Episode GET",
@@ -1293,7 +1267,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "292a6c52-ea59-4236-ab7e-f8b7598460bf",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1336,7 +1309,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "20b092c6-39ed-4dc3-9e15-12a7ced357f7",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1380,7 +1352,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "20b092c6-39ed-4dc3-9e15-12a7ced357f7",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1424,7 +1395,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "3f1d6fd0-a325-4bcf-96cc-d2b6924de297",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1467,7 +1437,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "bbda22e5-dcd2-48d2-ad2b-32bc47d59f84",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -1513,7 +1482,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "8b053406-5b89-4568-9b6c-5d55fff5ea58",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1560,7 +1528,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "cedf7b9b-e8ac-43b9-9115-991a0b0ac4fc",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1607,7 +1574,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "d4b271bf-517d-44bd-931e-5fa73cc5ceb9",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1655,7 +1621,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "4460ebfe-d69c-4406-9457-8114eceaa05a",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1704,7 +1669,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "77b23226-fa7d-405d-8618-28bdf89e45f6",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1759,7 +1723,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "b238a1bd-0274-44fd-853e-f2dab9f169d6",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1808,7 +1771,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "2808afb3-fb16-461d-887b-6589662fb080",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1856,7 +1818,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "4eee6563-0494-4d7d-aa13-c7936f958d96",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -1921,7 +1882,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "01938da5-5e1b-4bff-8393-733472c84b92",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -1969,7 +1929,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "dd455dc6-27fd-4cdd-91aa-376f53dd5189",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -2011,8 +1970,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "PublishStatus",
@@ -2056,8 +2014,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Change Log",
@@ -2099,8 +2056,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Manifestation GET",
@@ -2108,7 +2064,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ee886f72-ba42-4741-a8b3-a7d8d8721fb1",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2156,7 +2111,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "c8d5a77d-b410-4735-ac2b-5f460c88f30e",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -2202,7 +2156,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "6dac187e-eeac-49f5-b878-206a1a32c0dd",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2249,7 +2202,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "79d9da73-93ea-4390-af93-226f5e36ef7b",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2292,7 +2244,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "6811b60f-4b75-4b0d-aaa0-1a53e53ad76e",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -2340,7 +2291,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "df1e8ce4-3ca8-477d-8515-05f661a0c06f",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -2389,7 +2339,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "42536ac2-2522-4b19-bca6-a69108f89e0b",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2458,8 +2407,7 @@
 								"type": "text/javascript",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								],
-								"id": "e0f3e15a-47b7-4072-896c-bf3ecb53fd69"
+								]
 							}
 						}
 					],
@@ -2498,7 +2446,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "1364c10b-ecfd-4a61-9bff-3d1afc50c1da",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -2544,7 +2491,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "58384b5b-59e8-4578-875e-02ad1af6ebf4",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2591,7 +2537,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "63488f83-6616-4ea0-99f0-a750e5d3416b",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -2641,8 +2586,7 @@
 								"type": "text/javascript",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
-								],
-								"id": "2fcbbc78-c30e-487d-8f99-3e3c785bb589"
+								]
 							}
 						}
 					],
@@ -2741,8 +2685,7 @@
 										"type": "text/javascript",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
-										],
-										"id": "7f89d2c3-54f3-43a9-b60a-f34f32b308c7"
+										]
 									}
 								}
 							],
@@ -2776,8 +2719,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Season",
@@ -2791,8 +2733,7 @@
 										"type": "text/javascript",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
-										],
-										"id": "8cfcd129-da68-403c-8a51-c6f66beaf293"
+										]
 									}
 								}
 							],
@@ -2826,8 +2767,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Episode",
@@ -2841,8 +2781,7 @@
 										"type": "text/javascript",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
-										],
-										"id": "38b8b499-2d4a-467c-a71a-cf5602ac5e70"
+										]
 									}
 								}
 							],
@@ -2876,8 +2815,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Manifestation",
@@ -2891,8 +2829,7 @@
 										"type": "text/javascript",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
-										],
-										"id": "d459d7cc-2c12-495f-a168-8de000d111a6"
+										]
 									}
 								}
 							],
@@ -2926,8 +2863,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Entry",
@@ -2938,7 +2874,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "03e7ec81-c14f-4f9f-83dd-e2e268a92fd5",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -2986,7 +2921,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ba89ec1f-ac35-4c5f-9c4c-f37029ceae54",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -3029,8 +2963,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Change Log",
@@ -3072,8 +3005,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "PublishStatus",
@@ -3117,8 +3049,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Compilation GET",
@@ -3126,7 +3057,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "073c673c-7c2b-41de-8f0a-87d9d2e815fb",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -3169,7 +3099,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "7ac28278-3df9-481a-a13e-c49d3802b5ef",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -3215,7 +3144,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ee1507f1-648a-4979-8dee-9394b4a9bcfa",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -3262,7 +3190,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "70c6f47b-a5f3-4b44-997b-aed851b99377",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -3309,7 +3236,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "b37b5925-e69d-421d-b0be-b5a306eeb07c",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -3369,8 +3295,7 @@
 								"type": "text/javascript",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
-								],
-								"id": "63c3a241-0d8c-4b75-852e-2f2241005616"
+								]
 							}
 						}
 					],
@@ -3414,7 +3339,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "401e0f67-a423-4dbd-aebc-86180b7e77f0",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -3474,7 +3398,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "dc61a57a-5898-4571-b8ed-d020234bd976",
 												"exec": [
 													"tests[\"Status code is 201\"] = responseCode.code === 201;"
 												],
@@ -3524,7 +3447,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "47380651-f68a-4373-98db-6452ce78fef9",
 												"exec": [
 													"tests[\"Status code is 200\"] = responseCode.code === 200;"
 												],
@@ -3565,8 +3487,7 @@
 									},
 									"response": []
 								}
-							],
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "PublishStatus",
@@ -3612,8 +3533,7 @@
 									},
 									"response": []
 								}
-							],
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "Change Log",
@@ -3655,8 +3575,7 @@
 									},
 									"response": []
 								}
-							],
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "Permission GET BY UID",
@@ -3664,7 +3583,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "5eaf3cc1-800f-4720-8c8d-8d35bb23179f",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -3707,7 +3625,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b43f7a34-4563-42db-ae2f-ca04f05be6fe",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -3752,7 +3669,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "965dde11-018b-40db-b0a3-f5b327d43a97",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -3800,7 +3716,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "09fd6afc-07a7-4d0f-81de-3b7e29c40c4a",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -3848,7 +3763,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "8cfe2563-b965-4527-864d-3e6c0b5b00ab",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -3897,7 +3811,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "57cc7fe6-c919-43db-836d-1f299d49619d",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -4036,7 +3949,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "683d0771-5fda-492c-9e46-86fb3824194e",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -4086,7 +3998,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "63fb7b9d-3435-4b5e-b0b3-643c0cb82c68",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -4137,7 +4048,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "683d0771-5fda-492c-9e46-86fb3824194e",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -4191,7 +4101,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "63fb7b9d-3435-4b5e-b0b3-643c0cb82c68",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -4242,8 +4151,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Prohibition",
@@ -4257,7 +4165,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "334055f6-e76b-47cd-8fda-d54e8f2ae8ce",
 												"exec": [
 													"tests[\"Status code is 201\"] = responseCode.code === 201;"
 												],
@@ -4307,7 +4214,6 @@
 										{
 											"listen": "test",
 											"script": {
-												"id": "386aa1a7-36ef-4944-a555-38f00efb30f5",
 												"exec": [
 													"tests[\"Status code is 200\"] = responseCode.code === 200;"
 												],
@@ -4353,7 +4259,6 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "225998b8-c76a-4f5b-8af5-100fd45db645",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -4363,15 +4268,13 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "e8d9e428-1f88-4c87-8754-4a5d77ab4b80",
 										"type": "text/javascript",
 										"exec": [
 											""
 										]
 									}
 								}
-							],
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "PublishStatus",
@@ -4417,8 +4320,7 @@
 									},
 									"response": []
 								}
-							],
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "Change Log",
@@ -4460,8 +4362,7 @@
 									},
 									"response": []
 								}
-							],
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "Prohibition GET",
@@ -4469,7 +4370,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "8621ba64-d6c1-46af-b84b-20bf42d67013",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -4553,7 +4453,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "d55b1840-9ac4-4f09-b920-60c3756fc669",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -4602,7 +4501,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "7841a281-8ade-4c66-93f7-228116117227",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -4647,7 +4545,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "129caa5a-70e8-440d-99df-9326055b23bf",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -4697,7 +4594,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f2f11e4b-2baf-44b2-8305-c5221f5a3e17",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -4742,8 +4638,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Change Log",
@@ -4785,8 +4680,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "PublishStatus",
@@ -4830,8 +4724,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "OrganizationList",
@@ -4842,7 +4735,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "91ac70dc-519d-4fd3-bb91-becbc382553b",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -4890,7 +4782,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "dee85538-3011-4d35-be8b-2256adea5396",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -4939,7 +4830,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "760539ec-b2c9-4768-b043-cf0cc4b19aeb",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -4988,8 +4878,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Policy GET",
@@ -4997,7 +4886,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "ebe72e24-8495-4fe2-aa14-e5188fcee92c",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -5040,7 +4928,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "544b50e0-9900-407a-9ec3-5da95f17ca2b",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -5086,7 +4973,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "eeaa5c06-876d-489d-938a-f6fc6f820e70",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -5133,7 +5019,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "72bb5388-37ca-49fb-b147-f83d7e6922da",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -5176,7 +5061,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "d141626b-5c0b-41a9-8ca6-d1d66f6e6bf0",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -5224,7 +5108,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "bafbeb66-44ad-47cb-a8b6-8c81f7725f3f",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -5273,7 +5156,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "d7dcd370-79eb-4df2-8cbe-d773693b49ff",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -5350,7 +5232,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "60ab1b61-4c32-4ec3-bb0d-81e839b145f8",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -5397,7 +5278,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "3550d2cd-7430-4f5b-be27-c4e8bcd64346",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5445,7 +5325,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "58b7c5d4-38b5-42fc-bf63-8b6a277e090a",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5494,7 +5373,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "b44f98ef-2095-48c4-8bc9-036a385d27ef",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5543,7 +5421,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "26a5242c-2202-4883-92ec-450931166f4d",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5585,8 +5462,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "VOD",
@@ -5597,7 +5473,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "40aa483f-35bd-4dec-b33a-ff4139b89702",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -5644,7 +5519,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "9a8b7ee3-33dd-4029-9c48-9533d10d22a7",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5692,7 +5566,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "23b9f55e-018e-410c-b53a-4e1b0c4d0498",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5741,7 +5614,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "bdbe8f93-b1f6-4c4e-9ffd-3c1482a2a9bd",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5783,8 +5655,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Show Schedule ",
@@ -5795,7 +5666,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f461f403-b7ea-4466-af0b-20a76d890596",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5859,7 +5729,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "ae1320cd-50e8-4242-9b63-d6aa31e7b719",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5923,7 +5792,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f701fdea-eb89-463c-9714-26f9452c7e95",
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
@@ -5978,8 +5846,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "PublishStatus",
@@ -6020,8 +5887,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Change Log",
@@ -6067,8 +5933,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Event GET",
@@ -6076,7 +5941,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "d544ab95-2b3d-424c-adca-77d4077c8301",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6119,7 +5983,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "b9e81085-826e-4681-9f1b-8b4c3e55d74a",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6186,7 +6049,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "b879a96e-030c-4069-814a-110b99340f5b",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6258,7 +6120,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "2035639e-94a1-4f0f-8cf5-41c0b4fb4717",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6329,7 +6190,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "20a4700a-e9ca-4fef-8012-8ca86ee2f0e3",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6379,7 +6239,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "28b1232a-4503-43b7-9200-b3622e621d3e",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6443,7 +6302,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "f2f14007-73fa-4645-b3bb-26e2859f137b",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6499,8 +6357,7 @@
 								"type": "text/javascript",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								],
-								"id": "ae242eb2-2fbf-4429-bb5d-337ce917a246"
+								]
 							}
 						}
 					],
@@ -6540,7 +6397,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "cf544951-e01a-4482-a61e-66f5ddf44297",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6584,7 +6440,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "71a7592f-e37b-4fa0-8a3a-32a51c1effad",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6669,8 +6524,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Edit GET",
@@ -6678,7 +6532,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "454439a8-f956-4db0-84b2-121a6c0065b7",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6721,7 +6574,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "b722bff1-7737-463e-90a7-59aef98c88d4",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -6767,7 +6619,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "fd5369d9-ba8b-427d-a51c-0bd5c10b0505",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6814,7 +6665,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "e4f8d2ec-d35f-407e-8897-5ce50a70df0a",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -6861,7 +6711,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "82e00e82-1692-48d5-af7c-ef61ab3fb06d",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -6909,7 +6758,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "b9023f39-2dae-4cb0-ac91-8b99806a0fa3",
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
@@ -6958,7 +6806,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "051224ee-e05c-4804-98eb-a1a20270b46b",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
@@ -7052,8 +6899,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Entry",
@@ -7064,7 +6910,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "52e5555b-9957-486c-b194-1f3ae2e2a4ef",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -7112,7 +6957,6 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "f3a05a5a-5e2d-419c-94a0-efaa7fb51949",
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
@@ -7151,8 +6995,7 @@
 							},
 							"response": []
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Supplemental GET",
@@ -7211,7 +7054,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Supplemental\",\n    \"Title\": \"Wild Kratts\",\n    \"ApproximateLength\": \"PT0H28M55S\",\n    \"SupplementalContentClass\": \"Disaster Spots\",\n    \"AlternateContentClass\": \"Parental Control\",\n     \"PromotionalClass\": \"Series Sell\",\n    \"SupportedWorkRelationship\": \"Parental Control\",\n    \"AlternateContentIDList\": [\n        {\n            \"AlternateContentID\": \"alid:org:pbs.org:BeBanjo-548876880\"\n        }\n    ],\n    \"EntryList\": [\n        {\n            \"EntryClass\": \"Series\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Series11\"\n        },\n        {\n            \"EntryClass\": \"Season\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Season124\"\n        },\n        {\n            \"EntryClass\": \"Episode\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Episode31448\"\n        },\n        {\n            \"EntryClass\": \"Manifestation\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Manifestation323\"\n        }\n    ]\n}"
+							"raw": "{\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Supplemental\",\n    \"DeliveryChannel\": [\n        \"PBS Channels\",\n        \"PBS KIDS social media\"\n    ],\n    \"Title\": \"Wild Kratts\",\n    \"ApproximateLength\": \"PT0H28M55S\",\n    \"SupplementalContentClass\": \"Disaster Spots\",\n    \"AlternateContentClass\": \"Parental Control\",\n    \"PromotionalClass\": \"Series Sell\",\n    \"SupportedWorkRelationship\": \"Parental Control\",\n    \"AlternateContentIDList\": [\n        {\n            \"AlternateContentID\": \"alid:org:pbs.org:BeBanjo-548876880\"\n        }\n    ],\n    \"EntryList\": [\n        {\n            \"EntryClass\": \"Series\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Series11\"\n        },\n        {\n            \"EntryClass\": \"Season\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Season124\"\n        },\n        {\n            \"EntryClass\": \"Episode\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Episode31448\"\n        },\n        {\n            \"EntryClass\": \"Manifestation\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Manifestation323\"\n        }\n    ]\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/supplemental",
@@ -7248,7 +7091,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"StructuralType\": \"Digital\",\n    \"ReferentType\": \"Supplemental\",\n    \"Title\": \"Updated - Wild Kratts\",\n    \"ApproximateLength\": \"PT0H28M55S\",\n    \"SupplementalContentClass\": \"Kids Elements\",\n    \"AlternateContentClass\": \"Censored\"\n}"
+							"raw": "{\n    \"StructuralType\": \"Digital\",\n    \"ReferentType\": \"Supplemental\",\n    \"DeliveryChannel\": [\n        \"PBS KIDS Parent Website\",\n        \"PBS KIDS Video Player App\",\n        \"Twitter\"\n    ],\n    \"Title\": \"Updated - Wild Kratts\",\n    \"ApproximateLength\": \"PT0H28M55S\",\n    \"SupplementalContentClass\": \"Kids Elements\",\n    \"AlternateContentClass\": \"Censored\"\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/supplemental/cid:org:pbs.org:Supplemental71725",
@@ -7382,7 +7225,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "501a1b06-6840-4ae9-aef2-628d66be63c7",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],

@@ -1,3 +1,7 @@
+## v0.39.0
+   * MBANK v0.39.0 - Postman collection - The new field DeliveryChannel added with Enum values for Supplemental POST & PUT.
+   * MBANK v0.39.0 - JSON schema - The new field DeliveryChannel added with Enum value for Supplemental POST & PUT.
+
 ## v0.38.0
    * MBANK v0.38.0 - Postman collection - The new Enum values are added to EndOperator fieldEndOperator and additionalData added for Series POST & PUT. The Supplemental is added in Compilation EntryList.
    * MBANK v0.38.0 - JSON schema - The Enum value is added to EndOperator fields and additionalData object added for all entities. The Supplemental is added in Compilation EntryList.
