@@ -1,3 +1,8 @@
+## v0.40.1
+   * MBANK v0.40.1 - Postman collection - The query param filename is added in File search endpoint.
+   * MBANK v0.40.1 - JSON schema - Additional Enum values added in the field DeliveryChannel for Policy POST and PUT. The field DeliveryChannel removed from Supplemental POST & PUT. 
+   * MBANK v0.40.1 - Postman collection - The SNS is implemented for AlternateID POST and PUT. The SNS is implemented for One-Time-Only Episodes with Internally or Externally published records.
+
 ## v0.39.0
    * MBANK v0.39.0 - Postman collection - The new field DeliveryChannel added with Enum values for Supplemental POST & PUT.
    * MBANK v0.39.0 - JSON schema - The new field DeliveryChannel added with Enum value for Supplemental POST & PUT.
