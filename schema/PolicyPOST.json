@@ -604,11 +604,20 @@
                         "XUMO/Samsung",
                         "Youtube",
                         "Source",
+                        "PBS KIDS",
+                        "PBS KIDS Video Player App",
+                        "PBS Channels",
+                        "PBS KIDS social media",
+                        "PBS KIDS.org",
+                        "PBS KIDS Parent Website",
+                        "Twitter",
+                        "Instagram",
+                        "Passport",
                         null
                       ],
                       "errorMessage": {
                         "type": "Refinement - DeliveryChannel must be a String",
-                        "enum": "Refinement - DeliveryChannel must be one of the given values - All Channels, BoClips, Described & Captioned Media Program, Facebook, Media Manager (PBS),PBS Learning Media,XUMO/Samsung, Youtube, Source"
+                        "enum": "Refinement - DeliveryChannel must be one of the given values - All Channels, BoClips, Described & Captioned Media Program, Facebook, Media Manager (PBS),PBS Learning Media,XUMO/Samsung, Youtube, Source, PBS KIDS, PBS KIDS Video Player App, PBS Channels, PBS KIDS social media, PBS KIDS.org, PBS KIDS Parent Website, Twitter, Instagram, Passport"
                       }
                     }
                   }
