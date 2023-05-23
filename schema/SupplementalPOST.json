@@ -186,37 +186,6 @@
         "type": "SupportedWorkRelationship must be a String"
       }
     },
-	"DeliveryChannel": {
-	  "type": [ "array", "null" ],
-	  "minItems": 1,
-	  "uniqueItems": true,
-	  "errorMessage": {
-		"type": "DeliveryChannel must be an Array",
-		"minItems": "DeliveryChannel should have a minimum one item",
-		"uniqueItems": "DeliveryChannel Contains a Duplicate Value"
-	  },
-	  "items": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
-      "type": "string",
-      "enum": [
-        "PBS KIDS Video Player App",
-        "PBS Channels",
-        "PBS KIDS social media",
-        "PBS KIDS.org",
-        "PBS KIDS Parent Website",
-        "Twitter",
-        "Facebook",
-        "Instagram"
-      ],
-      "errorMessage": {
-        "type": "DeliveryChannel must be a String",
-        "enum": "DeliveryChannel must be one of the given values - PBS KIDS Video Player App, PBS Channels, PBS KIDS social media, PBS KIDS.org, PBS KIDS Parent Website, Twitter, Facebook, Instagram"
-      }
-	  }
-	},
     "EntryList": {
       "minItems": 1,
       "type": "array",
