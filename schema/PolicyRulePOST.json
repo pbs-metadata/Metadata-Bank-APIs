@@ -537,7 +537,7 @@
                     ],
                     "errorMessage": {
                       "type": "Refinement - DeliveryChannel must be a String",
-                      "enum": "Refinement - DeliveryChannel must be one of the given values - All Channels, BoClips, Described & Captioned Media Program, Facebook, Media Manager (PBS),PBS Learning Media,XUMO/Samsung, Youtube, Source, PBS KIDS, PBS KIDS Video Player App, PBS Channels, PBS KIDS social media, PBS KIDS.org, PBS KIDS Parent Website, Twitter, Instagram, Passport"
+                      "enum": "Refinement - DeliveryChannel must be one of the given values - All Channels, BoClips, Described & Captioned Media Program, Facebook, Media Manager (PBS),PBS Learning Media,XUMO/Samsung, Youtube, Source, PBS KIDS, PBS KIDS Video Player App, PBS Channels, PBS KIDS social media, PBS KIDS.org, PBS KIDS Parent Website, Twitter, Instagram"
                     }
                   }
                 }
@@ -557,10 +557,11 @@
                 "Rights Out",
                 "Window Rights",
                 "Rights Subject to Catch Up Windows",
+				"Intercompany Rights Out",
                 null
               ],
               "errorMessage": {
-                "enum": "Type must be one of the given values - Rights In, Holdback, Catch-up Rights, Archive, Aggregate Days, Rights Out, Window Rights or Rights Subject to Catch Up Windows"
+                "enum": "Type must be one of the given values - Rights In, Holdback, Catch-up Rights, Archive, Aggregate Days, Rights Out, Window Rights, Rights Subject to Catch Up Windows or Intercompany Rights Out"
               }
             },
             "GeospatialNamedArea": {
