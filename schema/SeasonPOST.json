@@ -385,6 +385,15 @@
         }
       }
     },
+	"USTVRating": {
+	  "transform": ["trim", "toEnumCase"],
+	  "type": "string",
+	  "enum": ["V-Y", "TV-Y7", "TV-G", "TV-PG", "TV-14", "TV-MA"],
+	  "errorMessage": {
+		"type": "USTVRating must be a String",
+		"enum": "USTVRating must be one of the given values - V-Y, TV-Y7, TV-G, TV-PG, TV-14 or TV-MA irrespective to case. "
+	  }
+	},
     "additionalData": {
 			"type": "object",
 			"errorMessage": {

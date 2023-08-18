@@ -637,10 +637,11 @@
                   "Rights Out",
                   "Window Rights",
                   "Rights Subject to Catch Up Windows",
+				  "Intercompany Rights Out",
                   null
                 ],
                 "errorMessage": {
-                  "enum": "Type must be one of the given values - Rights In, Holdback, Catch-up Rights, Archive, Aggregate Days, Rights Out, Window Rights or Rights Subject to Catch Up Windows"
+                  "enum": "Type must be one of the given values - Rights In, Holdback, Catch-up Rights, Archive, Aggregate Days, Rights Out, Window Rights, Rights Subject to Catch Up Windows or Intercompany Rights Out"
                 }
               },
               "GeospatialNamedArea": {

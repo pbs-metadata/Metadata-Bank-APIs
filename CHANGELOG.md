@@ -1,3 +1,8 @@
+## v0.40.2
+   * MBANK v0.40.2 - Postman collection - The new field USTVRating added with Enum values for Series, Season, Episode POST, PUT and GET.
+   * MBANK v0.40.2 - JSON schema - The Enum values added in the field USTVRating for Series, Season and Episode POST and PUT. 
+   * MBANK v0.40.2 - Postman collection - The new Type "Intercompany Rights Out" added to Permission POST, PUT and GET.
+
 ## v0.40.1
    * MBANK v0.40.1 - Postman collection - The query param filename is added in File search endpoint.
    * MBANK v0.40.1 - JSON schema - Additional Enum values added in the field DeliveryChannel for Policy POST and PUT. The field DeliveryChannel removed from Supplemental POST & PUT. 
