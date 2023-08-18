@@ -1,3 +1,5 @@
+## v0.41.0
+   * MBANK v0.40.2 - SNS Topic - Disable AlternateID POST and DELETE from generic SNS topics(in-progress, internal-publish and external-publish) and dedicated to alternate-id SNS topic.
 ## v0.40.2
    * MBANK v0.40.2 - Postman collection - The new field USTVRating added with Enum values for Series, Season, Episode POST, PUT and GET.
    * MBANK v0.40.2 - JSON schema - The Enum values added in the field USTVRating for Series, Season and Episode POST and PUT. 
