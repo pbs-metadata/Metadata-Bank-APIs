@@ -147,11 +147,14 @@
         "Hospitality",
         "Web",
         "General",
+        "UK Version",
+        "International",
+        "Unedited",
         "Unknow"
       ],
       "errorMessage": {
         "type": "EditUse must be a String",
-        "enum": "EditUse must be a Theatrical, Broadcast, Home Video, Hospitality, Web, General, Unknow irrepective to case.",
+        "enum": "EditUse must be a Theatrical, Broadcast, Home Video, Hospitality, Web, General, UK Version, International, Unedited, Unknow irrepective to case.",
         "minLength": "EditUse should have a minimum one character"
       }
     },
