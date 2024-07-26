@@ -1,0 +1,117 @@
+{
+  "errorMessage": {
+    "type": "The request should be an object",
+    "required": {
+      "Keywords": "Keywords is Required"
+    }
+  },
+  "additionalProperties": false,
+  "type": "object",
+  "properties": {
+    "Mood": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^(.*)$",
+        "errorMessage": {
+          "type": "Mood items must be a String",
+          "minLength": "Mood items should have a minimum one character"
+        }
+      }
+    },
+    "Theme": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^(.*)$",
+        "errorMessage": {
+          "type": "Theme items must be a String",
+          "minLength": "Theme items should have a minimum one character"
+        }
+      }
+    },
+    "Character": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^(.*)$",
+        "errorMessage": {
+          "type": "Character items must be a String",
+          "minLength": "Character items should have a minimum one character"
+        }
+      }
+    },
+    "Setting": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^(.*)$",
+        "errorMessage": {
+          "type": "Setting items must be a String",
+          "minLength": "Setting items should have a minimum one character"
+        }
+      }
+    },
+    "Subject": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^(.*)$",
+        "errorMessage": {
+          "type": "Subject items must be a String",
+          "minLength": "Subject items should have a minimum one character"
+        }
+      }
+    },
+    "General": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^(.*)$",
+        "errorMessage": {
+          "type": "General items must be a String",
+          "minLength": "General items should have a minimum one character"
+        }
+      }
+    },
+    "TimePeriod": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "^(.*)$",
+        "errorMessage": {
+          "type": "TimePeriod items must be a String",
+          "minLength": "TimePeriod items should have a minimum one character"
+        }
+      }
+    },
+    "AdditionalData": {
+      "type": "object",
+      "errorMessage": {
+        "type": "The AdditionalData should be an object"
+      },
+      "additionalProperties": false,
+      "properties": {
+        "UpdatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "UpdatedBy must be a String"
+          }
+        },
+        "Source": {
+          "type": "string",
+          "errorMessage": {
+            "type": "Source must be a String"
+          }
+        }
+      }
+    }
+  }
+}

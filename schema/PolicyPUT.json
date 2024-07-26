@@ -1,74 +1,57 @@
 {
-	"type": "object",
-	"errorMessage": {
-		"type": "The request must be an object"
-	},
-	"properties": {
-		"PolicyUID": {
-			"pattern": "^(.*)$",
-			"type": "string",
-			"errorMessage": {
-				"type": "PolicyUID must be a String"
-			}
-		},
-		"PolicyClass": {
-			"minLength": 1,
-			"pattern": "^(.*)$",
-			"type": "string",
-			"errorMessage": {
-				"type": "PolicyClass must be a String",
-				"minLength": "PolicyClass should have a minimum one character"
-			}
-		},
-		"StructuralType": {
-			"transform": ["trim", "toEnumCase"],
-			"type": "string",
-			"enum": ["Policy", "Abstraction", "Performance", "Digital"],
-			"errorMessage": {
-				"type": "StructuralType must be a String",
-				"enum": "StructuralType must be a Policy, Abstraction, Performace or Digital irrespective to Case."
-			}
-		},
-		"Title": {
-			"minLength": 1,
-			"pattern": "^(.*)$",
-			"type": "string",
-			"errorMessage": {
-				"type": "Title must be a String",
-				"minLength": "Title should have a minimum one character"
-			}
-		},
-		"additionalData": {
-			"type": "object",
-			"errorMessage": {
-			  	"type": "The additionalData should be an object"
-			},
-			"properties": {
-			  	"CreatedBy": {
-					"type": "string",
-					"errorMessage": {
-						"type": "CreatedBy must be a String"
-					}
-				},
-				"Source": {
-					"type": "string",
-					"errorMessage": {
-						"type": "Source must be a String"
-					}
-				},
-				"UpdatedBy": {
-					"type": "string",
-					"errorMessage": {
-						"type": "UpdatedBy must be a String"
-					}
-				},
-				"DeletedBy": {
-					"type": "string",
-					"errorMessage": {
-						"type": "DeletedBy must be a String"
-					}
-				}
-			}
-		}
-	}
+  "type": "object",
+  "errorMessage": {
+    "type": "The request must be an object"
+  },
+  "additionalProperties": false,
+  "properties": {
+    "PolicyClass": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "PolicyClass must be a String",
+        "minLength": "PolicyClass should have a minimum one character"
+      }
+    },
+    "StructuralType": {
+      "transform": ["trim", "toEnumCase"],
+      "type": "string",
+      "enum": ["Policy", "Abstraction", "Performance", "Digital"],
+      "errorMessage": {
+        "type": "StructuralType must be a String",
+        "enum": "StructuralType must be a Policy, Abstraction, Performance or Digital irrespective to Case."
+      }
+    },
+    "Title": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "Title must be a String",
+        "minLength": "Title should have a minimum one character"
+      }
+    },
+    "AdditionalData": {
+      "type": "object",
+      "errorMessage": {
+        "type": "The AdditionalData should be an object"
+      },
+      "additionalProperties": false,
+      "properties": {
+        "UpdatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "UpdatedBy must be a String"
+          }
+        },
+        "Source": {
+          "type": "string",
+          "errorMessage": {
+            "type": "Source must be a String"
+          }
+        }
+      }
+    }
+  }
 }

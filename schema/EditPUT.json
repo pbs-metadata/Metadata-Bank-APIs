@@ -1,9 +1,9 @@
 {
   "title": "The Root Schema",
-  "type": "object",
   "errorMessage": {
     "type": "The request should be an object"
   },
+  "type": "object",
   "additionalProperties": false,
   "properties": {
     "Title": {
@@ -16,10 +16,7 @@
       }
     },
     "ReferentType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "enum": [
         "Series",
@@ -37,16 +34,9 @@
       }
     },
     "FileDeliveryStatus": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": [
-        "Delivered",
-        "Future",
-        "Removed"
-      ],
+      "enum": ["Delivered", "Future", "Removed"],
       "errorMessage": {
         "type": "FileDeliveryStatus must be a String",
         "enum": "FileDeliveryStatus must be a Delivered, Future, Removed irrepective to case."
@@ -59,10 +49,7 @@
         "type": "EditClass must be an Array"
       },
       "items": {
-        "transform": [
-          "trim",
-          "toEnumCase"
-        ],
+        "transform": ["trim", "toEnumCase"],
         "type": "string",
         "enum": [
           "Original",
@@ -120,10 +107,7 @@
     },
     "EditUse": {
       "minLength": 1,
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "enum": [
         "Broadcast",
@@ -153,16 +137,9 @@
       }
     },
     "StructuralType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": [
-        "Abstraction",
-        "Performance",
-        "Digital"
-      ],
+      "enum": ["Abstraction", "Performance", "Digital"],
       "errorMessage": {
         "type": "StructuralType must be a String",
         "enum": "StructuralType must be an Abstraction, Performace or Digital irrespective to Case."
@@ -177,10 +154,10 @@
         "minLength": "ActualLength should have a minimum one character"
       }
     },
-    "additionalData": {
+    "AdditionalData": {
       "type": "object",
       "errorMessage": {
-        "type": "The additionalData should be an object"
+        "type": "The AdditionalData should be an object"
       },
       "additionalProperties": false,
       "properties": {

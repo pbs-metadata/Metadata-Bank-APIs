@@ -1,11 +1,7 @@
 {
   "title": "The Root Schema",
   "type": "object",
-  "required": [
-    "StructuralType",
-    "Title",
-    "ApproximateLength"
-  ],
+  "required": ["StructuralType", "Title", "ApproximateLength"],
   "errorMessage": {
     "type": "The request should be an object",
     "required": {
@@ -16,28 +12,19 @@
       "AlternateContentClass": "AlternateContentClass is Required"
     }
   },
+  "additionalProperties": false,
   "properties": {
     "StructuralType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": [
-        "Abstraction",
-        "Performance",
-        "Digital"
-      ],
+      "enum": ["Abstraction", "Performance", "Digital"],
       "errorMessage": {
         "type": "StructuralType must be a String",
         "enum": "StructuralType must be an Abstraction, Performace or Digital irrespective to Case."
       }
     },
     "SupplementalContentClass": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "enum": [
         "Image Spots",
@@ -87,10 +74,7 @@
       }
     },
     "AlternateContentClass": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "enum": [
         "Descriptive Audio",
@@ -107,10 +91,7 @@
       }
     },
     "PromotionalClass": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "enum": [
         "Image Spots",
@@ -143,10 +124,7 @@
       }
     },
     "ReferentType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "enum": [
         "Series",
@@ -189,17 +167,12 @@
     "EntryList": {
       "minItems": 1,
       "type": "array",
-      "uniqueItems": true,
       "errorMessage": {
-        "uniqueItems": "EntryList Contains a Duplicate Value",
         "type": "EntryList must be an Array",
         "minItems": "EntryList should have a minimum one item"
       },
       "items": {
-        "required": [
-          "EntryClass",
-          "EntryContentUID"
-        ],
+        "required": ["EntryClass", "EntryContentUID"],
         "type": "object",
         "errorMessage": {
           "type": "items should be an object",
@@ -208,13 +181,11 @@
             "EntryContentUID": "EntryContentUID is Required"
           }
         },
+        "additionalProperties": false,
         "properties": {
           "EntryClass": {
             "type": "string",
-            "transform": [
-              "trim",
-              "toEnumCase"
-            ],
+            "transform": ["trim", "toEnumCase"],
             "enum": [
               "Episode",
               "Installment",
@@ -246,9 +217,7 @@
         "uniqueItems": "AlternateContentIDList Contains a Duplicate Value"
       },
       "items": {
-        "required": [
-          "AlternateContentID"
-        ],
+        "required": ["AlternateContentID"],
         "type": "object",
         "properties": {
           "AlternateContentID": {
@@ -267,10 +236,10 @@
         }
       }
     },
-	"additionalData": {
+    "AdditionalData": {
       "type": "object",
       "errorMessage": {
-        "type": "The additionalData should be an object"
+        "type": "The AdditionalData should be an object"
       },
       "additionalProperties": false,
       "properties": {

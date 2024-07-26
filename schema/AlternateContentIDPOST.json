@@ -1,36 +1,37 @@
 {
-  "required": ["ContentIDList"],
+  "required": ["AlternateContentIDList"],
   "type": "object",
   "errorMessage": {
     "type": "The request should be an object",
     "required": {
-      "ContentIDList": "ContentIDList is Required"
+      "AlternateContentIDList": "AlternateContentIDList is Required"
     }
   },
   "additionalProperties": false,
   "properties": {
-    "ContentIDList": {
+    "AlternateContentIDList": {
       "type": "array",
+      "uniqueItems": true,
       "errorMessage": {
-        "type": "ContentIDList must be an array",
-        "uniqueItems": "ContentIDList contains duplicate values"
+        "type": "AlternateContentIDList must be an array",
+        "uniqueItems": "AlternateContentIDList contains duplicate values"
       },
       "items": {
-        "required": ["ContentID"],
+        "required": ["AlternateContentID"],
         "type": "object",
         "errorMessage": {
           "type": "items should be an object",
           "required": {
-            "ContentID": "ContentID is Required"
+            "AlternateContentID": "AlternateContentID is Required"
           }
         },
         "additionalProperties": false,
         "properties": {
-          "ContentID": {
+          "AlternateContentID": {
             "pattern": "^(.*)$",
             "type": "string",
             "errorMessage": {
-              "type": "ContentID must be a String"
+              "type": "AlternateContentID must be a String"
             }
           }
         }

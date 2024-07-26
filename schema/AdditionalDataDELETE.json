@@ -1,34 +1,24 @@
 {
   "type": "object",
+  "additionalProperties": false,
   "properties": {
-    "additionalData": {
+    "AdditionalData": {
       "type": "object",
       "errorMessage": {
-        "type": "The additionalData should be an object"
+        "type": "The AdditionalData should be an object"
       },
+      "additionalProperties": false,
       "properties": {
-        "CreatedBy": {
+        "DeletedBy": {
           "type": "string",
           "errorMessage": {
-            "type": "CreatedBy must be a String"
+            "type": "DeletedBy must be a String"
           }
         },
         "Source": {
           "type": "string",
           "errorMessage": {
             "type": "Source must be a String"
-          }
-        },
-        "UpdatedBy": {
-          "type": "string",
-          "errorMessage": {
-            "type": "UpdatedBy must be a String"
-          }
-        },
-        "DeletedBy": {
-          "type": "string",
-          "errorMessage": {
-            "type": "DeletedBy must be a String"
           }
         }
       }

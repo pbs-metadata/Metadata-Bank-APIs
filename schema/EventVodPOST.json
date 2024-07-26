@@ -1,12 +1,6 @@
 {
-  "required": [
-    "ParentUID",
-    "ReferentType",
-    "StructuralType",
-    "VOD"
-  ],
+  "required": ["VOD", "ParentUID", "ReferentType", "StructuralType"],
   "type": "object",
-  "additionalProperties": false,
   "errorMessage": {
     "type": "The request should be an object",
     "required": {
@@ -16,31 +10,21 @@
       "StructuralType": "StructuralType is Required"
     }
   },
+  "additionalProperties": false,
   "properties": {
     "StructuralType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": [
-        "Performance"
-      ],
+      "enum": ["Performance"],
       "errorMessage": {
         "type": "StructuralType must be a String",
         "enum": "StructuralType should have atleast one item"
       }
     },
     "ReferentType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": [
-        "Linear",
-        "VOD"
-      ],
+      "enum": ["Linear", "VOD"],
       "errorMessage": {
         "type": "ReferentType must be a String",
         "enum": "ReferentType must be an Linear or VOD irrespective to Case."
@@ -64,20 +48,17 @@
     },
     "ManifestationUID": {
       "pattern": "^(.*)$",
-      "type": "string",
+      "type": ["string", "null"],
       "errorMessage": {
         "type": "ManifestationUID must be a String"
       }
     },
     "DubbedLanguage": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "errorMessage": {
         "type": "DubbedLanguage must be a String",
-        "enum": "DubbedLanguage must be a  aa, ab, ae, af, ak, am, an, ar, as, av, ay, az, ba, be, bg, bh, bi, bm, bn, bo, br, bs, ca, ce, ch, co, cr, cs, cu, cv, cy, da, de, dv, dz, ee, el, en, eo, es, et, eu, fa, ff, fi, fj, fl, fo, fr, fy, ga, gd, gl, gn, gu, gv, ha, haw, he, hi, ho, hr, ht, hu, hy, hz, ia, id, ie, ig, ii, ik, io, is, it, iu, ja, jv, ka, kg, ki, kj, kk, kl, km, kn, ko, kr, ks, ku, kv, kw, ky, la, lb, lg, li, ln, lo, lt, lu, lv, mg, mh, mi, mk, ml, mn, mr, ms, mt, my, na, nb, nd, ne, ng, nl, nn, no, nr, nv, ny, oc, oj, om, or, os, pa, pi, pl, ps, pt, qu, rm, rn, ro, ru, rw, sa, sc, sd, se, sg, si, sk, sl, sm, sn, so, sq, sr, ss, st, su, sv, sw, ta, te, tg, th, ti, tk, tl, tn, to, tr, ts, tt, tw, ty, ug, uk, ur, uz, ve, vi, vo, wa, wo, xh, yi, yo, za, zh or zu irrespective to Case."
+        "enum": "DubbedLanguage must be a  aa, ab, ae, af, ak, am, an, ar, as, av, ay, az, ba, be, bg, bh, bi, bm, bn, bo, br, bs, ca, ce, ch, co, cr, cs, cu, cv, cy, da, de, dv, dz, ee, el, en, eo, es, et, eu, fa, ff, fi, fj, fl, fo, fr, fy, ga, gd, gl, gn, gu, gv, ha, haw, he, hi, ho, hr, ht, hu, hy, hz, ia, id, ie, ig, ii, ik, io, is, it, iu, ja, jv, ka, kg, ki, kj, kk, kl, km, kn, ko, kr, ks, ku, kv, kw, ky, la, lb, lg, li, ln, lo, lt, lu, lv, mg, mh, mi, mk, ml, mn, mr, ms, mt, my, na, nb, nd, ne, ng, nl, nn, no, nr, nv, ny, oc, oj, om, or, os, pa, pi, pl, ps, pt, qu, rm, rn, ro, ru, rw, sa, sc, sd, se, sg, si, sk, sl, sm, sn, so, sq, sr, ss, st, su, sv, sw, ta, te, tg, th, ti, tk, tl, tn, to, tr, ts, tt, tw, ty, ug, uk, ur, uz, ve, vi, vo, wa, wo, xh, yi, yo, za, zh, zu, dar, din, dnk, e/c, e/f, e/i, e/s, gab, hmo, ins, ira, j/e, lat, man, mok, oji, psm, sen, sep, sil, sud, swi, swz, wam, zxs irrespective to Case."
       },
       "enum": [
         "aa",
@@ -265,18 +246,40 @@
         "yo",
         "za",
         "zh",
-        "zu"
+        "zu",
+        "dar",
+        "din",
+        "dnk",
+        "e/c",
+        "e/f",
+        "e/i",
+        "e/s",
+        "gab",
+        "hmo",
+        "ins",
+        "ira",
+        "j/e",
+        "lat",
+        "man",
+        "mok",
+        "oji",
+        "psm",
+        "sen",
+        "sep",
+        "sil",
+        "sud",
+        "swi",
+        "swz",
+        "wam",
+        "zxs"
       ]
     },
     "SubtitledLanguage": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "errorMessage": {
         "type": "SubtitledLanguage must be a String",
-        "enum": "SubtitledLanguage must be a  aa, ab, ae, af, ak, am, an, ar, as, av, ay, az, ba, be, bg, bh, bi, bm, bn, bo, br, bs, ca, ce, ch, co, cr, cs, cu, cv, cy, da, de, dv, dz, ee, el, en, eo, es, et, eu, fa, ff, fi, fj, fl, fo, fr, fy, ga, gd, gl, gn, gu, gv, ha, haw, he, hi, ho, hr, ht, hu, hy, hz, ia, id, ie, ig, ii, ik, io, is, it, iu, ja, jv, ka, kg, ki, kj, kk, kl, km, kn, ko, kr, ks, ku, kv, kw, ky, la, lb, lg, li, ln, lo, lt, lu, lv, mg, mh, mi, mk, ml, mn, mr, ms, mt, my, na, nb, nd, ne, ng, nl, nn, no, nr, nv, ny, oc, oj, om, or, os, pa, pi, pl, ps, pt, qu, rm, rn, ro, ru, rw, sa, sc, sd, se, sg, si, sk, sl, sm, sn, so, sq, sr, ss, st, su, sv, sw, ta, te, tg, th, ti, tk, tl, tn, to, tr, ts, tt, tw, ty, ug, uk, ur, uz, ve, vi, vo, wa, wo, xh, yi, yo, za, zh or zu irrespective to Case."
+        "enum": "SubtitledLanguage must be a  aa, ab, ae, af, ak, am, an, ar, as, av, ay, az, ba, be, bg, bh, bi, bm, bn, bo, br, bs, ca, ce, ch, co, cr, cs, cu, cv, cy, da, de, dv, dz, ee, el, en, eo, es, et, eu, fa, ff, fi, fj, fl, fo, fr, fy, ga, gd, gl, gn, gu, gv, ha, haw, he, hi, ho, hr, ht, hu, hy, hz, ia, id, ie, ig, ii, ik, io, is, it, iu, ja, jv, ka, kg, ki, kj, kk, kl, km, kn, ko, kr, ks, ku, kv, kw, ky, la, lb, lg, li, ln, lo, lt, lu, lv, mg, mh, mi, mk, ml, mn, mr, ms, mt, my, na, nb, nd, ne, ng, nl, nn, no, nr, nv, ny, oc, oj, om, or, os, pa, pi, pl, ps, pt, qu, rm, rn, ro, ru, rw, sa, sc, sd, se, sg, si, sk, sl, sm, sn, so, sq, sr, ss, st, su, sv, sw, ta, te, tg, th, ti, tk, tl, tn, to, tr, ts, tt, tw, ty, ug, uk, ur, uz, ve, vi, vo, wa, wo, xh, yi, yo, za, zh, zu, dar, din, dnk, e/c, e/f, e/i, e/s, gab, hmo, ins, ira, j/e, lat, man, mok, oji, psm, sen, sep, sil, sud, swi, swz, wam, zxs irrespective to Case."
       },
       "enum": [
         "aa",
@@ -464,7 +467,32 @@
         "yo",
         "za",
         "zh",
-        "zu"
+        "zu",
+        "dar",
+        "din",
+        "dnk",
+        "e/c",
+        "e/f",
+        "e/i",
+        "e/s",
+        "gab",
+        "hmo",
+        "ins",
+        "ira",
+        "j/e",
+        "lat",
+        "man",
+        "mok",
+        "oji",
+        "psm",
+        "sen",
+        "sep",
+        "sil",
+        "sud",
+        "swi",
+        "swz",
+        "wam",
+        "zxs"
       ]
     },
     "SAP": {
@@ -479,14 +507,11 @@
         "type": "Qualifier must be an Array"
       },
       "items": {
-        "transform": [
-          "trim",
-          "toEnumCase"
-        ],
+        "transform": ["trim", "toEnumCase"],
         "type": "string",
         "errorMessage": {
           "type": "items must be a String",
-          "enum": "items must be an 3D, Cable in the classroom, CC, Continued, DD 5.1, Delay, Dolby, Dubbed, DVS, EI, Enhanced, HDTV, IS, Joined in progress, Left in progress, Letterbox, Live, New, Premiere, SDTV, Season Finale, Season Premiere, Series Finale, Series Premiere, Stereo, Sub-Titled, Subject to blackout, Mono, Stereo Surround, Surround 5.1, Surround or Tape, 0, -3 irrespective to Case."
+          "enum": "items must be an 3D, Cable in the classroom, CC, Continued, DD 5.1, Delay, Dolby, Dubbed, DVS, EI, Enhanced, HDTV, IS, Joined in progress, Left in progress, Letterbox, Live, New, Premiere, SDTV, Season Finale, Season Premiere, Series Finale, Series Premiere, Stereo, Sub-Titled, Subject to blackout, Mono, Stereo Surround, Surround 5.1, Surround or Tape irrespective to Case."
         },
         "enum": [
           "3D",
@@ -527,19 +552,16 @@
       }
     },
     "VOD": {
-      "required": [
-        "AlternateEventIDList",
-        "EndDateTime"
-      ],
+      "required": ["AlternateEventIDList", "EndDateTime"],
       "type": "object",
-      "additionalProperties": false,
       "errorMessage": {
-        "type": "VOD should be an object",
+        "type": "Linear should be an object",
         "required": {
           "AlternateEventIDList": "AlternateEventIDList is Required",
           "EndDateTime": "EndDateTime is Required"
         }
       },
+      "additionalProperties": false,
       "properties": {
         "AlternateEventIDList": {
           "type": "array",
@@ -551,8 +573,10 @@
           "items": {
             "type": "object",
             "errorMessage": {
-              "type": "items must be an object"
+              "type": "items must be an object",
+              "additionalProperties": "JSON contains invalid attributes"
             },
+            "additionalProperties": false,
             "properties": {
               "AlternateEventID": {
                 "pattern": "^(.*)$",
@@ -568,35 +592,17 @@
           "pattern": "^(.*)$",
           "type": "string",
           "errorMessage": {
-            "type": "ReleaseQualifier must be a String"
-          }
-        },
-        "Duration": {
-          "pattern": "^(.*)$",
-          "type": "string",
-          "errorMessage": {
-            "type": "Duration must be a String"
-          }
-        },
-        "PublishedStatus": {
-          "pattern": "^(.*)$",
-          "type": "string",
-          "errorMessage": {
-            "type": "PublishedStatus must be a String"
+            "type": "ReleaseQualifier must be a String",
+            "minLength": "ReleaseQualifier should have a minimum one character"
           }
         },
         "ProviderSource": {
+          "minLength": 1,
           "pattern": "^(.*)$",
           "type": "string",
           "errorMessage": {
-            "type": "ProviderSource must be a String"
-          }
-        },
-        "AssetUID": {
-          "pattern": "^(.*)$",
-          "type": "string",
-          "errorMessage": {
-            "type": "AssetUID must be a String"
+            "type": "ProviderSource must be a String",
+            "minLength": "ProviderSource should have a minimum one character"
           }
         },
         "StartDateTime": {
@@ -607,20 +613,18 @@
           }
         },
         "EndDateTime": {
-          "minLength": 1,
           "pattern": "^(.*)$",
           "type": "string",
           "errorMessage": {
-            "type": "EndDateTime must be a String",
-            "minLength": "EndDateTime should have a minimum one character"
+            "type": "EndDateTime must be a String"
           }
         }
       }
     },
-    "additionalData": {
+    "AdditionalData": {
       "type": "object",
       "errorMessage": {
-        "type": "The additionalData should be an object"
+        "type": "The AdditionalData should be an object"
       },
       "additionalProperties": false,
       "properties": {

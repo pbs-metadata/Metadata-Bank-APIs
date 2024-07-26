@@ -1,27 +1,43 @@
 {
-    "required": [
-        "PublishedStatus"
-    ],
-    "type": "object",
-    "properties": {
-        "PublishedStatus": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "enum": [
-                "In Progress",
-                "Externally Published",
-                "Internally Published"
-            ],
-            "errorMessage": {
-                "type": "PublishedStatus should be an object",
-                "enum": "PublishedStatus must be an In Progress, Externally Published or Internally Published irrespective to Case."
-            }
-        }
+  "required": ["PublishedStatus"],
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "PublishedStatus": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "enum": ["In Progress", "Externally Published", "Internally Published"],
+      "errorMessage": {
+        "type": "PublishedStatus should be an object",
+        "enum": "PublishedStatus must be an In Progress, Externally Published or Internally Published irrespective to Case."
+      }
     },
-    "errorMessage": {
-        "type": "The request should be an object",
-        "required": {
-            "PublishedStatus": "PublishedStatus is Required"
+    "AdditionalData": {
+      "type": "object",
+      "errorMessage": {
+        "type": "The AdditionalData should be an object"
+      },
+      "additionalProperties": false,
+      "properties": {
+        "UpdatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "UpdatedBy must be a String"
+          }
+        },
+        "Source": {
+          "type": "string",
+          "errorMessage": {
+            "type": "Source must be a String"
+          }
         }
+      }
     }
+  },
+  "errorMessage": {
+    "type": "The request should be an object",
+    "required": {
+      "PublishedStatus": "PublishedStatus is Required"
+    }
+  }
 }

@@ -4,14 +4,8 @@
   "errorMessage": {
     "type": "The request must be an object"
   },
+  "additionalProperties": false,
   "properties": {
-    "ManifestationUID": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "ManifestationUID must be a String"
-      }
-    },
     "ManifestationClass": {
       "minLength": 1,
       "pattern": "^(.*)$",
@@ -47,10 +41,7 @@
       }
     },
     "ReferentType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "enum": [
         "Series",
@@ -68,16 +59,9 @@
       }
     },
     "StructuralType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": [
-        "Abstraction",
-        "Performance",
-        "Digital"
-      ],
+      "enum": ["Abstraction", "Performance", "Digital"],
       "errorMessage": {
         "type": "StructuralType must be a String",
         "enum": "StructuralType must be an Abstraction, Performace or Digital irrespective to Case."
@@ -88,13 +72,6 @@
       "type": "string",
       "errorMessage": {
         "type": "ActualLength must be a String"
-      }
-    },
-    "ReleaseDate": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "ReleaseDate must be a String"
       }
     },
     "EditUse": {
@@ -111,18 +88,8 @@
         "type": "EditClass must be a String"
       }
     },
-    "PublishedStatus": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "PublishedStatus must be a String"
-      }
-    },
     "Audio": {
-      "required": [
-        "AudioType",
-        "ClosedCaption"
-      ],
+      "required": ["AudioType", "ClosedCaption"],
       "type": "object",
       "errorMessage": {
         "type": "Audio should be an object",
@@ -147,18 +114,9 @@
           }
         },
         "AudioType": {
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ],
+          "transform": ["trim", "toEnumCase"],
           "type": "string",
-          "enum": [
-            "None",
-            "Mono",
-            "Stereo",
-            "Stereo Surround",
-            "Surround 5.1"
-          ],
+          "enum": ["None", "Mono", "Stereo", "Stereo Surround", "Surround 5.1"],
           "errorMessage": {
             "type": "AudioType must be a String",
             "enum": "AudioType must be one of the given values - None, Mono, Stereo, Stereo Surround or Surround 5.1 irrespective to case. "
@@ -167,10 +125,7 @@
       }
     },
     "Video": {
-      "required": [
-        "Vchip",
-        "ei"
-      ],
+      "required": ["Vchip", "ei"],
       "type": "object",
       "errorMessage": {
         "type": "Video should be an object",
@@ -181,10 +136,7 @@
       },
       "properties": {
         "Vchip": {
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ],
+          "transform": ["trim", "toEnumCase"],
           "type": "string",
           "enum": [
             "TV-Y7-FV",
@@ -236,7 +188,7 @@
           ],
           "errorMessage": {
             "type": "Vchip must be a String",
-            "enum": "Vchip must be an TV-Y7-FV, TV-Y7, TV-Y, E, TV-PG+VSLD, TV-PG+VSL, TV-PG+VSD, TV-PG+VS, TV-PG+VLD, TV-PG+VL, TV-PG+VD, TV-PG+V, TV-PG+SLD, TV-PG+SL, TV-PG+SD, TV-PG+S, TV-PG+LD, TV-PG+L, TV-PG+D, TV-PG, TV-MA+VSL, TV-MA+VS, TV-MA+VL, TV-MA+V, TV-MA+SL, TV-MA+S, TV-MA+L, TV-MA, TV-G, TV-14+VSLD, TV-14+VSL, TV-14+VSD, TV-14+VS, TV-14+VLD, TV-14+VL, TV-14+VD, TV-14+V, TV-14+SLD, TV-14+SL, TV-14+SD, TV-14+S, TV-14+LD, TV-14+L, TV-14+D,TV-14, TV-PG-V irrespective to Case."
+            "enum": "Vchip must be an TV-Y7-FV, TV-Y7, TV-Y, E, TV-PG+VSLD, TV-PG+VSL, TV-PG+VSD, TV-PG+VS, TV-PG+VLD, TV-PG+VL, TV-PG+VD, TV-PG+V, TV-PG+SLD, TV-PG+SL, TV-PG+SD, TV-PG+S, TV-PG+LD, TV-PG+L, TV-PG+D, TV-PG, TV-MA+VSL, TV-MA+VS, TV-MA+VL, TV-MA+V, TV-MA+SL, TV-MA+S, TV-MA+L, TV-MA, TV-G, TV-14+VSLD, TV-14+VSL, TV-14+VSD, TV-14+VS, TV-14+VLD, TV-14+VL, TV-14+VD, TV-14+V, TV-14+SLD, TV-14+SL, TV-14+SD, TV-14+S, TV-14+LD, TV-14+L, TV-14+D, TV-14, TV-PG-V irrespective to Case."
           }
         },
         "ei": {
@@ -246,192 +198,20 @@
           }
         },
         "HiDef": {
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ],
-          "enum": [
-            "720p",
-            "1080i",
-            "720i",
-            "1080p",
-            null
-          ],
+          "transform": ["trim", "toEnumCase"],
+          "enum": ["720p", "1080i", "720i", "1080p", null],
           "errorMessage": {
             "enum": "HiDef must be 720p, 1080i, 720i, 1080p irrespective to Case."
           }
         }
       }
     },
-    "UseWindowTermList": {
-      "type": "array",
-      "items": {
-        "required": [
-          "Term"
-        ],
-        "type": "object",
-        "errorMessage": {
-          "type": "items should be an object",
-          "required": {
-            "Term": "Term is Required"
-          }
-        },
-        "properties": {
-          "TermUID": {
-            "type": "integer",
-            "format": "int32",
-            "errorMessage": {
-              "type": "TermUID must be an integer"
-            }
-          },
-          "Term": {
-            "minLength": 1,
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage": {
-              "type": "Term must be a String",
-              "minLength": "Term should have a minimum one character"
-            }
-          }
-        }
-      },
-      "errorMessage": {
-        "type": "UseWindowTermList must be an Array"
-      }
-    },
-    "FileList": {
-      "type": "array",
-      "uniqueItems": true,
-      "errorMessage": {
-        "uniqueItems": "FileList Contains a Duplicate Value",
-        "type": "FileList must be an Array"
-      },
-      "items": {
-        "required": [
-          "EidrId",
-          "FileClass",
-          "ParentUID",
-          "StructuralType"
-        ],
-        "type": "object",
-        "errorMessage": {
-          "type": "items should be an object",
-          "required": {
-            "EidrId": "EidrId is Required",
-            "FileClass": "FileClass is Required",
-            "ParentUID": "ParentUID is Required",
-            "StructuralType": "StructuralType is Required"
-          }
-        },
-        "properties": {
-          "FileClass": {
-            "transform": [
-              "trim",
-              "toEnumCase"
-            ],
-            "type": "string",
-            "enum": [
-              "Other",
-              "Manifest",
-              "Metadata",
-              "Media",
-              "Avail",
-              "Ancillary"
-            ],
-            "errorMessage": {
-              "type": "FileClass must be a String",
-              "enum": "FileClass must be a Other, Manifest, Metadata, Media, Avail or Ancillary"
-            }
-          },
-          "AssetUID": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage": {
-              "type": "AssetUID must be a String"
-            }
-          },
-          "ParentUID": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage": {
-              "type": "ParentUID must be a String"
-            }
-          },
-          "ReferentType": {
-            "transform": [
-              "trim",
-              "toEnumCase"
-            ],
-            "type": "string",
-            "enum": [
-              "Series",
-              "Season",
-              "TV",
-              "Movie",
-              "Short",
-              "Web",
-              "Compilation",
-              "Supplemental"
-            ],
-            "errorMessage": {
-              "type": "ReferentType must be a String",
-              "enum": "ReferentType must be a Series, Season, TV, Movie, Short, Web, Compilation or Supplemental irrepective to case."
-            }
-          },
-          "StructuralType": {
-            "transform": [
-              "trim",
-              "toEnumCase"
-            ],
-            "type": "string",
-            "enum": [
-              "Abstraction",
-              "Performance",
-              "Digital"
-            ],
-            "errorMessage": {
-              "type": "StructuralType must be a String",
-              "enum": "StructuralType must be an Abstraction, Performace or Digital irrespective to Case."
-            }
-          },
-          "FileName": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage": {
-              "type": "FileName must be a String"
-            }
-          },
-          "FileDeliveryStatus": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage": {
-              "type": "FileDeliveryStatus must be a String"
-            }
-          },
-          "EidrId": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage": {
-              "type": "EidrId must be a String"
-            }
-          }
-        }
-      }
-    },
-    "ManifestationList": {
-      "type": "array",
-      "uniqueItems": true,
-      "errorMessage": {
-        "uniqueItems": "ManifestationList Contains a Duplicate Value",
-        "type": "ManifestationList must be an array"
-      }
-    },
-    "additionalData": {
+    "AdditionalData": {
       "type": "object",
       "errorMessage": {
-        "type": "The additionalData should be an object"
+        "type": "The AdditionalData should be an object"
       },
-	  "additionalProperties":false,
+      "additionalProperties": false,
       "properties": {
         "UpdatedBy": {
           "type": "string",

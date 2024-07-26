@@ -1,9 +1,5 @@
 {
-  "required": [
-    "FileClass",
-    "FileDeliveryStatus",
-    "ParentUID"
-  ],
+  "required": ["FileClass", "FileDeliveryStatus", "ParentUID"],
   "type": "object",
   "additionalProperties": false,
   "errorMessage": {
@@ -25,19 +21,9 @@
       }
     },
     "FileClass": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": [
-        "Other",
-        "Manifest",
-        "Metadata",
-        "Media",
-        "Avail",
-        "Ancillary"
-      ],
+      "enum": ["Other", "Manifest", "Metadata", "Media", "Avail", "Ancillary"],
       "errorMessage": {
         "type": "FileClass must be a String",
         "enum": "FileClass must be a Other, Manifest, Metadata, Media, Avail or Ancillary"
@@ -60,17 +46,9 @@
       }
     },
     "FileDeliveryStatus": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": [
-        "Removed",
-        "Delivered",
-        "Future",
-        "Other"
-      ],
+      "enum": ["Removed", "Delivered", "Future", "Other"],
       "errorMessage": {
         "type": "FileDeliveryStatus must be a String",
         "enum": "FileDeliveryStatus must be a Removed, Delivered, Future or Other"
@@ -83,20 +61,8 @@
       }
     },
     "ChecksumType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
-      "enum": [
-        "MD2",
-        "MD4",
-        "MD5",
-        "SHA-0",
-        "SHA-1",
-        "SHA-2",
-        "SHA-3",
-        null
-      ],
+      "transform": ["trim", "toEnumCase"],
+      "enum": ["MD2", "MD4", "MD5", "SHA-0", "SHA-1", "SHA-2", "SHA-3", null],
       "errorMessage": {
         "type": "ChecksumType must be a String",
         "enum": "ChecksumType must be a MD2, MD4, MD5, SHA-0, SHA-1, SHA-2, SHA-3"
@@ -115,12 +81,10 @@
       "uniqueItems": true,
       "errorMessage": {
         "type": "AlternateAssetIDList must be an Array",
-        "uniqueItems": "AlternateAssetIDList Contains a Duplicate Value"
+        "uniqueItems": "AlternateAssetIDList contains a DUPLICATE value"
       },
       "items": {
-        "required": [
-          "AssetUID"
-        ],
+        "required": ["AssetUID"],
         "type": "object",
         "properties": {
           "AssetUID": {
@@ -139,10 +103,10 @@
         }
       }
     },
-    "additionalData": {
+    "AdditionalData": {
       "type": "object",
       "errorMessage": {
-        "type": "The additionalData should be an object"
+        "type": "The AdditionalData should be an object"
       },
       "additionalProperties": false,
       "properties": {

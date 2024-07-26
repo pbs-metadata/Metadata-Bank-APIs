@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "f6da51e0-14ec-42c2-a82a-3f664589eb71",
-		"name": "Metadata-Bank-API-v0.40.2",
+		"_postman_id": "050e118b-6d5b-4a6c-91f5-4249876d72f5",
+		"name": "Metadata-Bank-API-v1.0.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "14537332"
 	},
@@ -20,14 +20,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -51,48 +43,6 @@
 					]
 				},
 				{
-					"name": "Change Log",
-					"item": [
-						{
-							"name": "Series Change Log GET",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/series/changelog?startdate=2020-10-1&enddate=2020-10-30",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"series",
-										"changelog"
-									],
-									"query": [
-										{
-											"key": "startdate",
-											"value": "2020-10-1"
-										},
-										{
-											"key": "enddate",
-											"value": "2020-10-30"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
 					"name": "Series GET",
 					"event": [
 						{
@@ -101,7 +51,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -111,14 +62,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -153,14 +96,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -196,14 +131,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -248,19 +175,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Series\",\n  \"Mode\": \"AudioVisual\",\n  \"SeriesClass\": \"Episodic\",\n  \"CountryOfOrigin\": \"US\",\n  \"SynopsisShort\": \"Dev-Smoke-Test\",\n  \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"Title19\": \"Money\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"el\",\n  \"Title120\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:BroadView-618586114\"\n    },\n    {\n      \"ContentID\": \"cid:org:pbs.org:NolaRoot:FRON\"\n    }\n  ],\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-131330105\",\n      \"Role\": \"Producer\",\n      \"DisplayName\": \"colette neirouz\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS NPS General Audience (GA)\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136758,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"test-emm@pbs.com\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ],\n  \"additionalData\": {\n  \t\"CreatedBy\": \"6463553\",\n  \t\"UpdatedBy\": \"7454335\",\n  \t\"DeletedBy\": \"8867567\",\n  \t\"Source\": \"Rightsline\"\n  }\n}"
+							"raw": "{\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Series\",\n  \"Mode\": \"AudioVisual\",\n  \"SeriesClass\": \"Episodic\",\n  \"CountryOfOrigin\": \"US\",\n  \"SynopsisShort\": \"Dev-Smoke-Test\",\n  \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"Title19\": \"Money\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"el\",\n  \"Title120\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:BroadView-618586114\"\n    },\n    {\n      \"ContentID\": \"cid:org:pbs.org:NolaRoot:FRON\"\n    }\n  ],\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-131330105\",\n      \"Role\": \"Producer\",\n      \"DisplayName\": \"colette neirouz\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS NPS General Audience (GA)\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136758,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"test-emm@pbs.com\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ],\n  \"AdditionalData\": {\n  \t\"CreatedBy\": \"6463553\",\n  \t\"UpdatedBy\": \"7454335\",\n  \t\"DeletedBy\": \"8867567\",\n  \t\"Source\": \"Rightsline\"\n  }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/series",
@@ -293,19 +212,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Series\",\n  \"Mode\": \"AudioVisual\",\n  \"EidrId\": \"EIDRID Testing\",\n  \"SeriesClass\": \"Episodic\",\n  \"CountryOfOrigin\": \"US\",\n  \"SynopsisShort\": \"Dev-Smoke-Test-Update\",\n  \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test-Update\",\n  \"Title19\": \"Money\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"el\",\n  \"Title120\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-127202300\",\n      \"Role\": \"Producer\",\n      \"DisplayName\": \"Story, Louise - PBS\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136758,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"test-emm@pbs.com\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ],\n   \"additionalData\": {\n  \t\"UpdatedBy\": \"535233\",\n  \t\"Source\": \"Rightsline\"\n  }\n}"
+							"raw": "{\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Series\",\n  \"Mode\": \"AudioVisual\",\n  \"EidrId\": \"EIDRID Testing\",\n  \"SeriesClass\": \"Episodic\",\n  \"CountryOfOrigin\": \"US\",\n  \"SynopsisShort\": \"Dev-Smoke-Test-Update\",\n  \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test-Update\",\n  \"Title19\": \"Money\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"el\",\n  \"Title120\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-127202300\",\n      \"Role\": \"Producer\",\n      \"DisplayName\": \"Story, Louise - PBS\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136758,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"test-emm@pbs.com\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ],\n   \"AdditionalData\": {\n  \t\"UpdatedBy\": \"535233\",\n  \t\"Source\": \"Rightsline\"\n  }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/series/cid:org:pbs.org:Series1004",
@@ -339,14 +250,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -385,14 +288,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -432,14 +327,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -480,14 +367,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -534,14 +413,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -582,14 +453,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -625,14 +488,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -656,48 +511,6 @@
 					]
 				},
 				{
-					"name": "Change Log",
-					"item": [
-						{
-							"name": "Season Change Log GET",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/season/changelog?startdate=2020-10-1&enddate=2020-10-30",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"season",
-										"changelog"
-									],
-									"query": [
-										{
-											"key": "startdate",
-											"value": "2020-10-1"
-										},
-										{
-											"key": "enddate",
-											"value": "2020-10-30"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
 					"name": "Season GET",
 					"event": [
 						{
@@ -706,7 +519,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -716,14 +530,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -748,7 +554,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -758,14 +565,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -791,7 +590,8 @@
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -801,19 +601,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Series305\",\n  \"Title\": \"LBJ, Season 1-Dev-Smoke-Test\",\n  \"SeasonClass\": \"Main\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Season\",\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"SequenceNumber\": 1,\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:Broadview-Season.1-Series.618585937\"\n    }\n  ],\n   \"additionalData\": {\n  \t\"CreatedBy\": \"6463553\",\n  \t\"UpdatedBy\": \"7454335\",\n  \t\"DeletedBy\": \"8867567\",\n  \t\"Source\": \"Rightsline\"\n  }\n}"
+							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Series305\",\n  \"Title\": \"LBJ, Season 1-Dev-Smoke-Test\",\n  \"SeasonClass\": \"Main\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Season\",\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"SequenceNumber\": 1,\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:Broadview-Season.1-Series.618585937\"\n    }\n  ],\n   \"AdditionalData\": {\n  \t\"CreatedBy\": \"6463553\",\n  \t\"UpdatedBy\": \"7454335\",\n  \t\"DeletedBy\": \"8867567\",\n  \t\"Source\": \"Rightsline\"\n  }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/season",
@@ -846,19 +638,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Series305\",\n  \"Title\": \"LBJ, Season 1-Demo\",\n  \"SeasonClass\": \"Main\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Season\",\n  \"SequenceNumber\": 1,\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"additionalData\": {\n    \"CreatedBy\": \"5233\",\n    \"UpdatedBy\": \"7567\",\n    \"DeletedBy\": \"445\",\n    \"Source\": \"Rightsline\"\n  }\n}"
+							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Series305\",\n  \"Title\": \"LBJ, Season 1-Demo\",\n  \"SeasonClass\": \"Main\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Season\",\n  \"SequenceNumber\": 1,\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"AdditionalData\": {\n    \"CreatedBy\": \"5233\",\n    \"UpdatedBy\": \"7567\",\n    \"DeletedBy\": \"445\",\n    \"Source\": \"Rightsline\"\n  }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/season/cid:org:pbs.org:Season861",
@@ -892,14 +676,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -938,14 +714,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -985,14 +753,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -1033,14 +793,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -1087,14 +839,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -1133,14 +877,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -1185,18 +921,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"type": "text",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"type": "text",
-										"value": "{{x-api-key}}"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -1220,48 +946,6 @@
 					]
 				},
 				{
-					"name": "Change Log",
-					"item": [
-						{
-							"name": "Episode Change Log GET",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/episode/changelog?startdate=2020-10-1&enddate=2020-10-30",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"episode",
-										"changelog"
-									],
-									"query": [
-										{
-											"key": "startdate",
-											"value": "2020-10-1"
-										},
-										{
-											"key": "enddate",
-											"value": "2020-10-30"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
 					"name": "Episode GET",
 					"event": [
 						{
@@ -1270,7 +954,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -1280,14 +965,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -1312,7 +989,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -1322,14 +1000,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -1347,49 +1017,6 @@
 					"response": []
 				},
 				{
-					"name": "Episode Simple GET - Part2",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
-							}
-						],
-						"url": {
-							"raw": "{{baseurl}}/episode/simple-episode/cid:org:pbs.org:Episode12258",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"episode",
-								"simple-episode",
-								"cid:org:pbs.org:Episode12258"
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Episode - SIXPBS - Missing Releasedates",
 					"event": [
 						{
@@ -1398,7 +1025,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -1408,14 +1036,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -1450,14 +1070,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -1495,14 +1107,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -1541,14 +1145,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -1587,14 +1183,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -1634,14 +1222,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -1682,14 +1262,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -1736,14 +1308,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -1784,14 +1348,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -1831,14 +1387,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -1885,7 +1433,8 @@
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -1895,14 +1444,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -1932,7 +1473,8 @@
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -1942,14 +1484,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -1982,18 +1516,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"type": "text",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"type": "text",
-										"value": "{{x-api-key}}"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -2017,48 +1541,6 @@
 					]
 				},
 				{
-					"name": "Change Log",
-					"item": [
-						{
-							"name": "Manifestation Change Log GET",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/manifestation/changelog?startdate=2020-10-1&enddate=2020-10-30",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"manifestation",
-										"changelog"
-									],
-									"query": [
-										{
-											"key": "startdate",
-											"value": "2020-10-1"
-										},
-										{
-											"key": "enddate",
-											"value": "2020-10-30"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
 					"name": "Manifestation GET",
 					"event": [
 						{
@@ -2067,7 +1549,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -2077,19 +1560,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
-							},
-							{
-								"key": "invalidateCache",
-								"value": "true",
-								"type": "text"
 							}
 						],
 						"url": {
@@ -2114,7 +1584,8 @@
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -2124,14 +1595,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -2169,19 +1632,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"Title\": \"P415368-035 HD-Base Curious George\",\n    \"additionalData\": {\n        \"UpdatedBy\": \"9767676\",\n        \"Source\": \"Rightsline\"\n    }\n}"
+							"raw": "{\n    \"Title\": \"P415368-035 HD-Base Curious George\",\n    \"AdditionalData\": {\n        \"UpdatedBy\": \"9767676\",\n        \"Source\": \"Rightsline\"\n    }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation398078",
@@ -2215,14 +1670,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -2257,14 +1704,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -2304,14 +1743,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -2352,14 +1783,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -2404,10 +1827,11 @@
 						{
 							"listen": "test",
 							"script": {
-								"type": "text/javascript",
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								]
+								],
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -2417,14 +1841,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -2449,7 +1865,8 @@
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -2459,14 +1876,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -2504,14 +1913,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -2550,14 +1951,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -2596,14 +1989,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -2632,16 +2017,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}",
-								"type": "text"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}",
 								"type": "text"
 							}
 						],
@@ -2678,198 +2053,6 @@
 			"name": "Compilation",
 			"item": [
 				{
-					"name": "Series",
-					"item": [
-						{
-							"name": "getSeriesByCompilationUID",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"type": "text/javascript",
-										"exec": [
-											"tests[\"Status code is 200\"] = responseCode.code === 200;"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation13/series",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"compilation",
-										"cid:org:pbs.org:Compilation13",
-										"series"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Season",
-					"item": [
-						{
-							"name": "getSeasonByCompilationUID",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"type": "text/javascript",
-										"exec": [
-											"tests[\"Status code is 200\"] = responseCode.code === 200;"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation13/season",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"compilation",
-										"cid:org:pbs.org:Compilation13",
-										"season"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Episode",
-					"item": [
-						{
-							"name": "getEpisodesByCompilationUID",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"type": "text/javascript",
-										"exec": [
-											"tests[\"Status code is 200\"] = responseCode.code === 200;"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation13/episode",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"compilation",
-										"cid:org:pbs.org:Compilation13",
-										"episode"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
-					"name": "Manifestation",
-					"item": [
-						{
-							"name": "getManifestationByCompilationUID",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"type": "text/javascript",
-										"exec": [
-											"tests[\"Status code is 200\"] = responseCode.code === 200;"
-										]
-									}
-								}
-							],
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation13/manifestation",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"compilation",
-										"cid:org:pbs.org:Compilation13",
-										"manifestation"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
 					"name": "Entry",
 					"item": [
 						{
@@ -2881,7 +2064,8 @@
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -2891,14 +2075,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -2928,7 +2104,8 @@
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -2938,14 +2115,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -2970,48 +2139,6 @@
 					]
 				},
 				{
-					"name": "Change Log",
-					"item": [
-						{
-							"name": "Compilation Change Log GET",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/compilation/changelog?startdate=2020-10-1&enddate=2020-10-30",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"compilation",
-										"changelog"
-									],
-									"query": [
-										{
-											"key": "startdate",
-											"value": "2020-10-1"
-										},
-										{
-											"key": "enddate",
-											"value": "2020-10-30"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
 					"name": "PublishStatus",
 					"item": [
 						{
@@ -3022,16 +2149,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}",
-										"type": "text"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}",
 										"type": "text"
 									}
 								],
@@ -3064,7 +2181,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -3074,14 +2192,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -3106,7 +2216,8 @@
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -3116,14 +2227,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -3161,19 +2264,11 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"Title\": \"Frontline-Dev-Smoke-Test-Update\",\n  \"CompilationClass\": \"Franchise\",\n  \"ReferentType\": \"Compilation\",\n  \"StructuralType\": \"Abstraction\",\n  \"DistributionNumber\": 5,\n  \"additionalData\": {\n    \"UpdatedBy\": \"8787878\",\n    \"Source\": \"Rightsline\"\n  }\n}"
+							"raw": "{\n  \"Title\": \"Frontline-Dev-Smoke-Test-Update\",\n  \"CompilationClass\": \"Franchise\",\n  \"ReferentType\": \"Compilation\",\n  \"StructuralType\": \"Abstraction\",\n  \"DistributionNumber\": 5,\n  \"AdditionalData\": {\n    \"UpdatedBy\": \"8787878\",\n    \"Source\": \"Rightsline\"\n  }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation416",
@@ -3207,14 +2302,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -3253,14 +2340,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -3309,14 +2388,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -3356,14 +2427,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -3405,7 +2468,8 @@
 												"exec": [
 													"tests[\"Status code is 201\"] = responseCode.code === 201;"
 												],
-												"type": "text/javascript"
+												"type": "text/javascript",
+												"packages": {}
 											}
 										}
 									],
@@ -3415,14 +2479,6 @@
 											{
 												"key": "Content-Type",
 												"value": "application/json"
-											},
-											{
-												"key": "apikey",
-												"value": "{{apikey}}"
-											},
-											{
-												"key": "x-api-key",
-												"value": "{{x-api-key}}"
 											}
 										],
 										"body": {
@@ -3454,7 +2510,8 @@
 												"exec": [
 													"tests[\"Status code is 200\"] = responseCode.code === 200;"
 												],
-												"type": "text/javascript"
+												"type": "text/javascript",
+												"packages": {}
 											}
 										}
 									],
@@ -3464,14 +2521,6 @@
 											{
 												"key": "Content-Type",
 												"value": "application/json"
-											},
-											{
-												"key": "apikey",
-												"value": "{{apikey}}"
-											},
-											{
-												"key": "x-api-key",
-												"value": "{{x-api-key}}"
 											}
 										],
 										"url": {
@@ -3503,18 +2552,8 @@
 										"header": [
 											{
 												"key": "Content-Type",
-												"type": "text",
-												"value": "application/json"
-											},
-											{
-												"key": "apikey",
-												"type": "text",
-												"value": "{{apikey}}"
-											},
-											{
-												"key": "x-api-key",
-												"type": "text",
-												"value": "{{x-api-key}}"
+												"value": "application/json",
+												"type": "text"
 											}
 										],
 										"body": {
@@ -3540,48 +2579,6 @@
 							]
 						},
 						{
-							"name": "Change Log",
-							"item": [
-								{
-									"name": "Policy Change Log GET",
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "apikey",
-												"value": "{{apikey}}"
-											},
-											{
-												"key": "x-api-key",
-												"value": "{{x-api-key}}"
-											}
-										],
-										"url": {
-											"raw": "{{baseurl}}/permission/changelog?startdate=2020-10-1&enddate=2020-10-30",
-											"host": [
-												"{{baseurl}}"
-											],
-											"path": [
-												"permission",
-												"changelog"
-											],
-											"query": [
-												{
-													"key": "startdate",
-													"value": "2020-10-1"
-												},
-												{
-													"key": "enddate",
-													"value": "2020-10-30"
-												}
-											]
-										}
-									},
-									"response": []
-								}
-							]
-						},
-						{
 							"name": "Permission GET BY UID",
 							"event": [
 								{
@@ -3590,7 +2587,8 @@
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -3600,14 +2598,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"url": {
@@ -3642,14 +2632,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"url": {
@@ -3686,14 +2668,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -3733,14 +2707,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -3780,14 +2746,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -3828,14 +2786,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"url": {
@@ -3857,16 +2807,7 @@
 							"name": "Permission Search",
 							"request": {
 								"method": "GET",
-								"header": [
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
-									}
-								],
+								"header": [],
 								"url": {
 									"raw": "{{baseurl}}/permission/search?logicalassetid=alid:org:pbs.org:Rightsline-191921",
 									"host": [
@@ -3890,16 +2831,7 @@
 							"name": "Permission Search - R-Out",
 							"request": {
 								"method": "GET",
-								"header": [
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
-									}
-								],
+								"header": [],
 								"url": {
 									"raw": "{{baseurl}}/permission/search?logicalassetid=alid:org:pbs.org:Rightsline-RightsOut-254716",
 									"host": [
@@ -3923,16 +2855,7 @@
 							"name": "GET Asset ID By Permission ID",
 							"request": {
 								"method": "GET",
-								"header": [
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
-									}
-								],
+								"header": [],
 								"url": {
 									"raw": "{{baseurl}}/permission/4642/entrylist",
 									"host": [
@@ -3966,14 +2889,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -4015,14 +2930,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -4065,25 +2972,17 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/permission/39428/organization?pagesize=5&offset=5",
+									"raw": "{{baseurl}}/permission/39428/organizations?pagesize=5&offset=5",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"permission",
 										"39428",
-										"organization"
+										"organizations"
 									],
 									"query": [
 										{
@@ -4118,14 +3017,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -4172,7 +3063,8 @@
 												"exec": [
 													"tests[\"Status code is 201\"] = responseCode.code === 201;"
 												],
-												"type": "text/javascript"
+												"type": "text/javascript",
+												"packages": {}
 											}
 										}
 									],
@@ -4182,14 +3074,6 @@
 											{
 												"key": "Content-Type",
 												"value": "application/json"
-											},
-											{
-												"key": "apikey",
-												"value": "{{apikey}}"
-											},
-											{
-												"key": "x-api-key",
-												"value": "{{x-api-key}}"
 											}
 										],
 										"body": {
@@ -4221,7 +3105,8 @@
 												"exec": [
 													"tests[\"Status code is 200\"] = responseCode.code === 200;"
 												],
-												"type": "text/javascript"
+												"type": "text/javascript",
+												"packages": {}
 											}
 										}
 									],
@@ -4231,14 +3116,6 @@
 											{
 												"key": "Content-Type",
 												"value": "application/json"
-											},
-											{
-												"key": "apikey",
-												"value": "{{apikey}}"
-											},
-											{
-												"key": "x-api-key",
-												"value": "{{x-api-key}}"
 											}
 										],
 										"url": {
@@ -4290,18 +3167,8 @@
 										"header": [
 											{
 												"key": "Content-Type",
-												"type": "text",
-												"value": "application/json"
-											},
-											{
-												"key": "apikey",
-												"type": "text",
-												"value": "{{apikey}}"
-											},
-											{
-												"key": "x-api-key",
-												"type": "text",
-												"value": "{{x-api-key}}"
+												"value": "application/json",
+												"type": "text"
 											}
 										],
 										"body": {
@@ -4327,48 +3194,6 @@
 							]
 						},
 						{
-							"name": "Change Log",
-							"item": [
-								{
-									"name": "Prohibition Change Log GET",
-									"request": {
-										"method": "GET",
-										"header": [
-											{
-												"key": "apikey",
-												"value": "{{apikey}}"
-											},
-											{
-												"key": "x-api-key",
-												"value": "{{x-api-key}}"
-											}
-										],
-										"url": {
-											"raw": "{{baseurl}}/prohibition/changelog?startdate=2020-10-1&enddate=2020-10-30",
-											"host": [
-												"{{baseurl}}"
-											],
-											"path": [
-												"prohibition",
-												"changelog"
-											],
-											"query": [
-												{
-													"key": "startdate",
-													"value": "2020-10-1"
-												},
-												{
-													"key": "enddate",
-													"value": "2020-10-30"
-												}
-											]
-										}
-									},
-									"response": []
-								}
-							]
-						},
-						{
 							"name": "Prohibition GET",
 							"event": [
 								{
@@ -4377,7 +3202,8 @@
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -4387,14 +3213,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"url": {
@@ -4420,16 +3238,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json",
-										"type": "text"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}",
-										"type": "text"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}",
 										"type": "text"
 									}
 								],
@@ -4470,14 +3278,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -4518,14 +3318,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"url": {
@@ -4562,14 +3354,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -4611,14 +3395,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -4645,48 +3421,6 @@
 					]
 				},
 				{
-					"name": "Change Log",
-					"item": [
-						{
-							"name": "Policy Change Log GET",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/policy/changelog?startdate=2020-10-1&enddate=2020-10-30",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"policy",
-										"changelog"
-									],
-									"query": [
-										{
-											"key": "startdate",
-											"value": "2020-10-1"
-										},
-										{
-											"key": "enddate",
-											"value": "2020-10-30"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
 					"name": "PublishStatus",
 					"item": [
 						{
@@ -4696,18 +3430,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"type": "text",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"type": "text",
-										"value": "{{x-api-key}}"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -4742,7 +3466,8 @@
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -4752,14 +3477,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -4767,14 +3484,14 @@
 									"raw": "{\n  \"OrganizationID\": 3136748,\n  \"DisplayName\": \"PBS NPS Kids\",\n  \"Domain\": \"pbs.org\",\n  \"ContactInfoList\": [\n    {\n      \"ContactID\": 3136748,\n      \"Phone\": \"703-739-5010\",\n      \"PhoneType\": \"Office\",\n      \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n      \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n      \"ContactName\": \"PBS Content Services\"\n    }\n  ],\n  \"Role\": \"Distributor\"\n}"
 								},
 								"url": {
-									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1475/organization",
+									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1475/organizations",
 									"host": [
 										"{{baseurl}}"
 									],
 									"path": [
 										"policy",
 										"cid:org:pbs.org:Policy1475",
-										"organization"
+										"organizations"
 									]
 								}
 							},
@@ -4789,7 +3506,8 @@
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -4799,14 +3517,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -4837,7 +3547,8 @@
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -4847,14 +3558,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -4893,7 +3596,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -4903,14 +3607,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -4945,14 +3641,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -4990,14 +3678,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -5036,14 +3716,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -5078,14 +3750,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -5125,14 +3789,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -5173,14 +3829,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -5239,7 +3887,8 @@
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -5249,14 +3898,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -5285,7 +3926,8 @@
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -5295,14 +3937,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -5332,7 +3966,8 @@
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -5342,14 +3977,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -5390,14 +4017,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -5438,14 +4057,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -5480,7 +4091,8 @@
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -5490,14 +4102,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -5526,7 +4130,8 @@
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -5536,19 +4141,11 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode23818\",\n    \"VOD\": {\n        \"ReleaseQualifier\": \"Repeat\",\n        \"Duration\": \"1800\",\n        \"ProviderSource\": \"pbs.org\"\n    },\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation211172\",\n    \"ReferentType\": \"VOD\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"en\",\n    \"SubtitledLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\",\n        \"3D\",\n        \"Dubbed\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\",\n     \"additionalData\": {\n        \"UpdatedBy\": \"999999999\",\n        \"Source\": \"Rightsline\"\n    }\n}"
+									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode23818\",\n    \"VOD\": {\n        \"ReleaseQualifier\": \"Repeat\",\n        \"Duration\": \"1800\",\n        \"ProviderSource\": \"pbs.org\"\n    },\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation211172\",\n    \"ReferentType\": \"VOD\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"en\",\n    \"SubtitledLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\",\n        \"3D\",\n        \"Dubbed\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\",\n     \"AdditionalData\": {\n        \"UpdatedBy\": \"999999999\",\n        \"Source\": \"Rightsline\"\n    }\n}"
 								},
 								"url": {
 									"raw": "{{baseurl}}/event/vod/cid:org:pbs.org:Event1893606",
@@ -5583,14 +4180,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -5631,14 +4220,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -5673,7 +4254,8 @@
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -5683,14 +4265,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"url": {
@@ -5736,7 +4310,8 @@
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -5746,14 +4321,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"url": {
@@ -5799,7 +4366,8 @@
 										"exec": [
 											"tests[\"Status code is 200\"] = responseCode.code === 200;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -5809,14 +4377,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"url": {
@@ -5863,14 +4423,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -5894,52 +4446,6 @@
 					]
 				},
 				{
-					"name": "Change Log",
-					"item": [
-						{
-							"name": "Event Change Log GET",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/event/changelog?startdate=2020-10-1&enddate=2020-10-30",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"event",
-										"changelog"
-									],
-									"query": [
-										{
-											"key": "startdate",
-											"value": "2020-10-1"
-										},
-										{
-											"key": "enddate",
-											"value": "2020-10-30"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
 					"name": "Event GET",
 					"event": [
 						{
@@ -5948,7 +4454,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -5958,14 +4465,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -5990,7 +4489,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -6000,14 +4500,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -6048,147 +4540,6 @@
 					"response": []
 				},
 				{
-					"name": "Event - LB-Dev",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}",
-								"disabled": true
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}",
-								"disabled": true
-							},
-							{
-								"key": "Authorization",
-								"value": "CALiveAPICreator LNFJ1pyhblxfVETh8xGf:1",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "http://CALIVE-DEV-LOAD-TESTING-c45cd8c3fa2f07fd.elb.us-east-1.amazonaws.com/rest/dev/mbank-mainline/v1/getproxy?uid=cid:org:pbs.org:Event1714690&resource=events&nometa=false",
-							"protocol": "http",
-							"host": [
-								"CALIVE-DEV-LOAD-TESTING-c45cd8c3fa2f07fd",
-								"elb",
-								"us-east-1",
-								"amazonaws",
-								"com"
-							],
-							"path": [
-								"rest",
-								"dev",
-								"mbank-mainline",
-								"v1",
-								"getproxy"
-							],
-							"query": [
-								{
-									"key": "uid",
-									"value": "cid:org:pbs.org:Event1714690"
-								},
-								{
-									"key": "resource",
-									"value": "events"
-								},
-								{
-									"key": "nometa",
-									"value": "false"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Event - LB-BB",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}",
-								"disabled": true
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}",
-								"disabled": true
-							},
-							{
-								"key": "Authorization",
-								"value": "CALiveAPICreator {{apikey}}:1",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "lac-api-public-qa-bb-perf-nlb-8f561a01b1dd6e82.elb.us-east-1.amazonaws.com/rest/default/mbank-bb-v0.21.0/v1/getproxy?uid=cid:org:pbs.org:Event1714690&resource=events&nometa=false",
-							"host": [
-								"lac-api-public-qa-bb-perf-nlb-8f561a01b1dd6e82",
-								"elb",
-								"us-east-1",
-								"amazonaws",
-								"com"
-							],
-							"path": [
-								"rest",
-								"default",
-								"mbank-bb-v0.21.0",
-								"v1",
-								"getproxy"
-							],
-							"query": [
-								{
-									"key": "uid",
-									"value": "cid:org:pbs.org:Event1714690"
-								},
-								{
-									"key": "resource",
-									"value": "events"
-								},
-								{
-									"key": "nometa",
-									"value": "false"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Event AlternateUID DELETE",
 					"event": [
 						{
@@ -6197,7 +4548,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -6207,14 +4559,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -6246,7 +4590,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -6256,14 +4601,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -6309,7 +4646,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -6319,14 +4657,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -6351,135 +4681,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "Catalog Series UID Search",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
-							}
-						],
-						"url": {
-							"raw": "{{baseurl}}/catalog/series/cid:org:pbs.org:Series306",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"catalog",
-								"series",
-								"cid:org:pbs.org:Series306"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Catalog Season UID Search",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
-							}
-						],
-						"url": {
-							"raw": "{{baseurl}}/catalog/season/cid:org:pbs.org:Season124",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"catalog",
-								"season",
-								"cid:org:pbs.org:Season124"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Catalog Epsiode UID Search",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"tests[\"Status code is 200\"] = responseCode.code === 200;"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
-							}
-						],
-						"url": {
-							"raw": "{{baseurl}}/catalog/episode/cid:org:pbs.org:Episode18171",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"catalog",
-								"episode",
-								"cid:org:pbs.org:Episode18171"
-							]
-						}
-					},
-					"response": []
 				}
 			]
 		},
@@ -6496,18 +4697,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"type": "text",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"type": "text",
-										"value": "{{x-api-key}}"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -6539,7 +4730,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -6549,14 +4741,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -6581,7 +4765,8 @@
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -6591,14 +4776,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -6636,14 +4813,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -6682,14 +4851,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -6728,14 +4889,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -6775,14 +4928,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"body": {
@@ -6823,14 +4968,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -6871,18 +5008,8 @@
 								"header": [
 									{
 										"key": "Content-Type",
-										"type": "text",
-										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"type": "text",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"type": "text",
-										"value": "{{x-api-key}}"
+										"value": "application/json",
+										"type": "text"
 									}
 								],
 								"body": {
@@ -6917,7 +5044,8 @@
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -6927,14 +5055,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"body": {
@@ -6964,7 +5084,8 @@
 										"exec": [
 											"tests[\"Status code is 201\"] = responseCode.code === 201;"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -6974,14 +5095,6 @@
 									{
 										"key": "Content-Type",
 										"value": "application/json"
-									},
-									{
-										"key": "apikey",
-										"value": "{{apikey}}"
-									},
-									{
-										"key": "x-api-key",
-										"value": "{{x-api-key}}"
 									}
 								],
 								"url": {
@@ -7008,18 +5121,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"type": "text",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"type": "text",
-								"value": "{{x-api-key}}"
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -7043,16 +5146,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}",
-								"type": "text"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}",
 								"type": "text"
 							}
 						],
@@ -7079,18 +5172,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"type": "text",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"type": "text",
-								"value": "{{x-api-key}}"
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -7117,18 +5200,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"type": "text",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"type": "text",
-								"value": "{{x-api-key}}"
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"url": {
@@ -7152,16 +5225,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}",
-								"type": "text"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}",
 								"type": "text"
 							}
 						],
@@ -7190,18 +5253,8 @@
 						"header": [
 							{
 								"key": "Content-Type",
-								"type": "text",
-								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"type": "text",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"type": "text",
-								"value": "{{x-api-key}}"
+								"value": "application/json",
+								"type": "text"
 							}
 						],
 						"body": {
@@ -7242,14 +5295,6 @@
 							{
 								"key": "Content-Type",
 								"value": "application/json"
-							},
-							{
-								"key": "apikey",
-								"value": "{{apikey}}"
-							},
-							{
-								"key": "x-api-key",
-								"value": "{{x-api-key}}"
 							}
 						],
 						"url": {
@@ -7280,6 +5325,38 @@
 					"response": []
 				}
 			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }

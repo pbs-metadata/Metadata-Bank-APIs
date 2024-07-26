@@ -4,28 +4,20 @@
   "errorMessage": {
     "type": "The request should be an object"
   },
+  "additionalProperties": false,
   "properties": {
     "StructuralType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": [
-        "Abstraction",
-        "Performance",
-        "Digital"
-      ],
+      "enum": ["Abstraction", "Performance", "Digital"],
       "errorMessage": {
         "type": "StructuralType must be a String",
         "enum": "StructuralType must be an Abstraction, Performace or Digital irrespective to Case."
       }
     },
     "SupplementalContentClass": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
+      "type": "string",
       "enum": [
         "Image Spots",
         "Support Spots",
@@ -66,8 +58,7 @@
         "One Time Only",
         "Turnkey Break",
         "Embedded Promo",
-        "KIDSC-Embedded Promo",
-        null
+        "KIDSC-Embedded Promo"
       ],
       "errorMessage": {
         "type": "SupplementalContentClass must be a String",
@@ -75,10 +66,7 @@
       }
     },
     "AlternateContentClass": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "enum": [
         "Descriptive Audio",
@@ -95,10 +83,9 @@
       }
     },
     "PromotionalClass": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
+      "type": "string",
+      "nullable": true,
       "enum": [
         "Image Spots",
         "Support Spots",
@@ -131,10 +118,7 @@
       }
     },
     "ReferentType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "enum": [
         "Series",
@@ -174,10 +158,10 @@
         "type": "SupportedWorkRelationship must be a String"
       }
     },
-    "additionalData": {
+    "AdditionalData": {
       "type": "object",
       "errorMessage": {
-        "type": "The additionalData should be an object"
+        "type": "The AdditionalData should be an object"
       },
       "additionalProperties": false,
       "properties": {

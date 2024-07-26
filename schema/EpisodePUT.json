@@ -3,14 +3,8 @@
   "errorMessage": {
     "type": "The request should be an object"
   },
+  "additionalProperties": false,
   "properties": {
-    "EpisodeUID": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "EpisodeUID must be a String"
-      }
-    },
     "ParentUID": {
       "minLength": 1,
       "pattern": "^(.*)$",
@@ -19,26 +13,16 @@
       }
     },
     "StructuralType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": [
-        "Abstraction",
-        "Performance",
-        "Digital"
-      ],
+      "enum": ["Abstraction", "Performance", "Digital"],
       "errorMessage": {
         "type": "StructuralType must be a String",
         "enum": "StructuralType must be an Abstraction, Performace or Digital irrespective to Case."
       }
     },
     "EpisodeClass": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "enum": [
         "Main",
@@ -60,7 +44,7 @@
       "errorMessage": {
         "type": "Keywords should be an object"
       },
-	  "additionalProperties": false,
+      "additionalProperties": false,
       "properties": {
         "Mood": {
           "type": "array",
@@ -149,10 +133,7 @@
       }
     },
     "ReferentType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "enum": [
         "Series",
@@ -170,33 +151,18 @@
       }
     },
     "SeriesMode": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": [
-        "AudioVisual",
-        "Visual",
-        "Audio",
-        "Other"
-      ],
+      "enum": ["AudioVisual", "Visual", "Audio", "Other"],
       "errorMessage": {
         "type": "SeriesMode must be a String",
         "enum": "SeriesMode must be a AudioVisual, Visual, Audio or Other irrepective to case."
       }
     },
     "SeriesClass": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": [
-        "Episodic",
-        "Anthology",
-        "Mini-series"
-      ],
+      "enum": ["Episodic", "Anthology", "Mini-series"],
       "errorMessage": {
         "type": "SeriesClass must be a String",
         "enum": "SeriesClass must be a Episodic, Anthology or Mini-series irrepective to case."
@@ -209,32 +175,11 @@
         "type": "EntityType must be a String"
       }
     },
-    "EidrId": {
+    "EidrID": {
       "pattern": "^(.*)$",
       "type": "string",
       "errorMessage": {
-        "type": "EidrId must be a String"
-      }
-    },
-    "CreateDateTime": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "CreateDateTime must be a String"
-      }
-    },
-    "UpdateDateTime": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "UpdateDateTime must be a String"
-      }
-    },
-    "PublishedStatus": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "PublishedStatus must be a String"
+        "type": "EidrID must be a String"
       }
     },
     "Title": {
@@ -276,11 +221,14 @@
         "maxLength": "Title19 should be maximum 19 characters"
       }
     },
+    "IsEIDRDuplicateFound": {
+      "type": "boolean",
+      "errorMessage": {
+        "type": "IsEIDRDuplicateFound must be a Boolean"
+      }
+    },
     "TitleLanguage": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "enum": [
         "aa",
@@ -480,13 +428,6 @@
         "enum": "TitleLanguage must be a aa, ab, ae, af, ak, am, an, ar, as, av, ay, az, ba, be, bg, bh, bi, bm, bn, bo, br, bs, ca, ce, ch, co, cr, cs, cu, cv, cy, da, de, dv, dz, ee, el, en, eo, es, et, eu, fa, ff, fi, fj, fl, fo, fr, fy, ga, gd, gl, gn, gu, gv, ha, haw, he, hi, ho, hr, ht, hu, hy, hz, ia, id, ie, ig, ii, ik, io, is, it, iu, ja, jv, ka, kg, ki, kj, kk, kl, km, kn, ko, kr, ks, ku, kv, kw, ky, la, lb, lg, li, ln, lo, lt, lu, lv, mg, mh, mi, mk, ml, mn, mr, ms, mt, my, na, nb, nd, ne, ng, nl, nn, no, nr, nv, ny, oc, oj, om, or, os, pa, pi, pl, ps, pt, qu, rm, rn, ro, ru, rw, sa, sc, sd, se, sg, si, sk, sl, sm, sn, so, sq, sr, ss, st, su, sv, sw, ta, te, tg, th, ti, tk, tl, tn, to, tr, ts, tt, tw, ty, ug, uk, ur, uz, ve, vi, vo, wa, wo, xh, yi, yo, za, zh or  zu,  dar, hmo, psm, swz, wam irrepective to case."
       }
     },
-    "ReleaseDate": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "ReleaseDate must be a String"
-      }
-    },
     "DistributionNumber": {
       "type": "integer",
       "format": "int32",
@@ -504,10 +445,7 @@
       }
     },
     "PrimaryGenre": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "enum": [
         "Children's",
@@ -534,10 +472,7 @@
         "type": "SecondaryGenre must be an Array"
       },
       "items": {
-        "transform": [
-          "trim",
-          "toEnumCase"
-        ],
+        "transform": ["trim", "toEnumCase"],
         "type": "string",
         "enum": [
           "action/adventure",
@@ -636,10 +571,7 @@
       }
     },
     "CountryOfOrigin": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "errorMessage": {
         "type": "CountryOfOrigin must be a String",
@@ -920,6 +852,62 @@
         "minLength": "ApproximateLength should have a minimum one character"
       }
     },
+    "USTVRating": {
+      "transform": ["trim", "toEnumCase"],
+      "type": "string",
+      "enum": [
+        "TV-Y7-FV",
+        "TV-Y7",
+        "TV-Y",
+        "E",
+        "TV-PG+VSLD",
+        "TV-PG+VSL",
+        "TV-PG+VSD",
+        "TV-PG+VS",
+        "TV-PG+VLD",
+        "TV-PG+VL",
+        "TV-PG+VD",
+        "TV-PG+V",
+        "TV-PG+SLD",
+        "TV-PG+SL",
+        "TV-PG+SD",
+        "TV-PG+S",
+        "TV-PG+LD",
+        "TV-PG+L",
+        "TV-PG+D",
+        "TV-PG",
+        "TV-MA+VSL",
+        "TV-MA+VS",
+        "TV-MA+VL",
+        "TV-MA+V",
+        "TV-MA+SL",
+        "TV-MA+S",
+        "TV-MA+L",
+        "TV-MA",
+        "TV-G",
+        "TV-14+VSLD",
+        "TV-14+VSL",
+        "TV-14+VSD",
+        "TV-14+VS",
+        "TV-14+VLD",
+        "TV-14+VL",
+        "TV-14+VD",
+        "TV-14+V",
+        "TV-14+SLD",
+        "TV-14+SL",
+        "TV-14+SD",
+        "TV-14+S",
+        "TV-14+LD",
+        "TV-14+L",
+        "TV-14+D",
+        "TV-14",
+        "TV-PG-V"
+      ],
+      "errorMessage": {
+        "type": "USTVRating must be a String",
+        "enum": "USTVRating must be one of the given values - TV-Y7-FV, TV-Y7, TV-Y, E, TV-PG+VSLD, TV-PG+VSL, TV-PG+VSD, TV-PG+VS, TV-PG+VLD, TV-PG+VL, TV-PG+VD, TV-PG+V, TV-PG+SLD, TV-PG+SL, TV-PG+SD, TV-PG+S, TV-PG+LD, TV-PG+L, TV-PG+D, TV-PG, TV-MA+VSL, TV-MA+VS, TV-MA+VL, TV-MA+V, TV-MA+SL, TV-MA+S, TV-MA+L, TV-MA, TV-G, TV-14+VSLD, TV-14+VSL, TV-14+VSD, TV-14+VS, TV-14+VLD, TV-14+VL, TV-14+VD, TV-14+V, TV-14+SLD, TV-14+SL, TV-14+SD, TV-14+S, TV-14+LD, TV-14+L, TV-14+D, TV-14 or TV-PG-V irrespective to case. "
+      }
+    },
     "Language": {
       "type": "object",
       "properties": {
@@ -931,10 +919,7 @@
           }
         },
         "PrimaryLanguage": {
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ],
+          "transform": ["trim", "toEnumCase"],
           "type": "string",
           "errorMessage": {
             "type": "PrimaryLanguage must be a String",
@@ -1135,10 +1120,7 @@
           ]
         },
         "SecondaryLanguage": {
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ],
+          "transform": ["trim", "toEnumCase"],
           "type": "string",
           "errorMessage": {
             "type": "SecondaryLanguage must be a String",
@@ -1342,28 +1324,23 @@
     },
     "CreditsList": {
       "type": "array",
-      "uniqueItems": true,
       "errorMessage": {
-        "uniqueItems": "CreditsList Contains a Duplicate Value",
         "type": "CreditsList must be an array"
       },
       "items": {
-        "required": [
-          "TalentID"
-        ],
+        "required": ["TalentID", "Role"],
         "type": "object",
         "errorMessage": {
           "type": "items should be an object",
           "required": {
-            "TalentID": "TalentID is Required"
+            "TalentID": "TalentID is Required",
+            "Role": "Role is Required"
           }
         },
+        "additionalProperties": false,
         "properties": {
           "Role": {
-            "transform": [
-              "trim",
-              "toEnumCase"
-            ],
+            "transform": ["trim", "toEnumCase"],
             "type": "string",
             "enum": [
               "Actor",
@@ -1445,17 +1422,11 @@
     },
     "OrganizationList": {
       "type": "array",
-      "uniqueItems": true,
       "errorMessage": {
-        "uniqueItems": "OrganisationList Contains a Duplicate Value",
         "type": "OrganizationList must be an Array"
       },
       "items": {
-        "required": [
-          "ContactInfoList",
-          "OrganizationID",
-          "Role"
-        ],
+        "required": ["ContactInfoList", "OrganizationID", "Role"],
         "type": "object",
         "errorMessage": {
           "type": "contains should be an object",
@@ -1465,6 +1436,7 @@
             "Role": "Role is Required"
           }
         },
+        "additionalProperties": false,
         "properties": {
           "OrganizationID": {
             "type": "integer",
@@ -1503,9 +1475,7 @@
               "minItems": "Minimum one contact info is required"
             },
             "items": {
-              "required": [
-                "ContactID"
-              ],
+              "required": ["ContactID"],
               "type": "object",
               "errorMessage": {
                 "type": "items should be an object",
@@ -1513,6 +1483,7 @@
                   "ContactID": "ContactID is Required"
                 }
               },
+              "additionalProperties": false,
               "properties": {
                 "ContactID": {
                   "type": "integer",
@@ -1563,37 +1534,26 @@
         }
       }
     },
-    "additionalData": {
-			"type": "object",
-			"errorMessage": {
-			  	"type": "The additionalData should be an object"
-			},
-			"properties": {
-        "CreatedBy": {
-					"type": "string",
-					"errorMessage": {
-						"type": "CreatedBy must be a String"
-					}
-				},
-				"Source": {
-					"type": "string",
-					"errorMessage": {
-						"type": "Source must be a String"
-					}
-				},
-				"UpdatedBy": {
-					"type": "string",
-					"errorMessage": {
-						"type": "UpdatedBy must be a String"
-					}
-				},
-				"DeletedBy": {
-					"type": "string",
-					"errorMessage": {
-						"type": "DeletedBy must be a String"
-					}
-				}
-			}
-		}
+    "AdditionalData": {
+      "type": "object",
+      "errorMessage": {
+        "type": "The AdditionalData should be an object"
+      },
+      "additionalProperties": false,
+      "properties": {
+        "UpdatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "UpdatedBy must be a String"
+          }
+        },
+        "Source": {
+          "type": "string",
+          "errorMessage": {
+            "type": "Source must be a String"
+          }
+        }
+      }
+    }
   }
 }

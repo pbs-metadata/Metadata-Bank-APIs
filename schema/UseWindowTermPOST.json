@@ -1,26 +1,19 @@
 {
-  "required": ["PlayRun"],
-  "type": "object",
+  "required": ["Term"],
   "errorMessage": {
     "type": "The request should be an object",
     "required": {
-      "PlayRun": "PlayRun is Required"
+      "Term": "Term is Required"
     }
   },
   "additionalProperties": false,
+  "type": "object",
   "properties": {
-    "PlayRun": {
-      "type": "integer",
-      "format": "int32",
+    "Term": {
+      "pattern": "^(.*)$",
+      "type": "string",
       "errorMessage": {
-        "type": "PlayRun must be an Integer"
-      }
-    },
-    "PlayDay": {
-      "type": "integer",
-      "format": "int32",
-      "errorMessage": {
-        "type": "PlayDay must be an Integer"
+        "type": "Term must be a String"
       }
     },
     "AdditionalData": {

@@ -1,8 +1,6 @@
 {
   "title": "The Root Schema",
-  "required": [
-    "Permission"
-  ],
+  "required": ["Permission"],
   "errorMessage": {
     "type": "The request should be an object",
     "required": {
@@ -12,9 +10,7 @@
   "type": "object",
   "properties": {
     "Permission": {
-      "required": [
-        "Rule"
-      ],
+      "required": ["Rule"],
       "errorMessage": {
         "type": "The request should be an object",
         "required": {
@@ -22,12 +18,14 @@
         }
       },
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "Rule": {
-          "type": "object",
           "errorMessage": {
             "type": "Rule must be an object"
           },
+          "type": "object",
+          "additionalProperties": false,
           "properties": {
             "Trigger": {
               "type": "object",
@@ -44,45 +42,21 @@
                   }
                 },
                 "StartUnitType": {
-                  "transform": [
-                    "trim",
-                    "toEnumCase"
-                  ],
-                  "enum": [
-                    "weeks",
-                    "days",
-                    "months",
-                    "hours",
-                    "years",
-                    null
-                  ],
+                  "transform": ["trim"],
+                  "pattern": "^([Ww]eeks|[Dd]ays|[Mm]onths|[Hh]ours|[Yy]ears|null)$",
                   "errorMessage": {
-                    "enum": "StartUnitType must be one of the given values - weeks, days, months, years or hours"
+                    "pattern": "StartUnitType must be one of the given values - weeks, days, months, hours or years"
                   }
                 },
                 "StartOperator": {
-                  "transform": [
-                    "trim",
-                    "toEnumCase"
-                  ],
-                  "enum": [
-                    "On",
-                    "Before",
-                    "After",
-                    "During",
-                    "Surrounding",
-                    "Within",
-                    null
-                  ],
+                  "transform": ["trim"],
+                  "pattern": "^([Oo]n|[Bb]efore|[Aa]fter|[Dd]uring|[Ss]urrounding|[Ww]ithin|null)$",
                   "errorMessage": {
-                    "enum": "StartOperator must be one of the given values - On, Before, After, During or Surrounding, Within"
+                    "pattern": "StartOperator must be one of the given values - On, Before, After, During or Surrounding, Within"
                   }
                 },
                 "StartEvent": {
-                  "transform": [
-                    "trim",
-                    "toEnumCase"
-                  ],
+                  "transform": ["trim", "toEnumCase"],
                   "enum": [
                     "After Each Broadcast",
                     "After Earliest Broadcast",
@@ -134,7 +108,8 @@
                   "items": {
                     "type": "string",
                     "errorMessage": {
-                      "type": "item must be an string"
+                      "type": "item must be an string",
+                      "format": "item must be in string"
                     }
                   }
                 },
@@ -147,45 +122,21 @@
                   }
                 },
                 "EndUnitType": {
-                  "transform": [
-                    "trim",
-                    "toEnumCase"
-                  ],
-                  "enum": [
-                    "weeks",
-                    "days",
-                    "months",
-                    "hours",
-                    "years",
-                    null
-                  ],
+                  "transform": ["trim"],
+                  "pattern": "^([Ww]eeks|[Dd]ays|[Mm]onths|[Hh]ours|[Yy]ears|null)$",
                   "errorMessage": {
-                    "enum": "EndUnitType must be one of the given values - weeks, days, months, years or hours"
+                    "pattern": "EndUnitType must be one of the given values - weeks, days, months, hours or years"
                   }
                 },
                 "EndOperator": {
-                  "transform": [
-                    "trim",
-                    "toEnumCase"
-                  ],
-                  "enum": [
-                    "On",
-                    "Before",
-                    "After",
-                    "During",
-                    "Surrounding",
-                    "Within",
-                    null
-                  ],
+                  "transform": ["trim"],
+                  "pattern": "^([Oo]n|[Bb]efore|[Aa]fter|[Dd]uring|[Ss]urrounding|[Ww]ithin|null)$",
                   "errorMessage": {
-                    "enum": "EndOperator must be one of the given values - On, Before, After, During or Surrounding, Within"
+                    "pattern": "EndOperator must be one of the given values - On, Before, After, During or Surrounding, Within"
                   }
                 },
                 "EndEvent": {
-                  "transform": [
-                    "trim",
-                    "toEnumCase"
-                  ],
+                  "transform": ["trim", "toEnumCase"],
                   "enum": [
                     "Rights End",
                     "Each Episode",
@@ -211,11 +162,7 @@
                 "uniqueItems": "OrganizationList contains duplicate values"
               },
               "items": {
-                "required": [
-                  "ContactInfoList",
-                  "OrganizationID",
-                  "Role"
-                ],
+                "required": ["ContactInfoList", "OrganizationID", "Role"],
                 "type": "object",
                 "errorMessage": {
                   "type": "items should be an object",
@@ -263,10 +210,7 @@
                       "minItems": "Minimum one contact info is required"
                     },
                     "items": {
-                      "required": [
-                        "ContactID",
-                        "ContactName"
-                      ],
+                      "required": ["ContactID", "ContactName"],
                       "type": "object",
                       "errorMessage": {
                         "type": "items should be an object",
@@ -331,10 +275,7 @@
                 "type": "MediaContext must be an Array"
               },
               "items": {
-                "transform": [
-                  "trim",
-                  "toEnumCase"
-                ],
+                "transform": ["trim", "toEnumCase"],
                 "type": "string",
                 "enum": [
                   "Television",
@@ -403,11 +344,12 @@
                   "Publishing: eBook and Print",
                   "Music Rights",
                   "Audio Streaming",
+                  "FAST",
                   "All Rights"
                 ],
                 "errorMessage": {
                   "type": "items must be a String",
-                  "enum": "items must be one of the given values - Television, Linear,Linear Streaming,Linear Streaming -- Non-Commercial,Linear Streaming -- Commercial,Broadcast,Broadcast -- Non-Commercial,Broadcast -- Commercial,Linear TV -- Pay,Linear TV -- Pay Premium,Digital Multicast Distribution,Audio Visual/Education/Non-Theatrical,FVOD,FVOD - All Sites/Services,FVOD - Streaming (Internet),FVOD - MSO and Auth. Providers/TVE - Apps,FVOD - MSO only,FVOD - PBS Branded Services,PBS Branded - FVOD - Streaming (Internet),PBS Branded FVOD - MSO and Auth. Providers/TVE - Apps,PBS Branded FVOD - MSO Only,MVOD,AVOD,Home Entertainment,HV - Physical,HV - Retail, HV - Premium, HV - DTC, HV - Cover Mount, HV - TVOD, HV - EST, HV - Download to Rent, HV - Cable VOD, HV - Hotel VOD, HV - SVOD, HV - SVOD License, HV - DTC SVOD, AV - TVOD, AV - SVOD, HV - Digital,AV - Physical Media,AV - Digital Video,AV - Common Carrier,AV - Site License,AV - Site License No Admission,AV - Site License Admission,AV - AFRTS,Theatrical/Festival,Theatrical,Film Festivals & Awards,Other,Collection/Retransmission,Radio Simulcast,Radio Origination,School Off Air Recording,Demonstration and Exhibition,Clip Rights,Learning Media,Website,Mobile Apps/Interactive, Podcasting, Advertising and Promotion,Merchandising,Publishing: eBook and Print,Music Rights,Audio Streaming or All Rights"
+                  "enum": "items must be one of the given values - Television, Linear,Linear Streaming,Linear Streaming -- Non-Commercial,Linear Streaming -- Commercial,Broadcast,Broadcast -- Non-Commercial,Broadcast -- Commercial,Linear TV -- Pay,Linear TV -- Pay Premium,Digital Multicast Distribution,Audio Visual/Education/Non-Theatrical,FVOD,FVOD - All Sites/Services,FVOD - Streaming (Internet),FVOD - MSO and Auth. Providers/TVE - Apps,FVOD - MSO only,FVOD - PBS Branded Services,PBS Branded - FVOD - Streaming (Internet),PBS Branded FVOD - MSO and Auth. Providers/TVE - Apps,PBS Branded FVOD - MSO Only,MVOD,AVOD,Home Entertainment,HV - Physical,HV - Retail, HV - Premium, HV - DTC, HV - Cover Mount, HV - TVOD, HV - EST, HV - Download to Rent, HV - Cable VOD, HV - Hotel VOD, HV - SVOD, HV - SVOD License, HV - DTC SVOD, AV - TVOD, AV - SVOD, HV - Digital,AV - Physical Media,AV - Digital Video,AV - Common Carrier,AV - Site License,AV - Site License No Admission,AV - Site License Admission,AV - AFRTS,Theatrical/Festival,Theatrical,Film Festivals & Awards,Other,Collection/Retransmission,Radio Simulcast,Radio Origination,School Off Air Recording,Demonstration and Exhibition,Clip Rights,Learning Media,Website,Mobile Apps/Interactive, Podcasting, Advertising and Promotion,Merchandising,Publishing: eBook and Print,Music Rights,Audio Streaming, FAST or All Rights"
                 }
               }
             },
@@ -431,10 +373,7 @@
                   }
                 },
                 "UnitType": {
-                  "transform": [
-                    "trim",
-                    "toEnumCase"
-                  ],
+                  "transform": ["trim", "toEnumCase"],
                   "enum": [
                     "Years",
                     "Months",
@@ -458,12 +397,7 @@
                 },
                 "EnsureExclusivity": {
                   "type": "string",
-                  "enum": [
-                    "Exclusive",
-                    "Non-Exclusive",
-                    "Co-Exclusive",
-                    null
-                  ],
+                  "enum": ["Exclusive", "Non-Exclusive", "Co-Exclusive", null],
                   "errorMessage": {
                     "type": "Refinement - EnsureExclusivity must be a String",
                     "enum": "Refinement - EnsureExclusivity must be one of the given values - Exclusive, Non-Exclusive & Co-Exclusive"
@@ -490,10 +424,7 @@
                     "type": "DeliveryChannel must be an Array"
                   },
                   "items": {
-                    "transform": [
-                      "trim",
-                      "toEnumCase"
-                    ],
+                    "transform": ["trim", "toEnumCase"],
                     "type": "string",
                     "enum": [
                       "All Channels",
@@ -519,17 +450,14 @@
                     ],
                     "errorMessage": {
                       "type": "Refinement - DeliveryChannel must be a String",
-                      "enum": "Refinement - DeliveryChannel must be one of the given values - All Channels, BoClips, Described & Captioned Media Program, Facebook, Media Manager (PBS),PBS Learning Media,XUMO/Samsung, Youtube, Source, PBS KIDS, PBS KIDS Video Player App, PBS Channels, PBS KIDS social media, PBS KIDS.org, PBS KIDS Parent Website, Twitter, Facebook, Instagram, Passport, Hulu"
+                      "enum": "Refinement - DeliveryChannel must be one of the given values - All Channels, BoClips, Described & Captioned Media Program, Facebook, Media Manager (PBS),PBS Learning Media,XUMO/Samsung, Youtube, Source, PBS KIDS, PBS KIDS Video Player App, PBS Channels, PBS KIDS social media, PBS KIDS.org, PBS KIDS Parent Website, Twitter, Instagram, Passport, Hulu"
                     }
                   }
                 }
               }
             },
             "Type": {
-              "transform": [
-                "trim",
-                "toEnumCase"
-              ],
+              "transform": ["trim", "toEnumCase"],
               "enum": [
                 "Rights In",
                 "Holdback",
@@ -539,11 +467,11 @@
                 "Rights Out",
                 "Window Rights",
                 "Rights Subject to Catch Up Windows",
-				        "Intercompany Rights Out",
+                "Intercompany Rights Out",
                 null
               ],
               "errorMessage": {
-                "enum": "Type must be one of the given values - Rights In, Holdback, Catch-up Rights, Archive, Aggregate Days, Rights Out, Window Rights, Rights Subject to Catch Up Windows or Intercompany Rights Out"
+                "enum": "Type must be one of the given values - Rights In, Holdback, Catch-up Rights, Archive, Aggregate Days, Rights Out, Window Rights or Rights Subject to Catch Up Windows"
               }
             },
             "GeospatialNamedArea": {
@@ -552,10 +480,7 @@
                 "type": "GeospatialNamedArea must be an Array"
               },
               "items": {
-                "transform": [
-                  "trim",
-                  "toEnumCase"
-                ],
+                "transform": ["trim", "toEnumCase"],
                 "type": "string",
                 "enum": [
                   "Worldwide",
@@ -843,15 +768,8 @@
               }
             },
             "WindowStartDurationType": {
-              "transform": [
-                "trim",
-                "toEnumCase"
-              ],
-              "enum": [
-                "Consecutive",
-                "Aggregate",
-                null
-              ],
+              "transform": ["trim", "toEnumCase"],
+              "enum": ["Consecutive", "Aggregate", null],
               "errorMessage": {
                 "enum": "WindowStartDurationType must be one of the given values - Consecutive or Aggregate"
               }
@@ -870,18 +788,13 @@
                 "type": "TermEndDate must be a String"
               }
             },
-            "additionalData": {
+            "AdditionalData": {
               "type": "object",
               "errorMessage": {
                 "type": "The additionalData should be an object"
               },
+              "additionalProperties": false,
               "properties": {
-                "CreatedBy": {
-                  "type": "string",
-                  "errorMessage": {
-                    "type": "CreatedBy must be a String"
-                  }
-                },
                 "Source": {
                   "type": "string",
                   "errorMessage": {
@@ -892,12 +805,6 @@
                   "type": "string",
                   "errorMessage": {
                     "type": "UpdatedBy must be a String"
-                  }
-                },
-                "DeletedBy": {
-                  "type": "string",
-                  "errorMessage": {
-                    "type": "DeletedBy must be a String"
                   }
                 }
               }
