@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "if": { "type": "object" },
+  "then": { "$ref": "#/definitions/entryList" },
+  "else": {
+    "minItems": 1,
+    "type": "array",
+    "uniqueItems": true,
+    "errorMessage": {
+      "uniqueItems": "EntryList Contains a Duplicate Value",
+      "type": "EntryList must be an Array",
+      "minItems": "EntryList should have a minimum one item"
+    },
+    "items": { "$ref": "#/definitions/entryList" }
+  },
+  "definitions": {
+    "entryList": {
+      "required": ["EntryClass", "EntryContentUID", "EntryNumber"],
+      "type": "object",
+      "additionalProperties": false,
+      "errorMessage": {
+        "type": "items should be an object",
+        "required": {
+          "EntryClass": "EntryClass is Required",
+          "EntryContentUID": "EntryContentUID is Required",
+          "EntryNumber": "EntryNumber is Required"
+        }
+      },
+      "properties": {
+        "EntryClass": {
+          "type": "string",
+          "transform": ["trim", "toEnumCase"],
+          "enum": ["Episode", "Installment", "Part", "Season"],
+          "errorMessage": {
+            "type": "EntryClass must be a String",
+            "enum": "EntryClass must be an Episode, Installment, Part or Season irrespective to Case."
+          }
+        },
+        "EntryNumber": {
+          "pattern": "^(.*)$",
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "errorMessage": {
+            "type": "EntryNumber must be a String or Number"
+          }
+        },
+        "EntryContentUID": {
+          "pattern": "^(.*)$",
+          "type": "string",
+          "errorMessage": {
+            "type": "EntryContentUID must be a String"
+          }
+        }
+      }
+    }
+  }
+}

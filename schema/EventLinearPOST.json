@@ -1,10 +1,5 @@
 {
-  "required": [
-    "Linear",
-    "ParentUID",
-    "ReferentType",
-    "StructuralType"
-  ],
+  "required": ["Linear", "ParentUID", "ReferentType", "StructuralType"],
   "type": "object",
   "errorMessage": {
     "type": "The request should be an object",
@@ -15,31 +10,21 @@
       "StructuralType": "StructuralType is Required"
     }
   },
+  "additionalProperties": false,
   "properties": {
     "StructuralType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": [
-        "Performance"
-      ],
+      "enum": ["Performance"],
       "errorMessage": {
         "type": "StructuralType must be a String",
         "enum": "StructuralType should have atleast one item"
       }
     },
     "ReferentType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": [
-        "Linear",
-        "VOD"
-      ],
+      "enum": ["Linear", "VOD"],
       "errorMessage": {
         "type": "ReferentType must be a String",
         "enum": "ReferentType must be an Linear or VOD irrespective to Case."
@@ -63,19 +48,13 @@
     },
     "ManifestationUID": {
       "pattern": "^(.*)$",
-      "type": [
-        "string",
-        "null"
-      ],
+      "type": ["string", "null"],
       "errorMessage": {
         "type": "ManifestationUID must be a String"
       }
     },
     "DubbedLanguage": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "errorMessage": {
         "type": "DubbedLanguage must be a String",
@@ -296,10 +275,7 @@
       ]
     },
     "SubtitledLanguage": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "errorMessage": {
         "type": "SubtitledLanguage must be a String",
@@ -520,10 +496,7 @@
       ]
     },
     "DviLanguage": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "errorMessage": {
         "type": "DviLanguage must be a String",
         "enum": "DviLanguage must be a  aa, ab, ae, af, ak, am, an, ar, as, av, ay, az, ba, be, bg, bh, bi, bm, bn, bo, br, bs, ca, ce, ch, co, cr, cs, cu, cv, cy, da, de, dv, dz, ee, el, en, eo, es, et, eu, fa, ff, fi, fj, fl, fo, fr, fy, ga, gd, gl, gn, gu, gv, ha, haw, he, hi, ho, hr, ht, hu, hy, hz, ia, id, ie, ig, ii, ik, io, is, it, iu, ja, jv, ka, kg, ki, kj, kk, kl, km, kn, ko, kr, ks, ku, kv, kw, ky, la, lb, lg, li, ln, lo, lt, lu, lv, mg, mh, mi, mk, ml, mn, mr, ms, mt, my, na, nb, nd, ne, ng, nl, nn, no, nr, nv, ny, oc, oj, om, or, os, pa, pi, pl, ps, pt, qu, rm, rn, ro, ru, rw, sa, sc, sd, se, sg, si, sk, sl, sm, sn, so, sq, sr, ss, st, su, sv, sw, ta, te, tg, th, ti, tk, tl, tn, to, tr, ts, tt, tw, ty, ug, uk, ur, uz, ve, vi, vo, wa, wo, xh, yi, yo, za, zh, zu, dar, din, dnk, e/c, e/f, e/i, e/s, gab, hmo, ins, ira, j/e, lat, man, mok, oji, psm, sen, sep, sil, sud, swi, swz, wam, zxs irrespective to Case."
@@ -762,10 +735,7 @@
         "type": "Qualifier must be an Array"
       },
       "items": {
-        "transform": [
-          "trim",
-          "toEnumCase"
-        ],
+        "transform": ["trim", "toEnumCase"],
         "type": "string",
         "errorMessage": {
           "type": "items must be a String",
@@ -810,11 +780,7 @@
       }
     },
     "Linear": {
-      "required": [
-        "AlternateEventIDList",
-        "Duration",
-        "ProgramService"
-      ],
+      "required": ["AlternateEventIDList", "Duration", "ProgramService"],
       "type": "object",
       "errorMessage": {
         "type": "Linear should be an object",
@@ -837,6 +803,7 @@
             "errorMessage": {
               "type": "items must be an object"
             },
+            "additionalProperties": false,
             "properties": {
               "AlternateEventID": {
                 "pattern": "^(.*)$",
@@ -865,10 +832,7 @@
           }
         },
         "PlayType": {
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ],
+          "transform": ["trim", "toEnumCase"],
           "errorMessage": {
             "type": "PlayType must be a String",
             "enum": "PlayType must be an Hard Feed (without rights), Hard Feed (with rights), Soft Feed (with rights), Soft Feed (without rights), Preview For Air, Preview Not For Air, Not For Air, Re-Feed, Internal Only, Repeat, Prefeed, Feed For Record, Other Hard Feed (with Rights) or Other Hard Feed (without Rights) irrespective to Case."
@@ -891,6 +855,12 @@
             null
           ]
         },
+        "ReleaseQualifier": {
+          "type": ["string", "null"],
+          "errorMessage": {
+            "type": "ReleaseQualifier must be a String"
+          }
+        },
         "Duration": {
           "minLength": 1,
           "pattern": "^(.*)$",
@@ -901,10 +871,7 @@
           }
         },
         "ProgramService": {
-          "required": [
-            "ProviderSource",
-            "ProviderSourceName"
-          ],
+          "required": ["ProviderSource", "ProviderSourceName"],
           "type": "object",
           "errorMessage": {
             "type": "ProgramService should be an object",
@@ -931,10 +898,7 @@
               }
             },
             "ProviderTimeZone": {
-              "transform": [
-                "trim",
-                "toEnumCase"
-              ],
+              "transform": ["trim", "toEnumCase"],
               "type": "string",
               "enum": [
                 "CST",
@@ -959,10 +923,10 @@
         }
       }
     },
-    "additionalData": {
+    "AdditionalData": {
       "type": "object",
       "errorMessage": {
-        "type": "The additionalData should be an object"
+        "type": "The AdditionalData should be an object"
       },
       "additionalProperties": false,
       "properties": {

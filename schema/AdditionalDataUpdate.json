@@ -1,28 +1,7 @@
 {
-  "required": ["PlayRun"],
   "type": "object",
-  "errorMessage": {
-    "type": "The request should be an object",
-    "required": {
-      "PlayRun": "PlayRun is Required"
-    }
-  },
   "additionalProperties": false,
   "properties": {
-    "PlayRun": {
-      "type": "integer",
-      "format": "int32",
-      "errorMessage": {
-        "type": "PlayRun must be an Integer"
-      }
-    },
-    "PlayDay": {
-      "type": "integer",
-      "format": "int32",
-      "errorMessage": {
-        "type": "PlayDay must be an Integer"
-      }
-    },
     "AdditionalData": {
       "type": "object",
       "errorMessage": {

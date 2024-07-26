@@ -1,3 +1,13 @@
+## v1.0.0
+   * MBANK v1.0.0 - OAuth Token endpoint introduced to generate token based on consumer key and consumer secret
+   * MBANK v1.0.0 - Postman collection - Included OAuth2.0 Bearer token based Authorization
+   * MBANK v1.0.0 - Hyperlinks included in all GET endpoints
+   * MBANK v1.0.0 - Included informative error codes and error messages
+   * MBANK v1.0.0 - Updated child list GET API endpoints with plural name
+   * MBANK v1.0.0 - Postman collection - Removed Simple Episode GET endpoint
+   * MBANK v1.0.0 - Postman collection - Removed Catalog Series UID Search, Catalog Season UID Search, Catalog Episode UID Search endpoints
+   * MBANK v1.0.0 - Postman collection - Removed getSeriesByCompilationUID, getSeasonByCompilationUID, getEpisodesByCompilationUID, getManifestationByCompilationUID endpoints
+   * MBANK v1.0.0 - Postman collection - Removed Changelog from Series, Season, Episode, Manifestation, Compilation, Policy, Permission, Prohibition, Event endpoints
 ## v0.42.0
    * MBANK v0.42.0 - Update event SNS to include two additional fields ReferentType and ReleaseQualifier.
    * MBANK v0.42.0 - Release Date logic for Series, Season, Episode, Manifestation, Compilation and Supplemental (GET) to calculate release date based on earliest linear and vod events.

@@ -14,13 +14,6 @@
         "minLength": "Role should have a minimum one character"
       }
     },
-    "Domain": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "Domain must be a String"
-      }
-    },
     "DisplayName": {
       "pattern": "^(.*)$",
       "type": "string",

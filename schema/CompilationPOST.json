@@ -1,270 +1,204 @@
 {
-    "required": [
-        "CompilationClass",
-        "ContentIDList",
-        "EntryList",
-        "ReferentType",
-        "StructuralType",
-        "Title"
-    ],
-    "type": "object",
-    "errorMessage": {
-        "type": "The request should be an object",
-        "required": {
-            "CompilationClass": "CompilationClass is Required",
-            "ContentIDList": "ContentIDList is Required",
-            "EntryList" : "EntryList is Required",
-            "ReferentType" : "ReferentType is Required",
-            "StructuralType" : "StructuralType is Required",
-            "Title" : "Title is Required"
-        }
-    },
-    "properties": {
-        "CompilationUID": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage":{
-                "type": "CompilationUID must be a String"
-            }
-        },
-        "Title": {
-            "minLength": 1,
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage":{
-                "type": "Title must be a String",
-                "minLength": "Title should have a minimum one character"
-            }
-        },
-        "EidrId": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage":{
-                "type": "EidrId must be a String"
-            }
-        },
-        "ReferentType": {
-            "transform": [
-                "trim",
-                "toEnumCase"
-            ],
-            "type": "string",
-            "enum": [
-                "Series",
-                "Season",
-                "TV",
-                "Movie",
-                "Short",
-                "Web",
-                "Compilation",
-                "Supplemental",
-                "Offer",
-                "Set",
-                "Agreement"
-            ],
-            "errorMessage":{
-                "type": "ReferentType must be a String",
-                "enum" : "ReferentType must be a Series, Season, TV, Movie, Short, Web, Compilation, Supplemental, Offer, Set or Agreement irrepective to case."
-            }
-        },
-        "StructuralType": {
-            "transform": [
-                "trim",
-                "toEnumCase"
-            ],
-            "type": "string",
-            "enum": [
-                "Abstraction",
-                "Performance",
-                "Digital"
-            ],
-            "errorMessage":{
-                "type": "StructuralType must be a String",
-                "enum": "StructuralType must be an Abstraction, Performace or Digital irrespective to Case."
-            }
-        },
-        "CompilationClass": {
-            "transform": [
-                "trim",
-                "toEnumCase"
-            ],
-            "type": "string",
-            "enum": [
-                "Blu-ray",
-                "Digital Cinema",
-                "Distribution Bundle",
-                "Distribution Season",
-                "DVD",
-                "EST",
-                "Franchise",
-                "Home Entertainment",
-                "Syndication",
-                "Series",
-                "Season:Recut",
-                "Season:Pro-Forma",
-                "Season:Mini-Series",
-                "Other"
-            ],
-            "errorMessage":{
-                "type": "CompilationClass must be a String",
-                "enum": "CompilationClass must be an Blu-ray, Digital Cinema, Distribution Bundle, Distribution Season, DVD, EST, Franchise, Home Entertainment, Syndication, Series, Season:Recut, Season:Pro-Forma, Season:Mini-Series or Other irrespective to Case."
-            }
-        },
-        "ReleaseDate": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage":{
-                "type": "ReleaseDate must be a String"
-            }
-        },
-        "DistributionNumber": {
-            "type": "integer",
-            "format": "int32",
-            "errorMessage":{
-                "type": "DistributionNumber must be an Integer",
-                "format" : "DistributionNumber must be in int32 format"
-            }
-        },
-        "ContentIDList": {
-            "type": "array",
-            "uniqueItems": true,
-            "errorMessage":{
-                "uniqueItems": "ContentIDList Contains a Duplicate Value",
-                "type": "ContentIDList must be an Array"
-            },
-            "items": {
-                "required": [
-                    "ContentID"
-                ],
-                "type": "object",
-                "errorMessage": {
-                    "type": "items should be an object",
-                    "required": {
-                        "ContentID": "ContentID is Required"
-                    }
-                },
-                "properties": {
-                    "ContentID": {
-                        "pattern": "^(.*)$",
-                        "type": "string",
-                        "errorMessage":{
-                            "type": "ContentID must be a String"
-                        }
-                    }
-                }
-            }
-        },
-        "EntryList": {
-            "minItems": 1,
-            "type": "array",
-            "uniqueItems": true,
-            "errorMessage":{
-                "uniqueItems": "EntryList Contains a Duplicate Value",
-                "type": "EntryList must be an Array",
-                "minItems": "EntryList should have a minimum one item"
-            },
-            "items": {
-                "required": [
-                    "EntryClass",
-                    "EntryContentUID",
-                    "EntryNumber"
-                ],
-                "type": "object",
-                "errorMessage": {
-                    "type": "items should be an object",
-                    "required": {
-                        "EntryClass": "EntryClass is Required",
-                        "EntryContentUID": "EntryContentUID is Required",
-                        "EntryNumber" : "EntryNumber is Required"
-                    }
-                },
-                "properties": {
-                    "EntryClass": {
-                        "type": "string",
-                        "transform": [
-                            "trim",
-                            "toEnumCase"
-                        ],
-                        "enum": [
-                            "Episode",
-                            "Installment",
-                            "Part",
-                            "Season"
-                        ],
-                        "errorMessage":{
-                            "type": "EntryClass must be a String",
-                            "enum": "EntryClass must be an Episode, Installment, Part or Season irrespective to Case."
-                        }
-                    },
-                    "EntryNumber": {
-                        "pattern": "^(.*)$",
-                        "type": "string",
-                        "errorMessage":{
-                            "type": "EntryNumber must be a String"
-                        }
-                    },
-                    "EntryContentUID": {
-                        "pattern": "^(.*)$",
-                        "type": "string",
-                        "errorMessage":{
-                            "type": "EntryContentUID must be a String"
-                        }
-                    }
-                }
-            }
-        },
-        "CreateDateTime": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage":{
-                "type": "CreateDateTime must be a String"
-            }
-        },
-        "UpdateDateTime": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage":{
-                "type": "UpdateDateTime must be a String"
-            }
-        },
-        "PublishedStatus": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage":{
-                "type": "PublishedStatus must be a String"
-            }
-        },
-        "additionalData": {
-			"type": "object",
-			"errorMessage": {
-			  	"type": "The additionalData should be an object"
-			},
-			"properties": {
-			  	"CreatedBy": {
-					"type": "string",
-					"errorMessage": {
-						"type": "CreatedBy must be a String"
-					}
-				},
-				"Source": {
-					"type": "string",
-					"errorMessage": {
-						"type": "Source must be a String"
-					}
-				},
-				"UpdatedBy": {
-					"type": "string",
-					"errorMessage": {
-						"type": "UpdatedBy must be a String"
-					}
-				},
-				"DeletedBy": {
-					"type": "string",
-					"errorMessage": {
-						"type": "DeletedBy must be a String"
-					}
-				}
-			}
-		}
+  "required": [
+    "CompilationClass",
+    "ContentIDList",
+    "EntryList",
+    "ReferentType",
+    "StructuralType",
+    "Title"
+  ],
+  "type": "object",
+  "errorMessage": {
+    "type": "The request should be an object",
+    "required": {
+      "CompilationClass": "CompilationClass is Required",
+      "ContentIDList": "ContentIDList is Required",
+      "EntryList": "EntryList is Required",
+      "ReferentType": "ReferentType is Required",
+      "StructuralType": "StructuralType is Required",
+      "Title": "Title is Required"
     }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "Title": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "Title must be a String",
+        "minLength": "Title should have a minimum one character"
+      }
+    },
+    "EidrId": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "EidrId must be a String"
+      }
+    },
+    "ReferentType": {
+      "transform": ["trim", "toEnumCase"],
+      "type": "string",
+      "enum": [
+        "Series",
+        "Season",
+        "TV",
+        "Movie",
+        "Short",
+        "Web",
+        "Compilation",
+        "Supplemental",
+        "Offer",
+        "Set",
+        "Agreement"
+      ],
+      "errorMessage": {
+        "type": "ReferentType must be a String",
+        "enum": "ReferentType must be a Series, Season, TV, Movie, Short, Web, Compilation, Supplemental, Offer, Set or Agreement irrepective to case."
+      }
+    },
+    "StructuralType": {
+      "transform": ["trim", "toEnumCase"],
+      "type": "string",
+      "enum": ["Abstraction", "Performance", "Digital"],
+      "errorMessage": {
+        "type": "StructuralType must be a String",
+        "enum": "StructuralType must be an Abstraction, Performace or Digital irrespective to Case."
+      }
+    },
+    "CompilationClass": {
+      "transform": ["trim", "toEnumCase"],
+      "type": "string",
+      "enum": [
+        "Blu-ray",
+        "Digital Cinema",
+        "Distribution Bundle",
+        "Distribution Season",
+        "DVD",
+        "EST",
+        "Franchise",
+        "Home Entertainment",
+        "Syndication",
+        "Series",
+        "Season:Recut",
+        "Season:Pro-Forma",
+        "Season:Mini-Series",
+        "Other"
+      ],
+      "errorMessage": {
+        "type": "CompilationClass must be a String",
+        "enum": "CompilationClass must be an Blu-ray, Digital Cinema, Distribution Bundle, Distribution Season, DVD, EST, Franchise, Home Entertainment, Syndication, Series, Season:Recut, Season:Pro-Forma, Season:Mini-Series or Other irrespective to Case."
+      }
+    },
+    "DistributionNumber": {
+      "type": "integer",
+      "format": "int32",
+      "errorMessage": {
+        "type": "DistributionNumber must be an Integer",
+        "format": "DistributionNumber must be in int32 format"
+      }
+    },
+    "ContentIDList": {
+      "type": "array",
+      "uniqueItems": true,
+      "errorMessage": {
+        "uniqueItems": "ContentIDList Contains a Duplicate Value",
+        "type": "ContentIDList must be an Array"
+      },
+      "items": {
+        "required": ["ContentID"],
+        "type": "object",
+        "errorMessage": {
+          "type": "items should be an object",
+          "required": {
+            "ContentID": "ContentID is Required"
+          }
+        },
+        "properties": {
+          "ContentID": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "ContentID must be a String"
+            }
+          }
+        }
+      }
+    },
+    "EntryList": {
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true,
+      "errorMessage": {
+        "uniqueItems": "EntryList Contains a Duplicate Value",
+        "type": "EntryList must be an Array",
+        "minItems": "EntryList should have a minimum one item"
+      },
+      "items": {
+        "required": ["EntryClass", "EntryContentUID", "EntryNumber"],
+        "type": "object",
+        "errorMessage": {
+          "type": "items should be an object",
+          "required": {
+            "EntryClass": "EntryClass is Required",
+            "EntryContentUID": "EntryContentUID is Required",
+            "EntryNumber": "EntryNumber is Required"
+          }
+        },
+        "properties": {
+          "EntryClass": {
+            "type": "string",
+            "transform": ["trim", "toEnumCase"],
+            "enum": ["Episode", "Installment", "Part", "Season"],
+            "errorMessage": {
+              "type": "EntryClass must be a String",
+              "enum": "EntryClass must be an Episode, Installment, Part or Season irrespective to Case."
+            }
+          },
+          "EntryNumber": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "EntryNumber must be a String"
+            }
+          },
+          "EntryContentUID": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "EntryContentUID must be a String"
+            }
+          }
+        }
+      }
+    },
+    "AdditionalData": {
+      "type": "object",
+      "errorMessage": {
+        "type": "The AdditionalData should be an object"
+      },
+      "additionalProperties": false,
+      "properties": {
+        "CreatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "CreatedBy must be a String"
+          }
+        },
+        "UpdatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "UpdatedBy must be a String"
+          }
+        },
+        "Source": {
+          "type": "string",
+          "errorMessage": {
+            "type": "Source must be a String"
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,36 +1,37 @@
 {
-  "required": ["ContentIDList"],
+  "required": ["LogicalAssetIDList"],
   "type": "object",
   "errorMessage": {
     "type": "The request should be an object",
     "required": {
-      "ContentIDList": "ContentIDList is Required"
+      "LogicalAssetIDList": "LogicalAssetIDList is Required"
     }
   },
   "additionalProperties": false,
   "properties": {
-    "ContentIDList": {
+    "LogicalAssetIDList": {
       "type": "array",
+      "uniqueItems": true,
       "errorMessage": {
-        "type": "ContentIDList must be an array",
-        "uniqueItems": "ContentIDList contains duplicate values"
+        "type": "LogicalAssetIDList must be an array",
+        "uniqueItems": "LogicalAssetIDList contains duplicate values"
       },
       "items": {
-        "required": ["ContentID"],
+        "required": ["LogicalAssetID"],
         "type": "object",
         "errorMessage": {
           "type": "items should be an object",
           "required": {
-            "ContentID": "ContentID is Required"
+            "LogicalAssetID": "LogicalAssetID is Required"
           }
         },
         "additionalProperties": false,
         "properties": {
-          "ContentID": {
+          "LogicalAssetID": {
             "pattern": "^(.*)$",
             "type": "string",
             "errorMessage": {
-              "type": "ContentID must be a String"
+              "type": "LogicalAssetID must be a String"
             }
           }
         }

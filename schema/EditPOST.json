@@ -1,12 +1,6 @@
 {
   "title": "The Root Schema",
-  "required": [
-    "Title",
-    "EditClass",
-    "EditUse",
-    "ActualLength",
-    "ParentUID"
-  ],
+  "required": ["Title", "EditClass", "EditUse", "ActualLength", "ParentUID"],
   "errorMessage": {
     "type": "The request should be an object",
     "required": {
@@ -31,10 +25,7 @@
       }
     },
     "ReferentType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "enum": [
         "Series",
@@ -52,16 +43,9 @@
       }
     },
     "FileDeliveryStatus": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": [
-        "Delivered",
-        "Future",
-        "Removed"
-      ],
+      "enum": ["Delivered", "Future", "Removed"],
       "errorMessage": {
         "type": "FileDeliveryStatus must be a String",
         "enum": "FileDeliveryStatus must be a Delivered, Future, Removed irrepective to case."
@@ -74,10 +58,7 @@
         "type": "EditClass must be an Array"
       },
       "items": {
-        "transform": [
-          "trim",
-          "toEnumCase"
-        ],
+        "transform": ["trim", "toEnumCase"],
         "type": "string",
         "enum": [
           "Original",
@@ -135,10 +116,7 @@
     },
     "EditUse": {
       "minLength": 1,
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
       "enum": [
         "Broadcast",
@@ -168,16 +146,9 @@
       }
     },
     "StructuralType": {
-      "transform": [
-        "trim",
-        "toEnumCase"
-      ],
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": [
-        "Abstraction",
-        "Performance",
-        "Digital"
-      ],
+      "enum": ["Abstraction", "Performance", "Digital"],
       "errorMessage": {
         "type": "StructuralType must be a String",
         "enum": "StructuralType must be an Abstraction, Performace or Digital irrespective to Case."
@@ -195,9 +166,7 @@
     "AlternateContentIDList": {
       "type": "array",
       "items": {
-        "required": [
-          "AlternateContentID"
-        ],
+        "required": ["AlternateContentID"],
         "type": "object",
         "errorMessage": {
           "type": "items should be an object",
@@ -219,10 +188,10 @@
         "type": "AlternateContentIDList must be an Array"
       }
     },
-    "additionalData": {
+    "AdditionalData": {
       "type": "object",
       "errorMessage": {
-        "type": "The additionalData should be an object"
+        "type": "The AdditionalData should be an object"
       },
       "additionalProperties": false,
       "properties": {

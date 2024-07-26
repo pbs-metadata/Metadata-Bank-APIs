@@ -3,14 +3,8 @@
   "errorMessage": {
     "type": "The request should be an object"
   },
+  "additionalProperties": false,
   "properties": {
-    "SeasonUID": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "SeasonUID must be a String"
-      }
-    },
     "EpisodeUID": {
       "pattern": "^(.*)$",
       "type": "string",
@@ -75,6 +69,7 @@
       "errorMessage": {
         "type": "Keywords should be an object"
       },
+      "additionalProperties": false,
       "properties": {
         "Mood": {
           "type": "array",
@@ -194,47 +189,75 @@
         "type": "EidrId must be a String"
       }
     },
-    "CreateDateTime": {
-      "pattern": "^(.*)$",
-      "type": "string",
+    "IsEIDRDuplicateFound": {
+      "type": "boolean",
       "errorMessage": {
-        "type": "CreateDateTime must be a String"
+        "type": "IsEIDRDuplicateFound must be a Boolean"
       }
     },
-    "UpdateDateTime": {
-      "pattern": "^(.*)$",
+    "USTVRating": {
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
+      "enum": [
+        "TV-Y7-FV",
+        "TV-Y7",
+        "TV-Y",
+        "E",
+        "TV-PG+VSLD",
+        "TV-PG+VSL",
+        "TV-PG+VSD",
+        "TV-PG+VS",
+        "TV-PG+VLD",
+        "TV-PG+VL",
+        "TV-PG+VD",
+        "TV-PG+V",
+        "TV-PG+SLD",
+        "TV-PG+SL",
+        "TV-PG+SD",
+        "TV-PG+S",
+        "TV-PG+LD",
+        "TV-PG+L",
+        "TV-PG+D",
+        "TV-PG",
+        "TV-MA+VSL",
+        "TV-MA+VS",
+        "TV-MA+VL",
+        "TV-MA+V",
+        "TV-MA+SL",
+        "TV-MA+S",
+        "TV-MA+L",
+        "TV-MA",
+        "TV-G",
+        "TV-14+VSLD",
+        "TV-14+VSL",
+        "TV-14+VSD",
+        "TV-14+VS",
+        "TV-14+VLD",
+        "TV-14+VL",
+        "TV-14+VD",
+        "TV-14+V",
+        "TV-14+SLD",
+        "TV-14+SL",
+        "TV-14+SD",
+        "TV-14+S",
+        "TV-14+LD",
+        "TV-14+L",
+        "TV-14+D",
+        "TV-14",
+        "TV-PG-V"
+      ],
       "errorMessage": {
-        "type": "UpdateDateTime must be a String"
+        "type": "USTVRating must be a String",
+        "enum": "USTVRating must be one of the given values - TV-Y7-FV, TV-Y7, TV-Y, E, TV-PG+VSLD, TV-PG+VSL, TV-PG+VSD, TV-PG+VS, TV-PG+VLD, TV-PG+VL, TV-PG+VD, TV-PG+V, TV-PG+SLD, TV-PG+SL, TV-PG+SD, TV-PG+S, TV-PG+LD, TV-PG+L, TV-PG+D, TV-PG, TV-MA+VSL, TV-MA+VS, TV-MA+VL, TV-MA+V, TV-MA+SL, TV-MA+S, TV-MA+L, TV-MA, TV-G, TV-14+VSLD, TV-14+VSL, TV-14+VSD, TV-14+VS, TV-14+VLD, TV-14+VL, TV-14+VD, TV-14+V, TV-14+SLD, TV-14+SL, TV-14+SD, TV-14+S, TV-14+LD, TV-14+L, TV-14+D, TV-14 or TV-PG-V irrespective to case. "
       }
     },
-    "PublishedStatus": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "PublishedStatus must be a String"
-      }
-    },
-    "ReleaseDate": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "ReleaseDate must be a String"
-      }
-    },    
-	"OrganizationList": {
+    "OrganizationList": {
       "type": "array",
-      "uniqueItems": true,
       "errorMessage": {
-        "uniqueItems": "OrganisationList Contains a Duplicate Value",
         "type": "OrganizationList must be an Array"
       },
       "items": {
-        "required": [
-          "ContactInfoList",
-          "OrganizationID",
-          "Role"
-        ],
+        "required": ["ContactInfoList", "OrganizationID", "Role"],
         "type": "object",
         "errorMessage": {
           "type": "contains should be an object",
@@ -244,6 +267,7 @@
             "Role": "Role is Required"
           }
         },
+        "additionalProperties": false,
         "properties": {
           "OrganizationID": {
             "type": "integer",
@@ -282,9 +306,7 @@
               "minItems": "Minimum one contact info is required"
             },
             "items": {
-              "required": [
-                "ContactID"
-              ],
+              "required": ["ContactID"],
               "type": "object",
               "errorMessage": {
                 "type": "items should be an object",
@@ -292,6 +314,7 @@
                   "ContactID": "ContactID is Required"
                 }
               },
+              "additionalProperties": false,
               "properties": {
                 "ContactID": {
                   "type": "integer",
@@ -342,46 +365,26 @@
         }
       }
     },
-	"USTVRating": {
-	  "transform": ["trim", "toEnumCase"],
-	  "type": "string",
-	  "enum": ["V-Y", "TV-Y7", "TV-G", "TV-PG", "TV-14", "TV-MA"],
-	  "errorMessage": {
-		"type": "USTVRating must be a String",
-		"enum": "USTVRating must be one of the given values - V-Y, TV-Y7, TV-G, TV-PG, TV-14 or TV-MA irrespective to case. "
-	  }
-	},
-    "additionalData": {
-			"type": "object",
-			"errorMessage": {
-			  	"type": "The additionalData should be an object"
-			},
-			"properties": {
-        "CreatedBy": {
-					"type": "string",
-					"errorMessage": {
-						"type": "CreatedBy must be a String"
-					}
-				},
-				"Source": {
-					"type": "string",
-					"errorMessage": {
-						"type": "Source must be a String"
-					}
-				},
-				"UpdatedBy": {
-					"type": "string",
-					"errorMessage": {
-						"type": "UpdatedBy must be a String"
-					}
-				},
-				"DeletedBy": {
-					"type": "string",
-					"errorMessage": {
-						"type": "DeletedBy must be a String"
-					}
-				}
-			}
-		}
+    "AdditionalData": {
+      "type": "object",
+      "errorMessage": {
+        "type": "The AdditionalData should be an object"
+      },
+      "additionalProperties": false,
+      "properties": {
+        "UpdatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "UpdatedBy must be a String"
+          }
+        },
+        "Source": {
+          "type": "string",
+          "errorMessage": {
+            "type": "Source must be a String"
+          }
+        }
+      }
+    }
   }
 }

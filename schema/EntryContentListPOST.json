@@ -1,36 +1,45 @@
 {
-  "required": ["ContentIDList"],
+  "required": ["EntryList"],
   "type": "object",
   "errorMessage": {
     "type": "The request should be an object",
     "required": {
-      "ContentIDList": "ContentIDList is Required"
+      "ContentIDList": "EntryList is Required"
     }
   },
   "additionalProperties": false,
   "properties": {
-    "ContentIDList": {
+    "EntryList": {
       "type": "array",
+      "uniqueItems": true,
       "errorMessage": {
-        "type": "ContentIDList must be an array",
-        "uniqueItems": "ContentIDList contains duplicate values"
+        "type": "EntryList must be an array",
+        "uniqueItems": "EntryList contains duplicate values"
       },
       "items": {
-        "required": ["ContentID"],
+        "required": ["EntryClass", "EntryUID"],
         "type": "object",
+        "additionalProperties": false,
         "errorMessage": {
           "type": "items should be an object",
           "required": {
-            "ContentID": "ContentID is Required"
+            "EntryClass": "EntryClass is Required",
+            "EntryUID": "EntryUID is Required"
           }
         },
-        "additionalProperties": false,
         "properties": {
-          "ContentID": {
+          "EntryClass": {
             "pattern": "^(.*)$",
             "type": "string",
             "errorMessage": {
-              "type": "ContentID must be a String"
+              "type": "EntryClass must be a String"
+            }
+          },
+          "EntryUID": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "EntryUID must be a String"
             }
           }
         }

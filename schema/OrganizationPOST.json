@@ -1,109 +1,146 @@
 {
-	"required": ["ContactInfoList", "OrganizationID", "Role"],
-	"type": "object",
-    "additionalProperties": false,
-	"errorMessage": {
-		"type": "items should be an object",
-		"required": {
-			"ContactInfoList": "ContactInfoList is Required",
-			"OrganizationID": "OrganizationID is Required",
-			"Role": "Role is Required"
-		}
-	},
-	"properties": {
-		"OrganizationID": {
-			"type": "integer",
-			"format": "int32",
-			"errorMessage": {
-				"type": "OrganizationID must be an Integer",
-				"format": "OrganizationID must be in int32 format"
-			}
-		},
-		"DisplayName": {
-			"pattern": "^(.*)$",
-			"type": "string",
-			"errorMessage": {
-				"type": "DisplayName must be a String"
-			}
-		},
-		"Domain": {
-			"pattern": "^(.*)$",
-			"type": "string",
-			"errorMessage": {
-				"type": "Domain must be a String"
-			}
-		},
-		"Role": {
-			"pattern": "^(.*)$",
-			"type": "string",
-			"errorMessage": {
-				"type": "Role must be a String"
-			}
-		},
-		"ContactInfoList": {
-			"type": "array",
-			"minItems": 1,
-			"errorMessage": {
-				"type": "ContactInfoList must be an Array",
-				"minItems": "Minimum one contact info is required"
-			},
-			"items": {
-				"required": ["ContactID", "ContactName"],
-				"type": "object",
-                "additionalProperties": false,
-				"errorMessage": {
-					"type": "items should be an object",
-					"required": {
-						"ContactID": "ContactID is Required",
-						"ContactName": "ContactName is Required"
-					}
-				},
-				"properties": {
-					"ContactID": {
-						"type": "integer",
-						"format": "int32",
-						"errorMessage": {
-							"type": "ContactID must be an Integer",
-							"format": "ContactID must be in int32 format"
-						}
-					},
-					"Phone": {
-						"pattern": "^(.*)$",
-						"type": "string",
-						"errorMessage": {
-							"type": "Phone must be a String"
-						}
-					},
-					"PhoneType": {
-						"pattern": "^(.*)$",
-						"type": "string",
-						"errorMessage": {
-							"type": "PhoneType must be a String"
-						}
-					},
-					"Address": {
-						"pattern": "^(.*)$",
-						"type": "string",
-						"errorMessage": {
-							"type": "Address must be a String"
-						}
-					},
-					"PrimaryEmail": {
-						"pattern": "^(.*)$",
-						"type": "string",
-						"errorMessage": {
-							"type": "PrimaryEmail must be a String"
-						}
-					},
-					"ContactName": {
-						"pattern": "^(.*)$",
-						"type": "string",
-						"errorMessage": {
-							"type": "ContactName must be a String"
-						}
-					}
-				}
-			}
-		}
-	}
+  "type": "object",
+  "required": ["OrganizationList"],
+  "additionalProperties": false,
+  "errorMessage": {
+    "type": "The request must be an object",
+    "required": {
+      "OrganizationList": "OrganizationList is required"
+    }
+  },
+  "properties": {
+    "OrganizationList": {
+      "type": "array",
+      "items": {
+        "required": ["OrganizationID", "Role", "ContactInfoList"],
+        "type": "object",
+        "errorMessage": {
+          "required": {
+            "OrganizationID": "OrganizationID is required for an Organization",
+            "Role": "Role is required for an Organization",
+            "ContactInfoList": "ContactInfoList is required for an Organization"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "OrganizationID": {
+            "type": "integer",
+            "format": "int32",
+            "errorMessage": {
+              "type": "Organization's OrganizationID is must be a Number",
+              "format": "Organization's OrganizationID must be in format int32"
+            }
+          },
+          "DisplayName": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "Organization's DisplayName is must be a text"
+            }
+          },
+          "Domain": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "Organization's Domain is must be a text"
+            }
+          },
+          "Role": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "Organization's Role is must be a text"
+            }
+          },
+          "ContactInfoList": {
+            "type": "array",
+            "minItems": 1,
+            "errorMessage": {
+              "minItems": "Minimum one contact info is required",
+              "required": {
+                "ContactName": "ContactName is required",
+                "ContactID": "ContactID is required"
+              },
+              "type": "Organization's ContactInfoList must be array of Contacts"
+            },
+            "items": {
+              "required": ["ContactID", "ContactName"],
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "ContactID": {
+                  "type": "integer",
+                  "format": "int32",
+                  "errorMessage": {
+                    "type": "ContactID must be a Number",
+                    "format": "ContactID must be in format int32"
+                  }
+                },
+                "Phone": {
+                  "pattern": "^(.*)$",
+                  "type": "string",
+                  "errorMessage": {
+                    "type": "Contact's Phone must be a String"
+                  }
+                },
+                "PhoneType": {
+                  "pattern": "^(.*)$",
+                  "type": "string",
+                  "errorMessage": {
+                    "type": "Contact's PhoneType must be a String"
+                  }
+                },
+                "Address": {
+                  "pattern": "^(.*)$",
+                  "type": "string",
+                  "errorMessage": {
+                    "type": "Contact's Address must be a String"
+                  }
+                },
+                "PrimaryEmail": {
+                  "pattern": "^(.*)$",
+                  "type": "string",
+                  "errorMessage": {
+                    "type": "PrimaryEmail must be a String"
+                  }
+                },
+                "ContactName": {
+                  "pattern": "^(.*)$",
+                  "type": "string",
+                  "errorMessage": {
+                    "type": "Contact's ContactName must be a string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "errorMessage": {
+        "type": "OrganizationList must be an array",
+        "contains": "Required Minimum one Distributor role in OrganizationList"
+      }
+    },
+    "AdditionalData": {
+      "type": "object",
+      "errorMessage": {
+        "type": "The AdditionalData should be an object"
+      },
+      "additionalProperties": false,
+      "properties": {
+        "UpdatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "UpdatedBy must be a String"
+          }
+        },
+        "Source": {
+          "type": "string",
+          "errorMessage": {
+            "type": "Source must be a String"
+          }
+        }
+      }
+    }
+  }
 }

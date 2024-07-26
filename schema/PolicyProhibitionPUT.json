@@ -1,8 +1,6 @@
 {
-  "title": "The Prohibition Root Schema",
-  "required": [
-    "Prohibition"
-  ],
+  "title": "The Root Schema",
+  "required": ["Prohibition"],
   "errorMessage": {
     "type": "The request should be an object",
     "required": {
@@ -10,23 +8,17 @@
     }
   },
   "type": "object",
+  "additionalProperties": false,
   "properties": {
     "Prohibition": {
       "type": "object",
+      "additionalProperties": false,
       "errorMessage": {
         "type": "Prohibition must be an object"
       },
       "properties": {
-        "ParentUID": {
-          "minLength": 1,
-          "pattern": "^(.*)$",
-          "type": "string"
-        },
         "Action": {
-          "transform": [
-            "trim",
-            "toEnumCase"
-          ],
+          "transform": ["trim", "toEnumCase"],
           "type": "string",
           "minLength": 1,
           "enum": [
@@ -119,7 +111,7 @@
           ],
           "errorMessage": {
             "type": "Action must be a String",
-            "enum": "Action must be one of the given values - Attribution, CommericalUse, DerivativeWorks, Distribution, Notice, Reproduction, ShareAlike, Sharing, SourceCode, acceptTracking, adHocShare, aggregate, annotate, anonymize, append, appendTo, archive, attachPolicy, attachSource, attribute, commercialize, compensate, concurrentUse, copy, delete, derive, digitize, display, distribute, ensureExclusivity, execute, export, extract, extractChar, extractPage, extractWord, give, grantUse, include, index, inform, install, lease, lend, license, modify, move, nextPolicy, obtainConsent, pay, play, present, preview, print, read, reproduce, reviewPolicy, secondaryUse, sell, share, stream, synchronize, textToSpeech, transfer, transform, translate, uninstall, use, watermark, write, writeTo, Rights In, Rights Out, Holdback, Internal Holdback, Option Out, Blackout, Restriction, Producer Holdback (Info) Informational, PBS Digital Windows (Info) Informational, Renewal Rights In, Window Rights, Informational Rights Out, Catch Up Rights In (Rule Generated), Holdback (Rule Generated) Rights Out or Rights Subject to Catch Up Windows"
+            "enum": "Action must be a Attribution, CommericalUse, DerivativeWorks, Distribution, Notice, Reproduction, ShareAlike, Sharing, SourceCode, acceptTracking, adHocShare, aggregate, annotate, anonymize, append, appendTo, archive, attachPolicy, attachSource, attribute, commercialize, compensate, concurrentUse, copy, delete, derive, digitize, display, distribute, ensureExclusivity, execute, export, extract, extractChar, extractPage, extractWord, give, grantUse, include, index, inform, install, lease, lend, license, modify, move, nextPolicy, obtainConsent, pay, play, present, preview, print, read, reproduce, reviewPolicy, secondaryUse, sell, share, stream, synchronize, textToSpeech, transfer, transform, translate, uninstall, use, watermark, write, writeTo, Rights In, Rights Out, Holdback, Internal Holdback, Option Out, Blackout, Restriction, Producer Holdback (Info) Informational, PBS Digital Windows (Info) Informational, Renewal Rights In, Window Rights, Informational Rights Out, Catch Up Rights In (Rule Generated), Holdback (Rule Generated) Rights Out or Rights Subject to Catch Up Windows -- irrepective to case."
           }
         },
         "MediaContext": {
@@ -128,10 +120,7 @@
             "type": "MediaContext must be an Array"
           },
           "items": {
-            "transform": [
-              "trim",
-              "toEnumCase"
-            ],
+            "transform": ["trim", "toEnumCase"],
             "type": "string",
             "enum": [
               "Television",
@@ -207,34 +196,23 @@
             "type": "TermEndDate must be a String"
           }
         },
-        "additionalData": {
+        "AdditionalData": {
           "type": "object",
           "errorMessage": {
-              "type": "The additionalData should be an object"
+            "type": "The AdditionalData should be an object"
           },
+          "additionalProperties": false,
           "properties": {
-            "CreatedBy": {
-              "type": "string",
-              "errorMessage": {
-                "type": "CreatedBy must be a String"
-              }
-            },
-            "Source": {
-              "type": "string",
-              "errorMessage": {
-                "type": "Source must be a String"
-              }
-            },
             "UpdatedBy": {
               "type": "string",
               "errorMessage": {
                 "type": "UpdatedBy must be a String"
               }
             },
-            "DeletedBy": {
+            "Source": {
               "type": "string",
               "errorMessage": {
-                "type": "DeletedBy must be a String"
+                "type": "Source must be a String"
               }
             }
           }

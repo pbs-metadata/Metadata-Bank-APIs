@@ -1,36 +1,36 @@
 {
-  "required": ["ContentIDList"],
-  "type": "object",
+  "required": ["AlternateAssetIDList"],
   "errorMessage": {
     "type": "The request should be an object",
     "required": {
-      "ContentIDList": "ContentIDList is Required"
+      "AlternateAssetIDList": "AlternateAssetIDList is Required"
     }
   },
   "additionalProperties": false,
+  "type": "object",
   "properties": {
-    "ContentIDList": {
+    "AlternateAssetIDList": {
       "type": "array",
       "errorMessage": {
-        "type": "ContentIDList must be an array",
-        "uniqueItems": "ContentIDList contains duplicate values"
+        "type": "AlternateAssetIDList must be an array",
+        "uniqueItems": "AlternateAssetIDList contains duplicate values"
       },
       "items": {
-        "required": ["ContentID"],
+        "required": ["AssetUID"],
         "type": "object",
         "errorMessage": {
           "type": "items should be an object",
           "required": {
-            "ContentID": "ContentID is Required"
+            "AssetUID": "AssetUID is Required"
           }
         },
         "additionalProperties": false,
         "properties": {
-          "ContentID": {
+          "AssetUID": {
             "pattern": "^(.*)$",
             "type": "string",
             "errorMessage": {
-              "type": "ContentID must be a String"
+              "type": "AssetUID must be a String"
             }
           }
         }

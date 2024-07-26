@@ -1,0 +1,122 @@
+{
+  "type": "object",
+  "required": ["Role", "ContactInfoList"],
+  "additionalProperties": false,
+  "errorMessage": {
+    "type": "The request must be an object",
+    "required": {
+      "Role": "Role is required for an Organization",
+      "ContactInfoList": "ContactInfoList is required for an Organization"
+    }
+  },
+  "properties": {
+    "Role": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "Role must be a String",
+        "minLength": "Role should have a minimum one character"
+      }
+    },
+    "Domain": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "Domain must be a String"
+      }
+    },
+    "DisplayName": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "DisplayName must be a String"
+      }
+    },
+    "ContactInfoList": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "errorMessage": {
+        "minItems": "Minimum one contact info is required",
+        "uniqueItems": "ContactInfoList contains duplicate values",
+        "required": {
+          "ContactName": "ContactName is required",
+          "ContactID": "ContactID is required"
+        },
+        "type": "Organization's ContactInfoList must be array of Contacts"
+      },
+      "items": {
+        "required": ["ContactID", "ContactName"],
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ContactID": {
+            "type": "integer",
+            "format": "int32",
+            "errorMessage": {
+              "type": "ContactID must be a Number",
+              "format": "ContactID must be in format int32"
+            }
+          },
+          "Phone": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "Contact's Phone must be a String"
+            }
+          },
+          "PhoneType": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "Contact's PhoneType must be a String"
+            }
+          },
+          "Address": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "Contact's Address must be a String"
+            }
+          },
+          "PrimaryEmail": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "PrimaryEmail must be a String"
+            }
+          },
+          "ContactName": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "Contact's ContactName must be a string"
+            }
+          }
+        }
+      }
+    },
+    "AdditionalData": {
+      "type": "object",
+      "errorMessage": {
+        "type": "The AdditionalData should be an object"
+      },
+      "additionalProperties": false,
+      "properties": {
+        "UpdatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "UpdatedBy must be a String"
+          }
+        },
+        "Source": {
+          "type": "string",
+          "errorMessage": {
+            "type": "Source must be a String"
+          }
+        }
+      }
+    }
+  }
+}
