@@ -1,3 +1,5 @@
+## v1.1.0
+   * MBANK v1.1.0 - Include new fields CreatedFields, UpdatedFields or DeletedFields in the SNS payload when updating a record.
 ## v1.0.0
    * MBANK v1.0.0 - OAuth Token endpoint introduced to generate token based on consumer key and consumer secret
    * MBANK v1.0.0 - Postman collection - Included OAuth2.0 Bearer token based Authorization
