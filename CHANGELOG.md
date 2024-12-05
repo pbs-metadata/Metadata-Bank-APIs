@@ -1,3 +1,11 @@
+## v1.2.0
+   * MBANK v1.2.0 - Postman collection - Rename AdditionalData as AuditFields when creating or updating or deleting a record.
+   * MBANK v1.2.0 - Postman collection - Move EIDRID field under ContentIDList section with a prefix "cid:eidrid:"
+   * Postman collection - EIDR ID changes can be captured from the existing alternate id SNS Topic alternateid-change-notification-<environment> instead of catalog-eidrid-change-notification-<environment>
+   * MBANK v1.2.0 - The SNS topic "one-time-only-<environment>" is implemented for AlternateID POST and PUT against V1. The SNS is implemented for One-Time-Only Episodes with Internally or Externally published records.
+   * MBANK v1.2.0 - Postman collection - Allow ReleaseDate (optional) field as an input for Compilation POST and PUT endpoints to streamline the release date from Rightsline.
+   * MBANK v1.2.0 - Postman collection - Allow additional MediaContext value “Content Claiming” for Permission. 
+   * MBANK v1.2.0 - Caching improvements for OrganizationList, CreditList and Keywords.
 ## v1.1.0
    * MBANK v1.1.0 - Include new fields CreatedFields, UpdatedFields or DeletedFields in the SNS payload when updating a record.
 ## v1.0.0
