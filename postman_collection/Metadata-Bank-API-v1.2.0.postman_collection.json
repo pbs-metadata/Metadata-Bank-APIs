@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "050e118b-6d5b-4a6c-91f5-4249876d72f5",
-		"name": "Metadata-Bank-API-v1.0.0",
+		"name": "Metadata-Bank-API-v1.2.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "14537332"
 	},
@@ -121,7 +121,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -134,7 +135,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/series/search?title=Faces of America&eidrid=10.5240/C1E5-AB49-2735-1CAA-942C-9",
+							"raw": "{{baseurl}}/series/search?title=Faces of America",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -146,10 +147,6 @@
 								{
 									"key": "title",
 									"value": "Faces of America"
-								},
-								{
-									"key": "eidrid",
-									"value": "10.5240/C1E5-AB49-2735-1CAA-942C-9"
 								}
 							]
 						}
@@ -165,7 +162,8 @@
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -179,7 +177,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Series\",\n  \"Mode\": \"AudioVisual\",\n  \"SeriesClass\": \"Episodic\",\n  \"CountryOfOrigin\": \"US\",\n  \"SynopsisShort\": \"Dev-Smoke-Test\",\n  \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"Title19\": \"Money\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"el\",\n  \"Title120\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:BroadView-618586114\"\n    },\n    {\n      \"ContentID\": \"cid:org:pbs.org:NolaRoot:FRON\"\n    }\n  ],\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-131330105\",\n      \"Role\": \"Producer\",\n      \"DisplayName\": \"colette neirouz\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS NPS General Audience (GA)\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136758,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"test-emm@pbs.com\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ],\n  \"AdditionalData\": {\n  \t\"CreatedBy\": \"6463553\",\n  \t\"UpdatedBy\": \"7454335\",\n  \t\"DeletedBy\": \"8867567\",\n  \t\"Source\": \"Rightsline\"\n  }\n}"
+							"raw": "{\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Series\",\n  \"Mode\": \"AudioVisual\",\n  \"SeriesClass\": \"Episodic\",\n  \"CountryOfOrigin\": \"US\",\n  \"SynopsisShort\": \"Dev-Smoke-Test\",\n  \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"Title19\": \"Money\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"el\",\n  \"Title120\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:BroadView-618586114\"\n    },\n    {\n      \"ContentID\": \"cid:org:pbs.org:NolaRoot:FRON\"\n    }\n  ],\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-131330105\",\n      \"Role\": \"Producer\",\n      \"DisplayName\": \"colette neirouz\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS NPS General Audience (GA)\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136758,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"test-emm@pbs.com\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ],\n  \"AuditFields\": {\n  \t\"CreatedBy\": \"6463553\",\n  \t\"UpdatedBy\": \"7454335\"\n  }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/series",
@@ -202,7 +200,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -216,7 +215,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Series\",\n  \"Mode\": \"AudioVisual\",\n  \"EidrId\": \"EIDRID Testing\",\n  \"SeriesClass\": \"Episodic\",\n  \"CountryOfOrigin\": \"US\",\n  \"SynopsisShort\": \"Dev-Smoke-Test-Update\",\n  \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test-Update\",\n  \"Title19\": \"Money\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"el\",\n  \"Title120\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-127202300\",\n      \"Role\": \"Producer\",\n      \"DisplayName\": \"Story, Louise - PBS\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136758,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"test-emm@pbs.com\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ],\n   \"AdditionalData\": {\n  \t\"UpdatedBy\": \"535233\",\n  \t\"Source\": \"Rightsline\"\n  }\n}"
+							"raw": "{\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Series\",\n  \"Mode\": \"AudioVisual\",\n  \"SeriesClass\": \"Episodic\",\n  \"CountryOfOrigin\": \"US\",\n  \"SynopsisShort\": \"Dev-Smoke-Test-Update\",\n  \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test-Update\",\n  \"Title19\": \"Money\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"el\",\n  \"Title120\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-127202300\",\n      \"Role\": \"Producer\",\n      \"DisplayName\": \"Story, Louise - PBS\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136758,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"test-emm@pbs.com\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ],\n   \"AuditFields\": {\n  \t\"UpdatedBy\": \"535233\"\n  }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/series/cid:org:pbs.org:Series1004",
@@ -357,7 +356,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -369,25 +369,21 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Righhtsline-134332\"\n}"
-						},
 						"url": {
-							"raw": "{{baseurl}}/series/cid:org:pbs.org:Series393/organization/32578813?rolename=Producer",
+							"raw": "{{baseurl}}/series/cid:org:pbs.org:Series3611/organization/3136739?rolename=Distributor",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"series",
-								"cid:org:pbs.org:Series393",
+								"cid:org:pbs.org:Series3611",
 								"organization",
-								"32578813"
+								"3136739"
 							],
 							"query": [
 								{
 									"key": "rolename",
-									"value": "Producer"
+									"value": "Distributor"
 								}
 							]
 						}
@@ -605,7 +601,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Series305\",\n  \"Title\": \"LBJ, Season 1-Dev-Smoke-Test\",\n  \"SeasonClass\": \"Main\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Season\",\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"SequenceNumber\": 1,\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:Broadview-Season.1-Series.618585937\"\n    }\n  ],\n   \"AdditionalData\": {\n  \t\"CreatedBy\": \"6463553\",\n  \t\"UpdatedBy\": \"7454335\",\n  \t\"DeletedBy\": \"8867567\",\n  \t\"Source\": \"Rightsline\"\n  }\n}"
+							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Series305\",\n  \"Title\": \"LBJ, Season 1-Dev-Smoke-Test\",\n  \"SeasonClass\": \"Main\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Season\",\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"SequenceNumber\": 1,\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:Broadview-Season.1-Series.618585937\"\n    }\n  ],\n   \"AuditFields\": {\n  \t\"CreatedBy\": \"6463553\",\n  \t\"UpdatedBy\": \"7454335\"\n  }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/season",
@@ -628,7 +624,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -642,7 +639,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Series305\",\n  \"Title\": \"LBJ, Season 1-Demo\",\n  \"SeasonClass\": \"Main\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Season\",\n  \"SequenceNumber\": 1,\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"AdditionalData\": {\n    \"CreatedBy\": \"5233\",\n    \"UpdatedBy\": \"7567\",\n    \"DeletedBy\": \"445\",\n    \"Source\": \"Rightsline\"\n  }\n}"
+							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Series305\",\n  \"Title\": \"LBJ, Season 1-Demo\",\n  \"SeasonClass\": \"Main\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Season\",\n  \"SequenceNumber\": 1,\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"AuditFields\": {\n    \"CreatedBy\": \"5233\",\n    \"UpdatedBy\": \"7567\"\n  }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/season/cid:org:pbs.org:Season861",
@@ -743,7 +740,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -755,10 +753,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Rightsline-42354\"\n}\n"
-						},
 						"url": {
 							"raw": "{{baseurl}}/season/cid:org:pbs.org:Season156/contentid/cid:org:pbs.org:Rightsline-42354",
 							"host": [
@@ -783,7 +777,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -795,10 +790,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Righhtsline-134332\"\n}"
-						},
 						"url": {
 							"raw": "{{baseurl}}/season/cid:org:pbs.org:season393/organization/32578813?rolename=Producer",
 							"host": [
@@ -867,7 +858,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -880,7 +872,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/season/search?title=Tavis Smiley Report&contentid=cid:org:pbs.org:Rightsline-89411&eidrid=10.5240/38EA-E7D0-C32C-3E05-0AF0-Z",
+							"raw": "{{baseurl}}/season/search?title=Tavis Smiley Report&contentid=cid:org:pbs.org:Rightsline-89411",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -896,10 +888,6 @@
 								{
 									"key": "contentid",
 									"value": "cid:org:pbs.org:Rightsline-89411"
-								},
-								{
-									"key": "eidrid",
-									"value": "10.5240/38EA-E7D0-C32C-3E05-0AF0-Z"
 								}
 							]
 						}
@@ -1212,7 +1200,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -1224,10 +1213,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Righhtsline-134332\"\n}"
-						},
 						"url": {
 							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode41293/contentid/cid:org:pbs.org:Rightsline-8641",
 							"host": [
@@ -1252,7 +1237,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -1264,10 +1250,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Righhtsline-134332\"\n}"
-						},
 						"url": {
 							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode43873/organization/3136758?rolename=Distributor",
 							"host": [
@@ -1298,7 +1280,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -1310,10 +1293,6 @@
 								"value": "application/json"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"ContentID\": \"cid:org:pbs.org:Righhtsline-134332\"\n}"
-						},
 						"url": {
 							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode43873/credits/cid:org:pbs.org:Broadview-3383374",
 							"host": [
@@ -1377,7 +1356,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -1390,7 +1370,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/episode/search?title=INDIANAPOLIS&contentid=cid:org:pbs.org:Rightsline-67440&eidrid=10.5240/C638-FC69-D8D2-3CE7-D7A2-P",
+							"raw": "{{baseurl}}/episode/search?title=INDIANAPOLIS&contentid=cid:org:pbs.org:Rightsline-67440",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -1406,10 +1386,6 @@
 								{
 									"key": "contentid",
 									"value": "cid:org:pbs.org:Rightsline-67440"
-								},
-								{
-									"key": "eidrid",
-									"value": "10.5240/C638-FC69-D8D2-3CE7-D7A2-P"
 								}
 							]
 						}
@@ -1622,7 +1598,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -1636,7 +1613,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"Title\": \"P415368-035 HD-Base Curious George\",\n    \"AdditionalData\": {\n        \"UpdatedBy\": \"9767676\",\n        \"Source\": \"Rightsline\"\n    }\n}"
+							"raw": "{\n    \"Title\": \"P415368-035 HD-Base Curious George\",\n    \"AuditFields\": {\n        \"UpdatedBy\": \"9767676\"\n    }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/manifestation/cid:org:pbs.org:Manifestation398078",
@@ -2254,7 +2231,8 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript"
+								"type": "text/javascript",
+								"packages": {}
 							}
 						}
 					],
@@ -2268,7 +2246,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"Title\": \"Frontline-Dev-Smoke-Test-Update\",\n  \"CompilationClass\": \"Franchise\",\n  \"ReferentType\": \"Compilation\",\n  \"StructuralType\": \"Abstraction\",\n  \"DistributionNumber\": 5,\n  \"AdditionalData\": {\n    \"UpdatedBy\": \"8787878\",\n    \"Source\": \"Rightsline\"\n  }\n}"
+							"raw": "{\n  \"Title\": \"Frontline-Dev-Smoke-Test-Update\",\n  \"CompilationClass\": \"Franchise\",\n  \"ReferentType\": \"Compilation\",\n  \"StructuralType\": \"Abstraction\",\n  \"DistributionNumber\": 5,\n  \"AuditFields\": {\n    \"UpdatedBy\": \"8787878\"\n  }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/compilation/cid:org:pbs.org:Compilation416",
@@ -4145,7 +4123,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode23818\",\n    \"VOD\": {\n        \"ReleaseQualifier\": \"Repeat\",\n        \"Duration\": \"1800\",\n        \"ProviderSource\": \"pbs.org\"\n    },\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation211172\",\n    \"ReferentType\": \"VOD\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"en\",\n    \"SubtitledLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\",\n        \"3D\",\n        \"Dubbed\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\",\n     \"AdditionalData\": {\n        \"UpdatedBy\": \"999999999\",\n        \"Source\": \"Rightsline\"\n    }\n}"
+									"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Episode23818\",\n    \"VOD\": {\n        \"ReleaseQualifier\": \"Repeat\",\n        \"Duration\": \"1800\",\n        \"ProviderSource\": \"pbs.org\"\n    },\n    \"ManifestationUID\": \"cid:org:pbs.org:Manifestation211172\",\n    \"ReferentType\": \"VOD\",\n    \"StructuralType\": \"Performance\",\n    \"SAP\": false,\n    \"DubbedLanguage\": \"en\",\n    \"SubtitledLanguage\": \"en\",\n    \"Qualifier\": [\n        \"CC\",\n        \"3D\",\n        \"Dubbed\"\n    ],\n    \"EventDate\": \"2018-12-03T11:24:01.486592\",\n     \"AuditFields\": {\n        \"UpdatedBy\": \"999999999\"\n    }\n}"
 								},
 								"url": {
 									"raw": "{{baseurl}}/event/vod/cid:org:pbs.org:Event1893606",
@@ -4604,7 +4582,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/catalog/search?eidrid=10.5240/17D8-4372-31A7-7340-1181-F",
+							"raw": "{{baseurl}}/catalog/search?series-title=Animals with Cameras",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -4625,12 +4603,7 @@
 								},
 								{
 									"key": "series-title",
-									"value": "Animals with Cameras",
-									"disabled": true
-								},
-								{
-									"key": "eidrid",
-									"value": "10.5240/17D8-4372-31A7-7340-1181-F"
+									"value": "Animals with Cameras"
 								}
 							]
 						}
@@ -4660,7 +4633,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/catalog/search?contentid=cid:org:pbs.org:Broadview-600817627&eidrid=10.5240/DF49-E50B-021E-5E29-0E77-0",
+							"raw": "{{baseurl}}/catalog/search?contentid=cid:org:pbs.org:Broadview-600817627",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -4672,10 +4645,6 @@
 								{
 									"key": "contentid",
 									"value": "cid:org:pbs.org:Broadview-600817627"
-								},
-								{
-									"key": "eidrid",
-									"value": "10.5240/DF49-E50B-021E-5E29-0E77-0"
 								}
 							]
 						}
