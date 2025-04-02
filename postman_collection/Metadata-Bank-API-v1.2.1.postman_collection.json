@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "050e118b-6d5b-4a6c-91f5-4249876d72f5",
-		"name": "Metadata-Bank-API-v1.2.0",
+		"_postman_id": "f68f2d95-71f3-4c20-972e-c1acc5ebaa16",
+		"name": "Metadata-Bank-API-v1.2.1",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "14537332"
+		"_exporter_id": "5890028"
 	},
 	"item": [
 		{
@@ -4734,8 +4734,7 @@
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
-								"type": "text/javascript",
-								"packages": {}
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -4749,7 +4748,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"StructuralType\": \"Performance\",\r\n    \"FileDeliveryStatus\": \"Delivered\",\r\n    \"Title\": \"Wild Kratts\",\r\n    \"ReferentType\": \"TV\",\r\n    \"EditClass\": [\r\n        \"Original\",\r\n        \"Supplemental\"\r\n    ],\r\n    \"EditUse\": \"Broadcast\",\r\n    \"ActualLength\": \"PT0H28M55S\",\r\n    \"ParentUID\": \"cid:org:pbs.org:Episode777\",\r\n    \"AlternateContentIDList\": [\r\n        {\r\n            \"AlternateContentID\": \"alid:org:pbs.org:DevTest-4233\"\r\n        }\r\n    ]\r\n}"
+							"raw": "{\r\n    \"StructuralType\": \"Performance\",\r\n    \"FileDeliveryStatus\": \"Delivered\",\r\n    \"Title\": \"Wild Kratts\",\r\n    \"ReferentType\": \"TV\",\r\n    \"EditClass\": [\r\n        \"Original\",\r\n        \"Supplemental\"\r\n    ],\r\n    \"EditUse\": \"Broadcast\",\r\n    \"ActualLength\": \"PT0H28M55S\",\r\n    \"ParentUID\": \"cid:org:pbs.org:Episode777\",\r\n    \"AlternateContentIDList\": [\r\n        {\r\n            \"AlternateContentID\": \"alid:org:pbs.org:DevTest-4233\"\r\n        }\r\n    ],\r\n    \"AuditFields\": {\r\n        \"MasterSourceSystemRecordType\": \"PBS Edit\",\r\n        \"CreatedBy\": \"1874602\"\r\n    }\r\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/edit",

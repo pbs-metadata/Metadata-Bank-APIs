@@ -154,10 +154,10 @@
         "minLength": "ActualLength should have a minimum one character"
       }
     },
-    "AdditionalData": {
+    "AuditFields": {
       "type": "object",
       "errorMessage": {
-        "type": "The AdditionalData should be an object"
+        "type": "The AuditFields should be an object"
       },
       "additionalProperties": false,
       "properties": {

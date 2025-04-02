@@ -93,7 +93,7 @@
       "enum": ["Adjunct", "Main", "Miniseries", "Pro Forma", "Recut"],
       "errorMessage": {
         "type": "SeasonClass must be a String",
-        "enum": "SeasonClass must be one of the given values - Adjunct, Main, Mini-series, Pro-Forma or Recut irrespective to case. "
+        "enum": "SeasonClass must be one of the given values - Adjunct, Main, Miniseries, Pro-Forma or Recut irrespective to case. "
       }
     },
     "Keywords": {
