@@ -1,3 +1,9 @@
+## v1.2.1
+   * MBANK v1.2.1 - The Enum value changed for SeasonClass from Mini-series to Miniseries in Season POST and PUT Schema.
+   * MBANK v1.2.1 - The Enum value "Mashup" added to CompilationClass of Compilation POST schema.
+   * MBANK v1.2.1 - New field "MasterSourceSystemRecordType" added to Edit - AuditFields in Edit POST & PUT schemas as well as in Postman.
+   * MBANK v1.2.1 - The AuditFields object is added to Edit GET & Search Endpoints.
+
 ## v1.2.0
    * MBANK v1.2.0 - Postman collection - Rename AdditionalData as AuditFields when creating or updating or deleting a record.
    * MBANK v1.2.0 - Postman collection - Move EIDRID field under ContentIDList section with a prefix "cid:eidrid:"
