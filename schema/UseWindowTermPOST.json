@@ -1,41 +1,37 @@
 {
-  "required": ["Term"],
-  "errorMessage": {
-    "type": "The request should be an object",
-    "required": {
-      "Term": "Term is Required"
-    }
-  },
-  "additionalProperties": false,
-  "type": "object",
-  "properties": {
-    "Term": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "Term must be a String"
-      }
-    },
-    "AdditionalData": {
-      "type": "object",
-      "errorMessage": {
-        "type": "The AdditionalData should be an object"
-      },
-      "additionalProperties": false,
-      "properties": {
-        "UpdatedBy": {
-          "type": "string",
-          "errorMessage": {
-            "type": "UpdatedBy must be a String"
-          }
-        },
-        "Source": {
-          "type": "string",
-          "errorMessage": {
-            "type": "Source must be a String"
-          }
-        }
-      }
-    }
-  }
+	"required": [
+		"Term"
+	],
+	"errorMessage": {
+		"type": "The request should be an object",
+		"required": {
+			"Term": "Term is Required"
+		}
+	},
+	"additionalProperties": false,
+	"type": "object",
+	"properties": {
+		"Term": {
+			"pattern": "^(.*)$",
+			"type": "string",
+			"errorMessage": {
+				"type": "Term must be a String"
+			}
+		},
+		"AuditFields": {
+			"type": "object",
+			"errorMessage": {
+				"type": "The AuditFields should be an object"
+			},
+			"additionalProperties": false,
+			"properties": {
+				"UpdatedBy": {
+					"type": "string",
+					"errorMessage": {
+						"type": "UpdatedBy must be a String"
+					}
+				}
+			}
+		}
+	}
 }
