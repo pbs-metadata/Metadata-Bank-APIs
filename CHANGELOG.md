@@ -1,3 +1,12 @@
+## v1.2.2
+   * MBANK v1.2.2 - Allowed to add EditList group as part of MBank manifestation POST, PUT, GET, Season Endpoints.
+   * MBANK v1.2.2 - Included ManifestationIDList group as part of edit GET & Search endpoints.
+   * MBANK v1.2.2 - Allowed WindowTermStart and WindowTermEnd Dates as part of Supplemental POST, PUT endpoints.
+   * MBANK v1.2.2 - Created new POST endpoint to add WindowTermStart and WindowTermEnd Dates as part of Supplemental.
+   * MBANK v1.2.2 - Created new DELETE endpoint to remove the existintg WindowTermStart and WindowTermEnd Dates as part of Supplemental. 
+   * MBANK v1.2.2 - Added the AuditFields as part of all entities's the GET and POST endpoints.
+   * MBANK v1.2.2 - Added new edit class to Mbank Edit's EditClass field.
+   
 ## v1.2.1
    * MBANK v1.2.1 - The Enum value changed for SeasonClass from Mini-series to Miniseries in Season POST and PUT Schema.
    * MBANK v1.2.1 - The Enum value "Mashup" added to CompilationClass of Compilation POST schema.
