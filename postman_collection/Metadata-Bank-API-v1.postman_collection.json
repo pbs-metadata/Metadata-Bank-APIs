@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "77b465c3-4478-4989-8682-1bef64bf2760",
-		"name": "Metadata-Bank-API-v1.2.2",
+		"_postman_id": "1c4d557a-b144-493c-89dc-368244410f5e",
+		"name": "Metadata-Bank-API-v1.2.3",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "5890028"
 	},
@@ -162,8 +162,7 @@
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
-								"type": "text/javascript",
-								"packages": {}
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -177,7 +176,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Series\",\n  \"Mode\": \"AudioVisual\",\n  \"SeriesClass\": \"Episodic\",\n  \"CountryOfOrigin\": \"US\",\n  \"SynopsisShort\": \"Dev-Smoke-Test\",\n  \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"Title19\": \"Money\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"el\",\n  \"Title120\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:BroadView-618586114\"\n    },\n    {\n      \"ContentID\": \"cid:org:pbs.org:NolaRoot:FRON\"\n    }\n  ],\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-131330105\",\n      \"Role\": \"Producer\",\n      \"DisplayName\": \"colette neirouz\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS NPS General Audience (GA)\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136758,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"test-emm@pbs.com\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ],\n  \"AuditFields\": {\n  \t\"CreatedBy\": \"6463553\",\n  \t\"UpdatedBy\": \"7454335\"\n  }\n}"
+							"raw": "{\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Series\",\n    \"Mode\": \"AudioVisual\",\n    \"SeriesClass\": \"Episodic\",\n    \"CountryOfOrigin\": \"US\",\n    \"SynopsisShort\": \"Dev-Smoke-Test\",\n    \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n    \"ApproximateLength\": \"PT2H0M0S\",\n    \"Language\": {\n        \"PrimaryMode\": \"Audio\",\n        \"PrimaryLanguage\": \"el\",\n        \"SecondaryLanguage\": \"en\"\n    },\n    \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n    \"Title19\": \"Money\",\n    \"TitleClass\": \"release\",\n    \"TitleLanguage\": \"el\",\n    \"Title120\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n    \"USTVRating\": \"TV-G\",\n    \"Keywords\": {\n        \"Mood\": [\n            \"Fascinating\",\n            \"Quirky\",\n            \"Suspenseful\"\n        ],\n        \"TimePeriod\": [\n            \"2000s\"\n        ],\n        \"Theme\": [\n            \"Mystery\"\n        ],\n        \"Character\": [\n            \"Doctor\",\n            \"Friend\",\n            \"Hospital administrator\",\n            \"Neurologist\"\n        ],\n        \"Setting\": [\n            \"Hospital\",\n            \"New Jersey\"\n        ],\n        \"Subject\": [\n            \"Medical profession\",\n            \"Investigation\",\n            \"Drug addiction\",\n            \"Unlikely hero\",\n            \"Misanthropy\",\n            \"Medical mystery\"\n        ],\n        \"General\": [\n            \"Fascinating\"\n        ]\n    },\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:BroadView-618586114\"\n        },\n        {\n            \"ContentID\": \"cid:org:pbs.org:NolaRoot:FRON\"\n        }\n    ],\n    \"CreditsList\": [\n        {\n            \"TalentID\": \"cid:org:pbs.org:Broadview-131330105\",\n            \"Role\": \"Producer\",\n            \"DisplayName\": \"colette neirouz\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136739,\n            \"DisplayName\": \"PBS NPS General Audience (GA)\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"Phone\": \"703-739-5010\",\n            \"PhoneType\": \"Office\",\n            \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136758,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"test-emm@pbs.com\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ],\n    \"AuditFields\": {\n        \"CreatedBy\": \"6463553\",\n        \"UpdatedBy\": \"7454335\"\n    }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/series",
@@ -200,8 +199,7 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript",
-								"packages": {}
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -215,7 +213,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Series\",\n  \"Mode\": \"AudioVisual\",\n  \"SeriesClass\": \"Episodic\",\n  \"CountryOfOrigin\": \"US\",\n  \"SynopsisShort\": \"Dev-Smoke-Test-Update\",\n  \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test-Update\",\n  \"Title19\": \"Money\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"el\",\n  \"Title120\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-127202300\",\n      \"Role\": \"Producer\",\n      \"DisplayName\": \"Story, Louise - PBS\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136758,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"test-emm@pbs.com\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ],\n   \"AuditFields\": {\n  \t\"UpdatedBy\": \"535233\"\n  }\n}"
+							"raw": "{\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Series\",\n    \"Mode\": \"AudioVisual\",\n    \"SeriesClass\": \"Episodic\",\n    \"CountryOfOrigin\": \"US\",\n    \"SynopsisShort\": \"Dev-Smoke-Test-Update\",\n    \"SynopsisLong\": \"In this special investigation, FRONTLINE tells the inside story of the origins of the financial meltdown and the battle to save the global economy. The films explore key decisions, missed opportunities and the unprecedented moves by the government and banking leaders that have affected the fortunes of millions of people.\",\n    \"ApproximateLength\": \"PT2H0M0S\",\n    \"Language\": {\n        \"PrimaryMode\": \"Audio\",\n        \"PrimaryLanguage\": \"el\",\n        \"SecondaryLanguage\": \"en\"\n    },\n    \"Title\": \"Money, Power and Wall Street-Dev-Smoke-Test-Update\",\n    \"Title19\": \"Money\",\n    \"TitleClass\": \"release\",\n    \"TitleLanguage\": \"el\",\n    \"Title120\": \"Money, Power and Wall Street-Dev-Smoke-Test\",\n    \"USTVRating\": \"TV-G\",\n    \"Keywords\": {\n        \"Mood\": [\n            \"Fascinating\",\n            \"Quirky\",\n            \"Suspenseful\"\n        ],\n        \"TimePeriod\": [\n            \"2000s\"\n        ],\n        \"Theme\": [\n            \"Mystery\"\n        ],\n        \"Character\": [\n            \"Doctor\",\n            \"Friend\",\n            \"Hospital administrator\",\n            \"Neurologist\"\n        ],\n        \"Setting\": [\n            \"Hospital\",\n            \"New Jersey\"\n        ],\n        \"Subject\": [\n            \"Medical profession\",\n            \"Investigation\",\n            \"Drug addiction\",\n            \"Unlikely hero\",\n            \"Misanthropy\",\n            \"Medical mystery\"\n        ],\n        \"General\": [\n            \"Fascinating\"\n        ]\n    },\n    \"CreditsList\": [\n        {\n            \"TalentID\": \"cid:org:pbs.org:Broadview-127202300\",\n            \"Role\": \"Producer\",\n            \"DisplayName\": \"Story, Louise - PBS\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136739,\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"Phone\": \"703-739-5010\",\n            \"PhoneType\": \"Office\",\n            \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136758,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"test-emm@pbs.com\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ],\n    \"AuditFields\": {\n        \"UpdatedBy\": \"535233\"\n    }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/series/cid:org:pbs.org:Series1004",
@@ -586,8 +584,7 @@
 								"exec": [
 									"tests[\"Status code is 201\"] = responseCode.code === 201;"
 								],
-								"type": "text/javascript",
-								"packages": {}
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -601,7 +598,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Series305\",\n  \"Title\": \"LBJ, Season 1-Dev-Smoke-Test\",\n  \"SeasonClass\": \"Main\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Season\",\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"SequenceNumber\": 1,\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:Broadview-Season.1-Series.618585937\"\n    }\n  ],\n   \"AuditFields\": {\n  \t\"CreatedBy\": \"6463553\",\n  \t\"UpdatedBy\": \"7454335\"\n  }\n}"
+							"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Series305\",\n    \"Title\": \"LBJ, Season 1-Dev-Smoke-Test\",\n    \"SeasonClass\": \"Main\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Season\",\n    \"USTVRating\": \"TV-G\",\n    \"Keywords\": {\n        \"Mood\": [\n            \"Fascinating\",\n            \"Quirky\",\n            \"Suspenseful\"\n        ],\n        \"TimePeriod\": [\n            \"2000s\"\n        ],\n        \"Theme\": [\n            \"Mystery\"\n        ],\n        \"Character\": [\n            \"Doctor\",\n            \"Friend\",\n            \"Hospital administrator\",\n            \"Neurologist\"\n        ],\n        \"Setting\": [\n            \"Hospital\",\n            \"New Jersey\"\n        ],\n        \"Subject\": [\n            \"Medical profession\",\n            \"Investigation\",\n            \"Drug addiction\",\n            \"Unlikely hero\",\n            \"Misanthropy\",\n            \"Medical mystery\"\n        ],\n        \"General\": [\n            \"Fascinating\"\n        ]\n    },\n    \"SequenceNumber\": 1,\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:Broadview-Season.1-Series.618585937\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136739,\n            \"DisplayName\": \"PBS NPS General Audience (GA)\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"Phone\": \"703-739-5010\",\n            \"PhoneType\": \"Office\",\n            \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136758,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"test-emm@pbs.com\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ],\n    \"AuditFields\": {\n        \"CreatedBy\": \"6463553\",\n        \"UpdatedBy\": \"7454335\"\n    }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/season",
@@ -624,8 +621,7 @@
 								"exec": [
 									"tests[\"Status code is 200\"] = responseCode.code === 200;"
 								],
-								"type": "text/javascript",
-								"packages": {}
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -639,7 +635,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Series305\",\n  \"Title\": \"LBJ, Season 1-Demo\",\n  \"SeasonClass\": \"Main\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"Season\",\n  \"SequenceNumber\": 1,\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"AuditFields\": {\n    \"CreatedBy\": \"5233\",\n    \"UpdatedBy\": \"7567\"\n  }\n}"
+							"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Series305\",\n    \"Title\": \"LBJ, Season 1-Demo\",\n    \"SeasonClass\": \"Main\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Season\",\n    \"SequenceNumber\": 1,\n    \"USTVRating\": \"TV-G\",\n    \"Keywords\": {\n        \"Mood\": [\n            \"Fascinating\",\n            \"Quirky\",\n            \"Suspenseful\"\n        ],\n        \"TimePeriod\": [\n            \"2000s\"\n        ],\n        \"Theme\": [\n            \"Mystery\"\n        ],\n        \"Character\": [\n            \"Doctor\",\n            \"Friend\",\n            \"Hospital administrator\",\n            \"Neurologist\"\n        ],\n        \"Setting\": [\n            \"Hospital\",\n            \"New Jersey\"\n        ],\n        \"Subject\": [\n            \"Medical profession\",\n            \"Investigation\",\n            \"Drug addiction\",\n            \"Unlikely hero\",\n            \"Misanthropy\",\n            \"Medical mystery\"\n        ],\n        \"General\": [\n            \"Fascinating\"\n        ]\n    },\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136739,\n            \"DisplayName\": \"PBS NPS General Audience (GA)\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"Phone\": \"703-739-5010\",\n            \"PhoneType\": \"Office\",\n            \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136758,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"test-emm@pbs.com\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ],\n    \"AuditFields\": {\n        \"CreatedBy\": \"5233\",\n        \"UpdatedBy\": \"7567\"\n    }\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/season/cid:org:pbs.org:Season861",
@@ -1062,7 +1058,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Season489\",\n  \"StructuralType\": \"Abstraction\",\n  \"ReferentType\": \"TV\",\n  \"EpisodeNumber\": \"345\",\n  \"EpisodeClass\": \"Main\",\n  \"Title\": \"Frontline | Money, Power and Wall Street-Dev-Smoke-Test\",\n  \"Title120\": \"Frontline | Money, Power and Wall Street\",\n  \"Title19\": \"Frontline\",\n  \"TitleClass\": \"release\",\n  \"TitleLanguage\": \"en\",\n  \"SynopsisShort\": \"Part 1 - Learn how two U.S. administrations have confronted the economic crisis. \",\n  \"SynopsisLong\": \"Part 1 - FRONTLINE producer Michael Kirk (“Inside the Meltdown,” “The Warning”) investigates how two U.S. administrations have confronted the crisis — while dealing with sharp internal divisions and a relationship with Wall Street marked by mistrust and dependence, mutual interests and competing goals. The investigation charts the largest government bailout in U.S. history, a series of decisions that rewrote the rules of government and fueled a debate that would alter the country’s political landscape. Focusing on the Obama administration, FRONTLINE tells the story of a newly elected president with a mandate for change grappling with the multi-headed menace of economic instability, and with fundamental choices about winners and losers and the direction of his presidency.\",\n  \"CountryOfOrigin\": \"US\",\n  \"PrimaryGenre\": \"Public Affairs\",\n  \"SecondaryGenre\": [\"Public Affairs\", \"Advice\"],\n  \"DistributionNumber\": 11,\n  \"ApproximateLength\": \"PT2H0M0S\",\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"el\",\n    \"SecondaryLanguage\": \"en\"\n  },\n  \"ContentIDList\": [\n    {\n      \"ContentID\": \"cid:org:pbs.org:Rightsline-8643\"\n    },\n    {\n      \"ContentID\": \"cid:org:pbs.org:NOLACode:FRON  003011\"\n    }\n  ],\n  \"CreditsList\": [\n    {\n      \"TalentID\": \"cid:org:pbs.org:Broadview-3383374\",\n      \"Role\": \"Executive Producer\",\n      \"DisplayName\": \"colette neirouz\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136758,\n      \"DisplayName\": \"PBS\",\n      \"Domain\": \"pbs.org\",\n      \"Role\": \"Distributor\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136739,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ]\n    }\n  ]\n}"
+							"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Season489\",\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"TV\",\n    \"EpisodeNumber\": \"345\",\n    \"EpisodeClass\": \"Main\",\n    \"Title\": \"Frontline | Money, Power and Wall Street-Dev-Smoke-Test\",\n    \"Title120\": \"Frontline | Money, Power and Wall Street\",\n    \"Title19\": \"Frontline\",\n    \"TitleClass\": \"release\",\n    \"TitleLanguage\": \"en\",\n    \"SynopsisShort\": \"Part 1 - Learn how two U.S. administrations have confronted the economic crisis. \",\n    \"SynopsisLong\": \"Part 1 - FRONTLINE producer Michael Kirk (“Inside the Meltdown,” “The Warning”) investigates how two U.S. administrations have confronted the crisis — while dealing with sharp internal divisions and a relationship with Wall Street marked by mistrust and dependence, mutual interests and competing goals. The investigation charts the largest government bailout in U.S. history, a series of decisions that rewrote the rules of government and fueled a debate that would alter the country’s political landscape. Focusing on the Obama administration, FRONTLINE tells the story of a newly elected president with a mandate for change grappling with the multi-headed menace of economic instability, and with fundamental choices about winners and losers and the direction of his presidency.\",\n    \"CountryOfOrigin\": \"US\",\n    \"PrimaryGenre\": \"Public Affairs\",\n    \"SecondaryGenre\": [\n        \"Public Affairs\",\n        \"Advice\"\n    ],\n    \"DistributionNumber\": 11,\n    \"ApproximateLength\": \"PT2H0M0S\",\n    \"USTVRating\": \"TV-G\",\n    \"Keywords\": {\n        \"Mood\": [\n            \"Fascinating\",\n            \"Quirky\",\n            \"Suspenseful\"\n        ],\n        \"TimePeriod\": [\n            \"2000s\"\n        ],\n        \"Theme\": [\n            \"Mystery\"\n        ],\n        \"Character\": [\n            \"Doctor\",\n            \"Friend\",\n            \"Hospital administrator\",\n            \"Neurologist\"\n        ],\n        \"Setting\": [\n            \"Hospital\",\n            \"New Jersey\"\n        ],\n        \"Subject\": [\n            \"Medical profession\",\n            \"Investigation\",\n            \"Drug addiction\",\n            \"Unlikely hero\",\n            \"Misanthropy\",\n            \"Medical mystery\"\n        ],\n        \"General\": [\n            \"Fascinating\"\n        ]\n    },\n    \"Language\": {\n        \"PrimaryMode\": \"Audio\",\n        \"PrimaryLanguage\": \"el\",\n        \"SecondaryLanguage\": \"en\"\n    },\n    \"ContentIDList\": [\n        {\n            \"ContentID\": \"cid:org:pbs.org:Rightsline-8643\"\n        },\n        {\n            \"ContentID\": \"cid:org:pbs.org:NOLACode:FRON  003011\"\n        }\n    ],\n    \"CreditsList\": [\n        {\n            \"TalentID\": \"cid:org:pbs.org:Broadview-3383374\",\n            \"Role\": \"Executive Producer\",\n            \"DisplayName\": \"colette neirouz\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136758,\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"Phone\": \"703-739-5010\",\n            \"PhoneType\": \"Office\",\n            \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136739,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ]\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/episode",
@@ -1099,7 +1095,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"ParentUID\": \"cid:org:pbs.org:Season824\",\n  \"EpisodeNumber\": \"4409\",\n  \"EpisodeClass\": \"Main\",\n  \"SynopsisShort\": \"Revel in an hour with New Orleans funk masters Trombone Shorty & Orleans Avenue.\",\n  \"SynopsisLong\": \"Revel in an hour with New Orleans funk masters Trombone Shorty & Orleans Avenue, with special guest Cyril Neville. Shorty lays down the grooves with highlights from his recent Voodoo Threauxdown tour.\",\n  \"CountryOfOrigin\": \"US\",\n  \"PrimaryGenre\": \"Arts\",\n  \"SecondaryGenre\":[\"Sports\", \"Western\"],\n  \"DistributionNumber\": 9,\n  \"ApproximateLength\": \"PT1H0M0S\",\n  \"Language\": {\n    \"PrimaryMode\": \"Audio\",\n    \"PrimaryLanguage\": \"en\"\n  },\n  \"Title\": \"Episode 9\",\n  \"Title19\": \"\",\n  \"Title120\": \"Trombone Shorty & Orleans Avenue\",\n  \"TitleClass\": \"Release\",\n  \"TitleLanguage\": \"en\",\n  \"USTVRating\":\"TV-G\",\n  \"Keywords\": {\n    \"Mood\": [\n      \"Fascinating\",\n      \"Quirky\",\n      \"Suspenseful\"\n    ],\n    \"TimePeriod\": [\n      \"2000s\"\n    ],\n    \"Theme\": [\n      \"Mystery\"\n    ],\n    \"Character\": [\n      \"Doctor\",\n      \"Friend\",\n      \"Hospital administrator\",\n      \"Neurologist\"\n    ],\n    \"Setting\": [\n      \"Hospital\",\n      \"New Jersey\"\n    ],\n    \"Subject\": [\n      \"Medical profession\",\n      \"Investigation\",\n      \"Drug addiction\",\n      \"Unlikely hero\",\n      \"Misanthropy\",\n      \"Medical mystery\"\n    ],\n    \"General\": [\n      \"Fascinating\"\n    ]\n  },\n  \"CreditsList\": [\n    {\n      \"Role\": \"Performer\",\n      \"TalentID\": \"cid:org:pbs.org:Broadview-141805668\",\n      \"DisplayName\": \"Oestreicher, Dan\"\n    },\n    {\n      \"Role\": \"Performer\",\n      \"TalentID\": \"cid:org:pbs.org:Broadview-141805671\",\n      \"DisplayName\": \"Peebles, Joey\"\n    }\n  ]\n}"
+							"raw": "{\n    \"ParentUID\": \"cid:org:pbs.org:Season824\",\n    \"EpisodeNumber\": \"4409\",\n    \"EpisodeClass\": \"Main\",\n    \"SynopsisShort\": \"Revel in an hour with New Orleans funk masters Trombone Shorty & Orleans Avenue.\",\n    \"SynopsisLong\": \"Revel in an hour with New Orleans funk masters Trombone Shorty & Orleans Avenue, with special guest Cyril Neville. Shorty lays down the grooves with highlights from his recent Voodoo Threauxdown tour.\",\n    \"CountryOfOrigin\": \"US\",\n    \"PrimaryGenre\": \"Arts\",\n    \"SecondaryGenre\": [\n        \"Sports\",\n        \"Western\"\n    ],\n    \"DistributionNumber\": 9,\n    \"ApproximateLength\": \"PT1H0M0S\",\n    \"Language\": {\n        \"PrimaryMode\": \"Audio\",\n        \"PrimaryLanguage\": \"en\"\n    },\n    \"Title\": \"Episode 9\",\n    \"Title19\": \"\",\n    \"Title120\": \"Trombone Shorty & Orleans Avenue\",\n    \"TitleClass\": \"Release\",\n    \"TitleLanguage\": \"en\",\n    \"USTVRating\": \"TV-G\",\n    \"Keywords\": {\n        \"Mood\": [\n            \"Fascinating\",\n            \"Quirky\",\n            \"Suspenseful\"\n        ],\n        \"TimePeriod\": [\n            \"2000s\"\n        ],\n        \"Theme\": [\n            \"Mystery\"\n        ],\n        \"Character\": [\n            \"Doctor\",\n            \"Friend\",\n            \"Hospital administrator\",\n            \"Neurologist\"\n        ],\n        \"Setting\": [\n            \"Hospital\",\n            \"New Jersey\"\n        ],\n        \"Subject\": [\n            \"Medical profession\",\n            \"Investigation\",\n            \"Drug addiction\",\n            \"Unlikely hero\",\n            \"Misanthropy\",\n            \"Medical mystery\"\n        ],\n        \"General\": [\n            \"Fascinating\"\n        ]\n    },\n    \"CreditsList\": [\n        {\n            \"Role\": \"Performer\",\n            \"TalentID\": \"cid:org:pbs.org:Broadview-141805668\",\n            \"DisplayName\": \"Oestreicher, Dan\"\n        },\n        {\n            \"Role\": \"Performer\",\n            \"TalentID\": \"cid:org:pbs.org:Broadview-141805671\",\n            \"DisplayName\": \"Peebles, Joey\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136758,\n            \"DisplayName\": \"PBS\",\n            \"Domain\": \"pbs.org\",\n            \"Role\": \"Distributor\",\n            \"Phone\": \"703-739-5010\",\n            \"PhoneType\": \"Office\",\n            \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136739,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ]\n        }\n    ]\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/episode/cid:org:pbs.org:Episode37468",
@@ -2716,7 +2712,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"Permission\": {\n    \"Rule\": {\n      \"MediaContext\": [\n        \"Television\"\n      ],\n      \"Refinement\": {\n        \"PlayType\": \"Telecast\",\n        \"Calculated\": true,\n        \"UnitType\": \"Weeks\",\n        \"Count\": 12,\n        \"EnsureExclusivity\": \"Exclusive\",\n        \"MaximumExploitation\": \"4567\",\n        \"MaximumSimultaneousLimit\": 32,\n        \"DeliveryChannel\": [\n          \"Source\",\n          \"Youtube\"\n        ]\n      },\n      \"Type\": \"Rights In\",\n      \"WindowStartDurationType\": \"Consecutive\",\n      \"TermStartDate\": \"1900-01-01T00:00:00Z\",\n      \"TermEndDate\": \"1900-01-01T00:00:00Z\",\n      \"GeospatialNamedArea\": [\n        \"United States and its Territories & Possessions; U.S Military Bases, Embassies and Consulates; U.S. Ships at Sea\"\n      ],\n      \"Trigger\": {\n        \"StartCount\": 30,\n        \"StartUnitType\": \"Days\",\n        \"StartOperator\": \"Surrounding\",\n        \"StartEvent\": \"After Each Broadcast\",\n        \"TimeInterval\": [],\n        \"EndCount\": 30,\n        \"EndUnitType\": \"Days\",\n        \"EndOperator\": \"After\",\n        \"EndEvent\": \"Earliest Episode Rights End\"\n      },\n      \"LogicalAssetIDList\": [\n        {\n          \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-6185865455\"\n        }\n      ],\n      \"EntryList\": [\n        {\n          \"EntryClass\": \"Episode\",\n          \"EntryUID\": \"cid:org:pbs.org:Episode1\"\n        }\n      ],\n      \"OrganizationList\": [\n        {\n          \"OrganizationID\": 3136748,\n          \"DisplayName\": \"PBS NPS Kids\",\n          \"Domain\": \"pbs.org\",\n          \"ContactInfoList\": [\n            {\n              \"ContactID\": 3136748,\n              \"Phone\": \"703-739-5010\",\n              \"PhoneType\": \"Office\",\n              \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n              \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n              \"ContactName\": \"PBS Content Services\"\n            }\n          ],\n          \"Role\": \"Distributor\"\n        }\n      ]\n    }\n  }\n}"
+									"raw": "{\n    \"Permission\": {\n        \"Rule\": {\n            \"MediaContext\": [\n                \"Television\"\n            ],\n            \"Refinement\": {\n                \"PlayType\": \"Telecast\",\n                \"Calculated\": true,\n                \"UnitType\": \"Weeks\",\n                \"Count\": 12,\n                \"EnsureExclusivity\": \"Exclusive\",\n                \"MaximumExploitation\": \"4567\",\n                \"MaximumSimultaneousLimit\": 32,\n                \"DeliveryChannel\": [\n                    \"Source\",\n                    \"Youtube\"\n                ]\n            },\n            \"Type\": \"Rights In\",\n            \"WindowStartDurationType\": \"Consecutive\",\n            \"TermStartDate\": \"1900-01-01T00:00:00Z\",\n            \"TermEndDate\": \"1900-01-01T00:00:00Z\",\n            \"GeospatialNamedArea\": [\n                \"United States and its Territories & Possessions; U.S Military Bases, Embassies and Consulates; U.S. Ships at Sea\"\n            ],\n            \"Trigger\": {\n                \"StartCount\": 30,\n                \"StartUnitType\": \"Days\",\n                \"StartOperator\": \"Surrounding\",\n                \"StartEvent\": \"After Each Broadcast\",\n                \"TimeInterval\": [],\n                \"EndCount\": 30,\n                \"EndUnitType\": \"Days\",\n                \"EndOperator\": \"After\",\n                \"EndEvent\": \"Earliest Episode Rights End\"\n            },\n            \"LogicalAssetIDList\": [\n                {\n                    \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-6185865455\"\n                }\n            ],\n            \"EntryList\": [\n                {\n                    \"EntryClass\": \"Episode\",\n                    \"EntryUID\": \"cid:org:pbs.org:Episode1\"\n                }\n            ],\n            \"OrganizationList\": [\n                {\n                    \"OrganizationID\": 3136748,\n                    \"DisplayName\": \"PBS NPS Kids\",\n                    \"Domain\": \"pbs.org\",\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"ContactInfoList\": [\n                        {\n                            \"ContactID\": 3136748,\n                            \"Phone\": \"703-739-5010\",\n                            \"PhoneType\": \"Office\",\n                            \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                            \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n                            \"ContactName\": \"PBS Content Services\"\n                        }\n                    ],\n                    \"Role\": \"Distributor\"\n                }\n            ]\n        }\n    }\n}"
 								},
 								"url": {
 									"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1583/permission",
@@ -3689,7 +3685,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"PolicyClass\": \"Agreement\",\n  \"StructuralType\": \"Policy\",\n  \"Title\": \"Seabiscuit: American Experience-Dev-SMoke-Test\",\n  \"LogicalAssetIDList\": [\n    {\n      \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-545454545\"\n    }\n  ],\n  \"OrganizationList\": [\n    {\n      \"OrganizationID\": 3136739,\n      \"DisplayName\": \"PBS NPS Kids\",\n      \"Domain\": \"pbs.org\",\n      \"ContactInfoList\": [\n        {\n          \"ContactID\": 3136739,\n          \"Phone\": \"703-739-5010\",\n          \"PhoneType\": \"Office\",\n          \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n          \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n          \"ContactName\": \"PBS Content Services\"\n        }\n      ],\n      \"Role\": \"Distributor\"\n    }\n  ],\n  \"Permission\": [\n    {\n      \"Rule\": {\n        \"MediaContext\": [\n          \"Television\"\n        ],\n        \"Refinement\": {\n          \"PlayType\": \"Telecast\",\n          \"Calculated\": true,\n          \"UnitType\": \"Weeks\",\n          \"Count\": 8,\n          \"EnsureExclusivity\": \"Exclusive\",\n          \"MaximumExploitation\": \"567\",\n          \"MaximumSimultaneousLimit\": 23,\n          \"DeliveryChannel\": [\n            \"Youtube\",\n            \"Source\",\n            \"XUMO/Samsung\"\n          ]\n        },\n        \"WindowStartDurationType\": \"Aggregate\",\n        \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n        \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n        \"EnsureExclusivity\": \"Exclusive\",\n        \"GeospatialNamedArea\": [\n          \"United States of America and its Territories & Possessions\"\n        ],\n        \"Type\": \"Window Rights\",\n        \"Trigger\": {\n          \"StartCount\": 30,\n          \"StartUnitType\": \"Days\",\n          \"StartOperator\": \"Within\",\n          \"StartEvent\": \"Second Release\",\n          \"TimeInterval\": [],\n          \"EndCount\": 30,\n          \"EndUnitType\": \"Days\",\n          \"EndOperator\": \"Surrounding\",\n          \"EndEvent\": \"Latest Episode Rights End\"\n        },\n        \"LogicalAssetIDList\": [\n          {\n            \"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.4343434343\"\n          }\n        ],\n        \"EntryList\": [\n          {\n            \"EntryClass\": \"Episode\",\n            \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n          }\n        ]\n      }\n    }\n  ]\n}"
+							"raw": "{\n    \"PolicyClass\": \"Agreement\",\n    \"StructuralType\": \"Policy\",\n    \"Title\": \"Seabiscuit: American Experience-Dev-SMoke-Test\",\n    \"LogicalAssetIDList\": [\n        {\n            \"LogicalAssetID\": \"alid:org:pbs.org:Broadview-545454545\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136739,\n            \"DisplayName\": \"PBS NPS Kids\",\n            \"Domain\": \"pbs.org\",\n            \"Phone\": \"703-739-5010\",\n            \"PhoneType\": \"Office\",\n            \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136739,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ],\n            \"Role\": \"Distributor\"\n        }\n    ],\n    \"Permission\": [\n        {\n            \"Rule\": {\n                \"MediaContext\": [\n                    \"Television\"\n                ],\n                \"Refinement\": {\n                    \"PlayType\": \"Telecast\",\n                    \"Calculated\": true,\n                    \"UnitType\": \"Weeks\",\n                    \"Count\": 8,\n                    \"EnsureExclusivity\": \"Exclusive\",\n                    \"MaximumExploitation\": \"567\",\n                    \"MaximumSimultaneousLimit\": 23,\n                    \"DeliveryChannel\": [\n                        \"Youtube\",\n                        \"Source\",\n                        \"XUMO/Samsung\"\n                    ]\n                },\n                \"WindowStartDurationType\": \"Aggregate\",\n                \"TermStartDate\": \"2010-11-23T00:00:00Z\",\n                \"TermEndDate\": \"2018-11-22T00:00:00Z\",\n                \"EnsureExclusivity\": \"Exclusive\",\n                \"GeospatialNamedArea\": [\n                    \"United States of America and its Territories & Possessions\"\n                ],\n                \"Type\": \"Window Rights\",\n                \"Trigger\": {\n                    \"StartCount\": 30,\n                    \"StartUnitType\": \"Days\",\n                    \"StartOperator\": \"Within\",\n                    \"StartEvent\": \"Second Release\",\n                    \"TimeInterval\": [],\n                    \"EndCount\": 30,\n                    \"EndUnitType\": \"Days\",\n                    \"EndOperator\": \"Surrounding\",\n                    \"EndEvent\": \"Latest Episode Rights End\"\n                },\n                \"LogicalAssetIDList\": [\n                    {\n                        \"LogicalAssetID\": \"ruleid:org:pbs.org:Broadview-UsageTV.4343434343\"\n                    }\n                ],\n                \"EntryList\": [\n                    {\n                        \"EntryClass\": \"Episode\",\n                        \"EntryUID\": \"cid:org:pbs.org:Episode1418\"\n                    }\n                ]\n            }\n        }\n    ]\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/policy",
@@ -3726,7 +3722,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"PolicyClass\": \"Agreement\",\n  \"StructuralType\": \"Policy\",\n  \"Title\": \"Seabiscuit: American Experience-Dev-Smoke-Test\"\n}"
+							"raw": "{\n    \"PolicyClass\": \"Agreement\",\n    \"StructuralType\": \"Policy\",\n    \"Title\": \"Seabiscuit: American Experience-Dev-Smoke-Test\",\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136739,\n            \"DisplayName\": \"PBS NPS Kids\",\n            \"Domain\": \"pbs.org\",\n            \"Phone\": \"703-739-5010\",\n            \"PhoneType\": \"Office\",\n            \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136739,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ],\n            \"Role\": \"Distributor\"\n        }\n    ]\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/policy/cid:org:pbs.org:Policy1820",
@@ -5289,7 +5285,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Supplemental\",\n    \"Title\": \"Wild Kratts\",\n    \"ApproximateLength\": \"PT0H28M55S\",\n    \"SupplementalContentClass\": \"Disaster Spots\",\n    \"AlternateContentClass\": \"Parental Control\",\n    \"PromotionalClass\": \"Series Sell\",\n    \"SupportedWorkRelationship\": \"Parental Control\",\n    \"UseWindowTermList\": [\n        {\n            \"Term\": \"2017-07-07T00:00:00/2018-08-08T00:00:00\"\n        },\n        {\n            \"Term\": \"2019-09-09T00:00:00/2020-10-20T00:00:00\"\n        }\n    ],\n    \"AlternateContentIDList\": [\n        {\n            \"AlternateContentID\": \"alid:org:pbs.org:BeBanjo-548876880\"\n        }\n    ],\n    \"EntryList\": [\n        {\n            \"EntryClass\": \"Series\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Series11\"\n        },\n        {\n            \"EntryClass\": \"Season\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Season34\"\n        },\n        {\n            \"EntryClass\": \"Episode\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Episode31448\"\n        },\n        {\n            \"EntryClass\": \"Manifestation\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Manifestation323\"\n        }\n    ]\n}"
+							"raw": "{\n    \"StructuralType\": \"Abstraction\",\n    \"ReferentType\": \"Supplemental\",\n    \"Title\": \"Wild Kratts\",\n    \"ApproximateLength\": \"PT0H28M55S\",\n    \"SupplementalContentClass\": \"Disaster Spots\",\n    \"AlternateContentClass\": \"Parental Control\",\n    \"PromotionalClass\": \"Series Sell\",\n    \"SupportedWorkRelationship\": \"Parental Control\",\n    \"UseWindowTermList\": [\n        {\n            \"Term\": \"2017-07-07T00:00:00/2018-08-08T00:00:00\"\n        },\n        {\n            \"Term\": \"2019-09-09T00:00:00/2020-10-20T00:00:00\"\n        }\n    ],\n    \"AlternateContentIDList\": [\n        {\n            \"AlternateContentID\": \"alid:org:pbs.org:BeBanjo-548876880\"\n        }\n    ],\n    \"EntryList\": [\n        {\n            \"EntryClass\": \"Series\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Series11\"\n        },\n        {\n            \"EntryClass\": \"Season\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Season34\"\n        },\n        {\n            \"EntryClass\": \"Episode\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Episode31448\"\n        },\n        {\n            \"EntryClass\": \"Manifestation\",\n            \"EntryContentUID\": \"cid:org:pbs.org:Manifestation323\"\n        }\n    ],\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136748,\n            \"DisplayName\": \"PBS NPS Kids\",\n            \"Domain\": \"pbs.org\",\n            \"Phone\": \"703-739-5010\",\n            \"PhoneType\": \"Office\",\n            \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136748,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ],\n            \"Role\": \"Distributor\"\n        }\n    ]\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/supplemental",
@@ -5316,7 +5312,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"StructuralType\": \"Digital\",\n    \"ReferentType\": \"Supplemental\",\n    \"Title\": \"Updated - Wild Kratts\",\n    \"ApproximateLength\": \"PT0H28M55S\",\n    \"SupplementalContentClass\": \"Kids Elements\",\n    \"AlternateContentClass\": \"Censored\"\n}"
+							"raw": "{\n    \"StructuralType\": \"Digital\",\n    \"ReferentType\": \"Supplemental\",\n    \"Title\": \"Updated - Wild Kratts\",\n    \"ApproximateLength\": \"PT0H28M55S\",\n    \"SupplementalContentClass\": \"Kids Elements\",\n    \"AlternateContentClass\": \"Censored\",\n    \"OrganizationList\": [\n        {\n            \"OrganizationID\": 3136748,\n            \"DisplayName\": \"PBS NPS Kids\",\n            \"Domain\": \"pbs.org\",\n            \"Phone\": \"703-739-5010\",\n            \"PhoneType\": \"Office\",\n            \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n            \"ContactInfoList\": [\n                {\n                    \"ContactID\": 3136748,\n                    \"Phone\": \"703-739-5010\",\n                    \"PhoneType\": \"Office\",\n                    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\n                    \"PrimaryEmail\": \"emm_uat1@pbs.org\",\n                    \"ContactName\": \"PBS Content Services\"\n                }\n            ],\n            \"Role\": \"Distributor\"\n        }\n    ]\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/supplemental/cid:org:pbs.org:Supplemental71725",
@@ -5457,6 +5453,353 @@
 									"key": "entryuid",
 									"value": "cid:org:pbs.org:Episode10573"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Supplemental De-Associate Organization",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{session-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseurl}}/supplemental/cid:org:pbs.org:Supplemental51023/organization/54545454?rolename=Director",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"supplemental",
+								"cid:org:pbs.org:Supplemental51023",
+								"organization",
+								"54545454"
+							],
+							"query": [
+								{
+									"key": "rolename",
+									"value": "Director"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Organization",
+			"item": [
+				{
+					"name": "Organization GET",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{session-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/organization/3163785",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"organization",
+								"3163785"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Organization POST",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 201\"] = responseCode.code === 201;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{session-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"OrganizationID\": 435343245,\r\n    \"DisplayName\": \"Public Broadcasting Services - Test\",\r\n    \"Domain\": \"pbs.org\",\r\n    \"Phone\": \"703-739-9010\",\r\n    \"PhoneType\": \"Office\",\r\n    \"Address\": \"2100 Crystal Drive, Arlington, VA\",\r\n    \"ContactInfoList\": [\r\n        {\r\n            \"ContactID\": 435343245,\r\n            \"Phone\": \"703-739-9010\",\r\n            \"PhoneType\": \"Office\",\r\n            \"Address\": \"2100 Crystal Drive, Arlington, VA\",\r\n            \"PrimaryEmail\": \"emm_uat@pbs.org\",\r\n            \"ContactName\": \"PBS Content Services\"\r\n        }\r\n    ],\r\n    \"PartyIDList\": [\r\n        {\r\n            \"PartyID\": \"cid:org:pbs.org:Broadview-467903776711\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{baseurl}}/organization",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"organization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Organization PUT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{session-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"DisplayName\": \"PBS Test\",\r\n    \"Phone\": \"703-739-9010\",\r\n    \"ContactInfoList\": [\r\n        {\r\n            \"ContactID\": 42112367581,\r\n            \"Phone\": \"703-739-9010\",\r\n            \"PhoneType\": \"Office\",\r\n            \"Address\": \"2100 Crystal Drive, Arlington, VA\",\r\n            \"PrimaryEmail\": \"emm_uat@pbs.org\",\r\n            \"ContactName\": \"PBS Content Services\"\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{baseurl}}/organization/435343245",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"organization",
+								"435343245"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Organization Content ID Registration",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 201\"] = responseCode.code === 201;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{session-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"PartyID\": \"cid:org:pbs.org:Rightsline-435343245\"\r\n}\r\n// {\r\n//     \"PartyIDList\": [\r\n//         {\r\n//             \"PartyID\": \"cid:org:pbs.org:Rightsline-435343245\"\r\n//         }\r\n//     ]\r\n// }"
+						},
+						"url": {
+							"raw": "{{baseurl}}/organization/435343245/partyidregistration",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"organization",
+								"435343245",
+								"partyidregistration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Organization Content ID Deregistration",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"tests[\"Status code is 201\"] = responseCode.code === 201;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{session-token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "apikey",
+								"value": "{{apikey}}"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseurl}}/organization/435343245/partyid/cid:org:pbs.org:Rightsline-435343245",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"organization",
+								"435343245",
+								"partyid",
+								"cid:org:pbs.org:Rightsline-435343245"
 							]
 						}
 					},

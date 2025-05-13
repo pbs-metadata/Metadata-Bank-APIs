@@ -15,9 +15,17 @@
       }
     },
     "StructuralType": {
-      "transform": ["trim", "toEnumCase"],
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
       "type": "string",
-      "enum": ["Policy", "Abstraction", "Performance", "Digital"],
+      "enum": [
+        "Policy",
+        "Abstraction",
+        "Performance",
+        "Digital"
+      ],
       "errorMessage": {
         "type": "StructuralType must be a String",
         "enum": "StructuralType must be a Policy, Abstraction, Performance or Digital irrespective to Case."
@@ -32,10 +40,10 @@
         "minLength": "Title should have a minimum one character"
       }
     },
-    "AdditionalData": {
+    "AuditFields": {
       "type": "object",
       "errorMessage": {
-        "type": "The AdditionalData should be an object"
+        "type": "The AuditFields should be an object"
       },
       "additionalProperties": false,
       "properties": {
@@ -43,12 +51,6 @@
           "type": "string",
           "errorMessage": {
             "type": "UpdatedBy must be a String"
-          }
-        },
-        "Source": {
-          "type": "string",
-          "errorMessage": {
-            "type": "Source must be a String"
           }
         }
       }

@@ -1,13 +1,13 @@
 {
   "type": "object",
-  "required": ["OrganizationID", "Role", "ContactInfoList"],
+  "required": ["OrganizationID", "DisplayName", "Role"],
   "additionalProperties": false,
   "errorMessage": {
     "type": "The request must be an object",
     "required": {
-      "OrganizationID": "OrganizationID is required for an Organization",
-      "Role": "Role is required for an Organization",
-      "ContactInfoList": "ContactInfoList is required for an Organization"
+      "OrganizationID": "OrganizationID is required for Organization",
+      "Role": "Role is required for Organization",
+      "DisplayName": "DisplayName is required for Organization"
     }
   },
   "properties": {
@@ -15,29 +15,52 @@
       "type": "integer",
       "format": "int32",
       "errorMessage": {
-        "type": "Organization's OrganizationID is must be a Number",
+        "type": "Organization's OrganizationID must be a Number",
         "format": "Organization's OrganizationID must be in format int32"
       }
     },
     "DisplayName": {
       "pattern": "^(.*)$",
       "type": "string",
+      "minLength": 1,
       "errorMessage": {
-        "type": "Organization's DisplayName is must be a text"
+        "type": "DisplayName should be string for Organization",
+        "minLength": "DisplayName should not be empty/null"
       }
     },
     "Domain": {
       "pattern": "^(.*)$",
       "type": "string",
       "errorMessage": {
-        "type": "Organization's Domain is must be a text"
+        "type": "Domain must be a text for Organization"
       }
     },
     "Role": {
       "pattern": "^(.*)$",
       "type": "string",
       "errorMessage": {
-        "type": "Organization's Role is must be a text"
+        "type": "Role must be a text for Organization"
+      }
+    },
+    "Phone": {
+      "pattern": "^(.*)$",
+      "type": ["string", "null"],
+      "errorMessage": {
+        "type": "Phone must be a String for Organization"
+      }
+    },
+    "PhoneType": {
+      "pattern": "^(.*)$",
+      "type": ["string", "null"],
+      "errorMessage": {
+        "type": "PhoneType must be a String for Organization"
+      }
+    },
+    "Address": {
+      "pattern": "^(.*)$",
+      "type": ["string", "null"],
+      "errorMessage": {
+        "type": "Address must be a String for Organization"
       }
     },
     "ContactInfoList": {
@@ -47,15 +70,18 @@
       "errorMessage": {
         "minItems": "Minimum one contact info is required",
         "uniqueItems": "ContactInfoList contains duplicate values",
-        "required": {
-          "ContactName": "ContactName is required",
-          "ContactID": "ContactID is required"
-        },
         "type": "Organization's ContactInfoList must be array of Contacts"
       },
       "items": {
         "required": ["ContactID", "ContactName"],
         "type": "object",
+        "errorMessage": {
+          "type": "items should be an object",
+          "required": {
+            "ContactID": "ContactID is required for ContactInfo",
+            "ContactName": "ContactName is required for ContactInfo"
+          }
+        },
         "additionalProperties": false,
         "properties": {
           "ContactID": {
@@ -70,44 +96,46 @@
             "pattern": "^(.*)$",
             "type": "string",
             "errorMessage": {
-              "type": "Contact's Phone must be a String"
+              "type": "Phone must be a String for ContactInfo"
             }
           },
           "PhoneType": {
             "pattern": "^(.*)$",
             "type": "string",
             "errorMessage": {
-              "type": "Contact's PhoneType must be a String"
+              "type": "PhoneType must be a String for ContactInfo"
             }
           },
           "Address": {
             "pattern": "^(.*)$",
             "type": "string",
             "errorMessage": {
-              "type": "Contact's Address must be a String"
+              "type": "Address must be a String for ContactInfo"
             }
           },
           "PrimaryEmail": {
             "pattern": "^(.*)$",
             "type": "string",
             "errorMessage": {
-              "type": "PrimaryEmail must be a String"
+              "type": "PrimaryEmail must be a String for ContactInfo"
             }
           },
           "ContactName": {
             "pattern": "^(.*)$",
             "type": "string",
+            "minLength": 1,
             "errorMessage": {
-              "type": "Contact's ContactName must be a string"
+              "type": "ContactName should be a String for ContactInfo",
+              "minLength": "ContactName should not be empty/null"
             }
           }
         }
       }
     },
-    "AdditionalData": {
+    "AuditFields": {
       "type": "object",
       "errorMessage": {
-        "type": "The AdditionalData should be an object"
+        "type": "The AuditFields should be an object"
       },
       "additionalProperties": false,
       "properties": {
@@ -115,12 +143,6 @@
           "type": "string",
           "errorMessage": {
             "type": "UpdatedBy must be a String"
-          }
-        },
-        "Source": {
-          "type": "string",
-          "errorMessage": {
-            "type": "Source must be a String"
           }
         }
       }

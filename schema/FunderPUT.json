@@ -1,0 +1,177 @@
+{
+  "type": "object",
+  "errorMessage": {
+    "type": "The request must be an object"
+  },
+  "additionalProperties": false,
+  "properties": {
+    "PolicyUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "PolicyUID must be a String",
+        "minLength": "PolicyUID should have a minimum one character"
+      }
+    },
+    "Credited": {
+      "type": "boolean",
+      "errorMessage": {
+        "type": "Credited must be a Boolean"
+      }
+    },
+    "StartDate": {
+      "type": "string",
+      "format": "date",
+      "errorMessage": {
+        "type": "StartDate must be a String",
+        "format": "StartDate must be in Date format"
+      }
+    },
+    "EndDate": {
+      "type": "string",
+      "format": "date",
+      "errorMessage": {
+        "type": "EndDate must be a String",
+        "format": "EndDate must be in Date format"
+      }
+    },
+    "FundingType": {
+      "type": "integer",
+      "format": "int32",
+      "errorMessage": {
+        "type": "FundingType must be an Integer",
+        "format": "FundingType must be in format int32"
+      }
+    },
+    "ProducerFunding": {
+      "type": "boolean",
+      "errorMessage": {
+        "type": "ProducerFunding must be a Boolean"
+      }
+    },
+    "Constraint": {
+      "type": "object",
+      "errorMessage": {
+        "type": "Constraint should be an object"
+      },
+      "properties": {
+        "AdditionalUnderwritingContraints": {
+          "pattern": "^([\\s\\S]*)$",
+          "type": "string",
+          "errorMessage": {
+            "type": "AdditionalUnderwritingContraints must be a String"
+          }
+        },
+        "AdditionalConstraints": {
+          "pattern": "^([\\s\\S]*)$",
+          "type": "string",
+          "errorMessage": {
+            "type": "AdditionalConstraints must be a String"
+          }
+        },
+        "LocalUnderwritingAvailabilty": {
+          "transform": ["trim", "toEnumCase"],
+          "type": "string",
+          "enum": [
+            "Available",
+            "Available Except to Competitors (List Below)",
+            "Available with Producer Approval (Describe Below)",
+            "Not Available"
+          ],
+          "errorMessage": {
+            "type": "LocalUnderwritingAvailabilty must be a String",
+            "enum": "LocalUnderwritingAvailabilty must be a Available, Available Except to Competitors (List Below), Available with Producer Approval (Describe Below), Not Available"
+          }
+        }
+      }
+    },
+    "OrganizationList": {
+      "type": "array",
+      "errorMessage": {
+        "type": "OrganizationList must be an Array",
+        "uniqueItems": "OrganizationList contains duplicate values"
+      },
+      "items": {
+        "required": ["OrganizationID", "DisplayName", "Role"],
+        "type": "object",
+        "errorMessage": {
+          "type": "items should be an object",
+          "required": {
+            "DisplayName": "DisplayName is required for Organization",
+            "OrganizationID": "OrganizationID is required for Organization",
+            "Role": "Role is required for Organization"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "OrganizationID": {
+            "type": "integer",
+            "format": "int32",
+            "errorMessage": {
+              "type": "OrganizationID must be an Integer",
+              "format": "OrganizationID must be in int32 format"
+            }
+          },
+          "DisplayName": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "DisplayName must be a String"
+            }
+          },
+          "Domain": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "Domain must be a String"
+            }
+          },
+          "Role": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "Role must be a String"
+            }
+          },
+          "Phone": {
+            "pattern": "^(.*)$",
+            "type": ["string", "null"],
+            "errorMessage": {
+              "type": "Phone must be String or null"
+            }
+          },
+          "PhoneType": {
+            "pattern": "^(.*)$",
+            "type": ["string", "null"],
+            "errorMessage": {
+              "type": "PhoneType must be String or null"
+            }
+          },
+          "Address": {
+            "pattern": "^(.*)$",
+            "type": ["string", "null"],
+            "errorMessage": {
+              "type": "Address must be String or null"
+            }
+          }
+        }
+      }
+    },
+    "AuditFields": {
+      "type": "object",
+      "errorMessage": {
+        "type": "The AuditFields should be an object"
+      },
+      "additionalProperties": false,
+      "properties": {
+        "UpdatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "UpdatedBy must be a String"
+          }
+        }
+      }
+    }
+  }
+}

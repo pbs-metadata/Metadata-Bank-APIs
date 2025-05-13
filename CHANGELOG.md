@@ -1,3 +1,9 @@
+## v1.2.3
+   * MBANK v1.2.3 - The Phone, PhoneType and Address fields are added to Organization entity. This will impact Series, Season, Episode, Policy, Permission, Supplemental and Funder.
+   * MBANK v1.2.3 - The OrganizationList is added to Supplemental entity and it integrated with its POST, PUT, GET and Search endpoints.
+   * MBANK v1.2.3 - The OrganizationList is added to Funder entity and it integrated with its POST, PUT, GET and Search endpoints.
+   * MBANK v1.2.3 - The Funder and CompanyIDList fields are removed from Funder enitity and affected endpoints are Funder's POST, PUT, GET and Search endpoints
+   * MBANK v1.2.3 - The Funder - CompanyID Regsitration endpoints are removed.
 ## v1.2.2
    * MBANK v1.2.2 - Allowed to add EditList group as part of MBank manifestation POST, PUT, GET, Season Endpoints.
    * MBANK v1.2.2 - Included ManifestationIDList group as part of edit GET & Search endpoints.

@@ -1459,13 +1459,13 @@
         "type": "OrganizationList must be an Array"
       },
       "items": {
-        "required": ["ContactInfoList", "OrganizationID", "Role"],
+        "required": ["OrganizationID", "DisplayName", "Role"],
         "type": "object",
         "errorMessage": {
           "type": "items should be an object",
           "required": {
             "ContactInfoList": "OrganizationList - ContactInfoList is Required",
-            "OrganizationID": "OrganizationList - OrganizationID is Required",
+			"DisplayName": "DisplayName is required for Organization",
             "Role": "Role is Required"
           }
         },
@@ -1498,6 +1498,27 @@
             "type": "string",
             "errorMessage": {
               "type": "Role must be a String"
+            }
+          },
+		  "Phone": {
+            "pattern": "^(.*)$",
+            "type": ["string", "null"],
+            "errorMessage": {
+              "type": "Phone must be a String for Organization"
+            }
+          },
+          "PhoneType": {
+            "pattern": "^(.*)$",
+            "type": ["string", "null"],
+            "errorMessage": {
+              "type": "PhoneType must be a String for Organization"
+            }
+          },
+          "Address": {
+            "pattern": "^(.*)$",
+            "type": ["string", "null"],
+            "errorMessage": {
+              "type": "Address must be a String for Organization"
             }
           },
           "ContactInfoList": {
