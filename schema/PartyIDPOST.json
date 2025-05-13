@@ -1,37 +1,39 @@
 {
-  "required": ["LogicalAssetIDList"],
+  "required": ["PartyIDList"],
   "type": "object",
   "errorMessage": {
     "type": "The request should be an object",
     "required": {
-      "LogicalAssetIDList": "LogicalAssetIDList is Required"
+      "PartyIDList": "PartyIDList is Required"
     }
   },
   "additionalProperties": false,
   "properties": {
-    "LogicalAssetIDList": {
+    "PartyIDList": {
       "type": "array",
+      "minItems": 1,
       "uniqueItems": true,
       "errorMessage": {
-        "type": "LogicalAssetIDList must be an array",
-        "uniqueItems": "LogicalAssetIDList contains duplicate values"
+        "type": "PartyIDList must be an array",
+        "minItems": "Minimum one PartyID is required",
+        "uniqueItems": "PartyIDList contains duplicate values"
       },
       "items": {
-        "required": ["LogicalAssetID"],
+        "required": ["PartyID"],
         "type": "object",
         "errorMessage": {
           "type": "items should be an object",
           "required": {
-            "LogicalAssetID": "LogicalAssetID is Required"
+            "PartyID": "PartyID is Required"
           }
         },
         "additionalProperties": false,
         "properties": {
-          "LogicalAssetID": {
+          "PartyID": {
             "pattern": "^(.*)$",
             "type": "string",
             "errorMessage": {
-              "type": "LogicalAssetID must be a String"
+              "type": "PartyID must be a String"
             }
           }
         }
