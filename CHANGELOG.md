@@ -1,3 +1,6 @@
+## v1.3.0
+   * MBANK v1.3.0 - The Policy, Permission, Prohibition entities are moved from Bank to Core API.
+   * MBANK v1.3.0 - The SecondaryLanguage fields changed from String to Array, so that it will allow multiple languages in Series & Episode endpoints.
 ## v1.2.3
    * MBANK v1.2.3 - The Phone, PhoneType and Address fields are added to Organization entity. This will impact Series, Season, Episode, Policy, Permission, Supplemental and Funder.
    * MBANK v1.2.3 - The OrganizationList is added to Supplemental entity and it integrated with its POST, PUT, GET and Search endpoints.
