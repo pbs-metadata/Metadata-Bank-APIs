@@ -1,3 +1,5 @@
+## v1.3.3
+   * MBANK v1.3.3 - Removed EditClass and EditUse fields from Manifestation entity & Supports Edit in the Compilation EntryList
 ## v1.3.0
    * MBANK v1.3.0 - The Policy, Permission, Prohibition entities are moved from Bank to Core API.
    * MBANK v1.3.0 - The SecondaryLanguage fields changed from String to Array, so that it will allow multiple languages in Series & Episode endpoints.
