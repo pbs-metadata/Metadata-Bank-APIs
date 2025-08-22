@@ -84,20 +84,6 @@
 				"type": "ActualLength must be a String"
 			}
 		},
-		"EditUse": {
-			"pattern": "^(.*)$",
-			"type": "string",
-			"errorMessage": {
-				"type": "EditUse must be a String"
-			}
-		},
-		"EditClass": {
-			"pattern": "^(.*)$",
-			"type": "string",
-			"errorMessage": {
-				"type": "EditClass must be a String"
-			}
-		},
 		"Audio": {
 			"required": [
 				"AudioType",
