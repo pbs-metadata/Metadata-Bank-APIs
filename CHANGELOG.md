@@ -4,7 +4,7 @@
    * MBANK v1.3.4 - Added ConstraintType and DigitalRightsManaged fields in Permission entity
    * MBANK v1.3.4 - Updated the FileLocationPath field to accept multiple values for File Entity
    * MBANK v1.3.4 - The EditUID can be used as ParentUID for File Entity in GET and Search endpoints
-   * MBANK v1.3.4 - Added Primary Genre and Secondary Genre fields in Series Entity
+   * MBANK v1.3.4 - Added PrimaryGenre and SecondaryGenre fields in Series Entity
 ## v1.3.3
    * MBANK v1.3.3 - Removed EditClass and EditUse fields from Manifestation entity & Supports Edit in the Compilation EntryList
 ## v1.3.0
