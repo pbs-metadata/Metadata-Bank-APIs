@@ -49,9 +49,19 @@
       }
     },
     "FileLocationPath": {
-      "type": "string",
+      "type": ["array", "null"],
+      "uniqueItems": true,
       "errorMessage": {
-        "type": "FileLocationPath must be a String"
+        "type": "FileLocationPath must be an array or null",
+        "uniqueItems": "FileLocationPath contains duplicate values"
+      },
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "errorMessage": {
+          "type": "FileLocationPath item must be a String",
+          "minLength": "FileLocationPath item should not be empty"
+        }
       }
     },
     "ChecksumType": {
