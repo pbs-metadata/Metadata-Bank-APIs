@@ -27,7 +27,7 @@
       "enum": ["Abstraction", "Performance", "Digital"],
       "errorMessage": {
         "type": "StructuralType must be a String",
-        "enum": "StructuralType must be an Abstraction, Performace or Digital irrespective to Case."
+        "enum": "StructuralType must be an Abstraction, Performance or Digital irrespective to Case."
       }
     },
     "ReferentType": {
@@ -54,7 +54,7 @@
       "enum": ["Adjunct", "Main", "Miniseries", "Pro Forma", "Recut"],
       "errorMessage": {
         "type": "SeasonClass must be a String",
-        "enum": "SeasonClass must be one of the given values - Adjunct, Main, Miniseries, Pro-Forma or Recut irrespective to case. "
+        "enum": "SeasonClass must be one of the given values - Adjunct, Main, Miniseries, Pro Forma or Recut irrespective to case. "
       }
     },
     "SequenceNumber": {
@@ -182,13 +182,6 @@
         "type": "EntityType must be a String"
       }
     },
-    "EidrId": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "EidrId must be a String"
-      }
-    },
     "IsEIDRDuplicateFound": {
       "type": "boolean",
       "errorMessage": {
@@ -198,57 +191,10 @@
     "USTVRating": {
       "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": [
-        "TV-Y7-FV",
-        "TV-Y7",
-        "TV-Y",
-        "E",
-        "TV-PG+VSLD",
-        "TV-PG+VSL",
-        "TV-PG+VSD",
-        "TV-PG+VS",
-        "TV-PG+VLD",
-        "TV-PG+VL",
-        "TV-PG+VD",
-        "TV-PG+V",
-        "TV-PG+SLD",
-        "TV-PG+SL",
-        "TV-PG+SD",
-        "TV-PG+S",
-        "TV-PG+LD",
-        "TV-PG+L",
-        "TV-PG+D",
-        "TV-PG",
-        "TV-MA+VSL",
-        "TV-MA+VS",
-        "TV-MA+VL",
-        "TV-MA+V",
-        "TV-MA+SL",
-        "TV-MA+S",
-        "TV-MA+L",
-        "TV-MA",
-        "TV-G",
-        "TV-14+VSLD",
-        "TV-14+VSL",
-        "TV-14+VSD",
-        "TV-14+VS",
-        "TV-14+VLD",
-        "TV-14+VL",
-        "TV-14+VD",
-        "TV-14+V",
-        "TV-14+SLD",
-        "TV-14+SL",
-        "TV-14+SD",
-        "TV-14+S",
-        "TV-14+LD",
-        "TV-14+L",
-        "TV-14+D",
-        "TV-14",
-        "TV-PG-V"
-      ],
+      "enum": ["TV-Y", "TV-Y7", "TV-G", "TV-PG", "TV-14", "TV-MA", "E"],
       "errorMessage": {
         "type": "USTVRating must be a String",
-        "enum": "USTVRating must be one of the given values - TV-Y7-FV, TV-Y7, TV-Y, E, TV-PG+VSLD, TV-PG+VSL, TV-PG+VSD, TV-PG+VS, TV-PG+VLD, TV-PG+VL, TV-PG+VD, TV-PG+V, TV-PG+SLD, TV-PG+SL, TV-PG+SD, TV-PG+S, TV-PG+LD, TV-PG+L, TV-PG+D, TV-PG, TV-MA+VSL, TV-MA+VS, TV-MA+VL, TV-MA+V, TV-MA+SL, TV-MA+S, TV-MA+L, TV-MA, TV-G, TV-14+VSLD, TV-14+VSL, TV-14+VSD, TV-14+VS, TV-14+VLD, TV-14+VL, TV-14+VD, TV-14+V, TV-14+SLD, TV-14+SL, TV-14+SD, TV-14+S, TV-14+LD, TV-14+L, TV-14+D, TV-14 or TV-PG-V irrespective to case. "
+        "enum": "USTVRating must be one of the given values -  TV-Y, TV-Y7, TV-G, TV-PG, TV-14, TV-MA or E irrespective to case. "
       }
     },
     "OrganizationList": {
@@ -263,8 +209,8 @@
           "type": "contains should be an object",
           "required": {
             "DisplayName": "DisplayName is required for Organization",
-            "OrganizationID": "OrganizationID is Required",
-            "Role": "Role is Required"
+            "OrganizationID": "OrganizationID is required for Organization",
+            "Role": "Role is Required for Organization"
           }
         },
         "additionalProperties": false,
@@ -280,25 +226,27 @@
           "DisplayName": {
             "pattern": "^(.*)$",
             "type": "string",
+            "minLength": 1,
             "errorMessage": {
-              "type": "DisplayName must be a String"
+              "type": "DisplayName should be string for Organization",
+              "minLength": "DisplayName should not be empty/null"
             }
           },
           "Domain": {
             "pattern": "^(.*)$",
             "type": "string",
             "errorMessage": {
-              "type": "Domain must be a String"
+              "type": "Domain must be a String for Organization"
             }
           },
           "Role": {
             "pattern": "^(.*)$",
             "type": "string",
             "errorMessage": {
-              "type": "Role must be a String"
+              "type": "Role must be a String for Organization"
             }
           },
-		  "Phone": {
+          "Phone": {
             "pattern": "^(.*)$",
             "type": ["string", "null"],
             "errorMessage": {
@@ -327,12 +275,13 @@
               "minItems": "Minimum one contact info is required"
             },
             "items": {
-              "required": ["ContactID"],
+              "required": ["ContactID", "ContactName"],
               "type": "object",
               "errorMessage": {
                 "type": "items should be an object",
                 "required": {
-                  "ContactID": "ContactID is Required"
+                  "ContactID": "ContactID is Required for ContactInfo",
+                  "ContactName": "ContactName is Required for ContactInfo"
                 }
               },
               "additionalProperties": false,
@@ -349,35 +298,37 @@
                   "pattern": "^(.*)$",
                   "type": "string",
                   "errorMessage": {
-                    "type": "Phone must be a String"
+                    "type": "Phone must be a String for ContactInfo"
                   }
                 },
                 "PhoneType": {
                   "pattern": "^(.*)$",
                   "type": "string",
                   "errorMessage": {
-                    "type": "PhoneType must be a String"
+                    "type": "PhoneType must be a String for ContactInfo"
                   }
                 },
                 "Address": {
                   "pattern": "^(.*)$",
                   "type": "string",
                   "errorMessage": {
-                    "type": "Address must be a String"
+                    "type": "Address must be a String for ContactInfo"
                   }
                 },
                 "PrimaryEmail": {
                   "pattern": "^(.*)$",
                   "type": "string",
                   "errorMessage": {
-                    "type": "PrimaryEmail must be a String"
+                    "type": "PrimaryEmail must be a String for ContactInfo"
                   }
                 },
                 "ContactName": {
                   "pattern": "^(.*)$",
                   "type": "string",
+                  "minLength": 1,
                   "errorMessage": {
-                    "type": "ContactName must be a String"
+                    "type": "ContactName should be a String for ContactInfo",
+                    "minLength": "ContactName should not be empty/null"
                   }
                 }
               }
@@ -386,10 +337,10 @@
         }
       }
     },
-    "AdditionalData": {
+    "AuditFields": {
       "type": "object",
       "errorMessage": {
-        "type": "The AdditionalData should be an object"
+        "type": "The AuditFields should be an object"
       },
       "additionalProperties": false,
       "properties": {
@@ -397,12 +348,6 @@
           "type": "string",
           "errorMessage": {
             "type": "UpdatedBy must be a String"
-          }
-        },
-        "Source": {
-          "type": "string",
-          "errorMessage": {
-            "type": "Source must be a String"
           }
         }
       }

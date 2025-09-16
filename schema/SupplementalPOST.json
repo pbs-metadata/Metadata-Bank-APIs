@@ -135,11 +135,12 @@
         "Web Tags",
         "Slate (For Air)",
         "Promo-KIDSC-Embedded Promo",
-        "Broadcast Underwriter"
+        "Broadcast Underwriter",
+        "On Air Offer"
       ],
       "errorMessage": {
         "type": "PromotionalClass must be a String",
-        "enum": "PromotionalClass must be an Image Spots, Support Spots, Disaster Spots, Special Report Spots, Kids Elements, Animation Elements, Annual Meeting Spots, Award Spots, Seasonal Spots, NPR/PRI Spots, Digital Channel Spots, Channel Spots, PBS Services Spots,Tease, Long Lead Tease, Series Sell, Next On, Coming Up, Episodic Promo, Radio Spot, One Time Only, Embedded Promo, KIDSC-Embedded Promo, Web Tags, Slate (For Air), Promo-KIDSC-Embedded Promo or Broadcast Underwriter."
+        "enum": "PromotionalClass must be an Image Spots, Support Spots, Disaster Spots, Special Report Spots, Kids Elements, Animation Elements, Annual Meeting Spots, Award Spots, Seasonal Spots, NPR/PRI Spots, Digital Channel Spots, Channel Spots, PBS Services Spots,Tease, Long Lead Tease, Series Sell, Next On, Coming Up, Episodic Promo, Radio Spot, One Time Only, Embedded Promo, KIDSC-Embedded Promo, Web Tags, Slate (For Air), Promo-KIDSC-Embedded Promo, Broadcast Underwriter or On Air Offer."
       }
     },
     "ReferentType": {
@@ -207,11 +208,12 @@
               "Part",
               "Season",
               "Series",
-              "Manifestation"
+              "Manifestation",
+              "Compilation"
             ],
             "errorMessage": {
               "type": "EntryClass must be a String",
-              "enum": "EntryClass must be an Series, Season, Episode, Installment, Part or Manifestation irrespective to Case."
+              "enum": "EntryClass must be an Series, Season, Episode, Installment, Part, Manifestation or Compilation irrespective to Case."
             }
           },
           "EntryContentUID": {
