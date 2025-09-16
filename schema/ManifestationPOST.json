@@ -15,9 +15,11 @@
     "ManifestationClass": {
       "minItems": 1,
       "type": "array",
+      "uniqueItems": true,
       "errorMessage": {
         "type": "ManifestationClass must be an Array",
-        "minItems": "ManifestationClass should have minimum 1 value"
+        "minItems": "ManifestationClass should have minimum 1 value",
+        "uniqueItems": "ManifestationClass contains a DUPLICATE value"
       },
       "items": {
         "transform": ["trim", "toEnumCase"],

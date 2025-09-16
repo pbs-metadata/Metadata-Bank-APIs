@@ -8187,8 +8187,10 @@
     },
     "SecondaryGenre": {
       "type": "array",
+      "uniqueItems": true,
       "errorMessage": {
-        "type": "SecondaryGenre must be an Array"
+        "type": "SecondaryGenre must be an Array",
+        "uniqueItems": "SecondaryGenre contains a DUPLICATE value"
       },
       "items": {
         "transform": ["trim", "toEnumCase"],
@@ -8574,57 +8576,10 @@
     "USTVRating": {
       "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": [
-        "TV-Y7-FV",
-        "TV-Y7",
-        "TV-Y",
-        "E",
-        "TV-PG+VSLD",
-        "TV-PG+VSL",
-        "TV-PG+VSD",
-        "TV-PG+VS",
-        "TV-PG+VLD",
-        "TV-PG+VL",
-        "TV-PG+VD",
-        "TV-PG+V",
-        "TV-PG+SLD",
-        "TV-PG+SL",
-        "TV-PG+SD",
-        "TV-PG+S",
-        "TV-PG+LD",
-        "TV-PG+L",
-        "TV-PG+D",
-        "TV-PG",
-        "TV-MA+VSL",
-        "TV-MA+VS",
-        "TV-MA+VL",
-        "TV-MA+V",
-        "TV-MA+SL",
-        "TV-MA+S",
-        "TV-MA+L",
-        "TV-MA",
-        "TV-G",
-        "TV-14+VSLD",
-        "TV-14+VSL",
-        "TV-14+VSD",
-        "TV-14+VS",
-        "TV-14+VLD",
-        "TV-14+VL",
-        "TV-14+VD",
-        "TV-14+V",
-        "TV-14+SLD",
-        "TV-14+SL",
-        "TV-14+SD",
-        "TV-14+S",
-        "TV-14+LD",
-        "TV-14+L",
-        "TV-14+D",
-        "TV-14",
-        "TV-PG-V"
-      ],
+      "enum": ["TV-Y", "TV-Y7", "TV-G", "TV-PG", "TV-14", "TV-MA", "E"],
       "errorMessage": {
         "type": "USTVRating must be a String",
-        "enum": "USTVRating must be one of the given values - TV-Y7-FV, TV-Y7, TV-Y, E, TV-PG+VSLD, TV-PG+VSL, TV-PG+VSD, TV-PG+VS, TV-PG+VLD, TV-PG+VL, TV-PG+VD, TV-PG+V, TV-PG+SLD, TV-PG+SL, TV-PG+SD, TV-PG+S, TV-PG+LD, TV-PG+L, TV-PG+D, TV-PG, TV-MA+VSL, TV-MA+VS, TV-MA+VL, TV-MA+V, TV-MA+SL, TV-MA+S, TV-MA+L, TV-MA, TV-G, TV-14+VSLD, TV-14+VSL, TV-14+VSD, TV-14+VS, TV-14+VLD, TV-14+VL, TV-14+VD, TV-14+V, TV-14+SLD, TV-14+SL, TV-14+SD, TV-14+S, TV-14+LD, TV-14+L, TV-14+D, TV-14 or TV-PG-V irrespective to case. "
+        "enum": "USTVRating must be one of the given values -  TV-Y, TV-Y7, TV-G, TV-PG, TV-14, TV-MA or E irrespective to case. "
       }
     },
     "Language": {

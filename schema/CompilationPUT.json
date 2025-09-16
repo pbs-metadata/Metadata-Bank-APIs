@@ -21,13 +21,6 @@
         "minLength": "Title should have a minimum one character"
       }
     },
-    "EidrId": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "EidrId must be a String"
-      }
-    },
     "ReferentType": {
       "transform": ["trim", "toEnumCase"],
       "type": "string",
@@ -55,7 +48,7 @@
       "enum": ["Abstraction", "Performance", "Digital"],
       "errorMessage": {
         "type": "StructuralType must be a String",
-        "enum": "StructuralType must be an Abstraction, Performace or Digital irrespective to Case."
+        "enum": "StructuralType must be an Abstraction, Performance or Digital irrespective to Case."
       }
     },
     "CompilationClass": {
@@ -91,10 +84,18 @@
         "format": "DistributionNumber must be in int32 format"
       }
     },
-    "AdditionalData": {
+    "ReleaseDate": {
+      "type": ["string", "null"],
+      "format": "date",
+      "errorMessage": {
+        "type": "ReleaseDate must be a date",
+        "format": "ReleaseDate must be in YYYY-mm-dd format"
+      }
+    },
+    "AuditFields": {
       "type": "object",
       "errorMessage": {
-        "type": "The AdditionalData should be an object"
+        "type": "The AuditFields should be an object"
       },
       "additionalProperties": false,
       "properties": {
@@ -102,12 +103,6 @@
           "type": "string",
           "errorMessage": {
             "type": "UpdatedBy must be a String"
-          }
-        },
-        "Source": {
-          "type": "string",
-          "errorMessage": {
-            "type": "Source must be a String"
           }
         }
       }
