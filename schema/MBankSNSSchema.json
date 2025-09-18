@@ -1,0 +1,1040 @@
+{
+  "required": [
+    "Action",
+    "PublishedStatus",
+    "EntityURL",
+    "EntityType",
+    "CreateDateTime",
+    "UpdateDateTime",
+    "UpdatedDataSource",
+    "MasterDataSource"
+  ],
+  "type": "object",
+  "errorMessage": {
+    "type": "The request should be an object",
+    "required": {
+      "Action": "Action is Required",
+      "PublishedStatus": "PublishedStatus is Required",
+      "EntityURL": "EntityURL is Required",
+      "EntityType": "EntityType is Required",
+      "CreateDateTime": "CreateDateTime is Required",
+      "UpdateDateTime": "UpdateDateTime is Required",
+      "UpdatedDataSource": "UpdatedDataSource is Required",
+      "MasterDataSource": "MasterDataSource is Required"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "Action": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Created",
+        "Updated",
+        "Deleted"
+      ],
+      "errorMessage": {
+        "type": "Action must be a String",
+        "enum": "Action must be a Created, Updated or Deleted irrepective to case."
+      }
+    },
+    "PublishedStatus": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "In Progress",
+        "Internally Published",
+        "Externally Published"
+      ],
+      "errorMessage": {
+        "type": "PublishedStatus must be a String",
+        "enum": "PublishedStatus must be a In Progress, Internally Published or Externally Published irrepective to case."
+      }
+    },
+    "EntityURL": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "EntityURL must be a String",
+        "minLength": "EntityURL should have a minimum one character"
+      }
+    },
+    "EntityType": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Series",
+        "Season",
+        "Episode",
+        "Compilation",
+        "Manifestation",
+        "File",
+        "Edit",
+        "Supplemental",
+        "Event",
+        "Policy",
+        "PolicyPermission",
+        "PolicyProhibition",
+        "Funder"
+      ],
+      "errorMessage": {
+        "type": "EntityType must be a String",
+        "enum": "EntityType must be an Series, Season, Episode, Compilation, Manifestation, File, Edit, Supplemental, Event, Policy, Permission, Prohibition or Funder irrespective to Case."
+      }
+    },
+    "CreateDateTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "errorMessage": {
+        "type": "CreateDateTime must be a date",
+        "format": "CreateDateTime must be in YYYY-mm-ddThh:mm:ssZ format"
+      }
+    },
+    "UpdateDateTime": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time",
+      "errorMessage": {
+        "type": "UpdateDateTime must be a date",
+        "format": "UpdateDateTime must be in YYYY-mm-ddThh:mm:ssZ format"
+      }
+    },
+    "UpdatedDataSource": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "UpdatedDataSource must be a String"
+      }
+    },
+    "MasterDataSource": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "MasterDataSource must be a String"
+      }
+    },
+    "CreatedFields": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(.*)$",
+        "errorMessage": {
+          "type": "CreatedFields items must be a String"
+        }
+      }
+    },
+    "UpdatedFields": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(.*)$",
+        "errorMessage": {
+          "type": "UpdatedFields items must be a String"
+        }
+      }
+    },
+    "DeletedFields": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(.*)$",
+        "errorMessage": {
+          "type": "DeletedFields items must be a String"
+        }
+      }
+    },
+    "SeriesUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "SeriesUID must be a String",
+        "minLength": "SeriesUID should have a minimum one character"
+      }
+    },
+    "SeriesClass": {
+      "minLength": 1,
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Episodic",
+        "Anthology",
+        "Mini-series"
+      ],
+      "errorMessage": {
+        "type": "SeriesClass must be a String",
+        "enum": "SeriesClass must be one of the given values - Episodic, Anthology, or Mini-series irrespective to case. ",
+        "minLength": "SeriesClass should have a minimum one character"
+      }
+    },
+    "SeasonUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "SeasonUID must be a String",
+        "minLength": "SeasonUID should have a minimum one character"
+      }
+    },
+    "SeasonClass": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Adjunct",
+        "Main",
+        "Miniseries",
+        "Pro Forma",
+        "Recut"
+      ],
+      "errorMessage": {
+        "type": "SeasonClass must be a String",
+        "enum": "SeasonClass must be one of the given values - Adjunct, Main, Miniseries, Pro Forma or Recut irrespective to case. "
+      }
+    },
+    "EpisodeUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "EpisodeUID must be a String",
+        "minLength": "EpisodeUID should have a minimum one character"
+      }
+    },
+    "EpisodeClass": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Main",
+        "Omnibus",
+        "Pilot",
+        "Recut",
+        "Segment",
+        "Special",
+        "Standalone",
+        "one-time-only"
+      ],
+      "errorMessage": {
+        "type": "EpisodeClass must be a String",
+        "enum": "EpisodeClass must be a Main, Omnibus, Pilot, Recut, Segment, Special, Standalone or one-time-only irrepective to case."
+      }
+    },
+    "CompilationUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "CompilationUID must be a String",
+        "minLength": "CompilationUID should have a minimum one character"
+      }
+    },
+    "CompilationClass": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Blu-ray",
+        "Digital Cinema",
+        "Distribution Bundle",
+        "Distribution Season",
+        "DVD",
+        "EST",
+        "Franchise",
+        "Home Entertainment",
+        "Syndication",
+        "Series",
+        "Season:Recut",
+        "Season:Pro-Forma",
+        "Season:Mini-Series",
+        "Mashup",
+        "Other"
+      ],
+      "errorMessage": {
+        "type": "CompilationClass must be a String",
+        "enum": "CompilationClass must be an Blu-ray, Digital Cinema, Distribution Bundle, Distribution Season, DVD, EST, Franchise, Home Entertainment, Syndication, Series, Season:Recut, Season:Pro-Forma, Season:Mini-Series, Mashup or Other irrespective to Case."
+      }
+    },
+    "ManifestationUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "ManifestationUID must be a String",
+        "minLength": "ManifestationUID should have a minimum one character"
+      }
+    },
+    "ManifestationClass": {
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true,
+      "errorMessage": {
+        "type": "ManifestationClass must be an Array",
+        "minItems": "ManifestationClass should have minimum 1 value",
+        "uniqueItems": "ManifestationClass contains a DUPLICATE value"
+      },
+      "items": {
+        "transform": [
+          "trim",
+          "toEnumCase"
+        ],
+        "type": "string",
+        "enum": [
+          "HD",
+          "Main",
+          "SD",
+          "UPHD",
+          "Adaptation Set",
+          "Broadcast Package",
+          "IMF",
+          "Presentation",
+          "Representation"
+        ],
+        "errorMessage": {
+          "enum": "ManifestationClass item must be an HD, Main, SD, UPHD, Adaptation Set, Broadcast Package, IMF, Presentation or Representation irrepective to case."
+        }
+      }
+    },
+    "AssetUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "AssetUID must be a String",
+        "minLength": "AssetUID should have a minimum one character"
+      }
+    },
+    "ParentUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "ParentUID must be a String",
+        "minLength": "ParentUID should have a minimum one character"
+      }
+    },
+    "FileClass": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Other",
+        "Manifest",
+        "Metadata",
+        "Media",
+        "Avail",
+        "Ancillary"
+      ],
+      "errorMessage": {
+        "type": "FileClass must be a String",
+        "enum": "FileClass must be a Other, Manifest, Metadata, Media, Avail or Ancillary"
+      }
+    },
+    "FileName": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "FileName must be a String",
+        "minLength": "FileName should have a minimum one character"
+      }
+    },
+    "FileDeliveryStatus": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Removed",
+        "Delivered",
+        "Future",
+        "Other"
+      ],
+      "errorMessage": {
+        "type": "FileDeliveryStatus must be a String",
+        "enum": "FileDeliveryStatus must be a Removed, Delivered, Future or Other"
+      }
+    },
+    "FileLocationPath": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "uniqueItems": true,
+      "errorMessage": {
+        "type": "FileLocationPath must be an array or null",
+        "uniqueItems": "FileLocationPath contains duplicate values"
+      },
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "errorMessage": {
+          "type": "FileLocationPath item must be a String",
+          "minLength": "FileLocationPath item should not be empty"
+        }
+      }
+    },
+    "EditUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "EditUID must be a String",
+        "minLength": "EditUID should have a minimum one character"
+      }
+    },
+    "EditClass": {
+      "minItems": 1,
+      "type": "array",
+      "errorMessage": {
+        "type": "EditClass must be an Array"
+      },
+      "items": {
+        "transform": [
+          "trim",
+          "toEnumCase"
+        ],
+        "type": "string",
+        "enum": [
+          "Original",
+          "Unrated",
+          "Alternate Ending",
+          "Anniversary",
+          "Censored",
+          "Colorized",
+          "Content Break",
+          "Creative",
+          "Credits",
+          "Dialog",
+          "Director's Cut",
+          "Dubbing Credits",
+          "Exit",
+          "Extended",
+          "Intermission",
+          "Logos",
+          "Music",
+          "Overture",
+          "Product Placement",
+          "Promotional",
+          "Recap",
+          "Regionalized",
+          "Rereleased",
+          "Restored",
+          "Restored Audio",
+          "Restored Picture",
+          "Sanitized",
+          "Sanitized Audio",
+          "Sanitized Picture",
+          "Sound Effects",
+          "Split",
+          "Syndication",
+          "Three-D",
+          "Video Substitution",
+          "Dated",
+          "Shortened",
+          "Supplemental",
+          "Promotion Placement",
+          "Supplemental Content",
+          "Stacked",
+          "Spot",
+          "Non-Air",
+          "Premium Change",
+          "Pledge",
+          "Other",
+          "Theatrical",
+          "Broadcast",
+          "Home Video",
+          "Streaming",
+          "MultiUse",
+          "Preservation Master",
+          "Interactive Platform",
+          "Textless",
+          "International",
+          "UK Version",
+          "Substitutions"
+        ],
+        "errorMessage": {
+          "type": "EditClass must be a String",
+          "enum": "EditClass must be one of the given values - Original, Unrated, Alternate Ending, Anniversary, Censored, Colorized, Content Break, Creative, Credits, Dialog, Director's Cut, Dubbing Credits, Exit, Extended, Intermission, Logos, Music, Overture, Product Placement, Promotional, Recap, Regionalized, Rereleased, Restored, Restored Audio, Restored Picture, Sanitized, Sanitized Audio, Sanitized Picture, Sound Effects, Split, Syndication, Three-D, Video Substitution, Dated, Shortened, Supplemental, Promotion Placement, Supplemental Content, Stacked, Spot, Non-Air, Premium Change, Pledge, Other, Theatrical, Broadcast, Home Video, Streaming, MultiUse, Preservation Master, Interactive Platform, Textless, International, UK Version, Substitutions",
+          "minLength": "EditClass should have a minimum one character"
+        }
+      }
+    },
+    "SupplementalUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "SupplementalUID must be a String",
+        "minLength": "SupplementalUID should have a minimum one character"
+      }
+    },
+    "SupplementalContentClass": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Image Spots",
+        "Support Spots",
+        "Disaster Spots",
+        "Special Report Spots",
+        "Kids Elements",
+        "Animation Elements",
+        "Annual Meeting Spots",
+        "Award Spots",
+        "Seasonal Spots",
+        "NPR/PRI Spots",
+        "Digital Channel Spots",
+        "Channel Spots",
+        "PBS Services Spots",
+        "Tease",
+        "Long Lead Tease",
+        "Series Sell",
+        "Next On",
+        "Logos",
+        "Web Tags",
+        "Product Offers",
+        "Literacy Tags",
+        "System Cue - Internal",
+        "System Cue - External",
+        "System Cue - PBS Kids",
+        "System Cue - PBS Kids Go!",
+        "System Cue - PBS News and Perspectives",
+        "Bug",
+        "Coming Up",
+        "NPR",
+        "Pledge Break",
+        "Open",
+        "Credits",
+        "Title",
+        "Episodic Promo",
+        "Filler",
+        "Radio Spot",
+        "One Time Only",
+        "Turnkey Break",
+        "Embedded Promo",
+        "KIDSC-Embedded Promo",
+        "Promo - Embedded Promo",
+        "Promo - Kids Elements",
+        "Promo - Tease",
+        "Promo - Next On",
+        "Overlay-Offer",
+        "Promo - Coming Up",
+        "Slate (For Air)",
+        "Promo - Series Sell",
+        "Overlay-Promo",
+        "Promo - Support Spots",
+        "Promo-KIDSC-Embedded Promo",
+        "Promo - Episodic Promo",
+        "Promo - Image Spots",
+        "Promo - One Time Only",
+        "Underwriting Spots"
+      ],
+      "errorMessage": {
+        "type": "SupplementalContentClass must be a String",
+        "enum": "SupplementalContentClass must be an Image Spots, Support Spots, Disaster Spots, Special Report Spots, Kids Elements, Animation Elements, Annual Meeting Spots, Award Spots, Seasonal Spots, NPR/PRI Spots, Digital Channel Spots, Channel Spots, PBS Services Spots, Tease, Long Lead Tease, Series Sell, Next On, Logos, Web Tags, Product Offers, Literacy Tags, System Cue - Internal, System Cue - External, System Cue - PBS Kids, System Cue - PBS Kids Go!, System Cue - PBS News and Perspectives, Bug, Coming Up, NPR, Pledge Break, Open, Credits, Title, Episodic Promo, Filler, Radio Spot, One Time Only, Turnkey Break, Embedded Promo, KIDSC-Embedded Promo, Promo - Embedded Promo, Promo - Kids Elements, Promo - Tease, Promo - Next On, Overlay-Offer, Promo - Coming Up, Slate (For Air), Promo - Series Sell, Overlay-Promo, Promo - Support Spots, Promo-KIDSC-Embedded Promo, Promo - Episodic Promo, Promo - Image Spots, Promo - One Time Only, Underwriting Spots."
+      }
+    },
+    "EventUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "EventUID must be a String",
+        "minLength": "EventUID should have a minimum one character"
+      }
+    },
+    "ProviderSource": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "ProviderSource must be a String",
+        "minLength": "ProviderSource should have a minimum one character"
+      }
+    },
+    "ReferentType": {
+      "transform": [
+        "trim",
+        "toEnumCase"
+      ],
+      "type": "string",
+      "enum": [
+        "Linear",
+        "VOD"
+      ],
+      "errorMessage": {
+        "type": "ReferentType must be a String",
+        "enum": "ReferentType must be an Linear or VOD irrespective to Case."
+      }
+    },
+    "ReleaseQualifier": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "errorMessage": {
+        "type": "ReleaseQualifier must be a String"
+      }
+    },
+    "PolicyUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "PolicyUID must be a String",
+        "minLength": "PolicyUID should have a minimum one character"
+      }
+    },
+    "PolicyClass": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "PolicyClass must be a String",
+        "minLength": "PolicyClass should have a minimum one character"
+      }
+    },
+    "RuleID": {
+      "type": "integer",
+      "errorMessage": {
+        "type": "RuleID must be an Integer"
+      }
+    },
+    "ProhibitionID": {
+      "type": "integer",
+      "errorMessage": {
+        "type": "ProhibitionID must be an Integer"
+      }
+    },
+    "MediaContext": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(.*)$",
+        "errorMessage": {
+          "type": "MediaContext items must be a String"
+        }
+      }
+    },
+    "ParentURL": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "ParentURL must be a String",
+        "minLength": "ParentURL should have a minimum one character"
+      }
+    },
+	"FunderUID": {
+      "minLength": 1,
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "FunderUID must be a String",
+        "minLength": "FunderUID should have a minimum one character"
+      }
+    },
+    "CreditsList": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(.*)$",
+        "errorMessage": {
+          "type": "CreditsList items must be a String"
+        }
+      }
+    },
+    "OrganizationList": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(.*)$",
+        "errorMessage": {
+          "type": "OrganizationList items must be a String"
+        }
+      }
+    },
+    "ContentIDList": {
+      "type": "array",
+      "errorMessage": {
+        "type": "ContentIDList must be an array",
+        "uniqueItems": "ContentIDList contains duplicate values"
+      },
+      "items": {
+        "required": [
+          "ContentID"
+        ],
+        "type": "object",
+        "errorMessage": {
+          "type": "items should be an object",
+          "required": {
+            "ContentID": "ContentID is Required"
+          }
+        },
+        "additionalProperties": false,
+        "properties": {
+          "ContentID": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "ContentID must be a String"
+            }
+          }
+        }
+      }
+    },
+    "AlternateAssetIDList": {
+      "type": "array",
+      "uniqueItems": true,
+      "errorMessage": {
+        "type": "AlternateAssetIDList must be an Array",
+        "uniqueItems": "AlternateAssetIDList contains a DUPLICATE value"
+      },
+      "items": {
+        "required": [
+          "AssetUID"
+        ],
+        "type": "object",
+        "properties": {
+          "AssetUID": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "AssetUID must be a string"
+            }
+          }
+        },
+        "errorMessage": {
+          "type": "items should be an object",
+          "required": {
+            "AssetUID": "AssetUID is Required"
+          }
+        }
+      }
+    },
+    "AlternateContentIDList": {
+      "type": "array",
+      "items": {
+        "required": [
+          "AlternateContentID"
+        ],
+        "type": "object",
+        "errorMessage": {
+          "type": "items should be an object",
+          "required": {
+            "AlternateContentID": "AlternateContentID is Required"
+          }
+        },
+        "properties": {
+          "AlternateContentID": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "AlternateContentID must be a String"
+            }
+          }
+        }
+      },
+      "errorMessage": {
+        "type": "AlternateContentIDList must be an Array"
+      }
+    },
+    "AlternateEventIDList": {
+      "type": "array",
+      "uniqueItems": true,
+      "errorMessage": {
+        "uniqueItems": "AlternateEventIDList Contains a Duplicate Value",
+        "type": "AlternateEventIDList must be an Array"
+      },
+      "items": {
+        "type": "object",
+        "errorMessage": {
+          "type": "items must be an object"
+        },
+        "additionalProperties": false,
+        "properties": {
+          "AlternateEventID": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "AlternateEventID must be a String"
+            }
+          }
+        }
+      }
+    },
+    "LogicalAssetIDList": {
+      "type": "array",
+      "items": {
+        "required": [
+          "LogicalAssetID"
+        ],
+        "type": "object",
+        "properties": {
+          "LogicalAssetID": {
+            "pattern": "^(.*)$",
+            "type": "string",
+            "errorMessage": {
+              "type": "LogicalAssetID must be a String"
+            }
+          }
+        },
+        "errorMessage": {
+          "type": "Items must be an object",
+          "required": {
+            "LogicalAssetID": "LogicalAssetID is Required"
+          }
+        }
+      },
+      "errorMessage": {
+        "type": "LogicalAssetIDList must be an Array"
+      }
+    }
+  },
+  "if": {
+    "properties": {
+      "EntityType": {
+        "const": "Series"
+      }
+    }
+  },
+  "then": {
+    "required": [
+      "SeriesUID",
+      "SeriesClass",
+      "ContentIDList"
+    ]
+  },
+  "else": {
+    "if": {
+      "properties": {
+        "EntityType": {
+          "const": "Season"
+        }
+      }
+    },
+    "then": {
+      "required": [
+        "SeasonUID",
+        "SeasonClass",
+        "ContentIDList"
+      ]
+    },
+    "else": {
+      "if": {
+        "properties": {
+          "EntityType": {
+            "const": "Episode"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "EpisodeUID",
+          "EpisodeClass",
+          "ContentIDList"
+        ]
+      },
+      "else": {
+        "if": {
+          "properties": {
+            "EntityType": {
+              "const": "Compilation"
+            }
+          }
+        },
+        "then": {
+          "required": [
+            "CompilationUID",
+            "CompilationClass",
+            "ContentIDList"
+          ]
+        },
+        "else": {
+          "if": {
+            "properties": {
+              "EntityType": {
+                "const": "Manifestation"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "ManifestationUID",
+              "ManifestationClass",
+              "ContentIDList"
+            ]
+          },
+          "else": {
+            "if": {
+              "properties": {
+                "EntityType": {
+                  "const": "File"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "AssetUID",
+                "ParentUID",
+                "FileName",
+                "FileClass",
+                "FileDeliveryStatus",
+                "FileLocationPath",
+                "AlternateAssetIDList"
+              ]
+            },
+            "else": {
+              "if": {
+                "properties": {
+                  "EntityType": {
+                    "const": "Edit"
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "EditUID",
+                  "EditClass",
+                  "FileDeliveryStatus",
+                  "AlternateContentIDList"
+                ]
+              },
+              "else": {
+                "if": {
+                  "properties": {
+                    "EntityType": {
+                      "const": "Supplemental"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "SupplementalUID",
+                    "SupplementalContentClass",
+                    "AlternateContentIDList"
+                  ]
+                },
+                "else": {
+                  "if": {
+                    "properties": {
+                      "EntityType": {
+                        "const": "Event"
+                      }
+                    }
+                  },
+                  "then": {
+                    "required": [
+                      "EventUID",
+                      "ProviderSource",
+                      "ReferentType",
+                      "ReleaseQualifier",
+                      "AlternateEventIDList"
+                    ]
+                  },
+                  "else": {
+                    "if": {
+                      "properties": {
+                        "EntityType": {
+                          "const": "Policy"
+                        }
+                      }
+                    },
+                    "then": {
+                      "required": [
+                        "PolicyUID",
+                        "PolicyClass",
+                        "LogicalAssetIDList"
+                      ]
+                    },
+                    "else": {
+                      "if": {
+                        "properties": {
+                          "EntityType": {
+                            "const": "PolicyPermission"
+                          }
+                        }
+                      },
+                      "then": {
+                        "required": [
+                          "RuleID",
+                          "ParentUID",
+                          "MediaContext",
+                          "ParentURL",
+                          "LogicalAssetIDList"
+                        ]
+                      },
+                      "else": {
+                        "if": {
+                          "properties": {
+                            "EntityType": {
+                              "const": "PolicyProhibition"
+                            }
+                          }
+                        },
+                        "then": {
+                          "required": [
+                            "ProhibitionID",
+                            "ParentUID",
+                            "MediaContext",
+                            "ParentURL",
+                            "LogicalAssetIDList"
+                          ]
+                        },
+                        "else": {
+                          "if": {
+                            "properties": {
+                              "EntityType": {
+                                "const": "Funder"
+                              }
+                            }
+                          },
+                          "then": {
+                            "required": [
+                              "FunderUID",
+                              "LogicalAssetIDList"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
