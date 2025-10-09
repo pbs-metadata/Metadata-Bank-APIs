@@ -462,6 +462,32 @@
       },
       "errorMessage": { "type": "AlternateContentIDList must be an Array" }
     },
+    "USTVRating": {
+      "transform": ["trim", "toEnumCase"],
+      "type": "string",
+      "enum": ["TV-Y", "TV-Y7", "TV-G", "TV-PG", "TV-14", "TV-MA", "E"],
+      "errorMessage": {
+        "type": "USTVRating must be a String",
+        "enum": "USTVRating must be one of the given values -  TV-Y, TV-Y7, TV-G, TV-PG, TV-14, TV-MA or E irrespective to case."
+      }
+    },
+    "RatingReason": {
+      "type": "array",
+      "uniqueItems": true,
+      "errorMessage": {
+        "type": "RatingReason must be an Array",
+        "uniqueItems": "RatingReason contains a DUPLICATE value"
+      },
+      "items": {
+        "transform": ["trim", "toEnumCase"],
+        "type": "string",
+        "enum": ["D", "L", "S", "V", "FV"],
+        "errorMessage": {
+          "type": "RatingReason must be a String",
+          "enum": "RatingReason must be a D, L, S, V or FV irrepective to case."
+        }
+      }
+    },
     "AuditFields": {
       "type": "object",
       "errorMessage": {

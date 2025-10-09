@@ -24692,6 +24692,23 @@
         "contains": "Required Minimum one Distributor role in Organisation List"
       }
     },
+    "RatingReason": {
+      "type": "array",
+      "uniqueItems": true,
+      "errorMessage": {
+        "type": "RatingReason must be an Array",
+        "uniqueItems": "RatingReason contains a DUPLICATE value"
+      },
+      "items": {
+        "transform": ["trim", "toEnumCase"],
+        "type": "string",
+        "enum": ["D", "L", "S", "V", "FV"],
+        "errorMessage": {
+          "type": "RatingReason must be a String",
+          "enum": "RatingReason must be a D, L, S, V or FV irrepective to case."
+        }
+      }
+    },
     "AuditFields": {
       "type": "object",
       "errorMessage": {

@@ -86,6 +86,13 @@
         "minLength": "ChecksumValue should have a minimum one character"
       }
     },
+    "Workflow": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "Workflow must be a String"
+      }
+    },
     "AlternateAssetIDList": {
       "type": "array",
       "uniqueItems": true,
@@ -113,13 +120,22 @@
         }
       }
     },
-    "AdditionalData": {
+    "AuditFields": {
       "type": "object",
       "errorMessage": {
-        "type": "The AdditionalData should be an object"
+        "type": "The AuditFields should be an object"
       },
       "additionalProperties": false,
       "properties": {
+        "MasterSourceSystemRecordType": {
+          "minLength": 1,
+          "pattern": "^(.*)$",
+          "type": "string",
+          "errorMessage": {
+            "type": "MasterSourceSystemRecordType must be a String",
+            "minLength": "MasterSourceSystemRecordType should not be empty"
+          }
+        },
         "CreatedBy": {
           "type": "string",
           "errorMessage": {
@@ -130,12 +146,6 @@
           "type": "string",
           "errorMessage": {
             "type": "UpdatedBy must be a String"
-          }
-        },
-        "Source": {
-          "type": "string",
-          "errorMessage": {
-            "type": "Source must be a String"
           }
         }
       }

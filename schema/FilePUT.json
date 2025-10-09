@@ -80,10 +80,17 @@
         "minLength": "ChecksumValue should have a minimum one character"
       }
     },
-    "AdditionalData": {
+    "Workflow": {
+      "pattern": "^(.*)$",
+      "type": "string",
+      "errorMessage": {
+        "type": "Workflow must be a String"
+      }
+    },
+    "AuditFields": {
       "type": "object",
       "errorMessage": {
-        "type": "The AdditionalData should be an object"
+        "type": "The AuditFields should be an object"
       },
       "additionalProperties": false,
       "properties": {
@@ -91,12 +98,6 @@
           "type": "string",
           "errorMessage": {
             "type": "UpdatedBy must be a String"
-          }
-        },
-        "Source": {
-          "type": "string",
-          "errorMessage": {
-            "type": "Source must be a String"
           }
         }
       }
