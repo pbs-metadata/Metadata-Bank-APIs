@@ -1,3 +1,8 @@
+## v1.3.5
+   * MBANK v1.3.5 - The RatingReason Enum Array field is added to Series, Season and Episode entities.
+   * MBANK v1.3.5 - The RatingReason Enum Array field and USTVRating String fields are added to Edit Entity
+   * MBANK v1.3.5 - Added new Enum value "Supplmental" to EntryClass of Compilation EntryList.
+   * MBANK v1.3.5 - New Field "Workflow" is added File Entity.
 ## v1.3.4
    * MBANK v1.3.4 - Added additional delivery channel values to Permission POST and PUT Schema
    * MBANK v1.3.4 - Updated the ManifestationClass field to accept multiple values for Manifestation Schema
