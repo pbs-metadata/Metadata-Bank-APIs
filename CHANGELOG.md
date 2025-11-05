@@ -1,3 +1,10 @@
+## v1.3.6
+   * MBANK v1.3.6 - The SupportedWorkRelationship is changed from String to Enum fields.
+   * MBANK v1.3.6 - The Conditional required fields validation is done for SupportedWorkRelationship fields in Supplemental.
+   * MBANK v1.3.6 - Added new Enum value "Order" to FileClass of File Entity.
+   * MBANK v1.3.6 - New Search field "Workflow" is added File Search Endpoint.
+   * MBANK v1.3.6 - File Entity supports Linear and VOD Events as Parent.
+   * MBANK v1.3.6 - Event Entity supports Supplemental as Parent.
 ## v1.3.5
    * MBANK v1.3.5 - The RatingReason Enum Array field is added to Series, Season and Episode entities.
    * MBANK v1.3.5 - The RatingReason Enum Array field and USTVRating String fields are added to Edit Entity
