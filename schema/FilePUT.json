@@ -17,10 +17,18 @@
     "FileClass": {
       "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "enum": ["Other", "Manifest", "Metadata", "Media", "Avail", "Ancillary"],
+      "enum": [
+        "Other",
+        "Manifest",
+        "Metadata",
+        "Media",
+        "Avail",
+        "Ancillary",
+        "Order"
+      ],
       "errorMessage": {
         "type": "FileClass must be a String",
-        "enum": "FileClass must be a Other, Manifest, Metadata, Media, Avail or Ancillary"
+        "enum": "FileClass must be a Other, Manifest, Metadata, Media, Avail, Ancillary or Order irrespective to case."
       }
     },
     "FileName": {

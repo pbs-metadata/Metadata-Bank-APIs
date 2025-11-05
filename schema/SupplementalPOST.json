@@ -1,15 +1,19 @@
 {
   "title": "The Root Schema",
   "type": "object",
-  "required": ["StructuralType", "Title", "ApproximateLength"],
+  "required": [
+    "StructuralType",
+    "Title",
+    "ApproximateLength",
+    "SupportedWorkRelationship"
+  ],
   "errorMessage": {
     "type": "The request should be an object",
     "required": {
       "StructuralType": "StructuralType is Required",
       "Title": "Title is Required",
       "ApproximateLength": "ApproximateLength is Required",
-      "SupplementalContentClass": "SupplementalContentClass is Required",
-      "AlternateContentClass": "AlternateContentClass is Required"
+      "SupportedWorkRelationship": "SupportedWorkRelationship is Required"
     }
   },
   "additionalProperties": false,
@@ -143,6 +147,7 @@
         "Series Sell",
         "Next On",
         "Coming Up",
+        "Pledge Break",
         "Episodic Promo",
         "Radio Spot",
         "One Time Only",
@@ -169,7 +174,7 @@
       ],
       "errorMessage": {
         "type": "PromotionalClass must be a String",
-        "enum": "PromotionalClass must be an Image Spots, Support Spots, Disaster Spots, Special Report Spots, Kids Elements, Animation Elements, Annual Meeting Spots, Award Spots, Seasonal Spots, NPR/PRI Spots, Digital Channel Spots, Channel Spots, PBS Services Spots,Tease, Long Lead Tease, Series Sell, Next On, Coming Up, Episodic Promo, Radio Spot, One Time Only, Embedded Promo, KIDSC-Embedded Promo, Web Tags, Slate (For Air), Promo-KIDSC-Embedded Promo, Broadcast Underwriter, On Air Offer, Broadcast Ad,  DVD Trailer,  EPK,  Infomercial,  Mobile,  Preview,  Sizzle Reel,  Teaser,  Theatrical Trailer,  Trailer,  UGC Site,  Web or Other."
+        "enum": "PromotionalClass must be an Image Spots, Support Spots, Disaster Spots, Special Report Spots, Kids Elements, Animation Elements, Annual Meeting Spots, Award Spots, Seasonal Spots, NPR/PRI Spots, Digital Channel Spots, Channel Spots, PBS Services Spots,Tease, Long Lead Tease, Series Sell, Next On, Coming Up, Pledge Break, Episodic Promo, Radio Spot, One Time Only, Embedded Promo, KIDSC-Embedded Promo, Web Tags, Slate (For Air), Promo-KIDSC-Embedded Promo, Broadcast Underwriter, On Air Offer, Broadcast Ad,  DVD Trailer,  EPK,  Infomercial,  Mobile,  Preview,  Sizzle Reel,  Teaser,  Theatrical Trailer,  Trailer,  UGC Site,  Web or Other."
       }
     },
     "ReferentType": {
@@ -202,12 +207,18 @@
     "ApproximateLength": {
       "pattern": "^(.*)$",
       "type": "string",
-      "errorMessage": { "type": "ApproximateLength must be a String" }
+      "errorMessage": {
+        "type": "ApproximateLength must be a String"
+      }
     },
     "SupportedWorkRelationship": {
-      "pattern": "^(.*)$",
+      "transform": ["trim", "toEnumCase"],
       "type": "string",
-      "errorMessage": { "type": "SupportedWorkRelationship must be a String" }
+      "enum": ["isAlternateContentFor", "isPromotionFor", "isSupplementalTo"],
+      "errorMessage": {
+        "type": "SupportedWorkRelationship must be a String",
+        "enum": "SupportedWorkRelationship must be an isAlternateContentFor, isPromotionFor or isSupplementalTo irrepective to case."
+      }
     },
     "EntryList": {
       "minItems": 1,
@@ -248,7 +259,9 @@
           "EntryContentUID": {
             "pattern": "^(.*)$",
             "type": "string",
-            "errorMessage": { "type": "EntryContentUID must be a String" }
+            "errorMessage": {
+              "type": "EntryContentUID must be a String"
+            }
           }
         }
       }
@@ -297,12 +310,16 @@
           "AlternateContentID": {
             "pattern": "^(.*)$",
             "type": "string",
-            "errorMessage": { "type": "AlternateContentID must be a string" }
+            "errorMessage": {
+              "type": "AlternateContentID must be a string"
+            }
           }
         },
         "errorMessage": {
           "type": "items should be an object",
-          "required": { "AlternateContentID": "AlternateContentID is Required" }
+          "required": {
+            "AlternateContentID": "AlternateContentID is Required"
+          }
         }
       }
     },
@@ -466,11 +483,94 @@
         },
         "CreatedBy": {
           "type": "string",
-          "errorMessage": { "type": "CreatedBy must be a String" }
+          "errorMessage": {
+            "type": "CreatedBy must be a String"
+          }
         },
         "UpdatedBy": {
           "type": "string",
-          "errorMessage": { "type": "UpdatedBy must be a String" }
+          "errorMessage": {
+            "type": "UpdatedBy must be a String"
+          }
+        }
+      }
+    }
+  },
+  "if": {
+    "properties": {
+      "SupportedWorkRelationship": {
+        "transform": ["trim", "toEnumCase"],
+        "enum": ["isPromotionFor"]
+      }
+    },
+    "required": ["SupportedWorkRelationship"]
+  },
+  "then": {
+    "required": ["PromotionalClass"],
+    "properties": {
+      "SupplementalContentClass": false,
+      "AlternateContentClass": false
+    },
+    "errorMessage": {
+      "required": {
+        "PromotionalClass": "PromotionalClass is Required when SupportedWorkRelationship='isPromotionFor'"
+      },
+      "properties": {
+        "SupplementalContentClass": "If SupportedWorkRelationship is 'isPromotionFor', The 'SupplementalContentClass' field is not allowed.",
+        "AlternateContentClass": "If SupportedWorkRelationship is 'isPromotionFor', The 'AlternateContentClass' field is not allowed."
+      }
+    }
+  },
+  "else": {
+    "if": {
+      "properties": {
+        "SupportedWorkRelationship": {
+          "transform": ["trim", "toEnumCase"],
+          "enum": ["isAlternateContentFor"]
+        }
+      },
+      "required": ["SupportedWorkRelationship"]
+    },
+    "then": {
+      "required": ["AlternateContentClass"],
+      "properties": {
+        "PromotionalClass": false,
+        "SupplementalContentClass": false
+      },
+      "errorMessage": {
+        "required": {
+          "AlternateContentClass": "AlternateContentClass is Required when SupportedWorkRelationship='isAlternateContentFor'"
+        },
+        "properties": {
+          "PromotionalClass": "If SupportedWorkRelationship is 'isAlternateContentFor', The 'PromotionalClass' field is not allowed.",
+          "SupplementalContentClass": "If SupportedWorkRelationship is 'isAlternateContentFor', The 'SupplementalContentClass' field is not allowed."
+        }
+      }
+    },
+    "else": {
+      "if": {
+        "properties": {
+          "SupportedWorkRelationship": {
+            "transform": ["trim", "toEnumCase"],
+            "enum": ["isSupplementalTo"]
+          }
+        },
+        "required": ["SupportedWorkRelationship"]
+      },
+      "then": {
+        "required": ["SupplementalContentClass"],
+        "properties": {
+          "PromotionalClass": false,
+          "AlternateContentClass": false
+        },
+        "errorMessage": {
+          "required": {
+            "SupplementalContentClass": "SupplementalContentClass is Required when SupportedWorkRelationship='isSupplementalTo'"
+          },
+          "properties": {
+            "PromotionalClass": "If SupportedWorkRelationship is 'isSupplementalTo', The 'PromotionalClass' field is not allowed.",
+            "AlternateContentClass": "If SupportedWorkRelationship is 'isSupplementalTo', The 'AlternateContentClass' field is not allowed."
+          }
         }
       }
     }
