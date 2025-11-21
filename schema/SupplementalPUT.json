@@ -185,11 +185,12 @@
         "Short",
         "Web",
         "Compilation",
-        "Supplemental"
+        "Supplemental",
+        "Interactive"
       ],
       "errorMessage": {
         "type": "ReferentType must be a String",
-        "enum": "ReferentType must be a Series, Season, TV, Movie, Short, Web, Compilation or Supplemental irrepective to case."
+        "enum": "ReferentType must be a Series, Season, TV, Movie, Short, Web, Compilation, Supplemental or Interactive irrepective to case."
       }
     },
     "Title": {
@@ -206,6 +207,52 @@
       "type": "string",
       "errorMessage": {
         "type": "ApproximateLength must be a String"
+      }
+    },
+    "InteractiveInfo": {
+      "type": "object",
+      "minProperties": 1,
+      "errorMessage": {
+        "type": "InteractiveInfo must be an Object",
+        "minProperties": "InteractiveInfo should have at least one property"
+      },
+      "properties": {
+        "InteractiveClass": {
+          "transform": ["trim", "toEnumCase"],
+          "type": ["string", "null"],
+          "enum": [
+            "Application",
+            "Gallery",
+            "Immersive Experience",
+            "Mixed Media Experience",
+            "Other",
+            null
+          ],
+          "errorMessage": {
+            "type": "InteractiveClass must be a String or null",
+            "enum": "InteractiveClass must be an Application, Gallery, Immersive Experience, Mixed Media Experience or Other irrepective to case or null."
+          }
+        },
+        "InteractiveSubClass": {
+          "transform": ["trim", "toEnumCase"],
+          "type": ["string", "null"],
+          "enum": [
+            "Commerce",
+            "Comic",
+            "Game",
+            "Live Feed",
+            "AR",
+            "MR",
+            "VR",
+            "CPE",
+            "iTunes",
+            null
+          ],
+          "errorMessage": {
+            "type": "InteractiveSubClass must be a String or null",
+            "enum": "InteractiveSubClass must be a Commerce, Comic, Game, Live Feed, AR, MR, VR, CPE or iTunes irrepective to case or null."
+          }
+        }
       }
     },
     "OrganizationList": {
