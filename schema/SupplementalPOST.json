@@ -1,625 +1,730 @@
 {
-  "title": "The Root Schema",
-  "type": "object",
-  "required": [
-    "StructuralType",
-    "Title",
-    "ApproximateLength",
-    "SupportedWorkRelationship"
-  ],
-  "errorMessage": {
-    "type": "The request should be an object",
-    "required": {
-      "StructuralType": "StructuralType is Required",
-      "Title": "Title is Required",
-      "ApproximateLength": "ApproximateLength is Required",
-      "SupportedWorkRelationship": "SupportedWorkRelationship is Required"
-    }
-  },
-  "additionalProperties": false,
-  "properties": {
-    "StructuralType": {
-      "transform": ["trim", "toEnumCase"],
-      "type": "string",
-      "enum": ["Abstraction", "Performance", "Digital"],
-      "errorMessage": {
-        "type": "StructuralType must be a String",
-        "enum": "StructuralType must be an Abstraction, Performance or Digital irrespective to Case."
-      }
-    },
-    "SupplementalContentClass": {
-      "transform": ["trim", "toEnumCase"],
-      "type": "string",
-      "enum": [
-        "Image Spots",
-        "Support Spots",
-        "Disaster Spots",
-        "Special Report Spots",
-        "Kids Elements",
-        "Animation Elements",
-        "Annual Meeting Spots",
-        "Award Spots",
-        "Seasonal Spots",
-        "NPR/PRI Spots",
-        "Digital Channel Spots",
-        "Channel Spots",
-        "PBS Services Spots",
-        "Tease",
-        "Long Lead Tease",
-        "Series Sell",
-        "Next On",
-        "Logos",
-        "Web Tags",
-        "Product Offers",
-        "Literacy Tags",
-        "System Cue - Internal",
-        "System Cue - External",
-        "System Cue - PBS Kids",
-        "System Cue - PBS Kids Go!",
-        "System Cue - PBS News and Perspectives",
-        "Bug",
-        "Coming Up",
-        "NPR",
-        "Pledge Break",
-        "Open",
-        "Credits",
-        "Title",
-        "Episodic Promo",
-        "Filler",
-        "Radio Spot",
-        "One Time Only",
-        "Turnkey Break",
-        "Embedded Promo",
-        "KIDSC-Embedded Promo",
-        "Promo - Embedded Promo",
-        "Promo - Kids Elements",
-        "Promo - Tease",
-        "Promo - Next On",
-        "Overlay-Offer",
-        "Promo - Coming Up",
-        "Slate (For Air)",
-        "Promo - Series Sell",
-        "Overlay-Promo",
-        "Promo - Support Spots",
-        "Promo-KIDSC-Embedded Promo",
-        "Promo - Episodic Promo",
-        "Promo - Image Spots",
-        "Promo - One Time Only",
-        "Underwriting Spots",
-        "Behind the scenes",
-        "B-roll",
-        "Deleted Scene",
-        "Featurette",
-        "Interactivity",
-        "Interview",
-        "Making Of",
-        "Music",
-        "Outtake",
-        "Screen Test",
-        "Selected Clips",
-        "Other"
-      ],
-      "errorMessage": {
-        "type": "SupplementalContentClass must be a String",
-        "enum": "SupplementalContentClass must be an Image Spots, Support Spots, Disaster Spots, Special Report Spots, Kids Elements, Animation Elements, Annual Meeting Spots, Award Spots, Seasonal Spots, NPR/PRI Spots, Digital Channel Spots, Channel Spots, PBS Services Spots, Tease, Long Lead Tease, Series Sell, Next On, Logos, Web Tags, Product Offers, Literacy Tags, System Cue - Internal, System Cue - External, System Cue - PBS Kids, System Cue - PBS Kids Go!, System Cue - PBS News and Perspectives, Bug, Coming Up, NPR, Pledge Break, Open, Credits, Title, Episodic Promo, Filler, Radio Spot, One Time Only, Turnkey Break, Embedded Promo, KIDSC-Embedded Promo, Promo - Embedded Promo, Promo - Kids Elements, Promo - Tease, Promo - Next On, Overlay-Offer, Promo - Coming Up, Slate (For Air), Promo - Series Sell, Overlay-Promo, Promo - Support Spots, Promo-KIDSC-Embedded Promo, Promo - Episodic Promo, Promo - Image Spots, Promo - One Time Only, Underwriting Spots, Behind the scenes, B-roll, Deleted Scene, Featurette, Interactivity, Interview, Making Of, Music, Outtake, Screen Test, Selected Clips, Other."
-      }
-    },
-    "AlternateContentClass": {
-      "transform": ["trim", "toEnumCase"],
-      "type": "string",
-      "enum": [
-        "Descriptive Audio",
-        "Camera Angle",
-        "Parental Control",
-        "Censored",
-        "Commentary (Director)",
-        "Commentary (Other)",
-        "Sing",
-        "Alternate Scene",
-        "Sing Along",
-        "Trivia Track",
-        "Other"
-      ],
-      "errorMessage": {
-        "type": "AlternateContentClass must be a String",
-        "enum": "AlternateContentClass must be an Descriptive Audio, Camera Angle, Parental Control, Censored, Commentary (Director), Commentary (Other), Sing, Alternate Scene, Sing Along, Trivia Track or Other."
-      }
-    },
-    "PromotionalClass": {
-      "transform": ["trim", "toEnumCase"],
-      "type": "string",
-      "enum": [
-        "Image Spots",
-        "Support Spots",
-        "Disaster Spots",
-        "Special Report Spots",
-        "Kids Elements",
-        "Animation Elements",
-        "Annual Meeting Spots",
-        "Award Spots",
-        "Seasonal Spots",
-        "NPR/PRI Spots",
-        "Digital Channel Spots",
-        "Channel Spots",
-        "PBS Services Spots",
-        "Tease",
-        "Long Lead Tease",
-        "Series Sell",
-        "Next On",
-        "Coming Up",
-        "Pledge Break",
-        "Episodic Promo",
-        "Radio Spot",
-        "One Time Only",
-        "Embedded Promo",
-        "KIDSC-Embedded Promo",
-        "Web Tags",
-        "Slate (For Air)",
-        "Promo-KIDSC-Embedded Promo",
-        "Broadcast Underwriter",
-        "On Air Offer",
-        "Broadcast Ad",
-        "DVD Trailer",
-        "EPK",
-        "Infomercial",
-        "Mobile",
-        "Preview",
-        "Sizzle Reel",
-        "Teaser",
-        "Theatrical Trailer",
-        "Trailer",
-        "UGC Site",
-        "Web",
-        "Other"
-      ],
-      "errorMessage": {
-        "type": "PromotionalClass must be a String",
-        "enum": "PromotionalClass must be an Image Spots, Support Spots, Disaster Spots, Special Report Spots, Kids Elements, Animation Elements, Annual Meeting Spots, Award Spots, Seasonal Spots, NPR/PRI Spots, Digital Channel Spots, Channel Spots, PBS Services Spots,Tease, Long Lead Tease, Series Sell, Next On, Coming Up, Pledge Break, Episodic Promo, Radio Spot, One Time Only, Embedded Promo, KIDSC-Embedded Promo, Web Tags, Slate (For Air), Promo-KIDSC-Embedded Promo, Broadcast Underwriter, On Air Offer, Broadcast Ad,  DVD Trailer,  EPK,  Infomercial,  Mobile,  Preview,  Sizzle Reel,  Teaser,  Theatrical Trailer,  Trailer,  UGC Site,  Web or Other."
-      }
-    },
-    "ReferentType": {
-      "transform": ["trim", "toEnumCase"],
-      "type": "string",
-      "enum": [
-        "Series",
-        "Season",
-        "TV",
-        "Movie",
-        "Short",
-        "Web",
-        "Compilation",
-        "Supplemental",
-        "Interactive"
-      ],
-      "errorMessage": {
-        "type": "ReferentType must be a String",
-        "enum": "ReferentType must be a Series, Season, TV, Movie, Short, Web, Compilation, Supplemental or Interactive irrepective to case."
-      }
-    },
-    "Title": {
-      "minLength": 1,
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "Title must be a String",
-        "minLength": "Title should have a minimum one character"
-      }
-    },
-    "ApproximateLength": {
-      "pattern": "^(.*)$",
-      "type": "string",
-      "errorMessage": {
-        "type": "ApproximateLength must be a String"
-      }
-    },
-    "SupportedWorkRelationship": {
-      "transform": ["trim", "toEnumCase"],
-      "type": "string",
-      "enum": ["isAlternateContentFor", "isPromotionFor", "isSupplementalTo"],
-      "errorMessage": {
-        "type": "SupportedWorkRelationship must be a String",
-        "enum": "SupportedWorkRelationship must be an isAlternateContentFor, isPromotionFor or isSupplementalTo irrepective to case."
-      }
-    },
-    "InteractiveInfo": {
-      "type": "object",
-      "minProperties": 1,
-      "errorMessage": {
-        "type": "InteractiveInfo must be an Object",
-        "minProperties": "InteractiveInfo should have at least one property"
-      },
-      "properties": {
-        "InteractiveClass": {
-          "transform": ["trim", "toEnumCase"],
-          "type": ["string", "null"],
-          "enum": [
-            "Application",
-            "Gallery",
-            "Immersive Experience",
-            "Mixed Media Experience",
-            "Other",
-            null
-          ],
-          "errorMessage": {
-            "type": "InteractiveClass must be a String or null",
-            "enum": "InteractiveClass must be an Application, Gallery, Immersive Experience, Mixed Media Experience or Other irrepective to case or null."
-          }
-        },
-        "InteractiveSubClass": {
-          "transform": ["trim", "toEnumCase"],
-          "type": ["string", "null"],
-          "enum": [
-            "Commerce",
-            "Comic",
-            "Game",
-            "Live Feed",
-            "AR",
-            "MR",
-            "VR",
-            "CPE",
-            "iTunes",
-            null
-          ],
-          "errorMessage": {
-            "type": "InteractiveSubClass must be a String or null",
-            "enum": "InteractiveSubClass must be a Commerce, Comic, Game, Live Feed, AR, MR, VR, CPE or iTunes irrepective to case or null."
-          }
-        }
-      }
-    },
-    "EntryList": {
-      "minItems": 1,
-      "type": "array",
-      "errorMessage": {
-        "type": "EntryList must be an Array",
-        "minItems": "EntryList should have a minimum one item"
-      },
-      "items": {
-        "required": ["EntryClass", "EntryContentUID"],
-        "type": "object",
-        "errorMessage": {
-          "type": "items should be an object",
-          "required": {
-            "EntryClass": "EntryClass is Required",
-            "EntryContentUID": "EntryContentUID is Required"
-          }
-        },
-        "additionalProperties": false,
-        "properties": {
-          "EntryClass": {
-            "type": "string",
-            "transform": ["trim", "toEnumCase"],
-            "enum": [
-              "Episode",
-              "Installment",
-              "Part",
-              "Season",
-              "Series",
-              "Manifestation",
-              "Compilation"
-            ],
-            "errorMessage": {
-              "type": "EntryClass must be a String",
-              "enum": "EntryClass must be an Series, Season, Episode, Installment, Part, Manifestation or Compilation irrespective to Case."
-            }
-          },
-          "EntryContentUID": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage": {
-              "type": "EntryContentUID must be a String"
-            }
-          }
-        }
-      }
-    },
-    "UseWindowTermList": {
-      "type": "array",
-      "uniqueItems": true,
-      "items": {
-        "required": ["Term"],
-        "type": "object",
-        "errorMessage": {
-          "type": "items should be an object",
-          "required": {
-            "Term": "Term is Required"
-          }
-        },
-        "properties": {
-          "Term": {
-            "minLength": 1,
-            "pattern": "^(\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(Z)?)?)\\/(\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(Z)?)?)$",
-            "type": "string",
-            "errorMessage": {
-              "type": "Term must be a String",
-              "minLength": "Term should not be empty or NULL",
-              "pattern": "Term must be a valid date range using one of these formats: 'YYYY-MM-DD' (or) 'YYYY-MM-DDTHH:MM:SSZ' (or) 'YYYY-MM-DDTHH:MM:SS' Example: '2025-09-23/2026-09-23' (or) '2025-09-23T00:00:00Z/2026-09-23T00:00:00'."
-            }
-          }
-        }
-      },
-      "errorMessage": {
-        "type": "UseWindowTermList must be an Array",
-        "uniqueItems": "UseWindowTermList contains a DUPLICATE value"
-      }
-    },
-    "AlternateContentIDList": {
-      "type": "array",
-      "uniqueItems": true,
-      "errorMessage": {
-        "type": "AlternateContentIDList must be an Array",
-        "uniqueItems": "AlternateContentIDList Contains a Duplicate Value"
-      },
-      "items": {
-        "required": ["AlternateContentID"],
-        "type": "object",
-        "properties": {
-          "AlternateContentID": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage": {
-              "type": "AlternateContentID must be a string"
-            }
-          }
-        },
-        "errorMessage": {
-          "type": "items should be an object",
-          "required": {
-            "AlternateContentID": "AlternateContentID is Required"
-          }
-        }
-      }
-    },
-    "OrganizationList": {
-      "type": "array",
-      "uniqueItems": true,
-      "errorMessage": {
-        "type": "OrganizationList must be an Array",
-        "uniqueItems": "OrganizationList contains duplicate values"
-      },
-      "items": {
-        "required": ["OrganizationID", "DisplayName", "Role"],
-        "type": "object",
-        "errorMessage": {
-          "type": "items should be an object",
-          "required": {
-            "DisplayName": "DisplayName is required for Organization",
-            "OrganizationID": "OrganizationID is required for Organization",
-            "Role": "Role is required for Organization"
-          }
-        },
-        "additionalProperties": false,
-        "properties": {
-          "OrganizationID": {
-            "type": "integer",
-            "format": "int32",
-            "errorMessage": {
-              "type": "OrganizationID must be an Integer",
-              "format": "OrganizationID must be in int32 format"
-            }
-          },
-          "DisplayName": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "minLength": 1,
-            "errorMessage": {
-              "type": "DisplayName should be string for Organization",
-              "minLength": "DisplayName should not be empty/null"
-            }
-          },
-          "Domain": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage": {
-              "type": "Domain must be a String for Organization"
-            }
-          },
-          "Role": {
-            "pattern": "^(.*)$",
-            "type": "string",
-            "errorMessage": {
-              "type": "Role must be a String for Organization"
-            }
-          },
-          "Phone": {
-            "pattern": "^(.*)$",
-            "type": ["string", "null"],
-            "errorMessage": {
-              "type": "Phone must be a String for Organization"
-            }
-          },
-          "PhoneType": {
-            "pattern": "^(.*)$",
-            "type": ["string", "null"],
-            "errorMessage": {
-              "type": "PhoneType must be a String for Organization"
-            }
-          },
-          "Address": {
-            "pattern": "^(.*)$",
-            "type": ["string", "null"],
-            "errorMessage": {
-              "type": "Address must be a String for Organization"
-            }
-          },
-          "ContactInfoList": {
-            "type": "array",
-            "minItems": 1,
-            "errorMessage": {
-              "type": "ContactInfoList must be an Array",
-              "minItems": "Minimum one contact info is required"
-            },
-            "items": {
-              "required": ["ContactID", "ContactName"],
-              "type": "object",
-              "errorMessage": {
-                "type": "items should be an object",
-                "required": {
-                  "ContactID": "ContactID is Required for ContactInfo",
-                  "ContactName": "ContactName is Required for ContactInfo"
-                }
-              },
-              "additionalProperties": false,
-              "properties": {
-                "ContactID": {
-                  "type": "integer",
-                  "format": "int32",
-                  "errorMessage": {
-                    "type": "ContactID must be an Integer",
-                    "format": "ContactID must be in int32 format"
-                  }
-                },
-                "Phone": {
-                  "pattern": "^(.*)$",
-                  "type": "string",
-                  "errorMessage": {
-                    "type": "Phone must be a String for ContactInfo"
-                  }
-                },
-                "PhoneType": {
-                  "pattern": "^(.*)$",
-                  "type": "string",
-                  "errorMessage": {
-                    "type": "PhoneType must be a String for ContactInfo"
-                  }
-                },
-                "Address": {
-                  "pattern": "^(.*)$",
-                  "type": "string",
-                  "errorMessage": {
-                    "type": "Address must be a String for ContactInfo"
-                  }
-                },
-                "PrimaryEmail": {
-                  "pattern": "^(.*)$",
-                  "type": "string",
-                  "errorMessage": {
-                    "type": "PrimaryEmail must be a String for ContactInfo"
-                  }
-                },
-                "ContactName": {
-                  "pattern": "^(.*)$",
-                  "type": "string",
-                  "minLength": 1,
-                  "errorMessage": {
-                    "type": "ContactName should be a String for ContactInfo",
-                    "minLength": "ContactName should not be empty/null"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "AuditFields": {
-      "type": "object",
-      "errorMessage": {
-        "type": "The AuditFields should be an object"
-      },
-      "additionalProperties": false,
-      "properties": {
-        "MasterSourceSystemRecordType": {
-          "minLength": 1,
-          "pattern": "^(.*)$",
-          "type": "string",
-          "errorMessage": {
-            "type": "MasterSourceSystemRecordType must be a String",
-            "minLength": "MasterSourceSystemRecordType should not be empty"
-          }
-        },
-        "CreatedBy": {
-          "type": "string",
-          "errorMessage": {
-            "type": "CreatedBy must be a String"
-          }
-        },
-        "UpdatedBy": {
-          "type": "string",
-          "errorMessage": {
-            "type": "UpdatedBy must be a String"
-          }
-        }
-      }
-    }
-  },
-  "if": {
-    "properties": {
-      "SupportedWorkRelationship": {
-        "transform": ["trim", "toEnumCase"],
-        "enum": ["isPromotionFor"]
-      }
-    },
-    "required": ["SupportedWorkRelationship"]
-  },
-  "then": {
-    "required": ["PromotionalClass"],
-    "properties": {
-      "SupplementalContentClass": false,
-      "AlternateContentClass": false
-    },
-    "errorMessage": {
-      "required": {
-        "PromotionalClass": "PromotionalClass is Required when SupportedWorkRelationship='isPromotionFor'"
-      },
-      "properties": {
-        "SupplementalContentClass": "If SupportedWorkRelationship is 'isPromotionFor', The 'SupplementalContentClass' field is not allowed.",
-        "AlternateContentClass": "If SupportedWorkRelationship is 'isPromotionFor', The 'AlternateContentClass' field is not allowed."
-      }
-    }
-  },
-  "else": {
-    "if": {
-      "properties": {
-        "SupportedWorkRelationship": {
-          "transform": ["trim", "toEnumCase"],
-          "enum": ["isAlternateContentFor"]
-        }
-      },
-      "required": ["SupportedWorkRelationship"]
-    },
-    "then": {
-      "required": ["AlternateContentClass"],
-      "properties": {
-        "PromotionalClass": false,
-        "SupplementalContentClass": false
-      },
-      "errorMessage": {
-        "required": {
-          "AlternateContentClass": "AlternateContentClass is Required when SupportedWorkRelationship='isAlternateContentFor'"
-        },
-        "properties": {
-          "PromotionalClass": "If SupportedWorkRelationship is 'isAlternateContentFor', The 'PromotionalClass' field is not allowed.",
-          "SupplementalContentClass": "If SupportedWorkRelationship is 'isAlternateContentFor', The 'SupplementalContentClass' field is not allowed."
-        }
-      }
-    },
-    "else": {
-      "if": {
-        "properties": {
-          "SupportedWorkRelationship": {
-            "transform": ["trim", "toEnumCase"],
-            "enum": ["isSupplementalTo"]
-          }
-        },
-        "required": ["SupportedWorkRelationship"]
-      },
-      "then": {
-        "required": ["SupplementalContentClass"],
-        "properties": {
-          "PromotionalClass": false,
-          "AlternateContentClass": false
-        },
-        "errorMessage": {
-          "required": {
-            "SupplementalContentClass": "SupplementalContentClass is Required when SupportedWorkRelationship='isSupplementalTo'"
-          },
-          "properties": {
-            "PromotionalClass": "If SupportedWorkRelationship is 'isSupplementalTo', The 'PromotionalClass' field is not allowed.",
-            "AlternateContentClass": "If SupportedWorkRelationship is 'isSupplementalTo', The 'AlternateContentClass' field is not allowed."
-          }
-        }
-      }
-    }
-  }
+	"title": "The Root Schema",
+	"type": "object",
+	"required": [
+		"StructuralType",
+		"Title",
+		"ApproximateLength",
+		"SupportedWorkRelationship"
+	],
+	"errorMessage": {
+		"type": "The request should be an object",
+		"required": {
+			"StructuralType": "StructuralType is Required",
+			"Title": "Title is Required",
+			"ApproximateLength": "ApproximateLength is Required",
+			"SupportedWorkRelationship": "SupportedWorkRelationship is Required"
+		}
+	},
+	"additionalProperties": false,
+	"properties": {
+		"StructuralType": {
+			"transform": [
+				"trim",
+				"toEnumCase"
+			],
+			"type": "string",
+			"enum": [
+				"Abstraction",
+				"Performance",
+				"Digital"
+			],
+			"errorMessage": {
+				"type": "StructuralType must be a String",
+				"enum": "StructuralType must be an Abstraction, Performance or Digital irrespective to Case."
+			}
+		},
+		"SupplementalContentClass": {
+			"transform": [
+				"trim",
+				"toEnumCase"
+			],
+			"type": "string",
+			"enum": [
+				"Image Spots",
+				"Support Spots",
+				"Disaster Spots",
+				"Special Report Spots",
+				"Kids Elements",
+				"Animation Elements",
+				"Annual Meeting Spots",
+				"Award Spots",
+				"Seasonal Spots",
+				"NPR/PRI Spots",
+				"Digital Channel Spots",
+				"Channel Spots",
+				"PBS Services Spots",
+				"Tease",
+				"Long Lead Tease",
+				"Series Sell",
+				"Next On",
+				"Logos",
+				"Web Tags",
+				"Product Offers",
+				"Literacy Tags",
+				"System Cue - Internal",
+				"System Cue - External",
+				"System Cue - PBS Kids",
+				"System Cue - PBS Kids Go!",
+				"System Cue - PBS News and Perspectives",
+				"Bug",
+				"Coming Up",
+				"NPR",
+				"Pledge Break",
+				"Open",
+				"Credits",
+				"Title",
+				"Episodic Promo",
+				"Filler",
+				"Radio Spot",
+				"One Time Only",
+				"Turnkey Break",
+				"Embedded Promo",
+				"KIDSC-Embedded Promo",
+				"Promo - Embedded Promo",
+				"Promo - Kids Elements",
+				"Promo - Tease",
+				"Promo - Next On",
+				"Overlay-Offer",
+				"Promo - Coming Up",
+				"Slate (For Air)",
+				"Promo - Series Sell",
+				"Overlay-Promo",
+				"Promo - Support Spots",
+				"Promo-KIDSC-Embedded Promo",
+				"Promo - Episodic Promo",
+				"Promo - Image Spots",
+				"Promo - One Time Only",
+				"Underwriting Spots",
+				"Behind the scenes",
+				"B-roll",
+				"Deleted Scene",
+				"Featurette",
+				"Interactivity",
+				"Interview",
+				"Making Of",
+				"Music",
+				"Outtake",
+				"Screen Test",
+				"Selected Clips",
+				"Other"
+			],
+			"errorMessage": {
+				"type": "SupplementalContentClass must be a String",
+				"enum": "SupplementalContentClass must be an Image Spots, Support Spots, Disaster Spots, Special Report Spots, Kids Elements, Animation Elements, Annual Meeting Spots, Award Spots, Seasonal Spots, NPR/PRI Spots, Digital Channel Spots, Channel Spots, PBS Services Spots, Tease, Long Lead Tease, Series Sell, Next On, Logos, Web Tags, Product Offers, Literacy Tags, System Cue - Internal, System Cue - External, System Cue - PBS Kids, System Cue - PBS Kids Go!, System Cue - PBS News and Perspectives, Bug, Coming Up, NPR, Pledge Break, Open, Credits, Title, Episodic Promo, Filler, Radio Spot, One Time Only, Turnkey Break, Embedded Promo, KIDSC-Embedded Promo, Promo - Embedded Promo, Promo - Kids Elements, Promo - Tease, Promo - Next On, Overlay-Offer, Promo - Coming Up, Slate (For Air), Promo - Series Sell, Overlay-Promo, Promo - Support Spots, Promo-KIDSC-Embedded Promo, Promo - Episodic Promo, Promo - Image Spots, Promo - One Time Only, Underwriting Spots, Behind the scenes, B-roll, Deleted Scene, Featurette, Interactivity, Interview, Making Of, Music, Outtake, Screen Test, Selected Clips, Other."
+			}
+		},
+		"AlternateContentClass": {
+			"transform": [
+				"trim",
+				"toEnumCase"
+			],
+			"type": "string",
+			"enum": [
+				"Descriptive Audio",
+				"Camera Angle",
+				"Parental Control",
+				"Censored",
+				"Commentary (Director)",
+				"Commentary (Other)",
+				"Sing",
+				"Alternate Scene",
+				"Sing Along",
+				"Trivia Track",
+				"Other"
+			],
+			"errorMessage": {
+				"type": "AlternateContentClass must be a String",
+				"enum": "AlternateContentClass must be an Descriptive Audio, Camera Angle, Parental Control, Censored, Commentary (Director), Commentary (Other), Sing, Alternate Scene, Sing Along, Trivia Track or Other."
+			}
+		},
+		"PromotionalClass": {
+			"transform": [
+				"trim",
+				"toEnumCase"
+			],
+			"type": "string",
+			"enum": [
+				"Image Spots",
+				"Support Spots",
+				"Disaster Spots",
+				"Special Report Spots",
+				"Kids Elements",
+				"Animation Elements",
+				"Annual Meeting Spots",
+				"Award Spots",
+				"Seasonal Spots",
+				"NPR/PRI Spots",
+				"Digital Channel Spots",
+				"Channel Spots",
+				"PBS Services Spots",
+				"Tease",
+				"Long Lead Tease",
+				"Series Sell",
+				"Next On",
+				"Coming Up",
+				"Pledge Break",
+				"Episodic Promo",
+				"Radio Spot",
+				"One Time Only",
+				"Embedded Promo",
+				"KIDSC-Embedded Promo",
+				"Web Tags",
+				"Slate (For Air)",
+				"Promo-KIDSC-Embedded Promo",
+				"Broadcast Underwriter",
+				"On Air Offer",
+				"Broadcast Ad",
+				"DVD Trailer",
+				"EPK",
+				"Infomercial",
+				"Mobile",
+				"Preview",
+				"Sizzle Reel",
+				"Teaser",
+				"Theatrical Trailer",
+				"Trailer",
+				"UGC Site",
+				"Web",
+				"Filler",
+				"Product Offers",
+				"Other"
+			],
+			"errorMessage": {
+				"type": "PromotionalClass must be a String",
+				"enum": "PromotionalClass must be an Image Spots, Support Spots, Disaster Spots, Special Report Spots, Kids Elements, Animation Elements, Annual Meeting Spots, Award Spots, Seasonal Spots, NPR/PRI Spots, Digital Channel Spots, Channel Spots, PBS Services Spots,Tease, Long Lead Tease, Series Sell, Next On, Coming Up, Pledge Break, Episodic Promo, Radio Spot, One Time Only, Embedded Promo, KIDSC-Embedded Promo, Web Tags, Slate (For Air), Promo-KIDSC-Embedded Promo, Broadcast Underwriter, On Air Offer, Broadcast Ad,  DVD Trailer,  EPK,  Infomercial,  Mobile,  Preview,  Sizzle Reel,  Teaser,  Theatrical Trailer,  Trailer,  UGC Site,  Web, Filler, Product Offers or Other."
+			}
+		},
+		"ReferentType": {
+			"transform": [
+				"trim",
+				"toEnumCase"
+			],
+			"type": "string",
+			"enum": [
+				"Series",
+				"Season",
+				"TV",
+				"Movie",
+				"Short",
+				"Web",
+				"Compilation",
+				"Supplemental",
+				"Interactive"
+			],
+			"errorMessage": {
+				"type": "ReferentType must be a String",
+				"enum": "ReferentType must be a Series, Season, TV, Movie, Short, Web, Compilation, Supplemental or Interactive irrespective to case."
+			}
+		},
+		"Title": {
+			"minLength": 1,
+			"pattern": "^(.*)$",
+			"type": "string",
+			"errorMessage": {
+				"type": "Title must be a String",
+				"minLength": "Title should have a minimum one character"
+			}
+		},
+		"ApproximateLength": {
+			"pattern": "^(.*)$",
+			"type": "string",
+			"errorMessage": {
+				"type": "ApproximateLength must be a String"
+			}
+		},
+		"SupportedWorkRelationship": {
+			"transform": [
+				"trim",
+				"toEnumCase"
+			],
+			"type": "string",
+			"enum": [
+				"isAlternateContentFor",
+				"isPromotionFor",
+				"isSupplementalTo"
+			],
+			"errorMessage": {
+				"type": "SupportedWorkRelationship must be a String",
+				"enum": "SupportedWorkRelationship must be an isAlternateContentFor, isPromotionFor or isSupplementalTo irrespective to case."
+			}
+		},
+		"InteractiveInfo": {
+			"type": "object",
+			"minProperties": 1,
+			"errorMessage": {
+				"type": "InteractiveInfo must be an Object",
+				"minProperties": "InteractiveInfo should have at least one property"
+			},
+			"properties": {
+				"InteractiveClass": {
+					"transform": [
+						"trim",
+						"toEnumCase"
+					],
+					"type": [
+						"string",
+						"null"
+					],
+					"enum": [
+						"Application",
+						"Gallery",
+						"Immersive Experience",
+						"Mixed Media Experience",
+						"Game",
+						"Interactivity",
+						"Image",
+						"Cross-Platform Extra",
+						"Skins",
+						"Commerce Experience",
+						"Digital Comic",
+						"Live Data Feed",
+						"Other",
+						null
+					],
+					"errorMessage": {
+						"type": "InteractiveClass must be a String or null",
+						"enum": "InteractiveClass must be one of the following values (case-insensitive): Application, Gallery, Immersive Experience, Mixed Media Experience, Game, Interactivity, Image, Cross-Platform Extra, Skins, Commerce Experience, Digital Comic, Live Data Feed, Other or null."
+					}
+				},
+				"InteractiveSubClass": {
+					"transform": [
+						"trim",
+						"toEnumCase"
+					],
+					"type": [
+						"string",
+						"null"
+					],
+					"enum": [
+						"Commerce",
+						"Comic",
+						"Game",
+						"Live Feed",
+						"AR",
+						"MR",
+						"VR",
+						"CPE",
+						"iTunes",
+						"Overlay Game",
+						"Standalone Game",
+						"Linear 360-degree video experience",
+						"Interactive Radio",
+						null
+					],
+					"errorMessage": {
+						"type": "InteractiveSubClass must be a String or null",
+						"enum": "InteractiveSubClass must be one of the following values (case-insensitive): Commerce, Comic, Game, Live Feed, AR, MR, VR, CPE, iTunes, Overlay Game, Standalone Game, Linear 360-degree video experience, Interactive Radio or null."
+					}
+				}
+			}
+		},
+		"EntryList": {
+			"minItems": 1,
+			"type": "array",
+			"errorMessage": {
+				"type": "EntryList must be an Array",
+				"minItems": "EntryList should have a minimum one item"
+			},
+			"items": {
+				"required": [
+					"EntryClass",
+					"EntryContentUID"
+				],
+				"type": "object",
+				"errorMessage": {
+					"type": "items should be an object",
+					"required": {
+						"EntryClass": "EntryClass is Required",
+						"EntryContentUID": "EntryContentUID is Required"
+					}
+				},
+				"additionalProperties": false,
+				"properties": {
+					"EntryClass": {
+						"type": "string",
+						"transform": [
+							"trim",
+							"toEnumCase"
+						],
+						"enum": [
+							"Episode",
+							"Installment",
+							"Part",
+							"Season",
+							"Series",
+							"Manifestation",
+							"Compilation"
+						],
+						"errorMessage": {
+							"type": "EntryClass must be a String",
+							"enum": "EntryClass must be an Series, Season, Episode, Installment, Part, Manifestation or Compilation irrespective to Case."
+						}
+					},
+					"EntryContentUID": {
+						"pattern": "^(.*)$",
+						"type": "string",
+						"errorMessage": {
+							"type": "EntryContentUID must be a String"
+						}
+					}
+				}
+			}
+		},
+		"UseWindowTermList": {
+			"type": "array",
+			"uniqueItems": true,
+			"items": {
+				"required": [
+					"Term"
+				],
+				"type": "object",
+				"errorMessage": {
+					"type": "items should be an object",
+					"required": {
+						"Term": "Term is Required"
+					}
+				},
+				"properties": {
+					"Term": {
+						"minLength": 1,
+						"pattern": "^(\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(Z)?)?)\\/(\\d{4}-\\d{2}-\\d{2}(T\\d{2}:\\d{2}:\\d{2}(Z)?)?)$",
+						"type": "string",
+						"errorMessage": {
+							"type": "Term must be a String",
+							"minLength": "Term should not be empty or NULL",
+							"pattern": "Term must be a valid date range using one of these formats: 'YYYY-MM-DD' (or) 'YYYY-MM-DDTHH:MM:SSZ' (or) 'YYYY-MM-DDTHH:MM:SS' Example: '2025-09-23/2026-09-23' (or) '2025-09-23T00:00:00Z/2026-09-23T00:00:00'."
+						}
+					}
+				}
+			},
+			"errorMessage": {
+				"type": "UseWindowTermList must be an Array",
+				"uniqueItems": "UseWindowTermList contains a DUPLICATE value"
+			}
+		},
+		"AlternateContentIDList": {
+			"type": "array",
+			"uniqueItems": true,
+			"errorMessage": {
+				"type": "AlternateContentIDList must be an Array",
+				"uniqueItems": "AlternateContentIDList Contains a Duplicate Value"
+			},
+			"items": {
+				"required": [
+					"AlternateContentID"
+				],
+				"type": "object",
+				"properties": {
+					"AlternateContentID": {
+						"pattern": "^(.*)$",
+						"type": "string",
+						"errorMessage": {
+							"type": "AlternateContentID must be a string"
+						}
+					}
+				},
+				"errorMessage": {
+					"type": "items should be an object",
+					"required": {
+						"AlternateContentID": "AlternateContentID is Required"
+					}
+				}
+			}
+		},
+		"OrganizationList": {
+			"type": "array",
+			"uniqueItems": true,
+			"errorMessage": {
+				"type": "OrganizationList must be an Array",
+				"uniqueItems": "OrganizationList contains duplicate values"
+			},
+			"items": {
+				"required": [
+					"OrganizationID",
+					"DisplayName",
+					"Role"
+				],
+				"type": "object",
+				"errorMessage": {
+					"type": "items should be an object",
+					"required": {
+						"DisplayName": "DisplayName is required for Organization",
+						"OrganizationID": "OrganizationID is required for Organization",
+						"Role": "Role is required for Organization"
+					}
+				},
+				"additionalProperties": false,
+				"properties": {
+					"OrganizationID": {
+						"type": "integer",
+						"format": "int32",
+						"errorMessage": {
+							"type": "OrganizationID must be an Integer",
+							"format": "OrganizationID must be in int32 format"
+						}
+					},
+					"DisplayName": {
+						"pattern": "^(.*)$",
+						"type": "string",
+						"minLength": 1,
+						"errorMessage": {
+							"type": "DisplayName should be string for Organization",
+							"minLength": "DisplayName should not be empty/null"
+						}
+					},
+					"Domain": {
+						"pattern": "^(.*)$",
+						"type": "string",
+						"errorMessage": {
+							"type": "Domain must be a String for Organization"
+						}
+					},
+					"Role": {
+						"pattern": "^(.*)$",
+						"type": "string",
+						"errorMessage": {
+							"type": "Role must be a String for Organization"
+						}
+					},
+					"Phone": {
+						"pattern": "^(.*)$",
+						"type": [
+							"string",
+							"null"
+						],
+						"errorMessage": {
+							"type": "Phone must be a String for Organization"
+						}
+					},
+					"PhoneType": {
+						"pattern": "^(.*)$",
+						"type": [
+							"string",
+							"null"
+						],
+						"errorMessage": {
+							"type": "PhoneType must be a String for Organization"
+						}
+					},
+					"Address": {
+						"pattern": "^(.*)$",
+						"type": [
+							"string",
+							"null"
+						],
+						"errorMessage": {
+							"type": "Address must be a String for Organization"
+						}
+					},
+					"ContactInfoList": {
+						"type": "array",
+						"minItems": 1,
+						"errorMessage": {
+							"type": "ContactInfoList must be an Array",
+							"minItems": "Minimum one contact info is required"
+						},
+						"items": {
+							"required": [
+								"ContactID",
+								"ContactName"
+							],
+							"type": "object",
+							"errorMessage": {
+								"type": "items should be an object",
+								"required": {
+									"ContactID": "ContactID is Required for ContactInfo",
+									"ContactName": "ContactName is Required for ContactInfo"
+								}
+							},
+							"additionalProperties": false,
+							"properties": {
+								"ContactID": {
+									"type": "integer",
+									"format": "int32",
+									"errorMessage": {
+										"type": "ContactID must be an Integer",
+										"format": "ContactID must be in int32 format"
+									}
+								},
+								"Phone": {
+									"pattern": "^(.*)$",
+									"type": "string",
+									"errorMessage": {
+										"type": "Phone must be a String for ContactInfo"
+									}
+								},
+								"PhoneType": {
+									"pattern": "^(.*)$",
+									"type": "string",
+									"errorMessage": {
+										"type": "PhoneType must be a String for ContactInfo"
+									}
+								},
+								"Address": {
+									"pattern": "^(.*)$",
+									"type": "string",
+									"errorMessage": {
+										"type": "Address must be a String for ContactInfo"
+									}
+								},
+								"PrimaryEmail": {
+									"pattern": "^(.*)$",
+									"type": "string",
+									"errorMessage": {
+										"type": "PrimaryEmail must be a String for ContactInfo"
+									}
+								},
+								"ContactName": {
+									"pattern": "^(.*)$",
+									"type": "string",
+									"minLength": 1,
+									"errorMessage": {
+										"type": "ContactName should be a String for ContactInfo",
+										"minLength": "ContactName should not be empty/null"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"AuditFields": {
+			"type": "object",
+			"errorMessage": {
+				"type": "The AuditFields should be an object"
+			},
+			"additionalProperties": false,
+			"properties": {
+				"MasterSourceSystemRecordType": {
+					"minLength": 1,
+					"pattern": "^(.*)$",
+					"type": "string",
+					"errorMessage": {
+						"type": "MasterSourceSystemRecordType must be a String",
+						"minLength": "MasterSourceSystemRecordType should not be empty"
+					}
+				},
+				"CreatedBy": {
+					"type": "string",
+					"errorMessage": {
+						"type": "CreatedBy must be a String"
+					}
+				},
+				"UpdatedBy": {
+					"type": "string",
+					"errorMessage": {
+						"type": "UpdatedBy must be a String"
+					}
+				}
+			}
+		}
+	},
+	"if": {
+		"properties": {
+			"SupportedWorkRelationship": {
+				"transform": [
+					"trim",
+					"toEnumCase"
+				],
+				"enum": [
+					"isPromotionFor"
+				]
+			}
+		},
+		"required": [
+			"SupportedWorkRelationship"
+		]
+	},
+	"then": {
+		"required": [
+			"PromotionalClass"
+		],
+		"properties": {
+			"SupplementalContentClass": false,
+			"AlternateContentClass": false
+		},
+		"errorMessage": {
+			"required": {
+				"PromotionalClass": "PromotionalClass is Required when SupportedWorkRelationship='isPromotionFor'"
+			},
+			"properties": {
+				"SupplementalContentClass": "If SupportedWorkRelationship is 'isPromotionFor', The 'SupplementalContentClass' field is not allowed.",
+				"AlternateContentClass": "If SupportedWorkRelationship is 'isPromotionFor', The 'AlternateContentClass' field is not allowed."
+			}
+		}
+	},
+	"else": {
+		"if": {
+			"properties": {
+				"SupportedWorkRelationship": {
+					"transform": [
+						"trim",
+						"toEnumCase"
+					],
+					"enum": [
+						"isAlternateContentFor"
+					]
+				}
+			},
+			"required": [
+				"SupportedWorkRelationship"
+			]
+		},
+		"then": {
+			"required": [
+				"AlternateContentClass"
+			],
+			"properties": {
+				"PromotionalClass": false,
+				"SupplementalContentClass": false
+			},
+			"errorMessage": {
+				"required": {
+					"AlternateContentClass": "AlternateContentClass is Required when SupportedWorkRelationship='isAlternateContentFor'"
+				},
+				"properties": {
+					"PromotionalClass": "If SupportedWorkRelationship is 'isAlternateContentFor', The 'PromotionalClass' field is not allowed.",
+					"SupplementalContentClass": "If SupportedWorkRelationship is 'isAlternateContentFor', The 'SupplementalContentClass' field is not allowed."
+				}
+			}
+		},
+		"else": {
+			"if": {
+				"properties": {
+					"SupportedWorkRelationship": {
+						"transform": [
+							"trim",
+							"toEnumCase"
+						],
+						"enum": [
+							"isSupplementalTo"
+						]
+					}
+				},
+				"required": [
+					"SupportedWorkRelationship"
+				]
+			},
+			"then": {
+				"required": [
+					"SupplementalContentClass"
+				],
+				"properties": {
+					"PromotionalClass": false,
+					"AlternateContentClass": false
+				},
+				"errorMessage": {
+					"required": {
+						"SupplementalContentClass": "SupplementalContentClass is Required when SupportedWorkRelationship='isSupplementalTo'"
+					},
+					"properties": {
+						"PromotionalClass": "If SupportedWorkRelationship is 'isSupplementalTo', The 'PromotionalClass' field is not allowed.",
+						"AlternateContentClass": "If SupportedWorkRelationship is 'isSupplementalTo', The 'AlternateContentClass' field is not allowed."
+					}
+				}
+			}
+		}
+	}
 }
