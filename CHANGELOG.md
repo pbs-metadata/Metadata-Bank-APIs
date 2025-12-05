@@ -1,3 +1,5 @@
+## v1.3.8
+   * MBANK v1.3.8 - Added new Enum values for PromotionalClass, InteractiveClass and InteractiveSubClass field of Supplemental entity.
 ## v1.3.7
    * MBANK v1.3.7 - New 2 fields InteractiveClass and InteractiveSubClass are added Supplemental entity.
    * MBANK v1.3.7 - Added new Enum value "Supplemental" to ReferentType of Supplemental Entity.
