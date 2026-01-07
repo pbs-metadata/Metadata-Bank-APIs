@@ -1,3 +1,6 @@
+## v1.3.9
+   * MBANK v1.3.9 - Added new Enum value Interactive for ReferentType of Edit and Supplemental POST and PUT JSON schemas.
+   * MBANK v1.3.9 - New Search Param ParentID is added to showSchedule Searc which supports Episode/Supplemental entity search
 ## v1.3.8
    * MBANK v1.3.8 - Added new Enum values for PromotionalClass, InteractiveClass and InteractiveSubClass field of Supplemental entity.
 ## v1.3.7

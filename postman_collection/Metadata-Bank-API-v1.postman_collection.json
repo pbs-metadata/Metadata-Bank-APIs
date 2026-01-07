@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "fbf4e095-cf2f-4020-a206-81572299830c",
-		"name": "Metadata-Bank-API-v1.3.7",
+		"_postman_id": "37fa67f7-0ebf-4d6e-b736-4b52a4430519",
+		"name": "Metadata-Bank-API-v1.3.9",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "5890028"
 	},
@@ -2886,7 +2886,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseurl}}/showschedule?supplementalId=cid:org:pbs.org:Supplemental81742",
+									"raw": "{{baseurl}}/showschedule?episodeId=cid:org:pbs.org:Episode26799&providersource=HD01",
 									"host": [
 										"{{baseurl}}"
 									],
@@ -2906,13 +2906,11 @@
 										},
 										{
 											"key": "episodeId",
-											"value": "cid:org:pbs.org:Episode26799",
-											"disabled": true
+											"value": "cid:org:pbs.org:Episode26799"
 										},
 										{
 											"key": "providersource",
-											"value": "SIXPBS",
-											"disabled": true
+											"value": "HD01"
 										},
 										{
 											"key": "query-condition",
@@ -2920,8 +2918,9 @@
 											"disabled": true
 										},
 										{
-											"key": "supplementalId",
-											"value": "cid:org:pbs.org:Supplemental81742"
+											"key": "parentId",
+											"value": "cid:org:pbs.org:Supplemental81742",
+											"disabled": true
 										}
 									]
 								}

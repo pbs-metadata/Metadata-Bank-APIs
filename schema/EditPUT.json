@@ -26,11 +26,12 @@
         "Short",
         "Web",
         "Compilation",
-        "Supplemental"
+        "Supplemental",
+        "Interactive"
       ],
       "errorMessage": {
         "type": "ReferentType must be a String",
-        "enum": "ReferentType must be a Series, Season, TV, Movie, Short, Web, Compilation or Supplemental irrepective to case."
+        "enum": "ReferentType must be a Series, Season, TV, Movie, Short, Web, Compilation, Supplemental or Interactive irrepective to case."
       }
     },
     "FileDeliveryStatus": {
