@@ -8154,11 +8154,12 @@
         "Segment",
         "Special",
         "Standalone",
-        "one-time-only"
+        "one-time-only",
+        "Composite"
       ],
       "errorMessage": {
         "type": "EpisodeClass must be a String",
-        "enum": "EpisodeClass must be a Main, Omnibus, Pilot, Recut, Segment, Special, Standalone or one-time-only irrepective to case."
+        "enum": "EpisodeClass must be a Main, Omnibus, Pilot, Recut, Segment, Special, Standalone, one-time-only or Composite irrepective to case."
       }
     },
     "PrimaryGenre": {
