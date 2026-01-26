@@ -1,3 +1,5 @@
+## v1.3.10
+   * MBANK v1.3.10 - Added new Enum value Composite for EpisodeClass of Episode POST and PUT JSON schemas.
 ## v1.3.9
    * MBANK v1.3.9 - Added new Enum value Interactive for ReferentType of Edit and Supplemental POST and PUT JSON schemas.
    * MBANK v1.3.9 - New Search Param ParentID is added to showSchedule Searc which supports Episode/Supplemental entity search
