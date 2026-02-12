@@ -1,3 +1,5 @@
+## v1.3.11
+   * MBANK v1.3.11 - Added new Enum values for PromotionalClass, SupplementalContentClass and AlternateContentClass fields of Supplemental entity.
 ## v1.3.10
    * MBANK v1.3.10 - Added new Enum value Composite for EpisodeClass of Episode POST and PUT JSON schemas.
 ## v1.3.9
