@@ -1,3 +1,7 @@
+## v1.3.13
+   * MBANK v1.3.13 - Postman collection - Allow additional MediaContext values related to “Clip” & “Excerpt Streaming” for Permission. 
+   * MBANK v1.3.13 - Postman collection -  Added new endpoints to add new Entry Content and remove the existing Entry Content from Segment Episode.
+   * MBANK v1.3.13 - Added new field EntryList along with EntryClass, EntryNumber and EntryContentUID for Segment Episode in Episode POST, EntryList POST schemas.   
 ## v1.3.11
    * MBANK v1.3.11 - Added new Enum values for PromotionalClass, SupplementalContentClass and AlternateContentClass fields of Supplemental entity.
 ## v1.3.10

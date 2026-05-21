@@ -1,0 +1,145 @@
+{
+  "type": "object",
+  "if": {
+    "required": ["EntryList"]
+  },
+  "then": {
+    "$ref": "#/$defs/EntryListPayload"
+  },
+  "else": {
+    "if": {
+      "required": ["EntryContentUID"]
+    },
+    "then": {
+      "$ref": "#/$defs/SingleEntryPayload"
+    },
+    "else": {
+      "not": {},
+      "errorMessage": {
+        "not": "Either EntryList or EntryContentUID is required. Supported payloads are either: 1) Single EntryContentUID payload with EntryClass, EntryNumber, EntryContentUID and optional AuditFields, OR 2) Entry list payload with EntryList and optional AuditFields."
+      }
+    }
+  },
+  "$defs": {
+    "SingleEntryPayload": {
+      "type": "object",
+      "required": ["EntryClass", "EntryContentUID", "EntryNumber"],
+      "additionalProperties": false,
+      "errorMessage": {
+        "type": "The request should be an object",
+        "required": {
+          "EntryClass": "EntryClass is Required",
+          "EntryContentUID": "EntryContentUID is Required",
+          "EntryNumber": "EntryNumber is Required"
+        },
+        "additionalProperties": "Only EntryClass, EntryNumber, EntryContentUID and AuditFields are allowed for single EntryContentUID payload"
+      },
+      "properties": {
+        "EntryClass": {
+          "$ref": "#/$defs/EntryClass"
+        },
+        "EntryNumber": {
+          "$ref": "#/$defs/EntryNumber"
+        },
+        "EntryContentUID": {
+          "$ref": "#/$defs/EntryContentUID"
+        },
+        "AuditFields": {
+          "$ref": "#/$defs/AuditFields"
+        }
+      }
+    },
+    "EntryListPayload": {
+      "type": "object",
+      "required": ["EntryList"],
+      "additionalProperties": false,
+      "errorMessage": {
+        "type": "The request must be an object",
+        "required": {
+          "EntryList": "EntryList is Required"
+        },
+        "additionalProperties": "Invalid payload. Supported payloads are either: 1) Single EntryContentUID payload with EntryClass, EntryNumber, EntryContentUID and optional AuditFields, OR 2) Entry list payload with EntryList and optional AuditFields."
+      },
+      "properties": {
+        "EntryList": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItemProperties": ["EntryContentUID"],
+          "errorMessage": {
+            "uniqueItemProperties": "EntryList Contains a Duplicate EntryContentUID",
+            "type": "EntryList must be an Array",
+            "minItems": "EntryList must have a minimum one item"
+          },
+          "items": {
+            "type": "object",
+            "required": ["EntryClass", "EntryContentUID", "EntryNumber"],
+            "additionalProperties": false,
+            "errorMessage": {
+              "type": "EntryList items must be an object",
+              "additionalProperties": "Only EntryClass, EntryNumber and EntryContentUID are allowed inside EntryList items",
+              "required": {
+                "EntryClass": "EntryClass is Required",
+                "EntryContentUID": "EntryContentUID is Required",
+                "EntryNumber": "EntryNumber is Required"
+              }
+            },
+            "properties": {
+              "EntryClass": {
+                "$ref": "#/$defs/EntryClass"
+              },
+              "EntryNumber": {
+                "$ref": "#/$defs/EntryNumber"
+              },
+              "EntryContentUID": {
+                "$ref": "#/$defs/EntryContentUID"
+              }
+            }
+          }
+        },
+        "AuditFields": {
+          "$ref": "#/$defs/AuditFields"
+        }
+      }
+    },
+    "EntryClass": {
+      "type": "string",
+      "transform": ["trim", "toEnumCase"],
+      "enum": ["Episode"],
+      "errorMessage": {
+        "type": "EntryClass must be a String",
+        "enum": "EntryClass must be an 'Episode' irrespective of case."
+      }
+    },
+    "EntryNumber": {
+      "type": "string",
+      "pattern": "^[1-9]\\d*$",
+      "errorMessage": {
+        "type": "EntryNumber must be a String",
+        "pattern": "EntryNumber is invalid. It must be a non-zero positive number."
+      }
+    },
+    "EntryContentUID": {
+      "type": "string",
+      "pattern": "^cid:org:pbs\\.org:Episode\\d+$",
+      "errorMessage": {
+        "type": "EntryContentUID must be a String",
+        "pattern": "EntryContentUID must be an Episode, e.g. cid:org:pbs.org:EpisodeXXX"
+      }
+    },
+    "AuditFields": {
+      "type": "object",
+      "additionalProperties": false,
+      "errorMessage": {
+        "type": "AuditFields must be an object"
+      },
+      "properties": {
+        "UpdatedBy": {
+          "type": "string",
+          "errorMessage": {
+            "type": "AuditFields - UpdatedBy must be a String"
+          }
+        }
+      }
+    }
+  }
+}

@@ -25,7 +25,6 @@
   "properties": {
     "ParentUID": {
       "minLength": 1,
-      "pattern": "^(.*)$",
       "type": "string",
       "errorMessage": {
         "type": "ParentUID must be a String",
@@ -60,7 +59,6 @@
       }
     },
     "EntityType": {
-      "pattern": "^(.*)$",
       "type": "string",
       "errorMessage": {
         "type": "EntityType must be a String"
@@ -76,7 +74,6 @@
     },
     "Title": {
       "minLength": 1,
-      "pattern": "^(.*)$",
       "type": "string",
       "errorMessage": {
         "type": "Title must be a String",
@@ -85,7 +82,6 @@
     },
     "TitleClass": {
       "minLength": 1,
-      "pattern": "^(.*)$",
       "type": "string",
       "errorMessage": {
         "type": "TitleClass must be a String",
@@ -93,14 +89,12 @@
       }
     },
     "Title120": {
-      "pattern": "^(.*)$",
       "type": "string",
       "errorMessage": {
         "type": "Title120 must be a String"
       }
     },
     "TitleLong": {
-      "pattern": "^(.*)$",
       "type": "string",
       "errorMessage": {
         "type": "TitleLong must be a String"
@@ -108,7 +102,6 @@
     },
     "Title19": {
       "maxLength": 19,
-      "pattern": "^(.*)$",
       "type": "string",
       "errorMessage": {
         "type": "Title19 must be a String and maximum 19 characters",
@@ -8054,7 +8047,6 @@
           "items": {
             "type": "string",
             "minLength": 1,
-            "pattern": "^(.*)$",
             "errorMessage": {
               "type": "Mood items must be a String",
               "minLength": "Mood items should have a minimum one character"
@@ -8066,7 +8058,6 @@
           "items": {
             "type": "string",
             "minLength": 1,
-            "pattern": "^(.*)$",
             "errorMessage": {
               "type": "Theme items must be a String",
               "minLength": "Theme items should have a minimum one character"
@@ -8078,7 +8069,6 @@
           "items": {
             "type": "string",
             "minLength": 1,
-            "pattern": "^(.*)$",
             "errorMessage": {
               "type": "Character items must be a String",
               "minLength": "Character items should have a minimum one character"
@@ -8090,7 +8080,6 @@
           "items": {
             "type": "string",
             "minLength": 1,
-            "pattern": "^(.*)$",
             "errorMessage": {
               "type": "Setting items must be a String",
               "minLength": "Setting items should have a minimum one character"
@@ -8102,7 +8091,6 @@
           "items": {
             "type": "string",
             "minLength": 1,
-            "pattern": "^(.*)$",
             "errorMessage": {
               "type": "Subject items must be a String",
               "minLength": "Subject items should have a minimum one character"
@@ -8114,7 +8102,6 @@
           "items": {
             "type": "string",
             "minLength": 1,
-            "pattern": "^(.*)$",
             "errorMessage": {
               "type": "General items must be a String",
               "minLength": "General items should have a minimum one character"
@@ -8126,7 +8113,6 @@
           "items": {
             "type": "string",
             "minLength": 1,
-            "pattern": "^(.*)$",
             "errorMessage": {
               "type": "TimePeriod items must be a String",
               "minLength": "TimePeriod items should have a minimum one character"
@@ -8564,7 +8550,6 @@
     },
     "ApproximateLength": {
       "minLength": 1,
-      "pattern": "^(.*)$",
       "type": "string",
       "errorMessage": {
         "type": "ApproximateLength must be a String",
@@ -8592,7 +8577,6 @@
       },
       "properties": {
         "PrimaryMode": {
-          "pattern": "^(.*)$",
           "type": "string",
           "errorMessage": {
             "type": "PrimaryMode must be a String"
@@ -24479,7 +24463,6 @@
         "additionalProperties": false,
         "properties": {
           "ContentID": {
-            "pattern": "^(.*)$",
             "type": "string",
             "errorMessage": {
               "type": "ContentID must be a String"
@@ -24571,14 +24554,12 @@
             }
           },
           "TalentID": {
-            "pattern": "^(.*)$",
             "type": "string",
             "errorMessage": {
               "type": "TalentID must be a String for CreditsList"
             }
           },
           "DisplayName": {
-            "pattern": "^(.*)$",
             "type": "string",
             "errorMessage": {
               "type": "DisplayName must be a String for CreditsList"
@@ -24614,7 +24595,6 @@
             }
           },
           "DisplayName": {
-            "pattern": "^(.*)$",
             "type": "string",
             "minLength": 1,
             "errorMessage": {
@@ -24623,35 +24603,30 @@
             }
           },
           "Domain": {
-            "pattern": "^(.*)$",
             "type": "string",
             "errorMessage": {
               "type": "Domain must be a String for Organization"
             }
           },
           "Role": {
-            "pattern": "^(.*)$",
             "type": "string",
             "errorMessage": {
               "type": "Role must be a String for Organization"
             }
           },
           "Phone": {
-            "pattern": "^(.*)$",
             "type": ["string", "null"],
             "errorMessage": {
               "type": "Phone must be a String for Organization"
             }
           },
           "PhoneType": {
-            "pattern": "^(.*)$",
             "type": ["string", "null"],
             "errorMessage": {
               "type": "PhoneType must be a String for Organization"
             }
           },
           "Address": {
-            "pattern": "^(.*)$",
             "type": ["string", "null"],
             "errorMessage": {
               "type": "Address must be a String for Organization"
@@ -24685,35 +24660,30 @@
                   }
                 },
                 "Phone": {
-                  "pattern": "^(.*)$",
                   "type": "string",
                   "errorMessage": {
                     "type": "Phone must be a String for ContactInfo"
                   }
                 },
                 "PhoneType": {
-                  "pattern": "^(.*)$",
                   "type": "string",
                   "errorMessage": {
                     "type": "PhoneType must be a String for ContactInfo"
                   }
                 },
                 "Address": {
-                  "pattern": "^(.*)$",
                   "type": "string",
                   "errorMessage": {
                     "type": "Address must be a String for ContactInfo"
                   }
                 },
                 "PrimaryEmail": {
-                  "pattern": "^(.*)$",
                   "type": "string",
                   "errorMessage": {
                     "type": "PrimaryEmail must be a String for ContactInfo"
                   }
                 },
                 "ContactName": {
-                  "pattern": "^(.*)$",
                   "type": "string",
                   "minLength": 1,
                   "errorMessage": {
@@ -24753,7 +24723,6 @@
       "properties": {
         "MasterSourceSystemRecordType": {
           "minLength": 1,
-          "pattern": "^(.*)$",
           "type": "string",
           "errorMessage": {
             "type": "MasterSourceSystemRecordType must be a String",
@@ -24772,6 +24741,78 @@
             "type": "UpdatedBy must be a String"
           }
         }
+      }
+    },
+    "EntryList": {
+      "minItems": 1,
+      "type": "array",
+      "uniqueItemProperties": ["EntryContentUID"],
+      "errorMessage": {
+        "uniqueItemProperties": "EntryList Contains a Duplicate EntryContentUID",
+        "type": "EntryList must be an Array",
+        "minItems": "EntryList must have a minimum one item"
+      },
+      "items": {
+        "required": ["EntryClass", "EntryContentUID", "EntryNumber"],
+        "type": "object",
+        "errorMessage": {
+          "type": "EntryList items must be an object",
+          "required": {
+            "EntryClass": "EntryClass is Required",
+            "EntryContentUID": "EntryContentUID is Required",
+            "EntryNumber": "EntryNumber is Required"
+          }
+        },
+        "properties": {
+          "EntryClass": {
+            "type": "string",
+            "transform": ["trim", "toEnumCase"],
+            "enum": ["Episode"],
+            "errorMessage": {
+              "type": "EntryClass must be a String",
+              "enum": "EntryClass must be an 'Episode' irrespective of case."
+            }
+          },
+          "EntryNumber": {
+            "type": "string",
+            "pattern": "^[1-9]\\d*$",
+            "errorMessage": {
+              "type": "EntryNumber must be a String",
+              "pattern": "EntryNumber is invalid. It must be a non-zero positive number."
+            }
+          },
+          "EntryContentUID": {
+            "pattern": "^cid:org:pbs\\.org:Episode\\d+$",
+            "type": "string",
+            "errorMessage": {
+              "type": "EntryContentUID must be a String",
+              "pattern": "EntryContentUID must an Episode (e.g. cid:org:pbs.org:EpisodeXXX )"
+            }
+          }
+        }
+      }
+    }
+  },
+  "if": {
+    "properties": {
+      "EpisodeClass": { "const": "Segment" }
+    }
+  },
+  "then": {
+    "required": ["EntryList"],
+    "errorMessage": {
+      "required": {
+        "EntryList": "EntryList is required when EpisodeClass is 'Segment'"
+      }
+    }
+  },
+  "else": {
+    "properties": {
+      "EntryList": false
+    },
+    "errorMessage": {
+      "properties": {
+        "EntryList": "EntryList is allowed only when EpisodeClass is 'Segment'"
       }
     }
   }
