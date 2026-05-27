@@ -38,7 +38,6 @@
         "B-roll",
         "Bug",
         "Channel Spots",
-        "Clip",
         "Coming Up",
         "Credits",
         "Deleted Scene",
@@ -48,11 +47,9 @@
         "Episodic Promo",
         "Featurette",
         "Filler",
-        "Gag reel",
         "Image Spots",
         "Interactivity",
         "Interview",
-        "Kids Elements",
         "KIDSC-Embedded Promo",
         "Literacy Tags",
         "Logos",
@@ -84,6 +81,7 @@
         "Radio Spot",
         "Screen Test",
         "Seasonal Spots",
+        "Selected Clips",
         "Series Sell",
         "Slate (For Air)",
         "Special Report Spots",
@@ -102,23 +100,19 @@
       ],
       "errorMessage": {
         "type": "SupplementalContentClass must be a String",
-        "enum": "SupplementalContentClass must be an Animation Elements, Annual Meeting Spots, Award Spots, Behind the scenes, B-roll, Bug, Channel Spots, Clip, Coming Up, Credits, Deleted Scene, Digital Channel Spots, Disaster Spots, Embedded Promo, Episodic Promo, Featurette, Filler, Gag reel, Image Spots, Interactivity, Interview, Kids Elements, KIDSC-Embedded Promo, Literacy Tags, Logos, Long Lead Tease, Making Of, Music, Next On, NPR, NPR/PRI Spots, One Time Only, Open, Outtake, Overlay-Offer, Overlay-Promo, PBS Services Spots, Pledge Break, Product Offers, Promo - Coming Up, Promo - Embedded Promo, Promo - Episodic Promo, Promo - Image Spots, Promo - Kids Elements, Promo - Next On, Promo - One Time Only, Promo - Series Sell, Promo - Support Spots, Promo - Tease, Promo-KIDSC-Embedded Promo, Radio Spot, Screen , Seasonal Spots, Series Sell, Slate (For Air), Special Report Spots, Support Spots, System Cue - External, System Cue - Internal, System Cue - PBS Kids, System Cue - PBS Kids Go!, System Cue - PBS News and Perspectives, Tease, Title, Turnkey Break, Underwriting Spots, Web Tags or Other."
+        "enum": "SupplementalContentClass must be an Animation Elements, Annual Meeting Spots, Award Spots, Behind the scenes, B-roll, Bug, Channel Spots, Coming Up, Credits, Deleted Scene, Digital Channel Spots, Disaster Spots, Embedded Promo, Episodic Promo, Featurette, Filler, Image Spots, Interactivity, Interview, KIDSC-Embedded Promo, Literacy Tags, Logos, Long Lead Tease, Making Of, Music, Next On, NPR, NPR/PRI Spots, One Time Only, Open, Outtake, Overlay-Offer, Overlay-Promo, PBS Services Spots, Pledge Break, Product Offers, Promo - Coming Up, Promo - Embedded Promo, Promo - Episodic Promo, Promo - Image Spots, Promo - Kids Elements, Promo - Next On, Promo - One Time Only, Promo - Series Sell, Promo - Support Spots, Promo - Tease, Promo-KIDSC-Embedded Promo, Radio Spot, Screen, Seasonal Spots, Selected Clips, Series Sell, Slate (For Air), Special Report Spots, Support Spots, System Cue - External, System Cue - Internal, System Cue - PBS Kids, System Cue - PBS Kids Go!, System Cue - PBS News and Perspectives, Tease, Title, Turnkey Break, Underwriting Spots, Web Tags or Other."
       }
     },
     "AlternateContentClass": {
       "transform": ["trim", "toEnumCase"],
       "type": "string",
       "enum": [
-        "Alternate Beginning",
-        "Alternate Ending",
         "Alternate Scene",
         "Camera Angle",
         "Censored",
         "Commentary (Director)",
         "Commentary (Other)",
-        "Credits",
         "Descriptive Audio",
-        "Extended Scene",
         "Parental Control",
         "Sing",
         "Sing Along",
@@ -127,7 +121,7 @@
       ],
       "errorMessage": {
         "type": "AlternateContentClass must be a String",
-        "enum": "AlternateContentClass must be an Alternate Beginning, Alternate Ending, Alternate Scene, Camera Angle, Censored, Commentary (Director), Commentary (Other), Credits, Descriptive Audio, Extended Scene, Parental Control, Sing, Sing Along, Trivia Track or Other."
+        "enum": "AlternateContentClass must be an Alternate Scene, Camera Angle, Censored, Commentary (Director), Commentary (Other), Descriptive Audio, Parental Control, Sing, Sing Along, Trivia Track or Other."
       }
     },
     "PromotionalClass": {
@@ -138,6 +132,7 @@
         "Annual Meeting Spots",
         "Award Spots",
         "Broadcast Ad",
+        "Broadcast Underwriter",
         "Channel Spots",
         "Coming Up",
         "Digital Channel Spots",
@@ -146,15 +141,12 @@
         "Embedded Promo",
         "Episodic Promo",
         "EPK",
-        "Excerpt",
         "Filler",
-        "Funder",
         "Image Spots",
         "Infomercial",
         "Kids Elements",
         "KIDSC-Embedded Promo",
         "Long Lead Tease",
-        "Long Preview",
         "Mobile",
         "Next On",
         "NPR/PRI Spots",
@@ -164,17 +156,14 @@
         "Pledge Break",
         "Preview",
         "Product Offers",
-        "Promo",
         "Promo-KIDSC-Embedded Promo",
         "Radio Spot",
         "Seasonal Spots",
         "Series Sell",
-        "Short Preview",
         "Sizzle Reel",
         "Slate (For Air)",
         "Special Report Spots",
         "Support Spots",
-        "Talent Spot",
         "Tease",
         "Teaser",
         "Theatrical Trailer",
@@ -186,7 +175,7 @@
       ],
       "errorMessage": {
         "type": "PromotionalClass must be a String",
-        "enum": "PromotionalClass must be an Animation Elements, Annual Meeting Spots, Award Spots, Broadcast Ad, Channel Spots, Coming Up, Digital Channel Spots, Disaster Spots, DVD Trailer, Embedded Promo, Episodic Promo, EPK, Excerpt, Filler, Funder, Image Spots, Infomercial, Kids Elements, KIDSC-Embedded Promo, Long Lead Tease, Long Preview, Mobile, Next On, NPR/PRI Spots, On Air Offer, One Time Only, PBS Services Spots, Pledge Break, Preview, Product Offers, Promo, Promo-KIDSC-Embedded Promo, Radio Spot, Seasonal Spots, Series Sell, Short Preview, Sizzle Reel, Slate (For Air), Special Report Spots, Support Spots, Talent Spot, Tease, Teaser, Theatrical Trailer, Trailer, UGC Site, Web, Web Tags or Other."
+        "enum": "PromotionalClass must be an Animation Elements, Annual Meeting Spots, Award Spots, Broadcast Ad, Broadcast Underwriter, Channel Spots, Coming Up, Digital Channel Spots, Disaster Spots, DVD Trailer, Embedded Promo, Episodic Promo, EPK, Filler, Image Spots, Infomercial, Kids Elements, KIDSC-Embedded Promo, Long Lead Tease, Mobile, Next On, NPR/PRI Spots, On Air Offer, One Time Only, PBS Services Spots, Pledge Break, Preview, Product Offers, Promo-KIDSC-Embedded Promo, Radio Spot, Seasonal Spots, Series Sell, Sizzle Reel, Slate (For Air), Special Report Spots, Support Spots, Tease, Teaser, Theatrical Trailer, Trailer, UGC Site, Web, Web Tags or Other."
       }
     },
     "ReferentType": {
