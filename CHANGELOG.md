@@ -1,3 +1,6 @@
+## v1.4.3
+   * MBANK v1.4.3 - Postman collection - Added new datetime field "GlobalOriginalReleaseDate" in Series, Season, Episode, Edit, Manifestation and Supplemental entities
+   * MBANK v1.4.3 - Schema - Added new datetime field "GlobalOriginalReleaseDate" for Series, Season, Episode, Edit, Manifestation and Supplemental entities POST, PUT schemas.
 ## v1.3.13
    * MBANK v1.3.13 - Postman collection - Allow additional MediaContext values related to “Clip” & “Excerpt Streaming” for Permission. 
    * MBANK v1.3.13 - Postman collection -  Added new endpoints to add new Entry Content and remove the existing Entry Content from Segment Episode.

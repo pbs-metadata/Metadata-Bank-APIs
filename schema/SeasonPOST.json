@@ -205,6 +205,12 @@
         "enum": "USTVRating must be one of the given values -  TV-Y, TV-Y7, TV-G, TV-PG, TV-14, TV-MA or E irrespective to case. "
       }
     },
+    "GlobalOriginalReleaseDate": {
+      "type": ["string", "null"],
+      "format": "iso-date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z?$",
+      "errorMessage": "GlobalOriginalReleaseDate must be a valid UTC date-time in the format yyyy-MM-ddTHH:mm:ss, with an optional trailing Z (for example, 2027-05-01T10:30:45 or 2027-05-01T10:30:45Z). The value may also be null."
+    },
     "ContentIDList": {
       "type": "array",
       "items": {
